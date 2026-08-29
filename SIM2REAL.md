@@ -1,4 +1,4 @@
-# Deployment contract — what the robot must receive
+# Deployment contract: what the robot must receive
 
 **English** · [Français](SIM2REAL.fr.md)
 
@@ -20,7 +20,7 @@ layout, `microduck/velocity_env.py::_compute_observations` for how it is built.
 | Action filtering | **none** |
 
 ⚠️ **The policy is not filtered.** No low-pass is applied to the action during
-training. Adding one on the runtime side — or removing one — breaks transfer in
+training. Adding one on the runtime side, or removing one, breaks transfer in
 both directions.
 
 ## 2. Input: the 61-D observation vector
@@ -126,9 +126,9 @@ python export_onnx.py -e microduck-velocity -o walk.onnx
 
 The script prints the observation layout and compares the ONNX output against
 the PyTorch module on a batch of random observations (the difference must stay
-below 1e-4 rad, i.e. 0.006° — a hundred times finer than anything meaningful on
+below 1e-4 rad, i.e. 0.006°, a hundred times finer than anything meaningful on
 an XL330). It fails if the normaliser was not properly folded into the graph,
-and warns if the policy returns the same action regardless of the observation —
+and warns if the policy returns the same action regardless of the observation,
 which happens with a checkpoint taken too early.
 
 **That check validates the conversion, not the wiring.** Before putting anything

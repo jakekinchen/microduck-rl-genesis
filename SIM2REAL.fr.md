@@ -1,4 +1,4 @@
-# Contrat de déploiement — ce que le robot doit recevoir
+# Contrat de déploiement : ce que le robot doit recevoir
 
 **Français** · [English](SIM2REAL.md)
 
@@ -20,7 +20,7 @@ découpe, `microduck/velocity_env.py::_compute_observations` pour la constructio
 | Filtrage de l'action | **aucun** |
 
 ⚠️ **La politique n'est pas filtrée.** Aucun passe-bas n'est appliqué à l'action
-pendant l'entraînement. En ajouter un côté runtime — ou en retirer un — casse le
+pendant l'entraînement. En ajouter un côté runtime, ou en retirer un, casse le
 transfert dans les deux sens.
 
 ## 2. Entrée : vecteur d'observation 61-D
@@ -128,10 +128,10 @@ python export_onnx.py -e microduck-velocity -o walk.onnx
 
 Le script affiche la découpe de l'observation et compare la sortie ONNX à celle
 du module PyTorch sur un lot d'observations tirées au hasard (l'écart doit
-rester < 1e-4 rad, soit 0,006° — cent fois plus fin que tout ce qui a un sens
+rester < 1e-4 rad, soit 0,006°, cent fois plus fin que tout ce qui a un sens
 sur un XL330). Il échoue si le normaliseur n'a pas été correctement intégré au
 graphe, et avertit si la politique rend la même action quelle que soit
-l'observation — ce qui arrive avec un point de contrôle pris trop tôt.
+l'observation, ce qui arrive avec un point de contrôle pris trop tôt.
 
 **Ce contrôle valide la conversion, pas le câblage.** Avant de mettre quoi que
 ce soit sur le robot, lancer aussi :

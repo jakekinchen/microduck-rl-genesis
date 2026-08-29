@@ -43,8 +43,8 @@ aléatoires (écart attendu < 1e-4 rad, soit 0,006°), refuse un export dont le
 normaliseur ne serait pas intégré au graphe, et avertit si la politique rend la
 même action quelle que soit l'observation.
 
-Pour vérifier la chaîne de déploiement **complète** — l'ONNX rejoué sur de
-vraies observations d'épisode — voir `tests/test_onnx_deploy.py`, décrit dans
+Pour vérifier la chaîne de déploiement **complète**, c'est-à-dire l'ONNX rejoué
+sur de vraies observations d'épisode, voir `tests/test_onnx_deploy.py`, décrit dans
 [`../SIM2REAL.md`](../SIM2REAL.md).
 
 > Aucune de ces politiques n'a été essayée sur un robot physique.

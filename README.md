@@ -1,4 +1,4 @@
-# Microduck RL on Genesis — learning to walk on an AMD GPU
+# Microduck RL on Genesis: learning to walk on an AMD GPU
 
 **English** · [Français](README.fr.md)
 
@@ -9,8 +9,8 @@ so it runs on an **AMD GPU (ROCm)**.
 The **Microduck** is an ~800 g, ~25 cm biped with 14 Dynamixel XL330 servos,
 designed by [Pollen Robotics](https://github.com/pollen-robotics/microduck). The
 upstream repository trains its policies with **mjlab (MuJoCo Warp)**, which
-**requires an NVIDIA card**. This repository rebuilds the environment on Genesis
-— which does run on ROCm — **while preserving the upstream sim-to-real recipe**,
+**requires an NVIDIA card**. This repository rebuilds the environment on Genesis,
+which does run on ROCm, **while preserving the upstream sim-to-real recipe**,
 because the recipe is what has value, not the code.
 
 ---
@@ -55,31 +55,32 @@ Remove everything: `./uninstall.sh --tout` (see `--help`).
 
 ![The Microduck walking a marked course, then dancing in front of the AMD logo](demo/apercu.gif)
 
-▶ **[Full 30-second clip](demo/microduck-parcours-30s.mp4)** — arrival at the AMD
+▶ **[Full 30-second clip](demo/microduck-parcours-30s.mp4)**: arrival at the AMD
 logo and the closing choreography, with the learning curve and the banner.
 
 Robot on the left, learning curve on the right filling in at the same pace, and
 a banner converting compute time into robot experience: **2.9 GPU-hours ≈ 3.1
 months of robot experience**, because 4096 robots train in parallel.
 
-The robot walks a totem-marked course over the training terrain — bumps, a
-slope, steps — then performs a short choreography in front of the AMD logo.
+The robot walks a totem-marked course over the training terrain (bumps, a
+slope, steps), then performs a short choreography in front of the AMD logo.
 
 **What it shows, and what it does not.** The policy is blind: it sees neither
 the totems nor the terrain. The path is **commanded** from outside by waypoint
 following that writes the velocity command, exactly like an operator on a
 gamepad. The video demonstrates **locomotion**, not navigation. The closing
 choreography is not a separately learned skill either: it is scripted velocity
-and head-pose commands executed by the same walking policy — possible without
+and head-pose commands executed by the same walking policy, which works without
 retraining because `head_pose` is part of the 61-D observation contract and the
 policy is trained to track it. If the robot falls, it is stood back up at the
 last waypoint and **the number of falls is displayed in the banner**.
 
-The course reuses the training terrain features — 1 cm bumps, a 3.4° slope,
-0.8 cm steps — all inside the envelope the policy was trained on (training
+The course reuses the training terrain features: 1 cm bumps, a 3.4° slope and
+0.8 cm steps, all inside the envelope the policy was trained on (training
 randomises steps up to 1.5 cm and slopes up to 5.7°), and the BAM actuator
-with its friction and saturation stays active. Only the training perturbations are switched off for rendering (pushes,
-randomisation, sensor noise) so the progress stays readable.
+with its friction and saturation stays active. Only the training perturbations
+are switched off for rendering (pushes, randomisation, sensor noise) so the
+progress stays readable.
 
 ## 2. Installation
 
@@ -96,13 +97,13 @@ Then a single command:
 
 ```bash
 ./install.sh              # detects AMD or NVIDIA on its own
-./install.sh --amd        # force ROCm     — TESTED configuration
-./install.sh --nvidia     # force CUDA     — UNTESTED (see below)
+./install.sh --amd        # force ROCm     (TESTED configuration)
+./install.sh --nvidia     # force CUDA     (UNTESTED, see below)
 ```
 
 The script creates a container from the vendor's official image (GPU PyTorch is
 already compiled inside), creates a Python environment that **inherits** that
-PyTorch — do not reinstall it with pip, you would get a CPU build — installs
+PyTorch (do not reinstall it with pip, you would get a CPU build), installs
 Genesis and the pinned dependencies, then checks that the GPU is visible from
 inside.
 
@@ -137,7 +138,7 @@ distrobox enter genesis-box
 source ~/venvs/genesis/bin/activate
 cd microduck_rl_genesis
 
-# SMOKE TEST — always first. Five iterations at 64 envs catch most
+# SMOKE TEST, always first. Five iterations at 64 envs catch most
 # configuration mistakes for a few cents of compute.
 python train.py -e smoke -B 64 --max-iterations 5
 
@@ -145,7 +146,7 @@ python train.py -e smoke -B 64 --max-iterations 5
 python train.py -e microduck-velocity -B 4096
 
 # Gear-backlash variant: ±1° of play in series with each servo, encoder read
-# through the play. Closer to the real servo, so harder — and more transferable.
+# through the play. Closer to the real servo, so harder, and more transferable.
 python train.py -e microduck-backlash -B 4096 --backlash
 
 # Rough terrain (resumed from walking: terrain is fine-tuned, it is not learned
@@ -159,7 +160,7 @@ tensorboard --logdir logs
 # Replay a policy in the viewer
 python play.py -e microduck-velocity
 
-# Export for the robot (normaliser baked into the graph — mandatory path)
+# Export for the robot (normaliser baked into the graph, mandatory path)
 python export_onnx.py -e microduck-velocity -o walk.onnx
 ```
 
@@ -196,7 +197,7 @@ for free.
 | Block | Status |
 |---|---|
 | MJCF + meshes (26 MB) | **taken as is** |
-| PPO (`rsl_rl`) | **unchanged** — same library, same hyperparameters |
+| PPO (`rsl_rl`) | **unchanged**: same library, same hyperparameters |
 | Reward recipe, DR ranges, curricula | **transplanted value by value**, upstream comments included |
 | 61-D observation contract | **preserved identically** |
 | BAM M6 actuator | **rewritten** (upstream depends on `mujoco_warp`) |
@@ -207,7 +208,7 @@ for free.
 
 [`microduck/velocity_cfg.py`](microduck/velocity_cfg.py) deserves a word: it is
 **the recipe**, and every value keeps the upstream comment that explains it.
-Those comments are not documentation, they are **scars** — each one is the
+Those comments are not documentation, they are **scars**: each one is the
 result of a failed run. For example:
 
 > `foot_slip` deliberately low (−0.1 and not −1.0): −1.0 over-constrained the
@@ -217,25 +218,26 @@ Do not change a value without reading the comment next to it.
 
 ## 6. The heart of it: the actuator
 
-> *"At this scale — very small servos under an 800 g biped — actuator fidelity
-> is most of the sim-to-real gap, which is why it is modelled down to its
-> voltage control law rather than as an ideal PD."* — upstream README
+> *"At this scale, tiny servos driving a ~800 g biped, actuator fidelity is
+> most of the sim2real gap, which is why the actuator is modeled down to its
+> voltage control law instead of an ideal PD."*
+> ([upstream README](https://github.com/pollen-robotics/microduck_rl#readme))
 
 The model is Rhoban's **[BAM](https://github.com/Rhoban/bam) M6**, bench-fitted
 for the Dynamixel XL330. Three stages:
 
-1. **Firmware control law** — position P controller → PWM duty cycle → voltage,
+1. **Firmware control law**: position P controller → PWM duty cycle → voltage,
    with the current limiter modelled as a constraint on the duty cycle (the
    firmware can only act on PWM, not synthesise an arbitrary voltage: at high
    speed back-EMF makes the limit unreachable, exactly as on the real servo).
-2. **DC motor torque** — `τ = kt·V/R − kt²·q̇/R`.
-3. **Friction budget** — Coulomb + Stribeck + load-dependent term, directional
+2. **DC motor torque**: `τ = kt·V/R − kt²·q̇/R`.
+3. **Friction budget**: Coulomb + Stribeck + load-dependent term, directional
    and quadratic.
 
 The third stage is what decides the fidelity of the port. Under MuJoCo, BAM does
 **not** inject a passive friction torque: it writes its budget into
 `dof_frictionloss`, and the **solver** performs the static clipping (BAM's
-algorithm 1). And **Genesis implements `frictionloss` exactly the same way** — a
+algorithm 1). And **Genesis implements `frictionloss` exactly the same way**: a
 constraint with an identity Jacobian, stored in `efc`. So the port can be
 *identical* rather than *approximate*: the budget is written into the model at
 every physics step, and Genesis does the rest.
@@ -262,7 +264,7 @@ invisible no-op.
 
 The third is the most telling: it runs **the same robot, the same actuator, the
 same initial state** under Genesis and under MuJoCo, and compares joint
-trajectories while the robot is still standing — that is where the full loop
+trajectories while the robot is still standing, and that is where the full loop
 (firmware law → torque → friction budget → solver clipping → contacts) is
 genuinely tested.
 
@@ -295,11 +297,11 @@ runtime.** Here is where it stands, without rounding.
   the upstream runtime unmodified.
 - **Actuator physics**: BAM M6 XL330, numerically validated (§7).
 - **The robot model**: same MJCF, same masses, same inertias, same joint limits.
-- **Domain randomisation**: 9 sources, same ranges as upstream — battery voltage
+- **Domain randomisation**: 9 sources with the upstream ranges. Battery voltage
   (6.5–8.2 V) and its drop under load, trunk and head CoM, mass and inertia,
   armature, joint friction, sole friction, pushes, encoder bias (±0.86°), IMU
   mounting misalignment (≤6°), bus delays (15–30 ms) and sensor delays.
-- **Observation normalisation baked into the ONNX** — an upstream invariant, and
+- **Observation normalisation baked into the ONNX**: an upstream invariant, and
   the bug is invisible in simulation.
 
 ### The limits, plainly
@@ -328,7 +330,7 @@ runtime.** Here is where it stands, without rounding.
 
 | Upstream task | Here |
 |---|---|
-| `Mjlab-Velocity-Flat-MicroDuck` — **the main task** | ✅ ported |
+| `Mjlab-Velocity-Flat-MicroDuck` (**the main task**) | ✅ ported |
 | `Mjlab-Velocity-Rough-MicroDuck` | ✅ ported |
 | `Mjlab-Velocity-{Flat,Rough}-Backlash-MicroDuck` (gear backlash) | ✅ ported (`--backlash`) |
 | `VelStand`, `StandUp`, `SitStand`, `GroundPick`, `BallKick`, `Roulade` | ❌ |
@@ -337,8 +339,8 @@ runtime.** Here is where it stands, without rounding.
 
 This is not an arbitrary choice: the Velocity task **is** the foundation every
 other one inherits from upstream (DR, observations, noise, delays, NaN guards).
-The infrastructure ported here — BAM actuator, randomisation, observation
-contract, terrain, export — is what the other tasks would reuse.
+The infrastructure ported here (BAM actuator, randomisation, observation
+contract, terrain, export) is what the other tasks would reuse.
 
 ### What "the whole upstream repository" would actually cost
 
@@ -348,7 +350,7 @@ per iteration at 4096 environments on an RX 9070):
 
 | Upstream task | Upstream iterations | ≈ GPU at our throughput | What blocks it |
 |---|---:|---:|---|
-| `velocity` (ported) | 50,000 | 30 h | — |
+| `velocity` (ported) | 50,000 | 30 h | nothing, it is done |
 | `velstand` | 20,000 | 12 h | all-collision XML + 9 `mdp` functions + 4 curricula |
 | `standup` | 15,000 | 9 h | same, + a prone init |
 | `sitstand` | 15,000 | 9 h | same |
@@ -358,7 +360,7 @@ per iteration at 4096 environments on an RX 9070):
 | `velocity_rollers`, `spin`, `roller_crouch`, `roller_slope`, `roller_standup` | 8,000 – 50,000 | 5 – 30 h | roller XML (passive wheels) |
 
 That is on the order of **120 GPU-hours** for the whole set, not counting the
-tuning iterations — and the upstream comments show each task took several failed
+tuning iterations, and the upstream comments show each task took several failed
 campaigns before converging (`velstand` alone documents seven successive "runs").
 All the necessary XML files are already in the upstream repository: what is
 missing is wiring, not assets.
@@ -366,11 +368,11 @@ missing is wiring, not assets.
 ### And on the ported task itself
 
 > **Worth knowing.** Upstream trains Velocity for **50,000 iterations**. The
-> campaign run here does **3000** (flat) then 1200 resumed on rough terrain —
+> campaign run here does **3000** (flat) then 1200 resumed on rough terrain,
 > roughly **2 GPU-hours instead of 30**. The resulting policy walks and holds
 > 944 steps out of 1000, but it does not have the maturity of a full run: on the
 > real robot, expect a smaller robustness margin than the upstream budget would
-> produce. The port is not at fault, this is a compute-time choice — and it is
+> produce. The port is not at fault, this is a compute-time choice, and it is
 > recovered by re-running `train.py` with `--max-iterations 50000` and
 > `--resume`.
 
@@ -382,7 +384,7 @@ learned from scratch.
 
 | Run | Task | Resumed from | Iterations | Final reward | Episode length | GPU time |
 |---|---|---|---:|---:|---|---:|
-| `microduck-velocity` | walking, flat | — | 3000 | 108.8 | **944 / 1000 steps** | 1.81 h |
+| `microduck-velocity` | walking, flat | from scratch | 3000 | 108.8 | **944 / 1000 steps** | 1.81 h |
 | `microduck-rough` | rough terrain | `microduck-velocity` | 1200 | 125.2 | **962 / 1000 steps** | 1.05 h |
 | `microduck-backlash` | ±1° gear backlash | `microduck-velocity` | 1200 | 121.9 | **961 / 1000 steps** | 1.10 h |
 
@@ -393,7 +395,7 @@ Two things surprise people, and neither is a regression.
 **The drop at a resume is not one.** `Train/mean_reward` is a **sum over the
 episode**, not a per-step average. Right after a resume the episodes are only a
 few steps old: the sum is small because it covers few steps, not because the
-policy got worse. The numbers say it plainly — reward per step is constant from
+policy got worse. The numbers say it plainly: reward per step is constant from
 the first logged point to the last:
 
 | Iteration | Reward | Episode length | Reward / step |
@@ -434,7 +436,7 @@ the overnight campaign is kept out of it.
 
 ## 12. Invariants you must not break
 
-Taken from the upstream `AGENTS.md` — they survive the change of engine.
+Taken from the upstream `AGENTS.md`; they survive the change of engine.
 
 - **The actor observation is 61 dimensions**, in the order of
   `constants.OBS_LAYOUT`. This is what lets the embedded runtime hot-swap
@@ -455,8 +457,8 @@ Taken from the upstream `AGENTS.md` — they survive the change of engine.
 
 **Quadratic friction.** The reference BAM model (`bam/model.py`) enables its
 quadratic term only when motor torque and external torque have **opposite**
-signs. The mjlab port (`bam/mjlab.py`) — the one that actually trained the
-policies deployed on the real robot — lost that guard. Measured difference:
+signs. The mjlab port (`bam/mjlab.py`), the one that actually trained the
+policies deployed on the real robot, lost that guard. Measured difference:
 **1.5 % at worst** on the friction budget. This repository reproduces **mjlab**
 by default, to stay on the recipe that transfers;
 `BamActuator(..., quadratic_sign_gate=True)` restores the paper version.
@@ -470,7 +472,7 @@ height field is kept on the Python side and bilinearly interpolated: same
 quantity, without a raycast.
 
 **Rough terrain.** mjlab stacks boxes, Genesis takes a height field. **Vertical
-amplitudes are preserved**; the patches are smaller (3 m instead of 8 m — the
+amplitudes are preserved**; the patches are smaller (3 m instead of 8 m, since the
 robot tops out at 0.4 m/s) and the grid smaller (10×10 instead of 10×20),
 because Genesis builds an SDF over the whole terrain and 2.2 M cells will not
 compile. This is not a loss: Genesis environments are **independent** worlds
@@ -483,7 +485,7 @@ link velocities and inertias.
 1.2.2, with or without `envs_idx`: changing the armature invalidates the mass
 matrix, which Genesis refactorises. Called at every reset it multiplied the
 iteration time by 6. The neighbouring setters (`set_dofs_frictionloss`,
-`set_dofs_damping`) sit at 0.02 ms — the problem is specific to armature.
+`set_dofs_damping`) sit at 0.02 ms; the problem is specific to armature.
 Armature randomisation is therefore drawn once per environment at startup and
 held for the whole run, which is also the physically honest choice: a servo's
 rotor inertia does not change between episodes.
@@ -491,8 +493,8 @@ rotor inertia does not change between episodes.
 ## 14. Credits and licences
 
 - **[pollen-robotics/microduck_rl](https://github.com/pollen-robotics/microduck_rl)**
-  — the robot, the 3D models, and above all **the sim-to-real recipe** that this
-  repository merely transports. Code under Apache 2.0.
+  provides the robot, the 3D models, and above all **the sim-to-real recipe**
+  that this repository merely transports. Code under Apache 2.0.
 
   > **This repository is dual-licensed.** The MJCF files and meshes in
   > `microduck/assets/` keep their upstream licence, **Creative Commons
@@ -500,13 +502,13 @@ rotor inertia does not change between episodes.
   > Pollen Robotics, keep derivatives under the same licence, and note that
   > commercial use is not granted. The code is Apache 2.0 and carries none of
   > those conditions.
-- **[Rhoban/bam](https://github.com/Rhoban/bam)** — the BAM actuator model
+- **[Rhoban/bam](https://github.com/Rhoban/bam)**: the BAM actuator model
   (Marc Duclusaud & Grégoire Passault). Apache 2.0.
-- **[mjlab](https://github.com/mujocolab/mjlab)** — the upstream training
+- **[mjlab](https://github.com/mujocolab/mjlab)**: the upstream training
   framework, whose semantics served as the reference.
-- **[Genesis](https://github.com/Genesis-Embodied-AI/Genesis)** — the simulation
+- **[Genesis](https://github.com/Genesis-Embodied-AI/Genesis)**: the simulation
   engine used here.
-- **[rsl_rl](https://github.com/leggedrobotics/rsl_rl)** — the PPO
+- **[rsl_rl](https://github.com/leggedrobotics/rsl_rl)**: the PPO
   implementation.
 
 The AMD logo that appears in the video simply indicates that training runs on an
