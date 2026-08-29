@@ -1,0 +1,28 @@
+# Dépendances Python du projet.
+#
+# PyTorch n'est PAS listé : il vient de l'image du conteneur (rocm/pytorch pour
+# AMD, nvcr.io/nvidia/pytorch pour NVIDIA). L'installer par pip écraserait la
+# build GPU de l'image par une build CPU — c'est le piège classique.
+# install.sh construit le venv en HÉRITANT du torch de l'image.
+
+genesis-world==1.2.2
+rsl-rl-lib==5.4.2
+numpy>=2.0
+tensordict>=0.6
+
+# Suivi de l'entraînement : `tensorboard --logdir logs`.
+tensorboard>=2.20
+
+# Export ONNX + vérification numérique de l'export.
+onnx>=1.17
+onnxruntime>=1.19
+
+# Uniquement pour la suite de validation (tests/) : MuJoCo sert de moteur de
+# référence pour vérifier le portage de l'actionneur.
+mujoco>=3.10
+
+# NON listé volontairement : `bam` (github.com/Rhoban/bam) n'est pas un paquet
+# pip mais un dépôt à cloner. Il ne sert qu'à la comparaison de référence des
+# formules d'actionneur ; sans lui les tests concernés se déclarent sautés :
+#     git clone https://github.com/Rhoban/bam.git /tmp/bam
+#     BAM_REPO=/tmp/bam python tests/run_all.py

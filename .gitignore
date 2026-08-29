@@ -1,0 +1,99 @@
+# --- Sorties d'entraînement et de rendu -------------------------------------
+logs/
+runs/
+videos/
+*.mp4
+*.gif
+*.onnx
+*.pt
+*.pkl
+
+# Exception : les politiques exportées et prêtes à déployer sont petites (~1 Mo)
+# et c'est ce qui permet à quelqu'un d'essayer sans réentraîner.
+!policies/*.onnx
+!policies/README.md
+
+# Exception : le dossier `demo/` est la vitrine du dépôt. Il contient un extrait
+# de 30 s (5 Mo) et un aperçu animé (4 Mo) — GitHub n'affiche pas un .mp4 en
+# ligne depuis un chemin relatif, mais il affiche un .gif, d'où les deux.
+# Le reste des rendus (montage complet, segments, version sans habillage) reste
+# dans `videos/`, non versionné.
+!demo/
+!demo/*.mp4
+!demo/*.gif
+
+# --- Assets lourds (à régénérer, jamais versionnés) -------------------------
+# Le GLB brut du logo fait ~250 Mo ; seule la version décimée est utile et elle
+# se régénère avec tools/prepare_decor.py.
+assets_decor/*_raw.*
+assets_decor/*.glb
+# Les maillages décimés (~4 Mo) sont des SORTIES de tools/prepare_decor.py :
+# elles se régénèrent en 20 s à partir des assets fournis, inutile de les
+# versionner.
+assets_decor/*.obj
+assets_decor/*.mtl
+
+# --- Clone de référence en amont (dépôt séparé) -----------------------------
+upstream_microduck_rl/
+
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Caches d'outils --------------------------------------------------------
+.genesis/
+.cache/
+*.log
+
+# --- Configuration locale, propre à chaque machine --------------------------
+# TOUT ce qui commence par un point — fichiers comme dossiers — sauf ce qu'on
+# réautorise explicitement juste en dessous.
+#
+# Liste blanche plutôt que liste noire : impossible d'énumérer à l'avance tous
+# les fichiers de configuration que des éditeurs, des outils ou des scripts
+# locaux peuvent déposer ici, alors qu'on sait exactement lesquels doivent
+# voyager avec le dépôt. `.*/` seul ne suffit pas : il ne couvre que les
+# dossiers, et laisserait passer un fichier caché posé à la racine (vérifié).
+.*
+!.gitignore
+
+# --- Système ----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# --- Assets sources fournis (trop lourds pour git ; décimés par tools/) ------
+assets/*.glb
+assets/*.gltf
+assets/*.fbx
+assets/*.blend
+
+# --- Hors périmètre du dépôt publié -----------------------------------------
+# Ces fichiers EXISTENT en local et fonctionnent : ils sont simplement gardés
+# hors du dépôt, qui se limite au portage, à sa validation et au déploiement.
+#
+#   • carnet de bord et résultats détaillés — les chiffres qui comptent sont
+#     dans le README ;
+#   • l'orchestration de la campagne (scripts enchaînés d'une nuit) ;
+#   • toute la chaîne de production des vidéos : rendu, décors, montage.
+#     Les vidéos elles-mêmes sont hébergées par GitHub, pas versionnées.
+RAPPORT_NUIT.md
+RESULTATS.md
+run_*.sh
+progress_video.py
+render_course.py
+microduck/course.py
+tools/
+requirements-local.txt
+# Barre OBLIQUE INITIALE obligatoire : `assets/` sans elle désigne tout dossier
+# de ce nom À N'IMPORTE QUELLE PROFONDEUR — donc `microduck/assets/`, les MJCF
+# et les 47 maillages du robot. Le dépôt serait parti sans le robot.
+/assets/
+/assets_decor/
