@@ -187,7 +187,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2026 Pollen Robotics
+   Copyright [yyyy] [name of copyright owner]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -209,18 +209,22 @@ Ce projet est un portage de la tâche de marche de pollen-robotics/microduck_rl
 (Apache 2.0) depuis mjlab / MuJoCo Warp vers Genesis. Le texte ci-dessus est la
 licence Apache 2.0 dans son intégralité, telle que requise par sa section 4(a).
 
-1. CODE — Apache License 2.0
+1. CODE : Apache License 2.0
    Le code de ce dépôt, ainsi que le code repris de
    pollen-robotics/microduck_rl et de Rhoban/bam, sont sous Apache 2.0.
 
-2. MODÈLES 3D DU ROBOT — Creative Commons BY-SA-NC
+   Le copyright du code écrit pour ce portage appartient aux contributeurs de
+   ce dépôt. Celui des portions reprises reste à leurs auteurs d'origine
+   (Pollen Robotics, Rhoban). Le détail est dans le fichier NOTICE.
+
+2. MODÈLES 3D DU ROBOT : Creative Commons BY-SA-NC
    Les fichiers de `microduck/assets/` (MJCF et maillages STL du Microduck)
    proviennent de pollen-robotics/microduck_rl et NE SONT PAS couverts par
    Apache 2.0. Le dépôt amont les place sous Creative Commons BY-SA-NC :
 
-     • BY  — attribution à Pollen Robotics obligatoire ;
-     • SA  — toute œuvre dérivée de ces modèles reste sous la même licence ;
-     • NC  — usage NON COMMERCIAL uniquement.
+     • BY : attribution à Pollen Robotics obligatoire ;
+     • SA : toute œuvre dérivée de ces modèles reste sous la même licence ;
+     • NC : usage NON COMMERCIAL uniquement.
 
    Voir `microduck/assets/LICENSE-ASSETS.md` pour le détail.
 
