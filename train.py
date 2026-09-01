@@ -1,4 +1,4 @@
-"""Entraînement de la marche du Microduck sous Genesis (PPO / rsl_rl).
+"""Entraînement Microduck sous Genesis (PPO / rsl_rl).
 
     python train.py --num-envs 4096                # tâche principale, sol plat
     python train.py --num-envs 64 --max-iterations 5   # SMOKE TEST — toujours en premier
@@ -26,6 +26,8 @@ import torch
 from rsl_rl.runners import OnPolicyRunner
 
 from microduck import velocity_cfg as C
+from microduck import backflip_cfg as B
+from microduck.backflip_env import MicroduckBackflipEnv
 from microduck.velocity_env import MicroduckVelocityEnv
 
 
@@ -35,7 +37,8 @@ def _physics_backend(name: str):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("-e", "--exp-name", default="microduck-velocity")
+    p.add_argument("-e", "--exp-name", default=None)
+    p.add_argument("--task", choices=("walking", "backflip"), default="walking")
     p.add_argument("-B", "--num-envs", type=int, default=4096)
     p.add_argument("--max-iterations", type=int, default=50_000)
     p.add_argument("--rough", action="store_true", help="terrain accidenté")
@@ -61,6 +64,10 @@ def main():
     )
     p.add_argument("--seed", type=int, default=1)
     args = p.parse_args()
+    if args.task == "backflip" and (args.rough or args.backlash):
+        p.error("the bounded backflip port is flat and non-backlash only")
+    if args.exp_name is None:
+        args.exp_name = "microduck-backflip" if args.task == "backflip" else "microduck-velocity"
 
     physics_name = "cpu" if args.cpu else args.physics_backend
     if args.learner_device == "mps" and not torch.backends.mps.is_available():
@@ -77,7 +84,8 @@ def main():
     )
     print(
         f"devices: physics={physics_name}/{gs.backend} ({gs.device}), "
-        f"ppo={learner_device}, envs={args.num_envs}, iterations={args.max_iterations}"
+        f"ppo={learner_device}, task={args.task}, envs={args.num_envs}, "
+        f"iterations={args.max_iterations}"
     )
 
     log_dir = os.path.join("logs", args.exp_name)
@@ -85,21 +93,30 @@ def main():
         shutil.rmtree(log_dir)
     os.makedirs(log_dir, exist_ok=True)
 
-    env = MicroduckVelocityEnv(num_envs=args.num_envs, rough=args.rough,
-                               backlash=args.backlash)
+    if args.task == "backflip":
+        env = MicroduckBackflipEnv(num_envs=args.num_envs)
+    else:
+        env = MicroduckVelocityEnv(num_envs=args.num_envs, rough=args.rough,
+                                   backlash=args.backlash)
 
-    train_cfg = dict(C.TRAIN_CFG)
+    train_cfg = dict(B.TRAIN_CFG if args.task == "backflip" else C.TRAIN_CFG)
     train_cfg["run_name"] = args.exp_name
     train_cfg["seed"] = args.seed
     with open(os.path.join(log_dir, "cfgs.pkl"), "wb") as f:
-        pickle.dump({"train_cfg": train_cfg, "rough": args.rough,
+        pickle.dump({"train_cfg": train_cfg, "task": args.task, "rough": args.rough,
                      "backlash": args.backlash, "physics_backend": physics_name,
                      "learner_device": learner_device}, f)
 
     runner = OnPolicyRunner(env, train_cfg, log_dir, device=learner_device)
     if args.resume:
         runner.load(args.resume)
-    runner.learn(num_learning_iterations=args.max_iterations, init_at_random_ep_len=True)
+    runner.learn(
+        num_learning_iterations=args.max_iterations,
+        # Backflip phase and the 100 ms spotter window are episode-relative.
+        # Randomizing the initial counter would make the first rollout's
+        # physical state disagree with both, so keep episodic starts aligned.
+        init_at_random_ep_len=args.task != "backflip",
+    )
 
 
 if __name__ == "__main__":

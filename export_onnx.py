@@ -24,6 +24,7 @@ import genesis as gs
 from rsl_rl.runners import OnPolicyRunner
 
 from microduck.constants import NUM_ACTIONS, NUM_OBS, OBS_LAYOUT
+from microduck.backflip_env import MicroduckBackflipEnv
 from microduck.velocity_env import MicroduckVelocityEnv
 
 
@@ -65,7 +66,14 @@ def main():
         saved = pickle.load(f)
 
     # 1 env suffit : on ne veut que les poids.
-    env = MicroduckVelocityEnv(num_envs=1, rough=saved["rough"], backlash=saved.get("backlash", False))
+    if saved.get("task", "walking") == "backflip":
+        env = MicroduckBackflipEnv(num_envs=1)
+    else:
+        env = MicroduckVelocityEnv(
+            num_envs=1,
+            rough=saved["rough"],
+            backlash=saved.get("backlash", False),
+        )
     runner = OnPolicyRunner(env, saved["train_cfg"], log_dir, device="cpu")
     if args.ckpt < 0:
         ckpts = [f for f in os.listdir(log_dir) if f.startswith("model_")]

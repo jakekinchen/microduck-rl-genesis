@@ -72,6 +72,10 @@ class MicroduckVelocityEnv:
         demo: bool = False,
         terrain_override=None,
         backlash: bool = False,
+        robot_xml: str | None = None,
+        task_name: str | None = None,
+        episode_length_s: float | None = None,
+        max_collision_pairs: int | None = None,
     ):
         """
         Args:
@@ -107,18 +111,23 @@ class MicroduckVelocityEnv:
         self.backlash = backlash
         self._terrain_override = terrain_override
         self.device = device or gs.device
+        self.robot_xml = robot_xml or (
+            MICRODUCK_WALK_BACKLASH_XML if backlash else MICRODUCK_WALK_XML
+        )
+        self.task_name = task_name
+        self._max_collision_pairs = max_collision_pairs
 
         self.dt = C.SIM_DT * C.DECIMATION  # pas de contrôle = 0,02 s (50 Hz)
         self.sim_dt = C.SIM_DT
         self.decimation = C.DECIMATION
-        self.max_episode_length_s = C.EPISODE_LENGTH_S
-        self.max_episode_length = math.ceil(C.EPISODE_LENGTH_S / self.dt)
+        self.max_episode_length_s = episode_length_s or C.EPISODE_LENGTH_S
+        self.max_episode_length = math.ceil(self.max_episode_length_s / self.dt)
         self.num_actions = NUM_ACTIONS
         self.num_obs = NUM_OBS
         # rsl_rl journalise `env.cfg` dans le checkpoint : on y met de quoi
         # reconstruire l'env à l'identique au moment du replay / de l'export.
         self.cfg = {
-            "task": (
+            "task": task_name or (
                 "Course-Demo" if terrain_override is not None
                 else ("Velocity-Rough" if rough else "Velocity-Flat")
                 + ("-Backlash" if backlash else "")
@@ -127,7 +136,7 @@ class MicroduckVelocityEnv:
             "sim_dt": C.SIM_DT,
             "decimation": C.DECIMATION,
             "control_hz": 1.0 / (C.SIM_DT * C.DECIMATION),
-            "episode_length_s": C.EPISODE_LENGTH_S,
+            "episode_length_s": self.max_episode_length_s,
             "action_scale": C.ACTION_SCALE,
             "num_obs": NUM_OBS,
             "num_actions": NUM_ACTIONS,
@@ -164,7 +173,11 @@ class MicroduckVelocityEnv:
                 iterations=30 if (self.rough or self._terrain_override) else 10,
                 ls_iterations=50 if (self.rough or self._terrain_override) else 20,
                 # Le décor de la vidéo (totems) ajoute des paires potentielles.
-                max_collision_pairs=120 if self._terrain_override else (60 if self.rough else 30),
+                max_collision_pairs=(
+                    self._max_collision_pairs
+                    if self._max_collision_pairs is not None
+                    else (120 if self._terrain_override else (60 if self.rough else 30))
+                ),
             ),
             viewer_options=gs.options.ViewerOptions(
                 camera_pos=(0.8, 0.0, 0.5),
@@ -205,7 +218,7 @@ class MicroduckVelocityEnv:
             terrain_surface = (
                 gs.surfaces.Default(color=(0.34, 0.36, 0.40, 1.0)) if self.demo else None
             )
-            self.scene.add_entity(
+            self.ground = self.scene.add_entity(
                 gs.morphs.Terrain(
                     height_field=self.terrain.height_field,
                     horizontal_scale=self.terrain.hs,
@@ -220,7 +233,7 @@ class MicroduckVelocityEnv:
                 num_rows=4 if self.play else 10,
                 num_cols=4 if self.play else 10,
             )
-            self.scene.add_entity(
+            self.ground = self.scene.add_entity(
                 gs.morphs.Terrain(
                     height_field=self.terrain.height_field,
                     horizontal_scale=self.terrain.hs,
@@ -238,11 +251,11 @@ class MicroduckVelocityEnv:
             )
         else:
             self.terrain = FlatTerrain()
-            self.scene.add_entity(gs.morphs.Plane())
+            self.ground = self.scene.add_entity(gs.morphs.Plane())
 
         self.robot = self.scene.add_entity(
             gs.morphs.MJCF(
-                file=MICRODUCK_WALK_BACKLASH_XML if self.backlash else MICRODUCK_WALK_XML,
+                file=self.robot_xml,
                 pos=(0.0, 0.0, 0.125),
             )
         )
