@@ -35,8 +35,8 @@ robot.set_dofs_position(q_home.unsqueeze(0).repeat(2, 1), dofs)
 sc.step()
 
 sv = sc.rigid_solver
-qf_bias = qd_to_torch(sv.dofs_state.qf_bias, transpose=True)[0]
-qf_con = qd_to_torch(sv.dofs_state.qf_constraint, transpose=True)[0]
+qf_bias = qd_to_torch(sv.dyn_state.dofs.qf_bias, transpose=True)[0]
+qf_con = qd_to_torch(sv.dyn_state.dofs.qf_constraint, transpose=True)[0]
 g_ext = (-qf_bias + qf_con)[torch.tensor(dofs)].numpy()
 
 import mujoco

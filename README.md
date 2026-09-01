@@ -1,10 +1,12 @@
-# Microduck RL on Genesis: learning to walk on an AMD GPU
+# Microduck RL on Genesis: Apple Metal/MPS and AMD ROCm
 
 **English** · [Français](README.fr.md)
 
 A port to **[Genesis](https://github.com/Genesis-Embodied-AI/Genesis)** of the
-walking task from **[pollen-robotics/microduck_rl](https://github.com/pollen-robotics/microduck_rl)**,
-so it runs on an **AMD GPU (ROCm)**.
+walking and bounded backflip tasks from
+**[pollen-robotics/microduck_rl](https://github.com/pollen-robotics/microduck_rl)**.
+It supports **Apple Metal physics + PyTorch MPS learning** for everyday local
+work and **AMD ROCm** through the original container lane.
 
 The **Microduck** is an ~800 g, ~25 cm biped with 14 Dynamixel XL330 servos,
 designed by [Pollen Robotics](https://github.com/pollen-robotics/microduck). The
@@ -17,7 +19,14 @@ because the recipe is what has value, not the code.
 
 ## Quick start
 
-Three commands, nothing installed on the host system:
+On Apple Silicon:
+
+```bash
+./scripts/setup_apple.sh
+./scripts/run_apple_smokes.sh       # walking + backflip, 64 envs x 5 iterations
+```
+
+On Linux with AMD/NVIDIA container tooling:
 
 ```bash
 ./install.sh                                        # 1. the environment (isolated container)
@@ -29,6 +38,11 @@ python train.py -e microduck-velocity -B 4096       # 3. the real training run
 
 Follow the learning: `tensorboard --logdir logs`.
 Remove everything: `./uninstall.sh --tout` (see `--help`).
+
+The smoke tests prove pipeline execution, not task success or transfer. The
+evidence-gated path to a policy-production system is in
+[`TRAINING_ACTUALIZATION.md`](TRAINING_ACTUALIZATION.md); generated interface,
+model, and BAM snapshots live in [`microduck_contract/`](microduck_contract/).
 
 ---
 
@@ -84,6 +98,23 @@ progress stays readable.
 
 ## 2. Installation
 
+### Apple Silicon (primary local lane)
+
+Install `uv`, then use the committed macOS arm64/Python 3.12 lock:
+
+```bash
+./scripts/setup_apple.sh
+source .venv-apple/bin/activate
+GS_ENABLE_ZEROCOPY=1 python train.py --task walking -B 64 --max-iterations 5 \
+  --physics-backend metal --learner-device mps -e apple-smoke-walking
+```
+
+See [`environments/apple/README.md`](environments/apple/README.md) for the full
+walking/backflip acceptance ladder. Genesis CPU with the MPS learner is the
+debug fallback (`--physics-backend cpu --learner-device mps`).
+
+### Linux containers (ROCm and optional CUDA)
+
 A Linux box with `distrobox` and `podman` (or docker). Nothing is installed on
 the host system: everything lives in a container.
 
@@ -128,8 +159,9 @@ of being swept along by a single "Continue?" prompt. The script **lists exactly
 what it is about to erase** before asking for confirmation, and never touches
 your code or `logs/`.
 
-Reference configuration: Radeon **RX 9070**, ROCm 7.2.4, PyTorch 2.10,
-Genesis 1.2.2, rsl-rl-lib 5.4.2, Python 3.12.
+Reference Linux configuration: Radeon **RX 9070**, ROCm 7.2.4, PyTorch 2.10,
+Genesis 1.2.2, rsl-rl-lib 5.4.2, Python 3.12. The Apple lane is independently
+locked to Genesis 1.3.3, PyTorch 2.9.1, rsl-rl-lib 5.4.2, and Python 3.12.
 
 ## 3. Usage
 

@@ -21,11 +21,11 @@ dof_t = torch.tensor(env.motors_dof_idx, device=gs.device)
 
 
 def frictionloss():
-    return qd_to_torch(sv.dofs_info.frictionloss, transpose=True)[:, dof_t]
+    return qd_to_torch(sv.dyn_info.dofs.frictionloss, transpose=True)[:, dof_t]
 
 
 def armature():
-    return qd_to_torch(sv.dofs_info.armature, transpose=True)[:, dof_t]
+    return qd_to_torch(sv.dyn_info.dofs.armature, transpose=True)[:, dof_t]
 
 
 # -- 1. frictionloss strictement proportionnel à friction_scale, par env -------

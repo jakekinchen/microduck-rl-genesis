@@ -1,0 +1,18 @@
+# Direct dependencies for the reproducible Apple Silicon lane.
+#
+# Compile this file only for macOS arm64 / Python 3.12:
+#   uv pip compile --python-platform aarch64-apple-darwin \
+#     --python-version 3.12 --generate-hashes \
+#     environments/apple/requirements.in \
+#     --output-file environments/apple/requirements.lock
+
+# Genesis 1.3.3 is the first version used by this repository's verified Metal
+# preflight. The Linux ROCm/CUDA container lane remains on requirements.txt.
+genesis-world==1.3.3
+torch==2.9.1
+rsl-rl-lib==5.4.2
+
+tensorboard>=2.20
+onnx>=1.17
+onnxruntime>=1.19
+mujoco>=3.10

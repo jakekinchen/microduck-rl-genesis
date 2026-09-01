@@ -1,0 +1,25 @@
+{
+  "actuator_id": "bam-m6-xl330-v1",
+  "authority": "candidate-repo-local",
+  "behavior_profile": "mjlab-deployed-v1",
+  "command_delay_physics_steps": [
+    3,
+    6
+  ],
+  "cross_backend_conformance": "pending",
+  "current_limit_a": 1.75,
+  "firmware_kp": 200.0,
+  "golden_vectors": null,
+  "parameter_file": "microduck/assets/xl330_m6.json",
+  "parameter_sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+  "schema_version": "microduck.actuator-lock/v1",
+  "supply_voltage_floor_v": 6.0,
+  "supply_voltage_range_v": [
+    6.5,
+    8.2
+  ],
+  "voltage_drop_resistance_range_ohm": [
+    0.0,
+    0.2
+  ]
+}

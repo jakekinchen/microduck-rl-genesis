@@ -1,0 +1,18 @@
+name: contract-drift
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  deterministic-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile Python sources
+        run: python -m compileall -q microduck scripts tests train.py play.py export_onnx.py
+      - name: Verify generated contract snapshots after compilation
+        run: python scripts/freeze_contract.py --check

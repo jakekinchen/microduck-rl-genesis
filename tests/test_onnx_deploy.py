@@ -60,15 +60,21 @@ def main() -> int:
 
     from rsl_rl.runners import OnPolicyRunner
 
+    from microduck.backflip_env import MicroduckBackflipEnv
     from microduck.velocity_env import MicroduckVelocityEnv
 
     gs.init(backend=gs.cpu, logging_level="warning")
     with open(os.path.join(log_dir, "cfgs.pkl"), "rb") as f:
         saved = pickle.load(f)
 
-    env = MicroduckVelocityEnv(
-        num_envs=1, rough=saved["rough"], backlash=saved.get("backlash", False)
-    )
+    if saved.get("task", "walking") == "backflip":
+        env = MicroduckBackflipEnv(num_envs=1)
+    else:
+        env = MicroduckVelocityEnv(
+            num_envs=1,
+            rough=saved["rough"],
+            backlash=saved.get("backlash", False),
+        )
     runner = OnPolicyRunner(env, saved["train_cfg"], log_dir, device="cpu")
     ckpt = max(
         (f for f in os.listdir(log_dir) if f.startswith("model_")),

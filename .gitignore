@@ -62,6 +62,9 @@ env/
 # dossiers, et laisserait passer un fichier caché posé à la racine (vérifié).
 .*
 !.gitignore
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
 
 # --- Système ----------------------------------------------------------------
 .DS_Store
@@ -87,6 +90,8 @@ assets/*.blend
 RAPPORT_NUIT.md
 RESULTATS.md
 run_*.sh
+!scripts/run_apple_smokes.sh
+!scripts/run_codex_pair_cycle.sh
 progress_video.py
 render_course.py
 microduck/course.py
