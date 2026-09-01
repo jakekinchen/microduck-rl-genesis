@@ -15,7 +15,7 @@ M1 - Establish the shared semantic contract
 
 ## Current Slice
 
-`docs/briefs/005-m1-official-mjlab-fixture-consumer.md`
+`docs/briefs/006-m1-model-reconciliation.md`
 
 ## Stop Conditions
 

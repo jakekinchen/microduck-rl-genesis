@@ -63,7 +63,7 @@ reproducible `artifact_validated` pipeline evidence.
 - [x] Fail CI when generated snapshots drift from their source.
 - [x] Add BAM open-loop golden vectors and reset/internal-state fixtures from the authoritative BAM implementation.
 - [x] Add short 14-servo closed-loop trajectory fixtures.
-- [ ] Make the official mjlab/MuJoCo Warp adapter consume and pass the same fixtures.
+- [x] Make the official mjlab/MuJoCo Warp adapter consume and pass the same fixtures.
 - [ ] Reconcile Genesis/MuJoCo model counts, collision variants, masses, inertias, keyframes, joint limits, and actuator ordering.
 - [ ] Define walking and backflip semantic files, including assistance/curriculum state and success definitions.
 - [ ] Submit the backend-independent contract upstream or record an explicit versioned divergence decision.
