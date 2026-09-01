@@ -24,6 +24,12 @@ The bundle contains:
   tasks; and
 - a relative-path SHA-256 manifest covering all 20 other files.
 
+The repository's broad `*.log`, `*.pkl`, `*.pt`, and `*.onnx` ignore rules
+initially hid those receipt payloads from Git while leaving the manifest and
+metadata visible. A receipt-scoped final exception now retains those exact
+evidence classes without changing the ignore behavior for ordinary training
+outputs.
+
 No ONNX external-data sidecar exists. The temporary clone and its fresh 2.5 GB
 environment were removed only after the copied receipt passed its manifest.
 

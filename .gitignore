@@ -102,3 +102,11 @@ requirements-local.txt
 # et les 47 maillages du robot. Le dépôt serait parti sans le robot.
 /assets/
 /assets_decor/
+
+# Evidence receipts intentionally retain otherwise ignored logs, checkpoints,
+# configs, and ONNX exports. Their run-scoped SHA-256 manifest is the boundary;
+# ordinary training outputs remain ignored everywhere else.
+!receipts/
+!receipts/apple-baseline/
+!receipts/apple-baseline/**/
+!receipts/apple-baseline/**/*

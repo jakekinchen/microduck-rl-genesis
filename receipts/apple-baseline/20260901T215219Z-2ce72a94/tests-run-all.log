@@ -1,0 +1,107 @@
+
+======================================================================
+formules BAM vs référence Rhoban
+======================================================================
+SKIP — dépôt BAM absent (git clone -b mjlab_frictionloss https://github.com/Rhoban/bam.git puis BAM_REPO=<chemin>)
+
+======================================================================
+couple externe vs MuJoCo
+======================================================================
+articulation        genesis     mujoco      écart
+left_hip_yaw        0.00000   -0.00000   2.20e-09
+left_hip_roll      -0.03056   -0.03056   1.31e-08
+left_hip_pitch     -0.00940   -0.00940  -2.49e-08
+left_knee          -0.01014   -0.01014  -7.21e-09
+left_ankle          0.00181    0.00181   1.20e-09
+neck_pitch          0.01696    0.01696   3.11e-08
+head_pitch          0.02691    0.02691   1.22e-08
+head_yaw           -0.00000   -0.00000  -3.29e-10
+head_roll           0.00222    0.00222  -1.18e-09
+right_hip_yaw      -0.00000   -0.00000  -2.68e-09
+right_hip_roll      0.03056    0.03056   6.28e-09
+right_hip_pitch     0.00940    0.00940   2.34e-08
+right_knee          0.01014    0.01014  -9.03e-10
+right_ankle        -0.00181   -0.00181  -8.89e-10
+
+écart max = 3.115e-08 N·m   (couple max = 0.0306 N·m, soit 0.000 %)
+OK — conventions de signe et indexation validées
+
+======================================================================
+boucle actionneur vs MuJoCo+BAM
+======================================================================
+SKIP — dépôt BAM absent (voir _bam_repo ci-dessus)
+
+======================================================================
+randomisation de domaine
+======================================================================
+[38;5;226m[Genesis] [16:48:26] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+[38;5;226m[Genesis] [16:48:28] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+frictionloss ratio scale 2.0 : 2.0000 (attendu 2.0)
+frictionloss ratio scale 0.5 : 0.5000 (attendu 0.5)
+armature : défaut 0.001808  après ×1.1 0.001989  après 6×(×1.1) 0.001989
+|COM shift| max sur 4 resets : [0.00919, 0.00986, 0.00872, 0.00961]
+biais encodeur : [-0.0145, 0.0150] rad
+OK
+
+======================================================================
+contrat d'observation 61-D
+======================================================================
+[38;5;226m[Genesis] [16:49:02] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+découpe : 61 dimensions, 8 tranches
+projected_gravity debout : [0.0, 0.0, -1.0]
+joint_pos à la pose HOME  : max |·| = 0.00e+00
+tranches de commande : conformes
+  left_hip_yaw     → indice 0 ✓
+  neck_pitch       → indice 5 ✓
+  right_ankle      → indice 13 ✓
+head_pose pilote ('neck_pitch', 'head_pitch', 'head_yaw', 'head_roll') → indices [5, 6, 7, 8]
+action[3] = +0.2 rad → left_knee se déplace de +0.0098 rad
+OK — contrat d'observation et d'action conforme à SIM2REAL.md
+
+======================================================================
+variante à jeu d'engrenage
+======================================================================
+[38;5;226m[Genesis] [16:49:10] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+modèle : 29 articulations dont 14 de jeu
+jeu imposé +0,500° sur left_knee → vue encodeur +0.500°
+joint_pos de l'observation = vue encodeur ✓
+jeu après relâchement : max 1.016° (butée ±1°)
+contrat inchangé : obs 61, action 14
+OK — variante à jeu d'engrenage conforme
+
+======================================================================
+ONNX de déploiement vs politique
+======================================================================
+aucun checkpoint dans logs/microduck-velocity — test non applicable
+
+======================================================================
+env sol plat
+======================================================================
+[38;5;226m[Genesis] [16:49:19] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+[38;5;226m[Genesis] [16:49:21] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+/private/var/folders/hm/6gd6d81d5wbfmk6j51dx894c0000gn/T/microduck-m0-clean.XXXXXX.LVOd1EkvYx/repo/.venv-apple/lib/python3.12/site-packages/quadrants/lang/ast/ast_transformers/function_def_transformer.py:715: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+  return index == 0 and isinstance(stmt, ast.Expr) and isinstance(stmt.value, (ast.Constant, ast.Str))
+obs policy    : (16, 61)
+obs privileged: (16, 29)
+step 0: rew=+0.1356 done=0 z=0.1233 foot_h=0.0062 contact=0.00
+step 29: rew=+0.1040 done=0 z=0.1133 foot_h=0.0012 contact=1.00
+30 pas en 1.75s
+OK
+
+======================================================================
+env terrain accidenté
+======================================================================
+[38;5;226m[Genesis] [16:49:38] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+[38;5;226m[Genesis] [16:49:41] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+[38;5;226m[Genesis] [16:49:42] [WARNING] Beware that SDF pre-processing of mesh  having more than 50000 vertices may take a very long time (>10min) and require large RAM allocation (>20Gb). Please either enable convexify or decimation. (see FileMorph options)[0m
+[38;5;226m[Genesis] [16:49:44] [WARNING] Geom idx 0 is not watertight; skipping wall-thickness SDF refinement.[0m
+[38;5;226m[Genesis] [16:49:44] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+obs policy    : (16, 61)
+obs privileged: (16, 29)
+step 0: rew=+0.1366 done=0 z=0.1337 foot_h=0.0051 contact=0.00
+step 29: rew=+0.1010 done=0 z=0.1198 foot_h=0.0039 contact=0.97
+30 pas en 2.41s
+OK
+
+======================================================================
+tous les tests passent

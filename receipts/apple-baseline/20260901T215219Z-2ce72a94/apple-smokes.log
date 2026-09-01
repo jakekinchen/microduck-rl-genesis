@@ -1,0 +1,334 @@
+[38;5;226m[Genesis] [16:50:24] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+devices: physics=metal/gs.metal (mps), ppo=mps, task=walking, envs=64, iterations=5
+[38;5;226m[Genesis] [16:50:26] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+/var/folders/hm/6gd6d81d5wbfmk6j51dx894c0000gn/T/microduck-m0-clean.XXXXXX.LVOd1EkvYx/repo/.venv-apple/lib/python3.12/site-packages/quadrants/lang/ast/ast_transformers/function_def_transformer.py:715: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+  return index == 0 and isinstance(stmt, ast.Expr) and isinstance(stmt.value, (ast.Constant, ast.Str))
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['policy']
+	 critic :  ['policy', 'privileged']
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (distribution): GaussianDistribution()
+  (mlp): MLP(
+    (0): Linear(in_features=61, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=14, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=90, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+Storing git diff for 'repo' in: logs/apple-smoke-walking/git/repo.diff
+################################################################################
+[1m                             Learning iteration 0/5                             [0m 
+
+                               Run name: apple-smoke-walking
+                            Total steps: 1536 
+                       Steps per second: 227 
+                        Collection time: 6.185s 
+                          Learning time: 0.554s 
+                        Mean value loss: 0.0421
+                    Mean surrogate loss: -0.0293
+                      Mean entropy loss: 19.8430
+                            Mean reward: -0.11
+                    Mean episode length: 20.67
+                        Mean action std: 1.00
+        Mean episode rew_foot_clearance: -0.0001
+             Mean episode rew_foot_slip: -0.0000
+                  Mean episode rew_pose: 0.0012
+       Mean episode rew_self_collisions: -0.0000
+              Mean episode rew_air_time: 0.0040
+    Mean episode rew_body_pose_tracking: 0.0000
+        Mean episode rew_dof_pos_limits: -0.0001
+        Mean episode rew_action_rate_l2: -0.0214
+        Mean episode rew_head_pose_bias: 0.0000
+          Mean episode rew_body_ang_vel: -0.0079
+    Mean episode rew_head_pose_tracking: 0.0123
+Mean episode rew_track_angular_velocity: 0.0001
+      Mean episode rew_angular_momentum: -0.0000
+     Mean episode rew_foot_swing_height: -0.0002
+               Mean episode rew_upright: 0.0046
+ Mean episode rew_track_linear_velocity: 0.0039
+--------------------------------------------------------------------------------
+                         Iteration time: 6.74s
+                           Time elapsed: 0:00:06
+                                    ETA: 0:00:26
+
+################################################################################
+[1m                             Learning iteration 1/5                             [0m 
+
+                               Run name: apple-smoke-walking
+                            Total steps: 3072 
+                       Steps per second: 727 
+                        Collection time: 1.857s 
+                          Learning time: 0.255s 
+                        Mean value loss: 0.0402
+                    Mean surrogate loss: -0.0421
+                      Mean entropy loss: 19.8369
+                            Mean reward: -0.06
+                    Mean episode length: 24.83
+                        Mean action std: 1.00
+        Mean episode rew_foot_clearance: -0.0003
+             Mean episode rew_foot_slip: -0.0000
+                  Mean episode rew_pose: 0.0041
+       Mean episode rew_self_collisions: -0.0001
+              Mean episode rew_air_time: 0.0149
+    Mean episode rew_body_pose_tracking: 0.0000
+        Mean episode rew_dof_pos_limits: -0.0007
+        Mean episode rew_action_rate_l2: -0.0774
+        Mean episode rew_head_pose_bias: 0.0000
+          Mean episode rew_body_ang_vel: -0.0239
+    Mean episode rew_head_pose_tracking: 0.0435
+Mean episode rew_track_angular_velocity: 0.0008
+      Mean episode rew_angular_momentum: -0.0000
+     Mean episode rew_foot_swing_height: -0.0006
+               Mean episode rew_upright: 0.0188
+ Mean episode rew_track_linear_velocity: 0.0202
+--------------------------------------------------------------------------------
+                         Iteration time: 2.11s
+                           Time elapsed: 0:00:08
+                                    ETA: 0:00:13
+
+################################################################################
+[1m                             Learning iteration 2/5                             [0m 
+
+                               Run name: apple-smoke-walking
+                            Total steps: 4608 
+                       Steps per second: 736 
+                        Collection time: 1.849s 
+                          Learning time: 0.238s 
+                        Mean value loss: 0.0448
+                    Mean surrogate loss: -0.0427
+                      Mean entropy loss: 19.8237
+                            Mean reward: -0.04
+                    Mean episode length: 27.48
+                        Mean action std: 1.00
+        Mean episode rew_foot_clearance: -0.0003
+             Mean episode rew_foot_slip: -0.0000
+                  Mean episode rew_pose: 0.0047
+       Mean episode rew_self_collisions: -0.0000
+              Mean episode rew_air_time: 0.0144
+    Mean episode rew_body_pose_tracking: 0.0000
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_action_rate_l2: -0.0769
+        Mean episode rew_head_pose_bias: 0.0000
+          Mean episode rew_body_ang_vel: -0.0236
+    Mean episode rew_head_pose_tracking: 0.0449
+Mean episode rew_track_angular_velocity: 0.0006
+      Mean episode rew_angular_momentum: -0.0000
+     Mean episode rew_foot_swing_height: -0.0007
+               Mean episode rew_upright: 0.0190
+ Mean episode rew_track_linear_velocity: 0.0163
+--------------------------------------------------------------------------------
+                         Iteration time: 2.09s
+                           Time elapsed: 0:00:10
+                                    ETA: 0:00:07
+
+################################################################################
+[1m                             Learning iteration 3/5                             [0m 
+
+                               Run name: apple-smoke-walking
+                            Total steps: 6144 
+                       Steps per second: 689 
+                        Collection time: 1.983s 
+                          Learning time: 0.244s 
+                        Mean value loss: 0.0376
+                    Mean surrogate loss: -0.0441
+                      Mean entropy loss: 19.8065
+                            Mean reward: 0.04
+                    Mean episode length: 28.39
+                        Mean action std: 1.00
+        Mean episode rew_foot_clearance: -0.0003
+             Mean episode rew_foot_slip: -0.0000
+                  Mean episode rew_pose: 0.0047
+       Mean episode rew_self_collisions: -0.0001
+              Mean episode rew_air_time: 0.0147
+    Mean episode rew_body_pose_tracking: 0.0000
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_action_rate_l2: -0.0793
+        Mean episode rew_head_pose_bias: 0.0000
+          Mean episode rew_body_ang_vel: -0.0231
+    Mean episode rew_head_pose_tracking: 0.0487
+Mean episode rew_track_angular_velocity: 0.0009
+      Mean episode rew_angular_momentum: -0.0000
+     Mean episode rew_foot_swing_height: -0.0007
+               Mean episode rew_upright: 0.0210
+ Mean episode rew_track_linear_velocity: 0.0244
+--------------------------------------------------------------------------------
+                         Iteration time: 2.23s
+                           Time elapsed: 0:00:13
+                                    ETA: 0:00:03
+
+################################################################################
+[1m                             Learning iteration 4/5                             [0m 
+
+                               Run name: apple-smoke-walking
+                            Total steps: 7680 
+                       Steps per second: 736 
+                        Collection time: 1.846s 
+                          Learning time: 0.240s 
+                        Mean value loss: 0.0406
+                    Mean surrogate loss: -0.0405
+                      Mean entropy loss: 19.7893
+                            Mean reward: 0.02
+                    Mean episode length: 28.21
+                        Mean action std: 0.99
+        Mean episode rew_foot_clearance: -0.0003
+             Mean episode rew_foot_slip: -0.0000
+                  Mean episode rew_pose: 0.0047
+       Mean episode rew_self_collisions: -0.0001
+              Mean episode rew_air_time: 0.0127
+    Mean episode rew_body_pose_tracking: 0.0000
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_action_rate_l2: -0.0781
+        Mean episode rew_head_pose_bias: 0.0000
+          Mean episode rew_body_ang_vel: -0.0257
+    Mean episode rew_head_pose_tracking: 0.0471
+Mean episode rew_track_angular_velocity: 0.0006
+      Mean episode rew_angular_momentum: -0.0000
+     Mean episode rew_foot_swing_height: -0.0007
+               Mean episode rew_upright: 0.0179
+ Mean episode rew_track_linear_velocity: 0.0182
+--------------------------------------------------------------------------------
+                         Iteration time: 2.09s
+                           Time elapsed: 0:00:15
+                                    ETA: 0:00:00
+
+[38;5;226m[Genesis] [16:51:19] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+devices: physics=metal/gs.metal (mps), ppo=mps, task=backflip, envs=64, iterations=5
+[38;5;226m[Genesis] [16:51:21] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+[38;5;226m[Genesis] [16:51:21] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+[38;5;226m[Genesis] [16:51:22] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['policy']
+	 critic :  ['policy', 'privileged']
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (distribution): GaussianDistribution()
+  (mlp): MLP(
+    (0): Linear(in_features=61, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=14, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=90, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+Storing git diff for 'repo' in: logs/apple-smoke-backflip/git/repo.diff
+################################################################################
+[1m                             Learning iteration 0/5                             [0m 
+
+                               Run name: apple-smoke-backflip
+                            Total steps: 1536 
+                       Steps per second: 604 
+                        Collection time: 2.027s 
+                          Learning time: 0.516s 
+                        Mean value loss: 881.7349
+                    Mean surrogate loss: -0.0209
+                      Mean entropy loss: 19.8643
+                        Mean action std: 1.00
+--------------------------------------------------------------------------------
+                         Iteration time: 2.54s
+                           Time elapsed: 0:00:02
+                                    ETA: 0:00:10
+
+################################################################################
+[1m                             Learning iteration 1/5                             [0m 
+
+                               Run name: apple-smoke-backflip
+                            Total steps: 3072 
+                       Steps per second: 860 
+                        Collection time: 1.543s 
+                          Learning time: 0.243s 
+                        Mean value loss: 90.9919
+                    Mean surrogate loss: -0.0303
+                      Mean entropy loss: 19.8702
+                        Mean action std: 1.00
+--------------------------------------------------------------------------------
+                         Iteration time: 1.79s
+                           Time elapsed: 0:00:04
+                                    ETA: 0:00:06
+
+################################################################################
+[1m                             Learning iteration 2/5                             [0m 
+
+                               Run name: apple-smoke-backflip
+                            Total steps: 4608 
+                       Steps per second: 860 
+                        Collection time: 1.539s 
+                          Learning time: 0.245s 
+                        Mean value loss: 43.7970
+                    Mean surrogate loss: -0.0382
+                      Mean entropy loss: 19.8781
+                        Mean action std: 1.00
+--------------------------------------------------------------------------------
+                         Iteration time: 1.78s
+                           Time elapsed: 0:00:06
+                                    ETA: 0:00:04
+
+################################################################################
+[1m                             Learning iteration 3/5                             [0m 
+
+                               Run name: apple-smoke-backflip
+                            Total steps: 6144 
+                       Steps per second: 846 
+                        Collection time: 1.566s 
+                          Learning time: 0.249s 
+                        Mean value loss: 41.2685
+                    Mean surrogate loss: -0.0351
+                      Mean entropy loss: 19.8795
+                        Mean action std: 1.00
+--------------------------------------------------------------------------------
+                         Iteration time: 1.81s
+                           Time elapsed: 0:00:07
+                                    ETA: 0:00:01
+
+################################################################################
+[1m                             Learning iteration 4/5                             [0m 
+
+                               Run name: apple-smoke-backflip
+                            Total steps: 7680 
+                       Steps per second: 855 
+                        Collection time: 1.537s 
+                          Learning time: 0.257s 
+                        Mean value loss: 45.3834
+                    Mean surrogate loss: -0.0379
+                      Mean entropy loss: 19.8780
+                        Mean action std: 1.00
+--------------------------------------------------------------------------------
+                         Iteration time: 1.79s
+                           Time elapsed: 0:00:09
+                                    ETA: 0:00:00
+
+Apple 64x5 walking and backflip smokes completed.
+This is pipeline evidence only; see TRAINING_ACTUALIZATION.md for promotion gates.
