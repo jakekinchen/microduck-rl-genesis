@@ -1,0 +1,6579 @@
+{
+  "deferred_divergences": [
+    {
+      "classification": "unresolved-divergence-outside-slice",
+      "local_sha256": "sha256:54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865",
+      "note": "Official ball geom adds priority=1; repo-local ball omits it. Ball semantics remain open and are not used by the six reconciled variants.",
+      "official_sha256": "sha256:eee47ed46f954c25277cb885258ab0bce59335e7439be8152ba08f701c4abc23",
+      "path": "ball.xml",
+      "scope": "ball-model-outside-slice-006"
+    }
+  ],
+  "evidence_boundary": "Structural and selected numerical model agreement only; no contact, task, policy, transfer, or physical-success claim.",
+  "generation": {
+    "mujoco_version": "3.12.0",
+    "script": "scripts/reconcile_models.py"
+  },
+  "local_model_locks": {
+    "microduck-allcollisions-v1.lock.json": "sha256:d89e51c55fb183cbb77233d27536a3a7a3e264dca204d0e02d5fdf8d0b3ec708",
+    "microduck-rollers-v1.lock.json": "sha256:3655a2f15c2a2fd40ef71781088959b3725aa4fd0ac8b791466e0e5c9fbe76e1",
+    "microduck-walk-v1.lock.json": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae"
+  },
+  "official_authority": {
+    "commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+    "commit_date": "2026-09-01T14:09:44-05:00",
+    "repository": "pollen-robotics/microduck-rl",
+    "subtree": "src/mjlab_microduck/robot/microduck",
+    "tree": "98d8b93e4425388ec077a4847117c5043fc4552e"
+  },
+  "schema_version": "microduck.model-reconciliation/v1",
+  "source_comparison": {
+    "files": [
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:c304dbf56e23c4e73009e67297e358bb758904372858e344eff7eff47cfd8293",
+        "official_sha256": "sha256:c304dbf56e23c4e73009e67297e358bb758904372858e344eff7eff47cfd8293",
+        "path": "add_backlash.py"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:958010af8e09a2ac7a79797d1aead327435e5201b3c4df0f2f7220f3c2c42941",
+        "official_sha256": "sha256:958010af8e09a2ac7a79797d1aead327435e5201b3c4df0f2f7220f3c2c42941",
+        "path": "additional.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:70ecf0629559e3edf8f194f286a5fa0bd0ef77b75429b5f24f8bae70c7aa7446",
+        "official_sha256": "sha256:70ecf0629559e3edf8f194f286a5fa0bd0ef77b75429b5f24f8bae70c7aa7446",
+        "path": "assets/ankle_l_v1.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:98f14ba6e6cd138740aa822a615aaa0db34527d499c40b2379aacd13427a1379",
+        "official_sha256": "sha256:98f14ba6e6cd138740aa822a615aaa0db34527d499c40b2379aacd13427a1379",
+        "path": "assets/ankle_left.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:e3f277879aa6eb24e118795f4d8d8525acab9192c202a569d1403408ec656754",
+        "official_sha256": "sha256:e3f277879aa6eb24e118795f4d8d8525acab9192c202a569d1403408ec656754",
+        "path": "assets/ankle_r_v1.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:836032fdeaa4b1f47f75cb24fa4ad9ebdb09acec158a0d787b3890c6dc4d4c6e",
+        "official_sha256": "sha256:836032fdeaa4b1f47f75cb24fa4ad9ebdb09acec158a0d787b3890c6dc4d4c6e",
+        "path": "assets/ankle_right.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:a176364f824248b5156b37f2fd5c6b8bdfb24cd08be7ed6b3faa10b4db14a9cb",
+        "official_sha256": "sha256:a176364f824248b5156b37f2fd5c6b8bdfb24cd08be7ed6b3faa10b4db14a9cb",
+        "path": "assets/banana_pcb_locker.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:2b30cbdb110c5cca7092a9b2658c9e899e294bf2df71635828858e1d1a20abfe",
+        "official_sha256": "sha256:2b30cbdb110c5cca7092a9b2658c9e899e294bf2df71635828858e1d1a20abfe",
+        "path": "assets/bearing_roll.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:3ce9532854a712c93e00e0fd2bbc2ce6b1c45f9418fd29d6e82f6ad8af8fc1af",
+        "official_sha256": "sha256:3ce9532854a712c93e00e0fd2bbc2ce6b1c45f9418fd29d6e82f6ad8af8fc1af",
+        "path": "assets/bottom_head_shell.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:45b904bcb378161d274d313cd067d3967305db0bf22c0955530145e18cdd2cd8",
+        "official_sha256": "sha256:45b904bcb378161d274d313cd067d3967305db0bf22c0955530145e18cdd2cd8",
+        "path": "assets/elec_rpi_robot_hat_pcb.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:30eaa56fc38129ba16e2b4e247ac419b0ae9e5b0fe9e748697f4838d338b952e",
+        "official_sha256": "sha256:30eaa56fc38129ba16e2b4e247ac419b0ae9e5b0fe9e748697f4838d338b952e",
+        "path": "assets/face_part.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:5de2622a7b894e0fc9988dc6cff6579ee1dc818ffaddd0319f49cf5d5bd05587",
+        "official_sha256": "sha256:5de2622a7b894e0fc9988dc6cff6579ee1dc818ffaddd0319f49cf5d5bd05587",
+        "path": "assets/foot_left.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:8ffa894b29578edc78f5e982a7d89a8f5e4fa1dc27232b88c22a8a0a74cfbaa7",
+        "official_sha256": "sha256:8ffa894b29578edc78f5e982a7d89a8f5e4fa1dc27232b88c22a8a0a74cfbaa7",
+        "path": "assets/foot_right.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:02bc777ce76a31b3d5c415188f8268b989f4eca57bc440a2900825ac459dec38",
+        "official_sha256": "sha256:02bc777ce76a31b3d5c415188f8268b989f4eca57bc440a2900825ac459dec38",
+        "path": "assets/hip_l.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:65c300349113d3c6cd4a2cc587f76f7228115565a854492e42358ba8df71796a",
+        "official_sha256": "sha256:65c300349113d3c6cd4a2cc587f76f7228115565a854492e42358ba8df71796a",
+        "path": "assets/jaw.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:61a426890f748713d45a9c0844149bcb0340d326f75295dcf7de2a4d768cbc85",
+        "official_sha256": "sha256:61a426890f748713d45a9c0844149bcb0340d326f75295dcf7de2a4d768cbc85",
+        "path": "assets/jaw_soft.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:efc16f55a4c32d21d74bf834faba27346788f154e29b40850cbcc69fda2f2396",
+        "official_sha256": "sha256:efc16f55a4c32d21d74bf834faba27346788f154e29b40850cbcc69fda2f2396",
+        "path": "assets/left_shell.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:b84e46d681cb971029e421c252de85e2f31e8858abee610dc26cd18037ef0224",
+        "official_sha256": "sha256:b84e46d681cb971029e421c252de85e2f31e8858abee610dc26cd18037ef0224",
+        "path": "assets/left_upper_leg.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:b57d55ec2504dfb90b07bfc781dbf9b4bb6560becaf1dddbadd6a3914fdc423f",
+        "official_sha256": "sha256:b57d55ec2504dfb90b07bfc781dbf9b4bb6560becaf1dddbadd6a3914fdc423f",
+        "path": "assets/leg.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:1549b2dad784d1a4c505c1ca62bffce6ca4e9b22c9273b37d6cda1c8bf2ca127",
+        "official_sha256": "sha256:1549b2dad784d1a4c505c1ca62bffce6ca4e9b22c9273b37d6cda1c8bf2ca127",
+        "path": "assets/lens.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:7a9989bbe776ddd7a268013e63cdf0efc2fdae245ad2754a6b18d6bfbe21c2ed",
+        "official_sha256": "sha256:7a9989bbe776ddd7a268013e63cdf0efc2fdae245ad2754a6b18d6bfbe21c2ed",
+        "path": "assets/m12_lens_holder.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:5a741ee0dc71b349b8d6def4bffb826c4b9304c47cf0f00ffd1a3140b9205220",
+        "official_sha256": "sha256:5a741ee0dc71b349b8d6def4bffb826c4b9304c47cf0f00ffd1a3140b9205220",
+        "path": "assets/motor_support.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:ee5d4cbc51f64c43cd9c15f82709be93b5bd3f080013726d1d39c329c85050b9",
+        "official_sha256": "sha256:ee5d4cbc51f64c43cd9c15f82709be93b5bd3f080013726d1d39c329c85050b9",
+        "path": "assets/neck.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:b9aed695e03da3819d244ecc66f1ad2d3c5c435f759403bb9e0f3b9ca2876453",
+        "official_sha256": "sha256:b9aed695e03da3819d244ecc66f1ad2d3c5c435f759403bb9e0f3b9ca2876453",
+        "path": "assets/neck_pitch.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:f5492d8291da053bb4cb3f6680f90507648c4cfe1ef59f92b7d8f53e980d279b",
+        "official_sha256": "sha256:f5492d8291da053bb4cb3f6680f90507648c4cfe1ef59f92b7d8f53e980d279b",
+        "path": "assets/noenoeil.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:979ca81251d4ec5862b6c987b46095aa07d0534ca1ec15f3cf438bbf7189deda",
+        "official_sha256": "sha256:979ca81251d4ec5862b6c987b46095aa07d0534ca1ec15f3cf438bbf7189deda",
+        "path": "assets/np_f970.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:0608b3cc7d15e479ae3a275c03096df44322ed06a8dbfc59fe790c46b3690753",
+        "official_sha256": "sha256:0608b3cc7d15e479ae3a275c03096df44322ed06a8dbfc59fe790c46b3690753",
+        "path": "assets/pcb__raspberry_pi_zero_2_w.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:cb43ba9351f51559f49ffc89679478288cfe6e9682b31898397406165b520cbe",
+        "official_sha256": "sha256:cb43ba9351f51559f49ffc89679478288cfe6e9682b31898397406165b520cbe",
+        "path": "assets/power_support.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:484779f2bbe856f212d96a152550bb6834fd3c69603da315b6f70d1a3766d120",
+        "official_sha256": "sha256:484779f2bbe856f212d96a152550bb6834fd3c69603da315b6f70d1a3766d120",
+        "path": "assets/right_shell.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:208f4c94a94a9c6b978030ea194440a94a0508390cf5b0ce8efc5e560f559f21",
+        "official_sha256": "sha256:208f4c94a94a9c6b978030ea194440a94a0508390cf5b0ce8efc5e560f559f21",
+        "path": "assets/right_upper_leg.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:c2a84cd05ed8ce87bbdd64950bca415ba5945641385f5ec7cdbb161aa37281a4",
+        "official_sha256": "sha256:c2a84cd05ed8ce87bbdd64950bca415ba5945641385f5ec7cdbb161aa37281a4",
+        "path": "assets/rim.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:7b13447a82624d952e958d83572ed0c6e610d595db1f7f60217b6c8f059fec15",
+        "official_sha256": "sha256:7b13447a82624d952e958d83572ed0c6e610d595db1f7f60217b6c8f059fec15",
+        "path": "assets/roller_blade.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:154412afeab1875acfc8bbd437f193f02c86cdd6a556395db10bb7126c545c6e",
+        "official_sha256": "sha256:154412afeab1875acfc8bbd437f193f02c86cdd6a556395db10bb7126c545c6e",
+        "path": "assets/seeed_bearing__configuration__22x16x4.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:4d0d4c174a167e5f783b52b212a14a5bbd8a3180988c744c299c330a6b3de448",
+        "official_sha256": "sha256:4d0d4c174a167e5f783b52b212a14a5bbd8a3180988c744c299c330a6b3de448",
+        "path": "assets/seeed_bearing__configuration_default.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:16f662c82bd3e24f0e64ee22b6b549b9a2a76f6de7b7477b9f89f5861f3e91a1",
+        "official_sha256": "sha256:16f662c82bd3e24f0e64ee22b6b549b9a2a76f6de7b7477b9f89f5861f3e91a1",
+        "path": "assets/soft_mouth_top.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:db35f3b231c075fe1f9cb5449e7a698fb8ea97362daf8432be3e9700c2067574",
+        "official_sha256": "sha256:db35f3b231c075fe1f9cb5449e7a698fb8ea97362daf8432be3e9700c2067574",
+        "path": "assets/sole_left.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:a4f5c114aae7137d559cacfb71d77c981588850335de5a09a14f95a4192a218f",
+        "official_sha256": "sha256:a4f5c114aae7137d559cacfb71d77c981588850335de5a09a14f95a4192a218f",
+        "path": "assets/sole_right.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:694064a99dbecd48aea6122232ff1051b085e59ccbd4c53d8c32640105b4e826",
+        "official_sha256": "sha256:694064a99dbecd48aea6122232ff1051b085e59ccbd4c53d8c32640105b4e826",
+        "path": "assets/speaker.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:9f680806474bcfaa5b0a1db5b008578ccbedb33b60a39221c494cbff409033c9",
+        "official_sha256": "sha256:9f680806474bcfaa5b0a1db5b008578ccbedb33b60a39221c494cbff409033c9",
+        "path": "assets/tire.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:bc64288c0d54e13ec907256c2b99535937d370af1410de498905ec3cf8d7c3df",
+        "official_sha256": "sha256:bc64288c0d54e13ec907256c2b99535937d370af1410de498905ec3cf8d7c3df",
+        "path": "assets/top_head_shell.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:fabfecefb73fbdc027e0fc8fc482a3857b86682a8dac0ca2ed88ae3011c01659",
+        "official_sha256": "sha256:fabfecefb73fbdc027e0fc8fc482a3857b86682a8dac0ca2ed88ae3011c01659",
+        "path": "assets/trunk_base.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:508bf1436c09bb5acb27568b157477f74ccd985f5cb0911a0d0e25d178882772",
+        "official_sha256": "sha256:508bf1436c09bb5acb27568b157477f74ccd985f5cb0911a0d0e25d178882772",
+        "path": "assets/trunk_shell_left.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:d5761d6995bfc175ddf429bab8ee2fab2fa9dea1ff52da30531a3b79be1c730e",
+        "official_sha256": "sha256:d5761d6995bfc175ddf429bab8ee2fab2fa9dea1ff52da30531a3b79be1c730e",
+        "path": "assets/trunk_shell_right.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:b84e46d681cb971029e421c252de85e2f31e8858abee610dc26cd18037ef0224",
+        "official_sha256": "sha256:b84e46d681cb971029e421c252de85e2f31e8858abee610dc26cd18037ef0224",
+        "path": "assets/upper_leg_left.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:d6ed49dc77a539c65b9db1251f16b1e037f5ccf4334607e487dd624f9e12f59e",
+        "official_sha256": "sha256:d6ed49dc77a539c65b9db1251f16b1e037f5ccf4334607e487dd624f9e12f59e",
+        "path": "assets/upper_leg_right.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:41a4f826b5badfb75a1c0a6d26527c49761de88597d67c25ad731df2cdab7995",
+        "official_sha256": "sha256:41a4f826b5badfb75a1c0a6d26527c49761de88597d67c25ad731df2cdab7995",
+        "path": "assets/upper_leg_rigidity_plate.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:c9f6bf7dd9d8b307a4174b40ff12517b3ea470e5535319a5b7dcce4ba52cdfe1",
+        "official_sha256": "sha256:c9f6bf7dd9d8b307a4174b40ff12517b3ea470e5535319a5b7dcce4ba52cdfe1",
+        "path": "assets/xl330.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:56ce1110e43c2279c6580f79a2a8c9e3f91b3bf5cdf8cf00b1caa3cab127a6a7",
+        "official_sha256": "sha256:56ce1110e43c2279c6580f79a2a8c9e3f91b3bf5cdf8cf00b1caa3cab127a6a7",
+        "path": "assets/yaw2roll.stl"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:41149f07f2fb4f2c62b589b3e43c17bedbc57e17d2de5d4e22c4f4e4d3e73dc7",
+        "official_sha256": "sha256:41149f07f2fb4f2c62b589b3e43c17bedbc57e17d2de5d4e22c4f4e4d3e73dc7",
+        "path": "assets/yaw_roll_motion.stl"
+      },
+      {
+        "classification": "unresolved-divergence-outside-slice",
+        "local_sha256": "sha256:54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865",
+        "official_sha256": "sha256:eee47ed46f954c25277cb885258ab0bce59335e7439be8152ba08f701c4abc23",
+        "path": "ball.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:2c27728a0e6d7d9dcfe210ede931cc24f5a59f19fbd6b0846bf8eca1c9ac1e11",
+        "official_sha256": "sha256:2c27728a0e6d7d9dcfe210ede931cc24f5a59f19fbd6b0846bf8eca1c9ac1e11",
+        "path": "config_mjcf_allcollisions.json"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:19f453a1409c15867f7e08577b49cf1d3b52f7bfaa6abbccf7456cfd28dc5ebb",
+        "official_sha256": "sha256:19f453a1409c15867f7e08577b49cf1d3b52f7bfaa6abbccf7456cfd28dc5ebb",
+        "path": "config_mjcf_allcollisions_backlash.json"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:5932ade31b859e9bb4d9986b0d0d8e7000d4d2f6048b86a919f49e462694328c",
+        "official_sha256": "sha256:5932ade31b859e9bb4d9986b0d0d8e7000d4d2f6048b86a919f49e462694328c",
+        "path": "config_mjcf_allcollisions_rollers.json"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:a0d61ffc0bbfcce791c6b79b25694ce3401cf4b693819b91d5f751e8c033585e",
+        "official_sha256": "sha256:a0d61ffc0bbfcce791c6b79b25694ce3401cf4b693819b91d5f751e8c033585e",
+        "path": "config_mjcf_allcollisions_rollers_backlash.json"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:31fdf5bd061170fb41729b3a82a7780e772121ec566625c5a6bf849b890b31f9",
+        "official_sha256": "sha256:31fdf5bd061170fb41729b3a82a7780e772121ec566625c5a6bf849b890b31f9",
+        "path": "config_mjcf_walk.json"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:1f662b54138c30b135a451e1765da34045b6330bcb7c573d2719c51ef5f564a0",
+        "official_sha256": "sha256:1f662b54138c30b135a451e1765da34045b6330bcb7c573d2719c51ef5f564a0",
+        "path": "config_mjcf_walk_backlash.json"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:6a4481a9279ffd92139479e67515df7b3510799ceb648c18fde0d58c300eae86",
+        "official_sha256": "sha256:6a4481a9279ffd92139479e67515df7b3510799ceb648c18fde0d58c300eae86",
+        "path": "joints_properties.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:7a6fdf437f5a80c7348ad801f43f906b997a834389cb70cca5e1e8517ba38044",
+        "official_sha256": "sha256:7a6fdf437f5a80c7348ad801f43f906b997a834389cb70cca5e1e8517ba38044",
+        "path": "robot_allcollisions.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:248c712e13258104ccab3f96c5cc47c7faa8f718f56f2c7de03efda653c8fb6b",
+        "official_sha256": "sha256:248c712e13258104ccab3f96c5cc47c7faa8f718f56f2c7de03efda653c8fb6b",
+        "path": "robot_allcollisions_backlash.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:c201a72ecbc4dd8e110c840cb79b1647aab59e6c76db7369a88c34a33307447e",
+        "official_sha256": "sha256:c201a72ecbc4dd8e110c840cb79b1647aab59e6c76db7369a88c34a33307447e",
+        "path": "robot_allcollisions_rollers.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:97d18e5426a911a443b06ec28ea87af18413f243c12cbb55ae844bbb5b0c2e2c",
+        "official_sha256": "sha256:97d18e5426a911a443b06ec28ea87af18413f243c12cbb55ae844bbb5b0c2e2c",
+        "path": "robot_allcollisions_rollers_backlash.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+        "official_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+        "path": "robot_walk.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:43686e85bf0fa0c77c89673d546c483d4a22d06a9c81fff3a673bfe9aae36d0d",
+        "official_sha256": "sha256:43686e85bf0fa0c77c89673d546c483d4a22d06a9c81fff3a673bfe9aae36d0d",
+        "path": "robot_walk_backlash.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:0d2f58227a3e1c4caae4e847a368ae83516d0f398f428c4e96737b67dd894ef1",
+        "official_sha256": "sha256:0d2f58227a3e1c4caae4e847a368ae83516d0f398f428c4e96737b67dd894ef1",
+        "path": "scene.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:9ad82184844332f3999a3bb4e634700e8d8010f9974744c16f9ac174243cf488",
+        "official_sha256": "sha256:9ad82184844332f3999a3bb4e634700e8d8010f9974744c16f9ac174243cf488",
+        "path": "scene_backlash.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:3d59c82db5c3ac5cb35b1f5d4dfa550832be2eddffa9249ba0bfef3b6452e2bd",
+        "official_sha256": "sha256:3d59c82db5c3ac5cb35b1f5d4dfa550832be2eddffa9249ba0bfef3b6452e2bd",
+        "path": "scene_ball.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:b22987450ae4d8e4656d6f236390ef0d01ad316560f645a557a2d18c4b45dc2d",
+        "official_sha256": "sha256:b22987450ae4d8e4656d6f236390ef0d01ad316560f645a557a2d18c4b45dc2d",
+        "path": "scene_rollers.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+        "official_sha256": "sha256:6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+        "path": "scene_walk.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:bf71c93e90f5a70890f6f76f79f8ba25191cf7ef0a8de47b1dd24f629449150b",
+        "official_sha256": "sha256:bf71c93e90f5a70890f6f76f79f8ba25191cf7ef0a8de47b1dd24f629449150b",
+        "path": "scene_walk_backlash.xml"
+      },
+      {
+        "classification": "byte-identical-input",
+        "local_sha256": "sha256:47854a0ab18261f069553e1572e0c329c4f39e4557dbdada71e0dc62af14ee20",
+        "official_sha256": "sha256:47854a0ab18261f069553e1572e0c329c4f39e4557dbdada71e0dc62af14ee20",
+        "path": "sensors.xml"
+      }
+    ],
+    "official_only_nonruntime_part_files": [
+      "assets/ankle_l_v1.part",
+      "assets/ankle_left.part",
+      "assets/ankle_r_v1.part",
+      "assets/ankle_right.part",
+      "assets/banana_pcb_locker.part",
+      "assets/bearing_roll.part",
+      "assets/bottom_head_shell.part",
+      "assets/elec_rpi_robot_hat_pcb.part",
+      "assets/face_part.part",
+      "assets/foot_left.part",
+      "assets/foot_right.part",
+      "assets/hip_l.part",
+      "assets/jaw.part",
+      "assets/jaw_soft.part",
+      "assets/left_shell.part",
+      "assets/left_upper_leg.part",
+      "assets/leg.part",
+      "assets/lens.part",
+      "assets/m12_lens_holder.part",
+      "assets/motor_support.part",
+      "assets/neck.part",
+      "assets/neck_pitch.part",
+      "assets/noenoeil.part",
+      "assets/np_f970.part",
+      "assets/pcb__raspberry_pi_zero_2_w.part",
+      "assets/power_support.part",
+      "assets/right_shell.part",
+      "assets/right_upper_leg.part",
+      "assets/rim.part",
+      "assets/roller_blade.part",
+      "assets/seeed_bearing__configuration__22x16x4.part",
+      "assets/seeed_bearing__configuration_default.part",
+      "assets/soft_mouth_top.part",
+      "assets/sole_left.part",
+      "assets/sole_right.part",
+      "assets/speaker.part",
+      "assets/tire.part",
+      "assets/top_head_shell.part",
+      "assets/trunk_base.part",
+      "assets/trunk_shell_left.part",
+      "assets/trunk_shell_right.part",
+      "assets/upper_leg_left.part",
+      "assets/upper_leg_right.part",
+      "assets/upper_leg_rigidity_plate.part",
+      "assets/xl330.part",
+      "assets/yaw2roll.part",
+      "assets/yaw_roll_motion.part"
+    ]
+  },
+  "unresolved_divergences": [],
+  "variant_relationships": {
+    "allcollisions": {
+      "classification": "expected-variant-difference",
+      "relative_to": "walk",
+      "semantic_manifest_equal": false
+    },
+    "allcollisions_backlash": {
+      "classification": "expected-variant-difference",
+      "relative_to": "walk",
+      "semantic_manifest_equal": false
+    },
+    "rollers": {
+      "classification": "expected-variant-difference",
+      "relative_to": "walk",
+      "semantic_manifest_equal": false
+    },
+    "rollers_backlash": {
+      "classification": "expected-variant-difference",
+      "relative_to": "walk",
+      "semantic_manifest_equal": false
+    },
+    "walk": {
+      "classification": "same-variant",
+      "relative_to": "walk",
+      "semantic_manifest_equal": true
+    },
+    "walk_backlash": {
+      "classification": "expected-variant-difference",
+      "relative_to": "walk",
+      "semantic_manifest_equal": false
+    }
+  },
+  "variants": {
+    "allcollisions": {
+      "compiled_classification": "semantically-identical-compiled-model",
+      "differing_sections": [],
+      "input_classification": "byte-identical-input",
+      "local_manifest_sha256": "sha256:9ba27e6577a32bb049b5e4a68256225a7403a5dca3b86d03977b39431e87eea9",
+      "manifest": {
+        "actuators": [
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_yaw",
+            "target": "left_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_roll",
+            "target": "left_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_pitch",
+            "target": "left_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_knee",
+            "target": "left_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_ankle",
+            "target": "left_ankle",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "neck_pitch",
+            "target": "neck_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_pitch",
+            "target": "head_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_yaw",
+            "target": "head_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_roll",
+            "target": "head_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_yaw",
+            "target": "right_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_roll",
+            "target": "right_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_pitch",
+            "target": "right_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_knee",
+            "target": "right_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_ankle",
+            "target": "right_ankle",
+            "transmission_type": 0
+          }
+        ],
+        "bodies": [
+          {
+            "inertia_kg_m2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "inertial_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.0,
+            "name": "world"
+          },
+          {
+            "inertia_kg_m2": [
+              0.00014593161399370665,
+              0.00014079887191245798,
+              9.852651409383543e-05
+            ],
+            "inertial_position_m": [
+              -0.0226332,
+              -2.70828e-05,
+              0.00280064
+            ],
+            "mass_kg": 0.199224,
+            "name": "trunk_base"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "yaw2roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6179e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_left"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -1.52e-10,
+              0.0318937,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162273349969178e-05,
+              7.743185360670359e-06,
+              5.903341289360453e-06
+            ],
+            "inertial_position_m": [
+              -0.00615738,
+              -0.0137483,
+              -0.0156586
+            ],
+            "mass_kg": 0.0300246,
+            "name": "ankle_left"
+          },
+          {
+            "inertia_kg_m2": [
+              1.72925e-05,
+              1.63707e-05,
+              3.12694e-06
+            ],
+            "inertial_position_m": [
+              0.0,
+              -0.025,
+              0.0141665
+            ],
+            "mass_kg": 0.0368414,
+            "name": "neck"
+          },
+          {
+            "inertia_kg_m2": [
+              1.09186e-06,
+              9.66855e-07,
+              5.12111e-07
+            ],
+            "inertial_position_m": [
+              -6.533e-09,
+              0.0116641,
+              -0.0145
+            ],
+            "mass_kg": 0.00572,
+            "name": "neck_pitch"
+          },
+          {
+            "inertia_kg_m2": [
+              9.655117695766666e-06,
+              8.11787739625905e-06,
+              6.887804907974275e-06
+            ],
+            "inertial_position_m": [
+              -0.000166657,
+              -0.00500964,
+              0.0178065
+            ],
+            "mass_kg": 0.0486,
+            "name": "yaw_roll_motion"
+          },
+          {
+            "inertia_kg_m2": [
+              0.0003210675976941665,
+              0.00025426573598788586,
+              0.00014946066631794762
+            ],
+            "inertial_position_m": [
+              0.00460523,
+              0.00120047,
+              -0.0324761
+            ],
+            "mass_kg": 0.188766,
+            "name": "jaw_soft"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "bearing_roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6212e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              -0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_right"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -0.0318937,
+              -1.52e-10,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162245904558893e-05,
+              7.743216094205062e-06,
+              5.90343800123603e-06
+            ],
+            "inertial_position_m": [
+              0.00615539,
+              -0.0137482,
+              -0.0156566
+            ],
+            "mass_kg": 0.0300251,
+            "name": "ankle_right"
+          }
+        ],
+        "collision_geoms": [
+          {
+            "body": "world",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 0,
+            "name": "floor",
+            "type": 0
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:7>",
+            "type": 7
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:9>",
+            "type": 7
+          },
+          {
+            "body": "hip_l",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:19>",
+            "type": 7
+          },
+          {
+            "body": "leg",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:26>",
+            "type": 7
+          },
+          {
+            "body": "ankle_left",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "left_foot_collision",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:49>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:56>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:58>",
+            "type": 7
+          },
+          {
+            "body": "hip_l_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:67>",
+            "type": 7
+          },
+          {
+            "body": "leg_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:76>",
+            "type": 7
+          },
+          {
+            "body": "ankle_right",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "right_foot_collision",
+            "type": 7
+          }
+        ],
+        "counts": {
+          "nbody": 16,
+          "ngeom": 82,
+          "njnt": 15,
+          "nkey": 4,
+          "nq": 21,
+          "nu": 14,
+          "nv": 20
+        },
+        "joints": [
+          {
+            "armature": 0.0,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "trunk_base_freejoint",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 0
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_yaw",
+            "range": [
+              -0.4363323129985824,
+              0.5235987755982988
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_pitch",
+            "range": [
+              -1.570796326795005,
+              1.5707963267947882
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_knee",
+            "range": [
+              -1.570796326795012,
+              1.570796326794781
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_ankle",
+            "range": [
+              -1.5707963267949019,
+              1.5707963267948912
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "neck_pitch",
+            "range": [
+              -1.5707963267948966,
+              1.0471975511965976
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_pitch",
+            "range": [
+              -1.5707963267948974,
+              1.5707963267948957
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_yaw",
+            "range": [
+              -2.967059728390373,
+              2.967059728390348
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_roll",
+            "range": [
+              -0.43633231299859127,
+              0.4363323129985735
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_yaw",
+            "range": [
+              -0.5235987755982988,
+              0.4363323129985824
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_pitch",
+            "range": [
+              -1.5707963267949268,
+              1.5707963267948664
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_knee",
+            "range": [
+              -1.570796326794932,
+              1.570796326794861
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_ankle",
+            "range": [
+              -1.5707963267949054,
+              1.5707963267948877
+            ],
+            "type": 3
+          }
+        ],
+        "keyframes": [
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "name": "INIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984
+            ],
+            "name": "STAND",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0
+            ],
+            "name": "SIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0
+            ],
+            "name": "FOLD",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0
+            ]
+          }
+        ]
+      },
+      "official_manifest_sha256": "sha256:9ba27e6577a32bb049b5e4a68256225a7403a5dca3b86d03977b39431e87eea9",
+      "root": "scene.xml"
+    },
+    "allcollisions_backlash": {
+      "compiled_classification": "semantically-identical-compiled-model",
+      "differing_sections": [],
+      "input_classification": "byte-identical-input",
+      "local_manifest_sha256": "sha256:a641da19c9a58b237c11c97c855c3a48b2222a9e616de84f6098624f57d9219a",
+      "manifest": {
+        "actuators": [
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_yaw",
+            "target": "left_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_roll",
+            "target": "left_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_pitch",
+            "target": "left_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_knee",
+            "target": "left_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_ankle",
+            "target": "left_ankle",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "neck_pitch",
+            "target": "neck_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_pitch",
+            "target": "head_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_yaw",
+            "target": "head_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_roll",
+            "target": "head_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_yaw",
+            "target": "right_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_roll",
+            "target": "right_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_pitch",
+            "target": "right_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_knee",
+            "target": "right_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_ankle",
+            "target": "right_ankle",
+            "transmission_type": 0
+          }
+        ],
+        "bodies": [
+          {
+            "inertia_kg_m2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "inertial_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.0,
+            "name": "world"
+          },
+          {
+            "inertia_kg_m2": [
+              0.00014593161399370665,
+              0.00014079887191245798,
+              9.852651409383543e-05
+            ],
+            "inertial_position_m": [
+              -0.0226332,
+              -2.70828e-05,
+              0.00280064
+            ],
+            "mass_kg": 0.199224,
+            "name": "trunk_base"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "yaw2roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6179e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_left"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -1.52e-10,
+              0.0318937,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162273349969178e-05,
+              7.743185360670359e-06,
+              5.903341289360453e-06
+            ],
+            "inertial_position_m": [
+              -0.00615738,
+              -0.0137483,
+              -0.0156586
+            ],
+            "mass_kg": 0.0300246,
+            "name": "ankle_left"
+          },
+          {
+            "inertia_kg_m2": [
+              1.72925e-05,
+              1.63707e-05,
+              3.12694e-06
+            ],
+            "inertial_position_m": [
+              0.0,
+              -0.025,
+              0.0141665
+            ],
+            "mass_kg": 0.0368414,
+            "name": "neck"
+          },
+          {
+            "inertia_kg_m2": [
+              1.09186e-06,
+              9.66855e-07,
+              5.12111e-07
+            ],
+            "inertial_position_m": [
+              -6.533e-09,
+              0.0116641,
+              -0.0145
+            ],
+            "mass_kg": 0.00572,
+            "name": "neck_pitch"
+          },
+          {
+            "inertia_kg_m2": [
+              9.655117695766666e-06,
+              8.11787739625905e-06,
+              6.887804907974275e-06
+            ],
+            "inertial_position_m": [
+              -0.000166657,
+              -0.00500964,
+              0.0178065
+            ],
+            "mass_kg": 0.0486,
+            "name": "yaw_roll_motion"
+          },
+          {
+            "inertia_kg_m2": [
+              0.0003210675976941665,
+              0.00025426573598788586,
+              0.00014946066631794762
+            ],
+            "inertial_position_m": [
+              0.00460523,
+              0.00120047,
+              -0.0324761
+            ],
+            "mass_kg": 0.188766,
+            "name": "jaw_soft"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "bearing_roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6212e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              -0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_right"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -0.0318937,
+              -1.52e-10,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162245904558893e-05,
+              7.743216094205062e-06,
+              5.90343800123603e-06
+            ],
+            "inertial_position_m": [
+              0.00615539,
+              -0.0137482,
+              -0.0156566
+            ],
+            "mass_kg": 0.0300251,
+            "name": "ankle_right"
+          }
+        ],
+        "collision_geoms": [
+          {
+            "body": "world",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 0,
+            "name": "floor",
+            "type": 0
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:7>",
+            "type": 7
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:9>",
+            "type": 7
+          },
+          {
+            "body": "hip_l",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:19>",
+            "type": 7
+          },
+          {
+            "body": "leg",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:26>",
+            "type": 7
+          },
+          {
+            "body": "ankle_left",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "left_foot_collision",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:49>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:56>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:58>",
+            "type": 7
+          },
+          {
+            "body": "hip_l_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:67>",
+            "type": 7
+          },
+          {
+            "body": "leg_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:76>",
+            "type": 7
+          },
+          {
+            "body": "ankle_right",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "right_foot_collision",
+            "type": 7
+          }
+        ],
+        "counts": {
+          "nbody": 16,
+          "ngeom": 82,
+          "njnt": 29,
+          "nkey": 4,
+          "nq": 35,
+          "nu": 14,
+          "nv": 34
+        },
+        "joints": [
+          {
+            "armature": 0.0,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "trunk_base_freejoint",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 0
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_yaw",
+            "range": [
+              -0.4363323129985824,
+              0.5235987755982988
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_pitch",
+            "range": [
+              -1.570796326795005,
+              1.5707963267947882
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_knee",
+            "range": [
+              -1.570796326795012,
+              1.570796326794781
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_knee_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_ankle",
+            "range": [
+              -1.5707963267949019,
+              1.5707963267948912
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_ankle_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "neck_pitch",
+            "range": [
+              -1.5707963267948966,
+              1.0471975511965976
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_neck_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_pitch",
+            "range": [
+              -1.5707963267948974,
+              1.5707963267948957
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_yaw",
+            "range": [
+              -2.967059728390373,
+              2.967059728390348
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_roll",
+            "range": [
+              -0.43633231299859127,
+              0.4363323129985735
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_yaw",
+            "range": [
+              -0.5235987755982988,
+              0.4363323129985824
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_pitch",
+            "range": [
+              -1.5707963267949268,
+              1.5707963267948664
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_knee",
+            "range": [
+              -1.570796326794932,
+              1.570796326794861
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_knee_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_ankle",
+            "range": [
+              -1.5707963267949054,
+              1.5707963267948877
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_ankle_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          }
+        ],
+        "keyframes": [
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "name": "INIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984
+            ],
+            "name": "STAND",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.08726646259971647,
+              0.0,
+              -0.457924,
+              0.0,
+              -0.00494,
+              0.0,
+              0.452984,
+              0.0,
+              0.3490658503988659,
+              0.0,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.0,
+              0.457924,
+              0.0,
+              0.00494,
+              0.0,
+              -0.452984,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0
+            ],
+            "name": "SIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.5236,
+              0.0,
+              1.0472,
+              0.0,
+              0.0,
+              0.0,
+              0.5,
+              0.0,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              0.0,
+              -1.0472,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0
+            ],
+            "name": "FOLD",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.57,
+              0.0,
+              1.57,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              0.0,
+              -1.57,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "official_manifest_sha256": "sha256:a641da19c9a58b237c11c97c855c3a48b2222a9e616de84f6098624f57d9219a",
+      "root": "scene_backlash.xml"
+    },
+    "rollers": {
+      "compiled_classification": "semantically-identical-compiled-model",
+      "differing_sections": [],
+      "input_classification": "byte-identical-input",
+      "local_manifest_sha256": "sha256:3978073968a3966b08c93a5906e1a342094bcdc2d5a1ded0929886af1f12ffff",
+      "manifest": {
+        "actuators": [
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_yaw",
+            "target": "left_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_roll",
+            "target": "left_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_pitch",
+            "target": "left_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_knee",
+            "target": "left_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_ankle",
+            "target": "left_ankle",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "neck_pitch",
+            "target": "neck_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_pitch",
+            "target": "head_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_yaw",
+            "target": "head_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_roll",
+            "target": "head_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_yaw",
+            "target": "right_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_roll",
+            "target": "right_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_pitch",
+            "target": "right_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_knee",
+            "target": "right_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_ankle",
+            "target": "right_ankle",
+            "transmission_type": 0
+          }
+        ],
+        "bodies": [
+          {
+            "inertia_kg_m2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "inertial_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.0,
+            "name": "world"
+          },
+          {
+            "inertia_kg_m2": [
+              0.00014593161399370665,
+              0.00014079887191245798,
+              9.852651409383543e-05
+            ],
+            "inertial_position_m": [
+              -0.0226332,
+              -2.70828e-05,
+              0.00280064
+            ],
+            "mass_kg": 0.199224,
+            "name": "trunk_base"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "yaw2roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6179e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_left"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -1.52e-10,
+              0.0318937,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg"
+          },
+          {
+            "inertia_kg_m2": [
+              9.708680032293239e-06,
+              8.217083889190592e-06,
+              4.83303607851617e-06
+            ],
+            "inertial_position_m": [
+              -0.00680626,
+              -0.0143677,
+              -0.0151851
+            ],
+            "mass_kg": 0.02087,
+            "name": "ankle_l_v1"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              0.0,
+              -0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.72925e-05,
+              1.63707e-05,
+              3.12694e-06
+            ],
+            "inertial_position_m": [
+              0.0,
+              -0.025,
+              0.0141665
+            ],
+            "mass_kg": 0.0368414,
+            "name": "neck"
+          },
+          {
+            "inertia_kg_m2": [
+              1.09186e-06,
+              9.66855e-07,
+              5.12111e-07
+            ],
+            "inertial_position_m": [
+              -6.533e-09,
+              0.0116641,
+              -0.0145
+            ],
+            "mass_kg": 0.00572,
+            "name": "neck_pitch"
+          },
+          {
+            "inertia_kg_m2": [
+              9.655117695766666e-06,
+              8.11787739625905e-06,
+              6.887804907974275e-06
+            ],
+            "inertial_position_m": [
+              -0.000166657,
+              -0.00500964,
+              0.0178065
+            ],
+            "mass_kg": 0.0486,
+            "name": "yaw_roll_motion"
+          },
+          {
+            "inertia_kg_m2": [
+              0.0003210675976941665,
+              0.00025426573598788586,
+              0.00014946066631794762
+            ],
+            "inertial_position_m": [
+              0.00460523,
+              0.00120047,
+              -0.0324761
+            ],
+            "mass_kg": 0.188766,
+            "name": "jaw_soft"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "bearing_roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6212e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              -0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_right"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -0.0318937,
+              -1.52e-10,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg_2"
+          },
+          {
+            "inertia_kg_m2": [
+              9.719259461547551e-06,
+              8.210822372054036e-06,
+              4.836708166398411e-06
+            ],
+            "inertial_position_m": [
+              0.00680653,
+              -0.0143679,
+              -0.0149822
+            ],
+            "mass_kg": 0.0208701,
+            "name": "ankle_r_v1"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              -0.0,
+              0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire_3"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              -0.0,
+              0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire_4"
+          }
+        ],
+        "collision_geoms": [
+          {
+            "body": "world",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 0,
+            "name": "floor",
+            "type": 0
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:7>",
+            "type": 7
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:9>",
+            "type": 7
+          },
+          {
+            "body": "hip_l",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:19>",
+            "type": 7
+          },
+          {
+            "body": "leg",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:26>",
+            "type": 7
+          },
+          {
+            "body": "tire",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:32>",
+            "type": 7
+          },
+          {
+            "body": "tire_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:36>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:53>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:60>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:62>",
+            "type": 7
+          },
+          {
+            "body": "hip_l_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:71>",
+            "type": 7
+          },
+          {
+            "body": "leg_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:80>",
+            "type": 7
+          },
+          {
+            "body": "tire_3",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:85>",
+            "type": 7
+          },
+          {
+            "body": "tire_4",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:89>",
+            "type": 7
+          }
+        ],
+        "counts": {
+          "nbody": 20,
+          "ngeom": 90,
+          "njnt": 19,
+          "nkey": 4,
+          "nq": 25,
+          "nu": 14,
+          "nv": 24
+        },
+        "joints": [
+          {
+            "armature": 0.0,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "trunk_base_freejoint",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 0
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_yaw",
+            "range": [
+              -0.4363323129985824,
+              0.5235987755982988
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_pitch",
+            "range": [
+              -1.570796326795005,
+              1.5707963267947882
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_knee",
+            "range": [
+              -1.570796326795012,
+              1.570796326794781
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_ankle",
+            "range": [
+              -1.5707963267949054,
+              1.5707963267948877
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_LF_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_LR_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "neck_pitch",
+            "range": [
+              -1.5707963267948966,
+              1.0471975511965976
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_pitch",
+            "range": [
+              -1.5707963267948974,
+              1.5707963267948957
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_yaw",
+            "range": [
+              -2.967059728390373,
+              2.967059728390348
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_roll",
+            "range": [
+              -0.43633231299859127,
+              0.4363323129985735
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_yaw",
+            "range": [
+              -0.5235987755982988,
+              0.4363323129985824
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_pitch",
+            "range": [
+              -1.5707963267949268,
+              1.5707963267948664
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_knee",
+            "range": [
+              -1.570796326794932,
+              1.570796326794861
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_ankle",
+            "range": [
+              -1.5707963267949063,
+              1.5707963267948868
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_RF_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_RR_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          }
+        ],
+        "keyframes": [
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "name": "INIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984
+            ],
+            "name": "STAND",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.0,
+              0.0,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0
+            ],
+            "name": "SIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.0,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0
+            ],
+            "name": "FOLD",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "official_manifest_sha256": "sha256:3978073968a3966b08c93a5906e1a342094bcdc2d5a1ded0929886af1f12ffff",
+      "root": "scene_rollers.xml"
+    },
+    "rollers_backlash": {
+      "compiled_classification": "semantically-identical-compiled-model",
+      "differing_sections": [],
+      "input_classification": "byte-identical-input",
+      "local_manifest_sha256": "sha256:bcb1440aaee378a6aee3de456e73aaad8de28f122e8ba06ded6b0d061a20da0e",
+      "manifest": {
+        "actuators": [
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_yaw",
+            "target": "left_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_roll",
+            "target": "left_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_pitch",
+            "target": "left_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_knee",
+            "target": "left_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_ankle",
+            "target": "left_ankle",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "neck_pitch",
+            "target": "neck_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_pitch",
+            "target": "head_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_yaw",
+            "target": "head_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_roll",
+            "target": "head_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_yaw",
+            "target": "right_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_roll",
+            "target": "right_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_pitch",
+            "target": "right_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_knee",
+            "target": "right_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_ankle",
+            "target": "right_ankle",
+            "transmission_type": 0
+          }
+        ],
+        "bodies": [
+          {
+            "inertia_kg_m2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "inertial_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.0,
+            "name": "world"
+          },
+          {
+            "inertia_kg_m2": [
+              0.00014593161399370665,
+              0.00014079887191245798,
+              9.852651409383543e-05
+            ],
+            "inertial_position_m": [
+              -0.0226332,
+              -2.70828e-05,
+              0.00280064
+            ],
+            "mass_kg": 0.199224,
+            "name": "trunk_base"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "yaw2roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6179e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_left"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -1.52e-10,
+              0.0318937,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg"
+          },
+          {
+            "inertia_kg_m2": [
+              9.708680032293239e-06,
+              8.217083889190592e-06,
+              4.83303607851617e-06
+            ],
+            "inertial_position_m": [
+              -0.00680626,
+              -0.0143677,
+              -0.0151851
+            ],
+            "mass_kg": 0.02087,
+            "name": "ankle_l_v1"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              0.0,
+              -0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.72925e-05,
+              1.63707e-05,
+              3.12694e-06
+            ],
+            "inertial_position_m": [
+              0.0,
+              -0.025,
+              0.0141665
+            ],
+            "mass_kg": 0.0368414,
+            "name": "neck"
+          },
+          {
+            "inertia_kg_m2": [
+              1.09186e-06,
+              9.66855e-07,
+              5.12111e-07
+            ],
+            "inertial_position_m": [
+              -6.533e-09,
+              0.0116641,
+              -0.0145
+            ],
+            "mass_kg": 0.00572,
+            "name": "neck_pitch"
+          },
+          {
+            "inertia_kg_m2": [
+              9.655117695766666e-06,
+              8.11787739625905e-06,
+              6.887804907974275e-06
+            ],
+            "inertial_position_m": [
+              -0.000166657,
+              -0.00500964,
+              0.0178065
+            ],
+            "mass_kg": 0.0486,
+            "name": "yaw_roll_motion"
+          },
+          {
+            "inertia_kg_m2": [
+              0.0003210675976941665,
+              0.00025426573598788586,
+              0.00014946066631794762
+            ],
+            "inertial_position_m": [
+              0.00460523,
+              0.00120047,
+              -0.0324761
+            ],
+            "mass_kg": 0.188766,
+            "name": "jaw_soft"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "bearing_roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6212e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              -0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_right"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -0.0318937,
+              -1.52e-10,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg_2"
+          },
+          {
+            "inertia_kg_m2": [
+              9.719259461547551e-06,
+              8.210822372054036e-06,
+              4.836708166398411e-06
+            ],
+            "inertial_position_m": [
+              0.00680653,
+              -0.0143679,
+              -0.0149822
+            ],
+            "mass_kg": 0.0208701,
+            "name": "ankle_r_v1"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              -0.0,
+              0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire_3"
+          },
+          {
+            "inertia_kg_m2": [
+              5.368700001432494e-07,
+              2.855599998567506e-07,
+              2.8556e-07
+            ],
+            "inertial_position_m": [
+              -0.0,
+              -0.0,
+              0.0
+            ],
+            "mass_kg": 0.00447401,
+            "name": "tire_4"
+          }
+        ],
+        "collision_geoms": [
+          {
+            "body": "trunk_base",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:6>",
+            "type": 7
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:8>",
+            "type": 7
+          },
+          {
+            "body": "hip_l",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:18>",
+            "type": 7
+          },
+          {
+            "body": "leg",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:25>",
+            "type": 7
+          },
+          {
+            "body": "tire",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:31>",
+            "type": 7
+          },
+          {
+            "body": "tire_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:35>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:52>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:59>",
+            "type": 7
+          },
+          {
+            "body": "jaw_soft",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:61>",
+            "type": 7
+          },
+          {
+            "body": "hip_l_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:70>",
+            "type": 7
+          },
+          {
+            "body": "leg_2",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:79>",
+            "type": 7
+          },
+          {
+            "body": "tire_3",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:84>",
+            "type": 7
+          },
+          {
+            "body": "tire_4",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "<unnamed:88>",
+            "type": 7
+          }
+        ],
+        "counts": {
+          "nbody": 20,
+          "ngeom": 89,
+          "njnt": 33,
+          "nkey": 0,
+          "nq": 39,
+          "nu": 14,
+          "nv": 38
+        },
+        "joints": [
+          {
+            "armature": 0.0,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "trunk_base_freejoint",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 0
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_yaw",
+            "range": [
+              -0.4363323129985824,
+              0.5235987755982988
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_pitch",
+            "range": [
+              -1.570796326795005,
+              1.5707963267947882
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_knee",
+            "range": [
+              -1.570796326795012,
+              1.570796326794781
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_knee_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_ankle",
+            "range": [
+              -1.5707963267949054,
+              1.5707963267948877
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_ankle_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_LF_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_LR_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "neck_pitch",
+            "range": [
+              -1.5707963267948966,
+              1.0471975511965976
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_neck_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_pitch",
+            "range": [
+              -1.5707963267948974,
+              1.5707963267948957
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_yaw",
+            "range": [
+              -2.967059728390373,
+              2.967059728390348
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_roll",
+            "range": [
+              -0.43633231299859127,
+              0.4363323129985735
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_yaw",
+            "range": [
+              -0.5235987755982988,
+              0.4363323129985824
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_pitch",
+            "range": [
+              -1.5707963267949268,
+              1.5707963267948664
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_knee",
+            "range": [
+              -1.570796326794932,
+              1.570796326794861
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_knee_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_ankle",
+            "range": [
+              -1.5707963267949063,
+              1.5707963267948868
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_ankle_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_RF_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0001,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "passive_RR_wheel",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 3
+          }
+        ],
+        "keyframes": []
+      },
+      "official_manifest_sha256": "sha256:bcb1440aaee378a6aee3de456e73aaad8de28f122e8ba06ded6b0d061a20da0e",
+      "root": "robot_allcollisions_rollers_backlash.xml"
+    },
+    "walk": {
+      "compiled_classification": "semantically-identical-compiled-model",
+      "differing_sections": [],
+      "input_classification": "byte-identical-input",
+      "local_manifest_sha256": "sha256:e9cb9a8fa3c07e5403be2896ee0ccb2bbecfa613523d0ad75abe0db6ab61e6b5",
+      "manifest": {
+        "actuators": [
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_yaw",
+            "target": "left_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_roll",
+            "target": "left_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_pitch",
+            "target": "left_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_knee",
+            "target": "left_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_ankle",
+            "target": "left_ankle",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "neck_pitch",
+            "target": "neck_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_pitch",
+            "target": "head_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_yaw",
+            "target": "head_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_roll",
+            "target": "head_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_yaw",
+            "target": "right_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_roll",
+            "target": "right_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_pitch",
+            "target": "right_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_knee",
+            "target": "right_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_ankle",
+            "target": "right_ankle",
+            "transmission_type": 0
+          }
+        ],
+        "bodies": [
+          {
+            "inertia_kg_m2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "inertial_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.0,
+            "name": "world"
+          },
+          {
+            "inertia_kg_m2": [
+              0.00014593161399370665,
+              0.00014079887191245798,
+              9.852651409383543e-05
+            ],
+            "inertial_position_m": [
+              -0.0226332,
+              -2.70828e-05,
+              0.00280064
+            ],
+            "mass_kg": 0.199224,
+            "name": "trunk_base"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "yaw2roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6179e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_left"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -1.52e-10,
+              0.0318937,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162273349969178e-05,
+              7.743185360670359e-06,
+              5.903341289360453e-06
+            ],
+            "inertial_position_m": [
+              -0.00615738,
+              -0.0137483,
+              -0.0156586
+            ],
+            "mass_kg": 0.0300246,
+            "name": "ankle_left"
+          },
+          {
+            "inertia_kg_m2": [
+              1.72925e-05,
+              1.63707e-05,
+              3.12694e-06
+            ],
+            "inertial_position_m": [
+              0.0,
+              -0.025,
+              0.0141665
+            ],
+            "mass_kg": 0.0368414,
+            "name": "neck"
+          },
+          {
+            "inertia_kg_m2": [
+              1.09186e-06,
+              9.66855e-07,
+              5.12111e-07
+            ],
+            "inertial_position_m": [
+              -6.533e-09,
+              0.0116641,
+              -0.0145
+            ],
+            "mass_kg": 0.00572,
+            "name": "neck_pitch"
+          },
+          {
+            "inertia_kg_m2": [
+              9.655117695766666e-06,
+              8.11787739625905e-06,
+              6.887804907974275e-06
+            ],
+            "inertial_position_m": [
+              -0.000166657,
+              -0.00500964,
+              0.0178065
+            ],
+            "mass_kg": 0.0486,
+            "name": "yaw_roll_motion"
+          },
+          {
+            "inertia_kg_m2": [
+              0.0003210675976941665,
+              0.00025426573598788586,
+              0.00014946066631794762
+            ],
+            "inertial_position_m": [
+              0.00460523,
+              0.00120047,
+              -0.0324761
+            ],
+            "mass_kg": 0.188766,
+            "name": "jaw_soft"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "bearing_roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6212e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              -0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_right"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -0.0318937,
+              -1.52e-10,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162245904558893e-05,
+              7.743216094205062e-06,
+              5.90343800123603e-06
+            ],
+            "inertial_position_m": [
+              0.00615539,
+              -0.0137482,
+              -0.0156566
+            ],
+            "mass_kg": 0.0300251,
+            "name": "ankle_right"
+          }
+        ],
+        "collision_geoms": [
+          {
+            "body": "world",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 0,
+            "name": "floor",
+            "type": 0
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:7>",
+            "type": 7
+          },
+          {
+            "body": "leg",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:24>",
+            "type": 7
+          },
+          {
+            "body": "ankle_left",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "left_foot_collision",
+            "type": 7
+          },
+          {
+            "body": "leg_2",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:70>",
+            "type": 7
+          },
+          {
+            "body": "ankle_right",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "right_foot_collision",
+            "type": 7
+          }
+        ],
+        "counts": {
+          "nbody": 16,
+          "ngeom": 76,
+          "njnt": 15,
+          "nkey": 4,
+          "nq": 21,
+          "nu": 14,
+          "nv": 20
+        },
+        "joints": [
+          {
+            "armature": 0.0,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "trunk_base_freejoint",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 0
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_yaw",
+            "range": [
+              -0.4363323129985824,
+              0.5235987755982988
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_pitch",
+            "range": [
+              -1.570796326795005,
+              1.5707963267947882
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_knee",
+            "range": [
+              -1.570796326795012,
+              1.570796326794781
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_ankle",
+            "range": [
+              -1.5707963267949019,
+              1.5707963267948912
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "neck_pitch",
+            "range": [
+              -1.5707963267948966,
+              1.0471975511965976
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_pitch",
+            "range": [
+              -1.5707963267948974,
+              1.5707963267948957
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_yaw",
+            "range": [
+              -2.967059728390373,
+              2.967059728390348
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_roll",
+            "range": [
+              -0.43633231299859127,
+              0.4363323129985735
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_yaw",
+            "range": [
+              -0.5235987755982988,
+              0.4363323129985824
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_pitch",
+            "range": [
+              -1.5707963267949268,
+              1.5707963267948664
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_knee",
+            "range": [
+              -1.570796326794932,
+              1.570796326794861
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_ankle",
+            "range": [
+              -1.5707963267949054,
+              1.5707963267948877
+            ],
+            "type": 3
+          }
+        ],
+        "keyframes": [
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "name": "INIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984
+            ],
+            "name": "STAND",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0
+            ],
+            "name": "SIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0
+            ],
+            "name": "FOLD",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0
+            ]
+          }
+        ]
+      },
+      "official_manifest_sha256": "sha256:e9cb9a8fa3c07e5403be2896ee0ccb2bbecfa613523d0ad75abe0db6ab61e6b5",
+      "root": "scene_walk.xml"
+    },
+    "walk_backlash": {
+      "compiled_classification": "semantically-identical-compiled-model",
+      "differing_sections": [],
+      "input_classification": "byte-identical-input",
+      "local_manifest_sha256": "sha256:8cefeffcdbb709351f5bebd288cea0e89cdcb06635e7ba4d1500ca43cb967119",
+      "manifest": {
+        "actuators": [
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_yaw",
+            "target": "left_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_roll",
+            "target": "left_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_hip_pitch",
+            "target": "left_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_knee",
+            "target": "left_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "left_ankle",
+            "target": "left_ankle",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "neck_pitch",
+            "target": "neck_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_pitch",
+            "target": "head_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_yaw",
+            "target": "head_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "head_roll",
+            "target": "head_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_yaw",
+            "target": "right_hip_yaw",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_roll",
+            "target": "right_hip_roll",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_hip_pitch",
+            "target": "right_hip_pitch",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_knee",
+            "target": "right_knee",
+            "transmission_type": 0
+          },
+          {
+            "bias_type": 1,
+            "control_range": [
+              -10.0,
+              10.0
+            ],
+            "force_range": [
+              -0.96,
+              0.96
+            ],
+            "gain_type": 0,
+            "name": "right_ankle",
+            "target": "right_ankle",
+            "transmission_type": 0
+          }
+        ],
+        "bodies": [
+          {
+            "inertia_kg_m2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "inertial_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass_kg": 0.0,
+            "name": "world"
+          },
+          {
+            "inertia_kg_m2": [
+              0.00014593161399370665,
+              0.00014079887191245798,
+              9.852651409383543e-05
+            ],
+            "inertial_position_m": [
+              -0.0226332,
+              -2.70828e-05,
+              0.00280064
+            ],
+            "mass_kg": 0.199224,
+            "name": "trunk_base"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "yaw2roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6179e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_left"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -1.52e-10,
+              0.0318937,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162273349969178e-05,
+              7.743185360670359e-06,
+              5.903341289360453e-06
+            ],
+            "inertial_position_m": [
+              -0.00615738,
+              -0.0137483,
+              -0.0156586
+            ],
+            "mass_kg": 0.0300246,
+            "name": "ankle_left"
+          },
+          {
+            "inertia_kg_m2": [
+              1.72925e-05,
+              1.63707e-05,
+              3.12694e-06
+            ],
+            "inertial_position_m": [
+              0.0,
+              -0.025,
+              0.0141665
+            ],
+            "mass_kg": 0.0368414,
+            "name": "neck"
+          },
+          {
+            "inertia_kg_m2": [
+              1.09186e-06,
+              9.66855e-07,
+              5.12111e-07
+            ],
+            "inertial_position_m": [
+              -6.533e-09,
+              0.0116641,
+              -0.0145
+            ],
+            "mass_kg": 0.00572,
+            "name": "neck_pitch"
+          },
+          {
+            "inertia_kg_m2": [
+              9.655117695766666e-06,
+              8.11787739625905e-06,
+              6.887804907974275e-06
+            ],
+            "inertial_position_m": [
+              -0.000166657,
+              -0.00500964,
+              0.0178065
+            ],
+            "mass_kg": 0.0486,
+            "name": "yaw_roll_motion"
+          },
+          {
+            "inertia_kg_m2": [
+              0.0003210675976941665,
+              0.00025426573598788586,
+              0.00014946066631794762
+            ],
+            "inertial_position_m": [
+              0.00460523,
+              0.00120047,
+              -0.0324761
+            ],
+            "mass_kg": 0.188766,
+            "name": "jaw_soft"
+          },
+          {
+            "inertia_kg_m2": [
+              4.1964e-06,
+              3.4198877566766147e-06,
+              2.3241322433233854e-06
+            ],
+            "inertial_position_m": [
+              -8.8e-11,
+              0.00099414,
+              0.0168917
+            ],
+            "mass_kg": 0.0230406,
+            "name": "bearing_roll"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1597556037198693e-06,
+              1.1575300000024421e-06,
+              3.52458396277689e-07
+            ],
+            "inertial_position_m": [
+              0.014815,
+              1.6212e-08,
+              -0.00829992
+            ],
+            "mass_kg": 0.00618934,
+            "name": "hip_l_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.984526595605749e-05,
+              1.9108041962471662e-05,
+              8.117992081470831e-06
+            ],
+            "inertial_position_m": [
+              -0.006766,
+              0.0228838,
+              0.0134531
+            ],
+            "mass_kg": 0.0482067,
+            "name": "upper_leg_right"
+          },
+          {
+            "inertia_kg_m2": [
+              5.25056e-06,
+              4.580536622760802e-06,
+              1.913783377239199e-06
+            ],
+            "inertial_position_m": [
+              -0.0318937,
+              -1.52e-10,
+              -0.00953505
+            ],
+            "mass_kg": 0.0215844,
+            "name": "leg_2"
+          },
+          {
+            "inertia_kg_m2": [
+              1.1162245904558893e-05,
+              7.743216094205062e-06,
+              5.90343800123603e-06
+            ],
+            "inertial_position_m": [
+              0.00615539,
+              -0.0137482,
+              -0.0156566
+            ],
+            "mass_kg": 0.0300251,
+            "name": "ankle_right"
+          }
+        ],
+        "collision_geoms": [
+          {
+            "body": "world",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 0,
+            "name": "floor",
+            "type": 0
+          },
+          {
+            "body": "trunk_base",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:7>",
+            "type": 7
+          },
+          {
+            "body": "leg",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:24>",
+            "type": 7
+          },
+          {
+            "body": "ankle_left",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "left_foot_collision",
+            "type": 7
+          },
+          {
+            "body": "leg_2",
+            "conaffinity": 2,
+            "contype": 2,
+            "group": 3,
+            "name": "<unnamed:70>",
+            "type": 7
+          },
+          {
+            "body": "ankle_right",
+            "conaffinity": 1,
+            "contype": 1,
+            "group": 3,
+            "name": "right_foot_collision",
+            "type": 7
+          }
+        ],
+        "counts": {
+          "nbody": 16,
+          "ngeom": 76,
+          "njnt": 29,
+          "nkey": 4,
+          "nq": 35,
+          "nu": 14,
+          "nv": 34
+        },
+        "joints": [
+          {
+            "armature": 0.0,
+            "damping": 0.0,
+            "frictionloss": 0.0,
+            "limited": 0,
+            "name": "trunk_base_freejoint",
+            "range": [
+              0.0,
+              0.0
+            ],
+            "type": 0
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_yaw",
+            "range": [
+              -0.4363323129985824,
+              0.5235987755982988
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_hip_pitch",
+            "range": [
+              -1.570796326795005,
+              1.5707963267947882
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_hip_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_knee",
+            "range": [
+              -1.570796326795012,
+              1.570796326794781
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_knee_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "left_ankle",
+            "range": [
+              -1.5707963267949019,
+              1.5707963267948912
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_left_ankle_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "neck_pitch",
+            "range": [
+              -1.5707963267948966,
+              1.0471975511965976
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_neck_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_pitch",
+            "range": [
+              -1.5707963267948974,
+              1.5707963267948957
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_yaw",
+            "range": [
+              -2.967059728390373,
+              2.967059728390348
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "head_roll",
+            "range": [
+              -0.43633231299859127,
+              0.4363323129985735
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_head_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_yaw",
+            "range": [
+              -0.5235987755982988,
+              0.4363323129985824
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_yaw_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_roll",
+            "range": [
+              -0.3839724354387525,
+              0.3839724354387525
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_roll_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_hip_pitch",
+            "range": [
+              -1.5707963267949268,
+              1.5707963267948664
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_hip_pitch_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_knee",
+            "range": [
+              -1.570796326794932,
+              1.570796326794861
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_knee_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.0018,
+            "damping": 0.053,
+            "frictionloss": 0.0048,
+            "limited": 1,
+            "name": "right_ankle",
+            "range": [
+              -1.5707963267949054,
+              1.5707963267948877
+            ],
+            "type": 3
+          },
+          {
+            "armature": 0.001,
+            "damping": 0.01,
+            "frictionloss": 0.0,
+            "limited": 1,
+            "name": "passive_right_ankle_backlash",
+            "range": [
+              -0.017453292519943295,
+              0.017453292519943295
+            ],
+            "type": 3
+          }
+        ],
+        "keyframes": [
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "name": "INIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              -0.08726646259971647,
+              -0.457924,
+              -0.00494,
+              0.452984,
+              0.3490658503988659,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.457924,
+              0.00494,
+              -0.452984
+            ],
+            "name": "STAND",
+            "qpos": [
+              0.0,
+              0.0,
+              0.12,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.08726646259971647,
+              0.0,
+              -0.457924,
+              0.0,
+              -0.00494,
+              0.0,
+              0.452984,
+              0.0,
+              0.3490658503988659,
+              0.0,
+              0.3490658503988659,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.08726646259971647,
+              0.0,
+              0.457924,
+              0.0,
+              0.00494,
+              0.0,
+              -0.452984,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              -0.5236,
+              1.0472,
+              0.0,
+              0.5,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              -1.0472,
+              0.0
+            ],
+            "name": "SIT",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -0.5236,
+              0.0,
+              1.0472,
+              0.0,
+              0.0,
+              0.0,
+              0.5,
+              0.0,
+              1.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.5236,
+              0.0,
+              -1.0472,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "ctrl": [
+              0.0,
+              0.0,
+              1.57,
+              1.57,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              -1.57,
+              0.0
+            ],
+            "name": "FOLD",
+            "qpos": [
+              0.0,
+              0.0,
+              0.07,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.57,
+              0.0,
+              1.57,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              -1.57,
+              0.0,
+              -1.57,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "official_manifest_sha256": "sha256:8cefeffcdbb709351f5bebd288cea0e89cdcb06635e7ba4d1500ca43cb967119",
+      "root": "scene_walk_backlash.xml"
+    }
+  }
+}

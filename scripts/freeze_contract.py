@@ -38,6 +38,7 @@ BAM_GOLDEN_PATH = (
 BAM_CLOSED_LOOP_PATH = (
     CONTRACT_ROOT / "actuator" / "fixtures" / "bam-m6-xl330-v1-closed-loop.json"
 )
+MODEL_RECONCILIATION_PATH = CONTRACT_ROOT / "model" / "reconciliation-v1.json"
 
 
 def sha256(path: Path) -> str:
@@ -171,6 +172,15 @@ def snapshots() -> dict[Path, bytes]:
         "cross_backend_conformance": "pending",
     }
     output[CONTRACT_ROOT / "actuator" / "bam-m6-xl330-v1.lock.json"] = json_bytes(bam)
+    reconciliation = {
+        "schema_version": "microduck.model-reconciliation-lock/v1",
+        "report_path": MODEL_RECONCILIATION_PATH.relative_to(ROOT).as_posix(),
+        "report_sha256": sha256(MODEL_RECONCILIATION_PATH),
+        "official_commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+    }
+    output[
+        CONTRACT_ROOT / "model" / "reconciliation-v1.lock.json"
+    ] = json_bytes(reconciliation)
     return output
 
 
