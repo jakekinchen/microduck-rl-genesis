@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.metadata as metadata
 import json
 import os
 import subprocess
@@ -30,6 +31,21 @@ DEFAULT_OUTPUT = (
     / "fixtures"
     / "bam-m6-xl330-v1-open-loop.json"
 )
+
+
+class ResetProbe:
+    """Minimal delay-buffer probe for executing mjlab's reset delegation."""
+
+    def __init__(self) -> None:
+        self.env_ids: list[int] | None = None
+
+    def reset(self, env_ids: torch.Tensor | slice | None) -> None:
+        if isinstance(env_ids, torch.Tensor):
+            self.env_ids = env_ids.tolist()
+        elif env_ids is None:
+            self.env_ids = None
+        else:
+            self.env_ids = list(range(*env_ids.indices(2)))
 
 
 def command(*args: str, cwd: Path) -> str:
@@ -168,7 +184,8 @@ def main() -> int:
             }
         )
 
-    deployed._delay_buffer = None
+    reset_probe = ResetProbe()
+    deployed._delay_buffer = reset_probe
     deployed._prev_motor_torque = torch.tensor(
         [[1.0, -2.0], [3.0, -4.0]], dtype=torch.float64
     )
@@ -178,7 +195,14 @@ def main() -> int:
     AuthorityMjlabActuator.reset(deployed, torch.tensor([1]))
 
     source_files = {}
-    for relative in ("bam/actuator.py", "bam/model.py", "bam/mjlab.py", "LICENSE"):
+    for relative in (
+        "bam/actuator.py",
+        "bam/actuators.py",
+        "bam/dynamixel/actuator.py",
+        "bam/model.py",
+        "bam/mjlab.py",
+        "LICENSE",
+    ):
         source_files[relative] = sha256(bam_repo / relative)
 
     payload = {
@@ -205,6 +229,10 @@ def main() -> int:
             "firmware_kp": 200.0,
             "float64_absolute_tolerance": 1e-12,
             "float32_absolute_tolerance": 1e-6,
+            "runtime_dependencies": {
+                "mjlab": metadata.version("mjlab"),
+                "torch": metadata.version("torch"),
+            },
         },
         "profiles": {
             "bam_core": {
@@ -227,6 +255,7 @@ def main() -> int:
             "prev_motor_torque_after_nm": deployed._prev_motor_torque.tolist(),
             "vin_before_v": vin_before,
             "vin_after_v": deployed.vin_tensor.tolist(),
+            "delay_reset_env_ids": reset_probe.env_ids,
             "core_model_reset": "stateless_noop",
         },
     }

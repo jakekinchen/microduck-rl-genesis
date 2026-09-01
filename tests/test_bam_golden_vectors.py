@@ -132,6 +132,7 @@ def main() -> int:
     assert actuator.prev_torque.tolist() == reset["prev_motor_torque_after_nm"]
     assert actuator.vin_nominal.tolist() == reset["vin_after_v"]
     assert torch.equal(actuator._delay.env_ids, env_ids)
+    assert actuator._delay.env_ids.tolist() == reset["delay_reset_env_ids"]
 
     print(f"{len(fixture['vectors'])} pinned BAM vectors verified")
     for name, error in max_errors.items():

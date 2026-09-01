@@ -10,6 +10,8 @@
     "source_files": {
       "LICENSE": "sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
       "bam/actuator.py": "sha256:6927d7b2341cbaca0e5d872fae4ddce6200056885310d9ee5acaba1f34e09c13",
+      "bam/actuators.py": "sha256:adb8b5c87b880d2c9931a8d70981f20526b1cc0a54d31d074460e29cf27a9db2",
+      "bam/dynamixel/actuator.py": "sha256:8d3ed39d68758981204901dd18dcce11dcb107b842067e036d2b8ac7b1411cec",
       "bam/mjlab.py": "sha256:af3de252939ca868712423979c2ab52e198d382d7aca613b5b33c77d74baa440",
       "bam/model.py": "sha256:fed54ebf5ccdb1e15d1094e1a1b426a93c29a7dad5944e6861ff0cd023d900ed"
     },
@@ -21,6 +23,10 @@
     "float32_absolute_tolerance": 1e-06,
     "float64_absolute_tolerance": 1e-12,
     "physics_dt_s": 0.005,
+    "runtime_dependencies": {
+      "mjlab": "1.3.0",
+      "torch": "2.9.1"
+    },
     "script": "scripts/generate_bam_golden_vectors.py",
     "seed": 20260901
   },
@@ -37,6 +43,9 @@
   },
   "reset_fixture": {
     "core_model_reset": "stateless_noop",
+    "delay_reset_env_ids": [
+      1
+    ],
     "env_ids": [
       1
     ],

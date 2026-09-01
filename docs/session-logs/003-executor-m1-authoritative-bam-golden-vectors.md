@@ -28,10 +28,12 @@ locked authority.
 
 - Added a deterministic generator that refuses a dirty or wrong-revision BAM
   checkout, imports the pinned source, and records source/tree/license/parameter
-  digests.
+  digests plus the mjlab/Torch runtime versions used for adapter/reset calls.
 - Generated 29 edge and seeded cases covering firmware voltage, PWM/current
   saturation, back-EMF torque, zero/high velocity, sign/direction combinations,
   BAM-core friction, deployed-mjlab friction, and reset state.
+- The reset fixture executes the pinned adapter's superclass delay-buffer reset,
+  zeros selected prior motor torque, and proves startup battery voltage persists.
 - Preserved two explicit profiles in one fixture: BAM core uses the quadratic
   opposite-sign gate and strict magnitude direction; deployed mjlab omits the
   sign gate and treats equal magnitude as backdrive.
