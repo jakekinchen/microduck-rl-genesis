@@ -161,6 +161,13 @@ def snapshots() -> dict[Path, bytes]:
                 "profile": "bam-core-v1",
             },
         },
+        "official_mjlab_runtime": {
+            "mjlab": "1.3.0",
+            "mujoco": "3.10.0",
+            "mujoco-warp": "3.8.1",
+            "torch": "2.9.1",
+            "warp-lang": "1.12.0",
+        },
         "cross_backend_conformance": "pending",
     }
     output[CONTRACT_ROOT / "actuator" / "bam-m6-xl330-v1.lock.json"] = json_bytes(bam)

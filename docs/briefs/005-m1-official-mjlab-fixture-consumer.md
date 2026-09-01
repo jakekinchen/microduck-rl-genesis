@@ -40,7 +40,7 @@ Keep the deployed adapter's `mjlab-deployed-v1` behavior distinct from BAM core.
 ## Validation
 
 ```bash
-BAM_REPO=<pinned-checkout> <official-mjlab-python> <official-consumer>
+BAM_REPO=<pinned-checkout> OFFICIAL_MJLAB_PYTHON=<locked-python> scripts/verify_official_mjlab_fixtures.sh
 .venv-apple/bin/python scripts/freeze_contract.py --check
 git diff --check
 ```

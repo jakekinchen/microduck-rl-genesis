@@ -313,6 +313,19 @@ git clone -b mjlab_frictionloss https://github.com/Rhoban/bam.git /tmp/bam
 BAM_REPO=/tmp/bam python tests/run_all.py
 ```
 
+The pinned official mjlab/MuJoCo Warp adapter has a separate dependency lane.
+Point the wrapper at a Python environment matching the versions in
+`microduck_contract/actuator/bam-m6-xl330-v1.lock.json`:
+
+```bash
+BAM_REPO=/tmp/bam \
+OFFICIAL_MJLAB_PYTHON=/path/to/locked-mjlab-python \
+scripts/verify_official_mjlab_fixtures.sh
+```
+
+This runs one MuJoCo Warp world on the selected runtime device; it neither
+trains a policy nor provisions compute.
+
 ## 8. Sim-to-real: what is guaranteed, what is not
 
 **The goal is explicit: what is trained here must be deployable on the real
