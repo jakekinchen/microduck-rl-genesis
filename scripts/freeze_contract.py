@@ -32,6 +32,9 @@ V = load_source_module("microduck_contract_velocity_cfg", ROOT / "microduck" / "
 
 CONTRACT_ROOT = ROOT / "microduck_contract"
 ROBOT_ASSET_ROOT = ROOT / "microduck" / "assets" / "microduck"
+BAM_GOLDEN_PATH = (
+    CONTRACT_ROOT / "actuator" / "fixtures" / "bam-m6-xl330-v1-open-loop.json"
+)
 
 
 def sha256(path: Path) -> str:
@@ -140,7 +143,13 @@ def snapshots() -> dict[Path, bytes]:
         "voltage_drop_resistance_range_ohm": list(C.BAM_VIN_DROP_RESISTANCE_RANGE),
         "current_limit_a": C.XL330_MAX_CURRENT,
         "command_delay_physics_steps": [C.BAM_DELAY_MIN_LAG, C.BAM_DELAY_MAX_LAG],
-        "golden_vectors": None,
+        "golden_vectors": {
+            "path": BAM_GOLDEN_PATH.relative_to(ROOT).as_posix(),
+            "sha256": sha256(BAM_GOLDEN_PATH),
+            "schema_version": "microduck.bam-golden-vectors/v1",
+            "authority_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+            "profiles": ["bam-core-v1", "mjlab-deployed-v1"],
+        },
         "cross_backend_conformance": "pending",
     }
     output[CONTRACT_ROOT / "actuator" / "bam-m6-xl330-v1.lock.json"] = json_bytes(bam)

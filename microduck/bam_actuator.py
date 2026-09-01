@@ -348,10 +348,6 @@ class BamActuator:
         abs_ext = torch.abs(external_torque)
         abs_mot = torch.abs(motor_torque)
         drive = (abs_mot > abs_ext).to(motor_torque.dtype)
-        quad = (
-            drive * self.load_friction_external_quad * abs_ext**2
-            + (1.0 - drive) * self.load_friction_motor_quad * abs_mot**2
-        )
         if self.quadratic_sign_gate:
             # Le modèle BAM de référence (bam/model.py, numpy) n'active le terme
             # quadratique que quand couples moteur et externe sont de signes
@@ -360,14 +356,59 @@ class BamActuator:
             # mesuré : 1,5 % au pire sur le budget de frottement (voir le test
             # tests/test_bam_formulas.py). Par défaut on reproduit mjlab, pour rester sur
             # la recette qui transfère ; ce flag remet la version du papier.
-            quad = quad * (torch.sign(external_torque) != torch.sign(motor_torque)).to(
+            # Le cœur BAM utilise aussi deux comparaisons STRICTES : quand les
+            # magnitudes sont égales, aucun côté ne gagne et le terme vaut zéro.
+            backdrive = (abs_ext > abs_mot).to(motor_torque.dtype)
+            quad = (
+                drive * self.load_friction_external_quad * abs_ext**2
+                + backdrive * self.load_friction_motor_quad * abs_mot**2
+            )
+            quad = quad * (
+                torch.sign(external_torque) != torch.sign(motor_torque)
+            ).to(
                 motor_torque.dtype
+            )
+        else:
+            # bam.mjlab treats an equal-magnitude case as backdrive and omits
+            # the opposite-sign gate. Keep this as the deployed default.
+            quad = (
+                drive * self.load_friction_external_quad * abs_ext**2
+                + (1.0 - drive) * self.load_friction_motor_quad * abs_mot**2
             )
         fl = fl + stribeck_coeff * quad
 
         # DR par-env sur la partie indépendante de la vitesse uniquement ; le
         # terme visqueux reste au nominal (il porte moins d'incertitude).
         return fl * self.friction_scale
+
+    def _control_voltage(
+        self,
+        position_target: torch.Tensor,
+        position: torch.Tensor,
+        velocity: torch.Tensor,
+        vin: torch.Tensor,
+        kp: torch.Tensor,
+    ) -> torch.Tensor:
+        """Run the XL330 firmware P loop and current-limited PWM law."""
+        duty = (position_target - position) * kp * self.error_gain
+        back_emf = self.kt * velocity
+        duty_span = self.R * self.max_current / vin
+        duty_center = back_emf / vin
+        duty = torch.clamp(duty, duty_center - duty_span, duty_center + duty_span)
+        duty = torch.clamp(duty, -self.max_pwm, self.max_pwm)
+        return vin * duty
+
+    def _motor_torque(
+        self, voltage: torch.Tensor, velocity: torch.Tensor
+    ) -> torch.Tensor:
+        """Run the BAM DC-motor equation including back-EMF."""
+        return self.kt * voltage / self.R - (self.kt**2) * velocity / self.R
+
+    def _stribeck_coefficient(self, velocity: torch.Tensor) -> torch.Tensor:
+        """Return the M6 Stribeck coefficient for the supplied joint speed."""
+        return torch.exp(
+            -torch.pow(torch.abs(velocity) / self.dtheta_stribeck, self.alpha)
+        )
 
     # -- boucle principale ---------------------------------------------------
 
@@ -404,25 +445,14 @@ class BamActuator:
         vel = dq * self.kd_scale
         kp = self.kp_fw * self.kp_scale
 
-        # 1. Loi firmware : erreur de position → rapport cyclique.
-        duty = (target - q) * kp * self.error_gain
-        # Limiteur de courant firmware : borne le duty pour que
-        # I = (duty·vin − kt·q̇)/R reste dans ±max_current. Ce n'est qu'une
-        # TENTATIVE — l'écrêtage PWM physique ci-dessous est appliqué en
-        # dernier, donc à grande vitesse la contre-FEM peut rendre la limite
-        # inatteignable, exactement comme le vrai firmware.
-        back_emf = self.kt * vel
-        duty_span = self.R * self.max_current / vin
-        duty_center = back_emf / vin
-        duty = torch.clamp(duty, duty_center - duty_span, duty_center + duty_span)
-        duty = torch.clamp(duty, -self.max_pwm, self.max_pwm)
-        volts = vin * duty
+        # 1. Loi firmware : erreur de position → rapport cyclique → tension.
+        volts = self._control_voltage(target, q, vel, vin, kp)
 
         # 2. Couple moteur CC avec contre-FEM.
-        motor_torque = self.kt * volts / self.R - (self.kt**2) * vel / self.R
+        motor_torque = self._motor_torque(volts, vel)
 
         # 3. Coefficient de Stribeck : 1 à l'arrêt → 0 en mouvement.
-        stribeck = torch.exp(-torch.pow(torch.abs(dq) / self.dtheta_stribeck, self.alpha))
+        stribeck = self._stribeck_coefficient(dq)
 
         # 4. Budget de frottement → frictionloss du modèle. On utilise le couple
         # du pas PRÉCÉDENT comme charge côté moteur (comme BAM/MuJoCo), pas le

@@ -9,7 +9,16 @@
   "cross_backend_conformance": "pending",
   "current_limit_a": 1.75,
   "firmware_kp": 200.0,
-  "golden_vectors": null,
+  "golden_vectors": {
+    "authority_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+    "path": "microduck_contract/actuator/fixtures/bam-m6-xl330-v1-open-loop.json",
+    "profiles": [
+      "bam-core-v1",
+      "mjlab-deployed-v1"
+    ],
+    "schema_version": "microduck.bam-golden-vectors/v1",
+    "sha256": "sha256:20e1954886c76ae4ef14b5cd2e9bcfbeaa7a11e7f27fa367edff1913f2780002"
+  },
   "parameter_file": "microduck/assets/xl330_m6.json",
   "parameter_sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
   "schema_version": "microduck.actuator-lock/v1",

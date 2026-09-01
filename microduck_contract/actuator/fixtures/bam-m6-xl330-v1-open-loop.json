@@ -1,0 +1,606 @@
+{
+  "authority": {
+    "branch_context": "mjlab_frictionloss",
+    "commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+    "commit_date": "2026-07-13T16:42:35+02:00",
+    "license": "Apache-2.0",
+    "parameter_file": "microduck/assets/xl330_m6.json",
+    "parameter_sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+    "repository_url": "https://github.com/Rhoban/bam.git",
+    "source_files": {
+      "LICENSE": "sha256:58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "bam/actuator.py": "sha256:6927d7b2341cbaca0e5d872fae4ddce6200056885310d9ee5acaba1f34e09c13",
+      "bam/mjlab.py": "sha256:af3de252939ca868712423979c2ab52e198d382d7aca613b5b33c77d74baa440",
+      "bam/model.py": "sha256:fed54ebf5ccdb1e15d1094e1a1b426a93c29a7dad5944e6861ff0cd023d900ed"
+    },
+    "tree": "e436fa1115950bc70100a9eca4232baaf2de15af"
+  },
+  "generation": {
+    "command": "python scripts/generate_bam_golden_vectors.py --bam-repo <clean-checkout-at-authority-commit>",
+    "firmware_kp": 200.0,
+    "float32_absolute_tolerance": 1e-06,
+    "float64_absolute_tolerance": 1e-12,
+    "physics_dt_s": 0.005,
+    "script": "scripts/generate_bam_golden_vectors.py",
+    "seed": 20260901
+  },
+  "profiles": {
+    "bam_core": {
+      "id": "bam-core-v1",
+      "quadratic_sign_gate": true
+    },
+    "mjlab_deployed": {
+      "documented_divergence": "Pinned bam.mjlab omits the BAM core quadratic opposite-sign gate.",
+      "id": "mjlab-deployed-v1",
+      "quadratic_sign_gate": false
+    }
+  },
+  "reset_fixture": {
+    "core_model_reset": "stateless_noop",
+    "env_ids": [
+      1
+    ],
+    "prev_motor_torque_after_nm": [
+      [
+        1.0,
+        -2.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "prev_motor_torque_before_nm": [
+      [
+        1.0,
+        -2.0
+      ],
+      [
+        3.0,
+        -4.0
+      ]
+    ],
+    "profile": "mjlab-deployed-v1",
+    "vin_after_v": [
+      [
+        6.5
+      ],
+      [
+        8.2
+      ]
+    ],
+    "vin_before_v": [
+      [
+        6.5
+      ],
+      [
+        8.2
+      ]
+    ]
+  },
+  "schema_version": "microduck.bam-golden-vectors/v1",
+  "vectors": [
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.009447528965052616,
+        "control_voltage_v": 0.0,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.009447528965052616,
+        "motor_torque_nm": 0.0
+      },
+      "id": "zero",
+      "input": {
+        "dq_rad_s": 0.0,
+        "friction_external_torque_nm": 0.0,
+        "friction_motor_torque_nm": 0.0,
+        "q_rad": 0.0,
+        "q_target_rad": 0.0,
+        "vin_v": 7.35
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.05238449664440126,
+        "control_voltage_v": 2.114872464136372,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.05238449664440126,
+        "motor_torque_nm": 0.2753339870881578
+      },
+      "id": "positive_error",
+      "input": {
+        "dq_rad_s": 0.0,
+        "friction_external_torque_nm": -0.2,
+        "friction_motor_torque_nm": 0.1,
+        "q_rad": 0.0,
+        "q_target_rad": 0.5,
+        "vin_v": 7.35
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.05238449664440126,
+        "control_voltage_v": -2.114872464136372,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.05238449664440126,
+        "motor_torque_nm": -0.2753339870881578
+      },
+      "id": "negative_error",
+      "input": {
+        "dq_rad_s": 0.0,
+        "friction_external_torque_nm": 0.2,
+        "friction_motor_torque_nm": -0.1,
+        "q_rad": 0.0,
+        "q_target_rad": -0.5,
+        "vin_v": 7.35
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.18323984096906193,
+        "control_voltage_v": 4.919936619364065,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.18573295877959678,
+        "motor_torque_nm": 0.6405236195572268
+      },
+      "id": "positive_pwm_clip",
+      "input": {
+        "dq_rad_s": 0.0,
+        "friction_external_torque_nm": -0.5,
+        "friction_motor_torque_nm": 0.5,
+        "q_rad": -2.0,
+        "q_target_rad": 2.0,
+        "vin_v": 6.5
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.18323984096906193,
+        "control_voltage_v": -4.919936619364065,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.18573295877959678,
+        "motor_torque_nm": -0.6405236195572268
+      },
+      "id": "negative_pwm_clip",
+      "input": {
+        "dq_rad_s": 0.0,
+        "friction_external_torque_nm": 0.5,
+        "friction_motor_torque_nm": -0.5,
+        "q_rad": 2.0,
+        "q_target_rad": -2.0,
+        "vin_v": 8.2
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.11148391816253451,
+        "control_voltage_v": 1.2689234784818233,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.11148391816253451,
+        "motor_torque_nm": -0.21600824187781661
+      },
+      "id": "positive_back_emf",
+      "input": {
+        "dq_rad_s": 8.0,
+        "friction_external_torque_nm": 0.2,
+        "friction_motor_torque_nm": 0.4,
+        "q_rad": 0.1,
+        "q_target_rad": 0.4,
+        "vin_v": 7.35
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.11148391816253451,
+        "control_voltage_v": -1.2689234784818233,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.11148391816253451,
+        "motor_torque_nm": 0.21600824187781661
+      },
+      "id": "negative_back_emf",
+      "input": {
+        "dq_rad_s": -8.0,
+        "friction_external_torque_nm": -0.2,
+        "friction_motor_torque_nm": -0.4,
+        "q_rad": -0.1,
+        "q_target_rad": -0.4,
+        "vin_v": 7.35
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.05812755066405026,
+        "control_voltage_v": 6.060468287331251,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.05812755066405026,
+        "motor_torque_nm": -0.6405236195572267
+      },
+      "id": "high_speed_positive",
+      "input": {
+        "dq_rad_s": 30.0,
+        "friction_external_torque_nm": 0.1,
+        "friction_motor_torque_nm": 0.2,
+        "q_rad": 0.0,
+        "q_target_rad": 0.0,
+        "vin_v": 6.5
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.05812755066405026,
+        "control_voltage_v": -6.060468287331251,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.05812755066405026,
+        "motor_torque_nm": 0.6405236195572267
+      },
+      "id": "high_speed_negative",
+      "input": {
+        "dq_rad_s": -30.0,
+        "friction_external_torque_nm": -0.1,
+        "friction_motor_torque_nm": -0.2,
+        "q_rad": 0.0,
+        "q_target_rad": 0.0,
+        "vin_v": 6.5
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.17758982986278335,
+        "control_voltage_v": 0.9437798207302448,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.17763885552010666,
+        "motor_torque_nm": 0.12239362222082742
+      },
+      "id": "same_sign_drive",
+      "input": {
+        "dq_rad_s": 0.01,
+        "friction_external_torque_nm": 0.1,
+        "friction_motor_torque_nm": 0.6,
+        "q_rad": 0.0,
+        "q_target_rad": 0.2,
+        "vin_v": 8.2
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.08458753056652588,
+        "control_voltage_v": 0.9437798207302448,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.08468725527894727,
+        "motor_torque_nm": 0.1233466438061542
+      },
+      "id": "same_sign_backdrive",
+      "input": {
+        "dq_rad_s": -0.01,
+        "friction_external_torque_nm": 0.6,
+        "friction_motor_torque_nm": 0.1,
+        "q_rad": 0.0,
+        "q_target_rad": 0.2,
+        "vin_v": 8.2
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.17765342618902466,
+        "control_voltage_v": 0.8459489856545488,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.17765342618902466,
+        "motor_torque_nm": 0.0982208250186784
+      },
+      "id": "opposite_sign_drive",
+      "input": {
+        "dq_rad_s": 0.25,
+        "friction_external_torque_nm": -0.1,
+        "friction_motor_torque_nm": 0.6,
+        "q_rad": 0.0,
+        "q_target_rad": 0.2,
+        "vin_v": 7.35
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.08469961887758058,
+        "control_voltage_v": -0.8459489856545488,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.08469961887758058,
+        "motor_torque_nm": -0.0982208250186784
+      },
+      "id": "opposite_sign_backdrive",
+      "input": {
+        "dq_rad_s": -0.25,
+        "friction_external_torque_nm": 0.6,
+        "friction_motor_torque_nm": -0.1,
+        "q_rad": 0.0,
+        "q_target_rad": -0.2,
+        "vin_v": 7.35
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.1412910697452568,
+        "control_voltage_v": 0.600997056607967,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.14130469614615485,
+        "motor_torque_nm": 0.24495780450697524
+      },
+      "id": "seeded_00",
+      "input": {
+        "dq_rad_s": -3.4986480486332425,
+        "friction_external_torque_nm": -0.6923190283328783,
+        "friction_motor_torque_nm": -0.5105518603127966,
+        "q_rad": 0.2472205430941149,
+        "q_target_rad": 0.39654055222782336,
+        "vin_v": 6.9940301148686075
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.05016887882460251,
+        "control_voltage_v": -3.11690400826103,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.05016887882460251,
+        "motor_torque_nm": 0.10640874857046534
+      },
+      "id": "seeded_01",
+      "input": {
+        "dq_rad_s": -10.74889873951837,
+        "friction_external_torque_nm": 0.597555997399236,
+        "friction_motor_torque_nm": 0.1701842230437831,
+        "q_rad": -0.231810979451612,
+        "q_target_rad": -0.896645385392102,
+        "vin_v": 8.14672584483102
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.09460897503699664,
+        "control_voltage_v": -3.23056058695418,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.09480222081202538,
+        "motor_torque_nm": -0.445262660345217
+      },
+      "id": "seeded_02",
+      "input": {
+        "dq_rad_s": 0.5178875508075134,
+        "friction_external_torque_nm": 0.1985378718987429,
+        "friction_motor_torque_nm": 0.2591146051169155,
+        "q_rad": -0.004950006207490643,
+        "q_target_rad": -0.7673812407435842,
+        "vin_v": 7.362924909071995
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.16796287955115594,
+        "control_voltage_v": 0.2600679023991775,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.16796287955115594,
+        "motor_torque_nm": -0.28889353797538475
+      },
+      "id": "seeded_03",
+      "input": {
+        "dq_rad_s": 6.77322798004499,
+        "friction_external_torque_nm": -0.2956506052016694,
+        "friction_motor_torque_nm": -0.6117043463087327,
+        "q_rad": -1.4583256606050066,
+        "q_target_rad": -1.3958421757417603,
+        "vin_v": 7.23260375180485
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.15453662771375584,
+        "control_voltage_v": 1.7579730033521057,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.15453662771375584,
+        "motor_torque_nm": 0.6405236195572267
+      },
+      "id": "seeded_04",
+      "input": {
+        "dq_rad_s": -8.638926276982593,
+        "friction_external_torque_nm": 0.5581720817019349,
+        "friction_motor_torque_nm": 0.5613868205149635,
+        "q_rad": -0.8324903911854356,
+        "q_target_rad": 0.686339206758683,
+        "vin_v": 7.175736181966895
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.11907814875496105,
+        "control_voltage_v": 5.885528280657444,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.11907814875496105,
+        "motor_torque_nm": 0.6405236195572268
+      },
+      "id": "seeded_05",
+      "input": {
+        "dq_rad_s": 2.6381312970652173,
+        "friction_external_torque_nm": -0.39833135192699215,
+        "friction_motor_torque_nm": 0.337865684642806,
+        "q_rad": -0.28522350335992785,
+        "q_target_rad": 1.418288673229044,
+        "vin_v": 7.055034594664224
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.006175583600671029,
+        "control_voltage_v": -1.828437174161936,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.006175583600671029,
+        "motor_torque_nm": -0.058786938620525114
+      },
+      "id": "seeded_06",
+      "input": {
+        "dq_rad_s": -3.76184991704996,
+        "friction_external_torque_nm": -0.6846430307978812,
+        "friction_motor_torque_nm": 0.0052305228355340235,
+        "q_rad": 1.4827859984401335,
+        "q_target_rad": 1.0377766137858038,
+        "vin_v": 7.139766904225235
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.186898009914954,
+        "control_voltage_v": 4.053752964792219,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.1877923251396595,
+        "motor_torque_nm": 0.5894309501806573
+      },
+      "id": "seeded_07",
+      "input": {
+        "dq_rad_s": -1.2943099276783627,
+        "friction_external_torque_nm": -0.4273034330003859,
+        "friction_motor_torque_nm": -0.5359318930321766,
+        "q_rad": -0.4607525082819883,
+        "q_target_rad": 0.44611665676208545,
+        "vin_v": 7.767581247332222
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.18001299891112338,
+        "control_voltage_v": -1.041259976978624,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.18001299891112338,
+        "motor_torque_nm": -0.6405236195572269
+      },
+      "id": "seeded_08",
+      "input": {
+        "dq_rad_s": 10.59708637890142,
+        "friction_external_torque_nm": 0.04857225403734644,
+        "friction_motor_torque_nm": 0.6568641783945665,
+        "q_rad": 0.8299997230117762,
+        "q_target_rad": -1.0704553969136086,
+        "vin_v": 6.569224345804671
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.12259269452743476,
+        "control_voltage_v": -0.09424858417681997,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.12259269452743476,
+        "motor_torque_nm": 0.45560569515196686
+      },
+      "id": "seeded_09",
+      "input": {
+        "dq_rad_s": -9.818788355309149,
+        "friction_external_torque_nm": 0.5769147154582905,
+        "friction_motor_torque_nm": 0.44165129409945847,
+        "q_rad": 0.46260150310872883,
+        "q_target_rad": 0.438774589366447,
+        "vin_v": 6.873535863540753
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.1911409844662999,
+        "control_voltage_v": -0.6215855482615047,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.1911409844662999,
+        "motor_torque_nm": -0.6405236195572268
+      },
+      "id": "seeded_10",
+      "input": {
+        "dq_rad_s": 11.743695540266375,
+        "friction_external_torque_nm": -0.27295064840396943,
+        "friction_motor_torque_nm": -0.6985826057172817,
+        "q_rad": 0.5289791006522193,
+        "q_target_rad": -0.4747742330742759,
+        "vin_v": 6.681485563481366
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.08887947151892546,
+        "control_voltage_v": 5.464545155153878,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.08888603962753709,
+        "motor_torque_nm": 0.6405236195572268
+      },
+      "id": "seeded_11",
+      "input": {
+        "dq_rad_s": 1.4879465932747271,
+        "friction_external_torque_nm": 0.036659699140195,
+        "friction_motor_torque_nm": 0.28673859856897843,
+        "q_rad": -1.4962997463040222,
+        "q_target_rad": 0.9882434511319672,
+        "vin_v": 7.548879405483988
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.19121769502379699,
+        "control_voltage_v": 0.9139336083357518,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.19121769502379699,
+        "motor_torque_nm": 0.26034730376202025
+      },
+      "id": "seeded_12",
+      "input": {
+        "dq_rad_s": -2.9666239159476007,
+        "friction_external_torque_nm": -0.29275073292818105,
+        "friction_motor_torque_nm": 0.6680894123551682,
+        "q_rad": 1.2791408058758376,
+        "q_target_rad": 1.4745765617467916,
+        "vin_v": 8.126130377421035
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.0912288637891334,
+        "control_voltage_v": -5.420669319103741,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.09136985695213617,
+        "motor_torque_nm": -0.6405236195572267
+      },
+      "id": "seeded_13",
+      "input": {
+        "dq_rad_s": -1.368071680401389,
+        "friction_external_torque_nm": 0.16971312907919156,
+        "friction_motor_torque_nm": 0.2552755543737402,
+        "q_rad": 0.4596182482956469,
+        "q_target_rad": -0.9860476742389416,
+        "vin_v": 7.564881492580468
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.08185957951403035,
+        "control_voltage_v": -2.4424874883609045,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.08185957951403033,
+        "motor_torque_nm": -0.17587165893368067
+      },
+      "id": "seeded_14",
+      "input": {
+        "dq_rad_s": -2.982394844184382,
+        "friction_external_torque_nm": -0.5541425182838695,
+        "friction_motor_torque_nm": 0.23849658157373688,
+        "q_rad": 0.777921072030587,
+        "q_target_rad": 0.2517249676157658,
+        "vin_v": 8.065993726843205
+      }
+    },
+    {
+      "expected": {
+        "bam_core_frictionloss_nm": 0.08270832880796433,
+        "control_voltage_v": 4.492883206602399,
+        "friction_viscous_nms_rad": 0.005359668274599504,
+        "mjlab_deployed_frictionloss_nm": 0.08270832880796433,
+        "motor_torque_nm": 0.5561207183957008
+      },
+      "id": "seeded_15",
+      "input": {
+        "dq_rad_s": 0.6044998776393138,
+        "friction_external_torque_nm": -0.21136939824619316,
+        "friction_motor_torque_nm": 0.20895798462138726,
+        "q_rad": 0.4194776836033568,
+        "q_target_rad": 1.4222176543473766,
+        "vin_v": 7.785920464860803
+      }
+    }
+  ]
+}
