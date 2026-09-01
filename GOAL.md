@@ -11,11 +11,11 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M0 - Freeze and reproduce the Apple baseline
+M1 - Establish the shared semantic contract
 
 ## Current Slice
 
-`docs/briefs/002-m0-clean-clone-receipt.md`
+`docs/briefs/003-m1-authoritative-bam-golden-vectors.md`
 
 ## Stop Conditions
 

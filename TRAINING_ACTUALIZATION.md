@@ -11,7 +11,7 @@ plausible rollout.
 |---|---|---|
 | Public Apple code | Present | Metal physics and MPS learner selection are committed on `main`. |
 | Apple model preflight | Observed | Genesis 1.3.3 loaded a real Microduck MJCF and completed one finite Metal step. |
-| Walking/backflip pipeline | Reproduced locally from the new lock | The current dirty checkout passed both 64x5 smokes and ONNX parity; clean-clone receipt is still open. |
+| Walking/backflip pipeline | Clean-clone reproduced | Receipt `20260901T215219Z-2ce72a94` passed both 64x5 smokes, two normalized ONNX exports, two randomized parity checks, and two real-observation parity checks from committed state. |
 | Canonical contract | Candidate scaffold | Repo-local interface, model, and BAM snapshots exist; official mjlab parity is open. |
 | Task success | Open | No frozen success battery has accepted an Apple-trained walking or backflip policy. |
 | Held-out C MuJoCo | Open | No independent frozen-ONNX acceptance suite exists yet. |
@@ -31,12 +31,12 @@ does not close its milestone until every exit gate and receipt is present.
 - [x] Separate the Apple dependency lane from vendor-PyTorch ROCm/CUDA installs.
 - [x] Pin Genesis 1.3.3, PyTorch 2.9.1, and rsl-rl 5.4.2 in a hash-locked macOS arm64 environment.
 - [x] Provide explicit Metal/MPS walking and backflip 64-env x 5-iteration commands.
-- [ ] From a clean clone, run `./scripts/setup_apple.sh` on Apple Silicon.
+- [x] From a clean clone, run `./scripts/setup_apple.sh` on Apple Silicon.
 - [x] Run `python tests/run_all.py`; record every skip, especially missing BAM/checkpoint coverage.
 - [x] Run `./scripts/run_apple_smokes.sh` for both bounded tasks.
-- [ ] Retain clean-run stdout, configs, checkpoints, and SHA-256 manifests.
+- [x] Retain clean-run stdout, configs, checkpoints, and SHA-256 manifests.
 - [x] Export both smoke checkpoints and run Torch-versus-ONNX randomized and real-observation checks.
-- [ ] Record machine model, macOS, Python, Torch, Genesis, MuJoCo, rsl_rl, commit, and dirty-tree state without recording a hardware serial.
+- [x] Record machine model, macOS, Python, Torch, Genesis, MuJoCo, rsl_rl, commit, and dirty-tree state without recording a hardware serial.
 
 Exit gate: a second clean Apple checkout reproduces both 64x5 smokes and ONNX
 checks from the committed lock. Receipt root: `receipts/apple-baseline/<run-id>/`.
@@ -49,6 +49,13 @@ checkout was absent. Walking ran at 560–785 env-steps/s and backflip at 622–
 over five iterations. Single-file ONNX randomized parity was at most 3.695e-6
 rad; both real-observation checks were 1.341e-7 rad. This is pipeline evidence,
 not gait, backflip-success, held-out, or physical evidence.
+
+M0 closed on 2026-09-01 with clean-clone receipt
+`receipts/apple-baseline/20260901T215219Z-2ce72a94/`, bound to source commit
+`2ce72a9492789c23d2191c7517e28a5b6bb12678`. All 20 manifest entries are
+tracked and verified. Walking randomized/real-observation ONNX parity was
+2.146e-6/1.341e-7 rad; backflip was 4.768e-6/1.043e-7 rad. This promotes only
+reproducible `artifact_validated` pipeline evidence.
 
 ### M1 — Establish the shared semantic contract (P0)
 
@@ -146,8 +153,8 @@ simulation or reference result grants physical authority.
 
 ## Immediate next three runs
 
-1. Close M0 from a clean Apple clone using the committed lock and capture a complete receipt bundle.
-2. Produce authoritative BAM golden vectors and make both Genesis and mjlab consume them.
+1. Pin the exact authoritative BAM revision and produce versioned golden vectors.
+2. Make Genesis and official mjlab consume the same BAM/interface fixtures.
 3. Implement the deterministic C MuJoCo evaluator MVP before spending on multi-seed training.
 
 This order maximizes information: it first proves reproducibility, then semantic
