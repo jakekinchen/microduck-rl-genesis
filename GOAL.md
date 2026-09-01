@@ -15,7 +15,7 @@ M0 - Freeze and reproduce the Apple baseline
 
 ## Current Slice
 
-`docs/briefs/001-m0-readiness-baseline.md`
+`docs/briefs/002-m0-clean-clone-receipt.md`
 
 ## Stop Conditions
 
