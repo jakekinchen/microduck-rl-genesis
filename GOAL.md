@@ -15,7 +15,7 @@ M1 - Establish the shared semantic contract
 
 ## Current Slice
 
-`docs/briefs/006-m1-model-reconciliation.md`
+`docs/briefs/007-m1-walking-task-semantics.md`
 
 ## Stop Conditions
 
