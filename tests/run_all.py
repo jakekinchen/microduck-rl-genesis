@@ -13,6 +13,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 TESTS = [
     ("vecteurs BAM dorés épinglés", "test_bam_golden_vectors.py"),
+    ("trajectoire BAM 14 servos épinglée", "test_bam_closed_loop_fixture.py"),
     ("formules BAM vs référence Rhoban", "test_bam_formulas.py"),
     ("couple externe vs MuJoCo", "test_external_torque.py"),
     ("boucle actionneur vs MuJoCo+BAM", "test_bam_vs_mujoco.py"),
