@@ -15,7 +15,7 @@ M1 - Establish the shared semantic contract
 
 ## Current Slice
 
-`docs/briefs/004-m1-closed-loop-servo-fixture.md`
+`docs/briefs/005-m1-official-mjlab-fixture-consumer.md`
 
 ## Stop Conditions
 
