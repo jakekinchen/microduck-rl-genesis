@@ -15,7 +15,7 @@ M1 - Establish the shared semantic contract
 
 ## Current Slice
 
-`docs/briefs/003-m1-authoritative-bam-golden-vectors.md`
+`docs/briefs/004-m1-closed-loop-servo-fixture.md`
 
 ## Stop Conditions
 
