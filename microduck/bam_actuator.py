@@ -153,8 +153,8 @@ class BamActuator:
         self.dofs_idx_local = torch.as_tensor(
             dofs_idx_local, dtype=torch.long, device=device
         )
-        # Indices GLOBAUX solveur : `dofs_state` / `dofs_info` sont indexés sur
-        # tous les DOF de la scène, pas sur ceux de l'entité.
+        # Indices GLOBAUX solveur : `dyn_state.dofs` / `dyn_info.dofs` sont
+        # indexés sur tous les DOF de la scène, pas sur ceux de l'entité.
         self.dofs_idx_global = self.dofs_idx_local + entity.dof_start
         self.backlash_dofs_idx_local = (
             None if backlash_dofs_idx_local is None
@@ -292,7 +292,9 @@ class BamActuator:
         cs = self.solver.constraint_solver
         efc_force = qd_to_torch(cs.efc_force, transpose=True)
         n_eq = qd_to_torch(cs.n_constraints_equality)
-        frictionloss = qd_to_torch(self.solver.dofs_info.frictionloss, transpose=True)
+        frictionloss = qd_to_torch(
+            self.solver.dyn_info.dofs.frictionloss, transpose=True
+        )
         if frictionloss.ndim == 1:  # batch_dofs_info=False
             frictionloss = frictionloss.unsqueeze(0).expand(self.num_envs, -1)
         has_fl = frictionloss > gs.EPS
@@ -307,9 +309,9 @@ class BamActuator:
         pas précédent : sans ça les termes de frottement dépendants de la charge
         se rebouclent sur eux-mêmes.
         """
-        qf_bias = qd_to_torch(self.solver.dofs_state.qf_bias, transpose=True)
+        qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
         qf_constraint = qd_to_torch(
-            self.solver.dofs_state.qf_constraint, transpose=True
+            self.solver.dyn_state.dofs.qf_constraint, transpose=True
         )
         qf_friction = self._dof_friction_force()
         g = self.dofs_idx_global

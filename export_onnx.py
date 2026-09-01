@@ -72,12 +72,15 @@ def main():
         ckpt = max(ckpts, key=lambda f: int(f.split("_")[1].split(".")[0]))
     else:
         ckpt = f"model_{args.ckpt}.pt"
-    runner.load(os.path.join(log_dir, ckpt))
+    # Les checkpoints Mac sont produits par PPO sur MPS. L'export reste
+    # volontairement CPU : le graphe ONNX est indépendant du device et cette
+    # conversion explicite évite de restaurer par mégarde les tenseurs sur MPS.
+    runner.load(os.path.join(log_dir, ckpt), map_location="cpu")
 
     # rsl_rl 5.x expose l'acteur sous `alg.actor` ; `_raw_actor` est le modèle
     # non enveloppé (identique hors multi-GPU) — on le préfère quand il existe.
     actor = getattr(runner.alg, "_raw_actor", None) or runner.alg.actor
-    exported = ExportedPolicy(actor).eval()
+    exported = ExportedPolicy(actor).to("cpu").eval()
 
     dummy = torch.zeros(1, NUM_OBS)
     with torch.no_grad():
