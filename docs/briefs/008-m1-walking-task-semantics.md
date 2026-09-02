@@ -34,7 +34,7 @@ success before any final policy result is inspected.
 - a deterministic generator or extractor under `scripts/`
 - a focused validator under `tests/`
 - generated task lock metadata
-- `docs/session-logs/007-executor-m1-walking-task-semantics.md`
+- `docs/session-logs/008-executor-m1-walking-task-semantics.md`
 
 ## Validation
 
