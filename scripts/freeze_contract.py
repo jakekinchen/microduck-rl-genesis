@@ -163,9 +163,11 @@ def snapshots() -> dict[Path, bytes]:
             },
         },
         "official_mjlab_runtime": {
+            "colorama": "0.4.6",
             "mjlab": "1.3.0",
             "mujoco": "3.10.0",
             "mujoco-warp": "3.8.1",
+            "scipy": "1.18.0",
             "torch": "2.9.1",
             "warp-lang": "1.12.0",
         },

@@ -313,18 +313,19 @@ git clone -b mjlab_frictionloss https://github.com/Rhoban/bam.git /tmp/bam
 BAM_REPO=/tmp/bam python tests/run_all.py
 ```
 
-The pinned official mjlab/MuJoCo Warp adapter has a separate dependency lane.
-Point the wrapper at a Python environment matching the versions in
-`microduck_contract/actuator/bam-m6-xl330-v1.lock.json`:
+The pinned official mjlab/MuJoCo Warp adapter has a frozen optional dependency
+lane. From a fresh clone, build it and materialize the exact BAM authority:
 
 ```bash
-BAM_REPO=/tmp/bam \
-OFFICIAL_MJLAB_PYTHON=/path/to/locked-mjlab-python \
-scripts/verify_official_mjlab_fixtures.sh
+scripts/setup_official_mjlab.sh
+git clone --no-checkout https://github.com/Rhoban/bam.git /tmp/bam
+git -C /tmp/bam checkout --detach 62bd8ce12154340be97e06f7f41a0ca8f116d967
+BAM_REPO=/tmp/bam scripts/verify_official_mjlab_fixtures.sh
 ```
 
 This runs one MuJoCo Warp world on the selected runtime device; it neither
-trains a policy nor provisions compute.
+trains a policy nor provisions compute. It is also available as the manual
+`optional-official-mjlab` workflow; it is intentionally not part of default CI.
 
 ## 8. Sim-to-real: what is guaranteed, what is not
 

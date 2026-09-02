@@ -77,6 +77,20 @@ Temp logs help monitor a running cycle. Durable logs are what future sessions sh
 
 Runtime logs for the background loop live under `/tmp/autonomous-project-workflow/<repo>/`.
 
+## Immutable Receipt Whitespace
+
+Raw `receipts/apple-baseline/**/*.log` files preserve subprocess output
+byte-for-byte, including ANSI sequences and trailing spaces. They are exempt
+from Git's `trailing-space` and `space-before-tab` diagnostics only when they
+are tracked beneath a run root and listed in that root's verified
+`SHA256SUMS`. Source, tests, Markdown, generated JSON, and every other path keep
+the default whitespace policy.
+
+Run `scripts/check_branch_hygiene.sh <base-commit>` to verify every receipt
+manifest, confirm each exempt log is manifest-bound, and apply `git diff
+--check` to the rest of the branch. Never normalize an accepted receipt merely
+to satisfy a style gate; produce a new receipt when new evidence is required.
+
 ## External Services and Spend
 
 Default posture:

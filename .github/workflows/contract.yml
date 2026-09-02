@@ -3,12 +3,15 @@ name: contract-drift
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   deterministic-contract:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -16,3 +19,28 @@ jobs:
         run: python -m compileall -q microduck scripts tests train.py play.py export_onnx.py
       - name: Verify generated contract snapshots after compilation
         run: python scripts/freeze_contract.py --check
+      - name: Verify branch whitespace and immutable receipt manifests
+        env:
+          DIFF_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: scripts/check_branch_hygiene.sh "$DIFF_BASE"
+
+  optional-official-mjlab:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned uv frontend
+        run: python -m pip install uv==0.9.29
+      - name: Build frozen optional environment
+        run: scripts/setup_official_mjlab.sh
+      - name: Materialize pinned BAM authority
+        run: |
+          git clone --no-checkout https://github.com/Rhoban/bam.git "$RUNNER_TEMP/bam"
+          git -C "$RUNNER_TEMP/bam" checkout --detach 62bd8ce12154340be97e06f7f41a0ca8f116d967
+      - name: Verify official mjlab fixture consumption
+        env:
+          BAM_REPO: ${{ runner.temp }}/bam
+        run: scripts/verify_official_mjlab_fixtures.sh

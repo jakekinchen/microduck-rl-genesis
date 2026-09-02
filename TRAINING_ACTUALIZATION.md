@@ -12,7 +12,7 @@ plausible rollout.
 | Public Apple code | Present | Metal physics and MPS learner selection are committed on `main`. |
 | Apple model preflight | Observed | Genesis 1.3.3 loaded a real Microduck MJCF and completed one finite Metal step. |
 | Walking/backflip pipeline | Clean-clone reproduced | Receipt `20260901T215219Z-2ce72a94` passed both 64x5 smokes, two normalized ONNX exports, two randomized parity checks, and two real-observation parity checks from committed state. |
-| Canonical contract | Candidate scaffold | Repo-local interface, model, and BAM snapshots exist; official mjlab parity is open. |
+| Canonical contract | Partial cross-backend evidence | Interface/model/BAM locks, pinned BAM fixtures, official mjlab consumption, and six model variants are reconciled; walking/backflip semantics remain open. |
 | Task success | Open | No frozen success battery has accepted an Apple-trained walking or backflip policy. |
 | Held-out C MuJoCo | Open | No independent frozen-ONNX acceptance suite exists yet. |
 | Physical validation | Open | No policy from this repository has physical authority. |
@@ -153,9 +153,11 @@ simulation or reference result grants physical authority.
 
 ## Immediate next three runs
 
-1. Pin the exact authoritative BAM revision and produce versioned golden vectors.
-2. Make Genesis and official mjlab consume the same BAM/interface fixtures.
-3. Implement the deterministic C MuJoCo evaluator MVP before spending on multi-seed training.
+1. Freeze walking and backflip semantic files, success definitions, and
+   training-versus-acceptance assistance boundaries.
+2. Record the M1 upstream-submission or explicit versioned-divergence decision.
+3. Implement the deterministic CPU-only C MuJoCo evaluator MVP before any
+   multi-seed or paid-compute training.
 
-This order maximizes information: it first proves reproducibility, then semantic
-equivalence, then independently measured policy quality.
+The BAM fixture, official-adapter consumption, and model-reconciliation runs
+are complete and must not be reopened without new contradictory evidence.
