@@ -84,7 +84,7 @@ physical authority is claimed.
 - [x] Import the observation builder and model lock by pinned authority; do not reuse a training backend's self-reported metrics.
 - [x] Implement deterministic standing, command-grid, start/stop/reversal, perturbation, friction, joint-margin, NaN, deadline, and termination cases.
 - [x] Emit `evaluation.json`, `trajectory.parquet`, `rollout.mp4`, `environment-lock.json`, and `attestation.json` bound to the exact policy digest.
-- [ ] Split visible development cases from held-out acceptance seeds/cases.
+- [x] Split visible development cases from held-out acceptance seeds/cases.
 - [ ] Prove deterministic reports with the official walking ONNX before evaluating Genesis policies.
 
 Exit gate: repeated evaluation of the same ONNX and suite ID yields identical
@@ -125,6 +125,11 @@ not regenerated.
 Deterministic case matrix accepted on 2026-09-02: ten visible zero-policy cases
 cover all nine required infrastructure families with byte-identical repeated
 reports. This is not held-out or task-success evidence.
+
+Held-out protocol accepted on 2026-09-02: visible development data and public
+acceptance definitions are distinct from an unrealized seed set derived only
+from public randomness published after an immutable candidate freeze. No live
+beacon, held-out seed, candidate, or result was inspected.
 
 ### M3 — Freeze task-specific success gates (P0)
 

@@ -11,15 +11,15 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M2 - Build the independent C MuJoCo evaluator
+M3 - Freeze task-specific success gates
 
 ## Current Slice
 
-`docs/briefs/016-m2-heldout-preregistration.md`
+`docs/briefs/017-m3-success-classifiers.md`
 
 ## Current Status
 
-`ACTIVE` - freeze a contamination-resistant development/held-out partition.
+`ACTIVE` - freeze walking and backflip success classifiers before candidates.
 `official_policy_authority_missing` blocks only the official-policy
 repeatability sub-gate.
 
