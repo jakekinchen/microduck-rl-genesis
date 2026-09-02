@@ -11,11 +11,11 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M1 - Establish the shared semantic contract
+M2 - Build the independent C MuJoCo evaluator
 
 ## Current Slice
 
-`docs/briefs/010-m1-versioned-divergence-decision.md`
+`docs/briefs/011-m2-c-mujoco-evaluator-core.md`
 
 ## Stop Conditions
 

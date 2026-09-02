@@ -12,7 +12,7 @@ plausible rollout.
 | Public Apple code | Present | Metal physics and MPS learner selection are committed on `main`. |
 | Apple model preflight | Observed | Genesis 1.3.3 loaded a real Microduck MJCF and completed one finite Metal step. |
 | Walking/backflip pipeline | Clean-clone reproduced | Receipt `20260901T215219Z-2ce72a94` passed both 64x5 smokes, two normalized ONNX exports, two randomized parity checks, and two real-observation parity checks from committed state. |
-| Canonical contract | Partial cross-backend evidence | Interface/model/BAM locks, pinned BAM fixtures, official mjlab consumption, six model variants, and walking/backflip semantics are frozen. The tasks record 28 and 32 classified fields respectively and do not claim identical training trajectories; the versioned divergence decision remains open. |
+| Canonical contract | Closed M1 contract evidence | Interface/model/BAM locks, pinned BAM fixtures, official mjlab consumption, six model variants, walking/backflip semantics, and the local versioned-divergence decision are frozen. The tasks record 28 and 32 classified fields respectively and do not claim identical training trajectories. |
 | Task success | Open | No frozen success battery has accepted an Apple-trained walking or backflip policy. |
 | Held-out C MuJoCo | Open | No independent frozen-ONNX acceptance suite exists yet. |
 | Physical validation | Open | No policy from this repository has physical authority. |
@@ -67,10 +67,16 @@ reproducible `artifact_validated` pipeline evidence.
 - [x] Reconcile Genesis/MuJoCo model counts, collision variants, masses, inertias, keyframes, joint limits, and actuator ordering.
 - [x] Define the walking semantic file, including training-only curriculum state, 28 classified backend fields, and a preregistered zero-assistance success battery.
 - [x] Define the backflip semantic file, including assistance/reverse-curriculum state and ordinary-start zero-assistance success definitions.
-- [ ] Submit the backend-independent contract upstream or record an explicit versioned divergence decision.
+- [x] Submit the backend-independent contract upstream or record an explicit versioned divergence decision.
 
 Exit gate: Genesis and official mjlab pass byte-identical interface fixtures and
 thresholded BAM/model conformance tests. Model variants remain distinct.
+
+M1 closed on 2026-09-02 with a local, not-submitted versioned divergence
+decision covering all 45 non-exact walking/backflip semantic fields. The
+deployed 61D/14D/50 Hz interface and BAM/model conformance are retained; no
+training-trajectory equivalence, task success, held-out result, transfer, or
+physical authority is claimed.
 
 ### M2 — Build the independent C MuJoCo evaluator (P0)
 
@@ -154,11 +160,11 @@ simulation or reference result grants physical authority.
 
 ## Immediate next three runs
 
-1. Record the M1 explicit versioned-divergence decision without publishing.
-2. Implement the deterministic CPU-only C MuJoCo evaluator MVP before any
+1. Implement the deterministic CPU-only C MuJoCo evaluator MVP before any
    multi-seed or paid-compute training.
-3. Add deterministic development fixtures before accepting any candidate
+2. Add deterministic development fixtures before accepting any candidate
    policy outcome.
+3. Split visible development cases from held-out acceptance seeds and cases.
 
 The BAM fixture, official-adapter consumption, and model-reconciliation runs
 are complete and must not be reopened without new contradictory evidence.
