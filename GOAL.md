@@ -15,7 +15,7 @@ M2 - Build the independent C MuJoCo evaluator
 
 ## Current Slice
 
-`docs/briefs/012-m2-development-suite-and-report-bundle.md`
+`docs/briefs/013-m2-official-walking-policy-authority.md`
 
 ## Stop Conditions
 

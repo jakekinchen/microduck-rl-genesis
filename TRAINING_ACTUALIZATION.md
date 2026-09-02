@@ -80,10 +80,10 @@ physical authority is claimed.
 
 ### M2 — Build the independent C MuJoCo evaluator (P0)
 
-- [ ] Create a CPU-only evaluator using official MuJoCo, BAM's C controller, ONNX Runtime CPU, 5 ms physics, decimation 4, and no action filter.
-- [ ] Import the observation builder and model lock by pinned authority; do not reuse a training backend's self-reported metrics.
+- [x] Create a CPU-only evaluator using official MuJoCo, BAM's C controller, ONNX Runtime CPU, 5 ms physics, decimation 4, and no action filter.
+- [x] Import the observation builder and model lock by pinned authority; do not reuse a training backend's self-reported metrics.
 - [ ] Implement deterministic standing, command-grid, start/stop/reversal, perturbation, friction, joint-margin, NaN, deadline, and termination cases.
-- [ ] Emit `evaluation.json`, `trajectory.parquet`, `rollout.mp4`, `environment-lock.json`, and `attestation.json` bound to the exact policy digest.
+- [x] Emit `evaluation.json`, `trajectory.parquet`, `rollout.mp4`, `environment-lock.json`, and `attestation.json` bound to the exact policy digest.
 - [ ] Split visible development cases from held-out acceptance seeds/cases.
 - [ ] Prove deterministic reports with the official walking ONNX before evaluating Genesis policies.
 
@@ -96,6 +96,12 @@ byte-identical 40-step infrastructure reports from the retained zero-policy
 fixture. Both walking and backflip model lanes validate. This does not close M2
 or evaluate task success; the full artifact bundle and designated official
 walking ONNX repeatability proof remain open.
+
+Development bundle accepted on 2026-09-02: two public non-candidate cases emit
+all five required artifacts. Two same-host runs reproduced every artifact byte,
+including 160-row Parquet and 40-frame decoded MP4 outputs. This remains
+infrastructure-only; deterministic acceptance cases, held-out separation, and
+the designated official walking ONNX proof remain open.
 
 ### M3 — Freeze task-specific success gates (P0)
 
@@ -167,10 +173,10 @@ simulation or reference result grants physical authority.
 
 ## Immediate next three runs
 
-1. Add the visible deterministic development suite and complete evaluator
-   artifact bundle.
-2. Prove report repeatability with the designated official walking ONNX without
+1. Resolve and provenance-bind the designated official walking ONNX without
    inspecting a final Genesis candidate.
+2. Prove report repeatability with that official policy on visible development
+   cases only.
 3. Split visible development cases from held-out acceptance seeds and cases.
 
 The BAM fixture, official-adapter consumption, and model-reconciliation runs
