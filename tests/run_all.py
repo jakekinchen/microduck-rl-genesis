@@ -12,6 +12,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TESTS = [
+    ("matérialisation BAM épinglée", "test_materialize_bam_authority.py"),
     ("vecteurs BAM dorés épinglés", "test_bam_golden_vectors.py"),
     ("trajectoire BAM 14 servos épinglée", "test_bam_closed_loop_fixture.py"),
     ("réconciliation des modèles épinglée", "test_model_reconciliation.py"),

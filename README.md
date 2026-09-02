@@ -309,8 +309,8 @@ Run the whole suite:
 ```bash
 python tests/run_all.py
 # The two tests that compare against BAM need the reference repository:
-git clone -b mjlab_frictionloss https://github.com/Rhoban/bam.git /tmp/bam
-BAM_REPO=/tmp/bam python tests/run_all.py
+scripts/materialize_bam_authority.py /tmp/microduck-bam-authority
+BAM_REPO=/tmp/microduck-bam-authority python tests/run_all.py
 ```
 
 The pinned official mjlab/MuJoCo Warp adapter has a frozen optional dependency
@@ -318,9 +318,8 @@ lane. From a fresh clone, build it and materialize the exact BAM authority:
 
 ```bash
 scripts/setup_official_mjlab.sh
-git clone --no-checkout https://github.com/Rhoban/bam.git /tmp/bam
-git -C /tmp/bam checkout --detach 62bd8ce12154340be97e06f7f41a0ca8f116d967
-BAM_REPO=/tmp/bam scripts/verify_official_mjlab_fixtures.sh
+scripts/materialize_bam_authority.py /tmp/microduck-bam-authority
+BAM_REPO=/tmp/microduck-bam-authority scripts/verify_official_mjlab_fixtures.sh
 ```
 
 This runs one MuJoCo Warp world on the selected runtime device; it neither

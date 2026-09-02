@@ -19,8 +19,8 @@ def _bam_repo():
     le portage. On le prend en argument ou dans BAM_REPO ; sans lui, le test se
     saute proprement au lieu d'échouer.
 
-        git clone -b mjlab_frictionloss https://github.com/Rhoban/bam.git
-        BAM_REPO=$PWD/bam python tests/<ce test>.py
+        scripts/materialize_bam_authority.py /tmp/microduck-bam-authority
+        BAM_REPO=/tmp/microduck-bam-authority python tests/<ce test>.py
     """
     import os, sys
     p = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("BAM_REPO", "")

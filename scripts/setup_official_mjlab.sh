@@ -40,4 +40,5 @@ for name, version in observed.items():
 PY
 
 echo "Environment: $VALIDATION_PROJECT/.venv"
-echo "Next gate: BAM_REPO=<pinned-checkout> $PROJECT_ROOT/scripts/verify_official_mjlab_fixtures.sh"
+echo "Next: $PROJECT_ROOT/scripts/materialize_bam_authority.py /tmp/microduck-bam-authority"
+echo "Gate: BAM_REPO=/tmp/microduck-bam-authority $PROJECT_ROOT/scripts/verify_official_mjlab_fixtures.sh"
