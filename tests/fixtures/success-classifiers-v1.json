@@ -1,0 +1,13 @@
+{
+  "schema_version": "microduck.success-classifier-fixtures/v1",
+  "walking_positive_template": {
+    "assistance": {"command_resampling":false,"curriculum":false,"domain_randomization":false,"early_termination_suppression":false,"external_pushes":false,"observation_noise":false,"random_actuator_or_sensor_delay":false,"state_or_action_correction":false},
+    "fell":false,"survival_fraction":1.0,"linear_velocity_rmse_m_s":0.05,"linear_velocity_error_m_s_p95":0.1,"yaw_rate_rmse_rad_s":0.1,"yaw_rate_error_rad_s_p95":0.2,"head_pose_error_rad":0.05,"head_pose_error_rad_p95":0.1,"stop_planar_displacement_m":0.02,"stop_absolute_yaw_change_rad":0.05,"stance_speed_m_s":0.03,"stance_speed_m_s_p95":0.04,"absolute_roll_pitch_deg":5.0,"absolute_roll_pitch_deg_p95":4.0,"joint_limit_margin_rad":0.05,"torque_saturation_fraction":0.0,"torque_limit_exceedance_count":0,"deadline_miss_count":0,"nan_or_inf_count":0,"evaluator_error_count":0
+  },
+  "backflip_positive_template": {
+    "assistance":{"early_termination_suppression":false,"midflight_initialization":false,"pedestal_mat_cube_or_external_support":false,"recovery_initialization":false,"reference_or_teacher_state":false,"residual_action_constraint":false,"reverse_curriculum_start":false,"state_or_action_correction":false,"virtual_pitch_torque":false,"virtual_upward_force":false},
+    "ordinary_standing_start":true,"initial_flight_or_landing_latches":false,"support_before_flight":true,"robot_ground_contact_during_flight":false,"takeoff_root_height_m":0.15,"uninterrupted_airborne":true,"airborne_backward_rotation_rad":6.4,"rotation_credit_after_recontact":false,"first_recontact":"feet_only","intervening_nonfoot_ground_contacts":0,"stable_hold_s":0.6,"stable_roll_pitch_deg":8.0,"stable_angular_speed_rad_s":0.5,"stable_root_height_m":0.11,"joint_limit_margin_rad":0.05,"torque_saturation_fraction":0.0,"torque_limit_exceedance_count":0,"deadline_miss_count":0,"nan_or_inf_count":0,"evaluator_error_count":0
+  },
+  "expected_variants": ["known_positive", "assisted_failure", "metric_failure", "coverage_failure"],
+  "evidence_boundary": "Synthetic classifier fixtures only; no policy trajectory or task success."
+}
