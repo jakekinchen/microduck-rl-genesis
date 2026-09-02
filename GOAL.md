@@ -11,15 +11,15 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M3 - Freeze task-specific success gates
+M4 - Characterize Apple scaling and stability
 
 ## Current Slice
 
-`docs/briefs/017-m3-success-classifiers.md`
+`docs/briefs/018-m4-apple-scaling-harness.md`
 
 ## Current Status
 
-`ACTIVE` - freeze walking and backflip success classifiers before candidates.
+`ACTIVE` - add and run a bounded Apple scaling benchmark harness.
 `official_policy_authority_missing` blocks only the official-policy
 repeatability sub-gate.
 

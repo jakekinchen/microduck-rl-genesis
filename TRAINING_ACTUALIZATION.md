@@ -133,13 +133,18 @@ beacon, held-out seed, candidate, or result was inspected.
 
 ### M3 — Freeze task-specific success gates (P0)
 
-- [ ] Walking: predeclare command ranges, survival duration, tracking error, fall rate, stop drift, foot slip, orientation, and joint/torque margins.
-- [ ] Backflip: require ordinary standing start, zero assistance, takeoff, one uninterrupted airborne revolution, feet-first contact, landing orientation, and continuous stable hold.
-- [ ] Store curriculum start populations separately from acceptance start populations.
-- [ ] Test the classifiers against known positive, assisted, and failure trajectories.
+- [x] Walking: predeclare command ranges, survival duration, tracking error, fall rate, stop drift, foot slip, orientation, and joint/torque margins.
+- [x] Backflip: require ordinary standing start, zero assistance, takeoff, one uninterrupted airborne revolution, feet-first contact, landing orientation, and continuous stable hold.
+- [x] Store curriculum start populations separately from acceptance start populations.
+- [x] Test the classifiers against known positive, assisted, and failure trajectories.
 
 Exit gate: success state machines classify fixtures correctly before any final
 candidate results are inspected. PPO return is never a success definition.
+
+M3 closed on 2026-09-02 with executable classifiers covering all 230 walking
+cells and 20 ordinary-start backflip cells. Synthetic positive fixtures pass;
+assisted, metric-failure, and incomplete-coverage fixtures fail closed. No
+policy trajectory or candidate result was inspected.
 
 ### M4 — Characterize Apple scaling and stability (P1)
 
