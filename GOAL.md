@@ -15,13 +15,13 @@ M2 - Build the independent C MuJoCo evaluator
 
 ## Current Slice
 
-`docs/briefs/014-m2-pinned-bam-materializer.md`
+`docs/briefs/015-m2-deterministic-case-matrix.md`
 
 ## Current Status
 
-`ACTIVE` - repair the fresh-clone BAM authority path, then continue independent
-local M2 and M3 gates. `official_policy_authority_missing` blocks only the
-official-policy repeatability sub-gate.
+`ACTIVE` - complete the deterministic evaluator case matrix.
+`official_policy_authority_missing` blocks only the official-policy
+repeatability sub-gate.
 
 ## Stop Conditions
 

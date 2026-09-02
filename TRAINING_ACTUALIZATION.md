@@ -116,6 +116,12 @@ supplies one of the acceptable authority paths recorded in
 local evaluator cases, held-out preregistration, and M3 classifier work remain
 authorized.
 
+BAM authority materialization corrected on 2026-09-02: fresh checkouts now
+fetch and detach at the exact locked commit rather than the moved
+`mjlab_frictionloss` branch. A local-git regression proves later branch movement
+cannot repin the checkout; existing BAM fixtures and evaluator evidence were
+not regenerated.
+
 ### M3 — Freeze task-specific success gates (P0)
 
 - [ ] Walking: predeclare command ranges, survival duration, tracking error, fall rate, stop drift, foot slip, orientation, and joint/torque margins.
