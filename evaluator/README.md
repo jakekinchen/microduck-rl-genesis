@@ -31,3 +31,11 @@ Or emit a report explicitly:
 The report intentionally says `task_success: not_evaluated` and
 `proof_class: infrastructure_only`. Later M2/M3 slices must add the complete
 evidence bundle and frozen classifiers before any candidate can be promoted.
+
+`bundle.py` extends that core over the public development cases in
+`development-suite-v1.json` and writes exactly five files: `evaluation.json`,
+`trajectory.parquet`, `rollout.mp4`, `environment-lock.json`, and
+`attestation.json`. The JSON, Parquet, and video bytes must repeat on the same
+locked host. The environment lock records the host/runtime profile because
+codec bytes and floating-point trajectories are not claimed identical across
+different hosts.

@@ -19,6 +19,7 @@ TESTS = [
     ("sémantique de backflip épinglée", "test_backflip_semantics.py"),
     ("décision de divergence versionnée", "test_divergence_decision.py"),
     ("coeur évaluateur C MuJoCo", "test_evaluator_core.py"),
+    ("bundle évaluateur de développement", "test_evaluator_bundle.py"),
     ("formules BAM vs référence Rhoban", "test_bam_formulas.py"),
     ("couple externe vs MuJoCo", "test_external_torque.py"),
     ("boucle actionneur vs MuJoCo+BAM", "test_bam_vs_mujoco.py"),

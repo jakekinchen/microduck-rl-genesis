@@ -260,48 +260,87 @@ class EvaluatorCore:
             raise EvaluationError("non-finite observation")
         return observation
 
-    def run_synthetic_smoke(self) -> dict[str, Any]:
-        case = self.config["synthetic_smoke"]
+    def run_case(
+        self, case: dict[str, Any], capture_frames: bool = False
+    ) -> tuple[dict[str, Any], list[dict[str, Any]], list[np.ndarray]]:
         if case["task_id"] != self.task_id:
-            raise EvaluationError("synthetic smoke task mismatch")
+            raise EvaluationError("case task mismatch")
         self.reset(case["root_xyz_m"], case["root_quaternion_wxyz"])
         last_action = np.zeros(14, dtype=np.float32)
-        twist = np.asarray(case["twist_command"], dtype=np.float32)
+        twist = np.asarray(case.get("twist_command", [0.0, 0.0, 0.0]), dtype=np.float32)
         head = np.asarray(case["head_command"], dtype=np.float32)
         body = np.asarray(case["body_command"], dtype=np.float32)
+        schedule = sorted(case.get("twist_schedule", []), key=lambda row: row["control_step"])
         decimation = int(self.config["physics"]["control_decimation"])
         deadline_ms = float(self.config["inference"]["deadline_ms"])
         deadline_misses = 0
         policy_calls = 0
         records = []
+        rows: list[dict[str, Any]] = []
+        frames: list[np.ndarray] = []
+        renderer = None
+        camera = None
+        if capture_frames:
+            renderer = mujoco.Renderer(self.model, height=240, width=320)
+            camera = mujoco.MjvCamera()
+            camera.type = mujoco.mjtCamera.mjCAMERA_FREE
+            camera.lookat[:] = [0.0, 0.0, 0.12]
+            camera.distance = 0.65
+            camera.azimuth = 145.0
+            camera.elevation = -18.0
         target = self.home.copy()
-        for step in range(int(case["physics_steps"])):
-            if step % decimation == 0:
-                observation = self.observation_vector(last_action, twist, head, body)
-                action, latency_ms = self.policy.infer(observation)
-                deadline_misses += int(latency_ms > deadline_ms)
-                policy_calls += 1
-                last_action = action[0].copy()
-                target = self.home + last_action.astype(np.float64)
-                for index, name in enumerate(self.joint_names):
-                    self.controller.set_q_target(name, float(target[index]))
-            self.controller.update()
-            mujoco.mj_step(self.model, self.data)
-            state = np.concatenate([
-                np.asarray([self.data.time], dtype=np.float64),
-                self.data.qpos[:7].copy(),
-                self.data.qpos[self.qpos_indices].copy(),
-                self.data.qvel[self.dof_indices].copy(),
-                self.data.ctrl.copy(),
-                last_action.astype(np.float64),
-            ])
-            if not np.isfinite(state).all():
-                raise EvaluationError(f"non-finite state at physics step {step}")
-            records.append(state)
+        try:
+            for step in range(int(case["physics_steps"])):
+                if step % decimation == 0:
+                    for stage in schedule:
+                        if int(stage["control_step"]) <= policy_calls:
+                            twist = np.asarray(stage["value"], dtype=np.float32)
+                    observation = self.observation_vector(last_action, twist, head, body)
+                    action, latency_ms = self.policy.infer(observation)
+                    deadline_misses += int(latency_ms > deadline_ms)
+                    policy_calls += 1
+                    last_action = action[0].copy()
+                    target = self.home + last_action.astype(np.float64)
+                    for index, name in enumerate(self.joint_names):
+                        self.controller.set_q_target(name, float(target[index]))
+                self.controller.update()
+                mujoco.mj_step(self.model, self.data)
+                state = np.concatenate([
+                    np.asarray([self.data.time], dtype=np.float64),
+                    self.data.qpos[:7].copy(),
+                    self.data.qpos[self.qpos_indices].copy(),
+                    self.data.qvel[self.dof_indices].copy(),
+                    self.data.ctrl.copy(),
+                    last_action.astype(np.float64),
+                ])
+                if not np.isfinite(state).all():
+                    raise EvaluationError(f"non-finite state at physics step {step}")
+                records.append(state)
+                rows.append({
+                    "case_id": case["case_id"],
+                    "physics_step": step + 1,
+                    "control_step": (step // decimation) + 1,
+                    "time_s": float(self.data.time),
+                    "root_position_m": self.data.qpos[:3].astype(float).tolist(),
+                    "root_quaternion_wxyz": self.data.qpos[3:7].astype(float).tolist(),
+                    "joint_position_rad": self.data.qpos[self.qpos_indices].astype(float).tolist(),
+                    "joint_velocity_rad_s": self.data.qvel[self.dof_indices].astype(float).tolist(),
+                    "action_rad": last_action.astype(float).tolist(),
+                    "target_position_rad": target.astype(float).tolist(),
+                    "actuator_torque_nm": self.data.ctrl.astype(float).tolist(),
+                    "twist_command": twist.astype(float).tolist(),
+                    "finite": True,
+                })
+                if renderer is not None and (step + 1) % decimation == 0:
+                    renderer.update_scene(self.data, camera=camera)
+                    frames.append(renderer.render().copy())
+        finally:
+            if renderer is not None:
+                renderer.close()
         trajectory = np.asarray(records, dtype="<f8")
         trajectory_digest = "sha256:" + hashlib.sha256(trajectory.tobytes(order="C")).hexdigest()
         case_key = f"{case['case_id']}\0{case['seed']}".encode()
-        return {
+        report = {
             "schema_version": "microduck.evaluator-report/v1",
             "evaluator_id": self.config["evaluator_id"],
             "proof_class": "infrastructure_only",
@@ -350,3 +389,8 @@ class EvaluatorCore:
             },
             "evidence_boundary": "Synthetic zero-policy plumbing proof only; no walking/backflip success, held-out result, transfer, or physical authority.",
         }
+        return report, rows, frames
+
+    def run_synthetic_smoke(self) -> dict[str, Any]:
+        report, _, _ = self.run_case(self.config["synthetic_smoke"])
+        return report

@@ -21,6 +21,9 @@ onnxruntime>=1.19
 # référence pour vérifier le portage de l'actionneur.
 mujoco>=3.10
 
+# Écriture/validation des trajectoires de l'évaluateur indépendant.
+pyarrow>=21,<22
+
 # NON listé volontairement : `bam` (github.com/Rhoban/bam) n'est pas un paquet
 # pip mais un dépôt à cloner. Il ne sert qu'à la comparaison de référence des
 # formules d'actionneur ; sans lui les tests concernés se déclarent sautés :

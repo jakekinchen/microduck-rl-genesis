@@ -1,0 +1,37 @@
+{
+  "schema_version": "microduck.evaluator-suite/v1",
+  "suite_id": "microduck.walking-visible-development.v1",
+  "visibility": "public-development",
+  "held_out": false,
+  "task_id": "microduck.walking.v1",
+  "proof_class": "infrastructure_only",
+  "candidate_policy_allowed": false,
+  "cases": [
+    {
+      "case_id": "development.home-stand.v1",
+      "seed": 74001,
+      "physics_steps": 80,
+      "root_xyz_m": [0.0, 0.0, 0.125],
+      "root_quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "twist_command": [0.0, 0.0, 0.0],
+      "head_command": [0.0, 0.0, 0.0, 0.0],
+      "body_command": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "case_id": "development.command-sequence.v1",
+      "seed": 74002,
+      "physics_steps": 80,
+      "root_xyz_m": [0.0, 0.0, 0.125],
+      "root_quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "head_command": [0.0, 0.0, 0.0, 0.0],
+      "body_command": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      "twist_schedule": [
+        {"control_step": 0, "value": [0.0, 0.0, 0.0]},
+        {"control_step": 5, "value": [0.2, 0.0, 0.0]},
+        {"control_step": 10, "value": [-0.2, 0.0, 0.0]},
+        {"control_step": 15, "value": [0.0, 0.0, 0.0]}
+      ]
+    }
+  ],
+  "evidence_boundary": "Visible synthetic-policy development cases only; not held-out acceptance and not task success."
+}
