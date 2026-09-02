@@ -82,7 +82,7 @@ physical authority is claimed.
 
 - [x] Create a CPU-only evaluator using official MuJoCo, BAM's C controller, ONNX Runtime CPU, 5 ms physics, decimation 4, and no action filter.
 - [x] Import the observation builder and model lock by pinned authority; do not reuse a training backend's self-reported metrics.
-- [ ] Implement deterministic standing, command-grid, start/stop/reversal, perturbation, friction, joint-margin, NaN, deadline, and termination cases.
+- [x] Implement deterministic standing, command-grid, start/stop/reversal, perturbation, friction, joint-margin, NaN, deadline, and termination cases.
 - [x] Emit `evaluation.json`, `trajectory.parquet`, `rollout.mp4`, `environment-lock.json`, and `attestation.json` bound to the exact policy digest.
 - [ ] Split visible development cases from held-out acceptance seeds/cases.
 - [ ] Prove deterministic reports with the official walking ONNX before evaluating Genesis policies.
@@ -121,6 +121,10 @@ fetch and detach at the exact locked commit rather than the moved
 `mjlab_frictionloss` branch. A local-git regression proves later branch movement
 cannot repin the checkout; existing BAM fixtures and evaluator evidence were
 not regenerated.
+
+Deterministic case matrix accepted on 2026-09-02: ten visible zero-policy cases
+cover all nine required infrastructure families with byte-identical repeated
+reports. This is not held-out or task-success evidence.
 
 ### M3 — Freeze task-specific success gates (P0)
 

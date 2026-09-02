@@ -15,11 +15,11 @@ M2 - Build the independent C MuJoCo evaluator
 
 ## Current Slice
 
-`docs/briefs/015-m2-deterministic-case-matrix.md`
+`docs/briefs/016-m2-heldout-preregistration.md`
 
 ## Current Status
 
-`ACTIVE` - complete the deterministic evaluator case matrix.
+`ACTIVE` - freeze a contamination-resistant development/held-out partition.
 `official_policy_authority_missing` blocks only the official-policy
 repeatability sub-gate.
 
