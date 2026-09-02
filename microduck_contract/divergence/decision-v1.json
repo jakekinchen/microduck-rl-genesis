@@ -1,0 +1,497 @@
+{
+  "$schema": "decision-v1.schema.json",
+  "decision": {
+    "chosen_path": "versioned_local_divergence",
+    "publication_performed": false,
+    "reason": "Active authority permits local commits but forbids push or public submission.",
+    "status": "recorded_local_not_submitted",
+    "supersession_rule": "A later version must bind new task digests and explicitly dispose every added, removed, or changed non-exact field.",
+    "upstream_submission_performed": false
+  },
+  "decision_id": "microduck.genesis-official-mjlab.local-divergence.v1",
+  "entries": [
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "evaluator_normalization_required",
+      "decision_rationale": "The independent evaluator fixes this input or guard explicitly so the acceptance result does not depend on either training backend.",
+      "field": "action.input_guard",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "Genesis clips policy input to +/-100; official config has no clip",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "action.residual_authority",
+      "source_classification": "equivalent",
+      "source_disposition": "same assist-scaled residual authority with 0.05 minimum",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "assistance.decay",
+      "source_classification": "equivalent",
+      "source_disposition": "same 256-episode, 0.60 success threshold, 0.05 decrement",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "assistance.virtual_spotter",
+      "source_classification": "equivalent",
+      "source_disposition": "same timed upward force and backward-pitch torque on eligible starts",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "collision.full_body",
+      "source_classification": "equivalent",
+      "source_disposition": "both use the all-collisions robot; contact realization differs",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "evaluator_normalization_required",
+      "decision_rationale": "The independent evaluator fixes this input or guard explicitly so the acceptance result does not depend on either training backend.",
+      "field": "commands.twist",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "official samples small near-zero twist; Genesis fixes twist to exact zero",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "execution.random_stream",
+      "source_classification": "backend-specific-unavailable",
+      "source_disposition": "framework RNG algorithms and draw ordering are not shared",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "training_only_non_equivalence",
+      "decision_rationale": "The difference is accepted for this local training lane and explicitly blocks a training-trajectory-equivalence claim.",
+      "field": "execution.step_lifecycle",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "manager and hand-written reset/event/reward ordering are not trajectory-identical",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "flight.rotation",
+      "source_classification": "equivalent",
+      "source_disposition": "backward pitch accumulates only during collision-free airborne flight under flatness gate",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "flight.takeoff",
+      "source_classification": "equivalent",
+      "source_disposition": "support precedes collision-free takeoff above 0.135 m",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "landing.first_recontact",
+      "source_classification": "equivalent",
+      "source_disposition": "first robot-ground recontact ends the flight; feet support gates landing",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "observation.actor_noise_delay",
+      "source_classification": "equivalent",
+      "source_disposition": "same ranges and lag schedules; backend RNG streams differ",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "training_only_non_equivalence",
+      "decision_rationale": "The difference is accepted for this local training lane and explicitly blocks a training-trajectory-equivalence claim.",
+      "field": "observation.critic",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "official backflip critic is 74D; Genesis is actor 61D plus privileged 29D",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "physics.contact_solver",
+      "source_classification": "backend-specific-unavailable",
+      "source_disposition": "solver and collision trajectories cannot be made byte-identical",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "reset.midflight_ballistics",
+      "source_classification": "equivalent",
+      "source_disposition": "same angle, height, rate, landing-height, and margin declarations",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "reset.noise_and_pose",
+      "source_classification": "equivalent",
+      "source_disposition": "same HOME anchors, crouch/tuck overrides, and declared perturbation ranges",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "reset.reverse_curriculum",
+      "source_classification": "equivalent",
+      "source_disposition": "same standing/crouch/midflight/recovery populations and stages",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "sensing.contact",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "official named geom sensors versus Genesis ground-link contact classification",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "success.stable_hold",
+      "source_classification": "equivalent",
+      "source_disposition": "full revolution, upright height, low angular speed, foot support for 0.5 seconds",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "termination.timeout_bounds_nan",
+      "source_classification": "equivalent",
+      "source_disposition": "same 4-second, terrain-bound, and finite-state intent",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "training.curricula",
+      "source_classification": "equivalent",
+      "source_disposition": "spawn, preload, body-contact, action-rate, arrival, torque-rate, and landing schedules preserved",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "deferred_implementation_reconciliation",
+      "decision_rationale": "The mismatch is retained and versioned for later implementation work; it blocks training-trajectory equivalence now.",
+      "field": "training.mass_inertia_randomization",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "official pseudo-inertia scales trunk mass and inertia; Genesis changes trunk mass only",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "training.randomization",
+      "source_classification": "equivalent",
+      "source_disposition": "declared ranges otherwise preserved; backend RNG streams differ",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "training.reward_lifecycle",
+      "source_classification": "equivalent",
+      "source_disposition": "common backflip terms and active weights agree; manager lifecycle differs",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "deferred_implementation_reconciliation",
+      "decision_rationale": "The mismatch is retained and versioned for later implementation work; it blocks training-trajectory equivalence now.",
+      "field": "training.reward_terms",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "local port omits inherited official zero-weight terms and self-collision -0.1",
+      "task_id": "microduck.backflip.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "evaluator_normalization_required",
+      "decision_rationale": "The independent evaluator fixes this input or guard explicitly so the acceptance result does not depend on either training backend.",
+      "field": "action.input_guard",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "Genesis clips policy input to +/-100; official config has no clip",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "commands.population_buckets",
+      "source_classification": "equivalent",
+      "source_disposition": "same standing/forward/turn fractions; draw order is backend-specific",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "execution.random_stream",
+      "source_classification": "backend-specific-unavailable",
+      "source_disposition": "framework RNG algorithms and draw ordering differ",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "training_only_non_equivalence",
+      "decision_rationale": "The difference is accepted for this local training lane and explicitly blocks a training-trajectory-equivalence claim.",
+      "field": "execution.step_lifecycle",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "manager and hand-written event/reward/reset ordering are not claimed identical",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "observation.actor_delay",
+      "source_classification": "equivalent",
+      "source_disposition": "same lag ranges/update periods; RNG streams differ",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "training_only_non_equivalence",
+      "decision_rationale": "The difference is accepted for this local training lane and explicitly blocks a training-trajectory-equivalence claim.",
+      "field": "observation.critic",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "official critic is 76D; Genesis critic is policy 61D plus privileged 29D",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "observation.encoder_bias",
+      "source_classification": "equivalent",
+      "source_disposition": "actor-only startup bias in the same range",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "observation.imu_misalignment",
+      "source_classification": "equivalent",
+      "source_disposition": "actor-only random-axis rotation up to 6 degrees",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "physics.contact_solver",
+      "source_classification": "backend-specific-unavailable",
+      "source_disposition": "solver and collision realizations cannot be made byte-identical",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "training_only_non_equivalence",
+      "decision_rationale": "The difference is accepted for this local training lane and explicitly blocks a training-trajectory-equivalence claim.",
+      "field": "reset.base_and_joints",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "same x/y/z and HOME/zero-velocity joint reset; official yaw is +/-3.14 while Genesis uses +/-pi",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "reset.internal_history",
+      "source_classification": "equivalent",
+      "source_disposition": "both clear action, actuator-delay, and relevant observation histories",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "sensing.contact",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "mjlab geom sensors versus Genesis link-net-force thresholding",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "sensing.foot_height",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "mjlab two-ray ring versus Genesis bilinear height at the foot site",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "termination.fall_timeout_nan",
+      "source_classification": "equivalent",
+      "source_disposition": "same 70-degree/20-second intent with backend-native NaN detection",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "independent_c_mujoco_evaluator",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "independent_evaluator_boundary",
+      "decision_rationale": "The independent C MuJoCo evaluator owns the acceptance realization; neither training backend may self-attest this field.",
+      "field": "termination.rough_bounds",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "backend-native terrain-bound calculations are not trajectory-identical",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "deferred_implementation_reconciliation",
+      "decision_rationale": "The mismatch is retained and versioned for later implementation work; it blocks training-trajectory equivalence now.",
+      "field": "terrain.rough_realization",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "official effective registered terrain is 5x5 with curriculum disabled after a shared play-config mutation; Genesis is a 10x10 curriculum heightfield",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "training.curricula",
+      "source_classification": "equivalent",
+      "source_disposition": "same declared global-step stages; manager lifecycle differs",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "training.domain_randomization",
+      "source_classification": "equivalent",
+      "source_disposition": "same declared ranges except the separately classified mass-inertia operation; backend RNG streams are not shared",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": true,
+      "decision": "deferred_implementation_reconciliation",
+      "decision_rationale": "The mismatch is retained and versioned for later implementation work; it blocks training-trajectory equivalence now.",
+      "field": "training.mass_inertia_randomization",
+      "source_classification": "versioned-divergence",
+      "source_disposition": "official pseudo-inertia scales trunk mass and inertia together; Genesis currently applies only a trunk mass shift",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "acceptance_owner": "frozen_task_contract",
+      "blocks_training_trajectory_equivalence": false,
+      "decision": "accepted_backend_equivalence",
+      "decision_rationale": "Declarations agree semantically, but backend RNG, sensor, or manager realization prevents a byte-identical trajectory claim.",
+      "field": "training.reward_terms",
+      "source_classification": "equivalent",
+      "source_disposition": "same names and weights; sensor realization differences remain below",
+      "task_id": "microduck.walking.v1"
+    }
+  ],
+  "evidence_boundary": "This local decision records compatibility scope and unresolved differences. It is not an upstream submission, evaluator result, policy-success result, transfer result, or physical authority.",
+  "schema_version": "microduck.divergence-decision/v1",
+  "summary": {
+    "by_decision": {
+      "accepted_backend_equivalence": 25,
+      "deferred_implementation_reconciliation": 4,
+      "evaluator_normalization_required": 3,
+      "independent_evaluator_boundary": 8,
+      "training_only_non_equivalence": 5
+    },
+    "exact_deployed_interface_preserved": true,
+    "held_out_evaluation_performed": false,
+    "non_exact_entry_count": 45,
+    "physical_authority": false,
+    "task_success_evaluated": false,
+    "training_trajectory_equivalence": false
+  },
+  "task_bindings": [
+    {
+      "official_commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+      "path": "microduck_contract/tasks/walking-v1.json",
+      "semantic_inventory_count": 28,
+      "sha256": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71",
+      "task_id": "microduck.walking.v1"
+    },
+    {
+      "official_commit": "8bde27eb141c8f14db05fc4370e536521203a98d",
+      "path": "microduck_contract/tasks/backflip-v1.json",
+      "semantic_inventory_count": 32,
+      "sha256": "sha256:c265d7c5828f7a2fe597530f01b120d17e5a75bf618348604db050eb8164fc8d",
+      "task_id": "microduck.backflip.v1"
+    }
+  ]
+}

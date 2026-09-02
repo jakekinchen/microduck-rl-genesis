@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://microduck.local/schemas/decision-v1.schema.json",
+  "title": "Microduck local semantic divergence decision v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "decision_id",
+    "decision",
+    "task_bindings",
+    "entries",
+    "summary",
+    "evidence_boundary"
+  ],
+  "properties": {
+    "$schema": {"const": "decision-v1.schema.json"},
+    "schema_version": {"const": "microduck.divergence-decision/v1"},
+    "decision_id": {"const": "microduck.genesis-official-mjlab.local-divergence.v1"},
+    "decision": {
+      "type": "object",
+      "required": ["chosen_path", "status", "upstream_submission_performed", "publication_performed"],
+      "properties": {
+        "chosen_path": {"const": "versioned_local_divergence"},
+        "status": {"const": "recorded_local_not_submitted"},
+        "upstream_submission_performed": {"const": false},
+        "publication_performed": {"const": false}
+      }
+    },
+    "task_bindings": {"type": "array", "minItems": 2, "maxItems": 2},
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["task_id", "field", "source_classification", "source_disposition", "decision", "decision_rationale", "blocks_training_trajectory_equivalence", "acceptance_owner"],
+        "properties": {
+          "task_id": {"enum": ["microduck.walking.v1", "microduck.backflip.v1"]},
+          "field": {"type": "string", "minLength": 1},
+          "source_classification": {"enum": ["equivalent", "versioned-divergence", "backend-specific-unavailable"]},
+          "source_disposition": {"type": "string", "minLength": 1},
+          "decision": {"enum": ["accepted_backend_equivalence", "evaluator_normalization_required", "independent_evaluator_boundary", "deferred_implementation_reconciliation", "training_only_non_equivalence"]},
+          "decision_rationale": {"type": "string", "minLength": 1},
+          "blocks_training_trajectory_equivalence": {"type": "boolean"},
+          "acceptance_owner": {"enum": ["independent_c_mujoco_evaluator", "frozen_task_contract"]}
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["non_exact_entry_count", "by_decision", "exact_deployed_interface_preserved", "training_trajectory_equivalence", "task_success_evaluated", "held_out_evaluation_performed", "physical_authority"],
+      "properties": {
+        "non_exact_entry_count": {"type": "integer", "minimum": 1},
+        "exact_deployed_interface_preserved": {"const": true},
+        "training_trajectory_equivalence": {"const": false},
+        "task_success_evaluated": {"const": false},
+        "held_out_evaluation_performed": {"const": false},
+        "physical_authority": {"const": false}
+      }
+    },
+    "evidence_boundary": {"type": "string", "minLength": 1}
+  }
+}

@@ -41,6 +41,7 @@ BAM_CLOSED_LOOP_PATH = (
 MODEL_RECONCILIATION_PATH = CONTRACT_ROOT / "model" / "reconciliation-v1.json"
 WALKING_TASK_PATH = CONTRACT_ROOT / "tasks" / "walking-v1.json"
 BACKFLIP_TASK_PATH = CONTRACT_ROOT / "tasks" / "backflip-v1.json"
+DIVERGENCE_DECISION_PATH = CONTRACT_ROOT / "divergence" / "decision-v1.json"
 
 
 def sha256(path: Path) -> str:
@@ -213,6 +214,18 @@ def snapshots() -> dict[Path, bytes]:
         "acceptance_suite_id": "microduck.backflip-acceptance.v1",
     }
     output[CONTRACT_ROOT / "tasks" / "backflip-v1.lock.json"] = json_bytes(backflip)
+    divergence = {
+        "schema_version": "microduck.divergence-lock/v1",
+        "decision_id": "microduck.genesis-official-mjlab.local-divergence.v1",
+        "decision_path": DIVERGENCE_DECISION_PATH.relative_to(ROOT).as_posix(),
+        "decision_sha256": sha256(DIVERGENCE_DECISION_PATH),
+        "task_locks": {
+            "microduck.walking.v1": sha256(CONTRACT_ROOT / "tasks" / "walking-v1.lock.json"),
+            "microduck.backflip.v1": sha256(CONTRACT_ROOT / "tasks" / "backflip-v1.lock.json"),
+        },
+        "upstream_submission_performed": False,
+    }
+    output[CONTRACT_ROOT / "divergence" / "decision-v1.lock.json"] = json_bytes(divergence)
     return output
 
 

@@ -17,6 +17,7 @@ TESTS = [
     ("réconciliation des modèles épinglée", "test_model_reconciliation.py"),
     ("sémantique de marche épinglée", "test_walking_semantics.py"),
     ("sémantique de backflip épinglée", "test_backflip_semantics.py"),
+    ("décision de divergence versionnée", "test_divergence_decision.py"),
     ("formules BAM vs référence Rhoban", "test_bam_formulas.py"),
     ("couple externe vs MuJoCo", "test_external_torque.py"),
     ("boucle actionneur vs MuJoCo+BAM", "test_bam_vs_mujoco.py"),
