@@ -15,8 +15,8 @@ python scripts/freeze_contract.py
 python scripts/freeze_contract.py --check
 ```
 
-Do not hand-edit generated lock files. The pending full cross-backend BAM
-status and closed-loop trajectory fixtures are tracked in
+Do not hand-edit generated lock files. The partial cross-backend BAM/model
+evidence and remaining task/evaluator gates are tracked in
 [`../TRAINING_ACTUALIZATION.md`](../TRAINING_ACTUALIZATION.md).
 
 The BAM lock now binds
@@ -29,4 +29,19 @@ not complete backend or task conformance.
 The same lock binds the every-step official-MuJoCo/BAM-core trajectory in
 [`actuator/fixtures/bam-m6-xl330-v1-closed-loop.json`](actuator/fixtures/bam-m6-xl330-v1-closed-loop.json).
 Genesis consumes it under declared trajectory tolerances; official mjlab
-consumption remains pending.
+consumption is exercised by the optional locked mjlab lane.
+
+The walking declaration in [`tasks/walking-v1.json`](tasks/walking-v1.json) is
+generated from the exact official task commit and the repo-local Genesis
+sources. It keeps training-only reward/curriculum state separate from the
+zero-assistance `microduck.walking-acceptance.v1` battery and records known
+backend divergences instead of claiming identical training trajectories.
+Regenerate the declaration only from clean pinned authorities:
+
+```bash
+scripts/setup_official_mjlab.sh
+validation/official-mjlab/.venv/bin/python scripts/generate_walking_semantics.py \
+  --official-repo <checkout-containing-109e06d4> \
+  --bam-repo <clean-checkout-at-62bd8ce1>
+python scripts/freeze_contract.py
+```

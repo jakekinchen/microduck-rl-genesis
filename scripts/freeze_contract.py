@@ -39,6 +39,7 @@ BAM_CLOSED_LOOP_PATH = (
     CONTRACT_ROOT / "actuator" / "fixtures" / "bam-m6-xl330-v1-closed-loop.json"
 )
 MODEL_RECONCILIATION_PATH = CONTRACT_ROOT / "model" / "reconciliation-v1.json"
+WALKING_TASK_PATH = CONTRACT_ROOT / "tasks" / "walking-v1.json"
 
 
 def sha256(path: Path) -> str:
@@ -183,6 +184,20 @@ def snapshots() -> dict[Path, bytes]:
     output[
         CONTRACT_ROOT / "model" / "reconciliation-v1.lock.json"
     ] = json_bytes(reconciliation)
+    walking = {
+        "schema_version": "microduck.task-lock/v1",
+        "task_id": "microduck.walking.v1",
+        "task_path": WALKING_TASK_PATH.relative_to(ROOT).as_posix(),
+        "task_sha256": sha256(WALKING_TASK_PATH),
+        "official_commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+        "interface_ids": [
+            "microduck.obs.v1",
+            "microduck.action.v1",
+            "microduck.control.50hz.v1",
+        ],
+        "acceptance_suite_id": "microduck.walking-acceptance.v1",
+    }
+    output[CONTRACT_ROOT / "tasks" / "walking-v1.lock.json"] = json_bytes(walking)
     return output
 
 

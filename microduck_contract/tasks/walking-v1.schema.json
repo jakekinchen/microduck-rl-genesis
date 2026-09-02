@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://microduck.local/schemas/walking-v1.schema.json",
+  "title": "Microduck walking task contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "task_id",
+    "authority",
+    "claim",
+    "shared_deployed_contract",
+    "training_only",
+    "semantic_inventory",
+    "acceptance",
+    "evidence_boundary"
+  ],
+  "properties": {
+    "$schema": {"const": "walking-v1.schema.json"},
+    "schema_version": {"const": "microduck.walking-task/v1"},
+    "task_id": {"const": "microduck.walking.v1"},
+    "authority": {"type": "object"},
+    "claim": {
+      "type": "object",
+      "required": [
+        "state",
+        "actor_interface",
+        "training_trajectory_equivalence",
+        "policy_success",
+        "physical_authority"
+      ],
+      "properties": {
+        "state": {"const": "declared_semantics_with_versioned_divergences"},
+        "actor_interface": {"const": "exact"},
+        "training_trajectory_equivalence": {"const": false},
+        "policy_success": {"const": "not_evaluated"},
+        "physical_authority": {"const": false}
+      }
+    },
+    "shared_deployed_contract": {"type": "object"},
+    "training_only": {"type": "object"},
+    "semantic_inventory": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "classification", "disposition"],
+        "properties": {
+          "field": {"type": "string", "minLength": 1},
+          "classification": {
+            "enum": [
+              "exact",
+              "equivalent",
+              "versioned-divergence",
+              "backend-specific-unavailable"
+            ]
+          },
+          "disposition": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "required": [
+        "suite_id",
+        "status",
+        "candidate_outcomes_inspected",
+        "seeds",
+        "seed_handling",
+        "commands",
+        "start_populations",
+        "assistance",
+        "metrics",
+        "aggregation"
+      ],
+      "properties": {
+        "suite_id": {"const": "microduck.walking-acceptance.v1"},
+        "status": {"const": "preregistered_not_executed"},
+        "candidate_outcomes_inspected": {"const": false},
+        "seeds": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {"type": "integer"}
+        },
+        "seed_handling": {"type": "object"},
+        "commands": {"type": "array", "minItems": 1},
+        "start_populations": {"type": "array", "minItems": 2},
+        "assistance": {
+          "type": "object",
+          "additionalProperties": {"const": false}
+        },
+        "metrics": {"type": "object"},
+        "aggregation": {"type": "object"}
+      }
+    },
+    "evidence_boundary": {"type": "string", "minLength": 1}
+  }
+}
