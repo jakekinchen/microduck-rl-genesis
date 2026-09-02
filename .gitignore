@@ -11,6 +11,7 @@ videos/
 # Exception : les politiques exportées et prêtes à déployer sont petites (~1 Mo)
 # et c'est ce qui permet à quelqu'un d'essayer sans réentraîner.
 !policies/*.onnx
+!tests/fixtures/evaluator/zero-policy.onnx
 !policies/README.md
 
 # Exception : le dossier `demo/` est la vitrine du dépôt. Il contient un extrait
