@@ -1,6 +1,6 @@
-# Slice Brief 007 - M1 walking task semantics
+# Slice Brief 008 - M1 walking task semantics
 
-**Date:** 2026-09-01
+**Date:** 2026-09-02
 
 ## Objective
 
