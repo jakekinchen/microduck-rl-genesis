@@ -12,7 +12,7 @@ plausible rollout.
 | Public Apple code | Present | Metal physics and MPS learner selection are committed on `main`. |
 | Apple model preflight | Observed | Genesis 1.3.3 loaded a real Microduck MJCF and completed one finite Metal step. |
 | Walking/backflip pipeline | Clean-clone reproduced | Receipt `20260901T215219Z-2ce72a94` passed both 64x5 smokes, two normalized ONNX exports, two randomized parity checks, and two real-observation parity checks from committed state. |
-| Canonical contract | Partial cross-backend evidence | Interface/model/BAM locks, pinned BAM fixtures, official mjlab consumption, and six model variants are reconciled; walking/backflip semantics remain open. |
+| Canonical contract | Partial cross-backend evidence | Interface/model/BAM locks, pinned BAM fixtures, official mjlab consumption, six model variants, and walking semantics are frozen. Walking records 28 classified fields and does not claim identical training trajectories; backflip semantics remain open. |
 | Task success | Open | No frozen success battery has accepted an Apple-trained walking or backflip policy. |
 | Held-out C MuJoCo | Open | No independent frozen-ONNX acceptance suite exists yet. |
 | Physical validation | Open | No policy from this repository has physical authority. |
@@ -65,7 +65,8 @@ reproducible `artifact_validated` pipeline evidence.
 - [x] Add short 14-servo closed-loop trajectory fixtures.
 - [x] Make the official mjlab/MuJoCo Warp adapter consume and pass the same fixtures.
 - [x] Reconcile Genesis/MuJoCo model counts, collision variants, masses, inertias, keyframes, joint limits, and actuator ordering.
-- [ ] Define walking and backflip semantic files, including assistance/curriculum state and success definitions.
+- [x] Define the walking semantic file, including training-only curriculum state, 28 classified backend fields, and a preregistered zero-assistance success battery.
+- [ ] Define the backflip semantic file, including assistance/reverse-curriculum state and ordinary-start zero-assistance success definitions.
 - [ ] Submit the backend-independent contract upstream or record an explicit versioned divergence decision.
 
 Exit gate: Genesis and official mjlab pass byte-identical interface fixtures and
@@ -153,7 +154,7 @@ simulation or reference result grants physical authority.
 
 ## Immediate next three runs
 
-1. Freeze walking and backflip semantic files, success definitions, and
+1. Freeze backflip semantics, success definitions, and
    training-versus-acceptance assistance boundaries.
 2. Record the M1 upstream-submission or explicit versioned-divergence decision.
 3. Implement the deterministic CPU-only C MuJoCo evaluator MVP before any
