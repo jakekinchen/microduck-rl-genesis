@@ -15,7 +15,7 @@ M2 - Build the independent C MuJoCo evaluator
 
 ## Current Slice
 
-`docs/briefs/011-m2-c-mujoco-evaluator-core.md`
+`docs/briefs/012-m2-development-suite-and-report-bundle.md`
 
 ## Stop Conditions
 

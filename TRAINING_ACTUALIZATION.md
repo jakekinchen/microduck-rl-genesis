@@ -90,6 +90,13 @@ physical authority is claimed.
 Exit gate: repeated evaluation of the same ONNX and suite ID yields identical
 classification and stable numerical metrics within declared tolerances.
 
+Core accepted on 2026-09-02: official MuJoCo C through Python bindings,
+single-thread ONNX Runtime CPU, and pinned BAM `MujocoController` produced two
+byte-identical 40-step infrastructure reports from the retained zero-policy
+fixture. Both walking and backflip model lanes validate. This does not close M2
+or evaluate task success; the full artifact bundle and designated official
+walking ONNX repeatability proof remain open.
+
 ### M3 — Freeze task-specific success gates (P0)
 
 - [ ] Walking: predeclare command ranges, survival duration, tracking error, fall rate, stop drift, foot slip, orientation, and joint/torque margins.
@@ -160,10 +167,10 @@ simulation or reference result grants physical authority.
 
 ## Immediate next three runs
 
-1. Implement the deterministic CPU-only C MuJoCo evaluator MVP before any
-   multi-seed or paid-compute training.
-2. Add deterministic development fixtures before accepting any candidate
-   policy outcome.
+1. Add the visible deterministic development suite and complete evaluator
+   artifact bundle.
+2. Prove report repeatability with the designated official walking ONNX without
+   inspecting a final Genesis candidate.
 3. Split visible development cases from held-out acceptance seeds and cases.
 
 The BAM fixture, official-adapter consumption, and model-reconciliation runs
