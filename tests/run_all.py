@@ -21,6 +21,7 @@ TESTS = [
     ("décision de divergence versionnée", "test_divergence_decision.py"),
     ("coeur évaluateur C MuJoCo", "test_evaluator_core.py"),
     ("matrice de cas évaluateur", "test_evaluator_case_matrix.py"),
+    ("protocole held-out aveugle", "test_heldout_protocol.py"),
     ("bundle évaluateur de développement", "test_evaluator_bundle.py"),
     ("autorité ONNX marche officielle", "test_official_walking_policy_authority.py"),
     ("formules BAM vs référence Rhoban", "test_bam_formulas.py"),

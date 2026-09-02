@@ -1,0 +1,45 @@
+{
+  "schema_version": "microduck.heldout-protocol/v1",
+  "protocol_id": "microduck.walking-heldout-realization.v1",
+  "state": "preregistered_unrealized",
+  "public_acceptance_seeds_are_held_out": false,
+  "candidate_policy_allowed_before_realization": false,
+  "bindings": {
+    "microduck_contract/tasks/walking-v1.json": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71",
+    "microduck_contract/tasks/walking-v1.lock.json": "sha256:9a99a5b727a2702abe86ef145e5b98116f1188f4b178b26dd1e6beb95d6ed5f2",
+    "microduck_contract/model/microduck-walk-v1.lock.json": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae",
+    "microduck_contract/actuator/bam-m6-xl330-v1.lock.json": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+    "evaluator/config-v1.json": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
+    "evaluator/core.py": "sha256:a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+    "evaluator/development-suite-v1.json": "sha256:6f32fbed6aad35997de5d219dfa38e352d42197721b60c219eec3eb3b691c77f",
+    "evaluator/case-matrix-v1.json": "sha256:b9ba72a89fdeabd96ffa75205be21a91d0ea0f892ffd7f1d72f5325109f3e62a"
+  },
+  "partition": {
+    "visible_development": ["microduck.walking-visible-development.v1", "microduck.walking-visible-case-matrix.v1"],
+    "public_acceptance_definition": "microduck.walking-acceptance.v1",
+    "blinded_acceptance_realization": "microduck.walking-heldout-realization.v1",
+    "heldout_seed_count": 5,
+    "case_order": "walking-v1 acceptance commands in committed order, then start populations in committed order, then derived seeds in index order"
+  },
+  "beacon": {
+    "source": "NIST Randomness Beacon 2.0",
+    "field": "outputValue",
+    "value_encoding": "exactly 128 lowercase hexadecimal characters",
+    "timing_rule": "pulse timestamp must be strictly later than immutable candidate freeze timestamp",
+    "live_value_committed": false
+  },
+  "derivation": {
+    "algorithm": "sha256-counter-v1",
+    "input": "protocol_id NUL candidate_sha256 NUL beacon_output NUL uint64_be(counter)",
+    "seed_mapping": "first 8 digest bytes big-endian modulo 2147483646 plus 1; skip duplicates and any public development or public acceptance seed",
+    "realized_initial_state": "use walking-v1 seed_handling sha256-counter-v1 after held-out seed derivation"
+  },
+  "case_families": ["nominal", "upright_perturbed"],
+  "realization_preconditions": [
+    "candidate artifact and source manifest are immutable and digest-bound",
+    "candidate freeze attestation timestamp precedes beacon pulse timestamp",
+    "all protocol bindings still match",
+    "no candidate execution or tuning occurs between freeze and realization"
+  ],
+  "evidence_boundary": "This preregisters a blinded held-out realization protocol only. No beacon, held-out seed, case, policy result, or task success has been realized."
+}
