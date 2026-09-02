@@ -16,6 +16,7 @@ TESTS = [
     ("trajectoire BAM 14 servos épinglée", "test_bam_closed_loop_fixture.py"),
     ("réconciliation des modèles épinglée", "test_model_reconciliation.py"),
     ("sémantique de marche épinglée", "test_walking_semantics.py"),
+    ("sémantique de backflip épinglée", "test_backflip_semantics.py"),
     ("formules BAM vs référence Rhoban", "test_bam_formulas.py"),
     ("couple externe vs MuJoCo", "test_external_torque.py"),
     ("boucle actionneur vs MuJoCo+BAM", "test_bam_vs_mujoco.py"),

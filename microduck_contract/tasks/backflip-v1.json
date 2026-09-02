@@ -1,0 +1,1732 @@
+{
+  "$schema": "backflip-v1.schema.json",
+  "acceptance": {
+    "aggregation": {
+      "all_start_seed_cells_required": true,
+      "classification": "pass only when every episode satisfies every maneuver, margin, and integrity requirement",
+      "ppo_return_is_success_metric": false,
+      "required_episode_count": 20,
+      "required_success_count": 20
+    },
+    "assistance": {
+      "early_termination_suppression": false,
+      "midflight_initialization": false,
+      "pedestal_mat_cube_or_external_support": false,
+      "recovery_initialization": false,
+      "reference_or_teacher_state": false,
+      "residual_action_constraint": false,
+      "reverse_curriculum_start": false,
+      "state_or_action_correction": false,
+      "virtual_pitch_torque": false,
+      "virtual_upward_force": false
+    },
+    "candidate_outcomes_inspected": false,
+    "commands": [
+      {
+        "body_command": {
+          "assist_scale": 0.0,
+          "phase_slot": "deterministic bounded phase from episode time",
+          "remaining": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "head_command": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "id": "standing_backflip",
+        "twist": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "episode_duration_s": 4.0,
+    "metrics": {
+      "integrity": {
+        "deadline_measurement": "single-thread ONNX Runtime CPU after 10 untimed warmups; host profile locked separately",
+        "deadline_miss_count_max": 0,
+        "evaluator_error_count_max": 0,
+        "nan_or_inf_count_max": 0,
+        "policy_inference_deadline_ms": 20.0
+      },
+      "joint_and_torque_margin": {
+        "joint_limit_margin_rad_min": 0.02,
+        "torque_limit_exceedance_count_max": 0,
+        "torque_saturation_fraction_max": 0.02
+      },
+      "landing": {
+        "absolute_roll_pitch_deg_at_stability_max": 20.0,
+        "base_angular_speed_rad_s_at_stability_max": 2.0,
+        "continuous_feet_supported_hold_s_min": 0.5,
+        "first_recontact": "feet_only",
+        "intervening_nonfoot_ground_contact_count_max": 0,
+        "root_height_m_at_stability_min": 0.095
+      },
+      "rotation": {
+        "airborne_accumulated_angle_rad_min": 6.283185307179586,
+        "direction": "backward_pitch",
+        "rotation_credit_after_first_recontact": false,
+        "uninterrupted_airborne_revolution": true
+      },
+      "takeoff": {
+        "robot_ground_contact_during_flight": false,
+        "root_height_m_min": 0.135,
+        "support_observed_before_flight": true
+      }
+    },
+    "seed_handling": {
+      "cell_key": "suite_id + start_population_id + decimal_seed",
+      "realized_initial_state_must_be_recorded": true,
+      "state_sharing_between_cells": false,
+      "stream": "sha256-counter-v1"
+    },
+    "seeds": [
+      42001,
+      42002,
+      42003,
+      42004,
+      42005,
+      42006,
+      42007,
+      42008,
+      42009,
+      42010,
+      42011,
+      42012,
+      42013,
+      42014,
+      42015,
+      42016,
+      42017,
+      42018,
+      42019,
+      42020
+    ],
+    "start_populations": [
+      {
+        "id": "ordinary_standing_home",
+        "initial_flight_or_landing_latches": false,
+        "joint_position": "HOME",
+        "root_and_joint_velocity": "zero",
+        "root_rpy_deg": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "root_xyz_m": [
+          0.0,
+          0.0,
+          0.115
+        ]
+      }
+    ],
+    "status": "preregistered_not_executed",
+    "suite_id": "microduck.backflip-acceptance.v1"
+  },
+  "authority": {
+    "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+    "local_source_digests": {
+      "microduck/backflip_cfg.py": "sha256:b0ee0ca8300544d57984bff5272075be119950ed8b870ecedbfdc3cea9f1723f",
+      "microduck/backflip_env.py": "sha256:e38d82f1c7a6dbaf3d98ac2590e7cb09839fa216f7be8e785ab15843f151b4a6",
+      "microduck/constants.py": "sha256:913740a765989104f9c04bf60022199ac376014ba58a2eb2dd4067aabf628e1b",
+      "microduck/velocity_cfg.py": "sha256:1a7d58e527cbc4694493739a4efa49b7634906e01036adbc806190c84460c251",
+      "microduck/velocity_env.py": "sha256:e52eec8b2b5fa0df1335d13c14492766ab746a29cfb60795150af83c48f90623",
+      "scripts/generate_backflip_semantics.py": "sha256:458ea91644dc9e56253b01bfffe64c32596898a9a1b3bd275a4cbd75681b32f4"
+    },
+    "official_backflip": {
+      "commit": "8bde27eb141c8f14db05fc4370e536521203a98d",
+      "commit_date": "2026-08-30T00:36:48+05:30",
+      "entrypoint": "make_microduck_backflip_env_cfg(play=False)",
+      "source_digests": {
+        "src/mjlab_microduck/robot/microduck_constants.py": "sha256:b846c0e99ac340b0c6a0c35da686a7c5fd2fd84ef6cccaed15255fcbfd30682a",
+        "src/mjlab_microduck/tasks/backflip_actions.py": "sha256:20ad85d00759929db9efc9a52009f0836e58b13f0d23ad9184e2e2ea56f6af53",
+        "src/mjlab_microduck/tasks/mdp.py": "sha256:f784c3155d085a0bd38381e835fdebaa672f5e8d38b1829493f10ebdfb55764c",
+        "src/mjlab_microduck/tasks/microduck_backflip_env_cfg.py": "sha256:6e9d49c99ffd6d8e1b9a36cb052ee816008eea759a166dad61f227e640f20159"
+      },
+      "tree": "bfd9f2d3913da0ccf2156d4bff07c2aed407212d"
+    },
+    "referenced_contracts": {
+      "microduck_contract/actuator/bam-m6-xl330-v1.lock.json": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+      "microduck_contract/interface/action-v1.json": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896",
+      "microduck_contract/interface/control-v1.json": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
+      "microduck_contract/interface/observation-v1.json": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce",
+      "microduck_contract/model/microduck-allcollisions-v1.lock.json": "sha256:d89e51c55fb183cbb77233d27536a3a7a3e264dca204d0e02d5fdf8d0b3ec708",
+      "microduck_contract/model/reconciliation-v1.lock.json": "sha256:bf7e8093972c638d7154abaecc039587d6986223af9036ab6e7bcae30adf7f67",
+      "microduck_contract/tasks/backflip-v1.schema.json": "sha256:45e1fe8d7759a86089e0c964a16f5806bdebe2d893b6ea6a3aef02d17490220a"
+    }
+  },
+  "claim": {
+    "actor_interface": "exact",
+    "physical_authority": false,
+    "policy_success": "not_evaluated",
+    "state": "declared_semantics_with_versioned_divergences",
+    "training_trajectory_equivalence": false
+  },
+  "evidence_boundary": "This freezes declarations and a future ordinary-standing zero-assistance classifier battery. It does not report a trained policy, backflip success, held-out evaluation, transfer, or physical authority.",
+  "schema_version": "microduck.backflip-task/v1",
+  "semantic_inventory": [
+    {
+      "classification": "exact",
+      "disposition": "base flat factory only; specialist, pedestal, mat, and captured-state factories excluded",
+      "field": "source.variant"
+    },
+    {
+      "classification": "exact",
+      "disposition": "5 ms physics, decimation 4, 50 Hz control, 4-second episode",
+      "field": "control.physics_timing"
+    },
+    {
+      "classification": "exact",
+      "disposition": "14 joints bound by action-v1",
+      "field": "action.dimension_order"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same assist-scaled residual authority with 0.05 minimum",
+      "field": "action.residual_authority"
+    },
+    {
+      "classification": "versioned-divergence",
+      "disposition": "Genesis clips policy input to +/-100; official config has no clip",
+      "field": "action.input_guard"
+    },
+    {
+      "classification": "exact",
+      "disposition": "shared BAM lock and 3-6 physics-step deployed delay",
+      "field": "actuator.bam_delay"
+    },
+    {
+      "classification": "exact",
+      "disposition": "61D ordered actor interface",
+      "field": "observation.actor_layout"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same ranges and lag schedules; backend RNG streams differ",
+      "field": "observation.actor_noise_delay"
+    },
+    {
+      "classification": "exact",
+      "disposition": "zero head slot and [bounded phase, assist scale, 0, 0, 0, 0] body slot",
+      "field": "observation.task_slots"
+    },
+    {
+      "classification": "versioned-divergence",
+      "disposition": "official backflip critic is 74D; Genesis is actor 61D plus privileged 29D",
+      "field": "observation.critic"
+    },
+    {
+      "classification": "versioned-divergence",
+      "disposition": "official samples small near-zero twist; Genesis fixes twist to exact zero",
+      "field": "commands.twist"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "both use the all-collisions robot; contact realization differs",
+      "field": "collision.full_body"
+    },
+    {
+      "classification": "versioned-divergence",
+      "disposition": "official named geom sensors versus Genesis ground-link contact classification",
+      "field": "sensing.contact"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same standing/crouch/midflight/recovery populations and stages",
+      "field": "reset.reverse_curriculum"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same angle, height, rate, landing-height, and margin declarations",
+      "field": "reset.midflight_ballistics"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same HOME anchors, crouch/tuck overrides, and declared perturbation ranges",
+      "field": "reset.noise_and_pose"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same timed upward force and backward-pitch torque on eligible starts",
+      "field": "assistance.virtual_spotter"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same 256-episode, 0.60 success threshold, 0.05 decrement",
+      "field": "assistance.decay"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "support precedes collision-free takeoff above 0.135 m",
+      "field": "flight.takeoff"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "backward pitch accumulates only during collision-free airborne flight under flatness gate",
+      "field": "flight.rotation"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "first robot-ground recontact ends the flight; feet support gates landing",
+      "field": "landing.first_recontact"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "full revolution, upright height, low angular speed, foot support for 0.5 seconds",
+      "field": "success.stable_hold"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "same 4-second, terrain-bound, and finite-state intent",
+      "field": "termination.timeout_bounds_nan"
+    },
+    {
+      "classification": "versioned-divergence",
+      "disposition": "local port omits inherited official zero-weight terms and self-collision -0.1",
+      "field": "training.reward_terms"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "common backflip terms and active weights agree; manager lifecycle differs",
+      "field": "training.reward_lifecycle"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "spawn, preload, body-contact, action-rate, arrival, torque-rate, and landing schedules preserved",
+      "field": "training.curricula"
+    },
+    {
+      "classification": "versioned-divergence",
+      "disposition": "official pseudo-inertia scales trunk mass and inertia; Genesis changes trunk mass only",
+      "field": "training.mass_inertia_randomization"
+    },
+    {
+      "classification": "equivalent",
+      "disposition": "declared ranges otherwise preserved; backend RNG streams differ",
+      "field": "training.randomization"
+    },
+    {
+      "classification": "backend-specific-unavailable",
+      "disposition": "framework RNG algorithms and draw ordering are not shared",
+      "field": "execution.random_stream"
+    },
+    {
+      "classification": "versioned-divergence",
+      "disposition": "manager and hand-written reset/event/reward ordering are not trajectory-identical",
+      "field": "execution.step_lifecycle"
+    },
+    {
+      "classification": "backend-specific-unavailable",
+      "disposition": "solver and collision trajectories cannot be made byte-identical",
+      "field": "physics.contact_solver"
+    },
+    {
+      "classification": "exact",
+      "disposition": "frozen evaluator starts only from ordinary standing HOME with all assistance disabled",
+      "field": "acceptance.ordinary_standing"
+    }
+  ],
+  "shared_deployed_contract": {
+    "action": {
+      "dimension": 14,
+      "filter": "none",
+      "joint_order": [
+        "left_hip_yaw",
+        "left_hip_roll",
+        "left_hip_pitch",
+        "left_knee",
+        "left_ankle",
+        "neck_pitch",
+        "head_pitch",
+        "head_yaw",
+        "head_roll",
+        "right_hip_yaw",
+        "right_hip_roll",
+        "right_hip_pitch",
+        "right_knee",
+        "right_ankle"
+      ],
+      "offset": "default_joint_position",
+      "scale": 1.0
+    },
+    "actor_observation": {
+      "delay_control_steps": {
+        "base_ang_vel": [
+          0,
+          1
+        ],
+        "joint_vel": [
+          1,
+          1
+        ],
+        "projected_gravity": [
+          0,
+          1
+        ]
+      },
+      "delay_update_period": {
+        "base_ang_vel": 64,
+        "joint_vel": 0,
+        "projected_gravity": 64
+      },
+      "dimension": 61,
+      "encoder_bias_actor_only": true,
+      "imu_misalignment_max_deg": 6.0,
+      "layout": [
+        {
+          "name": "base_ang_vel",
+          "size": 3
+        },
+        {
+          "name": "projected_gravity",
+          "size": 3
+        },
+        {
+          "name": "joint_pos",
+          "size": 14
+        },
+        {
+          "name": "joint_vel",
+          "size": 14
+        },
+        {
+          "name": "actions",
+          "size": 14
+        },
+        {
+          "name": "twist_command",
+          "size": 3
+        },
+        {
+          "name": "head_pose_command",
+          "size": 4
+        },
+        {
+          "name": "body_pose_command",
+          "size": 6
+        }
+      ],
+      "noise_half_ranges": {
+        "base_ang_vel": 0.03,
+        "joint_pos": 0.001,
+        "joint_vel": 0.25,
+        "projected_gravity": 0.01
+      }
+    },
+    "actuator_delay_physics_steps": [
+      3,
+      6
+    ],
+    "collision_model": "microduck-allcollisions-v1",
+    "commands": {
+      "body_command": {
+        "dimension": 6,
+        "layout": [
+          "bounded_phase",
+          "assist_scale",
+          "zero",
+          "zero",
+          "zero",
+          "zero"
+        ],
+        "timing_scale_s": 0.3
+      },
+      "head_command": {
+        "dimension": 4,
+        "value": "zero_padding"
+      },
+      "twist": {
+        "dimension": 3,
+        "resampling": false,
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "control": {
+      "control_hz": 50,
+      "decimation": 4,
+      "episode_length_s": 4.0,
+      "physics_dt_s": 0.005
+    },
+    "default_joint_position_rad": [
+      0.0,
+      -0.0873,
+      -0.4579,
+      -0.0049,
+      0.453,
+      0.3491,
+      0.3491,
+      0.0,
+      0.0,
+      0.0,
+      0.0873,
+      0.4579,
+      0.0049,
+      -0.453
+    ]
+  },
+  "task_id": "microduck.backflip.v1",
+  "training_only": {
+    "genesis": {
+      "action": {
+        "configured_clip": [
+          -100.0,
+          100.0
+        ],
+        "dimension": 14,
+        "filter": "none",
+        "joint_order": [
+          "left_hip_yaw",
+          "left_hip_roll",
+          "left_hip_pitch",
+          "left_knee",
+          "left_ankle",
+          "neck_pitch",
+          "head_pitch",
+          "head_yaw",
+          "head_roll",
+          "right_hip_yaw",
+          "right_hip_roll",
+          "right_hip_pitch",
+          "right_knee",
+          "right_ankle"
+        ],
+        "min_assisted_authority": 0.05,
+        "offset": "default_joint_position",
+        "scale": 1.0
+      },
+      "actor_observation": {
+        "delay_control_steps": {
+          "base_ang_vel": [
+            0,
+            1
+          ],
+          "joint_vel": [
+            1,
+            1
+          ],
+          "projected_gravity": [
+            0,
+            1
+          ]
+        },
+        "delay_update_period": {
+          "base_ang_vel": 64,
+          "joint_vel": 0,
+          "projected_gravity": 64
+        },
+        "dimension": 61,
+        "encoder_bias_actor_only": true,
+        "imu_misalignment_max_deg": 6.0,
+        "layout": [
+          {
+            "name": "base_ang_vel",
+            "size": 3
+          },
+          {
+            "name": "projected_gravity",
+            "size": 3
+          },
+          {
+            "name": "joint_pos",
+            "size": 14
+          },
+          {
+            "name": "joint_vel",
+            "size": 14
+          },
+          {
+            "name": "actions",
+            "size": 14
+          },
+          {
+            "name": "twist_command",
+            "size": 3
+          },
+          {
+            "name": "head_pose_command",
+            "size": 4
+          },
+          {
+            "name": "body_pose_command",
+            "size": 6
+          }
+        ],
+        "noise_half_ranges": {
+          "base_ang_vel": 0.03,
+          "joint_pos": 0.001,
+          "joint_vel": 0.25,
+          "projected_gravity": 0.01
+        }
+      },
+      "assistance": {
+        "backward_pitch_torque_nm": 1.4,
+        "decay_step": 0.05,
+        "end_time_s": 0.4,
+        "evaluation_window_episodes": 256,
+        "initial_scale": 1.0,
+        "minimum_action_authority": 0.05,
+        "start_time_s": 0.3,
+        "success_threshold": 0.6,
+        "upward_force_n": 16.0
+      },
+      "collision": {
+        "classification": "Genesis link contacts against ground",
+        "full_body": true,
+        "model": "microduck-allcollisions-v1"
+      },
+      "commands": {
+        "body_command": {
+          "dimension": 6,
+          "layout": [
+            "bounded_phase",
+            "assist_scale",
+            "zero",
+            "zero",
+            "zero",
+            "zero"
+          ],
+          "timing_scale_s": 0.3
+        },
+        "head_command": {
+          "dimension": 4,
+          "value": "zero_padding"
+        },
+        "twist": {
+          "dimension": 3,
+          "resampling": false,
+          "value": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "control": {
+        "control_hz": 50,
+        "decimation": 4,
+        "episode_length_s": 4.0,
+        "physics_dt_s": 0.005
+      },
+      "critic_observation": {
+        "dimension": 90,
+        "layout": "actor_61_plus_privileged_29"
+      },
+      "reset": {
+        "crouch_overrides": {
+          "11": 1.15,
+          "12": -1.25,
+          "13": -1.05,
+          "2": -1.15,
+          "3": 1.25,
+          "4": 1.05
+        },
+        "spawn_stages": [
+          [
+            0,
+            [
+              0.45,
+              0.1,
+              0.25,
+              0.2
+            ]
+          ],
+          [
+            4800,
+            [
+              0.6,
+              0.1,
+              0.2,
+              0.1
+            ]
+          ],
+          [
+            9600,
+            [
+              0.75,
+              0.1,
+              0.1,
+              0.05
+            ]
+          ]
+        ],
+        "tuck_overrides": {
+          "11": 1.15,
+          "12": -1.25,
+          "13": -1.05,
+          "2": -1.15,
+          "3": 1.25,
+          "4": 1.05,
+          "5": -0.55,
+          "6": 0.55
+        }
+      },
+      "rewards": {
+        "backflip_assisted_action": -2.0,
+        "backflip_body_contact": -2.0,
+        "backflip_feasible_push": 120.0,
+        "backflip_flatness": -0.02,
+        "backflip_flight_tuck": 8.0,
+        "backflip_landing": 100.0,
+        "backflip_landing_approach": 50.0,
+        "backflip_landing_foot_support": 50.0,
+        "backflip_landing_height": 75.0,
+        "backflip_landing_stillness": 75.0,
+        "backflip_landing_upright": 100.0,
+        "backflip_late_pitch_rate": -10.0,
+        "backflip_lateral_velocity": -0.05,
+        "backflip_launch_quality": 40.0,
+        "backflip_launch_velocity": 40.0,
+        "backflip_preload": 30.0,
+        "backflip_prepare_landing": 20.0,
+        "backflip_rotation": 80.0,
+        "backflip_stability_progress": 200.0,
+        "backflip_success": 200.0,
+        "backflip_supported_push": 60.0,
+        "backflip_takeoff": 60.0,
+        "backflip_wrong_direction": -0.02,
+        "body_ang_vel": -0.001,
+        "dof_pos_limits": -1.0
+      },
+      "success_state": {
+        "flight_end": "first robot-ground recontact",
+        "minimum_takeoff_z_m": 0.135,
+        "rotation_accumulation": "backward pitch only while collision-free airborne and lateral axis is within 30 degrees of horizontal",
+        "stable_hold_s": 0.5,
+        "stand_z_m": 0.115
+      },
+      "variant": "base_flat_only"
+    },
+    "official_mjlab": {
+      "action": {
+        "configured_clip": null,
+        "dimension": 14,
+        "full_authority_after_angle_rad": null,
+        "min_assisted_authority": 0.05,
+        "offset": "default_joint_position",
+        "scale": 1.0
+      },
+      "actor_observation": {
+        "delay_control_steps": {
+          "actions": [
+            0,
+            0
+          ],
+          "base_ang_vel": [
+            0,
+            1
+          ],
+          "body_command": [
+            0,
+            0
+          ],
+          "command": [
+            0,
+            0
+          ],
+          "head_command": [
+            0,
+            0
+          ],
+          "joint_pos": [
+            0,
+            0
+          ],
+          "joint_vel": [
+            1,
+            1
+          ],
+          "projected_gravity": [
+            0,
+            1
+          ]
+        },
+        "delay_update_period": {
+          "actions": 0,
+          "base_ang_vel": 64,
+          "body_command": 0,
+          "command": 0,
+          "head_command": 0,
+          "joint_pos": 0,
+          "joint_vel": 0,
+          "projected_gravity": 64
+        },
+        "dimension": 61,
+        "encoder_bias_actor_only": true,
+        "imu_misalignment_max_deg": 6.0,
+        "noise": {
+          "actions": null,
+          "base_ang_vel": [
+            -0.03,
+            0.03
+          ],
+          "body_command": null,
+          "command": null,
+          "head_command": null,
+          "joint_pos": [
+            -0.001,
+            0.001
+          ],
+          "joint_vel": [
+            -0.25,
+            0.25
+          ],
+          "projected_gravity": [
+            -0.01,
+            0.01
+          ]
+        },
+        "terms": [
+          "base_ang_vel",
+          "projected_gravity",
+          "joint_pos",
+          "joint_vel",
+          "actions",
+          "command",
+          "head_command",
+          "body_command"
+        ]
+      },
+      "assistance": {
+        "backward_pitch_torque_nm": 1.4,
+        "end_time_s": 0.4,
+        "landing_damping_duration_s": 0.0,
+        "landing_damping_gain_nm_per_rad_s": 0.0,
+        "landing_damping_max_nm": 0.0,
+        "start_time_s": 0.3,
+        "upward_force_n": 16.0
+      },
+      "collision": {
+        "disable_other_geoms": true,
+        "foot_contact_dim": 3,
+        "full_body": true,
+        "other_contact_dim": 1,
+        "sensors": [
+          "feet_ground_contact",
+          "self_collision",
+          "head_ground_contact",
+          "robot_ground_contact"
+        ]
+      },
+      "commands": {
+        "body_command": {
+          "dimension": 6,
+          "layout": [
+            "bounded_phase",
+            "assist_scale",
+            "zero",
+            "zero",
+            "zero",
+            "zero"
+          ],
+          "timing_scale_s": 0.3
+        },
+        "head_command": {
+          "dimension": 4,
+          "value": "zero_padding"
+        },
+        "twist": {
+          "dimension": 3,
+          "heading_command": false,
+          "ranges": {
+            "ang_vel_z_rad_s": [
+              -0.05,
+              0.05
+            ],
+            "lin_vel_x_m_s": [
+              -0.01,
+              0.01
+            ],
+            "lin_vel_y_m_s": [
+              -0.01,
+              0.01
+            ]
+          },
+          "resampling_time_s": [
+            5.0,
+            10.0
+          ]
+        }
+      },
+      "control": {
+        "control_hz": 50,
+        "decimation": 4,
+        "episode_length_s": 4.0,
+        "physics_dt_s": 0.005
+      },
+      "critic_observation": {
+        "dimension": 74,
+        "layout_sizes": {
+          "actions": 14,
+          "base_ang_vel": 3,
+          "base_lin_vel": 3,
+          "body_command": 6,
+          "command": 3,
+          "foot_air_time": 2,
+          "foot_contact": 2,
+          "foot_contact_forces": 6,
+          "head_command": 4,
+          "joint_pos": 14,
+          "joint_vel": 14,
+          "projected_gravity": 3
+        },
+        "terms": [
+          "base_lin_vel",
+          "base_ang_vel",
+          "projected_gravity",
+          "joint_pos",
+          "joint_vel",
+          "actions",
+          "command",
+          "foot_air_time",
+          "foot_contact",
+          "foot_contact_forces",
+          "head_command",
+          "body_command"
+        ]
+      },
+      "curricula": {
+        "action_rate_weight": {
+          "function": "reward_weight",
+          "params": {
+            "reward_name": "action_rate_l2",
+            "weight_stages": [
+              {
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "step": 60000,
+                "weight": -0.05
+              },
+              {
+                "step": 84000,
+                "weight": -0.15
+              }
+            ]
+          }
+        },
+        "arrival_damping_weight": {
+          "function": "reward_weight",
+          "params": {
+            "reward_name": "arrival_damping",
+            "weight_stages": [
+              {
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "step": 72000,
+                "weight": -0.02
+              },
+              {
+                "step": 96000,
+                "weight": -0.05
+              }
+            ]
+          }
+        },
+        "backflip_assist_scale": {
+          "function": "backflip_assist_scale_metric",
+          "params": {}
+        },
+        "backflip_spawn_mix": {
+          "function": "event_param_curriculum",
+          "params": {
+            "event_name": "set_backflip_state",
+            "param_stages": [
+              {
+                "params": {
+                  "crouch_prob": 0.1,
+                  "midflight_prob": 0.25,
+                  "recovery_prob": 0.2,
+                  "standing_prob": 0.45
+                },
+                "step": 0
+              },
+              {
+                "params": {
+                  "crouch_prob": 0.1,
+                  "midflight_prob": 0.2,
+                  "recovery_prob": 0.1,
+                  "standing_prob": 0.6
+                },
+                "step": 4800
+              },
+              {
+                "params": {
+                  "crouch_prob": 0.1,
+                  "midflight_prob": 0.1,
+                  "recovery_prob": 0.05,
+                  "standing_prob": 0.75
+                },
+                "step": 9600
+              }
+            ]
+          }
+        },
+        "body_contact_weight": {
+          "function": "reward_weight",
+          "params": {
+            "reward_name": "backflip_body_contact",
+            "weight_stages": [
+              {
+                "step": 0,
+                "weight": -2.0
+              },
+              {
+                "step": 36000,
+                "weight": -5.0
+              },
+              {
+                "step": 72000,
+                "weight": -8.0
+              }
+            ]
+          }
+        },
+        "com_range": {
+          "function": "com_range_curriculum",
+          "params": {
+            "event_name": "randomize_com",
+            "range_stages": [
+              {
+                "range": 0.003,
+                "step": 0
+              },
+              {
+                "range": 0.005,
+                "step": 12000
+              },
+              {
+                "range": 0.01,
+                "step": 24000
+              },
+              {
+                "range": 0.015,
+                "step": 36000
+              }
+            ]
+          }
+        },
+        "gentle_landing_weight": {
+          "function": "reward_weight",
+          "params": {
+            "reward_name": "gentle_landing",
+            "weight_stages": [
+              {
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "step": 60000,
+                "weight": 0.001
+              },
+              {
+                "step": 84000,
+                "weight": 0.003
+              }
+            ]
+          }
+        },
+        "head_com_range": {
+          "function": "com_range_curriculum",
+          "params": {
+            "event_name": "randomize_head_com",
+            "range_stages": [
+              {
+                "range": 0.003,
+                "step": 0
+              },
+              {
+                "range": 0.005,
+                "step": 12000
+              },
+              {
+                "range": 0.01,
+                "step": 24000
+              }
+            ]
+          }
+        },
+        "preload_weight": {
+          "function": "reward_weight",
+          "params": {
+            "reward_name": "backflip_preload",
+            "weight_stages": [
+              {
+                "step": 0,
+                "weight": 30.0
+              },
+              {
+                "step": 4800,
+                "weight": 15.0
+              },
+              {
+                "step": 8400,
+                "weight": 5.0
+              }
+            ]
+          }
+        },
+        "torque_rate_weight": {
+          "function": "reward_weight",
+          "params": {
+            "reward_name": "joint_torque_rate_l2",
+            "weight_stages": [
+              {
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "step": 72000,
+                "weight": -0.00025
+              },
+              {
+                "step": 96000,
+                "weight": -0.0005
+              }
+            ]
+          }
+        }
+      },
+      "events": {
+        "backflip_assistive_wrench": {
+          "function": "apply_backflip_assistive_wrench",
+          "interval_s": null,
+          "mode": "step",
+          "params": {
+            "backward_pitch_torque_nm": 1.4,
+            "end_time_s": 0.4,
+            "landing_damping_duration_s": 0.0,
+            "landing_damping_gain_nm_per_rad_s": 0.0,
+            "landing_damping_max_nm": 0.0,
+            "start_time_s": 0.3,
+            "upward_force_n": 16.0
+          }
+        },
+        "base_com": {
+          "function": "body_com_offset",
+          "interval_s": null,
+          "mode": "startup",
+          "params": {
+            "operation": "add",
+            "ranges": {
+              "0": [
+                -0.025,
+                0.025
+              ],
+              "1": [
+                -0.025,
+                0.025
+              ],
+              "2": [
+                -0.03,
+                0.03
+              ]
+            }
+          }
+        },
+        "encoder_bias": {
+          "function": "encoder_bias",
+          "interval_s": null,
+          "mode": "startup",
+          "params": {
+            "bias_range": [
+              -0.015,
+              0.015
+            ]
+          }
+        },
+        "expand_bam_friction_fields": {
+          "function": "expand_bam_friction_fields",
+          "interval_s": null,
+          "mode": "startup",
+          "params": {}
+        },
+        "foot_friction": {
+          "function": "geom_friction",
+          "interval_s": null,
+          "mode": "startup",
+          "params": {
+            "operation": "abs",
+            "ranges": [
+              0.7,
+              1.3
+            ],
+            "shared_random": true
+          }
+        },
+        "randomize_armature": {
+          "function": "joint_armature",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {
+            "operation": "scale",
+            "ranges": [
+              0.9,
+              1.1
+            ]
+          }
+        },
+        "randomize_com": {
+          "function": "body_com_offset",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {
+            "operation": "add",
+            "ranges": [
+              -0.003,
+              0.003
+            ]
+          }
+        },
+        "randomize_head_com": {
+          "function": "body_com_offset",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {
+            "operation": "add",
+            "ranges": [
+              -0.003,
+              0.003
+            ]
+          }
+        },
+        "randomize_joint_friction": {
+          "function": "randomize_bam_friction",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {
+            "scale_range": [
+              0.9,
+              1.1
+            ]
+          }
+        },
+        "randomize_mass_inertia": {
+          "function": "pseudo_inertia",
+          "interval_s": null,
+          "mode": "startup",
+          "params": {
+            "alpha_range": [
+              -0.02564664719377529,
+              0.024395082084716024
+            ]
+          }
+        },
+        "reset_action_history": {
+          "function": "reset_action_history",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {}
+        },
+        "reset_base": {
+          "function": "reset_root_state_uniform",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {
+            "pose_range": {
+              "x": [
+                -0.5,
+                0.5
+              ],
+              "y": [
+                -0.5,
+                0.5
+              ],
+              "yaw": [
+                -3.14,
+                3.14
+              ],
+              "z": [
+                0.01,
+                0.05
+              ]
+            },
+            "velocity_range": {}
+          }
+        },
+        "reset_robot_joints": {
+          "function": "reset_joints_by_offset",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {
+            "position_range": [
+              0.0,
+              0.0
+            ],
+            "velocity_range": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "set_backflip_state": {
+          "function": "reset_backflip_state",
+          "interval_s": null,
+          "mode": "reset",
+          "params": {
+            "assist_decay_step": 0.05,
+            "assist_evaluation_window": 256,
+            "assist_success_threshold": 0.6,
+            "crouch_factor_range": [
+              0.55,
+              1.0
+            ],
+            "crouch_overrides": {
+              "11": 1.15,
+              "12": -1.25,
+              "13": -1.05,
+              "2": -1.15,
+              "3": 1.25,
+              "4": 1.05
+            },
+            "crouch_prob": 0.1,
+            "crouch_tilt_max": 0.17453292519943295,
+            "crouch_z_range": [
+              0.06,
+              0.085
+            ],
+            "initial_assist_scale": 1.0,
+            "joint_noise_std": 0.05,
+            "midflight_angle_range": [
+              2.792526803190927,
+              5.759586531581287
+            ],
+            "midflight_ballistic_landing": true,
+            "midflight_landing_z": 0.115,
+            "midflight_omega_range": [
+              10.0,
+              18.0
+            ],
+            "midflight_prob": 0.25,
+            "midflight_time_margin_range": [
+              0.03,
+              0.1
+            ],
+            "midflight_vz_range": [
+              0.2,
+              1.5
+            ],
+            "midflight_z_range": [
+              0.16,
+              0.28
+            ],
+            "recovery_ang_vel_max": 1.5,
+            "recovery_lin_vel_max": 0.2,
+            "recovery_prob": 0.2,
+            "recovery_tilt_max": 0.2617993877991494,
+            "recovery_z_range": [
+              0.105,
+              0.12
+            ],
+            "standing_prob": 0.45,
+            "standing_tilt_max": 0.06981317007977318,
+            "standing_z_range": [
+              0.11,
+              0.12
+            ],
+            "tuck_factor_range": [
+              0.5,
+              1.0
+            ],
+            "tuck_overrides": {
+              "11": 1.15,
+              "12": -1.25,
+              "13": -1.05,
+              "2": -1.15,
+              "3": 1.25,
+              "4": 1.05,
+              "5": -0.55,
+              "6": 0.55
+            }
+          }
+        }
+      },
+      "reset": {
+        "assist_decay_step": 0.05,
+        "assist_evaluation_window": 256,
+        "assist_success_threshold": 0.6,
+        "crouch_factor_range": [
+          0.55,
+          1.0
+        ],
+        "crouch_overrides": {
+          "11": 1.15,
+          "12": -1.25,
+          "13": -1.05,
+          "2": -1.15,
+          "3": 1.25,
+          "4": 1.05
+        },
+        "crouch_prob": 0.1,
+        "crouch_tilt_max": 0.17453292519943295,
+        "crouch_z_range": [
+          0.06,
+          0.085
+        ],
+        "initial_assist_scale": 1.0,
+        "joint_noise_std": 0.05,
+        "midflight_angle_range": [
+          2.792526803190927,
+          5.759586531581287
+        ],
+        "midflight_ballistic_landing": true,
+        "midflight_landing_z": 0.115,
+        "midflight_omega_range": [
+          10.0,
+          18.0
+        ],
+        "midflight_prob": 0.25,
+        "midflight_time_margin_range": [
+          0.03,
+          0.1
+        ],
+        "midflight_vz_range": [
+          0.2,
+          1.5
+        ],
+        "midflight_z_range": [
+          0.16,
+          0.28
+        ],
+        "recovery_ang_vel_max": 1.5,
+        "recovery_lin_vel_max": 0.2,
+        "recovery_prob": 0.2,
+        "recovery_tilt_max": 0.2617993877991494,
+        "recovery_z_range": [
+          0.105,
+          0.12
+        ],
+        "standing_prob": 0.45,
+        "standing_tilt_max": 0.06981317007977318,
+        "standing_z_range": [
+          0.11,
+          0.12
+        ],
+        "tuck_factor_range": [
+          0.5,
+          1.0
+        ],
+        "tuck_overrides": {
+          "11": 1.15,
+          "12": -1.25,
+          "13": -1.05,
+          "2": -1.15,
+          "3": 1.25,
+          "4": 1.05,
+          "5": -0.55,
+          "6": 0.55
+        }
+      },
+      "rewards": {
+        "action_rate_l2": {
+          "function": "action_rate_l2",
+          "params": {},
+          "weight": 0.0
+        },
+        "angular_momentum": {
+          "function": "angular_momentum_penalty",
+          "params": {
+            "sensor_name": "robot/root_angmom"
+          },
+          "weight": 0.0
+        },
+        "arrival_damping": {
+          "function": "body_ang_vel_at_height",
+          "params": {
+            "height_high": 0.11,
+            "height_low": 0.09,
+            "tilt_full_deg": 20.0,
+            "tilt_zero_deg": 45.0
+          },
+          "weight": 0.0
+        },
+        "backflip_assisted_action": {
+          "function": "backflip_assisted_action_cost",
+          "params": {},
+          "weight": -2.0
+        },
+        "backflip_body_contact": {
+          "function": "backflip_body_contact_cost",
+          "params": {},
+          "weight": 0.0
+        },
+        "backflip_feasible_push": {
+          "function": "backflip_feasible_push_progress",
+          "params": {
+            "min_pitch_rate": 4.0,
+            "min_preload": 0.55,
+            "min_velocity": 0.6,
+            "target_pitch_rate": 12.0,
+            "target_velocity": 1.5
+          },
+          "weight": 120.0
+        },
+        "backflip_flatness": {
+          "function": "roulade_flatness_penalty",
+          "params": {},
+          "weight": -0.02
+        },
+        "backflip_flight_tuck": {
+          "function": "backflip_flight_tuck",
+          "params": {
+            "fade_out": 5.235987755982989,
+            "gate_hi": 4.363323129985824,
+            "gate_lo": 0.3490658503988659,
+            "joint_targets": {
+              "11": 1.15,
+              "12": -1.25,
+              "13": -1.05,
+              "2": -1.15,
+              "3": 1.25,
+              "4": 1.05,
+              "5": -0.55,
+              "6": 0.55
+            },
+            "pose_std": 0.35
+          },
+          "weight": 8.0
+        },
+        "backflip_landing": {
+          "function": "backflip_landing_composite",
+          "params": {
+            "height_std": 0.025,
+            "joint_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "pose_std": 0.4,
+            "target_height": 0.115,
+            "target_overrides": null,
+            "upright_std": 0.3
+          },
+          "weight": 100.0
+        },
+        "backflip_landing_approach": {
+          "function": "backflip_landing_approach",
+          "params": {
+            "gate_hi": 5.934119456780721,
+            "gate_lo": 4.71238898038469,
+            "joint_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "target_height": 0.115
+          },
+          "weight": 50.0
+        },
+        "backflip_landing_foot_support": {
+          "function": "backflip_landing_foot_support",
+          "params": {},
+          "weight": 50.0
+        },
+        "backflip_landing_height": {
+          "function": "backflip_landing_height",
+          "params": {
+            "minimum_height": 0.06,
+            "target_height": 0.115
+          },
+          "weight": 75.0
+        },
+        "backflip_landing_stillness": {
+          "function": "backflip_landing_stillness",
+          "params": {
+            "angular_speed_std": 4.0
+          },
+          "weight": 75.0
+        },
+        "backflip_landing_upright": {
+          "function": "backflip_landing_upright",
+          "params": {},
+          "weight": 100.0
+        },
+        "backflip_late_pitch_rate": {
+          "function": "backflip_late_pitch_rate_cost",
+          "params": {
+            "gate_hi": 6.283185307179586,
+            "gate_lo": 5.235987755982989,
+            "rate_scale": 15.0
+          },
+          "weight": -10.0
+        },
+        "backflip_lateral_velocity": {
+          "function": "roulade_lateral_velocity_penalty",
+          "params": {},
+          "weight": -0.05
+        },
+        "backflip_launch_quality": {
+          "function": "backflip_launch_quality_progress",
+          "params": {
+            "target_pitch_rate": 10.0,
+            "target_velocity": 1.2
+          },
+          "weight": 40.0
+        },
+        "backflip_launch_velocity": {
+          "function": "backflip_launch_velocity_progress",
+          "params": {
+            "target_velocity": 1.5
+          },
+          "weight": 40.0
+        },
+        "backflip_preload": {
+          "function": "backflip_preload_progress",
+          "params": {
+            "joint_targets": {
+              "11": 1.15,
+              "12": -1.25,
+              "13": -1.05,
+              "2": -1.15,
+              "3": 1.25,
+              "4": 1.05
+            }
+          },
+          "weight": 30.0
+        },
+        "backflip_prepare_landing": {
+          "function": "backflip_prepare_landing",
+          "params": {
+            "gate_hi": 5.934119456780721,
+            "gate_lo": 4.363323129985824
+          },
+          "weight": 20.0
+        },
+        "backflip_rotation": {
+          "function": "backflip_rotation_progress",
+          "params": {
+            "max_paid_rate": 18.0,
+            "target_angle": 6.283185307179586
+          },
+          "weight": 80.0
+        },
+        "backflip_sagittal": {
+          "function": "roulade_sagittal_penalty",
+          "params": {},
+          "weight": 0.0
+        },
+        "backflip_stability_progress": {
+          "function": "backflip_stability_progress",
+          "params": {},
+          "weight": 200.0
+        },
+        "backflip_success": {
+          "function": "backflip_success",
+          "params": {},
+          "weight": 200.0
+        },
+        "backflip_supported_push": {
+          "function": "backflip_supported_push_quality_progress",
+          "params": {
+            "min_preload": 0.55,
+            "target_pitch_rate": 10.0,
+            "target_velocity": 1.2
+          },
+          "weight": 60.0
+        },
+        "backflip_takeoff": {
+          "function": "backflip_takeoff_progress",
+          "params": {
+            "start_height": 0.115,
+            "target_height": 0.3
+          },
+          "weight": 60.0
+        },
+        "backflip_wrong_direction": {
+          "function": "backflip_wrong_direction_cost",
+          "params": {},
+          "weight": -0.02
+        },
+        "body_ang_vel": {
+          "function": "body_angular_velocity_penalty",
+          "params": {},
+          "weight": -0.001
+        },
+        "dof_pos_limits": {
+          "function": "joint_pos_limits",
+          "params": {},
+          "weight": -1.0
+        },
+        "gentle_landing": {
+          "function": "trunk_vertical_accel_penalty",
+          "params": {},
+          "weight": 0.0
+        },
+        "joint_torque_rate_l2": {
+          "function": "joint_torque_rate_l2",
+          "params": {},
+          "weight": 0.0
+        },
+        "self_collisions": {
+          "function": "self_collision_cost",
+          "params": {
+            "sensor_name": "self_collision"
+          },
+          "weight": -0.1
+        }
+      },
+      "success_state": {
+        "flight_end": "first robot-ground recontact",
+        "landing_rotation_gate_rad": 5.585053606381854,
+        "landing_tilt_max_deg": 35.0,
+        "landing_z_min_m": 0.085,
+        "minimum_takeoff_z_m": 0.135,
+        "rotation_accumulation": "backward pitch only while collision-free airborne and lateral axis is within 30 degrees of horizontal",
+        "stable_angular_speed_max_rad_s": 2.0,
+        "stable_hold_s": 0.5,
+        "stable_rotation_min_rad": 6.283185307179586,
+        "stable_tilt_max_deg": 20.0,
+        "stable_z_min_m": 0.095,
+        "stand_z_m": 0.115,
+        "success_latch": "feet-supported stable state held continuously after a landed latch"
+      },
+      "terminations": {
+        "nan_state": {
+          "function": "robot_state_is_nan",
+          "params": {},
+          "time_out": false
+        },
+        "out_of_terrain_bounds": {
+          "function": "out_of_terrain_bounds",
+          "params": {},
+          "time_out": true
+        },
+        "time_out": {
+          "function": "time_out",
+          "params": {},
+          "time_out": true
+        }
+      },
+      "variant": "base_flat_only"
+    },
+    "reverse_curriculum_and_virtual_spotter_are_not_acceptance": true,
+    "reward_is_success_definition": false
+  }
+}

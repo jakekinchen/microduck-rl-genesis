@@ -40,6 +40,7 @@ BAM_CLOSED_LOOP_PATH = (
 )
 MODEL_RECONCILIATION_PATH = CONTRACT_ROOT / "model" / "reconciliation-v1.json"
 WALKING_TASK_PATH = CONTRACT_ROOT / "tasks" / "walking-v1.json"
+BACKFLIP_TASK_PATH = CONTRACT_ROOT / "tasks" / "backflip-v1.json"
 
 
 def sha256(path: Path) -> str:
@@ -198,6 +199,20 @@ def snapshots() -> dict[Path, bytes]:
         "acceptance_suite_id": "microduck.walking-acceptance.v1",
     }
     output[CONTRACT_ROOT / "tasks" / "walking-v1.lock.json"] = json_bytes(walking)
+    backflip = {
+        "schema_version": "microduck.task-lock/v1",
+        "task_id": "microduck.backflip.v1",
+        "task_path": BACKFLIP_TASK_PATH.relative_to(ROOT).as_posix(),
+        "task_sha256": sha256(BACKFLIP_TASK_PATH),
+        "official_commit": "8bde27eb141c8f14db05fc4370e536521203a98d",
+        "interface_ids": [
+            "microduck.obs.v1",
+            "microduck.action.v1",
+            "microduck.control.50hz.v1",
+        ],
+        "acceptance_suite_id": "microduck.backflip-acceptance.v1",
+    }
+    output[CONTRACT_ROOT / "tasks" / "backflip-v1.lock.json"] = json_bytes(backflip)
     return output
 
 
