@@ -1,0 +1,52 @@
+{
+  "authorities": {
+    "action_contract_sha256": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896",
+    "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+    "bam_lock_sha256": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+    "control_contract_sha256": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
+    "evaluator_config_sha256": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
+    "evaluator_core_sha256": "sha256:4635ccff101c6c42f2c8f760f97bd166da13fcce410430f5e79919765ddf09d6",
+    "model_lock_sha256": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae",
+    "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+    "model_scene_sha256": "sha256:6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+    "observation_contract_sha256": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce",
+    "task_contract_sha256": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71"
+  },
+  "case": {
+    "id": "evaluator-core.home-zero-policy.v1",
+    "seed": 73001,
+    "seed_material_sha256": "sha256:b2ed6d43b4a7cdec7e6f165c2a67fe91431a1ce984c50a00773e2a5790ea17ef",
+    "seed_stream": "sha256-counter-v1"
+  },
+  "classification": "infrastructure_pass",
+  "evaluator_id": "microduck.c-mujoco-onnx-bam.v1",
+  "evidence_boundary": "Synthetic zero-policy plumbing proof only; no walking/backflip success, held-out result, transfer, or physical authority.",
+  "held_out": false,
+  "integrity": {
+    "deadline_miss_count": 0,
+    "finite": true,
+    "inference_deadline_ms": 20.0,
+    "trajectory_sha256": "sha256:2b58cb2130ea03cc6dda9ccde937fde6c5061b49e2fbbb5373772bd84fff11d4"
+  },
+  "loop": {
+    "action_filter": "none",
+    "bam_updates": 40,
+    "control_decimation": 4,
+    "control_hz": 50,
+    "physics_dt_s": 0.005,
+    "physics_steps": 40,
+    "policy_calls": 10
+  },
+  "policy": {
+    "execution_provider": "CPUExecutionProvider",
+    "sha256": "sha256:f0803600f3aebfaf776ae5c4dba8297a041297ecd7d3bb8088c4a1db87aadad5"
+  },
+  "proof_class": "infrastructure_only",
+  "runtime": {
+    "mujoco": "3.12.0",
+    "numpy": "2.5.2",
+    "onnxruntime": "1.23.2"
+  },
+  "schema_version": "microduck.evaluator-report/v1",
+  "task_success": "not_evaluated"
+}
