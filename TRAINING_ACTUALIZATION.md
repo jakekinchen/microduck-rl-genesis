@@ -109,9 +109,12 @@ Face artifact is 61D-to-14D, contains a Sub/Div normalizer, and is immutable at
 SHA-256 `e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c`.
 Neither its ONNX metadata nor the project-owned schema-v2 manifest binds a
 checkpoint, training run, exact task-source commit, exporter invocation, or the
-normalizer statistics to their source. It was not executed. M2 remains open and
-the queue is stopped until upstream supplies one of the acceptable authority
-paths recorded in `microduck_contract/policies/official-walking-authority-v1.json`.
+normalizer statistics to their source. It was not executed. M2 remains open;
+only the official-policy repeatability sub-gate is blocked until upstream
+supplies one of the acceptable authority paths recorded in
+`microduck_contract/policies/official-walking-authority-v1.json`. Independent
+local evaluator cases, held-out preregistration, and M3 classifier work remain
+authorized.
 
 ### M3 — Freeze task-specific success gates (P0)
 
