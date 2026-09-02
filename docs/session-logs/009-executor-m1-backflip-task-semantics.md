@@ -1,7 +1,9 @@
 # Executor log 009 - M1 backflip task semantics
 
-**Date:** 2026-09-02  
-**Role:** Executor  
+**Date:** 2026-09-02
+
+**Role:** Executor
+
 **Brief:** `docs/briefs/009-m1-backflip-task-semantics.md`
 
 ## Authority inspected
