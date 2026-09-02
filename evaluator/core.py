@@ -266,6 +266,17 @@ class EvaluatorCore:
         if case["task_id"] != self.task_id:
             raise EvaluationError("case task mismatch")
         self.reset(case["root_xyz_m"], case["root_quaternion_wxyz"])
+        initial_offset = np.asarray(
+            case.get("initial_joint_offset_rad", [0.0] * 14), dtype=np.float64
+        )
+        if initial_offset.shape != (14,) or not np.isfinite(initial_offset).all():
+            raise EvaluationError("invalid initial joint offset")
+        self.data.qpos[self.qpos_indices] += initial_offset
+        friction_scale = float(case.get("geom_friction_scale", 1.0))
+        if not np.isfinite(friction_scale) or friction_scale <= 0.0:
+            raise EvaluationError("invalid geometry friction scale")
+        self.model.geom_friction[:] *= friction_scale
+        mujoco.mj_forward(self.model, self.data)
         last_action = np.zeros(14, dtype=np.float32)
         twist = np.asarray(case.get("twist_command", [0.0, 0.0, 0.0]), dtype=np.float32)
         head = np.asarray(case["head_command"], dtype=np.float32)
@@ -274,6 +285,11 @@ class EvaluatorCore:
         decimation = int(self.config["physics"]["control_decimation"])
         deadline_ms = float(self.config["inference"]["deadline_ms"])
         deadline_misses = 0
+        synthetic_latency_ms = case.get("synthetic_inference_latency_ms")
+        if synthetic_latency_ms is not None:
+            synthetic_latency_ms = float(synthetic_latency_ms)
+            if not np.isfinite(synthetic_latency_ms) or synthetic_latency_ms < 0.0:
+                raise EvaluationError("invalid synthetic inference latency")
         policy_calls = 0
         records = []
         rows: list[dict[str, Any]] = []
@@ -289,6 +305,10 @@ class EvaluatorCore:
             camera.azimuth = 145.0
             camera.elevation = -18.0
         target = self.home.copy()
+        force_steps = 0
+        terminated_step: int | None = None
+        min_joint_margin_rad = float("inf")
+        joint_ranges = self.model.jnt_range[self.joint_ids]
         try:
             for step in range(int(case["physics_steps"])):
                 if step % decimation == 0:
@@ -296,13 +316,27 @@ class EvaluatorCore:
                         if int(stage["control_step"]) <= policy_calls:
                             twist = np.asarray(stage["value"], dtype=np.float32)
                     observation = self.observation_vector(last_action, twist, head, body)
+                    if case.get("inject_nonfinite_at_control_step") == policy_calls:
+                        observation[0, 0] = np.nan
+                    if not np.isfinite(observation).all():
+                        raise EvaluationError("non-finite observation")
                     action, latency_ms = self.policy.infer(observation)
+                    if synthetic_latency_ms is not None:
+                        latency_ms = synthetic_latency_ms
                     deadline_misses += int(latency_ms > deadline_ms)
                     policy_calls += 1
                     last_action = action[0].copy()
                     target = self.home + last_action.astype(np.float64)
                     for index, name in enumerate(self.joint_names):
                         self.controller.set_q_target(name, float(target[index]))
+                self.data.xfrc_applied[:] = 0.0
+                for force in case.get("external_force_schedule", []):
+                    if int(force["start_physics_step"]) <= step < int(force["end_physics_step"]):
+                        body_id = self.model.body(force["body"]).id
+                        self.data.xfrc_applied[body_id] = np.asarray(
+                            force["wrench_force_torque"], dtype=np.float64
+                        )
+                        force_steps += 1
                 self.controller.update()
                 mujoco.mj_step(self.model, self.data)
                 state = np.concatenate([
@@ -315,6 +349,12 @@ class EvaluatorCore:
                 ])
                 if not np.isfinite(state).all():
                     raise EvaluationError(f"non-finite state at physics step {step}")
+                joint_position = self.data.qpos[self.qpos_indices]
+                margins = np.minimum(
+                    joint_position - joint_ranges[:, 0],
+                    joint_ranges[:, 1] - joint_position,
+                )
+                min_joint_margin_rad = min(min_joint_margin_rad, float(np.min(margins)))
                 records.append(state)
                 rows.append({
                     "case_id": case["case_id"],
@@ -334,17 +374,29 @@ class EvaluatorCore:
                 if renderer is not None and (step + 1) % decimation == 0:
                     renderer.update_scene(self.data, camera=camera)
                     frames.append(renderer.render().copy())
+                threshold = case.get("terminate_root_z_below_m")
+                if threshold is not None and float(self.data.qpos[2]) < float(threshold):
+                    terminated_step = step + 1
+                    break
         finally:
             if renderer is not None:
                 renderer.close()
         trajectory = np.asarray(records, dtype="<f8")
         trajectory_digest = "sha256:" + hashlib.sha256(trajectory.tobytes(order="C")).hexdigest()
         case_key = f"{case['case_id']}\0{case['seed']}".encode()
+        classification = "infrastructure_pass"
+        joint_margin_threshold = case.get("joint_margin_min_rad")
+        if terminated_step is not None:
+            classification = "infrastructure_terminated"
+        elif joint_margin_threshold is not None and min_joint_margin_rad < float(joint_margin_threshold):
+            classification = "infrastructure_joint_margin_violation"
+        elif deadline_misses:
+            classification = "infrastructure_deadline_miss"
         report = {
             "schema_version": "microduck.evaluator-report/v1",
             "evaluator_id": self.config["evaluator_id"],
             "proof_class": "infrastructure_only",
-            "classification": "infrastructure_pass",
+            "classification": classification,
             "task_success": "not_evaluated",
             "held_out": False,
             "case": {
@@ -372,9 +424,9 @@ class EvaluatorCore:
                 "control_decimation": decimation,
                 "control_hz": 50,
                 "action_filter": "none",
-                "physics_steps": int(case["physics_steps"]),
+                "physics_steps": len(records),
                 "policy_calls": policy_calls,
-                "bam_updates": int(case["physics_steps"]),
+                "bam_updates": len(records),
             },
             "integrity": {
                 "finite": True,
@@ -389,6 +441,27 @@ class EvaluatorCore:
             },
             "evidence_boundary": "Synthetic zero-policy plumbing proof only; no walking/backflip success, held-out result, transfer, or physical authority.",
         }
+        if synthetic_latency_ms is not None:
+            report["integrity"]["deadline_latency_source"] = "synthetic_case_fixture"
+        if any(
+            key in case
+            for key in (
+                "initial_joint_offset_rad",
+                "geom_friction_scale",
+                "external_force_schedule",
+                "joint_margin_min_rad",
+                "terminate_root_z_below_m",
+            )
+        ):
+            report["case_metrics"] = {
+                "geom_friction_scale": friction_scale,
+                "external_force_physics_steps": force_steps,
+                "minimum_joint_margin_rad": min_joint_margin_rad,
+                "terminated": terminated_step is not None,
+                "termination_physics_step": terminated_step,
+            }
+        if terminated_step is not None:
+            report["loop"]["requested_physics_steps"] = int(case["physics_steps"])
         return report, rows, frames
 
     def run_synthetic_smoke(self) -> dict[str, Any]:

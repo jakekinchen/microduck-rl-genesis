@@ -1,0 +1,22 @@
+{
+  "schema_version": "microduck.evaluator-case-matrix/v1",
+  "suite_id": "microduck.walking-visible-case-matrix.v1",
+  "visibility": "public-development",
+  "held_out": false,
+  "candidate_policy_allowed": false,
+  "task_id": "microduck.walking.v1",
+  "proof_class": "infrastructure_only",
+  "cases": [
+    {"case_id":"matrix.standing.v1","category":"standing","seed":75001,"physics_steps":40,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"expected_classification":"infrastructure_pass"},
+    {"case_id":"matrix.command-grid-forward.v1","category":"command_grid","seed":75002,"physics_steps":40,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0.3,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"expected_classification":"infrastructure_pass"},
+    {"case_id":"matrix.command-grid-lateral-yaw.v1","category":"command_grid","seed":75003,"physics_steps":40,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0.2,-0.5],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"expected_classification":"infrastructure_pass"},
+    {"case_id":"matrix.start-stop-reversal.v1","category":"start_stop_reversal","seed":75004,"physics_steps":64,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"twist_schedule":[{"control_step":0,"value":[0.25,0,0]},{"control_step":4,"value":[0,0,0]},{"control_step":8,"value":[-0.25,0,0]},{"control_step":12,"value":[0,0,0]}],"expected_classification":"infrastructure_pass"},
+    {"case_id":"matrix.perturbation.v1","category":"perturbation","seed":75005,"physics_steps":48,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"external_force_schedule":[{"body":"trunk_base","start_physics_step":8,"end_physics_step":28,"wrench_force_torque":[0.15,0,0,0,0,0]}],"expected_classification":"infrastructure_pass"},
+    {"case_id":"matrix.friction-low.v1","category":"friction","seed":75006,"physics_steps":40,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"geom_friction_scale":0.5,"expected_classification":"infrastructure_pass"},
+    {"case_id":"matrix.joint-margin.v1","category":"joint_margin","seed":75007,"physics_steps":4,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"initial_joint_offset_rad":[0.5186,0,0,0,0,0,0,0,0,0,0,0,0,0],"joint_margin_min_rad":0.01,"expected_classification":"infrastructure_joint_margin_violation"},
+    {"case_id":"matrix.nan-rejection.v1","category":"nan","seed":75008,"physics_steps":4,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"inject_nonfinite_at_control_step":0,"expected_error":"non-finite observation"},
+    {"case_id":"matrix.deadline.v1","category":"deadline","seed":75009,"physics_steps":8,"root_xyz_m":[0,0,0.125],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"synthetic_inference_latency_ms":25.0,"expected_classification":"infrastructure_deadline_miss"},
+    {"case_id":"matrix.termination.v1","category":"termination","seed":75010,"physics_steps":40,"root_xyz_m":[0,0,0.05],"root_quaternion_wxyz":[1,0,0,0],"twist_command":[0,0,0],"head_command":[0,0,0,0],"body_command":[0,0,0,0,0,0],"terminate_root_z_below_m":0.08,"expected_classification":"infrastructure_terminated"}
+  ],
+  "evidence_boundary": "Visible synthetic zero-policy evaluator cases only; task success and held-out acceptance are not evaluated."
+}
