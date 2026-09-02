@@ -42,6 +42,9 @@ MODEL_RECONCILIATION_PATH = CONTRACT_ROOT / "model" / "reconciliation-v1.json"
 WALKING_TASK_PATH = CONTRACT_ROOT / "tasks" / "walking-v1.json"
 BACKFLIP_TASK_PATH = CONTRACT_ROOT / "tasks" / "backflip-v1.json"
 DIVERGENCE_DECISION_PATH = CONTRACT_ROOT / "divergence" / "decision-v1.json"
+OFFICIAL_WALKING_AUTHORITY_PATH = (
+    CONTRACT_ROOT / "policies" / "official-walking-authority-v1.json"
+)
 
 
 def sha256(path: Path) -> str:
@@ -226,6 +229,17 @@ def snapshots() -> dict[Path, bytes]:
         "upstream_submission_performed": False,
     }
     output[CONTRACT_ROOT / "divergence" / "decision-v1.lock.json"] = json_bytes(divergence)
+    official_walking_authority = json.loads(OFFICIAL_WALKING_AUTHORITY_PATH.read_text())
+    policy_authority_lock = {
+        "schema_version": "microduck.policy-authority-lock/v1",
+        "result_id": official_walking_authority["result_id"],
+        "status": official_walking_authority["status"],
+        "result_path": OFFICIAL_WALKING_AUTHORITY_PATH.relative_to(ROOT).as_posix(),
+        "result_sha256": sha256(OFFICIAL_WALKING_AUTHORITY_PATH),
+    }
+    output[
+        CONTRACT_ROOT / "policies" / "official-walking-authority-v1.lock.json"
+    ] = json_bytes(policy_authority_lock)
     return output
 
 

@@ -45,3 +45,11 @@ validation/official-mjlab/.venv/bin/python scripts/generate_walking_semantics.py
   --bam-repo <clean-checkout-at-62bd8ce1>
 python scripts/freeze_contract.py
 ```
+
+The official walking-policy search is recorded in
+[`policies/official-walking-authority-v1.json`](policies/official-walking-authority-v1.json).
+The deployed runtime artifact has the correct 61D-to-14D structure and embeds a
+normalizer, but its checkpoint, run, exact task source, exporter invocation, and
+normalizer-source provenance are not publicly bound. Its status is therefore
+`official_policy_authority_missing`; it was not executed and cannot be replaced
+by a Genesis-trained policy.

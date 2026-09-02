@@ -1,0 +1,138 @@
+{
+  "$schema": "official-walking-authority-v1.schema.json",
+  "schema_version": "microduck.policy-authority-result/v1",
+  "result_id": "microduck.official-mjlab.walking-authority.v1",
+  "status": "official_policy_authority_missing",
+  "search_scope": {
+    "completed_on": "2026-09-02",
+    "official_training_repository": {
+      "repository": "https://github.com/pollen-robotics/microduck_rl",
+      "commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+      "result": "no_onnx_or_checkpoint_artifact_in_git_tree"
+    },
+    "official_runtime_repository": {
+      "repository": "https://github.com/pollen-robotics/microduck",
+      "inspected_commit": "2c61dcc1f03440541cdc0729f7a375b2a9ea3005",
+      "result": "designated_runtime_artifact_found_but_training_provenance_incomplete"
+    },
+    "project_owned_model_distribution": {
+      "repository": "https://huggingface.co/pollen-robotics/microduck-policies",
+      "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+      "manifest_sha256": "sha256:d0c36e7b71129dd617339c63bcb1d704eab282c8617ebf14c2013a01abfb2dda",
+      "result": "artifact_found_but_manifest_omits_training_and_export_provenance"
+    },
+    "declared_prototype_source": {
+      "repository": "https://github.com/apirrone/microduck_runtime",
+      "declared_commit": "5f3b314",
+      "result": "public_unauthenticated_checkout_unavailable"
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "official-huggingface-alpha-walking-current",
+      "source_class": "official_project_owned_model_distribution",
+      "repository": "https://huggingface.co/pollen-robotics/microduck-policies",
+      "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+      "path": "alpha_walking.onnx",
+      "sha256": "sha256:e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+      "size_bytes": 793705,
+      "manifest_sha256": "sha256:d0c36e7b71129dd617339c63bcb1d704eab282c8617ebf14c2013a01abfb2dda",
+      "manifest_binding": {
+        "schema_version": 2,
+        "model_api": 1,
+        "obs_len": 61,
+        "action_len": 14,
+        "control_hz": 50,
+        "kind": "perpetual"
+      },
+      "inspection": {
+        "mode": "protobuf_structure_only_no_execute",
+        "onnx_checker": "pass",
+        "input": {"name": "obs", "dtype": "float32", "shape": [1, 61]},
+        "output": {"name": "actions", "dtype": "float32", "shape": [1, 14]},
+        "normalizer_frontend": {
+          "detected": true,
+          "operations": ["Sub", "Div"]
+        },
+        "metadata_run_path": "None"
+      },
+      "repository_license": "Apache-2.0",
+      "disposition": "rejected_provenance_incomplete",
+      "reasons": [
+        "the manifest names deployment dimensions and role but no checkpoint or training run",
+        "the manifest does not bind an exact task-source commit or exporter invocation",
+        "the manifest does not attribute the baked normalizer statistics to a checkpoint"
+      ]
+    },
+    {
+      "candidate_id": "official-runtime-alpha-walking-current",
+      "source_class": "official_runtime_distribution",
+      "repository": "https://github.com/pollen-robotics/microduck",
+      "path": "policies/alpha_walking.onnx",
+      "artifact_commit": "39544966ab901a5434a8ad87338d5d11abae1397",
+      "sha256": "sha256:e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+      "size_bytes": 793705,
+      "inspection": {
+        "mode": "protobuf_structure_only_no_execute",
+        "onnx_checker": "pass",
+        "input": {"name": "obs", "dtype": "float32", "shape": [1, 61]},
+        "output": {"name": "actions", "dtype": "float32", "shape": [1, 14]},
+        "producer": {"name": "pytorch", "version": "2.9.1"},
+        "normalizer_frontend": {
+          "detected": true,
+          "operations": ["Sub", "Div"],
+          "mean_sha256": "sha256:a2a7d0aacbf570c68e1dea6047d1b12ab37a9d3f09627022021de6324015ca9c",
+          "scale_sha256": "sha256:88356def3479d3f32dc65f71d6b571613ea6a1c4662ee5f4f99c78e5d1febb5c"
+        },
+        "metadata_run_path": "None"
+      },
+      "declared_role": "walking",
+      "repository_license": "Apache-2.0",
+      "disposition": "rejected_provenance_incomplete",
+      "reasons": [
+        "artifact metadata does not identify a training run or checkpoint",
+        "the exact training task and task-source commit are not bound to the artifact",
+        "the exporter source commit and invocation are not bound to the artifact",
+        "the baked normalizer tensors exist but their source checkpoint statistics are not attributable",
+        "the runtime provenance table predates the artifact replacement commit"
+      ]
+    },
+    {
+      "candidate_id": "genesis-repository-velocity",
+      "source_class": "genesis_trained_policy",
+      "path": "policies/velocity.onnx",
+      "sha256": "sha256:c315b9159a1b6f30976c90074ed6df2a33e7e1d14ef1505aed6c2c673f59061d",
+      "disposition": "rejected_not_official_mjlab"
+    },
+    {
+      "candidate_id": "genesis-m0-apple-smoke-walking",
+      "source_class": "genesis_smoke_policy",
+      "path": "receipts/apple-baseline/20260901T215219Z-2ce72a94/walking/policy.onnx",
+      "sha256": "sha256:3ecf7022231abb58ae4b5bb1675f6f05940f6dcf103b1bebbcc89f48d2f2f8ff",
+      "disposition": "rejected_not_official_mjlab"
+    }
+  ],
+  "missing_authority": [
+    "immutable source checkpoint identity and digest",
+    "immutable training run identity",
+    "exact official task id and task-source commit used for training",
+    "exact exporter source commit and export invocation",
+    "checkpoint-bound observation-normalizer provenance"
+  ],
+  "acceptable_resolution_paths": [
+    "an upstream project-owned immutable policy manifest binding the existing ONNX digest to all missing authority",
+    "a project-owned checkpoint plus run metadata and pinned exporter inputs that reproduce and bind a normalized ONNX",
+    "an upstream correction that designates another immutable normalized artifact with complete provenance"
+  ],
+  "actions": {
+    "official_policy_executed": false,
+    "visible_development_suite_run": false,
+    "held_out_evaluation_performed": false,
+    "genesis_candidate_inspected": false,
+    "credentials_used": false,
+    "training_performed": false,
+    "publication_performed": false,
+    "hardware_action_performed": false
+  },
+  "evidence_boundary": "The runtime artifact is structurally compatible and contains a normalizer frontend, but this does not supply checkpoint/export authority. No policy result, task success, backend comparison, transfer, or physical authority was evaluated."
+}

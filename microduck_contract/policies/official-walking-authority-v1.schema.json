@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://microduck.local/schemas/official-walking-authority-v1.schema.json",
+  "title": "Microduck official walking policy authority result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "result_id",
+    "status",
+    "search_scope",
+    "candidates",
+    "missing_authority",
+    "acceptable_resolution_paths",
+    "actions",
+    "evidence_boundary"
+  ],
+  "properties": {
+    "$schema": {"const": "official-walking-authority-v1.schema.json"},
+    "schema_version": {"const": "microduck.policy-authority-result/v1"},
+    "result_id": {"const": "microduck.official-mjlab.walking-authority.v1"},
+    "status": {"const": "official_policy_authority_missing"},
+    "search_scope": {"type": "object"},
+    "candidates": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "source_class", "path", "sha256", "disposition"]
+      }
+    },
+    "missing_authority": {
+      "type": "array",
+      "minItems": 5,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "acceptable_resolution_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "actions": {
+      "type": "object",
+      "additionalProperties": {"const": false}
+    },
+    "evidence_boundary": {"type": "string", "minLength": 1}
+  }
+}
