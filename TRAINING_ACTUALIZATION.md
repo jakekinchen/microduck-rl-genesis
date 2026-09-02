@@ -103,6 +103,16 @@ including 160-row Parquet and 40-frame decoded MP4 outputs. This remains
 infrastructure-only; deterministic acceptance cases, held-out separation, and
 the designated official walking ONNX proof remain open.
 
+Official walking authority search stopped on 2026-09-02 with durable result
+`official_policy_authority_missing`. The exact project-owned runtime/Hugging
+Face artifact is 61D-to-14D, contains a Sub/Div normalizer, and is immutable at
+SHA-256 `e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c`.
+Neither its ONNX metadata nor the project-owned schema-v2 manifest binds a
+checkpoint, training run, exact task-source commit, exporter invocation, or the
+normalizer statistics to their source. It was not executed. M2 remains open and
+the queue is stopped until upstream supplies one of the acceptable authority
+paths recorded in `microduck_contract/policies/official-walking-authority-v1.json`.
+
 ### M3 — Freeze task-specific success gates (P0)
 
 - [ ] Walking: predeclare command ranges, survival duration, tracking error, fall rate, stop drift, foot slip, orientation, and joint/torque margins.
@@ -171,10 +181,10 @@ resources and verify disappearance with `brev ls --json` before ending the task.
 Exit gate: the exact ONNX passes or fails the declared physical protocol. No
 simulation or reference result grants physical authority.
 
-## Immediate next three runs
+## Blocked continuation order
 
-1. Resolve and provenance-bind the designated official walking ONNX without
-   inspecting a final Genesis candidate.
+1. Ingest an upstream immutable manifest or reproducible checkpoint/export
+   chain that closes `official_policy_authority_missing`.
 2. Prove report repeatability with that official policy on visible development
    cases only.
 3. Split visible development cases from held-out acceptance seeds and cases.

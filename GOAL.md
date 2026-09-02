@@ -1,5 +1,7 @@
 # GOAL
 
+<stop-orchestrator/>
+
 ## Active Mission
 
 Turn the working Genesis Metal/MPS pipeline into a reproducible,
@@ -16,6 +18,13 @@ M2 - Build the independent C MuJoCo evaluator
 ## Current Slice
 
 `docs/briefs/013-m2-official-walking-policy-authority.md`
+
+## Current Status
+
+`STOP` - the project-owned walking ONNX is available and structurally valid,
+but no immutable upstream evidence binds it to its checkpoint, training run,
+exact task source, exporter invocation, and observation-normalizer source.
+M2 remains open at `official_policy_authority_missing`.
 
 ## Stop Conditions
 
