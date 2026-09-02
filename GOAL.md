@@ -15,7 +15,7 @@ M1 - Establish the shared semantic contract
 
 ## Current Slice
 
-`docs/briefs/009-m1-backflip-task-semantics.md`
+`docs/briefs/010-m1-versioned-divergence-decision.md`
 
 ## Stop Conditions
 
