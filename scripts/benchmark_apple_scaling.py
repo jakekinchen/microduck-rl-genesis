@@ -49,6 +49,12 @@ def all_finite(value, torch) -> bool:
     return True
 
 
+def learner_parameters_finite(algorithm, torch) -> bool:
+    """Check the separate actor/critic modules exposed by RSL-RL 5.4."""
+    parameters = list(algorithm.actor.parameters()) + list(algorithm.critic.parameters())
+    return all_finite(parameters, torch)
+
+
 def run(num_envs: int) -> dict[str, object]:
     if sys.platform != "darwin":
         raise RuntimeError("Apple scaling benchmark requires macOS")
@@ -98,7 +104,7 @@ def run(num_envs: int) -> dict[str, object]:
         raise RuntimeError("expected exactly one measured PPO iteration")
     finite = {
         "observations": all_finite(env.get_observations(), torch),
-        "learner_parameters": all_finite(list(runner.alg.actor_critic.parameters()), torch),
+        "learner_parameters": learner_parameters_finite(runner.alg, torch),
     }
     if not all(finite.values()):
         raise RuntimeError(f"non-finite state after benchmark iteration: {finite}")

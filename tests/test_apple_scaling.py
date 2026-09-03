@@ -12,6 +12,40 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from benchmarks.apple_scaling import REQUIRED_SIZES, assemble_sweep, select_default, validate_sweep
+from scripts.benchmark_apple_scaling import learner_parameters_finite
+
+
+class FakeTensor:
+    pass
+
+
+class FakeModule:
+    def __init__(self, parameters):
+        self._parameters = parameters
+
+    def parameters(self):
+        return iter(self._parameters)
+
+
+class FakeTorch:
+    @staticmethod
+    def is_tensor(value):
+        return isinstance(value, FakeTensor)
+
+    @staticmethod
+    def isfinite(value):
+        return value
+
+
+class FakeAlgorithm:
+    actor = FakeModule([FakeTensor()])
+    critic = FakeModule([FakeTensor()])
+
+
+FakeTensor.all = lambda self: self
+FakeTensor.item = lambda self: True
+
+assert learner_parameters_finite(FakeAlgorithm(), FakeTorch)
 
 
 def row(size: int, total: float, headroom: float = 0.8, thermal: str = "nominal") -> dict:
