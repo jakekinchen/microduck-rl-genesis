@@ -15,11 +15,11 @@ M4 - Characterize Apple scaling and stability
 
 ## Current Slice
 
-`docs/briefs/018-m4-apple-scaling-harness.md`
+`docs/briefs/019-m4-apple-scaling-sweep.md`
 
 ## Current Status
 
-`ACTIVE` - add and run a bounded Apple scaling benchmark harness.
+`ACTIVE` - run the accepted harness across preregistered Apple scaling sizes.
 `official_policy_authority_missing` blocks only the official-policy
 repeatability sub-gate.
 

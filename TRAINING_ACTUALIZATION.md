@@ -148,6 +148,12 @@ policy trajectory or candidate result was inspected.
 
 ### M4 — Characterize Apple scaling and stability (P1)
 
+Harness implementation accepted on 2026-09-03 at commit `05c05e3`: it records
+a real Metal/MPS PPO iteration, clean source/package/machine provenance,
+finiteness, thermal-method limitations, and an explicit peak-RSS unified-memory
+proxy. M4 remains active pending the preregistered sweep, sustained stability,
+and CPU+MPS fallback crossover.
+
 - [ ] Benchmark 64, 128, 256, 512, and, if memory permits, 1,024 environments.
 - [ ] Record physics SPS, rollout time, PPO update time, synchronization, reset cost, peak unified memory, thermals, NaNs, and samples/minute.
 - [ ] Run sustained thermal tests and define the default everyday environment count.
