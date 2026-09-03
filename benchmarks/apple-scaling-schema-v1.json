@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.apple-scaling-sweep/v1",
+  "title": "MicroDuck Apple scaling sweep receipt",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_commit",
+    "rows",
+    "proof_class",
+    "task_success",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": "microduck.apple-scaling-sweep/v1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "source_commit": {"type": "string", "minLength": 7},
+    "rows": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {"$ref": "#/$defs/row"}
+    },
+    "proof_class": {"const": "performance_characterization"},
+    "task_success": {"const": "not_evaluated"},
+    "limitations": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "row": {
+      "type": "object",
+      "required": [
+        "schema_version", "num_envs", "construction_s", "warmup_iteration_s",
+        "collection_s", "learner_update_s", "total_iteration_s", "reset_s",
+        "synchronization_s", "env_steps_per_s", "samples_per_minute",
+        "peak_rss_bytes", "unified_memory", "devices", "backend", "thermal",
+        "finite", "termination_reason", "benchmark", "source", "machine",
+        "packages", "proof_class", "task_success"
+      ],
+      "properties": {
+        "schema_version": {"const": "microduck.apple-scaling-row/v1"},
+        "num_envs": {"enum": [64, 128, 256, 512, 1024]},
+        "finite": {
+          "type": "object",
+          "required": ["observations", "learner_parameters"],
+          "properties": {
+            "observations": {"const": true},
+            "learner_parameters": {"const": true}
+          },
+          "additionalProperties": false
+        },
+        "termination_reason": {"const": "completed"},
+        "proof_class": {"const": "performance_characterization"},
+        "task_success": {"const": "not_evaluated"}
+      },
+      "additionalProperties": true
+    }
+  }
+}
