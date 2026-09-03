@@ -15,11 +15,11 @@ M4 - Characterize Apple scaling and stability
 
 ## Current Slice
 
-`docs/briefs/019-m4-apple-scaling-sweep.md`
+`docs/briefs/020-m4-apple-sustained-stability.md`
 
 ## Current Status
 
-`ACTIVE` - run the accepted harness across preregistered Apple scaling sizes.
+`ACTIVE` - run the preregistered sustained 1024-environment Apple slice.
 `official_policy_authority_missing` blocks only the official-policy
 repeatability sub-gate.
 

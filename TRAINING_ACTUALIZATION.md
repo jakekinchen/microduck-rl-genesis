@@ -154,6 +154,12 @@ finiteness, thermal-method limitations, and an explicit peak-RSS unified-memory
 proxy. M4 remains active pending the preregistered sweep, sustained stability,
 and CPU+MPS fallback crossover.
 
+Primary scaling sweep accepted on 2026-09-03: all five sizes through 1024 were
+finite, thermally nominal by the declared `pmset` warning-state method, and
+above 97.75% RSS-proxy headroom. At 1024, total PPO iteration was 4.271 s and
+total-iteration-derived throughput was highest at 345,246 samples/min. This
+selects only the preregistered sustained-test candidate, not the default.
+
 - [ ] Benchmark 64, 128, 256, 512, and, if memory permits, 1,024 environments.
 - [ ] Record physics SPS, rollout time, PPO update time, synchronization, reset cost, peak unified memory, thermals, NaNs, and samples/minute.
 - [ ] Run sustained thermal tests and define the default everyday environment count.
