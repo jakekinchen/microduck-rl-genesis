@@ -15,14 +15,13 @@ M5 - Run the decisive cross-backend training experiment
 
 ## Current Slice
 
-`UNASSIGNED` - requires a separately reviewed immutable experiment brief.
+`docs/briefs/023-m5-immutable-experiment-contract.md`
 
 ## Current Status
 
-`BLOCKED` - M4 is accepted and closed. M5 candidate training requires the
-missing official-policy authority plus separately authorized CUDA execution;
-paid compute, credentials, and candidate activation remain outside current
-authority. No M5 candidate has been started.
+`ACTIVE` - freeze and validate the M5 experiment contract only. Candidate
+admission remains blocked by missing official-policy authority and separately
+authorized CUDA execution. No M5 seed run is authorized.
 
 ## Stop Conditions
 
