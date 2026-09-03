@@ -1,0 +1,13 @@
+{
+  "$schema": "../../hardware-attestation-v1.schema.json",
+  "schema_version": "microduck.hardware-attestation/v1",
+  "attestation_id": "synthetic.community.hardware-attestation.v1",
+  "synthetic_fixture": true,
+  "manifest": {"path": "policy-manifest-v2.json", "sha256": "sha256:c932e580d9b24c691d579d5a94bb3a34330a70e4c180939213a8fe328af20ae8", "size_bytes": 2343},
+  "hardware": {"robot_revision": "synthetic-none", "servo_revision": "synthetic-none", "firmware_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "runtime_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "serial_recorded": false},
+  "operator_protocol": {"id": "synthetic.not-executed.v1", "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"},
+  "approval": "not_requested",
+  "activation": "not_authorized",
+  "result": "not_executed",
+  "physical_authority": "not_granted"
+}

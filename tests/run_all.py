@@ -12,6 +12,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TESTS = [
+    ("contrats artefact et attestations M6", "test_artifact_contract.py"),
     ("contrat immuable expérience M5", "test_m5_experiment_contract.py"),
     ("schéma benchmark Apple", "test_apple_scaling.py"),
     ("matérialisation BAM épinglée", "test_materialize_bam_authority.py"),

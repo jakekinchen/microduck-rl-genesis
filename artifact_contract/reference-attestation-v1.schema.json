@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.reference-attestation/v1",
+  "title": "MicroDuck reference artifact attestation",
+  "type": "object",
+  "required": ["schema_version", "attestation_id", "synthetic_fixture", "manifest", "reference", "evaluator", "result", "grants"],
+  "properties": {
+    "schema_version": {"const": "microduck.reference-attestation/v1"},
+    "result": {"const": "not_evaluated"}
+  },
+  "additionalProperties": false
+}

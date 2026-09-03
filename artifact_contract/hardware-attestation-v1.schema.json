@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.hardware-attestation/v1",
+  "title": "MicroDuck hardware artifact attestation",
+  "type": "object",
+  "required": ["schema_version", "attestation_id", "synthetic_fixture", "manifest", "hardware", "operator_protocol", "approval", "activation", "result", "physical_authority"],
+  "properties": {
+    "schema_version": {"const": "microduck.hardware-attestation/v1"},
+    "approval": {"enum": ["not_requested", "explicitly_granted"]},
+    "activation": {"enum": ["not_authorized", "authorized"]},
+    "result": {"enum": ["not_executed", "terminal_negative", "protocol_passed"]},
+    "physical_authority": {"enum": ["not_granted", "hardware_observed", "physically_accepted"]}
+  },
+  "additionalProperties": false
+}

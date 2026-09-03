@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.policy-manifest/v2",
+  "title": "MicroDuck immutable policy manifest v2",
+  "type": "object",
+  "required": ["schema_version", "artifact_id", "source_class", "synthetic_fixture", "source", "interface", "bindings", "lifecycle", "authority"],
+  "properties": {
+    "schema_version": {"const": "microduck.policy-manifest/v2"},
+    "source_class": {"enum": ["official", "community"]},
+    "synthetic_fixture": {"type": "boolean"},
+    "bindings": {"type": "object", "minProperties": 10},
+    "authority": {"enum": ["synthetic_validation_only", "artifact_attributed", "evaluated", "approved_for_activation"]}
+  },
+  "additionalProperties": false
+}

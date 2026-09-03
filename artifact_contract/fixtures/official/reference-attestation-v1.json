@@ -1,0 +1,11 @@
+{
+  "$schema": "../../reference-attestation-v1.schema.json",
+  "schema_version": "microduck.reference-attestation/v1",
+  "attestation_id": "synthetic.official.reference-attestation.v1",
+  "synthetic_fixture": true,
+  "manifest": {"path": "policy-manifest-v2.json", "sha256": "sha256:d4c62939de844a8600835c4490c8b348870b40582cfa1d25d4d0f489669996b3", "size_bytes": 2339},
+  "reference": {"source_class": "official", "repository": "https://example.invalid/official-fixture.git", "revision": "0000000000000000000000000000000000000000", "artifact_sha256": "sha256:1054ae45e82074386cd99bd3fac59a1abf8d671755a0bb598aa20711af6d6da7"},
+  "evaluator": {"path": "evaluator.json", "sha256": "sha256:b1641f25d663b9bd1a16ffab9747b1e315df2d5434e1bcb076e78e5f3b8bcc94"},
+  "result": "not_evaluated",
+  "grants": {"task_success": false, "transfer": false, "hardware": false, "activation": false}
+}

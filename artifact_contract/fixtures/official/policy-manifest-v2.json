@@ -1,0 +1,29 @@
+{
+  "$schema": "../../policy-manifest-v2.schema.json",
+  "schema_version": "microduck.policy-manifest/v2",
+  "artifact_id": "synthetic.official.walking.fixture.v1",
+  "source_class": "official",
+  "synthetic_fixture": true,
+  "source": {
+    "repository": "https://example.invalid/official-fixture.git",
+    "commit": "0000000000000000000000000000000000000000",
+    "run_id": "synthetic-official-run",
+    "checkpoint_transition": 49152000,
+    "exporter_invocation": "fixture-only; never execute"
+  },
+  "interface": {"observation_dim": 61, "action_dim": 14, "control_hz": 50, "normalization": "baked_into_onnx_and_separately_bound"},
+  "bindings": {
+    "normalized_onnx": {"path": "policy.normalized.onnx", "sha256": "sha256:1054ae45e82074386cd99bd3fac59a1abf8d671755a0bb598aa20711af6d6da7", "size_bytes": 73},
+    "normalizer": {"path": "normalizer.json", "sha256": "sha256:91b6cf31c220b68d86e64501d482075a3a93c7a3cbebecf3c9d27acc99eb4147", "size_bytes": 69},
+    "source_checkpoint": {"path": "checkpoint.pt", "sha256": "sha256:ad10c0c8c15a9fe2d3a5422aa2a4d0f0c51fcdd4cd734579cdf67fbd4079ccf3", "size_bytes": 66},
+    "exporter": {"path": "exporter.py", "sha256": "sha256:774696ff6d3235ee91a1bbd1f41c3b9bc17c06761a40bf8c2ee0e1c9bd10dd4a", "size_bytes": 75},
+    "model": {"path": "model.xml", "sha256": "sha256:bef1c008671b0f3749ff939ac4b6f09631a0c64bf22b37810ae58ee849d9495f", "size_bytes": 66},
+    "bam": {"path": "bam.json", "sha256": "sha256:bfa29160f414b30847957528d933235ff121a868e2853a57f87333495cfc0209", "size_bytes": 79},
+    "task": {"path": "task.json", "sha256": "sha256:1eac128963f07fb0a69c344b9afdcfc68c18b85f5ff8c4759bab42764d4b598b", "size_bytes": 59},
+    "evaluator": {"path": "evaluator.json", "sha256": "sha256:b1641f25d663b9bd1a16ffab9747b1e315df2d5434e1bcb076e78e5f3b8bcc94", "size_bytes": 60},
+    "evidence": {"path": "evidence.json", "sha256": "sha256:836f6aa206cacb0cea8ab4cfe438692396e812aed253af2c835650eb826a81b5", "size_bytes": 90},
+    "license": {"path": "LICENSE.txt", "sha256": "sha256:ac34b0c8a8966c432a570455bc953c36a077f7832ab66b63acc4158f32f83748", "size_bytes": 89}
+  },
+  "lifecycle": {"download": "synthetic_fixture", "library_import": "not_performed", "evaluation": "not_performed", "approval": "not_requested", "activation": "not_authorized"},
+  "authority": "synthetic_validation_only"
+}
