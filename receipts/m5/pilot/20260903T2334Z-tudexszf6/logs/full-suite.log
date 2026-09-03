@@ -1,0 +1,261 @@
+
+======================================================================
+inventaire provenance fichiers M6
+======================================================================
+file-level MJCF/mesh/policy/dataset/media provenance and negative statuses verified
+
+======================================================================
+contrats artefact et attestations M6
+======================================================================
+policy manifest v2 and reference/hardware attestation fixtures verified without execution
+
+======================================================================
+contrat immuable expérience M5
+======================================================================
+M5 immutable experiment contract and negative drift probes verified
+
+======================================================================
+schéma benchmark Apple
+======================================================================
+Apple scaling schema/default selection verified
+
+======================================================================
+matérialisation BAM épinglée
+======================================================================
+BAM authority materializer verified: moved branch cannot repin exact commit
+
+======================================================================
+vecteurs BAM dorés épinglés
+======================================================================
+29 pinned BAM vectors verified
+control_voltage_v: max error 1.776e-15
+motor_torque_nm: max error 2.220e-16
+bam_core_frictionloss_nm: max error 2.776e-17
+mjlab_deployed_frictionloss_nm: max error 0.000e+00
+reset state verified; battery voltage preserved
+
+======================================================================
+trajectoire BAM 14 servos épinglée
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_bam_closed_loop_fixture.py", line 147, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/src/genesis-current/tests/test_bam_closed_loop_fixture.py", line 87, in main
+    robot.control_dofs_force(actuator.compute(target), dofs)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:42:59] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+réconciliation des modèles épinglée
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_model_reconciliation.py", line 61, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/src/genesis-current/tests/test_model_reconciliation.py", line 50, in main
+    assert digest_json(actual) == row["local_manifest_sha256"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+sémantique de marche épinglée
+======================================================================
+Walking semantics verified against pinned authorities.
+walking semantics verified: 61D/14D/50Hz, 28 classified fields, 230 preregistered cases
+
+======================================================================
+sémantique de backflip épinglée
+======================================================================
+backflip semantics verified: 61D/14D/50Hz, 32 classified fields, 20 zero-assistance cases
+
+======================================================================
+décision de divergence versionnée
+======================================================================
+versioned divergence decision verified: 45 non-exact fields, local and not submitted
+
+======================================================================
+coeur évaluateur C MuJoCo
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_evaluator_core.py", line 54, in <module>
+    assert first_bytes == EXPECTED.read_bytes()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+matrice de cas évaluateur
+======================================================================
+evaluator case matrix verified: 10 cases, 9 required families, byte-identical repeats
+
+======================================================================
+protocole held-out aveugle
+======================================================================
+held-out protocol verified: post-freeze derivation only, no live seed realized
+
+======================================================================
+classifieurs de réussite
+======================================================================
+success classifiers verified: walking 230 cells, backflip 20 cells, assisted/failure/coverage rejected
+
+======================================================================
+bundle évaluateur de développement
+======================================================================
+/workspace/venvs/genesis/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/workspace/venvs/genesis/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65537) b'The GLFW library is not initialized'
+  warnings.warn(message, GLFWError)
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_evaluator_bundle.py", line 43, in <module>
+    write_bundle(POLICY, Path(BAM_REPO), first)
+  File "/workspace/src/genesis-current/evaluator/bundle.py", line 123, in write_bundle
+    report, case_rows, case_frames = core.run_case(case, capture_frames=True)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/evaluator/core.py", line 300, in run_case
+    renderer = mujoco.Renderer(self.model, height=240, width=320)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/mujoco/rendering/classic/renderer.py", line 92, in __init__
+    self._mjr_context = mujoco.MjrContext(model, font_scale.value)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mujoco.FatalError: an OpenGL platform library has not been loaded into this process, this most likely means that a valid OpenGL context has not been created before mjr_makeContext was called
+
+======================================================================
+autorité ONNX marche officielle
+======================================================================
+official walking authority verified: terminal missing-authority result, official artifact not executed
+
+======================================================================
+formules BAM vs référence Rhoban
+======================================================================
+tension (loi firmware)             écart max = 0.000e+00
+couple moteur (contre-FEM)         écart max = 0.000e+00
+frottement m6 (version papier)     écart max = 5.551e-17
+frottement m6 (version mjlab)      écart max = 3.092e-03 (1.52 % — garde enable_quadratic omise en amont, cf. README)
+OK — formules BAM bit-exactes
+
+======================================================================
+couple externe vs MuJoCo
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_external_torque.py", line 38, in <module>
+    qf_bias = qd_to_torch(sv.dyn_state.dofs.qf_bias, transpose=True)[0]
+                          ^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:43:49] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+boucle actionneur vs MuJoCo+BAM
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_bam_vs_mujoco.py", line 99, in <module>
+    robot.control_dofs_force(bam.compute(target), dofs)
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:44:07] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+randomisation de domaine
+======================================================================
+[38;5;226m[Genesis] [23:44:19] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_dr.py", line 44, in <module>
+    env.bam.compute(env.default_dof_pos.unsqueeze(0).repeat(8, 1))
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:46:30] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+contrat d'observation 61-D
+======================================================================
+[38;5;226m[Genesis] [23:46:43] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+découpe : 61 dimensions, 8 tranches
+projected_gravity debout : [0.0, 0.0, -1.0]
+joint_pos à la pose HOME  : max |·| = 0.00e+00
+tranches de commande : conformes
+  left_hip_yaw     → indice 0 ✓
+  neck_pitch       → indice 5 ✓
+  right_ankle      → indice 13 ✓
+head_pose pilote ('neck_pitch', 'head_pitch', 'head_yaw', 'head_roll') → indices [5, 6, 7, 8]
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_obs_contract.py", line 98, in <module>
+    env.step(a)
+  File "/workspace/src/genesis-current/microduck/velocity_env.py", line 517, in step
+    tau = self.bam.compute(target)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:46:51] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+variante à jeu d'engrenage
+======================================================================
+[38;5;226m[Genesis] [23:47:04] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+modèle : 29 articulations dont 14 de jeu
+jeu imposé +0,500° sur left_knee → vue encodeur +0.500°
+joint_pos de l'observation = vue encodeur ✓
+jeu après relâchement : max 1.015° (butée ±1°)
+contrat inchangé : obs 61, action 14
+OK — variante à jeu d'engrenage conforme
+
+======================================================================
+ONNX de déploiement vs politique
+======================================================================
+aucun checkpoint dans logs/microduck-velocity — test non applicable
+
+======================================================================
+env sol plat
+======================================================================
+[38;5;226m[Genesis] [23:47:27] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+obs policy    : (16, 61)
+obs privileged: (16, 29)
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/smoke_env.py", line 17, in <module>
+    obs, rew, done, extras = env.step(a)
+                             ^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/velocity_env.py", line 517, in step
+    tau = self.bam.compute(target)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:47:45] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+env terrain accidenté
+======================================================================
+[38;5;226m[Genesis] [23:48:00] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+[38;5;226m[Genesis] [23:48:03] [WARNING] Beware that SDF pre-processing of mesh  having more than 50000 vertices may take a very long time (>10min) and require large RAM allocation (>20Gb). Please either enable convexify or decimation. (see FileMorph options)[0m
+[38;5;226m[Genesis] [23:48:16] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m

@@ -1,0 +1,1694 @@
+Thu Sep  3 23:33:16 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:00:07.0 Off |                    0 |
+| N/A   37C    P0             47W /  300W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Linux c9f116fec586 6.8.0-90-generic #91~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 15:20:45 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 https://pkgs.netbird.io/debian stable InRelease
+Hit:5 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:6 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64  InRelease
+Reading package lists...
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20260601~24.04.1).
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+python3 is already the newest version (3.12.3-0ubuntu2.1).
+python3 set to manually installed.
+The following additional packages will be installed:
+  python3-pip-whl python3-setuptools python3-setuptools-whl python3-wheel
+  python3.12-venv
+Suggested packages:
+  python-setuptools-doc
+Recommended packages:
+  python3-dev
+The following NEW packages will be installed:
+  python3-pip python3-pip-whl python3-setuptools python3-setuptools-whl
+  python3-venv python3-wheel python3.12-venv
+0 upgraded, 7 newly installed, 0 to remove and 94 not upgraded.
+Need to get 4199 kB of archives.
+After this operation, 12.3 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-setuptools all 68.1.2-2ubuntu1.2 [397 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-wheel all 0.42.0-2 [53.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip all 24.0+dfsg-1ubuntu1.3 [1320 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip-whl all 24.0+dfsg-1ubuntu1.3 [1707 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-setuptools-whl all 68.1.2-2ubuntu1.2 [716 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3.12-venv amd64 3.12.3-1ubuntu0.16 [5682 B]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-venv amd64 3.12.3-0ubuntu2.1 [1032 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 4199 kB in 2s (2577 kB/s)
+Selecting previously unselected package python3-setuptools.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18478 files and directories currently installed.)
+Preparing to unpack .../0-python3-setuptools_68.1.2-2ubuntu1.2_all.deb ...
+Unpacking python3-setuptools (68.1.2-2ubuntu1.2) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../1-python3-wheel_0.42.0-2_all.deb ...
+Unpacking python3-wheel (0.42.0-2) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../2-python3-pip_24.0+dfsg-1ubuntu1.3_all.deb ...
+Unpacking python3-pip (24.0+dfsg-1ubuntu1.3) ...
+Selecting previously unselected package python3-pip-whl.
+Preparing to unpack .../3-python3-pip-whl_24.0+dfsg-1ubuntu1.3_all.deb ...
+Unpacking python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../4-python3-setuptools-whl_68.1.2-2ubuntu1.2_all.deb ...
+Unpacking python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+Selecting previously unselected package python3.12-venv.
+Preparing to unpack .../5-python3.12-venv_3.12.3-1ubuntu0.16_amd64.deb ...
+Unpacking python3.12-venv (3.12.3-1ubuntu0.16) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../6-python3-venv_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking python3-venv (3.12.3-0ubuntu2.1) ...
+Setting up python3-setuptools-whl (68.1.2-2ubuntu1.2) ...
+Setting up python3-setuptools (68.1.2-2ubuntu1.2) ...
+Setting up python3-pip-whl (24.0+dfsg-1ubuntu1.3) ...
+Setting up python3-wheel (0.42.0-2) ...
+Setting up python3-pip (24.0+dfsg-1ubuntu1.3) ...
+Setting up python3.12-venv (3.12.3-1ubuntu0.16) ...
+Setting up python3-venv (3.12.3-0ubuntu2.1) ...
+Collecting uv==0.8.19
+  Downloading uv-0.8.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Downloading uv-0.8.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.9/20.9 MB 34.1 MB/s eta 0:00:00
+Installing collected packages: uv
+Successfully installed uv-0.8.19
+Cloning into '/workspace/src/genesis-current'...
+warning: remote HEAD refers to nonexistent ref, unable to checkout
+HEAD is now at bb2a235 docs: approve corrected M5 CUDA pilot contract
+Cloning into '/workspace/src/genesis-training'...
+done.
+Note: switching to 'bb2a23596bc7d676c616f3f4277812d009df645f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Warning: you are leaving 11 commits behind, not connected to
+any of your branches:
+
+  bb2a235 docs: approve corrected M5 CUDA pilot contract
+  7a8feb6 fix: fail close M5 CUDA pilot contract
+  6996854 docs: reject unsafe M5 CUDA pilot amendment
+  beab439 docs: authorize bounded M5 CUDA pilot
+ ... and 7 more.
+
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> bb2a235
+
+HEAD is now at 93cd5f2 docs: close Apple scaling milestone
+Cloning into '/workspace/src/microduck-rl'...
+Note: switching to '109e06d4ce4921b635c5609e5304079fc30960ae'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 109e06d docs: authorize corrected Genesis rollers attempt
+Cloning into '/workspace/src/microduck-backflip'...
+Note: switching to '8bde27eb141c8f14db05fc4370e536521203a98d'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 8bde27e feat: add bounded-harness recovery curriculum
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: /workspace/venvs/genesis
+Activate with: source /workspace/venvs/genesis/bin/activate
+Using Python 3.12.3 environment at: /workspace/venvs/genesis
+Resolved 125 packages in 1.27s
+Downloading pydantic-core (2.0MiB)
+Downloading matplotlib (9.6MiB)
+Downloading imageio-ffmpeg (28.1MiB)
+Downloading scipy (33.7MiB)
+Downloading llvmlite (57.1MiB)
+Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+Downloading onnx (18.2MiB)
+Downloading tensorboard-data-server (6.3MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading pyopengl (3.0MiB)
+Downloading numba (3.7MiB)
+Downloading pillow (6.3MiB)
+Downloading tensorboard (5.3MiB)
+Downloading sympy (6.0MiB)
+Downloading nvidia-cudnn-cu12 (674.0MiB)
+Downloading nvidia-cufft-cu12 (184.2MiB)
+Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+Downloading nvidia-nvshmem-cu12 (118.9MiB)
+Downloading nvidia-cusolver-cu12 (255.1MiB)
+Downloading z3-solver (27.9MiB)
+Downloading openexr (1.2MiB)
+Downloading libigl (13.2MiB)
+Downloading plotly (18.2MiB)
+Downloading grpcio (6.7MiB)
+Downloading nvidia-nccl-cu12 (307.4MiB)
+Downloading numpy (15.9MiB)
+Downloading nvidia-cublas-cu12 (566.8MiB)
+Downloading pymeshlab (101.6MiB)
+Downloading networkx (2.0MiB)
+Downloading fonttools (5.2MiB)
+Downloading opencv-python (70.4MiB)
+Downloading nvidia-curand-cu12 (60.7MiB)
+Downloading triton (162.6MiB)
+Downloading vtk (133.2MiB)
+Downloading dracopy (4.9MiB)
+Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+Downloading torchvision (7.7MiB)
+Downloading scikit-image (12.9MiB)
+Downloading pyarrow (40.8MiB)
+Downloading nvidia-cusparselt-cu12 (273.9MiB)
+Downloading nvidia-cusparse-cu12 (274.9MiB)
+Downloading onnxruntime (22.1MiB)
+Downloading torch (858.1MiB)
+Downloading coacd (2.5MiB)
+Downloading pygel3d (1.6MiB)
+Downloading mujoco (18.9MiB)
+Downloading gs-madrona (60.9MiB)
+Downloading quadrants (45.9MiB)
+Downloading pysplashsurf (2.8MiB)
+Downloading genesis-world (79.4MiB)
+ Downloading openexr
+Downloading pygments (1.2MiB)
+ Downloading kiwisolver
+Downloading nvidia-cufile-cu12 (1.1MiB)
+ Downloading pygel3d
+ Downloading pydantic-core
+ Downloading nvidia-cufile-cu12
+ Downloading coacd
+ Downloading pygments
+ Downloading pysplashsurf
+ Downloading networkx
+ Downloading numba
+ Downloading dracopy
+ Downloading fonttools
+ Downloading tensorboard
+   Building pygltflib==1.16.0
+      Built pygltflib==1.16.0
+ Downloading sympy
+ Downloading pillow
+ Downloading tensorboard-data-server
+ Downloading grpcio
+ Downloading torchvision
+ Downloading matplotlib
+ Downloading nvidia-cuda-cupti-cu12
+ Downloading pyopengl
+ Downloading scikit-image
+ Downloading libigl
+ Downloading numpy
+ Downloading mujoco
+ Downloading onnxruntime
+ Downloading onnx
+ Downloading imageio-ffmpeg
+ Downloading z3-solver
+ Downloading scipy
+ Downloading nvidia-nvjitlink-cu12
+ Downloading pyarrow
+ Downloading quadrants
+ Downloading llvmlite
+ Downloading nvidia-curand-cu12
+ Downloading plotly
+ Downloading opencv-python
+ Downloading nvidia-cuda-nvrtc-cu12
+ Downloading genesis-world
+ Downloading pymeshlab
+ Downloading gs-madrona
+ Downloading nvidia-nvshmem-cu12
+ Downloading vtk
+ Downloading nvidia-cufft-cu12
+ Downloading triton
+ Downloading nvidia-cusolver-cu12
+ Downloading nvidia-cusparse-cu12
+ Downloading nvidia-cusparselt-cu12
+ Downloading nvidia-nccl-cu12
+ Downloading nvidia-cublas-cu12
+ Downloading nvidia-cudnn-cu12
+ Downloading torch
+Prepared 124 packages in 40.96s
+Installed 125 packages in 828ms
+ + absl-py==2.5.0
+ + annotated-types==0.8.0
+ + cffi==2.1.1
+ + cloudpickle==3.1.2
+ + coacd==1.0.14
+ + colorama==0.4.6
+ + contourpy==1.3.3
+ + cycler==0.12.1
+ + dataclasses-json==0.6.7
+ + decorator==5.3.1
+ + deprecated==1.3.1
+ + dill==0.4.1
+ + dracopy==2.0.0
+ + etils==1.14.0
+ + fast-simplification==0.2.0
+ + filelock==3.32.5
+ + flatbuffers==25.12.19
+ + fonttools==4.64.0
+ + freetype-py==2.5.1
+ + frozendict==2.4.7
+ + fsspec==2026.7.0
+ + genesis-world==1.2.2
+ + gitdb==4.0.12
+ + gitpython==3.1.61
+ + glfw==2.10.2
+ + grpcio==1.83.1
+ + gs-madrona==0.0.7.post2
+ + imageio==2.37.4
+ + imageio-ffmpeg==0.6.0
+ + importlib-metadata==9.0.1
+ + jinja2==3.1.6
+ + kiwisolver==1.5.1
+ + lazy-loader==0.5
+ + libigl==2.6.3
+ + llvmlite==0.49.0
+ + markdown==3.10.3
+ + markdown-it-py==4.2.0
+ + markupsafe==3.0.3
+ + marshmallow==3.26.2
+ + matplotlib==3.11.1
+ + mdurl==0.1.2
+ + ml-dtypes==0.6.0
+ + moviepy==2.2.1
+ + mpmath==1.3.0
+ + mujoco==3.12.0
+ + mypy-extensions==1.1.0
+ + networkx==3.6.1
+ + numba==0.67.0
+ + numpy==2.5.2
+ + nvidia-cublas-cu12==12.8.4.1
+ + nvidia-cuda-cupti-cu12==12.8.90
+ + nvidia-cuda-nvrtc-cu12==12.8.93
+ + nvidia-cuda-runtime-cu12==12.8.90
+ + nvidia-cudnn-cu12==9.10.2.21
+ + nvidia-cufft-cu12==11.3.3.83
+ + nvidia-cufile-cu12==1.13.1.3
+ + nvidia-curand-cu12==10.3.9.90
+ + nvidia-cusolver-cu12==11.7.3.90
+ + nvidia-cusparse-cu12==12.5.8.93
+ + nvidia-cusparselt-cu12==0.7.1
+ + nvidia-nccl-cu12==2.27.5
+ + nvidia-nvjitlink-cu12==12.8.93
+ + nvidia-nvshmem-cu12==3.3.20
+ + nvidia-nvtx-cu12==12.8.90
+ + onnx==1.22.0
+ + onnx-ir==1.0.0
+ + onnxruntime==1.29.0
+ + onnxscript==0.7.1
+ + opencv-python==5.0.0.93
+ + openexr==3.4.15
+ + orjson==3.12.0
+ + packaging==26.3
+ + pillow==11.3.0
+ + plotly==5.24.1
+ + proglog==0.1.12
+ + protobuf==7.36.1
+ + psutil==7.2.2
+ + py-cpuinfo==9.0.0
+ + pyarrow==21.0.0
+ + pycollada==0.9.3
+ + pycparser==3.0
+ + pydantic==2.13.5
+ + pydantic-core==2.46.5
+ + pygel3d==0.8.2
+ + pyglet==2.1.16
+ + pygltflib==1.16.0
+ + pygments==2.21.0
+ + pymeshlab==2025.7.post1
+ + pyopengl==3.1.10
+ + pyparsing==3.3.2
+ + pysplashsurf==0.14.1.0
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.3
+ + pyvers==0.2.3
+ + pyyaml==6.0.3
+ + quadrants==1.0.2
+ + rich==15.0.0
+ + rsl-rl-lib==5.4.2
+ + rtree==1.4.1
+ + scikit-image==0.26.0
+ + scipy==1.18.1
+ + setuptools==84.0.0
+ + six==1.17.0
+ + smmap==5.0.3
+ + sympy==1.14.0
+ + tenacity==9.1.4
+ + tensorboard==2.21.0
+ + tensorboard-data-server==0.7.2
+ + tensordict==0.14.0
+ + tetgen==0.8.2
+ + tifffile==2026.8.23
+ + torch==2.9.1
+ + torchvision==0.24.1
+ + tqdm==4.70.0
+ + trimesh==5.1.0
+ + triton==3.5.1
+ + typing-extensions==4.16.0
+ + typing-inspect==0.9.0
+ + typing-inspection==0.4.4
+ + vtk==9.7.0
+ + werkzeug==3.1.8
+ + wrapt==2.4.0
+ + xacro==2.1.1
+ + z3-solver==4.15.4.0
+ + zipp==4.1.0
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: /workspace/src/microduck-rl/.venv
+   Updating https://github.com/Rhoban/bam.git (mjlab_frictionloss)
+   Building mjlab-microduck @ file:///workspace/src/microduck-rl
+      Built mjlab-microduck @ file:///workspace/src/microduck-rl
+Downloading kiwisolver (1.4MiB)
+Downloading pynacl (1.3MiB)
+Downloading numpy (15.6MiB)
+Downloading pygments (1.2MiB)
+Downloading setuptools (1.1MiB)
+Downloading jedi (4.7MiB)
+Downloading zstandard (5.3MiB)
+Downloading cryptography (4.3MiB)
+Downloading matplotlib (8.4MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading fonttools (4.8MiB)
+Downloading mujoco-warp (1.9MiB)
+Downloading mujoco (19.9MiB)
+Downloading warp-lang (130.2MiB)
+Downloading tensorboard (5.3MiB)
+Downloading viser (4.8MiB)
+Downloading pillow (6.8MiB)
+Downloading scipy (33.7MiB)
+Downloading ml-dtypes (4.8MiB)
+Downloading grpcio (6.3MiB)
+Downloading hf-xet (4.3MiB)
+Downloading mjlab (13.5MiB)
+Downloading wandb (21.8MiB)
+Downloading rustypot (1.8MiB)
+Downloading onnxruntime (16.4MiB)
+Downloading torch (858.1MiB)
+Downloading nvidia-cublas-cu12 (566.8MiB)
+Downloading nvidia-cusolver-cu12 (255.1MiB)
+Downloading nvidia-cudnn-cu12 (674.0MiB)
+Downloading nvidia-nccl-cu12 (307.4MiB)
+Downloading nvidia-cusparse-cu12 (274.9MiB)
+Downloading triton (162.6MiB)
+Downloading nvidia-cufft-cu12 (184.2MiB)
+Downloading nvidia-cusparselt-cu12 (273.9MiB)
+Downloading nvidia-nvshmem-cu12 (118.9MiB)
+Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+Downloading onnx (18.2MiB)
+Downloading imageio-ffmpeg (28.1MiB)
+Downloading nvidia-curand-cu12 (60.7MiB)
+Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+Downloading torchvision (7.7MiB)
+Downloading tensorboard-data-server (6.3MiB)
+Downloading sympy (6.0MiB)
+Downloading pyopengl (3.0MiB)
+ Downloading kiwisolver
+Downloading networkx (2.0MiB)
+Downloading nvidia-cufile-cu12 (1.1MiB)
+ Downloading pynacl
+    Updated https://github.com/Rhoban/bam.git (62bd8ce12154340be97e06f7f41a0ca8f116d967)
+   Building better-actuator-models @ git+https://github.com/Rhoban/bam.git@62bd8ce12154340be97e06f7f41a0ca8f116d967
+ Downloading rustypot
+ Downloading pydantic-core
+ Downloading mujoco-warp
+ Downloading pygments
+ Downloading nvidia-cufile-cu12
+ Downloading setuptools
+      Built better-actuator-models @ git+https://github.com/Rhoban/bam.git@62bd8ce12154340be97e06f7f41a0ca8f116d967
+ Downloading networkx
+ Downloading hf-xet
+ Downloading cryptography
+ Downloading viser
+ Downloading ml-dtypes
+ Downloading fonttools
+ Downloading zstandard
+ Downloading tensorboard
+ Downloading grpcio
+ Downloading pillow
+ Downloading sympy
+ Downloading tensorboard-data-server
+ Downloading matplotlib
+ Downloading torchvision
+ Downloading pyopengl
+ Downloading nvidia-cuda-cupti-cu12
+ Downloading mjlab
+ Downloading jedi
+ Downloading numpy
+ Downloading onnxruntime
+ Downloading mujoco
+ Downloading wandb
+ Downloading imageio-ffmpeg
+ Downloading scipy
+ Downloading nvidia-nvjitlink-cu12
+ Downloading nvidia-curand-cu12
+ Downloading nvidia-cuda-nvrtc-cu12
+ Downloading onnx
+ Downloading nvidia-nvshmem-cu12
+ Downloading warp-lang
+ Downloading triton
+ Downloading nvidia-cufft-cu12
+ Downloading nvidia-cusolver-cu12
+ Downloading nvidia-cusparse-cu12
+ Downloading nvidia-cusparselt-cu12
+ Downloading nvidia-nccl-cu12
+ Downloading nvidia-cublas-cu12
+ Downloading nvidia-cudnn-cu12
+ Downloading torch
+Prepared 142 packages in 39.49s
+Installed 142 packages in 761ms
+ + absl-py==2.3.1
+ + annotated-doc==0.0.4
+ + annotated-types==0.7.0
+ + anyio==4.12.1
+ + asttokens==3.0.1
+ + bcrypt==5.0.0
+ + better-actuator-models==1.0.1 (from git+https://github.com/Rhoban/bam.git@62bd8ce12154340be97e06f7f41a0ca8f116d967)
+ + certifi==2026.1.4
+ + cffi==2.0.0
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + cloudpickle==3.1.2
+ + colorama==0.4.6
+ + contourpy==1.3.3
+ + cryptography==46.0.3
+ + cycler==0.12.1
+ + decorator==5.2.1
+ + deprecated==1.3.1
+ + docstring-parser==0.17.0
+ + etils==1.13.0
+ + executing==2.2.1
+ + fabric==3.2.2
+ + filelock==3.20.3
+ + flatbuffers==25.12.19
+ + fonttools==4.63.0
+ + fsspec==2026.1.0
+ + gitdb==4.0.12
+ + gitpython==3.1.46
+ + glfw==2.10.0
+ + grpcio==1.76.0
+ + h11==0.16.0
+ + hf-xet==1.5.0
+ + httpcore==1.0.9
+ + httpx==0.28.1
+ + huggingface-hub==1.15.0
+ + idna==3.11
+ + imageio==2.37.2
+ + imageio-ffmpeg==0.6.0
+ + importlib-metadata==8.7.1
+ + importlib-resources==6.5.2
+ + invoke==2.2.1
+ + ipython==9.15.0
+ + ipython-pygments-lexers==1.1.1
+ + jedi==0.20.0
+ + jinja2==3.1.6
+ + kiwisolver==1.5.0
+ + markdown==3.10
+ + markdown-it-py==4.0.0
+ + markupsafe==3.0.3
+ + matplotlib==3.10.9
+ + matplotlib-inline==0.2.2
+ + mdurl==0.1.2
+ + mediapy==1.2.6
+ + mjlab==1.3.0
+ + mjlab-microduck==0.1.0 (from file:///workspace/src/microduck-rl)
+ + mjviser==0.0.14
+ + ml-dtypes==0.5.4
+ + mpmath==1.3.0
+ + msgspec==0.20.0
+ + mujoco==3.10.0
+ + mujoco-warp==3.8.1
+ + networkx==3.6.1
+ + numpy==2.4.1
+ + nvidia-cublas-cu12==12.8.4.1
+ + nvidia-cuda-cupti-cu12==12.8.90
+ + nvidia-cuda-nvrtc-cu12==12.8.93
+ + nvidia-cuda-runtime-cu12==12.8.90
+ + nvidia-cudnn-cu12==9.10.2.21
+ + nvidia-cufft-cu12==11.3.3.83
+ + nvidia-cufile-cu12==1.13.1.3
+ + nvidia-curand-cu12==10.3.9.90
+ + nvidia-cusolver-cu12==11.7.3.90
+ + nvidia-cusparse-cu12==12.5.8.93
+ + nvidia-cusparselt-cu12==0.7.1
+ + nvidia-nccl-cu12==2.27.5
+ + nvidia-nvjitlink-cu12==12.8.93
+ + nvidia-nvshmem-cu12==3.3.20
+ + nvidia-nvtx-cu12==12.8.90
+ + onnx==1.22.0
+ + onnx-ir==0.1.14
+ + onnxruntime==1.24.4
+ + onnxscript==0.5.7
+ + orjson==3.11.5
+ + packaging==25.0
+ + paramiko==4.0.0
+ + parso==0.8.7
+ + pexpect==4.9.0
+ + pillow==12.2.0
+ + platformdirs==4.5.1
+ + prettytable==3.17.0
+ + prompt-toolkit==3.0.52
+ + protobuf==6.33.6
+ + psutil==7.2.2
+ + ptyprocess==0.7.0
+ + pure-eval==0.2.3
+ + pycparser==2.23
+ + pydantic==2.12.5
+ + pydantic-core==2.41.5
+ + pygments==2.19.2
+ + pynacl==1.6.2
+ + pyopengl==3.1.10
+ + pyparsing==3.3.2
+ + python-dateutil==2.9.0.post0
+ + pyvers==0.1.0
+ + pyyaml==6.0.3
+ + requests==2.32.5
+ + rich==14.2.0
+ + rsl-rl-lib==5.0.1
+ + rustypot==1.5.0
+ + scipy==1.18.0
+ + sentry-sdk==2.49.0
+ + setuptools==80.9.0
+ + shellingham==1.5.4
+ + six==1.17.0
+ + smmap==5.0.2
+ + stack-data==0.6.3
+ + sympy==1.14.0
+ + tensorboard==2.20.0
+ + tensorboard-data-server==0.7.2
+ + tensordict==0.10.0
+ + torch==2.9.1
+ + torchrunx==0.3.4
+ + torchvision==0.24.1
+ + tqdm==4.67.1
+ + traitlets==5.15.1
+ + trimesh==4.11.1
+ + triton==3.5.1
+ + typeguard==4.4.4
+ + typer==0.25.1
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ + tyro==1.0.5
+ + urllib3==2.6.3
+ + viser==1.0.30
+ + wandb==0.24.0
+ + warp-lang==1.12.0
+ + wcwidth==0.2.14
+ + websockets==15.0.1
+ + werkzeug==3.1.5
+ + wrapt==2.0.1
+ + zipp==3.23.0
+ + zstandard==0.25.0
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: /workspace/src/microduck-backflip/.venv
+   Building mjlab-microduck @ file:///workspace/src/microduck-backflip
+      Built mjlab-microduck @ file:///workspace/src/microduck-backflip
+Prepared 1 package in 10ms
+Installed 142 packages in 768ms
+ + absl-py==2.3.1
+ + annotated-doc==0.0.4
+ + annotated-types==0.7.0
+ + anyio==4.12.1
+ + asttokens==3.0.1
+ + bcrypt==5.0.0
+ + better-actuator-models==1.0.1 (from git+https://github.com/Rhoban/bam.git@62bd8ce12154340be97e06f7f41a0ca8f116d967)
+ + certifi==2026.1.4
+ + cffi==2.0.0
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + cloudpickle==3.1.2
+ + colorama==0.4.6
+ + contourpy==1.3.3
+ + cryptography==46.0.3
+ + cycler==0.12.1
+ + decorator==5.2.1
+ + deprecated==1.3.1
+ + docstring-parser==0.17.0
+ + etils==1.13.0
+ + executing==2.2.1
+ + fabric==3.2.2
+ + filelock==3.20.3
+ + flatbuffers==25.12.19
+ + fonttools==4.63.0
+ + fsspec==2026.1.0
+ + gitdb==4.0.12
+ + gitpython==3.1.46
+ + glfw==2.10.0
+ + grpcio==1.76.0
+ + h11==0.16.0
+ + hf-xet==1.5.0
+ + httpcore==1.0.9
+ + httpx==0.28.1
+ + huggingface-hub==1.15.0
+ + idna==3.11
+ + imageio==2.37.2
+ + imageio-ffmpeg==0.6.0
+ + importlib-metadata==8.7.1
+ + importlib-resources==6.5.2
+ + invoke==2.2.1
+ + ipython==9.15.0
+ + ipython-pygments-lexers==1.1.1
+ + jedi==0.20.0
+ + jinja2==3.1.6
+ + kiwisolver==1.5.0
+ + markdown==3.10
+ + markdown-it-py==4.0.0
+ + markupsafe==3.0.3
+ + matplotlib==3.10.9
+ + matplotlib-inline==0.2.2
+ + mdurl==0.1.2
+ + mediapy==1.2.6
+ + mjlab==1.3.0
+ + mjlab-microduck==0.1.0 (from file:///workspace/src/microduck-backflip)
+ + mjviser==0.0.14
+ + ml-dtypes==0.5.4
+ + mpmath==1.3.0
+ + msgspec==0.20.0
+ + mujoco==3.10.0
+ + mujoco-warp==3.8.1
+ + networkx==3.6.1
+ + numpy==2.4.1
+ + nvidia-cublas-cu12==12.8.4.1
+ + nvidia-cuda-cupti-cu12==12.8.90
+ + nvidia-cuda-nvrtc-cu12==12.8.93
+ + nvidia-cuda-runtime-cu12==12.8.90
+ + nvidia-cudnn-cu12==9.10.2.21
+ + nvidia-cufft-cu12==11.3.3.83
+ + nvidia-cufile-cu12==1.13.1.3
+ + nvidia-curand-cu12==10.3.9.90
+ + nvidia-cusolver-cu12==11.7.3.90
+ + nvidia-cusparse-cu12==12.5.8.93
+ + nvidia-cusparselt-cu12==0.7.1
+ + nvidia-nccl-cu12==2.27.5
+ + nvidia-nvjitlink-cu12==12.8.93
+ + nvidia-nvshmem-cu12==3.3.20
+ + nvidia-nvtx-cu12==12.8.90
+ + onnx==1.22.0
+ + onnx-ir==0.1.14
+ + onnxruntime==1.24.4
+ + onnxscript==0.5.7
+ + orjson==3.11.5
+ + packaging==25.0
+ + paramiko==4.0.0
+ + parso==0.8.7
+ + pexpect==4.9.0
+ + pillow==12.2.0
+ + platformdirs==4.5.1
+ + prettytable==3.17.0
+ + prompt-toolkit==3.0.52
+ + protobuf==6.33.6
+ + psutil==7.2.2
+ + ptyprocess==0.7.0
+ + pure-eval==0.2.3
+ + pycparser==2.23
+ + pydantic==2.12.5
+ + pydantic-core==2.41.5
+ + pygments==2.19.2
+ + pynacl==1.6.2
+ + pyopengl==3.1.10
+ + pyparsing==3.3.2
+ + python-dateutil==2.9.0.post0
+ + pyvers==0.1.0
+ + pyyaml==6.0.3
+ + requests==2.32.5
+ + rich==14.2.0
+ + rsl-rl-lib==5.0.1
+ + rustypot==1.5.0
+ + scipy==1.18.0
+ + sentry-sdk==2.49.0
+ + setuptools==80.9.0
+ + shellingham==1.5.4
+ + six==1.17.0
+ + smmap==5.0.2
+ + stack-data==0.6.3
+ + sympy==1.14.0
+ + tensorboard==2.20.0
+ + tensorboard-data-server==0.7.2
+ + tensordict==0.10.0
+ + torch==2.9.1
+ + torchrunx==0.3.4
+ + torchvision==0.24.1
+ + tqdm==4.67.1
+ + traitlets==5.15.1
+ + trimesh==4.11.1
+ + triton==3.5.1
+ + typeguard==4.4.4
+ + typer==0.25.1
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ + tyro==1.0.5
+ + urllib3==2.6.3
+ + viser==1.0.30
+ + wandb==0.24.0
+ + warp-lang==1.12.0
+ + wcwidth==0.2.14
+ + websockets==15.0.1
+ + werkzeug==3.1.5
+ + wrapt==2.0.1
+ + zipp==3.23.0
+ + zstandard==0.25.0
+/workspace/src/bam
+Traceback (most recent call last):
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pygel3d/__init__.py", line 75, in _load_library
+    return ct.cdll.LoadLibrary(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 460, in LoadLibrary
+    return self._dlltype(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libGL.so.1: cannot open shared object file: No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/__init__.py", line 470, in <module>
+    from pygel3d import graph, hmesh
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pygel3d/__init__.py", line 88, in <module>
+    lib_py_gel = _load_library()
+                 ^^^^^^^^^^^^^^^
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pygel3d/__init__.py", line 83, in _load_library
+    raise ImportError(
+ImportError: pygel3d: failed to load /workspace/venvs/genesis/lib/python3.12/site-packages/pygel3d/libPyGEL.so: libGL.so.1: cannot open shared object file: No such file or directory. On Linux the library needs system OpenGL (e.g. `sudo apt-get install libgl1`).
+
+Thu Sep  3 23:36:34 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:00:07.0 Off |                    0 |
+| N/A   38C    P0             47W /  300W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Linux c9f116fec586 6.8.0-90-generic #91~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 15:20:45 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Hit:1 https://pkgs.netbird.io/debian stable InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64  InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20260601~24.04.1).
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+python3 is already the newest version (3.12.3-0ubuntu2.1).
+python3-pip is already the newest version (24.0+dfsg-1ubuntu1.3).
+python3-venv is already the newest version (3.12.3-0ubuntu2.1).
+The following additional packages will be installed:
+  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm2 libelf1t64 libgbm1
+  libgl1-mesa-dri libglvnd0 libglx-mesa0 libglx0 libicu74 libllvm20
+  libpciaccess0 libsensors-config libsensors5 libvulkan1 libx11-6 libx11-data
+  libx11-xcb1 libxau6 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-randr0
+  libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxdmcp6 libxext6 libxml2
+  libxshmfence1 libxxf86vm1 mesa-libgallium
+Suggested packages:
+  low-memory-monitor pciutils lm-sensors
+Recommended packages:
+  libglib2.0-data shared-mime-info xdg-user-dirs mesa-vulkan-drivers
+  | vulkan-icd
+The following NEW packages will be installed:
+  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm2 libelf1t64 libgbm1 libgl1
+  libgl1-mesa-dri libglib2.0-0t64 libglvnd0 libglx-mesa0 libglx0 libicu74
+  libllvm20 libpciaccess0 libsensors-config libsensors5 libvulkan1 libx11-6
+  libx11-data libx11-xcb1 libxau6 libxcb-dri3-0 libxcb-glx0 libxcb-present0
+  libxcb-randr0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcb1 libxdmcp6
+  libxext6 libxml2 libxshmfence1 libxxf86vm1 mesa-libgallium
+0 upgraded, 36 newly installed, 0 to remove and 94 not upgraded.
+Need to get 56.3 MB of archives.
+After this operation, 238 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libelf1t64 amd64 0.190-1.1ubuntu0.1 [57.8 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-0t64 amd64 2.80.0-6ubuntu3.8 [1545 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.8 [764 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-common all 2.4.125-1ubuntu0.1~24.04.2 [9250 B]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm2 amd64 2.4.125-1ubuntu0.1~24.04.2 [41.4 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors-config all 1:3.6.0-9build1 [5546 B]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libsensors5 amd64 1:3.6.0-9build1 [26.6 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau6 amd64 1:1.0.9-1build6 [7160 B]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu6 [10.3 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1 amd64 1.15-1ubuntu2 [47.7 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-data all 2:1.8.7-1build1 [115 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-6 amd64 2:1.8.7-1build1 [650 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 libxext6 amd64 2:1.3.4-1build2 [30.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-amdgpu1 amd64 2.4.125-1ubuntu0.1~24.04.2 [21.4 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpciaccess0 amd64 0.17-3ubuntu0.24.04.2 [18.9 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdrm-intel1 amd64 2.4.125-1ubuntu0.1~24.04.2 [63.9 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libllvm20 amd64 1:20.1.2-0ubuntu1~24.04.3 [30.6 MB]
+Get:19 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-xcb1 amd64 2:1.8.7-1build1 [7800 B]
+Get:20 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-dri3-0 amd64 1.15-1ubuntu2 [7142 B]
+Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-present0 amd64 1.15-1ubuntu2 [5676 B]
+Get:22 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-randr0 amd64 1.15-1ubuntu2 [17.9 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-sync1 amd64 1.15-1ubuntu2 [9312 B]
+Get:24 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-xfixes0 amd64 1.15-1ubuntu2 [10.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble/main amd64 libxshmfence1 amd64 1.3-1build5 [4764 B]
+Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.2.8-0ubuntu0.24.04.2 [10.8 MB]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.2.8-0ubuntu0.24.04.2 [34.2 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble/main amd64 libvulkan1 amd64 1.3.275.0-1build1 [142 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.2.8-0ubuntu0.24.04.2 [37.9 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-glx0 amd64 1.15-1ubuntu2 [24.8 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb-shm0 amd64 1.15-1ubuntu2 [5756 B]
+Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 libxxf86vm1 amd64 1:1.1.4-1build4 [9282 B]
+Get:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.2.8-0ubuntu0.24.04.2 [110 kB]
+Get:34 http://archive.ubuntu.com/ubuntu noble/main amd64 libglvnd0 amd64 1.7.0-1build1 [69.6 kB]
+Get:35 http://archive.ubuntu.com/ubuntu noble/main amd64 libglx0 amd64 1.7.0-1build1 [38.6 kB]
+Get:36 http://archive.ubuntu.com/ubuntu noble/main amd64 libgl1 amd64 1.7.0-1build1 [102 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 56.3 MB in 2s (25.4 MB/s)
+Selecting previously unselected package libelf1t64:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19421 files and directories currently installed.)
+Preparing to unpack .../00-libelf1t64_0.190-1.1ubuntu0.1_amd64.deb ...
+Unpacking libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+Selecting previously unselected package libglib2.0-0t64:amd64.
+Preparing to unpack .../01-libglib2.0-0t64_2.80.0-6ubuntu3.8_amd64.deb ...
+Unpacking libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.8) ...
+Selecting previously unselected package libicu74:amd64.
+Preparing to unpack .../02-libicu74_74.2-1ubuntu3.1_amd64.deb ...
+Unpacking libicu74:amd64 (74.2-1ubuntu3.1) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../03-libxml2_2.9.14+dfsg-1.3ubuntu3.8_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.8) ...
+Selecting previously unselected package libdrm-common.
+Preparing to unpack .../04-libdrm-common_2.4.125-1ubuntu0.1~24.04.2_all.deb ...
+Unpacking libdrm-common (2.4.125-1ubuntu0.1~24.04.2) ...
+Selecting previously unselected package libdrm2:amd64.
+Preparing to unpack .../05-libdrm2_2.4.125-1ubuntu0.1~24.04.2_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.125-1ubuntu0.1~24.04.2) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../06-libsensors-config_1%3a3.6.0-9build1_all.deb ...
+Unpacking libsensors-config (1:3.6.0-9build1) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../07-libsensors5_1%3a3.6.0-9build1_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.0-9build1) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../08-libxau6_1%3a1.0.9-1build6_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build6) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../09-libxdmcp6_1%3a1.1.3-0ubuntu6_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../10-libxcb1_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb1:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../11-libx11-data_2%3a1.8.7-1build1_all.deb ...
+Unpacking libx11-data (2:1.8.7-1build1) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../12-libx11-6_2%3a1.8.7-1build1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.7-1build1) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../13-libxext6_2%3a1.3.4-1build2_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1build2) ...
+Selecting previously unselected package libdrm-amdgpu1:amd64.
+Preparing to unpack .../14-libdrm-amdgpu1_2.4.125-1ubuntu0.1~24.04.2_amd64.deb ...
+Unpacking libdrm-amdgpu1:amd64 (2.4.125-1ubuntu0.1~24.04.2) ...
+Selecting previously unselected package libpciaccess0:amd64.
+Preparing to unpack .../15-libpciaccess0_0.17-3ubuntu0.24.04.2_amd64.deb ...
+Unpacking libpciaccess0:amd64 (0.17-3ubuntu0.24.04.2) ...
+Selecting previously unselected package libdrm-intel1:amd64.
+Preparing to unpack .../16-libdrm-intel1_2.4.125-1ubuntu0.1~24.04.2_amd64.deb ...
+Unpacking libdrm-intel1:amd64 (2.4.125-1ubuntu0.1~24.04.2) ...
+Selecting previously unselected package libllvm20:amd64.
+Preparing to unpack .../17-libllvm20_1%3a20.1.2-0ubuntu1~24.04.3_amd64.deb ...
+Unpacking libllvm20:amd64 (1:20.1.2-0ubuntu1~24.04.3) ...
+Selecting previously unselected package libx11-xcb1:amd64.
+Preparing to unpack .../18-libx11-xcb1_2%3a1.8.7-1build1_amd64.deb ...
+Unpacking libx11-xcb1:amd64 (2:1.8.7-1build1) ...
+Selecting previously unselected package libxcb-dri3-0:amd64.
+Preparing to unpack .../19-libxcb-dri3-0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-dri3-0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-present0:amd64.
+Preparing to unpack .../20-libxcb-present0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-present0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-randr0:amd64.
+Preparing to unpack .../21-libxcb-randr0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-randr0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-sync1:amd64.
+Preparing to unpack .../22-libxcb-sync1_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-sync1:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-xfixes0:amd64.
+Preparing to unpack .../23-libxcb-xfixes0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-xfixes0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxshmfence1:amd64.
+Preparing to unpack .../24-libxshmfence1_1.3-1build5_amd64.deb ...
+Unpacking libxshmfence1:amd64 (1.3-1build5) ...
+Selecting previously unselected package mesa-libgallium:amd64.
+Preparing to unpack .../25-mesa-libgallium_25.2.8-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libgbm1:amd64.
+Preparing to unpack .../26-libgbm1_25.2.8-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libgbm1:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libvulkan1:amd64.
+Preparing to unpack .../27-libvulkan1_1.3.275.0-1build1_amd64.deb ...
+Unpacking libvulkan1:amd64 (1.3.275.0-1build1) ...
+Selecting previously unselected package libgl1-mesa-dri:amd64.
+Preparing to unpack .../28-libgl1-mesa-dri_25.2.8-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libxcb-glx0:amd64.
+Preparing to unpack .../29-libxcb-glx0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-glx0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxcb-shm0:amd64.
+Preparing to unpack .../30-libxcb-shm0_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb-shm0:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libxxf86vm1:amd64.
+Preparing to unpack .../31-libxxf86vm1_1%3a1.1.4-1build4_amd64.deb ...
+Unpacking libxxf86vm1:amd64 (1:1.1.4-1build4) ...
+Selecting previously unselected package libglx-mesa0:amd64.
+Preparing to unpack .../32-libglx-mesa0_25.2.8-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Selecting previously unselected package libglvnd0:amd64.
+Preparing to unpack .../33-libglvnd0_1.7.0-1build1_amd64.deb ...
+Unpacking libglvnd0:amd64 (1.7.0-1build1) ...
+Selecting previously unselected package libglx0:amd64.
+Preparing to unpack .../34-libglx0_1.7.0-1build1_amd64.deb ...
+Unpacking libglx0:amd64 (1.7.0-1build1) ...
+Selecting previously unselected package libgl1:amd64.
+Preparing to unpack .../35-libgl1_1.7.0-1build1_amd64.deb ...
+Unpacking libgl1:amd64 (1.7.0-1build1) ...
+Setting up libpciaccess0:amd64 (0.17-3ubuntu0.24.04.2) ...
+Setting up libxau6:amd64 (1:1.0.9-1build6) ...
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...
+Setting up libxcb1:amd64 (1.15-1ubuntu2) ...
+Setting up libxcb-xfixes0:amd64 (1.15-1ubuntu2) ...
+Setting up libglvnd0:amd64 (1.7.0-1build1) ...
+Setting up libxcb-glx0:amd64 (1.15-1ubuntu2) ...
+Setting up libsensors-config (1:3.6.0-9build1) ...
+Setting up libxcb-shm0:amd64 (1.15-1ubuntu2) ...
+Setting up libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+Setting up libxcb-present0:amd64 (1.15-1ubuntu2) ...
+Setting up libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.8) ...
+No schema files found: doing nothing.
+Setting up libx11-data (2:1.8.7-1build1) ...
+Setting up libxcb-sync1:amd64 (1.15-1ubuntu2) ...
+Setting up libsensors5:amd64 (1:3.6.0-9build1) ...
+Setting up libvulkan1:amd64 (1.3.275.0-1build1) ...
+Setting up libicu74:amd64 (74.2-1ubuntu3.1) ...
+Setting up libxshmfence1:amd64 (1.3-1build5) ...
+Setting up libxcb-randr0:amd64 (1.15-1ubuntu2) ...
+Setting up libx11-6:amd64 (2:1.8.7-1build1) ...
+Setting up libdrm-common (2.4.125-1ubuntu0.1~24.04.2) ...
+Setting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.8) ...
+Setting up libxcb-dri3-0:amd64 (1.15-1ubuntu2) ...
+Setting up libx11-xcb1:amd64 (2:1.8.7-1build1) ...
+Setting up libxext6:amd64 (2:1.3.4-1build2) ...
+Setting up libxxf86vm1:amd64 (1:1.1.4-1build4) ...
+Setting up libllvm20:amd64 (1:20.1.2-0ubuntu1~24.04.3) ...
+Setting up libdrm2:amd64 (2.4.125-1ubuntu0.1~24.04.2) ...
+Setting up libdrm-amdgpu1:amd64 (2.4.125-1ubuntu0.1~24.04.2) ...
+Setting up libdrm-intel1:amd64 (2.4.125-1ubuntu0.1~24.04.2) ...
+Setting up mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Setting up libgbm1:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Setting up libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Setting up libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.2) ...
+Setting up libglx0:amd64 (1.7.0-1build1) ...
+Setting up libgl1:amd64 (1.7.0-1build1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Requirement already satisfied: uv==0.8.19 in /workspace/venvs/tools/lib/python3.12/site-packages (0.8.19)
+HEAD is now at bb2a235 docs: approve corrected M5 CUDA pilot contract
+HEAD is now at 93cd5f2 docs: close Apple scaling milestone
+HEAD is now at 109e06d docs: authorize corrected Genesis rollers attempt
+HEAD is now at 8bde27e feat: add bounded-harness recovery curriculum
+Using Python 3.12.3 environment at: /workspace/venvs/genesis
+Audited 10 packages in 17ms
+Audited 142 packages in 4ms
+Audited 142 packages in 3ms
+Traceback (most recent call last):
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/__init__.py", line 439, in __getattr__
+    return getattr(self._module, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Window'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/__init__.py", line 517, in <module>
+    from .engine.scene import Scene
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/engine/scene.py", line 45, in <module>
+    from genesis.vis import Visualizer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/vis/__init__.py", line 1, in <module>
+    from .visualizer import Visualizer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/vis/visualizer.py", line 9, in <module>
+    from .rasterizer import Rasterizer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/vis/rasterizer.py", line 10, in <module>
+    from genesis.ext import pyrender
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/ext/pyrender/__init__.py", line 11, in <module>
+    from .viewer import Viewer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/ext/pyrender/viewer.py", line 73, in <module>
+    class Viewer(pyglet.window.Window):
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/__init__.py", line 445, in __getattr__
+    __import__(import_name)
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/window/__init__.py", line 102, in <module>
+    from pyglet.graphics import shader
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/graphics/__init__.py", line 16, in <module>
+    from pyglet.gl.gl import (
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/gl/__init__.py", line 194, in <module>
+    from .xlib import XlibConfig as Config
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/gl/xlib.py", line 18, in <module>
+    from pyglet.libs.x11.xrender import XRenderFindVisualFormat
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/libs/x11/xrender.py", line 39, in <module>
+    XRenderFindVisualFormat = lib.XRenderFindVisualFormat
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'XRenderFindVisualFormat'
+
+Thu Sep  3 23:37:43 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:00:07.0 Off |                    0 |
+| N/A   38C    P0             69W /  300W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Linux c9f116fec586 6.8.0-90-generic #91~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 15:20:45 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Hit:1 https://pkgs.netbird.io/debian stable InRelease
+Hit:2 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64  InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20260601~24.04.1).
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+libgl1 is already the newest version (1.7.0-1build1).
+libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.8).
+python3 is already the newest version (3.12.3-0ubuntu2.1).
+python3-pip is already the newest version (24.0+dfsg-1ubuntu1.3).
+python3-venv is already the newest version (3.12.3-0ubuntu2.1).
+The following NEW packages will be installed:
+  libxrender1
+0 upgraded, 1 newly installed, 0 to remove and 94 not upgraded.
+Need to get 19.0 kB of archives.
+After this operation, 59.4 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libxrender1 amd64 1:0.9.10-1.1build1 [19.0 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 19.0 kB in 0s (73.5 kB/s)
+Selecting previously unselected package libxrender1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 19975 files and directories currently installed.)
+Preparing to unpack .../libxrender1_1%3a0.9.10-1.1build1_amd64.deb ...
+Unpacking libxrender1:amd64 (1:0.9.10-1.1build1) ...
+Setting up libxrender1:amd64 (1:0.9.10-1.1build1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Requirement already satisfied: uv==0.8.19 in /workspace/venvs/tools/lib/python3.12/site-packages (0.8.19)
+HEAD is now at bb2a235 docs: approve corrected M5 CUDA pilot contract
+HEAD is now at 93cd5f2 docs: close Apple scaling milestone
+HEAD is now at 109e06d docs: authorize corrected Genesis rollers attempt
+HEAD is now at 8bde27e feat: add bounded-harness recovery curriculum
+Using Python 3.12.3 environment at: /workspace/venvs/genesis
+Audited 10 packages in 13ms
+Audited 142 packages in 3ms
+Audited 142 packages in 3ms
+Traceback (most recent call last):
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/__init__.py", line 439, in __getattr__
+    return getattr(self._module, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'Window'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/__init__.py", line 517, in <module>
+    from .engine.scene import Scene
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/engine/scene.py", line 45, in <module>
+    from genesis.vis import Visualizer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/vis/__init__.py", line 1, in <module>
+    from .visualizer import Visualizer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/vis/visualizer.py", line 9, in <module>
+    from .rasterizer import Rasterizer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/vis/rasterizer.py", line 10, in <module>
+    from genesis.ext import pyrender
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/ext/pyrender/__init__.py", line 11, in <module>
+    from .viewer import Viewer
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/genesis/ext/pyrender/viewer.py", line 73, in <module>
+    class Viewer(pyglet.window.Window):
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/__init__.py", line 445, in __getattr__
+    __import__(import_name)
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/window/__init__.py", line 102, in <module>
+    from pyglet.graphics import shader
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/graphics/__init__.py", line 16, in <module>
+    from pyglet.gl.gl import (
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/gl/__init__.py", line 190, in <module>
+    from .headless import HeadlessConfig as Config
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/gl/headless.py", line 6, in <module>
+    from pyglet.display.headless import HeadlessCanvas
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/display/__init__.py", line 36, in <module>
+    from pyglet.display.headless import HeadlessDisplay as Display
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/display/headless.py", line 12, in <module>
+    from pyglet.libs.egl import egl
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/libs/egl/egl.py", line 12, in <module>
+    _lib = pyglet.lib.load_library('EGL')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/pyglet/lib.py", line 138, in load_library
+    raise ImportError(msg)
+ImportError: Library "EGL" not found.
+
+Thu Sep  3 23:40:24 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:00:07.0 Off |                    0 |
+| N/A   37C    P0             47W /  300W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Linux c9f116fec586 6.8.0-90-generic #91~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 15:20:45 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Hit:1 https://pkgs.netbird.io/debian stable InRelease
+Hit:2 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64  InRelease
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists...
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20260601~24.04.1).
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+libegl1 is already the newest version (1.7.0-1build1).
+libgl1 is already the newest version (1.7.0-1build1).
+libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.8).
+libxrender1 is already the newest version (1:0.9.10-1.1build1).
+python3 is already the newest version (3.12.3-0ubuntu2.1).
+python3-pip is already the newest version (24.0+dfsg-1ubuntu1.3).
+python3-venv is already the newest version (3.12.3-0ubuntu2.1).
+0 upgraded, 0 newly installed, 0 to remove and 94 not upgraded.
+Requirement already satisfied: uv==0.8.19 in /workspace/venvs/tools/lib/python3.12/site-packages (0.8.19)
+HEAD is now at bb2a235 docs: approve corrected M5 CUDA pilot contract
+HEAD is now at 93cd5f2 docs: close Apple scaling milestone
+HEAD is now at 109e06d docs: authorize corrected Genesis rollers attempt
+HEAD is now at 8bde27e feat: add bounded-harness recovery curriculum
+Using Python 3.12.3 environment at: /workspace/venvs/genesis
+Audited 10 packages in 13ms
+Audited 142 packages in 3ms
+Audited 142 packages in 3ms
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'warp'
+
+Thu Sep  3 23:41:19 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.195.03             Driver Version: 570.195.03     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:00:07.0 Off |                    0 |
+| N/A   37C    P0             47W /  300W |       0MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Linux c9f116fec586 6.8.0-90-generic #91~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 15:20:45 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Fri_Feb_21_20:23:50_PST_2025
+Cuda compilation tools, release 12.8, V12.8.93
+Build cuda_12.8.r12.8/compiler.35583870_0
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 https://pkgs.netbird.io/debian stable InRelease
+Hit:5 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64  InRelease
+Hit:6 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20260601~24.04.1).
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+libegl1 is already the newest version (1.7.0-1build1).
+libgl1 is already the newest version (1.7.0-1build1).
+libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.8).
+libxrender1 is already the newest version (1:0.9.10-1.1build1).
+python3 is already the newest version (3.12.3-0ubuntu2.1).
+python3-pip is already the newest version (24.0+dfsg-1ubuntu1.3).
+python3-venv is already the newest version (3.12.3-0ubuntu2.1).
+0 upgraded, 0 newly installed, 0 to remove and 94 not upgraded.
+Requirement already satisfied: uv==0.8.19 in /workspace/venvs/tools/lib/python3.12/site-packages (0.8.19)
+HEAD is now at bb2a235 docs: approve corrected M5 CUDA pilot contract
+HEAD is now at 93cd5f2 docs: close Apple scaling milestone
+HEAD is now at 109e06d docs: authorize corrected Genesis rollers attempt
+HEAD is now at 8bde27e feat: add bounded-harness recovery curriculum
+Using Python 3.12.3 environment at: /workspace/venvs/genesis
+Audited 10 packages in 12ms
+Audited 142 packages in 3ms
+Audited 142 packages in 3ms
+python packages
+torch 2.9.1+cu128 cuda 12.8 available True device NVIDIA A100 80GB PCIe
+genesis 1.2.2
+mujoco 3.12.0
+rsl-rl 5.4.2
+torch 2.9.1+cu128 cuda 12.8 available True device NVIDIA A100 80GB PCIe
+mujoco 3.10.0
+warp 1.12.0
+mujoco-warp 3.8.1
+mjlab 1.3.0
+
+======================================================================
+inventaire provenance fichiers M6
+======================================================================
+file-level MJCF/mesh/policy/dataset/media provenance and negative statuses verified
+
+======================================================================
+contrats artefact et attestations M6
+======================================================================
+policy manifest v2 and reference/hardware attestation fixtures verified without execution
+
+======================================================================
+contrat immuable expérience M5
+======================================================================
+M5 immutable experiment contract and negative drift probes verified
+
+======================================================================
+schéma benchmark Apple
+======================================================================
+Apple scaling schema/default selection verified
+
+======================================================================
+matérialisation BAM épinglée
+======================================================================
+BAM authority materializer verified: moved branch cannot repin exact commit
+
+======================================================================
+vecteurs BAM dorés épinglés
+======================================================================
+29 pinned BAM vectors verified
+control_voltage_v: max error 1.776e-15
+motor_torque_nm: max error 2.220e-16
+bam_core_frictionloss_nm: max error 2.776e-17
+mjlab_deployed_frictionloss_nm: max error 0.000e+00
+reset state verified; battery voltage preserved
+
+======================================================================
+trajectoire BAM 14 servos épinglée
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_bam_closed_loop_fixture.py", line 147, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/src/genesis-current/tests/test_bam_closed_loop_fixture.py", line 87, in main
+    robot.control_dofs_force(actuator.compute(target), dofs)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:42:59] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+réconciliation des modèles épinglée
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_model_reconciliation.py", line 61, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/src/genesis-current/tests/test_model_reconciliation.py", line 50, in main
+    assert digest_json(actual) == row["local_manifest_sha256"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+sémantique de marche épinglée
+======================================================================
+Walking semantics verified against pinned authorities.
+walking semantics verified: 61D/14D/50Hz, 28 classified fields, 230 preregistered cases
+
+======================================================================
+sémantique de backflip épinglée
+======================================================================
+backflip semantics verified: 61D/14D/50Hz, 32 classified fields, 20 zero-assistance cases
+
+======================================================================
+décision de divergence versionnée
+======================================================================
+versioned divergence decision verified: 45 non-exact fields, local and not submitted
+
+======================================================================
+coeur évaluateur C MuJoCo
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_evaluator_core.py", line 54, in <module>
+    assert first_bytes == EXPECTED.read_bytes()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+======================================================================
+matrice de cas évaluateur
+======================================================================
+evaluator case matrix verified: 10 cases, 9 required families, byte-identical repeats
+
+======================================================================
+protocole held-out aveugle
+======================================================================
+held-out protocol verified: post-freeze derivation only, no live seed realized
+
+======================================================================
+classifieurs de réussite
+======================================================================
+success classifiers verified: walking 230 cells, backflip 20 cells, assisted/failure/coverage rejected
+
+======================================================================
+bundle évaluateur de développement
+======================================================================
+/workspace/venvs/genesis/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+/workspace/venvs/genesis/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65537) b'The GLFW library is not initialized'
+  warnings.warn(message, GLFWError)
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_evaluator_bundle.py", line 43, in <module>
+    write_bundle(POLICY, Path(BAM_REPO), first)
+  File "/workspace/src/genesis-current/evaluator/bundle.py", line 123, in write_bundle
+    report, case_rows, case_frames = core.run_case(case, capture_frames=True)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/evaluator/core.py", line 300, in run_case
+    renderer = mujoco.Renderer(self.model, height=240, width=320)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/venvs/genesis/lib/python3.12/site-packages/mujoco/rendering/classic/renderer.py", line 92, in __init__
+    self._mjr_context = mujoco.MjrContext(model, font_scale.value)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mujoco.FatalError: an OpenGL platform library has not been loaded into this process, this most likely means that a valid OpenGL context has not been created before mjr_makeContext was called
+
+======================================================================
+autorité ONNX marche officielle
+======================================================================
+official walking authority verified: terminal missing-authority result, official artifact not executed
+
+======================================================================
+formules BAM vs référence Rhoban
+======================================================================
+tension (loi firmware)             écart max = 0.000e+00
+couple moteur (contre-FEM)         écart max = 0.000e+00
+frottement m6 (version papier)     écart max = 5.551e-17
+frottement m6 (version mjlab)      écart max = 3.092e-03 (1.52 % — garde enable_quadratic omise en amont, cf. README)
+OK — formules BAM bit-exactes
+
+======================================================================
+couple externe vs MuJoCo
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_external_torque.py", line 38, in <module>
+    qf_bias = qd_to_torch(sv.dyn_state.dofs.qf_bias, transpose=True)[0]
+                          ^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:43:49] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+boucle actionneur vs MuJoCo+BAM
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_bam_vs_mujoco.py", line 99, in <module>
+    robot.control_dofs_force(bam.compute(target), dofs)
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:44:07] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+randomisation de domaine
+======================================================================
+[38;5;226m[Genesis] [23:44:19] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_dr.py", line 44, in <module>
+    env.bam.compute(env.default_dof_pos.unsqueeze(0).repeat(8, 1))
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:46:30] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+contrat d'observation 61-D
+======================================================================
+[38;5;226m[Genesis] [23:46:43] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+découpe : 61 dimensions, 8 tranches
+projected_gravity debout : [0.0, 0.0, -1.0]
+joint_pos à la pose HOME  : max |·| = 0.00e+00
+tranches de commande : conformes
+  left_hip_yaw     → indice 0 ✓
+  neck_pitch       → indice 5 ✓
+  right_ankle      → indice 13 ✓
+head_pose pilote ('neck_pitch', 'head_pitch', 'head_yaw', 'head_roll') → indices [5, 6, 7, 8]
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/test_obs_contract.py", line 98, in <module>
+    env.step(a)
+  File "/workspace/src/genesis-current/microduck/velocity_env.py", line 517, in step
+    tau = self.bam.compute(target)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:46:51] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+variante à jeu d'engrenage
+======================================================================
+[38;5;226m[Genesis] [23:47:04] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+modèle : 29 articulations dont 14 de jeu
+jeu imposé +0,500° sur left_knee → vue encodeur +0.500°
+joint_pos de l'observation = vue encodeur ✓
+jeu après relâchement : max 1.015° (butée ±1°)
+contrat inchangé : obs 61, action 14
+OK — variante à jeu d'engrenage conforme
+
+======================================================================
+ONNX de déploiement vs politique
+======================================================================
+aucun checkpoint dans logs/microduck-velocity — test non applicable
+
+======================================================================
+env sol plat
+======================================================================
+[38;5;226m[Genesis] [23:47:27] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+obs policy    : (16, 61)
+obs privileged: (16, 29)
+Traceback (most recent call last):
+  File "/workspace/src/genesis-current/tests/smoke_env.py", line 17, in <module>
+    obs, rew, done, extras = env.step(a)
+                             ^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/velocity_env.py", line 517, in step
+    tau = self.bam.compute(target)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 460, in compute
+    external_torque = self._external_torque()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/src/genesis-current/microduck/bam_actuator.py", line 312, in _external_torque
+    qf_bias = qd_to_torch(self.solver.dyn_state.dofs.qf_bias, transpose=True)
+                          ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RigidSolver' object has no attribute 'dyn_state'. Did you mean: 'dofs_state'?
+
+[38;5;9m[Genesis] [23:47:45] [ERROR] AttributeError: 'RigidSolver' object has no attribute 'dyn_state'[0m
+
+======================================================================
+env terrain accidenté
+======================================================================
+[38;5;226m[Genesis] [23:48:00] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+[38;5;226m[Genesis] [23:48:03] [WARNING] Beware that SDF pre-processing of mesh  having more than 50000 vertices may take a very long time (>10min) and require large RAM allocation (>20Gb). Please either enable convexify or decimation. (see FileMorph options)[0m
+[38;5;226m[Genesis] [23:48:16] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
