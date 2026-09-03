@@ -60,6 +60,10 @@ crossover_rows = [
     {"num_envs": 64, "devices": {"physics": "metal"}, "summary": {"median_total_iteration_s": 2.0}},
 ]
 assert crossover_decision(crossover_rows) == "<=64"
+assert crossover_decision([
+    {"num_envs": 1024, "devices": {"physics": "cpu"}, "summary": {"median_total_iteration_s": 3.0}},
+    {"num_envs": 1024, "devices": {"physics": "metal"}, "summary": {"median_total_iteration_s": 2.5}},
+]) == "1024"
 
 
 def row(size: int, total: float, samples: float, headroom: float = 0.8, thermal: str = "nominal") -> dict:

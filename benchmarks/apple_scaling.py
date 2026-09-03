@@ -162,7 +162,7 @@ def crossover_decision(rows: list[dict[str, Any]]) -> str | None:
     by_size: dict[int, dict[str, dict[str, Any]]] = {}
     for row in rows:
         by_size.setdefault(int(row["num_envs"]), {})[row["devices"]["physics"]] = row
-    for size in REQUIRED_SIZES[:-1]:
+    for size in REQUIRED_SIZES:
         pair = by_size.get(size, {})
         if set(pair) != {"cpu", "metal"}:
             continue

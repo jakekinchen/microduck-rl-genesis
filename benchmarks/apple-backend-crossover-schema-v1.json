@@ -11,7 +11,7 @@
   ],
   "properties": {
     "schema_version": {"const": "microduck.apple-backend-crossover-row/v1"},
-    "num_envs": {"enum": [64, 128, 256, 512]},
+    "num_envs": {"enum": [64, 128, 256, 512, 1024]},
     "iterations": {"type": "array", "minItems": 20, "maxItems": 20},
     "termination_reason": {"const": "completed"},
     "proof_class": {"const": "performance_characterization"},

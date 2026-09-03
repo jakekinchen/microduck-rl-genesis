@@ -139,7 +139,7 @@ def run(num_envs: int, physics_backend: str) -> dict[str, object]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--num-envs", type=int, required=True, choices=(64, 128, 256, 512))
+    parser.add_argument("--num-envs", type=int, required=True, choices=(64, 128, 256, 512, 1024))
     parser.add_argument("--physics-backend", required=True, choices=("cpu", "metal"))
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
