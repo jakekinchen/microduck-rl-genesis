@@ -1,0 +1,335 @@
+{
+  "limitations": "Short public development workload; no final candidate, held-out realization, transfer, physical result, or task-success evidence.",
+  "proof_class": "performance_characterization",
+  "rows": [
+    {
+      "backend": {
+        "genesis": "4",
+        "torch_mps_available": true
+      },
+      "benchmark": {
+        "measured_iterations": 1,
+        "rollout_steps_per_env": 24,
+        "seed": 86064,
+        "warmup_iterations": 1
+      },
+      "collection_s": 2.063568115234375,
+      "construction_s": 12.474831208121032,
+      "devices": {
+        "learner": "mps",
+        "physics": "metal"
+      },
+      "env_steps_per_s": 744.341797423801,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "learner_update_s": 0.27298903465270996,
+      "machine": {
+        "model": "Mac15,14",
+        "release": "25.2.0",
+        "serial_recorded": false,
+        "system": "Darwin"
+      },
+      "num_envs": 64,
+      "packages": {
+        "genesis-world": "1.3.3",
+        "rsl-rl-lib": "5.4.2",
+        "torch": "2.9.1"
+      },
+      "peak_rss_bytes": 1884913664,
+      "proof_class": "performance_characterization",
+      "reset_s": 0.04847545828670263,
+      "samples_per_minute": 39441.10549690331,
+      "schema_version": "microduck.apple-scaling-row/v1",
+      "source": {
+        "commit": "aa4c5676879e2681a127d90ccfa696307088adfa",
+        "dirty": false
+      },
+      "synchronization_s": 0.0002715429291129112,
+      "task_success": "not_evaluated",
+      "termination_reason": "completed",
+      "thermal": {
+        "limitations": "pmset exposes warning state, not temperature, power, fan speed, or continuous throttling telemetry",
+        "method": "pmset_-g_therm_historical_warning_state",
+        "raw_after": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "raw_before": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "state_after": "nominal",
+        "state_before": "nominal"
+      },
+      "total_iteration_s": 2.3366485000588,
+      "unified_memory": {
+        "headroom_fraction_proxy": 0.9817139307657877,
+        "limitations": "ru_maxrss is process resident memory, not complete Metal allocation or system-wide unified-memory pressure",
+        "method": "peak_process_rss_proxy",
+        "proxy_bytes": 1884913664,
+        "system_physical_bytes": 103079215104
+      },
+      "warmup_iteration_s": 2.82257133256644
+    },
+    {
+      "backend": {
+        "genesis": "4",
+        "torch_mps_available": true
+      },
+      "benchmark": {
+        "measured_iterations": 1,
+        "rollout_steps_per_env": 24,
+        "seed": 86128,
+        "warmup_iterations": 1
+      },
+      "collection_s": 2.440093994140625,
+      "construction_s": 20.688881374895573,
+      "devices": {
+        "learner": "mps",
+        "physics": "metal"
+      },
+      "env_steps_per_s": 1258.9678952436934,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "learner_update_s": 0.2640712261199951,
+      "machine": {
+        "model": "Mac15,14",
+        "release": "25.2.0",
+        "serial_recorded": false,
+        "system": "Darwin"
+      },
+      "num_envs": 128,
+      "packages": {
+        "genesis-world": "1.3.3",
+        "rsl-rl-lib": "5.4.2",
+        "torch": "2.9.1"
+      },
+      "peak_rss_bytes": 1970061312,
+      "proof_class": "performance_characterization",
+      "reset_s": 0.05829812493175268,
+      "samples_per_minute": 68159.1372148314,
+      "schema_version": "microduck.apple-scaling-row/v1",
+      "source": {
+        "commit": "aa4c5676879e2681a127d90ccfa696307088adfa",
+        "dirty": false
+      },
+      "synchronization_s": 0.0004248754121363163,
+      "task_success": "not_evaluated",
+      "termination_reason": "completed",
+      "thermal": {
+        "limitations": "pmset exposes warning state, not temperature, power, fan speed, or continuous throttling telemetry",
+        "method": "pmset_-g_therm_historical_warning_state",
+        "raw_after": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "raw_before": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "state_after": "nominal",
+        "state_before": "nominal"
+      },
+      "total_iteration_s": 2.704259583260864,
+      "unified_memory": {
+        "headroom_fraction_proxy": 0.9808878898620605,
+        "limitations": "ru_maxrss is process resident memory, not complete Metal allocation or system-wide unified-memory pressure",
+        "method": "peak_process_rss_proxy",
+        "proxy_bytes": 1970061312,
+        "system_physical_bytes": 103079215104
+      },
+      "warmup_iteration_s": 3.6266478751786053
+    },
+    {
+      "backend": {
+        "genesis": "4",
+        "torch_mps_available": true
+      },
+      "benchmark": {
+        "measured_iterations": 1,
+        "rollout_steps_per_env": 24,
+        "seed": 86256,
+        "warmup_iterations": 1
+      },
+      "collection_s": 2.6787362098693848,
+      "construction_s": 36.794311041012406,
+      "devices": {
+        "learner": "mps",
+        "physics": "metal"
+      },
+      "env_steps_per_s": 2293.618900346885,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "learner_update_s": 0.26451992988586426,
+      "machine": {
+        "model": "Mac15,14",
+        "release": "25.2.0",
+        "serial_recorded": false,
+        "system": "Darwin"
+      },
+      "num_envs": 256,
+      "packages": {
+        "genesis-world": "1.3.3",
+        "rsl-rl-lib": "5.4.2",
+        "torch": "2.9.1"
+      },
+      "peak_rss_bytes": 2042806272,
+      "proof_class": "performance_characterization",
+      "reset_s": 0.05813224986195564,
+      "samples_per_minute": 125244.69638922274,
+      "schema_version": "microduck.apple-scaling-row/v1",
+      "source": {
+        "commit": "aa4c5676879e2681a127d90ccfa696307088adfa",
+        "dirty": false
+      },
+      "synchronization_s": 0.001598084345459938,
+      "task_success": "not_evaluated",
+      "termination_reason": "completed",
+      "thermal": {
+        "limitations": "pmset exposes warning state, not temperature, power, fan speed, or continuous throttling telemetry",
+        "method": "pmset_-g_therm_historical_warning_state",
+        "raw_after": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "raw_before": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "state_after": "nominal",
+        "state_before": "nominal"
+      },
+      "total_iteration_s": 2.9433581670746207,
+      "unified_memory": {
+        "headroom_fraction_proxy": 0.9801821708679199,
+        "limitations": "ru_maxrss is process resident memory, not complete Metal allocation or system-wide unified-memory pressure",
+        "method": "peak_process_rss_proxy",
+        "proxy_bytes": 2042806272,
+        "system_physical_bytes": 103079215104
+      },
+      "warmup_iteration_s": 3.592239166609943
+    },
+    {
+      "backend": {
+        "genesis": "4",
+        "torch_mps_available": true
+      },
+      "benchmark": {
+        "measured_iterations": 1,
+        "rollout_steps_per_env": 24,
+        "seed": 86512,
+        "warmup_iterations": 1
+      },
+      "collection_s": 3.216779947280884,
+      "construction_s": 68.3238629582338,
+      "devices": {
+        "learner": "mps",
+        "physics": "metal"
+      },
+      "env_steps_per_s": 3819.9690999649943,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "learner_update_s": 0.2752871513366699,
+      "machine": {
+        "model": "Mac15,14",
+        "release": "25.2.0",
+        "serial_recorded": false,
+        "system": "Darwin"
+      },
+      "num_envs": 512,
+      "packages": {
+        "genesis-world": "1.3.3",
+        "rsl-rl-lib": "5.4.2",
+        "torch": "2.9.1"
+      },
+      "peak_rss_bytes": 2192506880,
+      "proof_class": "performance_characterization",
+      "reset_s": 0.04469141690060496,
+      "samples_per_minute": 211124.14058929472,
+      "schema_version": "microduck.apple-scaling-row/v1",
+      "source": {
+        "commit": "aa4c5676879e2681a127d90ccfa696307088adfa",
+        "dirty": false
+      },
+      "synchronization_s": 0.00029858294874429703,
+      "task_success": "not_evaluated",
+      "termination_reason": "completed",
+      "thermal": {
+        "limitations": "pmset exposes warning state, not temperature, power, fan speed, or continuous throttling telemetry",
+        "method": "pmset_-g_therm_historical_warning_state",
+        "raw_after": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "raw_before": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "state_after": "nominal",
+        "state_before": "nominal"
+      },
+      "total_iteration_s": 3.4921634159982204,
+      "unified_memory": {
+        "headroom_fraction_proxy": 0.9787298838297526,
+        "limitations": "ru_maxrss is process resident memory, not complete Metal allocation or system-wide unified-memory pressure",
+        "method": "peak_process_rss_proxy",
+        "proxy_bytes": 2192506880,
+        "system_physical_bytes": 103079215104
+      },
+      "warmup_iteration_s": 3.8590763746760786
+    },
+    {
+      "backend": {
+        "genesis": "4",
+        "torch_mps_available": true
+      },
+      "benchmark": {
+        "measured_iterations": 1,
+        "rollout_steps_per_env": 24,
+        "seed": 87024,
+        "warmup_iterations": 1
+      },
+      "collection_s": 3.982295036315918,
+      "construction_s": 130.95835229195654,
+      "devices": {
+        "learner": "mps",
+        "physics": "metal"
+      },
+      "env_steps_per_s": 6171.315730221645,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "learner_update_s": 0.28867077827453613,
+      "machine": {
+        "model": "Mac15,14",
+        "release": "25.2.0",
+        "serial_recorded": false,
+        "system": "Darwin"
+      },
+      "num_envs": 1024,
+      "packages": {
+        "genesis-world": "1.3.3",
+        "rsl-rl-lib": "5.4.2",
+        "torch": "2.9.1"
+      },
+      "peak_rss_bytes": 2323595264,
+      "proof_class": "performance_characterization",
+      "reset_s": 0.05396516714245081,
+      "samples_per_minute": 345245.56028618925,
+      "schema_version": "microduck.apple-scaling-row/v1",
+      "source": {
+        "commit": "aa4c5676879e2681a127d90ccfa696307088adfa",
+        "dirty": false
+      },
+      "synchronization_s": 0.000195999164134264,
+      "task_success": "not_evaluated",
+      "termination_reason": "completed",
+      "thermal": {
+        "limitations": "pmset exposes warning state, not temperature, power, fan speed, or continuous throttling telemetry",
+        "method": "pmset_-g_therm_historical_warning_state",
+        "raw_after": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "raw_before": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+        "state_after": "nominal",
+        "state_before": "nominal"
+      },
+      "total_iteration_s": 4.271046957932413,
+      "unified_memory": {
+        "headroom_fraction_proxy": 0.9774581591288248,
+        "limitations": "ru_maxrss is process resident memory, not complete Metal allocation or system-wide unified-memory pressure",
+        "method": "peak_process_rss_proxy",
+        "proxy_bytes": 2323595264,
+        "system_physical_bytes": 103079215104
+      },
+      "warmup_iteration_s": 4.491696707904339
+    }
+  ],
+  "run_id": "20260903T202404Z-aa4c567",
+  "schema_version": "microduck.apple-scaling-sweep/v1",
+  "source_commit": "aa4c5676879e2681a127d90ccfa696307088adfa",
+  "task_success": "not_evaluated"
+}

@@ -1,0 +1,65 @@
+{
+  "backend": {
+    "genesis": "4",
+    "torch_mps_available": true
+  },
+  "benchmark": {
+    "measured_iterations": 1,
+    "rollout_steps_per_env": 24,
+    "seed": 86128,
+    "warmup_iterations": 1
+  },
+  "collection_s": 2.440093994140625,
+  "construction_s": 20.688881374895573,
+  "devices": {
+    "learner": "mps",
+    "physics": "metal"
+  },
+  "env_steps_per_s": 1258.9678952436934,
+  "finite": {
+    "learner_parameters": true,
+    "observations": true
+  },
+  "learner_update_s": 0.2640712261199951,
+  "machine": {
+    "model": "Mac15,14",
+    "release": "25.2.0",
+    "serial_recorded": false,
+    "system": "Darwin"
+  },
+  "num_envs": 128,
+  "packages": {
+    "genesis-world": "1.3.3",
+    "rsl-rl-lib": "5.4.2",
+    "torch": "2.9.1"
+  },
+  "peak_rss_bytes": 1970061312,
+  "proof_class": "performance_characterization",
+  "reset_s": 0.05829812493175268,
+  "samples_per_minute": 68159.1372148314,
+  "schema_version": "microduck.apple-scaling-row/v1",
+  "source": {
+    "commit": "aa4c5676879e2681a127d90ccfa696307088adfa",
+    "dirty": false
+  },
+  "synchronization_s": 0.0004248754121363163,
+  "task_success": "not_evaluated",
+  "termination_reason": "completed",
+  "thermal": {
+    "limitations": "pmset exposes warning state, not temperature, power, fan speed, or continuous throttling telemetry",
+    "method": "pmset_-g_therm_historical_warning_state",
+    "raw_after": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "raw_before": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+    "state_after": "nominal",
+    "state_before": "nominal"
+  },
+  "total_iteration_s": 2.704259583260864,
+  "unified_memory": {
+    "headroom_fraction_proxy": 0.9808878898620605,
+    "limitations": "ru_maxrss is process resident memory, not complete Metal allocation or system-wide unified-memory pressure",
+    "method": "peak_process_rss_proxy",
+    "proxy_bytes": 1970061312,
+    "system_physical_bytes": 103079215104
+  },
+  "warmup_iteration_s": 3.6266478751786053
+}
