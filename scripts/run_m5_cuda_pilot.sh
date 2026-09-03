@@ -40,7 +40,7 @@ run_logged base-cuda bash -lc 'nvcc --version && cat /etc/os-release'
 export DEBIAN_FRONTEND=noninteractive
 run_logged apt-bootstrap apt-get update
 run_logged apt-install apt-get install -y --no-install-recommends \
-  ca-certificates git libgl1 libglib2.0-0 libxrender1 \
+  ca-certificates git libegl1 libgl1 libglib2.0-0 libxrender1 \
   python3 python3-pip python3-venv
 
 if [[ ! -x "$VENV_ROOT/tools/bin/python" ]]; then
