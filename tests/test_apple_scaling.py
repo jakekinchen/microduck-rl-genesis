@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from benchmarks.apple_scaling import REQUIRED_SIZES, assemble_sweep, select_default, validate_sweep
+from benchmarks.apple_scaling import REQUIRED_SIZES, assemble_sweep, select_default, summarize_sustained, validate_sweep
 from scripts.benchmark_apple_scaling import learner_parameters_finite
 
 
@@ -46,6 +46,14 @@ FakeTensor.all = lambda self: self
 FakeTensor.item = lambda self: True
 
 assert learner_parameters_finite(FakeAlgorithm(), FakeTorch)
+
+sustained = summarize_sustained(
+    [{"total_iteration_s": 4.0 + index / 1000.0} for index in range(120)],
+    num_envs=1024,
+    steps_per_env=24,
+)
+assert sustained["slowdown_ratio"] < 1.25
+assert sustained["p95_total_iteration_s"] == 4.113
 
 
 def row(size: int, total: float, headroom: float = 0.8, thermal: str = "nominal") -> dict:

@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
+import statistics
 from pathlib import Path
 from typing import Any
 
@@ -93,6 +95,52 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def summarize_sustained(iterations: list[dict[str, Any]], num_envs: int, steps_per_env: int) -> dict[str, float]:
+    if len(iterations) != 120:
+        raise AssertionError("sustained receipt requires 120 measured iterations")
+    totals = [float(item["total_iteration_s"]) for item in iterations]
+    first_median = statistics.median(totals[:20])
+    last_median = statistics.median(totals[-20:])
+    ordered = sorted(totals)
+    return {
+        "first_20_median_total_iteration_s": first_median,
+        "last_20_median_total_iteration_s": last_median,
+        "slowdown_ratio": last_median / first_median,
+        "p50_total_iteration_s": statistics.median(totals),
+        "p95_total_iteration_s": ordered[math.ceil(0.95 * len(ordered)) - 1],
+        "samples_per_minute": num_envs * steps_per_env * len(iterations) * 60.0 / sum(totals),
+    }
+
+
+def validate_sustained(receipt: dict[str, Any]) -> None:
+    if receipt.get("schema_version") != "microduck.apple-sustained/v1":
+        raise AssertionError("unexpected sustained schema")
+    if receipt.get("num_envs") != 1024:
+        raise AssertionError("unexpected sustained environment count")
+    if receipt.get("devices") != {"physics": "metal", "learner": "mps"}:
+        raise AssertionError("sustained test requires Metal + MPS")
+    if receipt.get("source", {}).get("dirty"):
+        raise AssertionError("sustained source must be a clean commit")
+    if receipt.get("termination_reason") != "completed":
+        raise AssertionError("sustained run did not complete")
+    iterations = receipt.get("iterations", [])
+    if len(iterations) != 120:
+        raise AssertionError("sustained run is incomplete")
+    if not all(item.get("finite") == {"observations": True, "learner_parameters": True} for item in iterations):
+        raise AssertionError("sustained run contains non-finite state")
+    if not all(sample.get("state") == "nominal" for sample in receipt.get("thermal_samples", [])):
+        raise AssertionError("sustained run contains a thermal warning")
+    memory = receipt.get("unified_memory", {})
+    if memory.get("method") != "peak_process_rss_proxy" or not memory.get("limitations"):
+        raise AssertionError("sustained memory proxy is incomplete")
+    if memory.get("headroom_fraction_proxy", 0.0) < 0.25:
+        raise AssertionError("sustained memory proxy headroom is below 25 percent")
+    if receipt.get("summary", {}).get("slowdown_ratio", float("inf")) > 1.25:
+        raise AssertionError("sustained slowdown gate failed")
+    if receipt.get("proof_class") != "performance_characterization" or receipt.get("task_success") != "not_evaluated":
+        raise AssertionError("sustained receipt promoted task evidence")
 
 
 def select_default(rows: list[dict[str, Any]]) -> int:

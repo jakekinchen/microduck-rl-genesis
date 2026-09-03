@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.apple-sustained/v1",
+  "title": "MicroDuck Apple sustained stability receipt",
+  "type": "object",
+  "required": [
+    "schema_version", "num_envs", "construction_s", "reset_s", "warmup_s",
+    "synchronization_s", "iterations", "summary", "peak_rss_bytes",
+    "unified_memory", "devices", "backend", "thermal_samples", "source",
+    "machine", "packages", "termination_reason", "proof_class", "task_success",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {"const": "microduck.apple-sustained/v1"},
+    "num_envs": {"const": 1024},
+    "iterations": {"type": "array", "minItems": 120, "maxItems": 120},
+    "termination_reason": {"const": "completed"},
+    "proof_class": {"const": "performance_characterization"},
+    "task_success": {"const": "not_evaluated"}
+  },
+  "additionalProperties": true
+}
