@@ -60,6 +60,48 @@ def _assert(condition: bool, message: str) -> None:
         raise AssertionError(message)
 
 
+def validate_json_schema_instance(instance: Any, schema: dict[str, Any], path: str = "$") -> None:
+    """Validate the deliberately small JSON-Schema subset used by this contract."""
+    if "const" in schema:
+        _assert(instance == schema["const"], f"schema const drift at {path}")
+
+    expected_type = schema.get("type")
+    type_matches = {
+        "object": lambda value: isinstance(value, dict),
+        "array": lambda value: isinstance(value, list),
+        "string": lambda value: isinstance(value, str),
+        "number": lambda value: isinstance(value, (int, float)) and not isinstance(value, bool),
+        "integer": lambda value: isinstance(value, int) and not isinstance(value, bool),
+        "boolean": lambda value: isinstance(value, bool),
+        "null": lambda value: value is None,
+    }
+    if expected_type is not None:
+        _assert(expected_type in type_matches, f"unsupported schema type at {path}: {expected_type}")
+        _assert(type_matches[expected_type](instance), f"schema type drift at {path}")
+
+    if isinstance(instance, dict):
+        properties = schema.get("properties", {})
+        required = schema.get("required", [])
+        for key in required:
+            _assert(key in instance, f"schema required field missing at {path}.{key}")
+        if schema.get("additionalProperties") is False:
+            extras = set(instance) - set(properties)
+            _assert(not extras, f"schema additional field at {path}: {sorted(extras)}")
+        for key, value in instance.items():
+            if key in properties:
+                validate_json_schema_instance(value, properties[key], f"{path}.{key}")
+
+    if isinstance(instance, list):
+        if "minItems" in schema:
+            _assert(len(instance) >= schema["minItems"], f"schema minItems drift at {path}")
+        if "maxItems" in schema:
+            _assert(len(instance) <= schema["maxItems"], f"schema maxItems drift at {path}")
+        item_schema = schema.get("items")
+        if item_schema is not None:
+            for index, value in enumerate(instance):
+                validate_json_schema_instance(value, item_schema, f"{path}[{index}]")
+
+
 def validate_contract(
     contract: dict[str, Any],
     root: Path,
@@ -67,6 +109,8 @@ def validate_contract(
     official_backflip_repo: Path | None = None,
     check_external: bool = True,
 ) -> None:
+    schema = json.loads((root / "experiments/m5/contract-v1.schema.json").read_text())
+    validate_json_schema_instance(contract, schema)
     _assert(contract.get("schema_version") == "microduck.m5-experiment-contract/v1", "schema drift")
     _assert(contract.get("state") == "pilot_authorized", "contract pilot authority state drift")
     _assert(contract.get("evidence_boundary") == "experiment_infrastructure_only", "evidence boundary promoted")
@@ -145,14 +189,17 @@ def validate_contract(
     resource = contract["resource_proposal"]
     _assert(resource["authorization"] == "pilot_only_manager_authorized_2026-09-03", "pilot authority drift")
     _assert(resource["manager_authority"] == "docs/manager-log/005-full-program-authorization.md", "Manager authority binding drift")
-    _assert(resource["execution_precondition"] == "independent Reviewer GO for the committed slice-026 contract amendment", "pilot review gate drift")
+    _assert(resource["execution_precondition"] == "independent Reviewer GO for the committed corrected slice-027 contract amendment", "pilot review gate drift")
     _assert(resource["proposed_type"] == "hyperstack_A100_80G", "Brev resource type drift")
-    _assert(resource["provider"] == "hyperstack" and resource["gpu"] == "1x A100 80GB", "Brev provider or GPU drift")
+    _assert(resource["cloud"] == "hyperstack" and resource["provider"] == "shadeform", "Brev cloud/provider drift")
+    _assert(resource["gpu"] == "1x A100 80GB", "Brev GPU drift")
     _assert(resource["stoppable"] is False, "non-stoppable resource semantics drift")
     _assert(resource["price_usd_per_hour_snapshot"] == 1.62, "pilot hourly price envelope drift")
     _assert(resource["pilot_runtime_ceiling_hours"] == 2 and resource["pilot_cost_ceiling_usd"] == 3.24, "pilot ceiling drift")
     _assert(resource["full_cuda_seed_runtime_ceiling_hours"] == 104 and resource["full_cuda_cost_ceiling_usd"] == 210, "full CUDA ceiling drift")
     _assert(resource["candidate_or_heldout_execution_authorized"] is False, "candidate or held-out execution was authorized early")
+    _assert(resource["workspace_count"] == 1 and resource["fallback_allowed"] is False, "one-workspace or no-fallback rule drift")
+    _assert(resource["inventory_precondition"] == "authenticated brev ls --json must report workspaces null immediately before creation", "empty-inventory gate drift")
     container = resource["container"]
     expected_digest = "sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c"
     _assert(container["registry"] == "docker.io" and container["repository"] == "nvidia/cuda", "CUDA registry binding drift")
@@ -160,7 +207,12 @@ def validate_contract(
     _assert(container["manifest_digest"] == expected_digest, "CUDA container digest drift")
     _assert(container["immutable_reference"] == f"docker.io/nvidia/cuda@{expected_digest}", "CUDA immutable reference drift")
     _assert(resource["workspace_name"] == "microduck-m5-pilot-20260903", "workspace identity drift")
-    _assert(resource["teardown"] == ["brev delete microduck-m5-pilot-20260903 after verified recovery because this type is non-stoppable", "brev ls --json must show no paid workspace"], "teardown semantics drift")
+    expected_create = f"brev create microduck-m5-pilot-20260903 --type hyperstack_A100_80G --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@{expected_digest} --jupyter=false --timeout 300"
+    _assert(resource["provisioning"][-1] == expected_create, "digest-bound provisioning command drift")
+    _assert(len(resource["pilot_contents"]) == 4, "pilot contents drift")
+    _assert(len(resource["recovery_before_teardown"]) == 4, "recovery/checksum semantics drift")
+    _assert(resource["full_cuda_authorization_condition"] == "independent Reviewer GO on complete pilot receipts; requery resource and price before continuation", "full CUDA review gate drift")
+    _assert(resource["teardown"] == ["brev delete microduck-m5-pilot-20260903 only after verified recovery because this type is non-stoppable", "poll brev ls --json until workspaces is null; any remaining paid workspace is a blocking failure"], "teardown semantics drift")
     _assert(contract["artifacts"]["checkpoint_export_rule"].startswith("export every predetermined checkpoint"), "late export selection admitted")
 
 

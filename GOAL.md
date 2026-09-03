@@ -15,17 +15,19 @@ M5 CUDA pilot authority and immutable runtime contract
 
 ## Current Slice
 
-`docs/briefs/026-m5-cuda-pilot-contract-amendment.md` - active.
+`docs/briefs/027-m5-cuda-pilot-contract-correction.md` - active after Reviewer
+026 `NO-GO`.
 
 ## Current Status
 
-`ACTIVE` - dated Manager authorization permits one bounded A100 CUDA pilot and
-the later full frozen matrix only after an independent pilot Reviewer accepts
-its receipts. The current slice must bind an immutable linux/amd64 CUDA image,
-the one-workspace Brev envelope, launch/recovery/checksum/teardown commands, and
-candidate/held-out exclusions before provisioning. Official-policy provenance,
-held-out realization, M6 acceptance/publication, activation, and every physical
-gate remain fail-closed until their specific prerequisites are satisfied.
+`REDIRECT` - Reviewer 026 verified the image digest, live A100 type/rate, empty
+Brev inventory, and preserved downstream gates, but rejected paid provisioning.
+Slice 027 must apply the digest in the actual Brev container-mode command,
+correct `cloud=hyperstack` versus `provider=shadeform`, and make the empty
+inventory, single-workspace, no-fallback, pilot-content, recovery/checksum,
+deletion, and full-review conditions schema- and validator-enforced. No paid
+workspace may be created until the corrected commit receives an independent
+Reviewer `GO`.
 
 ## Stop Conditions
 

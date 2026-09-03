@@ -4,17 +4,85 @@
   "title": "MicroDuck M5 immutable cross-backend experiment contract",
   "type": "object",
   "required": [
-    "schema_version", "experiment_id", "state", "evidence_boundary",
-    "blocking_gates", "repositories", "bindings", "training_config",
-    "tasks", "evaluator", "decision_rules", "abort_criteria",
-    "artifacts", "resumability", "resource_proposal"
+    "$schema", "schema_version", "experiment_id", "state",
+    "evidence_boundary", "blocking_gates", "repositories", "bindings",
+    "training_config", "tasks", "evaluator", "decision_rules",
+    "abort_criteria", "artifacts", "resumability", "resource_proposal"
   ],
   "properties": {
+    "$schema": {"const": "contract-v1.schema.json"},
     "schema_version": {"const": "microduck.m5-experiment-contract/v1"},
+    "experiment_id": {"const": "microduck.m5.cross-backend.walking-backflip.v1"},
     "state": {"const": "pilot_authorized"},
     "evidence_boundary": {"const": "experiment_infrastructure_only"},
+    "blocking_gates": {"type": "array", "minItems": 1, "maxItems": 1},
+    "repositories": {"type": "object"},
+    "bindings": {"type": "object"},
+    "training_config": {"type": "object"},
     "tasks": {"type": "array", "minItems": 2, "maxItems": 2},
-    "blocking_gates": {"type": "array", "minItems": 1, "maxItems": 1}
+    "evaluator": {"type": "object"},
+    "decision_rules": {"type": "object"},
+    "abort_criteria": {"type": "array", "minItems": 11, "maxItems": 11},
+    "artifacts": {"type": "object"},
+    "resumability": {"type": "object"},
+    "resource_proposal": {
+      "type": "object",
+      "required": [
+        "authorization", "manager_authority", "execution_precondition",
+        "price_snapshot_date", "query", "proposed_type", "cloud",
+        "provider", "gpu", "stoppable", "price_usd_per_hour_snapshot",
+        "pilot_runtime_ceiling_hours", "pilot_cost_ceiling_usd",
+        "full_cuda_seed_runtime_ceiling_hours", "full_cuda_cost_ceiling_usd",
+        "full_cuda_authorization_condition", "workspace_name",
+        "workspace_count", "inventory_precondition", "fallback_allowed",
+        "container", "pilot_contents",
+        "candidate_or_heldout_execution_authorized", "requirements",
+        "provisioning", "recovery_before_teardown", "teardown"
+      ],
+      "properties": {
+        "authorization": {"const": "pilot_only_manager_authorized_2026-09-03"},
+        "manager_authority": {"const": "docs/manager-log/005-full-program-authorization.md"},
+        "execution_precondition": {"const": "independent Reviewer GO for the committed corrected slice-027 contract amendment"},
+        "price_snapshot_date": {"const": "2026-09-03"},
+        "query": {"const": "brev search --gpu-name A100 --sort price --json"},
+        "proposed_type": {"const": "hyperstack_A100_80G"},
+        "cloud": {"const": "hyperstack"},
+        "provider": {"const": "shadeform"},
+        "gpu": {"const": "1x A100 80GB"},
+        "stoppable": {"const": false},
+        "price_usd_per_hour_snapshot": {"const": 1.62},
+        "pilot_runtime_ceiling_hours": {"const": 2},
+        "pilot_cost_ceiling_usd": {"const": 3.24},
+        "full_cuda_seed_runtime_ceiling_hours": {"const": 104},
+        "full_cuda_cost_ceiling_usd": {"const": 210},
+        "full_cuda_authorization_condition": {"const": "independent Reviewer GO on complete pilot receipts; requery resource and price before continuation"},
+        "workspace_name": {"const": "microduck-m5-pilot-20260903"},
+        "workspace_count": {"const": 1},
+        "inventory_precondition": {"const": "authenticated brev ls --json must report workspaces null immediately before creation"},
+        "fallback_allowed": {"const": false},
+        "container": {
+          "type": "object",
+          "required": ["registry", "repository", "tag_for_humans_only", "platform", "manifest_digest", "immutable_reference", "inspection_command"],
+          "properties": {
+            "registry": {"const": "docker.io"},
+            "repository": {"const": "nvidia/cuda"},
+            "tag_for_humans_only": {"const": "12.8.1-cudnn-devel-ubuntu24.04"},
+            "platform": {"const": "linux/amd64"},
+            "manifest_digest": {"const": "sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c"},
+            "immutable_reference": {"const": "docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c"},
+            "inspection_command": {"const": "docker manifest inspect --verbose nvidia/cuda:12.8.1-cudnn-devel-ubuntu24.04"}
+          },
+          "additionalProperties": false
+        },
+        "pilot_contents": {"const": ["record nvidia-smi, CUDA, container manifest, Python, Torch, Warp, MuJoCo, MuJoCo Warp, Genesis, and source identities", "run the full applicable repository test suite with exact BAM and official source bindings", "run frozen Genesis walking and backflip at 64 environments for 5 iterations on CUDA", "retain configs, checkpoints, normalized ONNX exports, logs, manifests, SHA256SUMS, elapsed time, and exact cost"]},
+        "candidate_or_heldout_execution_authorized": {"const": false},
+        "requirements": {"const": ["requery price and availability immediately before creation", "independent Reviewer GO for corrected slice 027", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or higher price"]},
+        "provisioning": {"const": ["brev ls --json", "brev search --gpu-name A100 --sort price --json", "brev create microduck-m5-pilot-20260903 --type hyperstack_A100_80G --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300"]},
+        "recovery_before_teardown": {"const": ["inside the remote receipt root generate SHA256SUMS over every unique checkpoint normalized ONNX normalizer config training/evaluator output log and manifest", "brev copy microduck-m5-pilot-20260903:/workspace/receipts/m5/pilot/<run-id>/ receipts/m5/pilot/<run-id>/", "locally regenerate SHA256SUMS over the recovered files in byte-sorted relative-path order", "require exact remote/local SHA256SUMS equality and presence of every required pilot artifact before deletion"]},
+        "teardown": {"const": ["brev delete microduck-m5-pilot-20260903 only after verified recovery because this type is non-stoppable", "poll brev ls --json until workspaces is null; any remaining paid workspace is a blocking failure"]}
+      },
+      "additionalProperties": false
+    }
   },
   "additionalProperties": false
 }

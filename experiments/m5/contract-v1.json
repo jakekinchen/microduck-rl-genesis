@@ -165,11 +165,12 @@
   "resource_proposal": {
     "authorization": "pilot_only_manager_authorized_2026-09-03",
     "manager_authority": "docs/manager-log/005-full-program-authorization.md",
-    "execution_precondition": "independent Reviewer GO for the committed slice-026 contract amendment",
+    "execution_precondition": "independent Reviewer GO for the committed corrected slice-027 contract amendment",
     "price_snapshot_date": "2026-09-03",
     "query": "brev search --gpu-name A100 --sort price --json",
     "proposed_type": "hyperstack_A100_80G",
-    "provider": "hyperstack",
+    "cloud": "hyperstack",
+    "provider": "shadeform",
     "gpu": "1x A100 80GB",
     "stoppable": false,
     "price_usd_per_hour_snapshot": 1.62,
@@ -179,6 +180,9 @@
     "full_cuda_cost_ceiling_usd": 210,
     "full_cuda_authorization_condition": "independent Reviewer GO on complete pilot receipts; requery resource and price before continuation",
     "workspace_name": "microduck-m5-pilot-20260903",
+    "workspace_count": 1,
+    "inventory_precondition": "authenticated brev ls --json must report workspaces null immediately before creation",
+    "fallback_allowed": false,
     "container": {
       "registry": "docker.io",
       "repository": "nvidia/cuda",
@@ -195,9 +199,9 @@
       "retain configs, checkpoints, normalized ONNX exports, logs, manifests, SHA256SUMS, elapsed time, and exact cost"
     ],
     "candidate_or_heldout_execution_authorized": false,
-    "requirements": ["requery price and availability immediately before creation", "independent Reviewer GO for slice 026", "single instance only", "abort rather than substitute H100 multi-GPU or second workspace"],
-    "provisioning": ["brev ls --json", "brev search --gpu-name A100 --sort price --json", "brev create microduck-m5-pilot-20260903 --type hyperstack_A100_80G"],
-    "recovery_before_teardown": ["copy checkpoints", "copy ONNX and normalizers", "copy evaluator outputs and logs", "verify remote and local SHA256SUMS"],
-    "teardown": ["brev delete microduck-m5-pilot-20260903 after verified recovery because this type is non-stoppable", "brev ls --json must show no paid workspace"]
+    "requirements": ["requery price and availability immediately before creation", "independent Reviewer GO for corrected slice 027", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or higher price"],
+    "provisioning": ["brev ls --json", "brev search --gpu-name A100 --sort price --json", "brev create microduck-m5-pilot-20260903 --type hyperstack_A100_80G --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300"],
+    "recovery_before_teardown": ["inside the remote receipt root generate SHA256SUMS over every unique checkpoint normalized ONNX normalizer config training/evaluator output log and manifest", "brev copy microduck-m5-pilot-20260903:/workspace/receipts/m5/pilot/<run-id>/ receipts/m5/pilot/<run-id>/", "locally regenerate SHA256SUMS over the recovered files in byte-sorted relative-path order", "require exact remote/local SHA256SUMS equality and presence of every required pilot artifact before deletion"],
+    "teardown": ["brev delete microduck-m5-pilot-20260903 only after verified recovery because this type is non-stoppable", "poll brev ls --json until workspaces is null; any remaining paid workspace is a blocking failure"]
   }
 }

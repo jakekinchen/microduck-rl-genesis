@@ -207,6 +207,16 @@ pilot, and must separately accept the recovered pilot receipts before the
 104-GPU-hour/$210 full CUDA envelope becomes eligible. Official-policy
 provenance and held-out timing remain blocking gates.
 
+Reviewer 026 returned `NO-GO`: the first amendment did not apply its digest in
+the Brev create command, mislabeled `cloud=hyperstack` as the provider rather
+than recording `provider=shadeform`, and left several safety rules mutable under
+the semantic validator. Corrective slice 027 makes the actual container-mode
+provisioning command digest-addressed, fixes the catalog fields, requires an
+empty inventory and exactly one no-fallback workspace, and schema/validator
+locks the pilot contents, recovery, independent checksums, deletion, and later
+full-run Reviewer gate. No paid workspace may start until slice 027 receives a
+new independent `GO`.
+
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.
