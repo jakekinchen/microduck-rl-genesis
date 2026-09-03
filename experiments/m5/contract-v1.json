@@ -1,0 +1,190 @@
+{
+  "$schema": "contract-v1.schema.json",
+  "schema_version": "microduck.m5-experiment-contract/v1",
+  "experiment_id": "microduck.m5.cross-backend.walking-backflip.v1",
+  "state": "preregistered_blocked",
+  "evidence_boundary": "experiment_infrastructure_only",
+  "blocking_gates": [
+    {
+      "id": "official_policy_authority_missing",
+      "state": "blocking",
+      "binding": "microduck_contract/policies/official-walking-authority-v1.json",
+      "effect": "blocks official-policy repeatability and all final candidate admission"
+    },
+    {
+      "id": "cuda_container_digest_missing",
+      "state": "blocking",
+      "effect": "an immutable CUDA container digest must be added by reviewed contract amendment before execution"
+    },
+    {
+      "id": "cuda_compute_authorization_missing",
+      "state": "blocking",
+      "effect": "the resource proposal is not authority to provision or spend"
+    }
+  ],
+  "repositories": {
+    "genesis": {
+      "repository": "https://github.com/jakekinchen/microduck-rl-genesis.git",
+      "source_commit": "93cd5f261200acb5176f12c417c31c1d877be41a",
+      "role": "frozen executable training baseline; later contract-only commits do not alter bound training sources"
+    },
+    "official_walking": {
+      "repository": "https://github.com/pollen-robotics/microduck_rl.git",
+      "source_commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+      "task_blob": {
+        "path": "src/mjlab_microduck/tasks/microduck_velocity_env_cfg.py",
+        "sha256": "sha256:75a0430b814ac7495eb237ab806fbd4dd10309b9fd3027ac3eee3c2e3c5a944a"
+      },
+      "environment": {
+        "pyproject_sha256": "sha256:45f3476af2b5bba1c3199aadb8372ec1bb08496ca91b08dec78543addd5c8440",
+        "uv_lock_sha256": "sha256:2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa"
+      }
+    },
+    "official_backflip": {
+      "repository": "https://github.com/Lulzx/microduck-backflip.git",
+      "source_commit": "8bde27eb141c8f14db05fc4370e536521203a98d",
+      "task_blob": {
+        "path": "src/mjlab_microduck/tasks/microduck_backflip_env_cfg.py",
+        "sha256": "sha256:6e9d49c99ffd6d8e1b9a36cb052ee816008eea759a166dad61f227e640f20159"
+      },
+      "environment": {
+        "pyproject_sha256": "sha256:e6fe252edf0e0de4a1223d66fa0887009f08d91a443056c8d2d353b9cdeb8e5b",
+        "uv_lock_sha256": "sha256:2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa"
+      }
+    },
+    "bam": {
+      "repository": "https://github.com/Rhoban/bam.git",
+      "source_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967"
+    }
+  },
+  "bindings": {
+    "microduck/velocity_cfg.py": "sha256:1a7d58e527cbc4694493739a4efa49b7634906e01036adbc806190c84460c251",
+    "microduck/backflip_cfg.py": "sha256:b0ee0ca8300544d57984bff5272075be119950ed8b870ecedbfdc3cea9f1723f",
+    "microduck/velocity_env.py": "sha256:e52eec8b2b5fa0df1335d13c14492766ab746a29cfb60795150af83c48f90623",
+    "microduck/backflip_env.py": "sha256:e38d82f1c7a6dbaf3d98ac2590e7cb09839fa216f7be8e785ab15843f151b4a6",
+    "microduck_contract/tasks/walking-v1.json": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71",
+    "microduck_contract/tasks/backflip-v1.json": "sha256:c265d7c5828f7a2fe597530f01b120d17e5a75bf618348604db050eb8164fc8d",
+    "microduck_contract/model/microduck-walk-v1.lock.json": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae",
+    "microduck_contract/model/microduck-allcollisions-v1.lock.json": "sha256:d89e51c55fb183cbb77233d27536a3a7a3e264dca204d0e02d5fdf8d0b3ec708",
+    "microduck_contract/actuator/bam-m6-xl330-v1.lock.json": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+    "microduck_contract/interface/observation-v1.json": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce",
+    "microduck_contract/interface/action-v1.json": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896",
+    "microduck_contract/interface/control-v1.json": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
+    "export_onnx.py": "sha256:a69a5283646deec0adae0305b4822cc1ddd64baa72e2c20a8abbcaf578f1ed91",
+    "environments/apple/requirements.lock": "sha256:4425348d7092188c4f81a63e5e227642c666d34d498cb3e6557e9371d8ad8ff0",
+    "validation/official-mjlab/uv.lock": "sha256:3f77f5cb67ac561025d5450e8edd42b62909ad7ab05dd17e9741c45497e0c2eb",
+    "evaluator/config-v1.json": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
+    "evaluator/development-suite-v1.json": "sha256:6f32fbed6aad35997de5d219dfa38e352d42197721b60c219eec3eb3b691c77f",
+    "evaluator/case-matrix-v1.json": "sha256:b9ba72a89fdeabd96ffa75205be21a91d0ea0f892ffd7f1d72f5325109f3e62a",
+    "evaluator/heldout-protocol-v1.json": "sha256:bb15afd87114330e33c433a68d76f0c5850a1d4bd92367ae77116b66990be75a",
+    "evaluator/core.py": "sha256:a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+    "evaluator/success.py": "sha256:06a135384582f66a8c716be687e6ded9bc07fecdc8833f7a2c7f18dcbf190ec1",
+    "microduck_contract/policies/official-walking-authority-v1.json": "sha256:58630bc95075808cd58eb0f4999abba1d1ec8816d9306dc660f73ee608d8377a"
+  },
+  "training_config": {
+    "actor": {"class_name": "MLPModel", "hidden_dims": [512, 256, 128], "activation": "elu", "obs_normalization": true, "distribution": {"class_name": "GaussianDistribution", "init_std": 1.0, "std_type": "scalar"}},
+    "critic": {"class_name": "MLPModel", "hidden_dims": [512, 256, 128], "activation": "elu", "obs_normalization": true},
+    "ppo": {"class_name": "PPO", "clip_param": 0.2, "desired_kl": 0.01, "entropy_coef": 0.01, "gamma": 0.99, "lam": 0.95, "learning_rate": 0.001, "max_grad_norm": 1.0, "num_learning_epochs": 5, "num_mini_batches": 4, "schedule": "adaptive", "use_clipped_value_loss": true, "value_loss_coef": 1.0},
+    "rollout_steps_per_env": 24,
+    "actor_observation_group": ["policy"],
+    "critic_observation_groups": ["policy", "privileged"],
+    "backflip_symmetry_cfg": null,
+    "checkpoint_selection": "predetermined_by_transition_count_only"
+  },
+  "tasks": [
+    {
+      "task_id": "microduck.walking.v1",
+      "task_contract": "microduck_contract/tasks/walking-v1.json",
+      "model_lock": "microduck_contract/model/microduck-walk-v1.lock.json",
+      "development_seeds": [51001, 51002, 51003],
+      "candidate_comparison_seeds": [51101, 51102, 51103, 51104, 51105],
+      "development_transition_budget": 24576000,
+      "candidate_transition_budget": 294912000,
+      "checkpoint_transitions": [0, 49152000, 98304000, 147456000, 196608000, 245760000, 294912000],
+      "backends": [
+        {"id": "genesis-metal-mps", "num_envs": 1024, "rollout_steps_per_env": 24, "development_iterations": 1000, "candidate_iterations": 12000},
+        {"id": "official-mjlab-cuda", "num_envs": 4096, "rollout_steps_per_env": 24, "development_iterations": 250, "candidate_iterations": 3000}
+      ],
+      "task_metrics": "microduck_contract/tasks/walking-v1.json#/acceptance/metrics"
+    },
+    {
+      "task_id": "microduck.backflip.v1",
+      "task_contract": "microduck_contract/tasks/backflip-v1.json",
+      "model_lock": "microduck_contract/model/microduck-allcollisions-v1.lock.json",
+      "development_seeds": [52001, 52002, 52003],
+      "candidate_comparison_seeds": [52101, 52102, 52103, 52104, 52105],
+      "development_transition_budget": 24576000,
+      "candidate_transition_budget": 294912000,
+      "checkpoint_transitions": [0, 49152000, 98304000, 147456000, 196608000, 245760000, 294912000],
+      "backends": [
+        {"id": "genesis-metal-mps", "num_envs": 1024, "rollout_steps_per_env": 24, "development_iterations": 1000, "candidate_iterations": 12000},
+        {"id": "official-mjlab-cuda", "num_envs": 4096, "rollout_steps_per_env": 24, "development_iterations": 250, "candidate_iterations": 3000}
+      ],
+      "task_metrics": "microduck_contract/tasks/backflip-v1.json#/acceptance/metrics"
+    }
+  ],
+  "evaluator": {
+    "id": "microduck.c-mujoco-onnx-bam.v1",
+    "visible_development_suite": "evaluator/development-suite-v1.json",
+    "case_matrix": "evaluator/case-matrix-v1.json",
+    "success_classifier": "evaluator/success.py",
+    "heldout_protocol": "evaluator/heldout-protocol-v1.json",
+    "heldout_state_required_before_candidate_freeze": "preregistered_unrealized",
+    "heldout_realization_rule": "no beacon value, seed, case, or result may be realized before immutable candidate and source-manifest freeze",
+    "same_evaluator_for_all_backends": true
+  },
+  "decision_rules": {
+    "primary_endpoint": "frozen task-classifier pass fraction over every required held-out cell",
+    "walking_noninferiority_margin_absolute": 0.05,
+    "backflip_noninferiority_margin_absolute": 0.0,
+    "confidence_rule": "paired seed-and-cell bootstrap, 10000 preregistered resamples; lower 95 percent confidence bound of Genesis minus official must be at least negative margin",
+    "variance_rule": "report per-backend seed variance and ratio; Genesis variance may not exceed official variance by more than 0.02 absolute pass-fraction variance",
+    "time_to_threshold": "first predetermined transition checkpoint whose frozen classifier passes; never interpolate or choose a late checkpoint",
+    "ranking_consistency": "report Spearman correlation of backend rankings across all predetermined checkpoints; no replacement decision when undefined",
+    "selection_rule": "Genesis remains primary only if both tasks satisfy noninferiority and no integrity, variance, or authority gate fails",
+    "ppo_return_is_success": false
+  },
+  "abort_criteria": [
+    "any bound source or artifact hash drifts",
+    "official_policy_authority_missing remains unresolved at candidate admission",
+    "CUDA container digest is absent or compute is not explicitly authorized",
+    "seed sets overlap or a held-out seed is realized before candidate freeze",
+    "transition budgets differ between backends",
+    "a checkpoint or normalized ONNX export is missing, added late, or selected from outcomes",
+    "any evaluator input is unbound or differs between backends",
+    "NaN, Inf, corrupt checkpoint, irrecoverable receipt gap, or hardware/runtime integrity failure",
+    "resource runtime or cost ceiling is reached before artifact recovery"
+  ],
+  "artifacts": {
+    "run_id_format": "m5-{task_id}-{backend_id}-seed-{seed}-source-{commit12}",
+    "root": "receipts/m5/{experiment_id}/{task_id}/{backend_id}/seed-{seed}/",
+    "required_per_checkpoint": ["checkpoint.pt", "policy.normalized.onnx", "normalizer.json", "training-metrics.jsonl", "evaluator-visible.json", "manifest.json", "SHA256SUMS"],
+    "final_comparison": ["matrix.json", "heldout-realization.json", "decision.json", "SHA256SUMS"],
+    "checkpoint_export_rule": "export every predetermined checkpoint through export_onnx.py with baked observation normalization; no outcome-selected suffix",
+    "proof_classes": ["training_progress", "visible_development", "heldout_evaluation", "task_classification"]
+  },
+  "resumability": {
+    "atomic_checkpoint_write_required": true,
+    "resume_only_from_matching_manifest_and_sha256": true,
+    "completed_seed_receipts_immutable": true,
+    "resume_must_preserve_transition_count_rng_state_optimizer_state_and_normalizer": true,
+    "partial_or_failed_runs_retained_with_terminal_reason": true
+  },
+  "resource_proposal": {
+    "authorization": "proposal_only_not_authorized",
+    "price_snapshot_date": "2026-09-03",
+    "query": "brev search --gpu-name A100 --sort price --json",
+    "proposed_type": "a100-80gb.1x",
+    "provider": "crusoe",
+    "gpu": "1x A100 80GB",
+    "stoppable": true,
+    "price_usd_per_hour_snapshot": 1.98,
+    "pilot_runtime_ceiling_hours": 2,
+    "pilot_cost_ceiling_usd": 3.96,
+    "full_cuda_seed_runtime_ceiling_hours": 104,
+    "full_cuda_cost_ceiling_usd": 205.92,
+    "requirements": ["requery price and availability", "explicit user authorization", "immutable container digest", "single instance only"],
+    "recovery_before_teardown": ["copy checkpoints", "copy ONNX and normalizers", "copy evaluator outputs and logs", "verify remote and local SHA256SUMS"],
+    "teardown": ["brev stop <workspace>", "brev delete <workspace> after verified recovery if no unique state remains", "brev ls --json must show no paid workspace"]
+  }
+}
