@@ -12,6 +12,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TESTS = [
+    ("inventaire provenance fichiers M6", "test_file_provenance.py"),
     ("contrats artefact et attestations M6", "test_artifact_contract.py"),
     ("contrat immuable expérience M5", "test_m5_experiment_contract.py"),
     ("schéma benchmark Apple", "test_apple_scaling.py"),
