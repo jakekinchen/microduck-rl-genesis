@@ -11,17 +11,17 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M5 - Run the decisive cross-backend training experiment
+M6 - Build independent immutable-artifact foundations while M5 execution is blocked
 
 ## Current Slice
 
-`docs/briefs/023-m5-immutable-experiment-contract.md`
+`docs/briefs/024-m6-manifest-attestation-schemas.md`
 
 ## Current Status
 
-`ACTIVE` - freeze and validate the M5 experiment contract only. Candidate
-admission remains blocked by missing official-policy authority and separately
-authorized CUDA execution. No M5 seed run is authorized.
+`ACTIVE` - implement non-executing M6 schemas and synthetic validation only.
+M5 candidate admission remains blocked by missing official-policy authority,
+an immutable CUDA container digest, and explicit compute authorization.
 
 ## Stop Conditions
 

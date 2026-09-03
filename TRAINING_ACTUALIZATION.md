@@ -188,7 +188,15 @@ iteration time and stability, not pure physics SPS.
 
 ### M5 — Run the decisive cross-backend training experiment (P1)
 
-- [ ] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
+Immutable experiment contract accepted on 2026-09-03 at `b2a1ab6`: exact
+sources/hashes, full actor/PPO configuration, public/candidate seeds, equal
+transition budgets, predetermined checkpoints/normalized exports, evaluator,
+held-out timing, decision rules, receipts, resumability, and a proposal-only
+CUDA budget are frozen. Its 32-row dry-run executes nothing. M5 execution remains
+blocked by official-policy authority, immutable CUDA container digest, and
+explicit compute authorization.
+
+- [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.
 - [ ] Match Genesis Metal/MPS and official mjlab/CUDA by transitions, not iterations or wall time.
