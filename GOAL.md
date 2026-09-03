@@ -11,23 +11,20 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M5 CUDA pilot authority and immutable runtime contract
+M5 paid CUDA pilot
 
 ## Current Slice
 
-`docs/briefs/027-m5-cuda-pilot-contract-correction.md` - active after Reviewer
-026 `NO-GO`.
+`docs/briefs/028-m5-paid-cuda-pilot.md` - active after Reviewer 027 `GO`.
 
 ## Current Status
 
-`REDIRECT` - Reviewer 026 verified the image digest, live A100 type/rate, empty
-Brev inventory, and preserved downstream gates, but rejected paid provisioning.
-Slice 027 must apply the digest in the actual Brev container-mode command,
-correct `cloud=hyperstack` versus `provider=shadeform`, and make the empty
-inventory, single-workspace, no-fallback, pilot-content, recovery/checksum,
-deletion, and full-review conditions schema- and validator-enforced. No paid
-workspace may be created until the corrected commit receives an independent
-Reviewer `GO`.
+`ACTIVE` - Reviewer 027 accepted the fail-closed corrected contract and permits
+exactly one bounded two-hour/$3.24 A100 pilot. Prepare source bundles and the
+run harness before provisioning, continuously monitor the paid resource,
+recover and independently verify all receipts, then delete the non-stoppable
+workspace and confirm authenticated empty inventory. Full CUDA candidate work
+remains blocked pending an independent review of the completed pilot.
 
 ## Stop Conditions
 
