@@ -26,6 +26,9 @@ run_logged() {
 for bundle in genesis.bundle official-walking.bundle official-backflip.bundle; do
   test -s "$INPUT_ROOT/$bundle"
 done
+test -s "$INPUT_ROOT/run_m5_cuda_pilot.sh"
+cp "$INPUT_ROOT/run_m5_cuda_pilot.sh" "$RECEIPT_ROOT/run_m5_cuda_pilot.sh"
+sha256sum "$RECEIPT_ROOT/run_m5_cuda_pilot.sh" > "$RECEIPT_ROOT/harness-sha256.txt"
 
 run_logged host-nvidia-smi nvidia-smi
 run_logged host-kernel uname -a
