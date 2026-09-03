@@ -15,7 +15,9 @@ PRICE_USD_PER_HOUR=1.62
 
 mkdir -p "$SOURCE_ROOT" "$VENV_ROOT" "$RECEIPT_ROOT/logs" "$RECEIPT_ROOT/artifacts"
 START_EPOCH=$(date -u +%s)
-date -u +%Y-%m-%dT%H:%M:%SZ > "$RECEIPT_ROOT/start-utc.txt"
+if [[ ! -f "$RECEIPT_ROOT/start-utc.txt" ]]; then
+  date -u +%Y-%m-%dT%H:%M:%SZ > "$RECEIPT_ROOT/start-utc.txt"
+fi
 
 run_logged() {
   local name=$1
@@ -37,22 +39,34 @@ run_logged base-cuda bash -lc 'nvcc --version && cat /etc/os-release'
 export DEBIAN_FRONTEND=noninteractive
 run_logged apt-bootstrap apt-get update
 run_logged apt-install apt-get install -y --no-install-recommends \
-  ca-certificates git python3 python3-pip python3-venv
+  ca-certificates git libgl1 libglib2.0-0 python3 python3-pip python3-venv
 
-python3 -m venv "$VENV_ROOT/tools"
+if [[ ! -x "$VENV_ROOT/tools/bin/python" ]]; then
+  python3 -m venv "$VENV_ROOT/tools"
+fi
 run_logged uv-install "$VENV_ROOT/tools/bin/pip" install uv==0.8.19
 UV=$VENV_ROOT/tools/bin/uv
 
-git clone "$INPUT_ROOT/genesis.bundle" "$SOURCE_ROOT/genesis-current"
+if [[ ! -d "$SOURCE_ROOT/genesis-current/.git" ]]; then
+  git clone "$INPUT_ROOT/genesis.bundle" "$SOURCE_ROOT/genesis-current"
+fi
 git -C "$SOURCE_ROOT/genesis-current" checkout --detach "$CONTRACT_COMMIT"
-git clone "$SOURCE_ROOT/genesis-current" "$SOURCE_ROOT/genesis-training"
+if [[ ! -d "$SOURCE_ROOT/genesis-training/.git" ]]; then
+  git clone "$SOURCE_ROOT/genesis-current" "$SOURCE_ROOT/genesis-training"
+fi
 git -C "$SOURCE_ROOT/genesis-training" checkout --detach "$GENESIS_COMMIT"
-git clone "$INPUT_ROOT/official-walking.bundle" "$SOURCE_ROOT/microduck-rl"
+if [[ ! -d "$SOURCE_ROOT/microduck-rl/.git" ]]; then
+  git clone "$INPUT_ROOT/official-walking.bundle" "$SOURCE_ROOT/microduck-rl"
+fi
 git -C "$SOURCE_ROOT/microduck-rl" checkout --detach "$WALKING_COMMIT"
-git clone "$INPUT_ROOT/official-backflip.bundle" "$SOURCE_ROOT/microduck-backflip"
+if [[ ! -d "$SOURCE_ROOT/microduck-backflip/.git" ]]; then
+  git clone "$INPUT_ROOT/official-backflip.bundle" "$SOURCE_ROOT/microduck-backflip"
+fi
 git -C "$SOURCE_ROOT/microduck-backflip" checkout --detach "$BACKFLIP_COMMIT"
 
-"$UV" venv --python python3 "$VENV_ROOT/genesis"
+if [[ ! -x "$VENV_ROOT/genesis/bin/python" ]]; then
+  "$UV" venv --python python3 "$VENV_ROOT/genesis"
+fi
 run_logged genesis-dependencies "$UV" pip install \
   --python "$VENV_ROOT/genesis/bin/python" torch==2.9.1 \
   -r "$SOURCE_ROOT/genesis-training/requirements.txt"
@@ -62,9 +76,11 @@ run_logged official-walking-sync "$UV" sync \
 run_logged official-backflip-sync "$UV" sync \
   --project "$SOURCE_ROOT/microduck-backflip" --frozen
 
-run_logged bam-materialize "$VENV_ROOT/genesis/bin/python" \
-  "$SOURCE_ROOT/genesis-current/scripts/materialize_bam_authority.py" \
-  "$SOURCE_ROOT/bam"
+if [[ ! -d "$SOURCE_ROOT/bam/.git" ]]; then
+  run_logged bam-materialize "$VENV_ROOT/genesis/bin/python" \
+    "$SOURCE_ROOT/genesis-current/scripts/materialize_bam_authority.py" \
+    "$SOURCE_ROOT/bam"
+fi
 test "$(git -C "$SOURCE_ROOT/bam" rev-parse HEAD)" = "$BAM_COMMIT"
 
 {
