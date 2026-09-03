@@ -1,5 +1,7 @@
 # GOAL
 
+<stop-orchestrator/>
+
 ## Active Mission
 
 Turn the working Genesis Metal/MPS pipeline into a reproducible,
@@ -11,17 +13,19 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M6 - Build independent immutable-artifact foundations while M5 execution is blocked
+M5/M6 external authority boundary
 
 ## Current Slice
 
-`docs/briefs/025-m6-file-provenance-inventory.md`
+`docs/briefs/025-m6-file-provenance-inventory.md` - completed and reviewed.
 
 ## Current Status
 
-`ACTIVE` - inventory file-level license and provenance with explicit negatives.
-M5 candidate admission remains blocked by missing official-policy authority,
-an immutable CUDA container digest, and explicit compute authorization.
+`ESCALATE` - M5 contract/preflight and independent M6 foundations are accepted.
+M5 execution remains blocked by official-policy authority, immutable CUDA
+container digest, and explicit compute authorization. Real M6 acceptance remains
+blocked by missing policy/media and partial asset provenance. Publication,
+activation, held-out realization, and hardware remain unauthorized.
 
 ## Stop Conditions
 

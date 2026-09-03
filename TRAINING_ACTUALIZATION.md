@@ -215,6 +215,13 @@ download, import, evaluation, approval, activation, task evidence, and physical
 authority separate. Validation is byte-only against synthetic fixtures; no real
 policy is accepted or executed.
 
+File-level inventory accepted on 2026-09-03 at `e91ac2e`: 70 files are covered,
+with 63 complete, 2 partial, and 5 missing. Exact negatives are retained for
+`ball.xml`, the actuator parameter source path, three policy weights, and two
+media files. No dataset files are present and none are invented. M6 remains open
+for real fully attributable official/community artifacts and publication under
+separate authority.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.
