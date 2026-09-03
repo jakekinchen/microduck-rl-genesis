@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from benchmarks.apple_scaling import REQUIRED_SIZES, assemble_sweep, select_default, summarize_sustained, validate_sweep
+from benchmarks.apple_scaling import REQUIRED_SIZES, assemble_sweep, crossover_decision, select_default, summarize_sustained, validate_sweep
 from scripts.benchmark_apple_scaling import learner_parameters_finite
 
 
@@ -55,14 +55,20 @@ sustained = summarize_sustained(
 assert sustained["slowdown_ratio"] < 1.25
 assert sustained["p95_total_iteration_s"] == 4.113
 
+crossover_rows = [
+    {"num_envs": 64, "devices": {"physics": "cpu"}, "summary": {"median_total_iteration_s": 3.0}},
+    {"num_envs": 64, "devices": {"physics": "metal"}, "summary": {"median_total_iteration_s": 2.0}},
+]
+assert crossover_decision(crossover_rows) == "<=64"
 
-def row(size: int, total: float, headroom: float = 0.8, thermal: str = "nominal") -> dict:
+
+def row(size: int, total: float, samples: float, headroom: float = 0.8, thermal: str = "nominal") -> dict:
     return {
         "schema_version":"microduck.apple-scaling-row/v1",
         "num_envs":size,"construction_s":1.0,"warmup_iteration_s":2.0,
         "collection_s":total * 0.7,"learner_update_s":total * 0.3,
         "total_iteration_s":total,"reset_s":0.1,"synchronization_s":0.01,
-        "env_steps_per_s":1000.0,"samples_per_minute":50000.0,
+        "env_steps_per_s":1000.0,"samples_per_minute":samples,
         "peak_rss_bytes":1000,"unified_memory":{"method":"peak_process_rss_proxy","headroom_fraction_proxy":headroom,"limitations":"RSS proxy only"},
         "devices":{"physics":"metal","learner":"mps"},
         "backend":{"genesis":"metal","torch_mps_available":True},
@@ -75,15 +81,15 @@ def row(size: int, total: float, headroom: float = 0.8, thermal: str = "nominal"
         "proof_class":"performance_characterization","task_success":"not_evaluated",
     }
 
-rows = [row(size, total) for size, total in zip(REQUIRED_SIZES, (5,4,3,3.5,4))]
+rows = [row(size, total, samples) for size, total, samples in zip(REQUIRED_SIZES, (5,4,3,3.5,4), (1,2,3,4,5))]
 receipt = {"schema_version":"microduck.apple-scaling-sweep/v1","source_commit":"0123456789abcdef","rows":rows,"proof_class":"performance_characterization","task_success":"not_evaluated"}
 validate_sweep(receipt)
-assert select_default(rows) == 256
+assert select_default(rows) == 1024
 unsafe = copy.deepcopy(rows)
-unsafe[2]["thermal"]["state_after"] = "warning_or_unavailable"
+unsafe[4]["thermal"]["state_after"] = "warning_or_unavailable"
 assert select_default(unsafe) == 512
 unsafe[3]["unified_memory"]["headroom_fraction_proxy"] = 0.1
-assert select_default(unsafe) == 128
+assert select_default(unsafe) == 256
 bad = copy.deepcopy(receipt)
 bad["rows"][0]["devices"]["learner"] = "cpu"
 try:

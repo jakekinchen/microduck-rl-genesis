@@ -154,4 +154,18 @@ def select_default(rows: list[dict[str, Any]]) -> int:
         safe.append(row)
     if not safe:
         raise AssertionError("no thermally and memory-safe Apple size")
-    return min(safe, key=lambda row: (row["total_iteration_s"], row["num_envs"]))["num_envs"]
+    return max(safe, key=lambda row: (row["samples_per_minute"], -row["num_envs"]))["num_envs"]
+
+
+def crossover_decision(rows: list[dict[str, Any]]) -> str | None:
+    """Return the first matched grid size where Metal is no slower than CPU."""
+    by_size: dict[int, dict[str, dict[str, Any]]] = {}
+    for row in rows:
+        by_size.setdefault(int(row["num_envs"]), {})[row["devices"]["physics"]] = row
+    for size in REQUIRED_SIZES[:-1]:
+        pair = by_size.get(size, {})
+        if set(pair) != {"cpu", "metal"}:
+            continue
+        if pair["metal"]["summary"]["median_total_iteration_s"] <= pair["cpu"]["summary"]["median_total_iteration_s"]:
+            return "<=64" if size == 64 else str(size)
+    return None
