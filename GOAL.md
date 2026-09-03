@@ -15,11 +15,11 @@ M4 - Characterize Apple scaling and stability
 
 ## Current Slice
 
-`docs/briefs/020-m4-apple-sustained-stability.md`
+`docs/briefs/021-m4-cpu-mps-crossover.md`
 
 ## Current Status
 
-`ACTIVE` - run the preregistered sustained 1024-environment Apple slice.
+`ACTIVE` - measure the bounded CPU+MPS debug-fallback crossover.
 `official_policy_authority_missing` blocks only the official-policy
 repeatability sub-gate.
 

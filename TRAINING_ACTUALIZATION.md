@@ -160,6 +160,12 @@ above 97.75% RSS-proxy headroom. At 1024, total PPO iteration was 4.271 s and
 total-iteration-derived throughput was highest at 345,246 samples/min. This
 selects only the preregistered sustained-test candidate, not the default.
 
+Sustained 1024-environment stability accepted on 2026-09-03: 120/120 measured
+iterations were finite, all 15 declared thermal samples were nominal, RSS-proxy
+headroom was 97.15%, and last/first median iteration slowdown was 0.9730 against
+the frozen 1.25 ceiling. It remains eligible as the everyday default; M4 still
+requires the CPU+MPS fallback crossover.
+
 - [ ] Benchmark 64, 128, 256, 512, and, if memory permits, 1,024 environments.
 - [ ] Record physics SPS, rollout time, PPO update time, synchronization, reset cost, peak unified memory, thermals, NaNs, and samples/minute.
 - [ ] Run sustained thermal tests and define the default everyday environment count.
