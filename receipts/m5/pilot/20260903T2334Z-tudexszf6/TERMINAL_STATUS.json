@@ -1,0 +1,12 @@
+{
+  "classification": "terminal_negative",
+  "candidate_or_heldout_execution": false,
+  "full_suite_completed": false,
+  "pilot_smoke_training_started": false,
+  "reason": "The frozen Linux lane installed genesis-world 1.2.2 from the bound Genesis source requirements.txt, but the frozen validation and training source accesses RigidSolver.dyn_state, which is unavailable in that runtime. The full suite produced multiple failures and was terminated during the final rough-terrain smoke after the outcome was already terminal.",
+  "run_id": "20260903T2334Z-tudexszf6",
+  "source_runtime_mutation_performed": false,
+  "stopped_at_utc": "2026-09-03T23:48:37Z",
+  "workspace_id": "tudexszf6",
+  "workspace_name": "microduck-m5-pilot-20260903"
+}

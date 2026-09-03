@@ -19,12 +19,14 @@ M5 paid CUDA pilot
 
 ## Current Status
 
-`ACTIVE` - Reviewer 027 accepted the fail-closed corrected contract and permits
-exactly one bounded two-hour/$3.24 A100 pilot. Prepare source bundles and the
-run harness before provisioning, continuously monitor the paid resource,
-recover and independently verify all receipts, then delete the non-stoppable
-workspace and confirm authenticated empty inventory. Full CUDA candidate work
-remains blocked pending an independent review of the completed pilot.
+`REVIEW_REQUIRED` - the authorized A100 pilot ended terminal-negative before
+training. The frozen Linux lane installed Genesis 1.2.2, while bound validation
+and training source accesses the incompatible `RigidSolver.dyn_state` API.
+The terminal receipt was recovered with an identical remote/local checksum
+manifest, the non-stoppable workspace was deleted, and authenticated Brev
+inventory is empty. Full CUDA candidate work remains blocked; Reviewer must
+assess the receipt and any follow-up must reconcile and refreeze the Linux CUDA
+runtime rather than mutating it inside an evidence run.
 
 ## Stop Conditions
 

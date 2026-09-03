@@ -214,8 +214,16 @@ the semantic validator. Corrective slice 027 makes the actual container-mode
 provisioning command digest-addressed, fixes the catalog fields, requires an
 empty inventory and exactly one no-fallback workspace, and schema/validator
 locks the pilot contents, recovery, independent checksums, deletion, and later
-full-run Reviewer gate. No paid workspace may start until slice 027 receives a
-new independent `GO`.
+full-run Reviewer gate. Reviewer 027 returned `GO` for that bounded pilot.
+
+The resulting slice-028 A100 pilot ended terminal-negative on 2026-09-03 before
+any smoke training. The frozen Linux `requirements.txt` installed Genesis
+1.2.2, but frozen validation/training source uses `RigidSolver.dyn_state`, which
+is absent in that runtime; the authority-supplied suite therefore failed. The
+failure receipt was recovered and independently checksummed, and Brev inventory
+was verified empty after deletion. Full CUDA execution remains blocked pending
+independent receipt review and a separately reviewed/refrozen Linux runtime
+reconciliation. No candidate or held-out seed was executed.
 
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
