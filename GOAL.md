@@ -11,17 +11,18 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M4 - Characterize Apple scaling and stability
+M5 - Run the decisive cross-backend training experiment
 
 ## Current Slice
 
-`docs/briefs/022-m4-cpu-mps-crossover-1024.md`
+`UNASSIGNED` - requires a separately reviewed immutable experiment brief.
 
 ## Current Status
 
-`ACTIVE` - run the final matched 1024 CPU+MPS/Metal+MPS crossover pair.
-`official_policy_authority_missing` blocks only the official-policy
-repeatability sub-gate.
+`BLOCKED` - M4 is accepted and closed. M5 candidate training requires the
+missing official-policy authority plus separately authorized CUDA execution;
+paid compute, credentials, and candidate activation remain outside current
+authority. No M5 candidate has been started.
 
 ## Stop Conditions
 

@@ -171,10 +171,17 @@ lower median total PPO iteration than Metal+MPS at 64, 128, 256, and 512. The
 honest frozen result is `>512`; one separately preregistered matched 1024 pair
 will determine whether the on-grid crossover is 1024 or above the tested range.
 
-- [ ] Benchmark 64, 128, 256, 512, and, if memory permits, 1,024 environments.
-- [ ] Record physics SPS, rollout time, PPO update time, synchronization, reset cost, peak unified memory, thermals, NaNs, and samples/minute.
-- [ ] Run sustained thermal tests and define the default everyday environment count.
-- [ ] Keep Genesis CPU + MPS as the debug fallback and record its crossover point.
+M4 closed on 2026-09-03. The matched 1024 extension measured Metal+MPS median
+total PPO iteration at 2.5271 s versus CPU+MPS at 3.0963 s, locating the grid
+crossover at 1024. The everyday Apple default is therefore 1024 environments
+with Metal physics and MPS learning; CPU+MPS remains the verified debug
+fallback and was faster at 64-512. These are performance defaults only, under
+the explicit `pmset` warning-state and peak-RSS-proxy limitations.
+
+- [x] Benchmark 64, 128, 256, 512, and, if memory permits, 1,024 environments.
+- [x] Record physics SPS, rollout time, PPO update time, synchronization, reset cost, peak unified memory, thermals, NaNs, and samples/minute.
+- [x] Run sustained thermal tests and define the default everyday environment count.
+- [x] Keep Genesis CPU + MPS as the debug fallback and record its crossover point.
 
 Exit gate: a checked-in benchmark report selects defaults from measured total
 iteration time and stability, not pure physics SPS.
