@@ -1,0 +1,303 @@
+{
+  "backend": {
+    "genesis": "4",
+    "torch_mps_available": true
+  },
+  "benchmark": {
+    "measured_iterations": 20,
+    "rollout_steps_per_env": 24,
+    "seed": 880064,
+    "warmup_iterations": 2
+  },
+  "construction_s": 12.721540083177388,
+  "devices": {
+    "learner": "mps",
+    "physics": "metal"
+  },
+  "iterations": [
+    {
+      "collection_s": 1.8929939270019531,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 1,
+      "learner_update_s": 0.26374006271362305,
+      "synchronization_s": 1.7080456018447876e-06,
+      "total_iteration_s": 2.157085624989122
+    },
+    {
+      "collection_s": 1.957876205444336,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 2,
+      "learner_update_s": 0.27326273918151855,
+      "synchronization_s": 2.0829029381275177e-06,
+      "total_iteration_s": 2.231141416821629
+    },
+    {
+      "collection_s": 2.0140790939331055,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 3,
+      "learner_update_s": 0.2592649459838867,
+      "synchronization_s": 2.457760274410248e-06,
+      "total_iteration_s": 2.2733459169976413
+    },
+    {
+      "collection_s": 1.9055838584899902,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 4,
+      "learner_update_s": 0.25830602645874023,
+      "synchronization_s": 2.207700163125992e-06,
+      "total_iteration_s": 2.16389137506485
+    },
+    {
+      "collection_s": 1.9181787967681885,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 5,
+      "learner_update_s": 0.26010799407958984,
+      "synchronization_s": 1.708976924419403e-06,
+      "total_iteration_s": 2.178287582937628
+    },
+    {
+      "collection_s": 1.8874719142913818,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 6,
+      "learner_update_s": 0.25902700424194336,
+      "synchronization_s": 2.209097146987915e-06,
+      "total_iteration_s": 2.146498457994312
+    },
+    {
+      "collection_s": 1.927992820739746,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 7,
+      "learner_update_s": 0.2620701789855957,
+      "synchronization_s": 2.8335489332675934e-06,
+      "total_iteration_s": 2.1900663329288363
+    },
+    {
+      "collection_s": 1.8958120346069336,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 8,
+      "learner_update_s": 0.257678747177124,
+      "synchronization_s": 2.250075340270996e-06,
+      "total_iteration_s": 2.153490874916315
+    },
+    {
+      "collection_s": 1.9253499507904053,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 9,
+      "learner_update_s": 0.2593710422515869,
+      "synchronization_s": 2.1671876311302185e-06,
+      "total_iteration_s": 2.184721916913986
+    },
+    {
+      "collection_s": 1.8702149391174316,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 10,
+      "learner_update_s": 0.2588951587677002,
+      "synchronization_s": 2.1667219698429108e-06,
+      "total_iteration_s": 2.129110625013709
+    },
+    {
+      "collection_s": 1.940762996673584,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 11,
+      "learner_update_s": 0.2612910270690918,
+      "synchronization_s": 2.2919848561286926e-06,
+      "total_iteration_s": 2.202099417336285
+    },
+    {
+      "collection_s": 1.895461082458496,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 12,
+      "learner_update_s": 0.2622499465942383,
+      "synchronization_s": 2.209097146987915e-06,
+      "total_iteration_s": 2.1577129159122705
+    },
+    {
+      "collection_s": 1.8020820617675781,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 13,
+      "learner_update_s": 0.25751495361328125,
+      "synchronization_s": 2.250075340270996e-06,
+      "total_iteration_s": 2.059603250119835
+    },
+    {
+      "collection_s": 1.9883856773376465,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 14,
+      "learner_update_s": 0.2760581970214844,
+      "synchronization_s": 1.7918646335601807e-06,
+      "total_iteration_s": 2.2644450003281236
+    },
+    {
+      "collection_s": 1.915956974029541,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 15,
+      "learner_update_s": 0.2524893283843994,
+      "synchronization_s": 2.250075340270996e-06,
+      "total_iteration_s": 2.1684457920491695
+    },
+    {
+      "collection_s": 1.8594582080841064,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 16,
+      "learner_update_s": 0.2587599754333496,
+      "synchronization_s": 2.1657906472682953e-06,
+      "total_iteration_s": 2.1182182081975043
+    },
+    {
+      "collection_s": 1.9315860271453857,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 17,
+      "learner_update_s": 0.2610490322113037,
+      "synchronization_s": 1.875218003988266e-06,
+      "total_iteration_s": 2.192634374834597
+    },
+    {
+      "collection_s": 1.8694307804107666,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 18,
+      "learner_update_s": 0.2585470676422119,
+      "synchronization_s": 2.1671876311302185e-06,
+      "total_iteration_s": 2.1279784999787807
+    },
+    {
+      "collection_s": 1.8511791229248047,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 19,
+      "learner_update_s": 0.2620961666107178,
+      "synchronization_s": 2.1248124539852142e-06,
+      "total_iteration_s": 2.1132755409926176
+    },
+    {
+      "collection_s": 1.780487298965454,
+      "finite": {
+        "learner_parameters": true,
+        "observations": true
+      },
+      "index": 20,
+      "learner_update_s": 0.2594890594482422,
+      "synchronization_s": 1.9995495676994324e-06,
+      "total_iteration_s": 2.0399777912534773
+    }
+  ],
+  "limitations": "Public development workload; pmset and peak RSS are bounded proxies; no checkpoint retained",
+  "machine": {
+    "model": "Mac15,14",
+    "release": "25.2.0",
+    "serial_recorded": false,
+    "system": "Darwin"
+  },
+  "num_envs": 64,
+  "packages": {
+    "genesis-world": "1.3.3",
+    "rsl-rl-lib": "5.4.2",
+    "torch": "2.9.1"
+  },
+  "peak_rss_bytes": 1963032576,
+  "proof_class": "performance_characterization",
+  "reset_s": 0.046606124844402075,
+  "schema_version": "microduck.apple-backend-crossover-row/v1",
+  "source": {
+    "commit": "8b9116e4e417eec9adc28590d8212b1b187e6e84",
+    "dirty": false
+  },
+  "summary": {
+    "median_total_iteration_s": 2.16080214548856,
+    "p95_total_iteration_s": 2.2644450003281236,
+    "samples_per_minute": 42615.3399269865
+  },
+  "synchronization_s": 0.0003377515822649002,
+  "task_success": "not_evaluated",
+  "termination_reason": "completed",
+  "thermal_samples": [
+    {
+      "point": "before_construction",
+      "raw": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+      "state": "nominal"
+    },
+    {
+      "point": "after_warmup",
+      "raw": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+      "state": "nominal"
+    },
+    {
+      "point": "iteration_10",
+      "raw": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+      "state": "nominal"
+    },
+    {
+      "point": "iteration_20",
+      "raw": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+      "state": "nominal"
+    },
+    {
+      "point": "after_completion",
+      "raw": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+      "state": "nominal"
+    }
+  ],
+  "unified_memory": {
+    "headroom_fraction_proxy": 0.9809560775756836,
+    "limitations": "ru_maxrss omits complete Metal allocation and system-wide unified-memory pressure",
+    "method": "peak_process_rss_proxy",
+    "proxy_bytes": 1963032576,
+    "system_physical_bytes": 103079215104
+  },
+  "warmup_s": 5.430351166985929
+}

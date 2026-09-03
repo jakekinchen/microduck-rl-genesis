@@ -1,0 +1,19 @@
+{
+  "schema_version": "microduck.apple-backend-crossover-summary/v1",
+  "run_id": "20260903T204713Z-8b9116e-crossover",
+  "source_commit": "8b9116e4e417eec9adc28590d8212b1b187e6e84",
+  "comparison_metric": "median_total_ppo_iteration_s",
+  "crossover_decision": ">512_not_observed_on_preregistered_grid",
+  "rows": [
+    {"num_envs": 64, "cpu_median_s": 0.4475081244017929, "metal_median_s": 2.16080214548856},
+    {"num_envs": 128, "cpu_median_s": 0.5417349373456091, "metal_median_s": 2.255183562403545},
+    {"num_envs": 256, "cpu_median_s": 0.9431589164305478, "metal_median_s": 2.292345666559413},
+    {"num_envs": 512, "cpu_median_s": 1.574664312414825, "metal_median_s": 2.3472696458920836}
+  ],
+  "all_rows_finite": true,
+  "all_thermal_samples_nominal": true,
+  "minimum_rss_proxy_headroom_fraction": 0.976948102315267,
+  "proof_class": "performance_characterization",
+  "task_success": "not_evaluated",
+  "limitations": "Crossover was not observed through the frozen 64-512 grid; a separately preregistered 1024 extension is required for an exact on-grid point."
+}
