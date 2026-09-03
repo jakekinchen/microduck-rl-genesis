@@ -166,6 +166,11 @@ headroom was 97.15%, and last/first median iteration slowdown was 0.9730 against
 the frozen 1.25 ceiling. It remains eligible as the everyday default; M4 still
 requires the CPU+MPS fallback crossover.
 
+Matched fallback grid accepted on 2026-09-03: CPU+MPS is operational and had
+lower median total PPO iteration than Metal+MPS at 64, 128, 256, and 512. The
+honest frozen result is `>512`; one separately preregistered matched 1024 pair
+will determine whether the on-grid crossover is 1024 or above the tested range.
+
 - [ ] Benchmark 64, 128, 256, 512, and, if memory permits, 1,024 environments.
 - [ ] Record physics SPS, rollout time, PPO update time, synchronization, reset cost, peak unified memory, thermals, NaNs, and samples/minute.
 - [ ] Run sustained thermal tests and define the default everyday environment count.

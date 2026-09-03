@@ -15,11 +15,11 @@ M4 - Characterize Apple scaling and stability
 
 ## Current Slice
 
-`docs/briefs/021-m4-cpu-mps-crossover.md`
+`docs/briefs/022-m4-cpu-mps-crossover-1024.md`
 
 ## Current Status
 
-`ACTIVE` - measure the bounded CPU+MPS debug-fallback crossover.
+`ACTIVE` - run the final matched 1024 CPU+MPS/Metal+MPS crossover pair.
 `official_policy_authority_missing` blocks only the official-policy
 repeatability sub-gate.
 
