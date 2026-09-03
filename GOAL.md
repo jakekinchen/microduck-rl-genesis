@@ -15,11 +15,11 @@ M6 - Build independent immutable-artifact foundations while M5 execution is bloc
 
 ## Current Slice
 
-`docs/briefs/024-m6-manifest-attestation-schemas.md`
+`docs/briefs/025-m6-file-provenance-inventory.md`
 
 ## Current Status
 
-`ACTIVE` - implement non-executing M6 schemas and synthetic validation only.
+`ACTIVE` - inventory file-level license and provenance with explicit negatives.
 M5 candidate admission remains blocked by missing official-policy authority,
 an immutable CUDA container digest, and explicit compute authorization.
 

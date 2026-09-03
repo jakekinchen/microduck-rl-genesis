@@ -209,11 +209,17 @@ reference outcomes. Higher training reward alone cannot close this milestone.
 
 ### M6 — Package immutable, attributable artifacts (P1)
 
-- [ ] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
+Schema foundation accepted on 2026-09-03 at `973a204`: policy manifest v2 and
+reference/hardware attestations bind all required artifact roles and keep
+download, import, evaluation, approval, activation, task evidence, and physical
+authority separate. Validation is byte-only against synthetic fixtures; no real
+policy is accepted or executed.
+
+- [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.
 - [ ] Publish source on GitHub and immutable policy artifacts on Hugging Face.
-- [ ] Keep download, library import, evaluation, approval, and activation as separate actions.
+- [x] Keep download, library import, evaluation, approval, and activation as separate actions.
 - [ ] Resolve file-level MJCF/mesh, policy-weight, dataset, and media license provenance.
 
 Exit gate: a fresh machine retrieves by exact revision/digest, validates locally,
