@@ -34,8 +34,6 @@ REQUIRED_BINDINGS = {
 }
 REQUIRED_GATES = {
     "official_policy_authority_missing",
-    "cuda_container_digest_missing",
-    "cuda_compute_authorization_missing",
 }
 EXPECTED_TASKS = {"microduck.walking.v1", "microduck.backflip.v1"}
 EXPECTED_BACKENDS = {"genesis-metal-mps", "official-mjlab-cuda"}
@@ -70,7 +68,7 @@ def validate_contract(
     check_external: bool = True,
 ) -> None:
     _assert(contract.get("schema_version") == "microduck.m5-experiment-contract/v1", "schema drift")
-    _assert(contract.get("state") == "preregistered_blocked", "contract must remain blocked")
+    _assert(contract.get("state") == "pilot_authorized", "contract pilot authority state drift")
     _assert(contract.get("evidence_boundary") == "experiment_infrastructure_only", "evidence boundary promoted")
     gates = {item["id"] for item in contract.get("blocking_gates", []) if item.get("state") == "blocking"}
     _assert(gates == REQUIRED_GATES, "blocking gate drift")
@@ -144,14 +142,32 @@ def validate_contract(
         _assert(evaluator[key] in bindings, f"unbound evaluator input: {key}")
     _assert(evaluator["heldout_state_required_before_candidate_freeze"] == "preregistered_unrealized", "held-out timing rule drift")
     _assert(contract["decision_rules"]["ppo_return_is_success"] is False, "PPO return promoted to success")
-    _assert(contract["resource_proposal"]["authorization"] == "proposal_only_not_authorized", "resource proposal became authorization")
+    resource = contract["resource_proposal"]
+    _assert(resource["authorization"] == "pilot_only_manager_authorized_2026-09-03", "pilot authority drift")
+    _assert(resource["manager_authority"] == "docs/manager-log/005-full-program-authorization.md", "Manager authority binding drift")
+    _assert(resource["execution_precondition"] == "independent Reviewer GO for the committed slice-026 contract amendment", "pilot review gate drift")
+    _assert(resource["proposed_type"] == "hyperstack_A100_80G", "Brev resource type drift")
+    _assert(resource["provider"] == "hyperstack" and resource["gpu"] == "1x A100 80GB", "Brev provider or GPU drift")
+    _assert(resource["stoppable"] is False, "non-stoppable resource semantics drift")
+    _assert(resource["price_usd_per_hour_snapshot"] == 1.62, "pilot hourly price envelope drift")
+    _assert(resource["pilot_runtime_ceiling_hours"] == 2 and resource["pilot_cost_ceiling_usd"] == 3.24, "pilot ceiling drift")
+    _assert(resource["full_cuda_seed_runtime_ceiling_hours"] == 104 and resource["full_cuda_cost_ceiling_usd"] == 210, "full CUDA ceiling drift")
+    _assert(resource["candidate_or_heldout_execution_authorized"] is False, "candidate or held-out execution was authorized early")
+    container = resource["container"]
+    expected_digest = "sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c"
+    _assert(container["registry"] == "docker.io" and container["repository"] == "nvidia/cuda", "CUDA registry binding drift")
+    _assert(container["platform"] == "linux/amd64", "CUDA container platform drift")
+    _assert(container["manifest_digest"] == expected_digest, "CUDA container digest drift")
+    _assert(container["immutable_reference"] == f"docker.io/nvidia/cuda@{expected_digest}", "CUDA immutable reference drift")
+    _assert(resource["workspace_name"] == "microduck-m5-pilot-20260903", "workspace identity drift")
+    _assert(resource["teardown"] == ["brev delete microduck-m5-pilot-20260903 after verified recovery because this type is non-stoppable", "brev ls --json must show no paid workspace"], "teardown semantics drift")
     _assert(contract["artifacts"]["checkpoint_export_rule"].startswith("export every predetermined checkpoint"), "late export selection admitted")
 
 
 def validate_lock(root: Path) -> None:
     lock = json.loads((root / "experiments/m5/contract-v1.lock.json").read_text())
     _assert(lock.get("schema_version") == "microduck.m5-experiment-contract-lock/v1", "contract lock schema drift")
-    _assert(lock.get("state") == "preregistered_blocked", "contract lock state drift")
+    _assert(lock.get("state") == "pilot_authorized", "contract lock state drift")
     _assert(lock.get("candidate_or_heldout_execution_authorized") is False, "contract lock granted execution authority")
     for relative, expected in lock.get("bindings", {}).items():
         _assert(sha256_file(root / relative) == expected, f"M5 immutable artifact drift: {relative}")
@@ -185,6 +201,8 @@ def expand_matrix(contract: dict[str, Any]) -> dict[str, Any]:
         "experiment_id": contract["experiment_id"],
         "row_count": len(rows),
         "heldout_seeds_included": False,
+        "pilot_resource_authorized": True,
+        "candidate_or_heldout_execution_authorized": False,
         "resource_authorized": False,
         "rows": rows,
     }

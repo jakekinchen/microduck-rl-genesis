@@ -1,7 +1,5 @@
 # GOAL
 
-<stop-orchestrator/>
-
 ## Active Mission
 
 Turn the working Genesis Metal/MPS pipeline into a reproducible,
@@ -13,24 +11,29 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M5/M6 external authority boundary
+M5 CUDA pilot authority and immutable runtime contract
 
 ## Current Slice
 
-`docs/briefs/025-m6-file-provenance-inventory.md` - completed and reviewed.
+`docs/briefs/026-m5-cuda-pilot-contract-amendment.md` - active.
 
 ## Current Status
 
-`ESCALATE` - M5 contract/preflight and independent M6 foundations are accepted.
-M5 execution remains blocked by official-policy authority, immutable CUDA
-container digest, and explicit compute authorization. Real M6 acceptance remains
-blocked by missing policy/media and partial asset provenance. Publication,
-activation, held-out realization, and hardware remain unauthorized.
+`ACTIVE` - dated Manager authorization permits one bounded A100 CUDA pilot and
+the later full frozen matrix only after an independent pilot Reviewer accepts
+its receipts. The current slice must bind an immutable linux/amd64 CUDA image,
+the one-workspace Brev envelope, launch/recovery/checksum/teardown commands, and
+candidate/held-out exclusions before provisioning. Official-policy provenance,
+held-out realization, M6 acceptance/publication, activation, and every physical
+gate remain fail-closed until their specific prerequisites are satisfied.
 
 ## Stop Conditions
 
-- Stop when the next action requires external spend, credentials, public
-  release, policy activation, or physical robot authority.
+- Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
+  immediately on source/image drift, hardware/runtime integrity failure,
+  receipt loss, or a second-workspace requirement.
+- Do not begin the full CUDA seed matrix until an independent Reviewer accepts
+  the pilot evidence and exact cost record.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -38,9 +41,18 @@ activation, held-out realization, and hardware remain unauthorized.
 
 ## Human Constraints
 
-- No push, merge, GitHub/Hugging Face publication, or public release.
-- No paid compute provisioning or materially expensive external action.
-- No policy activation or physical robot test without explicit user approval
-  at the action boundary.
+- Manager authorization dated 2026-09-03 permits required authenticated
+  artifact retrieval/publication, one bounded Brev A100 workspace, candidate
+  execution/evaluation, and staged physical validation only after every frozen
+  evaluator, deployment, provenance, and safety gate passes.
+- Prefer `hyperstack_A100_80G` at the current $1.62/hour snapshot. It is
+  non-stoppable: after verified artifact recovery and independent checksums,
+  delete it and confirm the authenticated Brev inventory is empty.
+- Pilot ceiling: two hours / $3.24. Full CUDA envelope after pilot Reviewer:
+  104 GPU-hours / $210. No H100, multi-GPU, second workspace, or automatic
+  overspend.
+- Publication is limited to reviewed immutable artifacts required by this
+  program. Policy activation and physical operation remain gated actions, not
+  consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.

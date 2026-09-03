@@ -196,6 +196,17 @@ CUDA budget are frozen. Its 32-row dry-run executes nothing. M5 execution remain
 blocked by official-policy authority, immutable CUDA container digest, and
 explicit compute authorization.
 
+Slice 026 amends only the execution-authority layer under dated Manager
+authorization. It binds NVIDIA CUDA 12.8.1 cuDNN development Ubuntu 24.04 for
+linux/amd64 at manifest digest
+`sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c`,
+prefers one non-stoppable Brev `hyperstack_A100_80G` at $1.62/hour, and limits
+the pilot to two hours/$3.24. The 32 experiment rows remain unexecuted and
+unauthorized; an independent Reviewer must accept this amendment before the
+pilot, and must separately accept the recovered pilot receipts before the
+104-GPU-hour/$210 full CUDA envelope becomes eligible. Official-policy
+provenance and held-out timing remain blocking gates.
+
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.

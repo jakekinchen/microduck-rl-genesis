@@ -11,10 +11,10 @@
   ],
   "properties": {
     "schema_version": {"const": "microduck.m5-experiment-contract/v1"},
-    "state": {"const": "preregistered_blocked"},
+    "state": {"const": "pilot_authorized"},
     "evidence_boundary": {"const": "experiment_infrastructure_only"},
     "tasks": {"type": "array", "minItems": 2, "maxItems": 2},
-    "blocking_gates": {"type": "array", "minItems": 3}
+    "blocking_gates": {"type": "array", "minItems": 1, "maxItems": 1}
   },
   "additionalProperties": false
 }

@@ -2,7 +2,7 @@
   "$schema": "contract-v1.schema.json",
   "schema_version": "microduck.m5-experiment-contract/v1",
   "experiment_id": "microduck.m5.cross-backend.walking-backflip.v1",
-  "state": "preregistered_blocked",
+  "state": "pilot_authorized",
   "evidence_boundary": "experiment_infrastructure_only",
   "blocking_gates": [
     {
@@ -10,16 +10,6 @@
       "state": "blocking",
       "binding": "microduck_contract/policies/official-walking-authority-v1.json",
       "effect": "blocks official-policy repeatability and all final candidate admission"
-    },
-    {
-      "id": "cuda_container_digest_missing",
-      "state": "blocking",
-      "effect": "an immutable CUDA container digest must be added by reviewed contract amendment before execution"
-    },
-    {
-      "id": "cuda_compute_authorization_missing",
-      "state": "blocking",
-      "effect": "the resource proposal is not authority to provision or spend"
     }
   ],
   "repositories": {
@@ -147,7 +137,9 @@
   "abort_criteria": [
     "any bound source or artifact hash drifts",
     "official_policy_authority_missing remains unresolved at candidate admission",
-    "CUDA container digest is absent or compute is not explicitly authorized",
+    "the bound CUDA image digest, linux/amd64 platform, resource type, price ceiling, or one-workspace rule drifts",
+    "paid provisioning begins before independent Reviewer acceptance of the pilot contract amendment",
+    "candidate or held-out execution begins before independent pilot acceptance and the separately frozen candidate/held-out gates",
     "seed sets overlap or a held-out seed is realized before candidate freeze",
     "transition budgets differ between backends",
     "a checkpoint or normalized ONNX export is missing, added late, or selected from outcomes",
@@ -171,20 +163,41 @@
     "partial_or_failed_runs_retained_with_terminal_reason": true
   },
   "resource_proposal": {
-    "authorization": "proposal_only_not_authorized",
+    "authorization": "pilot_only_manager_authorized_2026-09-03",
+    "manager_authority": "docs/manager-log/005-full-program-authorization.md",
+    "execution_precondition": "independent Reviewer GO for the committed slice-026 contract amendment",
     "price_snapshot_date": "2026-09-03",
     "query": "brev search --gpu-name A100 --sort price --json",
-    "proposed_type": "a100-80gb.1x",
-    "provider": "crusoe",
+    "proposed_type": "hyperstack_A100_80G",
+    "provider": "hyperstack",
     "gpu": "1x A100 80GB",
-    "stoppable": true,
-    "price_usd_per_hour_snapshot": 1.98,
+    "stoppable": false,
+    "price_usd_per_hour_snapshot": 1.62,
     "pilot_runtime_ceiling_hours": 2,
-    "pilot_cost_ceiling_usd": 3.96,
+    "pilot_cost_ceiling_usd": 3.24,
     "full_cuda_seed_runtime_ceiling_hours": 104,
-    "full_cuda_cost_ceiling_usd": 205.92,
-    "requirements": ["requery price and availability", "explicit user authorization", "immutable container digest", "single instance only"],
+    "full_cuda_cost_ceiling_usd": 210,
+    "full_cuda_authorization_condition": "independent Reviewer GO on complete pilot receipts; requery resource and price before continuation",
+    "workspace_name": "microduck-m5-pilot-20260903",
+    "container": {
+      "registry": "docker.io",
+      "repository": "nvidia/cuda",
+      "tag_for_humans_only": "12.8.1-cudnn-devel-ubuntu24.04",
+      "platform": "linux/amd64",
+      "manifest_digest": "sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c",
+      "immutable_reference": "docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c",
+      "inspection_command": "docker manifest inspect --verbose nvidia/cuda:12.8.1-cudnn-devel-ubuntu24.04"
+    },
+    "pilot_contents": [
+      "record nvidia-smi, CUDA, container manifest, Python, Torch, Warp, MuJoCo, MuJoCo Warp, Genesis, and source identities",
+      "run the full applicable repository test suite with exact BAM and official source bindings",
+      "run frozen Genesis walking and backflip at 64 environments for 5 iterations on CUDA",
+      "retain configs, checkpoints, normalized ONNX exports, logs, manifests, SHA256SUMS, elapsed time, and exact cost"
+    ],
+    "candidate_or_heldout_execution_authorized": false,
+    "requirements": ["requery price and availability immediately before creation", "independent Reviewer GO for slice 026", "single instance only", "abort rather than substitute H100 multi-GPU or second workspace"],
+    "provisioning": ["brev ls --json", "brev search --gpu-name A100 --sort price --json", "brev create microduck-m5-pilot-20260903 --type hyperstack_A100_80G"],
     "recovery_before_teardown": ["copy checkpoints", "copy ONNX and normalizers", "copy evaluator outputs and logs", "verify remote and local SHA256SUMS"],
-    "teardown": ["brev stop <workspace>", "brev delete <workspace> after verified recovery if no unique state remains", "brev ls --json must show no paid workspace"]
+    "teardown": ["brev delete microduck-m5-pilot-20260903 after verified recovery because this type is non-stoppable", "brev ls --json must show no paid workspace"]
   }
 }
