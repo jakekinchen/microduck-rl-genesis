@@ -113,6 +113,12 @@ See [`environments/apple/README.md`](environments/apple/README.md) for the full
 walking/backflip acceptance ladder. Genesis CPU with the MPS learner is the
 debug fallback (`--physics-backend cpu --learner-device mps`).
 
+The measured everyday Apple default is 1024 environments with Metal physics
+and the MPS learner; running `python train.py` selects it automatically on
+macOS. CPU+MPS is faster on the measured 64-512 debug grid, while the matched
+total-PPO-iteration crossover is 1024. The checksummed sweep and sustained
+receipts are under [`receipts/apple-scaling/`](receipts/apple-scaling/).
+
 ### Linux containers (ROCm and optional CUDA)
 
 A Linux box with `distrobox` and `podman` (or docker). Nothing is installed on

@@ -1,0 +1,18 @@
+{
+  "schema_version": "microduck.apple-backend-crossover-summary/v1",
+  "run_id": "20260903T205359Z-e6d35ce-crossover-1024",
+  "source_commit": "e6d35cedae747cc7960cabe10aff269fd2850194",
+  "num_envs": 1024,
+  "comparison_metric": "median_total_ppo_iteration_s",
+  "cpu_median_s": 3.0962783130817115,
+  "metal_median_s": 2.5271377083845437,
+  "cpu_samples_per_minute": 475914.7746903788,
+  "metal_samples_per_minute": 572862.3070903332,
+  "crossover_decision": "1024",
+  "all_rows_finite": true,
+  "all_thermal_samples_nominal": true,
+  "minimum_rss_proxy_headroom_fraction": 0.9752642313639323,
+  "proof_class": "performance_characterization",
+  "task_success": "not_evaluated",
+  "limitations": "Grid crossover uses matched 20-iteration medians; pmset warning state and peak process RSS are bounded thermal and unified-memory proxies."
+}

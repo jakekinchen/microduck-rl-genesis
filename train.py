@@ -1,8 +1,8 @@
 """Entraînement Microduck sous Genesis (PPO / rsl_rl).
 
-    python train.py --num-envs 4096                # tâche principale, sol plat
+    python train.py --num-envs 1024                # défaut quotidien Apple
     python train.py --num-envs 64 --max-iterations 5   # SMOKE TEST — toujours en premier
-    python train.py --rough --num-envs 4096        # terrain accidenté
+    python train.py --rough --num-envs 1024        # terrain accidenté Apple
 
 Un smoke test de 5 itérations à 64 envs attrape ~95 % des erreurs de config
 pour quelques centimes. Ne jamais lancer un run long sans.
@@ -39,7 +39,11 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("-e", "--exp-name", default=None)
     p.add_argument("--task", choices=("walking", "backflip"), default="walking")
-    p.add_argument("-B", "--num-envs", type=int, default=4096)
+    p.add_argument(
+        "-B", "--num-envs", type=int,
+        default=1024 if sys.platform == "darwin" else 4096,
+        help="environnements parallèles (défaut mesuré Apple: 1024; Linux: 4096)",
+    )
     p.add_argument("--max-iterations", type=int, default=50_000)
     p.add_argument("--rough", action="store_true", help="terrain accidenté")
     p.add_argument("--backlash", action="store_true",
