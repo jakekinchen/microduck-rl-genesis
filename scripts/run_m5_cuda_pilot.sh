@@ -94,7 +94,7 @@ test "$(git -C "$SOURCE_ROOT/bam" rev-parse HEAD)" = "$BAM_COMMIT"
 } > "$RECEIPT_ROOT/source-identities.txt"
 
 run_logged runtime-versions "$VENV_ROOT/genesis/bin/python" -c \
-  'import importlib.metadata as m, genesis, mujoco, torch; import warp; print("python packages"); print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available(), "device", torch.cuda.get_device_name(0)); print("genesis", genesis.__version__); print("mujoco", mujoco.__version__); print("warp", warp.__version__); print("rsl-rl", m.version("rsl-rl-lib"))'
+  'import importlib.metadata as m, genesis, mujoco, torch; print("python packages"); print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available(), "device", torch.cuda.get_device_name(0)); print("genesis", genesis.__version__); print("mujoco", mujoco.__version__); print("rsl-rl", m.version("rsl-rl-lib"))'
 run_logged official-runtime-versions "$SOURCE_ROOT/microduck-rl/.venv/bin/python" -c \
   'import importlib.metadata as m, mujoco, torch, warp; import mujoco_warp; print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available(), "device", torch.cuda.get_device_name(0)); print("mujoco", mujoco.__version__); print("warp", warp.__version__); print("mujoco-warp", m.version("mujoco-warp")); print("mjlab", m.version("mjlab"))'
 
