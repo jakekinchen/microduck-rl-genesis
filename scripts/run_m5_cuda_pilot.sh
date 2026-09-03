@@ -12,6 +12,7 @@ WALKING_COMMIT=109e06d4ce4921b635c5609e5304079fc30960ae
 BACKFLIP_COMMIT=8bde27eb141c8f14db05fc4370e536521203a98d
 BAM_COMMIT=62bd8ce12154340be97e06f7f41a0ca8f116d967
 PRICE_USD_PER_HOUR=1.62
+export PYGLET_HEADLESS=1
 
 mkdir -p "$SOURCE_ROOT" "$VENV_ROOT" "$RECEIPT_ROOT/logs" "$RECEIPT_ROOT/artifacts"
 START_EPOCH=$(date -u +%s)
@@ -39,7 +40,8 @@ run_logged base-cuda bash -lc 'nvcc --version && cat /etc/os-release'
 export DEBIAN_FRONTEND=noninteractive
 run_logged apt-bootstrap apt-get update
 run_logged apt-install apt-get install -y --no-install-recommends \
-  ca-certificates git libgl1 libglib2.0-0 python3 python3-pip python3-venv
+  ca-certificates git libgl1 libglib2.0-0 libxrender1 \
+  python3 python3-pip python3-venv
 
 if [[ ! -x "$VENV_ROOT/tools/bin/python" ]]; then
   python3 -m venv "$VENV_ROOT/tools"
