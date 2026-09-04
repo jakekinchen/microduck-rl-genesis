@@ -15,17 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/036-m5-fourth-pilot-proposal-refreeze.md` - bounded local-only
-proposal/refreeze slice opened after Reviewer 035 acceptance; no compute
+`docs/briefs/036-m5-fourth-pilot-proposal-refreeze.md` - Executor proposal
+committed at `04a8fc8`; independent Reviewer decision required. No compute
 authority or paid execution is active.
 
 ## Current Status
 
-`FOURTH_PILOT_PROPOSAL_REFREEZE_IN_PROGRESS` - drafting a machine-validated,
-fail-closed proposal that binds accepted correction `4a743bb`, Reviewer/HEAD
-`7bc61d5`, exact inputs, one A100 envelope, suite-first execution, receipt and
-teardown rules, and `compute_authorized=false`. No fourth pilot or compute
-authority is active.
+`FOURTH_PILOT_PROPOSAL_REVIEW_REQUIRED` - the exact proposal at SHA-256
+`0513d276aa6ca591e5a4232ffe914a5b9107910a7366b397a77e421df3a09ec2`
+is fail-closed and locally validated, with `compute_authorized=false`.
+Independent review is required; no fourth pilot or compute authority is active.
 
 ## Stop Conditions
 
@@ -63,3 +62,5 @@ authority is active.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
