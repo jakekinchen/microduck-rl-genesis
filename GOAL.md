@@ -15,18 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/034-m5-third-cuda-pilot.md` - terminal-negative A100 receipt
-recovered and independently verified; workspace deleted; awaiting independent
-Reviewer judgment.
+`docs/briefs/034-m5-third-cuda-pilot.md` - accepted by Reviewer 034 strictly as
+a terminal-negative A100 receipt with verified recovery and teardown; workflow
+stopped before a separate local diagnostic/correction slice.
 
 ## Current Status
 
-`THIRD_CUDA_SMOKE_TERMINAL_NEGATIVE_REVIEW_REQUIRED` - the full A100 suite
-retained one same-host evaluator-bundle byte-determinism failure, so all four
-smokes and ONNX exports were skipped. Receipt manifest
-`4bac1d24...7deee` is independently verified, conservative cost was
-`$0.708750`, the exact workspace is deleted, and authenticated inventory is
-empty. Independent review is required before any new implementation slice.
+`THIRD_CUDA_SMOKE_TERMINAL_NEGATIVE_ACCEPTED_LOCAL_CORRECTION_REQUIRED` -
+Reviewer 034 accepted evidence commit `f8dfc80` only as terminal-negative CUDA
+evidence. The sole failure is the same-host five-file hash comparison in
+`test_evaluator_bundle.py:69`; all smokes and exports were skipped. Manifest
+`4bac1d24...7deee`, `$0.708750` conservative cost, teardown, empty inventory,
+and strict non-success claim boundary are independently verified.
 
 ## Stop Conditions
 
@@ -39,6 +39,10 @@ empty. Independent review is required before any new implementation slice.
   receipt loss, or a second-workspace requirement.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
+- Do not run a fourth pilot. Reviewer 034 permits only a local,
+  no-paid-compute diagnostic/correction slice followed by independent review;
+  any later compute would require a separate proposal and fresh Manager
+  authorization.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
