@@ -60,6 +60,7 @@ def frozen_sources() -> dict[str, str]:
         "evaluator/core.py", "evaluator/first_party_development.py",
         "evaluator/first-party-development-suite-v1.json",
         "experiments/first_party/development.py",
+        "experiments/first_party/exporter.py",
         "experiments/first_party/development-plan-v1.json",
         "scripts/run_first_party_development.py",
     ]
@@ -156,10 +157,10 @@ def run(plan_path: Path, output: Path, bam_repo: Path) -> None:
     artifact_admission_path = output / "ARTIFACT_ADMISSION.json"
     artifact_admission_path.write_bytes(stable_json_bytes(artifact_admission))
     export_command = [
-        sys.executable, "export_onnx.py", "--log-dir", os.fspath(training_dir),
-        "--checkpoint-file", os.fspath(checkpoint), "--output", os.fspath(policy),
+        sys.executable, "-m", "experiments.first_party.exporter", "--log-dir", os.fspath(training_dir),
+        "--checkpoint", os.fspath(checkpoint), "--output", os.fspath(policy),
         "--normalizer-output", os.fspath(normalizer), "--parity-output", os.fspath(parity),
-        "--fixed-batch", "--first-party-admission", os.fspath(artifact_admission_path),
+        "--admission", os.fspath(artifact_admission_path),
     ]
     export_seconds = run_logged(export_command, output / "export.log", 300, env)
     parity_result = load_json(parity)

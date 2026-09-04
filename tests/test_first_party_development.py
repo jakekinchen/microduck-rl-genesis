@@ -88,14 +88,12 @@ with tempfile.TemporaryDirectory(prefix="admission-test-", dir=RECEIPT_ROOT) as 
 bad_latency = json.loads(json.dumps(suite["cases"][0]))
 bad_latency["task_id"] = suite["task_id"]
 bad_latency["synthetic_inference_latency_ms"] = 0.0
-from evaluator.core import EvaluatorCore  # noqa: E402
-with mock.patch.object(EvaluatorCore, "reset"):
-    core = object.__new__(EvaluatorCore)
-    core.task_id = suite["task_id"]
-    core.proof_class = "first_party_development"
+from evaluator.core import EvaluationError  # noqa: E402
+from evaluator.first_party_development import run_first_party_case  # noqa: E402
+with mock.patch("evaluator.first_party_development.MeasuredOnnxPolicy"):
     try:
-        core.run_case(bad_latency)
-    except Exception as exc:
+        run_first_party_case(mock.Mock(), ROOT / "unused.onnx", bad_latency, False)
+    except EvaluationError as exc:
         assert "measured inference latency" in str(exc)
     else:
         raise AssertionError("synthetic first-party latency accepted")

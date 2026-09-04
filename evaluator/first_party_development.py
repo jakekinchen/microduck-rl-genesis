@@ -15,8 +15,8 @@ import numpy as np
 import pyarrow.parquet as pq
 
 from evaluator.bundle import FILES, parquet_table, write_parquet, write_video
-from evaluator.core import CONFIG_PATH, EvaluatorCore, sha256, stable_json_bytes
-from evaluator.determinism import canonical_trajectory_sha256, semantic_report_projection
+from evaluator.core import CONFIG_PATH, EvaluationError, EvaluatorCore, OnnxPolicy, sha256, stable_json_bytes
+from evaluator.determinism import canonical_trajectory_sha256
 from experiments.first_party.development import ROOT, validate_evaluation_admission
 
 SUITE_PATH = Path(__file__).with_name("first-party-development-suite-v1.json")
@@ -51,6 +51,46 @@ def _case_metrics(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+class MeasuredOnnxPolicy(OnnxPolicy):
+    """Retain actual learned-policy inference latency after uncounted warmup."""
+
+    def __init__(self, path: Path, config: dict[str, Any]):
+        self.latencies_ms: list[float] = []
+        self._measuring = False
+        super().__init__(path, config)
+        self._measuring = True
+
+    def infer(self, observation: np.ndarray) -> tuple[np.ndarray, float]:
+        action, elapsed_ms = super().infer(observation)
+        if self._measuring:
+            self.latencies_ms.append(elapsed_ms)
+        return action, elapsed_ms
+
+
+def run_first_party_case(
+    core: EvaluatorCore, policy: Path, case: dict[str, Any], capture_frames: bool
+) -> tuple[dict[str, Any], list[dict[str, Any]], list[np.ndarray]]:
+    if "synthetic_inference_latency_ms" in case:
+        raise EvaluationError("first-party learned-policy reports require measured inference latency")
+    measured = MeasuredOnnxPolicy(policy, core.config["inference"])
+    core.policy = measured
+    report, rows, frames = core.run_case(case, capture_frames=capture_frames)
+    latency = np.asarray(measured.latencies_ms, dtype=np.float64)
+    report["proof_class"] = "first_party_development"
+    report["classification"] = report["classification"].replace("infrastructure_", "development_")
+    report["evidence_boundary"] = (
+        "First-party learned-policy execution on visible development cases only; "
+        "not gait success, held-out acceptance, transfer, or physical authority."
+    )
+    report["integrity"]["deadline_latency_source"] = "measured_wall_clock"
+    report["integrity"]["measured_inference_latency_ms"] = {
+        "count": int(latency.size), "minimum": float(latency.min()),
+        "maximum": float(latency.max()), "mean": float(latency.mean()),
+        "p50": float(np.percentile(latency, 50)), "p95": float(np.percentile(latency, 95)),
+    }
+    return report, rows, frames
+
+
 def write_bundle(policy: Path, bam_repo: Path, admission: Path, output: Path) -> None:
     admitted = validate_evaluation_admission(admission, policy)
     suite = json.loads(SUITE_PATH.read_text())
@@ -63,9 +103,9 @@ def write_bundle(policy: Path, bam_repo: Path, admission: Path, output: Path) ->
     reports, rows, frames, metrics = [], [], [], []
     for case_row in suite["cases"]:
         case = {"task_id": suite["task_id"], **case_row}
-        core = EvaluatorCore(policy, bam_repo, suite["task_id"], "first_party_development")
+        core = EvaluatorCore(policy, bam_repo, suite["task_id"])
         core.model.vis.quality.offsamples = 1
-        report, case_rows, case_frames = core.run_case(case, capture_frames=True)
+        report, case_rows, case_frames = run_first_party_case(core, policy, case, True)
         reports.append(report)
         rows.extend(case_rows)
         frames.extend(case_frames)
