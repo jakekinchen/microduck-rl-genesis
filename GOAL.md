@@ -15,28 +15,28 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/session-logs/046-executor-m5-seventh-cuda-pilot.md` - terminal-negative
-seventh-pilot readiness-window receipt and exact teardown; independent Reviewer
-decision required.
+`docs/reviewer-messages/046-m5-seventh-cuda-pilot.md` - Reviewer acceptance of
+the terminal-negative seventh-pilot readiness-window receipt and exact
+teardown. No compute authority or paid execution remains active.
 
 ## Current Status
 
-`SEVENTH_PILOT_TERMINAL_REVIEW_REQUIRED` - workspace `qcolxobcf` produced zero
-qualifying readiness polls before the 900-second deadline; shell/disk probes,
-uploads, and harness did not run. Exact-ID teardown is complete and inventory
-is empty. Manager 013 is consumed; no retry or replacement is authorized.
+`SEVENTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 046 accepted exact
+handoff `6e6e1db` strictly as provisioning/readiness-window failure evidence.
+Workspace `qcolxobcf` was deleted and authenticated Brev inventory is empty.
+Manager authority 013 is consumed; no retry or replacement is authorized.
 
 ## Stop Conditions
 
 - Do not provision from consumed Manager authorizations 007, 009, 010, 011,
   012, or 013. Authorization 013 was consumed by its terminal seventh workspace.
-  No fallback, substitute, second workspace, or sixth-pilot retry is authorized.
+  No fallback, substitute, second workspace, or seventh-pilot retry is authorized.
 - The sixth-pilot `$8.816124` / two-hour ceiling is historical and consumed.
   Do not reopen execution because of the belated post-terminal READY signal.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
-- Do not retry the fourth, fifth, or sixth pilot types. No replacement compute
-  is authorized.
+- Do not retry the fourth, fifth, sixth, or seventh pilot types. No replacement
+  compute is authorized.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
