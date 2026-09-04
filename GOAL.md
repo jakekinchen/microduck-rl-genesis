@@ -16,8 +16,8 @@ M5 Linux CUDA runtime reconciliation
 ## Current Slice
 
 `docs/session-logs/040-executor-m5-fifth-pilot-harness-self-attestation.md` -
-Executor correction complete; committed handoff and independent Reviewer
-decision required. No compute authority or paid execution is active.
+Executor correction committed at `579627b`; independent Reviewer decision
+required. No compute authority or paid execution is active.
 
 ## Current Status
 
