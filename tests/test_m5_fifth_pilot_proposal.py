@@ -19,6 +19,18 @@ spec.loader.exec_module(module)
 
 proposal = json.loads(PROPOSAL.read_text())
 module.validate_proposal(proposal, verify_local_inputs=True)
+harness_text = (ROOT / proposal["inputs"]["pilot_harness"]["path"]).read_text()
+module.validate_harness_price(proposal, harness_text)
+
+try:
+    module.validate_harness_price(
+        proposal,
+        harness_text.replace("PRICE_USD_PER_HOUR=1.656", "PRICE_USD_PER_HOUR=1.62"),
+    )
+except AssertionError as exc:
+    assert str(exc) == "pilot harness price/catalog rate disagreement"
+else:
+    raise AssertionError("historical fourth-pilot rate was accepted by fifth-pilot harness validation")
 
 
 def leaf_paths(value: Any, path: tuple[Any, ...] = ()) -> Iterator[tuple[Any, ...]]:
@@ -105,5 +117,5 @@ assert deletion_probes >= scalar_probes
 print(
     "M5 fifth-pilot proposal fail-closed probes passed: "
     f"{scalar_probes} scalar mutations, {deletion_probes} deletions, "
-    "extra-field and explicit compute-authority rejection"
+    "extra-field, explicit compute-authority, and historical harness-rate rejection"
 )

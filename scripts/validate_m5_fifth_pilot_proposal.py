@@ -6,7 +6,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import subprocess
+from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
@@ -14,8 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PROPOSAL = ROOT / "experiments/m5/fifth-pilot-proposal-v1.json"
 SCHEMA = ROOT / "experiments/m5/fifth-pilot-proposal-v1.schema.json"
 
-EXPECTED_PROPOSAL_FILE_SHA256 = "7cec37d6fe17788eb3097103548e4afc019ed0bbe5b91993515940695811d918"
-EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "ce93bd16450b184a4032ff2dff6dee5d5bb7d5322198cbdd303e6db340b45601"
+EXPECTED_PROPOSAL_FILE_SHA256 = "54d61f03930478fcb66955d60314b682eb3fb5e1c746ba226b29a9f04c263349"
+EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "cd958e6a359bd5f347b840eecde566af10ff9aebb573f55bc913d896d9174371"
 EXPECTED_SCHEMA_FILE_SHA256 = "5ffa816b0e4c649359e07500974c29dc1674565577ed8dd63fc285c598688102"
 
 
@@ -35,6 +37,16 @@ def _semantic_sha256(value: Any) -> str:
 
 def _git(*args: str) -> str:
     return subprocess.check_output(["git", "-C", str(ROOT), *args], text=True).strip()
+
+
+def validate_harness_price(proposal: Any, harness_text: str) -> None:
+    matches = re.findall(r"^PRICE_USD_PER_HOUR=([0-9]+(?:\.[0-9]+)?)$", harness_text, re.MULTILINE)
+    _assert(len(matches) == 1, "pilot harness must bind exactly one numeric hourly price")
+    harness_price = Decimal(matches[0])
+    catalog_price = Decimal(str(proposal["catalog_snapshot"]["price_per_hour_usd"]))
+    limit_price = Decimal(str(proposal["limits"]["exact_price_per_hour_usd"]))
+    _assert(harness_price == catalog_price, "pilot harness price/catalog rate disagreement")
+    _assert(harness_price == limit_price, "pilot harness price/limit rate disagreement")
 
 
 def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
@@ -132,6 +144,7 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
         _assert(required in command, f"dry-run command binding missing: {required}")
 
     harness = (ROOT / proposal["inputs"]["pilot_harness"]["path"]).read_text()
+    validate_harness_price(proposal, harness)
     _assert(harness.index("run_logged full-suite") < harness.index("run_logged genesis-walking"), "harness is not suite-first")
 
 

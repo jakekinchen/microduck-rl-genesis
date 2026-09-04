@@ -15,26 +15,27 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/039-m5-fifth-pilot-cost-binding-correction.md` - Executor
-correction of Reviewer 038's cost-binding and stale-authority findings. No
-compute authority or paid execution is active.
+`docs/session-logs/039-executor-m5-fifth-pilot-cost-binding-correction.md` -
+Executor correction complete; committed handoff and independent Reviewer
+decision required. No compute authority or paid execution is active.
 
 ## Current Status
 
-`FIFTH_PILOT_REPLACEMENT_PROPOSAL_CORRECTION_REQUIRED` - Reviewer 038 found
-that the proposal's bound harness retains the historical fourth-pilot
-`$1.62/hour` cost constant instead of the replacement type's exact
-`$1.656/hour` rate. A separately scoped local-only correction and independent
-re-review are required; no compute authority is active.
+`FIFTH_PILOT_REPLACEMENT_PROPOSAL_CORRECTED_REVIEW_REQUIRED` - corrected
+proposal SHA-256
+`54d61f03930478fcb66955d60314b682eb3fb5e1c746ba226b29a9f04c263349`
+binds a fifth-specific harness at exact `$1.656/hour`; all local gates pass.
+Independent re-review is required; no compute authority is active.
 
 ## Stop Conditions
 
 - Do not provision from consumed Manager authorizations 007, 009, or 010.
   Authorization 010 was consumed by its one terminal fourth-pilot workspace.
   No fallback, substitute, second workspace, or retry is authorized.
-- Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
-  immediately on source/image drift, hardware/runtime integrity failure,
-  receipt loss, or a second-workspace requirement.
+- For the proposed fifth pilot only, stop at two hours or `$3.312`, whichever
+  occurs first, and stop immediately on source/image drift, hardware/runtime
+  integrity failure, receipt loss, or a second-workspace requirement. This is
+  a proposed limit, not compute authority.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
 - Do not retry the fourth pilot. This slice permits only a new
@@ -50,14 +51,22 @@ re-review are required; no compute authority is active.
 - Manager logs 009 and 010 were one-use authorities. They were consumed by
   terminal receipts `20260904T030457Z-4qe7ph6p7` and
   `20260904T044136Z-tpo91g7kj` and cannot be reused.
-- Prefer `hyperstack_A100_80G` at the current $1.62/hour snapshot. It is
-  non-stoppable: after verified artifact recovery and independent checksums,
-  delete it and confirm the authenticated Brev inventory is empty.
-- The completed pilot ceiling was two hours / $3.24. The previously proposed
-  104-GPU-hour / $210 full CUDA envelope is inactive after the terminal-negative
-  review. No H100, multi-GPU, second workspace, or automatic overspend.
+- Historical fourth-pilot constraint only: `hyperstack_A100_80G` was selected
+  at `$1.62/hour` with a two-hour / `$3.24` ceiling. That authorization is
+  consumed; do not retry this type under the fifth-pilot proposal.
+- The proposed fifth-pilot replacement is exactly
+  `massedcompute_A100_sxm4_80G_DGX` at `$1.656/hour`, non-stoppable and
+  non-rebootable, with a two-hour / `$3.312` ceiling. It requires independent
+  proposal acceptance and fresh exact Manager authority before creation. After
+  verified receipt recovery and independent checksums, delete its exact ID and
+  confirm the authenticated Brev inventory is empty.
+- The previously proposed 104-GPU-hour / $210 full CUDA envelope is inactive
+  after the terminal-negative review. No H100, multi-GPU, second workspace, or
+  automatic overspend.
 - Publication is limited to reviewed immutable artifacts required by this
   program. Policy activation and physical operation remain gated actions, not
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
