@@ -1,0 +1,299 @@
+{
+  "$schema": "seventh-pilot-proposal-v1.schema.json",
+  "schema_version": "microduck.m5-seventh-pilot-proposal/v1",
+  "state": "proposed_not_authorized",
+  "compute_authorized": false,
+  "authority": {
+    "accepted_correction_commit": "4a743bbb4fcae9782f4218fd1f0e0c0f9599dff3",
+    "accepted_evaluator_reviewer_head": "7bc61d5b5b4c3275a9b2b0e5bfeb282b687ce55a",
+    "accepted_sixth_proposal_review_commit": "f24f63ab19762e45633514ead2d91d4c2b72ee0a",
+    "consumed_sixth_manager_authorization_commit": "7437dd6c4a84de21a038d44a3c61695e29420047",
+    "accepted_sixth_terminal_executor_commit": "a70af4e105136e34f78aee1e7da94d54486bf7fe",
+    "accepted_sixth_terminal_reviewer_head": "7d1eba9b38386d21525aa47daf7a4459e257eaf9",
+    "accepted_sixth_terminal_reviewer_record": "docs/reviewer-messages/043-m5-sixth-cuda-pilot.md",
+    "manager_authority_present": false,
+    "proposal_grants_compute": false,
+    "required_later_authority": "a new committed Manager record after independent Reviewer acceptance that names this exact proposal path and SHA-256 and binds every immutable input, replacement resource field, readiness gate, and limit"
+  },
+  "catalog_snapshot": {
+    "observed_at_utc": "2026-09-04T07:30:58Z",
+    "query": "brev search --gpu-name A100 --sort price --json",
+    "inventory_query": "brev ls --json",
+    "inventory_was_empty": true,
+    "previously_used_exact_type": false,
+    "type": "a100-80gb.1x",
+    "provider": "crusoe",
+    "cloud": "crusoe",
+    "arch": "x86_64",
+    "gpu_name": "A100",
+    "gpu_count": 1,
+    "vram_per_gpu_gb": 80,
+    "total_vram_gb": 80,
+    "vcpus": 12,
+    "memory": "120GiB",
+    "target_disk_gb": 128,
+    "disk_min_gb": 128,
+    "disk_max_gb": 128,
+    "boot_time_seconds": 420,
+    "stoppable": true,
+    "rebootable": false,
+    "flex_ports": true,
+    "price_per_hour_usd": 1.98,
+    "practical_fixed_disk": true,
+    "proposal_evidence_only": true
+  },
+  "container_dry_run": {
+    "command": "brev create microduck-m5-pilot7-20260904 --type a100-80gb.1x --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300 --dry-run",
+    "exit_code": 0,
+    "selected_type": "a100-80gb.1x",
+    "container_mode_and_digest_accepted": true,
+    "created_workspace": false
+  },
+  "container": {
+    "immutable_reference": "docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c",
+    "platform": "linux/amd64",
+    "tag_for_humans_only": "12.8.1-cudnn-devel-ubuntu24.04"
+  },
+  "inputs": {
+    "pilot_harness": {
+      "path": "scripts/run_m5_cuda_pilot_7.sh",
+      "sha256": "sha256:c185bf79846f3b406e53776071e82461352407b9166d99102077c1e0577c521e"
+    },
+    "runtime_contract": {
+      "path": "environments/cuda/runtime-v1.json",
+      "sha256": "sha256:c9f64efb52d7ae0c220ff0f03c9b207af11a792251bd1eb69ef9357e1658f46d"
+    },
+    "requirements_lock": {
+      "path": "environments/cuda/requirements.lock",
+      "sha256": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f"
+    },
+    "source_bundles": {
+      "genesis.bundle": {
+        "source_commit": "7bc61d5b5b4c3275a9b2b0e5bfeb282b687ce55a",
+        "bundle_ref": "refs/m5-pilot7/genesis",
+        "sha256": "sha256:8469272fd8b6ce522df294ef2ad0ee7f0929af4053d0fb523dc697e23fa2123a"
+      },
+      "official-walking.bundle": {
+        "source_commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+        "bundle_ref": "refs/m5-pilot7/official-walking",
+        "sha256": "sha256:9ac470615728680934ab68293b474371b4d66df03925f46195397d954e3c7118"
+      },
+      "official-backflip.bundle": {
+        "source_commit": "8bde27eb141c8f14db05fc4370e536521203a98d",
+        "bundle_ref": "refs/m5-pilot7/official-backflip",
+        "sha256": "sha256:aa893ba80f3b162fff094ef5151e66b9f963ad1dc8f2c49cf92bd47ae2ddaae0"
+      }
+    },
+    "bundle_generation": {
+      "git_config": [
+        "pack.threads=1",
+        "pack.windowMemory=64m"
+      ],
+      "procedure": "create the named temporary bundle_ref at source_commit, run git bundle create for exactly that ref with the bound git_config, verify the bundle, then delete only that temporary ref",
+      "two_generation_byte_equality_required": true,
+      "remote_hash_equality_required_before_execution": true
+    }
+  },
+  "workspace": {
+    "name": "microduck-m5-pilot7-20260904",
+    "count": 1,
+    "parallel": 1,
+    "mode": "container",
+    "jupyter": false,
+    "fallback_allowed": false,
+    "retry_allowed": false,
+    "second_workspace_allowed": false,
+    "substitute_type_allowed": false
+  },
+  "limits": {
+    "shell_readiness_window_seconds_create_to_probe_success": 900,
+    "readiness_poll_interval_seconds_minimum": 15,
+    "readiness_consecutive_poll_count": 3,
+    "harness_timeout_seconds": 4800,
+    "hard_elapsed_seconds_create_to_delete": 7200,
+    "hard_elapsed_hours_create_to_delete": 2,
+    "hard_cost_usd": 3.96,
+    "exact_price_per_hour_usd": 1.98,
+    "total_program_envelope_usd": 210,
+    "proposal_ceiling_within_total_envelope": true
+  },
+  "execution": {
+    "ordered_gates": [
+      "authority_enabled_full_suite",
+      "four_public_development_smokes",
+      "normalized_onnx_retention"
+    ],
+    "suite": {
+      "must_pass_before_any_smoke": true,
+      "command": "tests/run_all.py",
+      "authority_enabled": true
+    },
+    "public_development_smokes": [
+      {
+        "backend": "genesis",
+        "task": "walking",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 51001,
+        "normalized_onnx": "artifacts/genesis-walking.normalized.onnx"
+      },
+      {
+        "backend": "genesis",
+        "task": "backflip",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 52001,
+        "normalized_onnx": "artifacts/genesis-backflip.normalized.onnx"
+      },
+      {
+        "backend": "official-mjlab",
+        "task": "walking",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 51001,
+        "normalized_onnx": "artifacts/official-walking.normalized.onnx"
+      },
+      {
+        "backend": "official-mjlab",
+        "task": "backflip",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 52001,
+        "normalized_onnx": "artifacts/official-backflip.normalized.onnx"
+      }
+    ],
+    "normalized_onnx_retention_required": true,
+    "launch_allowed_in_this_proposal": false
+  },
+  "preconditions_for_any_later_authorized_create": [
+    "independent Reviewer acceptance of the committed seventh-pilot proposal",
+    "new committed Manager authority binding this exact proposal path and SHA-256",
+    "clean source state and exact accepted correction and Reviewer-chain identities",
+    "exact harness, runtime, requirements lock, source bundle, and image hashes",
+    "fresh authenticated inventory is empty immediately before creation",
+    "fresh catalog row exactly matches all bound Crusoe resource fields and exact price 1.98 USD/hour",
+    "exact container-mode immutable-digest dry run succeeds immediately before any authorized creation",
+    "within 900 seconds of create, obtain three qualifying polls at least 15 seconds apart, resetting the count on any regression",
+    "after qualifying polls, require successful no-op shell and separate 8 GiB free-disk probe before upload"
+  ],
+  "failure_receipt": {
+    "required_on_every_terminal_path": true,
+    "remote_sorted_sha256sums_required_when_shell_exists": true,
+    "remote_unavailability_must_be_explicit_when_shell_never_exists": true,
+    "complete_run_scoped_receipt_recovery_required": true,
+    "independent_local_sorted_manifest_required": true,
+    "remote_local_manifest_exact_equality_required_when_remote_receipt_exists": true,
+    "terminal_status_and_failure_stage_required": true,
+    "runtime_and_source_identities_required": true,
+    "elapsed_and_conservative_cost_required": true,
+    "evidence_boundary_required": true,
+    "readiness_poll_history_required": true,
+    "shell_and_disk_probe_outputs_required_when_attempted": true
+  },
+  "teardown": {
+    "delete_exact_workspace_id_only": true,
+    "delete_after_verified_recovery_on_success_or_failure": true,
+    "workspace_is_non_stoppable": false,
+    "authenticated_empty_inventory_required": true,
+    "cleanup_requires_no_additional_confirmation": true,
+    "stop_is_available_but_exact_id_delete_remains_required": true
+  },
+  "prohibited": [
+    "candidate_seeds",
+    "heldout_seeds",
+    "full_cuda_matrix",
+    "publication",
+    "policy_activation",
+    "transfer",
+    "physical_operation",
+    "fallback_resource",
+    "substitute_resource",
+    "h100",
+    "multi_gpu",
+    "second_workspace",
+    "automatic_overspend",
+    "hyperstack_A100_80G_retry",
+    "massedcompute_A100_sxm4_80G_DGX_retry",
+    "a2-highgpu-1g:nvidia-tesla-a100:1_retry",
+    "seventh_pilot_retry"
+  ],
+  "evidence_boundary": "At most a future separately authorized seventh pilot could prove CUDA pipeline compatibility. Catalog properties, advertised boot estimates, consecutive control-plane polls, and dry-run acceptance do not prove shell readiness. This proposal proves no CUDA smoke, M5, task, policy, candidate, held-out, publication, activation, transfer, or physical success.",
+  "sixth_pilot_terminal_boundary": {
+    "classification": "terminal_negative",
+    "failure_stage": "workspace-provisioning-connectivity",
+    "receipt": "receipts/m5/pilot/20260904T070121Z-urmhasks7",
+    "receipt_manifest_sha256": "sha256:b1fa2d7eb2e4f6c574b7c70f292e4ef9708ce516c6618e0fa62442c3f0ce886e",
+    "consumed_workspace_id": "urmhasks7",
+    "consumed_workspace_name": "microduck-m5-pilot6-20260904",
+    "consumed_type": "a2-highgpu-1g:nvidia-tesla-a100:1",
+    "retry_allowed": false,
+    "usable_shell_before_terminal": false,
+    "belated_ready_after_terminal_and_delete_request": true,
+    "uploaded_files": 0,
+    "harness_invocations": 0
+  },
+  "readiness_diagnosis": {
+    "retained_timelines": [
+      {
+        "pilot": 4,
+        "consumed_type": "hyperstack_A100_80G",
+        "create_reported_ready": false,
+        "usable_shell": false,
+        "terminal_after_seconds": 615
+      },
+      {
+        "pilot": 5,
+        "consumed_type": "massedcompute_A100_sxm4_80G_DGX",
+        "create_reported_ready": true,
+        "usable_shell": false,
+        "terminal_after_seconds": 404
+      },
+      {
+        "pilot": 6,
+        "consumed_type": "a2-highgpu-1g:nvidia-tesla-a100:1",
+        "create_reported_ready": true,
+        "usable_shell_before_terminal": false,
+        "terminal_after_seconds": 510,
+        "ready_only_after_terminal_and_delete_request": true
+      }
+    ],
+    "diagnosis": "Brev create readiness is not sufficient execution evidence; inventory health can regress and shell readiness can lag beyond the advertised boot estimate.",
+    "feedback": {
+      "command": "brev feedback --message <nonsecret readiness-race report>",
+      "sent": true,
+      "acknowledgement": "Thanks for your feedback! We really appreciate it.",
+      "secrets_included": false
+    }
+  },
+  "readiness_protocol": {
+    "advertised_boot_time_is_estimate_only": true,
+    "advertised_boot_time_seconds": 420,
+    "advertised_boot_time_expiry_is_not_terminal": true,
+    "window_starts_at_create_request": true,
+    "window_closes_only_after_shell_and_disk_probe_success": true,
+    "authenticated_inventory_required": true,
+    "exact_workspace_id_required": true,
+    "required_consecutive_polls": 3,
+    "minimum_seconds_between_qualifying_polls": 15,
+    "qualifying_status": {
+      "status": "RUNNING",
+      "build_status": "COMPLETED",
+      "shell_status": "READY",
+      "health_status": "HEALTHY"
+    },
+    "regression_resets_consecutive_count": true,
+    "noop_shell_probe": {
+      "command": "true",
+      "must_succeed_before_disk_probe": true,
+      "retain_output": true
+    },
+    "disk_probe": {
+      "minimum_free_disk_gib": 8,
+      "must_succeed_before_upload": true,
+      "retain_output": true
+    },
+    "terminal_on_900_second_window_expiry": true,
+    "post_terminal_ready_must_not_reopen_execution": true,
+    "upload_before_all_gates_prohibited": true
+  }
+}
