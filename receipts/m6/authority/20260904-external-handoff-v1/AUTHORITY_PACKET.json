@@ -1,0 +1,143 @@
+{
+  "schema_version": "microduck.m6-external-authority-handoff/v1",
+  "source_revision": "f22c799a6fc81375588f899da15468087731219d",
+  "accepted_distribution": {
+    "archive_path": "receipts/m6/distribution/20260904-local-complete-assets-v2/microduck-complete-assets-v2.tar.gz",
+    "archive_sha256": "sha256:0c92aa28888754d9b6c07a6d92f45f06fae8e7564ad76482ec1aa06a385300d9",
+    "archive_size_bytes": 9272643,
+    "allowlist_sha256": "sha256:8b473f6e4f00a1a1644edbf126647d92add6082fe6cecb2d5cdd2386d67857e7",
+    "allowlisted_complete": 65,
+    "quarantined_missing": 5,
+    "lifecycle": "staged_not_imported"
+  },
+  "candidates": {
+    "official": {
+      "candidate_id": "pollen-robotics.microduck-policies.alpha-walking.088524a",
+      "resolution_path": "artifact_contract/real-candidates/official-alpha-walking-088524a/policy-manifest-v2-resolution.json",
+      "resolution_sha256": "sha256:3e169a552536a4a87ce4df27e3254bc629f17d120a6e57cd5b502bb10687a8bf",
+      "bound_roles": ["license", "normalized_onnx"],
+      "missing_roles": {
+        "bam": {
+          "blockers": ["the distribution names XL330 servos but does not bind an exact BAM implementation and parameter digest"],
+          "acceptable_immutable_evidence": ["upstream manifest binding the exact policy digest to BAM repository, revision, implementation path/digest, and parameter path/digest"]
+        },
+        "evaluator": {
+          "blockers": ["no immutable evaluator implementation is bound to this artifact"],
+          "acceptable_immutable_evidence": ["upstream evaluator repository, immutable revision, entrypoint/config paths, and SHA-256 values explicitly bound to the exact policy digest"]
+        },
+        "evidence": {
+          "blockers": ["no immutable task or reference evaluation receipt is published with the artifact"],
+          "acceptable_immutable_evidence": ["raw evaluation receipt with immutable files/digests binding policy, evaluator, model, BAM, task, cases/seeds, and per-case outputs"]
+        },
+        "exporter": {
+          "blockers": ["the distribution does not bind the ONNX to an exact exporter source commit and invocation"],
+          "acceptable_immutable_evidence": ["exporter repository/revision/path/digest plus exact invocation, runtime versions, checkpoint input digest, and ONNX output digest"]
+        },
+        "model": {
+          "blockers": ["the distribution names MicroDuck but does not bind an exact MJCF root path, revision, and digest to this policy"],
+          "acceptable_immutable_evidence": ["upstream manifest binding the policy to exact model repository, revision, MJCF root path/digest, and referenced-asset digest set"]
+        },
+        "normalizer": {
+          "blockers": ["Sub/Div tensors are baked into the ONNX, but no separately attributable normalizer file or checkpoint-statistics source is published"],
+          "acceptable_immutable_evidence": ["standalone normalizer/statistics bytes and digest with observation ordering/shape and immutable checkpoint/ONNX association"]
+        },
+        "source_checkpoint": {
+          "blockers": ["the immutable distribution contains no source checkpoint identity, bytes, or digest"],
+          "acceptable_immutable_evidence": ["publicly retrievable immutable checkpoint bytes/digest, training-run identity, and upstream link from checkpoint to exact ONNX digest"]
+        },
+        "task": {
+          "blockers": ["the distribution declares a walking role but no exact training task id, source revision, path, or digest"],
+          "acceptable_immutable_evidence": ["exact task identifier and immutable repository/revision/config path/digest explicitly bound to the policy"]
+        }
+      },
+      "manifest_status": "rejected_incomplete",
+      "authority": "none"
+    },
+    "community": {
+      "candidate_id": "remifabre.microduck-rough-walk-e.fa7b27e",
+      "resolution_path": "artifact_contract/real-candidates/community-rough-walk-e-fa7b27e/policy-manifest-v2-resolution.json",
+      "resolution_sha256": "sha256:4226b4e86bc22a50ba8e07fe14b6c4b0a3d93880de4adab1f0dc917b6b8d14b4",
+      "bound_roles": ["bam", "exporter", "license", "model", "normalized_onnx", "task"],
+      "missing_roles": {
+        "evaluator": {
+          "blockers": ["the model card describes an evaluation battery, but neither the exact Hugging Face tree nor exact training-source tree contains a bound evaluator implementation"],
+          "acceptable_immutable_evidence": ["publisher-owned evaluator repository, immutable revision, entrypoint/config paths, and SHA-256 values used for the reported candidate evaluation"]
+        },
+        "evidence": {
+          "blockers": ["the model card reports aggregate metrics and an immutable preview-video LFS object, but publishes no digest-bound raw evaluation receipt; self-claims and illustrative media are not raw evidence"],
+          "acceptable_immutable_evidence": ["publisher-owned raw evaluation receipt with immutable files/digests binding policy, evaluator, model, BAM, task, cases/seeds, and per-case outputs"]
+        },
+        "normalizer": {
+          "blockers": ["the model card says the normalizer is baked in, but the exact Hugging Face tree and training-source tree publish no separately attributable normalizer file or checkpoint-statistics source"],
+          "acceptable_immutable_evidence": ["standalone normalizer/statistics bytes and digest with observation ordering/shape and immutable checkpoint/ONNX association"]
+        },
+        "source_checkpoint": {
+          "blockers": ["the model card and task-registration source name W&B run yr25mna4 model_9999, but the exact source tree contains no checkpoint and the named W&B project exposes no public immutable file authority"],
+          "acceptable_immutable_evidence": ["public immutable W&B artifact version or equivalent checkpoint bytes/digest, complete resume/run identity, and publisher link to the exact ONNX digest"]
+        }
+      },
+      "manifest_status": "rejected_incomplete",
+      "authority": "none"
+    }
+  },
+  "drafts": {
+    "pollen": {
+      "path": "REQUEST-POLLEN-UNSENT.md",
+      "sha256": "sha256:d9151a6fe8d774d3883663370fdfa891c421215f13751193c96fddf3f37f6a6e",
+      "status": "unsent"
+    },
+    "remifabre_wandb": {
+      "path": "REQUEST-REMIFABRE-WANDB-UNSENT.md",
+      "sha256": "sha256:0066c29a2bf5644ba89ca86c4bfecbd47b4617c6263dabeddb6d894887a24aca",
+      "status": "unsent"
+    }
+  },
+  "publication_plan": {
+    "path": "PUBLICATION-PLAN.md",
+    "sha256": "sha256:f2239471b76b570f8fe47020ab865ef923db6f02f1c6f0ab8a7a813ec39a6172",
+    "github_repository": "https://github.com/jakekinchen/microduck-rl-genesis.git",
+    "source_revision": "f22c799a6fc81375588f899da15468087731219d",
+    "expected_origin_main": "3257775beeeb8b1df646dd295bf84e34967e42ec",
+    "destination_tag": "m6-complete-assets-v2-0c92aa28",
+    "huggingface_repository": "human_confirmation_required",
+    "huggingface_revision": "m6-complete-assets-v2-0c92aa28",
+    "status": "preregistered_not_authorized_not_executed"
+  },
+  "repo_owned_closure_audit": {
+    "path": "REPO-OWNED-CLOSURE-AUDIT.md",
+    "sha256": "sha256:9f5ada15a0dcdd391d30f5ba16cc5edc14bed9f20dc31a28cf54d0ebe88a843b",
+    "roles_closed": [],
+    "result": "none_without_origin_or_claim_boundary_change"
+  },
+  "authority_boundary": {
+    "covered_by_existing_project_authority": [
+      "local_read_and_audit",
+      "local_file_edit_and_scoped_commit",
+      "deterministic_local_validation",
+      "local_byte_only_library_staging",
+      "draft_creation_without_transmission"
+    ],
+    "requires_new_explicit_human_authority": [
+      "third_party_contact_or_message_transmission",
+      "github_push_tag_or_release",
+      "huggingface_repository_selection_or_upload",
+      "credential_use_for_public_mutation",
+      "policy_import_execution_evaluation_approval_or_activation"
+    ]
+  },
+  "actions": {
+    "third_party_contacted": false,
+    "draft_transmitted": false,
+    "github_pushed": false,
+    "github_tag_created": false,
+    "github_release_created": false,
+    "huggingface_repository_created_or_selected": false,
+    "huggingface_uploaded": false,
+    "credentials_used": false,
+    "policy_imported_or_parsed": false,
+    "policy_executed_or_evaluated": false,
+    "compute_provisioned": false,
+    "hardware_action_performed": false
+  },
+  "decision": "escalate_stop_external_input_or_publication_authority_required"
+}

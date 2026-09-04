@@ -39,4 +39,5 @@ Run:
 .venv-apple/bin/python tests/test_m6_real_artifact_resolution.py
 .venv-apple/bin/python scripts/verify_m6_real_candidate_downloads.py
 .venv-apple/bin/python scripts/validate_m6_distribution_bundle.py
+.venv-apple/bin/python scripts/validate_m6_authority_handoff.py
 ```

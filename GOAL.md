@@ -15,22 +15,22 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/reviewer-messages/052-m6-portable-distribution-correction.md` - Reviewer
-acceptance of the versioned portable archive, multi-interpreter reproduction,
-and isolated byte-only staging proof.
+`docs/session-logs/053-executor-m6-external-authority-handoff.md` - deterministic
+blocker/contact/publication packet; independent Reviewer decision required
+before the final external-input and human-publication stop.
 
 ## Current Status
 
-`M6_LOCAL_DISTRIBUTION_GATE_ACCEPTED` - Reviewer 052 accepts exact Executor
-handoff `93f7362` from Reviewer base `68b0094`. The rejected v1 receipt remains
-unchanged; Python 3.9, 3.12, and 3.13 independently reproduce the versioned v2
-archive at SHA-256 `0c92aa2...`, size 9,272,643, and fixed gzip header
-`1f8b08000000000002ff`. The unchanged allowlist admits only the accepted 65
-complete files and quarantines the five missing media/policy files. Byte-only
-validation stops at `staged_not_imported`; official/community ten-role
-manifests remain open and publication is human-owned. M6 therefore remains
-open, M5 remains externally blocked, Brev is empty, and no policy, compute,
-publication, activation, or physical authority exists.
+`M6_EXTERNAL_AUTHORITY_HANDOFF_REVIEW_REQUIRED` - Reviewer 052 accepted the
+portable 65-file local distribution gate. A deterministic final handoff packet
+now binds the eight missing official roles, four missing community roles,
+acceptable immutable evidence, two unsent outreach drafts, an unexecuted
+publication plan, and a no-local-substitute audit. Existing authority covers
+local audit/edit/validation/staging/drafting only; contact, push/tag/release,
+Hugging Face selection/upload, public credential use, and policy actions require
+new explicit human authority. Independent review is required. M6 remains open,
+M5 remains externally blocked, Brev is empty, and no contact, publication,
+policy, compute, activation, or physical action occurred.
 
 ## Stop Conditions
 
