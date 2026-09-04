@@ -15,18 +15,20 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/032-m5-deterministic-evidence-correction.md` - bounded Reviewer-032
-follow-up complete at `d741e60`, awaiting independent re-review.
+`docs/briefs/032-m5-deterministic-evidence-correction.md` - accepted at the
+local deterministic-evidence class by Reviewer 033 for implementation
+`d741e60`; workflow stopped at the separate Manager authority boundary.
 
 ## Current Status
 
-`RE_REVIEW_REQUIRED_LOCAL_DETERMINISM_CORRECTION` - Reviewer 032's negative
-probe now fails before and passes after `d741e60`: only
-`bodies[*].inertia_kg_m2` is canonicalized, while one-ULP changes to mass and
-all other fields remain exact. Focused and full authority suites pass. The
-accepted receipts, evaluator core, M5 experiment freeze, and
-`compute_authorized=false` proposal remain unchanged; no Brev or downstream
-authority is opened pending independent re-review.
+`LOCAL_DETERMINISM_CORRECTION_ACCEPTED_MANAGER_REVIEW_REQUIRED` - Reviewer 033
+accepted the bounded correction after independently confirming that only
+`bodies[*].inertia_kg_m2` is canonicalized and that Reviewer 032's one-ULP mass
+probe remains visible. Focused and full authority suites pass. The accepted
+receipts, evaluator core, and M5 experiment freeze remain unchanged. The draft
+third-pilot card is eligible only for later Manager consideration and remains
+`compute_authorized=false`; no Brev, third-pilot, full CUDA, candidate,
+held-out, publication, activation, transfer, or physical authority is opened.
 
 ## Stop Conditions
 
