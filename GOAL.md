@@ -16,15 +16,16 @@ M5 Linux CUDA runtime reconciliation
 ## Current Slice
 
 `docs/briefs/037-m5-fourth-cuda-pilot.md` - terminal provisioning-health result
-under consumed Manager authorization 010; Executor receipt ready for
-independent review.
+accepted by Reviewer 037 at Executor HEAD `922b0ec`; workflow stopped before
+any retry or new compute proposal.
 
 ## Current Status
 
-`FOURTH_PILOT_TERMINAL_NEGATIVE_REVIEW_REQUIRED` - exact workspace
-`tpo91g7kj` never exposed a ready shell; no upload, harness, suite, smoke, or
-export occurred. The local control-plane receipt is complete and the
-authenticated Brev inventory is empty. Independent review is required.
+`FOURTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 037 accepted the complete
+local control-plane receipt and verified teardown. Exact workspace `tpo91g7kj`
+never exposed a ready shell; no upload, harness, suite, smoke, or export
+occurred. Manager authorization 010 is consumed, M5 remains open, and the
+authenticated Brev inventory is empty.
 
 ## Stop Conditions
 
