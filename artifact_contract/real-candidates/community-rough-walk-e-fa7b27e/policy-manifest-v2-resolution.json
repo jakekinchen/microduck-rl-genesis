@@ -1,0 +1,187 @@
+{
+  "$schema": "../../policy-manifest-v2-resolution.schema.json",
+  "schema_version": "microduck.policy-manifest-v2-resolution/v1",
+  "target_schema": "microduck.policy-manifest/v2",
+  "candidate_id": "remifabre.microduck-rough-walk-e.fa7b27e",
+  "source_class": "community",
+  "synthetic_fixture": false,
+  "bindings": {
+    "normalized_onnx": {
+      "status": "bound",
+      "path": "policy.onnx",
+      "sha256": "sha256:5aa423bd693e431b19e2ead77f99cbae6184e40a529eb2f7c1b4f85bb7f57040",
+      "size_bytes": 793772,
+      "source": {
+        "repository": "https://huggingface.co/RemiFabre/microduck-rough-walk-e",
+        "revision": "fa7b27eeb5610d3b351362f4bd71691ee8be3d7d",
+        "path": "policy.onnx",
+        "url": "https://huggingface.co/RemiFabre/microduck-rough-walk-e/resolve/fa7b27eeb5610d3b351362f4bd71691ee8be3d7d/policy.onnx?download=true"
+      },
+      "blockers": []
+    },
+    "normalizer": {
+      "status": "missing",
+      "blockers": ["the model card says the normalizer is baked in, but publishes no separately attributable normalizer file or checkpoint-statistics source"]
+    },
+    "source_checkpoint": {
+      "status": "missing",
+      "blockers": ["the model card names a resumed W&B model_9999 checkpoint but publishes neither immutable checkpoint bytes nor a digest"]
+    },
+    "exporter": {
+      "status": "bound",
+      "path": "exporter.py.source",
+      "sha256": "sha256:3ea14f48901156ec4a8dd5f8ed7d59041a1ba31b22beb5183d5258fc854e0bc5",
+      "size_bytes": 11130,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "scripts/export.py",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/scripts/export.py"
+      },
+      "blockers": []
+    },
+    "model": {
+      "status": "bound",
+      "path": "src_mjlab_microduck_robot_microduck_robot_walk.xml",
+      "sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+      "size_bytes": 32017,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "src/mjlab_microduck/robot/microduck/robot_walk.xml",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/src/mjlab_microduck/robot/microduck/robot_walk.xml"
+      },
+      "blockers": []
+    },
+    "bam": {
+      "status": "bound",
+      "path": "bam_xl330_m6.json",
+      "sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+      "size_bytes": 719,
+      "source": {
+        "repository": "https://github.com/Rhoban/bam",
+        "revision": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+        "path": "bam/params/xl330/m6.json",
+        "url": "https://raw.githubusercontent.com/Rhoban/bam/62bd8ce12154340be97e06f7f41a0ca8f116d967/bam/params/xl330/m6.json"
+      },
+      "blockers": []
+    },
+    "task": {
+      "status": "bound",
+      "path": "task.py.source",
+      "sha256": "sha256:2e54002dee2238a6cc9109d65b19b8f494141a56f6666945dff56870feccce92",
+      "size_bytes": 7254,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "src/mjlab_microduck/tasks/microduck_velocity_hostile_env_cfg.py",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/src/mjlab_microduck/tasks/microduck_velocity_hostile_env_cfg.py"
+      },
+      "blockers": []
+    },
+    "evaluator": {
+      "status": "missing",
+      "blockers": ["the model card describes an evaluation battery but binds no immutable evaluator implementation"]
+    },
+    "evidence": {
+      "status": "missing",
+      "blockers": ["the model card reports aggregate metrics but publishes no digest-bound raw evaluation receipt for those claims"]
+    },
+    "license": {
+      "status": "bound",
+      "path": "LICENSE",
+      "sha256": "sha256:2d3fd9ffffa70a4307498ec630b14a6b4731e010f8ddda92686eaf65733c2dfe",
+      "size_bytes": 11351,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "LICENSE",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/LICENSE"
+      },
+      "blockers": []
+    }
+  },
+  "supporting_files": [
+    {
+      "path": "README.md",
+      "sha256": "sha256:dff73e8e82dbaf1950e250c9d27f5037f5f194b86e8dbf593105eb4b152d8364",
+      "size_bytes": 4066,
+      "source": {
+        "repository": "https://huggingface.co/RemiFabre/microduck-rough-walk-e",
+        "revision": "fa7b27eeb5610d3b351362f4bd71691ee8be3d7d",
+        "path": "README.md",
+        "url": "https://huggingface.co/RemiFabre/microduck-rough-walk-e/resolve/fa7b27eeb5610d3b351362f4bd71691ee8be3d7d/README.md?download=true"
+      }
+    },
+    {
+      "path": "manifest.upstream.json",
+      "sha256": "sha256:f9b9cdbd7450de266ae1c7f6dd3ed1cc82fd5de01582bf073cc73d81cb2c0332",
+      "size_bytes": 2175,
+      "source": {
+        "repository": "https://huggingface.co/RemiFabre/microduck-rough-walk-e",
+        "revision": "fa7b27eeb5610d3b351362f4bd71691ee8be3d7d",
+        "path": "manifest.json",
+        "url": "https://huggingface.co/RemiFabre/microduck-rough-walk-e/resolve/fa7b27eeb5610d3b351362f4bd71691ee8be3d7d/manifest.json?download=true"
+      }
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "sha256:2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa",
+      "size_bytes": 241445,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "uv.lock",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/uv.lock"
+      }
+    },
+    {
+      "path": "bam-actuator.py.source",
+      "sha256": "sha256:e9b349a4be9910ea2c452cacfa78ccfc7fadb9f60e2f5ab8b54eed835e09b2b4",
+      "size_bytes": 5060,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "src/mjlab_microduck/actuator/friction_dr_bam.py",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/src/mjlab_microduck/actuator/friction_dr_bam.py"
+      }
+    }
+  ],
+  "source_provenance": {
+    "status": "incomplete",
+    "known": {
+      "artifact_repository": "https://huggingface.co/RemiFabre/microduck-rough-walk-e",
+      "artifact_revision": "fa7b27eeb5610d3b351362f4bd71691ee8be3d7d",
+      "training_repository": "https://github.com/pollen-robotics/microduck_rl",
+      "training_commit": "6cd45fc7a865299f118f7671142465d377853928",
+      "training_task_id": "Mjlab-Hostile-FinetuneFeetProgress-MicroDuck",
+      "training_run": "pollen-robotics/hostile-e-finetune-feet-progress-20260830-0103; resumed from alpha_walking W&B yr25mna4 model_9999",
+      "bam_commit_from_uv_lock": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+      "declared_interface": "float32 61D observations to 14D actions at 50 Hz with baked normalizer",
+      "declared_license": "Apache-2.0"
+    },
+    "missing": [
+      "immutable source checkpoint bytes and digest",
+      "checkpoint-bound separately attributable normalizer",
+      "exact exporter invocation that produced the ONNX",
+      "immutable evaluator implementation",
+      "digest-bound raw evaluation evidence"
+    ]
+  },
+  "validation": {
+    "byte_validation": "passed",
+    "bound_roles": ["bam", "exporter", "license", "model", "normalized_onnx", "task"],
+    "missing_roles": ["evaluator", "evidence", "normalizer", "source_checkpoint"],
+    "policy_manifest_v2": "rejected_incomplete",
+    "formal_manifest_emitted": false
+  },
+  "lifecycle": {
+    "download": "performed_immutable_revision",
+    "library_import": "not_performed",
+    "evaluation": "not_performed",
+    "approval": "not_requested",
+    "activation": "not_authorized"
+  },
+  "proof_class": "immutable_attribution_audit_only",
+  "authority": "none"
+}

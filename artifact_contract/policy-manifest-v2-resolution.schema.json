@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.policy-manifest-v2-resolution/v1",
+  "title": "MicroDuck policy manifest v2 role-resolution audit",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "target_schema",
+    "candidate_id",
+    "source_class",
+    "synthetic_fixture",
+    "bindings",
+    "supporting_files",
+    "source_provenance",
+    "validation",
+    "lifecycle",
+    "proof_class",
+    "authority"
+  ],
+  "properties": {
+    "schema_version": {"const": "microduck.policy-manifest-v2-resolution/v1"},
+    "target_schema": {"const": "microduck.policy-manifest/v2"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "source_class": {"enum": ["official", "community"]},
+    "synthetic_fixture": {"const": false},
+    "bindings": {"type": "object", "minProperties": 10, "maxProperties": 10},
+    "supporting_files": {"type": "array"},
+    "source_provenance": {"type": "object"},
+    "validation": {"type": "object"},
+    "lifecycle": {"type": "object"},
+    "proof_class": {"const": "immutable_attribution_audit_only"},
+    "authority": {"const": "none"}
+  },
+  "additionalProperties": false
+}

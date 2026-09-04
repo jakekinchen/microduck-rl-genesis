@@ -12,6 +12,13 @@ REQUIRED_ROLES = {
     "normalized_onnx", "normalizer", "source_checkpoint", "exporter", "model",
     "bam", "task", "evaluator", "evidence", "license",
 }
+RESOLUTION_LIFECYCLE = {
+    "download": "performed_immutable_revision",
+    "library_import": "not_performed",
+    "evaluation": "not_performed",
+    "approval": "not_requested",
+    "activation": "not_authorized",
+}
 SYNTHETIC_LIFECYCLE = {
     "download": "synthetic_fixture",
     "library_import": "not_performed",
@@ -102,3 +109,83 @@ def validate_fixture_bundle(directory: Path, expected_source_class: str) -> None
         validate_reference_attestation(reference, manifest)
     else:
         validate_hardware_attestation(hardware, manifest)
+
+
+def _validate_resolution_source(source: dict[str, Any]) -> None:
+    revision = source.get("revision", "")
+    _assert(re.fullmatch(r"[0-9a-f]{40}", revision) is not None, "resolution source revision is not immutable")
+    _assert(source.get("repository", "").startswith("https://"), "resolution source repository is not HTTPS")
+    _assert(source.get("path"), "resolution source path missing")
+    _assert(revision in source.get("url", ""), "resolution source URL is not revision-pinned")
+
+
+def validate_resolution_bundle(directory: Path, expected_source_class: str | None = None) -> dict[str, Any]:
+    """Validate a real candidate's bytes and fail-closed v2 role resolution.
+
+    A resolution bundle is not a policy manifest. It records which manifest-v2
+    roles can be attributed from immutable bytes and why the remaining roles
+    prevent emission of an authoritative ``policy-manifest-v2.json``.
+    """
+
+    path = directory / "policy-manifest-v2-resolution.json"
+    value = json.loads(path.read_text())
+    _assert(value.get("schema_version") == "microduck.policy-manifest-v2-resolution/v1", "resolution schema drift")
+    _assert(value.get("target_schema") == "microduck.policy-manifest/v2", "resolution targets wrong manifest schema")
+    _assert(value.get("source_class") in {"official", "community"}, "invalid resolution source class")
+    if expected_source_class:
+        _assert(value["source_class"] == expected_source_class, "resolution source class confusion")
+    _assert(value.get("synthetic_fixture") is False, "real candidate marked synthetic")
+    _assert(value.get("proof_class") == "immutable_attribution_audit_only", "resolution proof class promoted")
+    _assert(value.get("authority") == "none", "incomplete candidate gained authority")
+    _assert(value.get("lifecycle") == RESOLUTION_LIFECYCLE, "resolution lifecycle promoted or conflated")
+
+    bindings = value.get("bindings", {})
+    _assert(set(bindings) == REQUIRED_ROLES, "resolution binding set incomplete")
+    bound_roles: list[str] = []
+    missing_roles: list[str] = []
+    referenced_paths: list[str] = []
+    for role in sorted(REQUIRED_ROLES):
+        binding = bindings[role]
+        status = binding.get("status")
+        if status == "bound":
+            _validate_binding(directory, binding)
+            _validate_resolution_source(binding.get("source", {}))
+            _assert(not binding.get("blockers"), f"bound role retains blockers: {role}")
+            bound_roles.append(role)
+            referenced_paths.append(binding["path"])
+        elif status == "missing":
+            _assert(set(binding) == {"status", "blockers"}, f"missing role fabricates a binding: {role}")
+            _assert(isinstance(binding["blockers"], list) and binding["blockers"], f"missing role lacks blocker: {role}")
+            _assert(all(isinstance(item, str) and item for item in binding["blockers"]), f"invalid blocker: {role}")
+            missing_roles.append(role)
+        else:
+            raise AssertionError(f"invalid role status: {role}")
+
+    supporting = value.get("supporting_files", [])
+    _assert(isinstance(supporting, list), "supporting files must be a list")
+    for binding in supporting:
+        _validate_binding(directory, binding)
+        _validate_resolution_source(binding.get("source", {}))
+        referenced_paths.append(binding["path"])
+
+    _assert(len(referenced_paths) == len(set(referenced_paths)), "candidate file bound more than once")
+    actual_paths = {
+        candidate.relative_to(directory).as_posix()
+        for candidate in directory.iterdir()
+        if candidate.is_file() and candidate.name != path.name
+    }
+    _assert(set(referenced_paths) == actual_paths, "candidate bundle has missing or unbound files")
+
+    validation = value.get("validation", {})
+    _assert(validation.get("bound_roles") == bound_roles, "bound-role summary drift")
+    _assert(validation.get("missing_roles") == missing_roles, "missing-role summary drift")
+    _assert(validation.get("byte_validation") == "passed", "byte validation not recorded")
+    _assert(missing_roles, "complete candidates require the authoritative manifest path")
+    _assert(validation.get("policy_manifest_v2") == "rejected_incomplete", "incomplete candidate was not rejected")
+    _assert(validation.get("formal_manifest_emitted") is False, "incomplete candidate emitted a formal manifest")
+    _assert(not (directory / "policy-manifest-v2.json").exists(), "incomplete candidate contains a formal manifest")
+
+    provenance = value.get("source_provenance", {})
+    _assert(provenance.get("status") == "incomplete", "incomplete provenance promoted")
+    _assert(isinstance(provenance.get("missing"), list) and provenance["missing"], "source provenance blockers absent")
+    return value

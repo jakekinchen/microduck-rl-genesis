@@ -1,0 +1,114 @@
+{
+  "$schema": "../../policy-manifest-v2-resolution.schema.json",
+  "schema_version": "microduck.policy-manifest-v2-resolution/v1",
+  "target_schema": "microduck.policy-manifest/v2",
+  "candidate_id": "pollen-robotics.microduck-policies.alpha-walking.088524a",
+  "source_class": "official",
+  "synthetic_fixture": false,
+  "bindings": {
+    "normalized_onnx": {
+      "status": "bound",
+      "path": "policy.onnx",
+      "sha256": "sha256:e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+      "size_bytes": 793705,
+      "source": {
+        "repository": "https://huggingface.co/pollen-robotics/microduck-policies",
+        "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+        "path": "alpha_walking.onnx",
+        "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_walking.onnx?download=true"
+      },
+      "blockers": []
+    },
+    "normalizer": {
+      "status": "missing",
+      "blockers": ["Sub/Div tensors are baked into the ONNX, but no separately attributable normalizer file or checkpoint-statistics source is published"]
+    },
+    "source_checkpoint": {
+      "status": "missing",
+      "blockers": ["the immutable distribution contains no source checkpoint identity, bytes, or digest"]
+    },
+    "exporter": {
+      "status": "missing",
+      "blockers": ["the distribution does not bind the ONNX to an exact exporter source commit and invocation"]
+    },
+    "model": {
+      "status": "missing",
+      "blockers": ["the distribution names MicroDuck but does not bind an exact MJCF root path, revision, and digest to this policy"]
+    },
+    "bam": {
+      "status": "missing",
+      "blockers": ["the distribution names XL330 servos but does not bind an exact BAM implementation and parameter digest"]
+    },
+    "task": {
+      "status": "missing",
+      "blockers": ["the distribution declares a walking role but no exact training task id, source revision, path, or digest"]
+    },
+    "evaluator": {
+      "status": "missing",
+      "blockers": ["no immutable evaluator implementation is bound to this artifact"]
+    },
+    "evidence": {
+      "status": "missing",
+      "blockers": ["no immutable task or reference evaluation receipt is published with the artifact"]
+    },
+    "license": {
+      "status": "bound",
+      "path": "README.md",
+      "sha256": "sha256:98b45ea81164d1e1a1dd82255207053b15cd6c69d922a1c5cf3387ce604d4b74",
+      "size_bytes": 28,
+      "source": {
+        "repository": "https://huggingface.co/pollen-robotics/microduck-policies",
+        "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+        "path": "README.md",
+        "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/README.md?download=true"
+      },
+      "blockers": []
+    }
+  },
+  "supporting_files": [
+    {
+      "path": "manifest.upstream.json",
+      "sha256": "sha256:d0c36e7b71129dd617339c63bcb1d704eab282c8617ebf14c2013a01abfb2dda",
+      "size_bytes": 1524,
+      "source": {
+        "repository": "https://huggingface.co/pollen-robotics/microduck-policies",
+        "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+        "path": "manifest.json",
+        "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/manifest.json?download=true"
+      }
+    }
+  ],
+  "source_provenance": {
+    "status": "incomplete",
+    "known": {
+      "artifact_repository": "https://huggingface.co/pollen-robotics/microduck-policies",
+      "artifact_revision": "088524a64e2557dc453256b6071dbb9d23888802",
+      "declared_interface": "float32 61D observations to 14D actions at 50 Hz",
+      "declared_role": "perpetual walking",
+      "declared_license": "Apache-2.0"
+    },
+    "missing": [
+      "immutable source checkpoint and training-run identity",
+      "checkpoint-bound separately attributable normalizer",
+      "exact training task source",
+      "exact exporter source and invocation",
+      "exact model, BAM, evaluator, and evaluation-evidence bindings"
+    ]
+  },
+  "validation": {
+    "byte_validation": "passed",
+    "bound_roles": ["license", "normalized_onnx"],
+    "missing_roles": ["bam", "evaluator", "evidence", "exporter", "model", "normalizer", "source_checkpoint", "task"],
+    "policy_manifest_v2": "rejected_incomplete",
+    "formal_manifest_emitted": false
+  },
+  "lifecycle": {
+    "download": "performed_immutable_revision",
+    "library_import": "not_performed",
+    "evaluation": "not_performed",
+    "approval": "not_requested",
+    "activation": "not_authorized"
+  },
+  "proof_class": "immutable_attribution_audit_only",
+  "authority": "none"
+}

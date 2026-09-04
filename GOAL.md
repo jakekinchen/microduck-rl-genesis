@@ -11,20 +11,21 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M5 Linux CUDA runtime reconciliation
+M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/reviewer-messages/046-m5-seventh-cuda-pilot.md` - Reviewer acceptance of
-the terminal-negative seventh-pilot readiness-window receipt and exact
-teardown. No compute authority or paid execution remains active.
+`docs/session-logs/047-executor-m6-real-artifact-resolution.md` - immutable
+official/community candidate retrieval and fail-closed manifest-v2 role
+resolution; independent Reviewer decision required.
 
 ## Current Status
 
-`SEVENTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 046 accepted exact
-handoff `6e6e1db` strictly as provisioning/readiness-window failure evidence.
-Workspace `qcolxobcf` was deleted and authenticated Brev inventory is empty.
-Manager authority 013 is consumed; no retry or replacement is authorized.
+`M6_REAL_CANDIDATE_REVIEW_REQUIRED` - official and community candidate bytes
+were fetched only at immutable revisions. Their v2 role audits are
+`rejected_incomplete` with no authority. M5 is durably blocked after four
+consecutive provider/type provisioning failures; Brev inventory is empty and
+no eighth pilot is authorized.
 
 ## Stop Conditions
 
@@ -37,6 +38,12 @@ Manager authority 013 is consumed; no retry or replacement is authorized.
   regardless of the pilot outcome.
 - Do not retry the fourth, fifth, sixth, or seventh pilot types. No replacement
   compute is authorized.
+- Four consecutive provider/type provisioning failures are a durable external
+  M5 blocker. Do not propose or create an eighth Brev pilot without new user
+  direction, a new independently reviewed proposal, and fresh exact Manager
+  authority.
+- Do not import, evaluate, publish, approve, or activate either slice-047
+  candidate. Neither incomplete role-resolution report is a policy manifest.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human

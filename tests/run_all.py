@@ -14,6 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TESTS = [
     ("inventaire provenance fichiers M6", "test_file_provenance.py"),
     ("contrats artefact et attestations M6", "test_artifact_contract.py"),
+    ("résolution artefacts réels M6", "test_m6_real_artifact_resolution.py"),
     ("contrat immuable expérience M5", "test_m5_experiment_contract.py"),
     ("proposition M5 quatrième pilote non autorisée", "test_m5_fourth_pilot_proposal.py"),
     ("proposition M5 cinquième pilote non autorisée", "test_m5_fifth_pilot_proposal.py"),

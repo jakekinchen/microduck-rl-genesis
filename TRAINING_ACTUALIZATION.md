@@ -319,6 +319,12 @@ media files. No dataset files are present and none are invented. M6 remains open
 for real fully attributable official/community artifacts and publication under
 separate authority.
 
+Real-candidate resolution attempted on 2026-09-04 in slice 047. Immutable
+official and community downloads validate byte-for-byte, but both fail policy
+manifest v2 completeness. The official candidate binds 2/10 roles and the
+community candidate binds 6/10; exact missing roles remain fail-closed and no
+formal manifest or artifact authority was emitted. M6 therefore remains open.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.
