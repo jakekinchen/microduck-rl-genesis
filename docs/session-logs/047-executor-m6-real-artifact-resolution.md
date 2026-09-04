@@ -67,3 +67,11 @@ This is immutable retrieval and attribution evidence only. Neither candidate
 is accepted into a library or eligible for evaluation, publication, approval,
 activation, task claims, transfer, or hardware. M6 remains blocked on the
 listed roles. M5 remains externally blocked; no paid compute authority exists.
+
+## Reviewer Outcome
+
+The independent Reviewer returned CONTINUE on corrected exact Executor handoff
+`0785e8fdf8cd32d73e475da943cced5014fdfac0`. Reviewer Message 047 accepts
+only the immutable attribution audit and durable external M5 blocker. Both
+candidates remain `rejected_incomplete` with `authority=none`; no import,
+evaluation, publication, activation, hardware, or paid-compute authority exists.

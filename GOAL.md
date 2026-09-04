@@ -15,17 +15,17 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/session-logs/047-executor-m6-real-artifact-resolution.md` - immutable
-official/community candidate retrieval and fail-closed manifest-v2 role
-resolution; independent Reviewer decision required.
+`docs/reviewer-messages/047-m6-real-artifact-resolution.md` - Reviewer
+acceptance of immutable official/community retrieval and fail-closed
+manifest-v2 role resolution. No candidate or compute authority exists.
 
 ## Current Status
 
-`M6_REAL_CANDIDATE_REVIEW_REQUIRED` - official and community candidate bytes
-were fetched only at immutable revisions. Their v2 role audits are
-`rejected_incomplete` with no authority. M5 is durably blocked after four
-consecutive provider/type provisioning failures; Brev inventory is empty and
-no eighth pilot is authorized.
+`M6_REAL_CANDIDATE_ATTRIBUTION_AUDIT_ACCEPTED` - Reviewer 047 accepted exact
+handoff `0785e8f` strictly as immutable attribution evidence. Official resolves
+2/10 roles and community 6/10; both remain `rejected_incomplete` with no
+authority. M5 is durably blocked after four provisioning failures, Brev
+inventory is empty, and no eighth pilot is authorized.
 
 ## Stop Conditions
 
