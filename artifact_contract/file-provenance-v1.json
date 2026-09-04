@@ -1320,24 +1320,22 @@
     },
     {
       "artifact_class": "actuator_parameter",
-      "blockers": [
-        "license note attributes BAM, but exact upstream source path and blob binding are absent"
-      ],
+      "blockers": [],
       "declared_license": "Apache-2.0",
       "license_evidence": {
         "path": "microduck/assets/LICENSE-ASSETS.md",
         "sha256": "sha256:7b0bb41adae491f8834e9ef154d16b527ead819ab3b9d9a7aeb5868862dae500"
       },
       "path": "microduck/assets/xl330_m6.json",
-      "provenance_status": "partial",
+      "provenance_status": "complete",
       "sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
       "size_bytes": 719,
       "source": {
-        "byte_identical": null,
-        "path": null,
+        "byte_identical": true,
+        "path": "bam/params/xl330/m6.json",
         "repository": "https://github.com/Rhoban/bam.git",
         "revision": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
-        "sha256": null
+        "sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3"
       }
     },
     {
@@ -1406,10 +1404,10 @@
   "proof_class": "provenance_inventory_only",
   "schema_version": "microduck.file-provenance-inventory/v1",
   "summary": {
-    "complete": 63,
+    "complete": 64,
     "fully_resolved": false,
     "missing": 5,
-    "partial": 2,
+    "partial": 1,
     "total_files": 70
   }
 }

@@ -15,17 +15,17 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/reviewer-messages/047-m6-real-artifact-resolution.md` - Reviewer
-acceptance of immutable official/community retrieval and fail-closed
-manifest-v2 role resolution. No candidate or compute authority exists.
+`docs/session-logs/048-executor-m6-community-authority-search.md` - terminal
+community policy-role authority search plus exact BAM parameter provenance
+closure; independent Reviewer decision required.
 
 ## Current Status
 
-`M6_REAL_CANDIDATE_ATTRIBUTION_AUDIT_ACCEPTED` - Reviewer 047 accepted exact
-handoff `0785e8f` strictly as immutable attribution evidence. Official resolves
-2/10 roles and community 6/10; both remain `rejected_incomplete` with no
-authority. M5 is durably blocked after four provisioning failures, Brev
-inventory is empty, and no eighth pilot is authorized.
+`M6_COMMUNITY_AUTHORITY_SEARCH_REVIEW_REQUIRED` - exact public artifact,
+source, history, LFS, and W&B searches resolved no new policy role; community
+remains 6/10 and `rejected_incomplete`. Exact BAM parameter provenance moved
+the file inventory to 64 complete / 1 partial / 5 missing. No candidate,
+compute, or activation authority exists.
 
 ## Stop Conditions
 

@@ -12,6 +12,9 @@ OFFICIAL_REPOSITORY = "https://github.com/pollen-robotics/microduck_rl.git"
 OFFICIAL_COMMIT = "109e06d4ce4921b635c5609e5304079fc30960ae"
 ASSET_LICENSE = "CC-BY-SA-NC"
 CODE_LICENSE = "Apache-2.0"
+BAM_REPOSITORY = "https://github.com/Rhoban/bam.git"
+BAM_COMMIT = "62bd8ce12154340be97e06f7f41a0ca8f116d967"
+BAM_PARAMETER_PATH = "bam/params/xl330/m6.json"
 LIFECYCLE = {
     "download": "not_performed",
     "library_import": "not_performed",
@@ -80,13 +83,16 @@ def build_inventory(root: Path, official_repo: Path) -> dict[str, Any]:
     files.append(add_item)
 
     actuator = root / "microduck/assets/xl330_m6.json"
+    actuator_source = root / "artifact_contract/real-candidates/community-rough-walk-e-fa7b27e/bam_xl330_m6.json"
+    actuator_source_bytes = actuator_source.read_bytes()
+    actuator_matches = actuator_source_bytes == actuator.read_bytes()
     actuator_item = local_record(root, actuator, "actuator_parameter")
     actuator_item.update({
         "declared_license": CODE_LICENSE,
         "license_evidence": {"path": "microduck/assets/LICENSE-ASSETS.md", "sha256": sha256_file(license_path)},
-        "source": {"repository": "https://github.com/Rhoban/bam.git", "revision": "62bd8ce12154340be97e06f7f41a0ca8f116d967", "path": None, "sha256": None, "byte_identical": None},
-        "provenance_status": "partial",
-        "blockers": ["license note attributes BAM, but exact upstream source path and blob binding are absent"],
+        "source": {"repository": BAM_REPOSITORY, "revision": BAM_COMMIT, "path": BAM_PARAMETER_PATH, "sha256": sha256_bytes(actuator_source_bytes), "byte_identical": actuator_matches},
+        "provenance_status": "complete" if actuator_matches else "partial",
+        "blockers": [] if actuator_matches else ["local actuator parameters differ from the immutable BAM source blob"],
     })
     files.append(actuator_item)
 
@@ -161,6 +167,18 @@ def validate_inventory(inventory: dict[str, Any], root: Path, official_repo: Pat
             source_bytes = git_blob(official_repo, source["revision"], source["path"])
             if sha256_bytes(source_bytes) != source["sha256"] or (source_bytes == path.read_bytes()) != source["byte_identical"]:
                 raise AssertionError(f"upstream source comparison drift: {item['path']}")
+        if item["artifact_class"] == "actuator_parameter":
+            source = item["source"]
+            expected_source = root / "artifact_contract/real-candidates/community-rough-walk-e-fa7b27e/bam_xl330_m6.json"
+            source_bytes = expected_source.read_bytes()
+            if source != {
+                "repository": BAM_REPOSITORY,
+                "revision": BAM_COMMIT,
+                "path": BAM_PARAMETER_PATH,
+                "sha256": sha256_bytes(source_bytes),
+                "byte_identical": source_bytes == path.read_bytes(),
+            }:
+                raise AssertionError("actuator parameter source binding drift")
     counts = {status: sum(item["provenance_status"] == status for item in records) for status in ("complete", "partial", "missing")}
     expected_summary = {"total_files": len(records), **counts, "fully_resolved": counts["partial"] == 0 and counts["missing"] == 0}
     if inventory.get("summary") != expected_summary:

@@ -21,11 +21,11 @@
     },
     "normalizer": {
       "status": "missing",
-      "blockers": ["the model card says the normalizer is baked in, but publishes no separately attributable normalizer file or checkpoint-statistics source"]
+      "blockers": ["the model card says the normalizer is baked in, but the exact Hugging Face tree and training-source tree publish no separately attributable normalizer file or checkpoint-statistics source"]
     },
     "source_checkpoint": {
       "status": "missing",
-      "blockers": ["the model card names a resumed W&B model_9999 checkpoint but publishes neither immutable checkpoint bytes nor a digest"]
+      "blockers": ["the model card and task-registration source name W&B run yr25mna4 model_9999, but the exact source tree contains no checkpoint and the named W&B project exposes no public immutable file authority"]
     },
     "exporter": {
       "status": "bound",
@@ -81,11 +81,11 @@
     },
     "evaluator": {
       "status": "missing",
-      "blockers": ["the model card describes an evaluation battery but binds no immutable evaluator implementation"]
+      "blockers": ["the model card describes an evaluation battery, but neither the exact Hugging Face tree nor exact training-source tree contains a bound evaluator implementation"]
     },
     "evidence": {
       "status": "missing",
-      "blockers": ["the model card reports aggregate metrics but publishes no digest-bound raw evaluation receipt for those claims"]
+      "blockers": ["the model card reports aggregate metrics and an immutable preview-video LFS object, but publishes no digest-bound raw evaluation receipt; self-claims and illustrative media are not raw evidence"]
     },
     "license": {
       "status": "bound",
@@ -145,6 +145,39 @@
         "path": "src/mjlab_microduck/actuator/friction_dr_bam.py",
         "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/src/mjlab_microduck/actuator/friction_dr_bam.py"
       }
+    },
+    {
+      "path": "task-registration.py.source",
+      "sha256": "sha256:bdbba51eab569e426f443364791a98989dac892fd77a78773887c2500e229843",
+      "size_bytes": 14945,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "src/mjlab_microduck/tasks/__init__.py",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/src/mjlab_microduck/tasks/__init__.py"
+      }
+    },
+    {
+      "path": "hf-jobs.py.source",
+      "sha256": "sha256:f97f7d4449da3308db6715620debd266f1ea21bc4fe65e6386ff53e1c6c13d9a",
+      "size_bytes": 20030,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "src/mjlab_microduck/hf_jobs.py",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/src/mjlab_microduck/hf_jobs.py"
+      }
+    },
+    {
+      "path": "wandb-utils.py.source",
+      "sha256": "sha256:a4682def0e329c16f287dc881ab629e1b7918ff0d18de4c38c366ff2e3839250",
+      "size_bytes": 5070,
+      "source": {
+        "repository": "https://github.com/pollen-robotics/microduck_rl",
+        "revision": "6cd45fc7a865299f118f7671142465d377853928",
+        "path": "scripts/wandb_utils.py",
+        "url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/6cd45fc7a865299f118f7671142465d377853928/scripts/wandb_utils.py"
+      }
     }
   ],
   "source_provenance": {
@@ -156,14 +189,16 @@
       "training_commit": "6cd45fc7a865299f118f7671142465d377853928",
       "training_task_id": "Mjlab-Hostile-FinetuneFeetProgress-MicroDuck",
       "training_run": "pollen-robotics/hostile-e-finetune-feet-progress-20260830-0103; resumed from alpha_walking W&B yr25mna4 model_9999",
+      "wandb_project_from_source": "pollen-robotics/mjlab_microduck",
+      "search_receipt": "receipts/m6/provenance/20260904-community-rough-walk-e",
       "bam_commit_from_uv_lock": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
       "declared_interface": "float32 61D observations to 14D actions at 50 Hz with baked normalizer",
       "declared_license": "Apache-2.0"
     },
     "missing": [
-      "immutable source checkpoint bytes and digest",
+      "publicly retrievable immutable source checkpoint bytes and digest",
       "checkpoint-bound separately attributable normalizer",
-      "exact exporter invocation that produced the ONNX",
+      "exact artifact-specific exporter invocation that produced the ONNX; the retained HF job command is a generic template only",
       "immutable evaluator implementation",
       "digest-bound raw evaluation evidence"
     ]

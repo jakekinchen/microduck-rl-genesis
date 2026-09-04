@@ -14,9 +14,17 @@ from artifact_contract.provenance import validate_inventory
 
 inventory = json.loads((ROOT / "artifact_contract/file-provenance-v1.json").read_text())
 validate_inventory(inventory, ROOT)
-assert inventory["summary"] == {"total_files": 70, "complete": 63, "partial": 2, "missing": 5, "fully_resolved": False}
+assert inventory["summary"] == {"total_files": 70, "complete": 64, "partial": 1, "missing": 5, "fully_resolved": False}
 ball = next(item for item in inventory["files"] if item["path"].endswith("/ball.xml"))
 assert ball["provenance_status"] == "partial" and ball["source"]["byte_identical"] is False
+actuator = next(item for item in inventory["files"] if item["artifact_class"] == "actuator_parameter")
+assert actuator["provenance_status"] == "complete" and actuator["source"] == {
+    "byte_identical": True,
+    "path": "bam/params/xl330/m6.json",
+    "repository": "https://github.com/Rhoban/bam.git",
+    "revision": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+    "sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+}
 assert all(item["provenance_status"] == "missing" for item in inventory["files"] if item["artifact_class"] in {"policy_weight", "media"})
 
 
@@ -33,6 +41,8 @@ def rejected(mutator) -> None:
 rejected(lambda value: value["files"].pop())
 rejected(lambda value: value["files"][0].__setitem__("sha256", "sha256:" + "0" * 64))
 policy_index = next(index for index, item in enumerate(inventory["files"]) if item["artifact_class"] == "policy_weight")
+actuator_index = next(index for index, item in enumerate(inventory["files"]) if item["artifact_class"] == "actuator_parameter")
 rejected(lambda value: value["files"][policy_index].__setitem__("provenance_status", "complete"))
+rejected(lambda value: value["files"][actuator_index]["source"].__setitem__("path", "bam/params/xl330/m5.json"))
 rejected(lambda value: value["lifecycle"].__setitem__("evaluation", "completed"))
 print("file-level MJCF/mesh/policy/dataset/media provenance and negative statuses verified")

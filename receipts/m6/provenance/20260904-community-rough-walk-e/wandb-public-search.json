@@ -1,0 +1,30 @@
+{
+  "checked_on": "2026-09-04",
+  "authentication": "anonymous_public_only",
+  "source_binding": {
+    "file": "scripts/wandb_utils.py",
+    "commit": "6cd45fc7a865299f118f7671142465d377853928",
+    "project": "pollen-robotics/mjlab_microduck",
+    "run_id_from_task_registration_and_model_card": "yr25mna4",
+    "checkpoint_name_from_task_registration_and_model_card": "model_9999.pt"
+  },
+  "run_page": {
+    "url": "https://wandb.ai/pollen-robotics/mjlab_microduck/runs/yr25mna4",
+    "http_status": 200,
+    "result": "generic application shell with noindex metadata; no immutable run or file metadata exposed"
+  },
+  "anonymous_graphql": {
+    "url": "https://api.wandb.ai/graphql",
+    "http_status": 200,
+    "query": "project(name: mjlab_microduck, entityName: pollen-robotics) { run(name: yr25mna4) { id name displayName state createdAt updatedAt config summaryMetrics } }",
+    "response": {"data": {"project": null}}
+  },
+  "direct_file_status": {
+    "wandb-metadata.json": 404,
+    "wandb-summary.json": 404,
+    "config.yaml": 404,
+    "model_9999.pt": 404
+  },
+  "disposition": "unverifiable_dashboard_rejected",
+  "reason": "No publicly addressable immutable checkpoint, normalizer, exporter invocation, evaluator, or raw evidence can be bound from the named run. Credentials and mutable dashboard inference are outside scope."
+}

@@ -325,6 +325,14 @@ manifest v2 completeness. The official candidate binds 2/10 roles and the
 community candidate binds 6/10; exact missing roles remain fail-closed and no
 formal manifest or artifact authority was emitted. M6 therefore remains open.
 
+Slice 048 searched the community candidate's complete immutable Hugging Face
+tree/history, exact training-source tree, 1,000 accessible ancestor commits,
+and anonymously available W&B surfaces. No source checkpoint, separate
+normalizer, evaluator, raw evidence, or artifact-specific exporter invocation
+could be bound; the candidate remains 6/10. The adjacent BAM parameter source
+was resolved exactly, moving the file inventory to 64 complete, 1 partial, and
+5 missing without changing policy authority.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.

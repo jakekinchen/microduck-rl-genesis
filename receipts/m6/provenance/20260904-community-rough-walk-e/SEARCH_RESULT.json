@@ -1,0 +1,43 @@
+{
+  "schema_version": "microduck.m6-community-authority-search/v1",
+  "candidate_id": "remifabre.microduck-rough-walk-e.fa7b27e",
+  "artifact_revision": "fa7b27eeb5610d3b351362f4bd71691ee8be3d7d",
+  "training_commit": "6cd45fc7a865299f118f7671142465d377853928",
+  "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+  "result": "community_policy_roles_still_missing",
+  "role_outcomes": {
+    "source_checkpoint": "missing: exact Hugging Face and source trees contain no checkpoint; named W&B checkpoint is not publicly addressable or immutable",
+    "normalizer": "missing: baked-normalizer self-claim has no separately attributable file or checkpoint-statistics source",
+    "evaluator": "missing: no immutable evaluator is present in either exact tree",
+    "evidence": "missing: LFS binds only illustrative preview media, not raw evaluation evidence",
+    "exporter_provenance": "incomplete: exporter source and generic HF auto-export template are bound, but no artifact-specific invocation or checkpoint-to-ONNX receipt exists"
+  },
+  "hf_lfs": {
+    "policy_sha256": "5aa423bd693e431b19e2ead77f99cbae6184e40a529eb2f7c1b4f85bb7f57040",
+    "policy_size_bytes": 793772,
+    "preview_sha256": "dd079687dba782bdf3c0cd63f010b0cfd6d1084024018f6810cb3468d1d1f82a",
+    "preview_size_bytes": 11412279
+  },
+  "resolved_adjacent_inventory_gap": {
+    "path": "microduck/assets/xl330_m6.json",
+    "source_path": "bam/params/xl330/m6.json",
+    "source_revision": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+    "sha256": "61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+    "byte_identical": true,
+    "license": "Apache-2.0",
+    "new_status": "complete"
+  },
+  "actions": {
+    "downloaded_code_executed": false,
+    "onnx_loaded": false,
+    "checkpoint_loaded": false,
+    "credentials_used": false,
+    "dashboard_data_inferred": false,
+    "artifact_imported": false,
+    "evaluation_performed": false,
+    "publication_performed": false,
+    "activation_performed": false,
+    "hardware_used": false,
+    "paid_compute_used": false
+  }
+}

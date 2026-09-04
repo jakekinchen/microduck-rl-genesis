@@ -26,6 +26,10 @@ assert official["validation"]["missing_roles"] == ["bam", "evaluator", "evidence
 assert community["bindings"]["normalized_onnx"]["sha256"] == "sha256:5aa423bd693e431b19e2ead77f99cbae6184e40a529eb2f7c1b4f85bb7f57040"
 assert community["validation"]["bound_roles"] == ["bam", "exporter", "license", "model", "normalized_onnx", "task"]
 assert community["validation"]["missing_roles"] == ["evaluator", "evidence", "normalizer", "source_checkpoint"]
+assert {item["path"] for item in community["supporting_files"]} >= {
+    "task-registration.py.source", "hf-jobs.py.source", "wandb-utils.py.source"
+}
+assert "artifact-specific exporter invocation" in community["source_provenance"]["missing"][2]
 
 for resolution in (official, community):
     assert resolution["validation"]["policy_manifest_v2"] == "rejected_incomplete"
