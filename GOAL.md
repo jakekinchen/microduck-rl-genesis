@@ -1,5 +1,11 @@
 # GOAL
 
+## Work Mode
+
+Work directly in one Codex task. Do not create Executor/Reviewer/Manager
+cycles, spawn review tasks, or run an autonomous goal loop. Historical role
+records are evidence only.
+
 ## Active Mission
 
 Turn the working Genesis Metal/MPS pipeline into a reproducible,
@@ -13,77 +19,35 @@ classes; reward movement or a plausible rollout is never task success.
 
 M6 immutable attributable artifacts
 
-## Current Slice
-
-`docs/reviewer-messages/053-m6-external-authority-handoff.md` - Reviewer accepts
-the final local authority packet and escalates/stops at the external-input,
-third-party-contact, and human-publication authority boundary.
-
 ## Current Status
 
-`M6_EXTERNAL_AUTHORITY_REQUIRED_STOP` - Reviewer 053 accepts exact Executor
-handoff `e8ba065` from accepted base `f22c799` and records an evidence-anchor-
-100 ESCALATE with terminal local STOP. The packet exactly binds eight missing
-official roles, four missing community roles, acceptable immutable evidence,
-two unsent drafts, an unauthorized/unexecuted publication plan, and zero honest
-repo-owned closures. Existing authority covers local audit/edit/validation/
-staging/drafting only. Resume requires user-supplied immutable upstream input
-or explicit authority for a named contact/publication action and destination.
-M6 remains open with five files quarantined, M5 remains externally blocked,
-Brev is empty, and no contact, publication, policy, compute, activation, or
-physical action occurred. Do not create or delegate another local slice.
+`M6_EXTERNAL_AUTHORITY_REQUIRED_STOP` — local work has reached an external
+authority boundary.
 
-## Stop Conditions
+- M5 is blocked after four distinct Brev provider/type provisioning failures.
+- M6 has an accepted deterministic 65-file bundle, but the official candidate
+  is missing 8 of 10 roles and the community candidate is missing 4 of 10.
+- Five legacy files remain quarantined.
+- Brev is empty, and no contact, publication, policy, compute, activation, or
+  physical action is authorized or in progress.
+- Resume only when the user supplies immutable upstream inputs or explicitly
+  authorizes a named contact or publication action and destination.
 
-- Do not provision from consumed Manager authorizations 007, 009, 010, 011,
-  012, or 013. Authorization 013 was consumed by its terminal seventh workspace.
-  No fallback, substitute, second workspace, or seventh-pilot retry is authorized.
-- The sixth-pilot `$8.816124` / two-hour ceiling is historical and consumed.
-  Do not reopen execution because of the belated post-terminal READY signal.
-- Do not begin the full CUDA seed matrix from this smoke authorization,
-  regardless of the pilot outcome.
-- Do not retry the fourth, fifth, sixth, or seventh pilot types. No replacement
-  compute is authorized.
-- Four consecutive provider/type provisioning failures are a durable external
-  M5 blocker. Do not propose or create an eighth Brev pilot without new user
-  direction, a new independently reviewed proposal, and fresh exact Manager
-  authority.
-- Do not import, evaluate, publish, approve, or activate either slice-047
-  candidate. Neither incomplete role-resolution report is a policy manifest.
+## Task List
+
+`TRAINING_ACTUALIZATION.md` is the source of truth for ordered work,
+acceptance gates, and durable receipts.
+
+## Current Boundaries
+
+- Do not reuse consumed compute authorizations or retry the failed Brev pilot
+  types.
+- Do not create an eighth Brev pilot without new user direction and fresh,
+  exact authority.
+- Do not begin the full CUDA seed matrix from historical smoke authority.
+- Do not import, evaluate, publish, approve, or activate either incomplete M6
+  candidate as a policy manifest.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
-- Stop on a verified safety boundary or destructive operation requiring human
-  approval.
-
-## Human Constraints
-
-- Manager logs 009, 010, 011, 012, and 013 were one-use authorities. They were consumed by
-  terminal receipts `20260904T030457Z-4qe7ph6p7` and
-  `20260904T044136Z-tpo91g7kj`, then terminal receipt
-  `20260904T055749Z-i1bsb56r7`, then terminal receipt
-  `20260904T070121Z-urmhasks7`, then terminal receipt
-  `20260904T082021Z-qcolxobcf`; none can be reused.
-- Historical fourth-pilot constraint only: `hyperstack_A100_80G` was selected
-  at `$1.62/hour` with a two-hour / `$3.24` ceiling. That authorization is
-  consumed; do not retry this type under the fifth-pilot proposal.
-- The proposed fifth-pilot replacement is exactly
-  `massedcompute_A100_sxm4_80G_DGX` at `$1.656/hour`, non-stoppable and
-  non-rebootable. That type failed before shell readiness under consumed
-  authority 011 and cannot be retried.
-- The consumed sixth-pilot replacement was exactly direct GCP type
-  `a2-highgpu-1g:nvidia-tesla-a100:1` at `$4.408062/hour`, stoppable with
-  flexible ports, one A100 40 GB, and a two-hour / `$8.816124` ceiling. Its
-  catalog target disk is only 10 GB, so at least 8 GiB free must be verified
-  before upload and again before install. Catalog indicators do not prove shell
-  readiness. It failed before a usable shell, was torn down under consumed
-  authority 012, and cannot be retried.
-- The `$210` total CUDA envelope remains a planning ceiling, not active compute
-  authority. No H100, multi-GPU, second workspace, fallback, substitution, or
-  automatic overspend.
-- Publication is limited to reviewed immutable artifacts required by this
-  program. Policy activation and physical operation remain gated actions, not
-  consequences of compute or publication authority.
-- Scoped local commits and isolated clean-clone/worktree verification are
-  authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
+- Publication, policy activation, and physical operation require explicit user
+  authority.

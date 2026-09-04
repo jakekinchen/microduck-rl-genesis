@@ -5,6 +5,14 @@ reproducible, independently evaluated policy-production system. Work is judged
 by closed gates and durable receipts, not by reward movement or a visually
 plausible rollout.
 
+## Work mode
+
+Advance this queue directly in one Codex task. Do not create
+Executor/Reviewer/Manager cycles, fork review tasks, or run an autonomous goal
+loop. Historical role logs are retained as evidence only; they are not active
+instructions. Implement, test, review, and update this task list in the same
+task.
+
 ## Current evidence boundary
 
 | Gate | State on 2026-09-01 | What is established |
