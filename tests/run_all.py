@@ -15,6 +15,7 @@ TESTS = [
     ("inventaire provenance fichiers M6", "test_file_provenance.py"),
     ("contrats artefact et attestations M6", "test_artifact_contract.py"),
     ("contrat immuable expérience M5", "test_m5_experiment_contract.py"),
+    ("proposition M5 quatrième pilote non autorisée", "test_m5_fourth_pilot_proposal.py"),
     ("schéma benchmark Apple", "test_apple_scaling.py"),
     ("matérialisation BAM épinglée", "test_materialize_bam_authority.py"),
     ("vecteurs BAM dorés épinglés", "test_bam_golden_vectors.py"),

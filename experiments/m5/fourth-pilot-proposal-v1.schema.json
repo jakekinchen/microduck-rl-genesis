@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.m5-fourth-pilot-proposal/v1",
+  "title": "MicroDuck proposed fourth CUDA pilot",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schema_version",
+    "state",
+    "compute_authorized",
+    "authority",
+    "catalog_snapshot",
+    "container",
+    "inputs",
+    "workspace",
+    "limits",
+    "execution",
+    "preconditions_for_any_later_authorized_create",
+    "failure_receipt",
+    "teardown",
+    "prohibited",
+    "evidence_boundary"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "fourth-pilot-proposal-v1.schema.json"
+    },
+    "schema_version": {
+      "const": "microduck.m5-fourth-pilot-proposal/v1"
+    },
+    "state": {
+      "const": "proposed_not_authorized"
+    },
+    "compute_authorized": {
+      "const": false
+    },
+    "authority": {
+      "type": "object"
+    },
+    "catalog_snapshot": {
+      "type": "object"
+    },
+    "container": {
+      "type": "object"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "workspace": {
+      "type": "object"
+    },
+    "limits": {
+      "type": "object"
+    },
+    "execution": {
+      "type": "object"
+    },
+    "preconditions_for_any_later_authorized_create": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "failure_receipt": {
+      "type": "object"
+    },
+    "teardown": {
+      "type": "object"
+    },
+    "prohibited": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "uniqueItems": true
+    },
+    "evidence_boundary": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

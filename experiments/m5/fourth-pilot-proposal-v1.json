@@ -1,0 +1,187 @@
+{
+  "$schema": "fourth-pilot-proposal-v1.schema.json",
+  "schema_version": "microduck.m5-fourth-pilot-proposal/v1",
+  "state": "proposed_not_authorized",
+  "compute_authorized": false,
+  "authority": {
+    "accepted_correction_commit": "4a743bbb4fcae9782f4218fd1f0e0c0f9599dff3",
+    "accepted_reviewer_head": "7bc61d5b5b4c3275a9b2b0e5bfeb282b687ce55a",
+    "accepted_reviewer_record": "docs/reviewer-messages/035-m5-evaluator-bundle-determinism.md",
+    "manager_authority_present": false,
+    "proposal_grants_compute": false,
+    "required_later_authority": "a new committed Manager record after independent Reviewer acceptance that names this exact proposal path and SHA-256 and binds every immutable input and limit"
+  },
+  "catalog_snapshot": {
+    "observed_at_utc": "2026-09-04T04:08:56Z",
+    "query": "brev search --gpu-name A100 --sort price --json",
+    "inventory_query": "brev ls --json",
+    "inventory_was_empty": true,
+    "type": "hyperstack_A100_80G",
+    "provider": "shadeform",
+    "cloud": "hyperstack",
+    "arch": "x86_64",
+    "gpu_name": "A100",
+    "gpu_count": 1,
+    "vram_per_gpu_gb": 80,
+    "total_vram_gb": 80,
+    "vcpus": 28,
+    "memory": "120GiB",
+    "boot_time_seconds": 390,
+    "stoppable": false,
+    "rebootable": false,
+    "price_per_hour_usd": 1.62,
+    "proposal_evidence_only": true
+  },
+  "container": {
+    "immutable_reference": "docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c",
+    "platform": "linux/amd64",
+    "tag_for_humans_only": "12.8.1-cudnn-devel-ubuntu24.04"
+  },
+  "inputs": {
+    "pilot_harness": {
+      "path": "scripts/run_m5_cuda_pilot.sh",
+      "sha256": "sha256:86e964348ec5bb64f22b64bdee6b3eb446923b2e35f2b8e5f54390eda08798ef"
+    },
+    "runtime_contract": {
+      "path": "environments/cuda/runtime-v1.json",
+      "sha256": "sha256:c9f64efb52d7ae0c220ff0f03c9b207af11a792251bd1eb69ef9357e1658f46d"
+    },
+    "requirements_lock": {
+      "path": "environments/cuda/requirements.lock",
+      "sha256": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f"
+    },
+    "source_bundles": {
+      "genesis.bundle": {
+        "source_commit": "7bc61d5b5b4c3275a9b2b0e5bfeb282b687ce55a",
+        "bundle_ref": "refs/m5-pilot4/genesis",
+        "sha256": "sha256:e35c912931c1f163ead8c039cb3efce18a3af3319f781ddf3eac201eaf05857f"
+      },
+      "official-walking.bundle": {
+        "source_commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+        "bundle_ref": "refs/m5-pilot4/official-walking",
+        "sha256": "sha256:0bf67acef9a039536b8d5dc1738260298ea9d08ecddaeaa7fbe6cd0fcbd136bb"
+      },
+      "official-backflip.bundle": {
+        "source_commit": "8bde27eb141c8f14db05fc4370e536521203a98d",
+        "bundle_ref": "refs/m5-pilot4/official-backflip",
+        "sha256": "sha256:94d0f59fc1c9aa3a23bdc7859a17e6001c8a8c98cef2aeb3dc39d952a37b9246"
+      }
+    },
+    "bundle_generation": {
+      "git_config": [
+        "pack.threads=1",
+        "pack.windowMemory=64m"
+      ],
+      "procedure": "create the named temporary bundle_ref at source_commit, run git bundle create for exactly that ref with the bound git_config, verify the bundle, then delete only that temporary ref",
+      "two_generation_byte_equality_required": true,
+      "remote_hash_equality_required_before_execution": true
+    }
+  },
+  "workspace": {
+    "name": "microduck-m5-pilot4-20260904",
+    "count": 1,
+    "parallel": 1,
+    "mode": "container",
+    "jupyter": false,
+    "fallback_allowed": false,
+    "second_workspace_allowed": false,
+    "substitute_type_allowed": false
+  },
+  "limits": {
+    "harness_timeout_seconds": 4800,
+    "hard_elapsed_seconds_create_to_delete": 7200,
+    "hard_elapsed_hours_create_to_delete": 2,
+    "hard_cost_usd": 3.24,
+    "maximum_price_per_hour_usd": 1.62
+  },
+  "execution": {
+    "ordered_gates": [
+      "authority_enabled_full_suite",
+      "four_public_development_smokes",
+      "normalized_onnx_retention"
+    ],
+    "suite": {
+      "must_pass_before_any_smoke": true,
+      "command": "tests/run_all.py",
+      "authority_enabled": true
+    },
+    "public_development_smokes": [
+      {
+        "backend": "genesis",
+        "task": "walking",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 51001,
+        "normalized_onnx": "artifacts/genesis-walking.normalized.onnx"
+      },
+      {
+        "backend": "genesis",
+        "task": "backflip",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 52001,
+        "normalized_onnx": "artifacts/genesis-backflip.normalized.onnx"
+      },
+      {
+        "backend": "official-mjlab",
+        "task": "walking",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 51001,
+        "normalized_onnx": "artifacts/official-walking.normalized.onnx"
+      },
+      {
+        "backend": "official-mjlab",
+        "task": "backflip",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 52001,
+        "normalized_onnx": "artifacts/official-backflip.normalized.onnx"
+      }
+    ],
+    "normalized_onnx_retention_required": true,
+    "launch_allowed_in_this_proposal": false
+  },
+  "preconditions_for_any_later_authorized_create": [
+    "independent Reviewer acceptance of the committed fourth-pilot proposal",
+    "new committed Manager authority binding this exact proposal path and SHA-256",
+    "clean source state and exact accepted correction and Reviewer/HEAD identities",
+    "exact harness, runtime, requirements lock, source bundle, and image hashes",
+    "fresh authenticated inventory is empty immediately before creation",
+    "fresh catalog row exactly matches all bound resource fields and price is no greater than 1.62 USD/hour"
+  ],
+  "failure_receipt": {
+    "required_on_every_terminal_path": true,
+    "remote_sorted_sha256sums_required": true,
+    "complete_run_scoped_receipt_recovery_required": true,
+    "independent_local_sorted_manifest_required": true,
+    "remote_local_manifest_exact_equality_required": true,
+    "terminal_status_and_failure_stage_required": true,
+    "runtime_and_source_identities_required": true,
+    "elapsed_and_conservative_cost_required": true,
+    "evidence_boundary_required": true
+  },
+  "teardown": {
+    "delete_exact_workspace_id_only": true,
+    "delete_after_verified_recovery_on_success_or_failure": true,
+    "workspace_is_non_stoppable": true,
+    "authenticated_empty_inventory_required": true,
+    "cleanup_requires_no_additional_confirmation": true
+  },
+  "prohibited": [
+    "candidate_seeds",
+    "heldout_seeds",
+    "full_cuda_matrix",
+    "publication",
+    "policy_activation",
+    "transfer",
+    "physical_operation",
+    "fallback_resource",
+    "substitute_resource",
+    "h100",
+    "multi_gpu",
+    "second_workspace",
+    "automatic_overspend"
+  ],
+  "evidence_boundary": "At most a future separately authorized fourth pilot could prove CUDA pipeline compatibility. This proposal proves no CUDA smoke, M5, task, policy, candidate, held-out, publication, activation, transfer, or physical success."
+}
