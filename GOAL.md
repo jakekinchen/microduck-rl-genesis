@@ -15,18 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/032-m5-deterministic-evidence-correction.md` - active bounded
-follow-up to Reviewer 032, limited to the compiled-manifest canonicalization
-scope and its negative regression.
+`docs/briefs/032-m5-deterministic-evidence-correction.md` - bounded Reviewer-032
+follow-up complete at `d741e60`, awaiting independent re-review.
 
 ## Current Status
 
-`ACTIVE_REVIEWER_NUDGE_CORRECTION` - narrow the 14-significant-digit projection
-to `bodies[*].inertia_kg_m2` only and prove every non-inertia field remains
-exact. The accepted evaluator-report and bundle changes are otherwise frozen
-for this follow-up. The accepted receipts, evaluator core, M5 experiment
-freeze, and `compute_authorized=false` proposal remain unchanged; no Brev or
-downstream authority is opened.
+`RE_REVIEW_REQUIRED_LOCAL_DETERMINISM_CORRECTION` - Reviewer 032's negative
+probe now fails before and passes after `d741e60`: only
+`bodies[*].inertia_kg_m2` is canonicalized, while one-ULP changes to mass and
+all other fields remain exact. Focused and full authority suites pass. The
+accepted receipts, evaluator core, M5 experiment freeze, and
+`compute_authorized=false` proposal remain unchanged; no Brev or downstream
+authority is opened pending independent re-review.
 
 ## Stop Conditions
 
@@ -60,3 +60,5 @@ downstream authority is opened.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>

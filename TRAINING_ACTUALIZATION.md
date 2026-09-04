@@ -270,11 +270,13 @@ only in truthful ONNX Runtime provenance and raw floating-point trajectory
 bytes; an 11-decimal canonical row digest is byte-identical across measured
 hosts while the raw provenance remains untouched. Development bundles now
 exclude wall-clock inference jitter from their synthetic artifact bytes and use
-single-sample offscreen rendering. Implementation `bac0375` passes the three
-focused gates, a Linux/amd64 reproduction, and the full local suite with pinned
-BAM and official MJLab authority. This is local deterministic compatibility
-only; a third-pilot card exists with `compute_authorized=false` pending review
-and separate Manager authorization.
+single-sample offscreen rendering. Reviewer 032 correctly rejected the first
+model projection because it rounded every float; follow-up `d741e60` limits the
+14-digit projection exclusively to `bodies[*].inertia_kg_m2` and adds a
+one-ULP mass negative probe that must remain visible. The focused gates and full
+local suite pass again with pinned BAM and official MJLab authority. This is
+local deterministic compatibility only; a third-pilot card exists with
+`compute_authorized=false` pending re-review and separate Manager authorization.
 
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.

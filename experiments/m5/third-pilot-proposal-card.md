@@ -8,10 +8,11 @@
 
 ## Basis
 
-Implementation `bac0375` is the local-only correction candidate for the three
-deterministic evidence failures closed by slice 032. It requires independent
-Reviewer acceptance before it can become eligible for a later exact Manager
-authorization. This card itself grants no provisioning or execution authority.
+Implementation `bac0375` plus the Reviewer-032 scope correction `d741e60` is
+the local-only correction candidate for the three deterministic evidence
+failures closed by slice 032. It requires independent Reviewer acceptance before
+it can become eligible for a later exact Manager authorization. This card
+itself grants no provisioning or execution authority.
 
 ## Proposed Purpose
 

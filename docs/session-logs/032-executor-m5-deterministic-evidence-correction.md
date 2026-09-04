@@ -4,8 +4,8 @@
 
 ## Baseline And Authority
 
-- Reviewer-accepted base: `60a642a`; slice opening commit: `5ab1062`;
-  implementation commit: `bac0375`.
+- Reviewer-accepted base: `60a642a`; slice opening commit: `5ab1062`; initial
+  implementation: `bac0375`; Reviewer-032 correction: `d741e60`.
 - Immutable source receipt:
   `receipts/m5/pilot/20260904T012843Z-7owxqf4pg/` with manifest SHA-256
   `90cbb02447d55594f71a1b35e1d00918f2f809acf3a182419d838d85186b3078`.
@@ -89,6 +89,17 @@ unavailable because the original test discarded its temporary outputs.
   change remain visible, guarding against semantic masking.
 - No existing expected fixture was rebaselined.
 
+## Reviewer 032 Nudge Resolution
+
+Reviewer 032 demonstrated that the initial recursive model projection could
+mask a one-ULP non-inertia mass change. A failing-first regression reproduced
+that exact `0.12345678901234567` to `0.12345678901234568` defect. Commit
+`d741e60` now deep-copies the manifest and applies 14-significant-digit
+canonicalization only to `bodies[*].inertia_kg_m2`; every mass, inertial
+position, joint, actuator, collision, keyframe, count, and name remains exact.
+The measured Darwin/Linux inertia example still converges, a `1e-9` inertia
+change still fails, and the one-ULP mass change now fails.
+
 ## Validation
 
 - Failing-first: all four focused tests failed on missing canonicalization or
@@ -106,6 +117,9 @@ unavailable because the original test discarded its temporary outputs.
 - `scripts/check_branch_hygiene.sh 60a642a` - pass, seven manifests and 53
   immutable logs.
 - Workflow audit and diff checks - pass.
+- After `d741e60`, the four focused tests and the complete authority-enabled
+  `tests/run_all.py` suite passed again. M5 contract validation, branch hygiene,
+  receipt immutability, and workflow audit remained clean.
 
 ## Evidence Boundary
 
@@ -115,8 +129,8 @@ publication, policy activation, transfer, or physical authority is claimed.
 
 ## Step-9 Flags For Reviewer
 
-- Independently inspect every excluded/canonicalized field and confirm that
-  semantic changes remain fail-closed.
+- Confirm Reviewer 032's exact mass negative probe now remains visible and that
+  only `bodies[*].inertia_kg_m2` receives the measured tolerance.
 - Confirm `evaluator/core.py`, the M5 experiment freeze, both accepted pilot
   receipts, 61D/14D/50 Hz/BAM contracts, and evaluator thresholds are
   unchanged.
