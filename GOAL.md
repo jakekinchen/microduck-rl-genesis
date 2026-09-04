@@ -15,21 +15,22 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/session-logs/051-executor-m6-local-distribution-gate.md` - deterministic
-complete-file allowlist and local source/artifact bundle; independent Reviewer
-review and isolated exact-commit verification required.
+`docs/reviewer-messages/051-m6-local-distribution-gate.md` - Reviewer NUDGE for
+cross-interpreter gzip-header nondeterminism in the local distribution bundle;
+versioned correction and independent re-review required.
 
 ## Current Status
 
-`M6_LOCAL_DISTRIBUTION_REVIEW_REQUIRED` - a deterministic local bundle now
-includes only the accepted 65 complete, license-bound files and both license
-texts. The two legacy media and three legacy ONNX weights remain in the source
-tree but are quarantined from distribution. Byte-only validation reaches only
-`staged_not_imported`; official/community ten-role manifests and publication
-remain open. The accepted inventory remains 65 complete / 0 partial / 5
-missing with `fully_resolved=false`; independent review is required. M6 remains
-open, M5 remains externally blocked, Brev is empty, and no policy, compute,
-publication, activation, or physical authority exists.
+`M6_LOCAL_DISTRIBUTION_NUDGE_REQUIRED` - Reviewer 051 rejects exact Executor
+handoff `c3c909c` from accepted base `c9a610b`. The allowlist, five-file
+quarantine, retained archive contents, isolated byte-only staging, and
+authority boundaries are substantiated, but fresh Python 3.9/3.13 builds hash
+to `0c92aa2...` while the retained Python 3.12 build hashes to `f732dcb...` due
+to gzip header byte 10. Preserve the failed slice-051 receipt and correct this
+in a versioned slice. The accepted inventory remains 65 complete / 0 partial /
+5 missing with `fully_resolved=false`; the distribution bundle is not yet
+accepted. M6 remains open, M5 remains externally blocked, Brev is empty, and
+no policy, compute, publication, activation, or physical authority exists.
 
 ## Stop Conditions
 
