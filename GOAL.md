@@ -15,21 +15,22 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/session-logs/052-executor-m6-portable-distribution-correction.md` -
-versioned portable-gzip correction with multi-interpreter reproduction;
-independent Reviewer re-review and isolated exact-commit verification required.
+`docs/reviewer-messages/052-m6-portable-distribution-correction.md` - Reviewer
+acceptance of the versioned portable archive, multi-interpreter reproduction,
+and isolated byte-only staging proof.
 
 ## Current Status
 
-`M6_PORTABLE_DISTRIBUTION_CORRECTION_REVIEW_REQUIRED` - Reviewer 051's failed
-v1 receipt remains unchanged. A v2 archive fixes the interpreter-dependent gzip
-OS header and reproduces byte-identically under Python 3.9, 3.12, and 3.13. Its
-unchanged allowlist includes only the accepted 65 complete, license-bound files
-and quarantines the five missing media/policy files. Byte-only validation
-reaches only `staged_not_imported`; official/community ten-role manifests and
-publication remain open pending re-review. M6 remains open, M5 remains
-externally blocked, Brev is empty, and no policy, compute, publication,
-activation, or physical authority exists.
+`M6_LOCAL_DISTRIBUTION_GATE_ACCEPTED` - Reviewer 052 accepts exact Executor
+handoff `93f7362` from Reviewer base `68b0094`. The rejected v1 receipt remains
+unchanged; Python 3.9, 3.12, and 3.13 independently reproduce the versioned v2
+archive at SHA-256 `0c92aa2...`, size 9,272,643, and fixed gzip header
+`1f8b08000000000002ff`. The unchanged allowlist admits only the accepted 65
+complete files and quarantines the five missing media/policy files. Byte-only
+validation stops at `staged_not_imported`; official/community ten-role
+manifests remain open and publication is human-owned. M6 therefore remains
+open, M5 remains externally blocked, Brev is empty, and no policy, compute,
+publication, activation, or physical authority exists.
 
 ## Stop Conditions
 
