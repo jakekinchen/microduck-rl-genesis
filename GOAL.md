@@ -15,16 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/045-m5-seventh-pilot-current-catalog-correction.md` - local-only
-correction after Reviewer 044 found the proposed Crusoe row absent. No compute
-authority or paid execution is active.
+`docs/briefs/045-m5-seventh-pilot-current-catalog-correction.md` - corrected
+Executor proposal committed at `562730a`; independent Reviewer decision is
+required. No compute authority or paid execution is active.
 
 ## Current Status
 
-`SEVENTH_PILOT_CURRENT_CATALOG_CORRECTION_IN_PROGRESS` - refreeze the
-non-authorizing proposal from the unavailable Crusoe row to current unused
-direct Lambda type `gpu_1x_a100_sxm4`, preserving the accepted readiness
-protocol and all evidence boundaries.
+`SEVENTH_PILOT_CURRENT_CATALOG_CORRECTION_REVIEW_REQUIRED` - exact corrected
+proposal SHA-256
+`714da8cdd4e521e1ba0d088809ff568f29ec909b514d796a2d67c0a1c0564f53`
+is fail-closed for current unused direct Lambda type `gpu_1x_a100_sxm4`, with
+`compute_authorized=false`. Independent review is required.
 
 ## Stop Conditions
 
@@ -71,3 +72,5 @@ protocol and all evidence boundaries.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
