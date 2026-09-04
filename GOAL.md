@@ -15,16 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/session-logs/040-executor-m5-fifth-pilot-harness-self-attestation.md` -
-Executor correction committed at `579627b`; independent Reviewer decision
-required. No compute authority or paid execution is active.
+`docs/reviewer-messages/040-m5-fifth-pilot-harness-self-attestation.md` -
+Reviewer acceptance of exact handoff `9af3634`; stopped at the fresh Manager
+authority boundary. No compute authority or paid execution is active.
 
 ## Current Status
 
-`FIFTH_PILOT_HARNESS_SELF_ATTESTATION_REVIEW_REQUIRED` - corrected proposal
-SHA-256 `1d27fd55dee168fcf4f54f38432b2bad65a067aef8f821c4e1746a2afaeca4b1`
-binds exact native fifth-harness staging and receipt attestation; all local
-gates pass. Independent re-review is required; no compute authority is active.
+`FIFTH_PILOT_PROPOSAL_ACCEPTED_MANAGER_AUTHORITY_REQUIRED` - Reviewer 040
+accepted exact handoff `9af3634` and proposal SHA-256
+`1d27fd55dee168fcf4f54f38432b2bad65a067aef8f821c4e1746a2afaeca4b1`.
+The proposal is eligible only for a fresh exact committed Manager decision;
+`compute_authorized=false` and no paid execution is active.
 
 ## Stop Conditions
 
