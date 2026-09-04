@@ -24,6 +24,10 @@ byte-identical source provenance and quarantines the five missing media/policy
 records without deleting them. Its retained deterministic archive supports
 byte-only validation and library staging; it grants no policy-manifest,
 publication, import, evaluation, approval, or activation authority.
+The rejected v1 archive is preserved as evidence of an interpreter-dependent
+gzip OS-header byte. The current v2 receipt fixes the gzip filename, mtime, and
+OS header explicitly and is regression-tested across system, project, and
+available Python 3.13 interpreters.
 
 Run:
 

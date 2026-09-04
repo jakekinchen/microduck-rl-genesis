@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT))
 
 from artifact_contract.distribution import validate_receipt
 
-RECEIPT = ROOT / "receipts/m6/distribution/20260904-local-complete-assets-v1"
+RECEIPT = ROOT / "receipts/m6/distribution/20260904-local-complete-assets-v2"
 ALLOWLIST = ROOT / "artifact_contract/distribution-allowlist-v1.json"
 
 

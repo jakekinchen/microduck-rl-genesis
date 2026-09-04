@@ -14,6 +14,7 @@ from typing import Any
 from artifact_contract.provenance import validate_inventory
 
 SOURCE_REVISION = "c9a610b8005287dc83130660719af94f80274f67"
+CORRECTION_BASE = "68b0094f70a57fa0c79a71319d1ebe6ad42fff5e"
 INVENTORY_PATH = "artifact_contract/file-provenance-v1.json"
 BUNDLE_PREFIX = "microduck-complete-assets-v1"
 ALLOWLIST_MEMBER = f"{BUNDLE_PREFIX}/metadata/distribution-allowlist-v1.json"
@@ -194,7 +195,12 @@ def build_bundle(root: Path, allowlist_path: Path, output: Path) -> dict[str, An
             info.uname = ""
             info.gname = ""
             archive.addfile(info, io.BytesIO(data))
-    bundle = gzip.compress(raw.getvalue(), compresslevel=9, mtime=0)
+    compressed = io.BytesIO()
+    with gzip.GzipFile(filename="", mode="wb", compresslevel=9, fileobj=compressed, mtime=0) as stream:
+        stream.write(raw.getvalue())
+    bundle = compressed.getvalue()
+    if bundle[:10] != bytes.fromhex("1f8b08000000000002ff"):
+        raise AssertionError("portable gzip header drift")
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_bytes(bundle)
     return {"sha256": _sha256(bundle), "size_bytes": len(bundle)}
@@ -254,8 +260,8 @@ def validate_bundle(root: Path, allowlist_path: Path, bundle_path: Path, stage: 
     return result
 
 
-def validate_receipt(directory: Path, root: Path, allowlist_path: Path, stage: Path | None = None) -> dict[str, Any]:
-    expected_names = {"EVIDENCE_BOUNDARY.txt", "SEARCH_RESULT.json", "microduck-complete-assets-v1.tar.gz"}
+def _validate_receipt_manifest(directory: Path, bundle_name: str) -> None:
+    expected_names = {"EVIDENCE_BOUNDARY.txt", "SEARCH_RESULT.json", bundle_name}
     actual_names = {path.name for path in directory.iterdir() if path.is_file()}
     if actual_names != expected_names | {"SHA256SUMS"}:
         raise AssertionError("receipt file coverage drift")
@@ -271,11 +277,16 @@ def validate_receipt(directory: Path, root: Path, allowlist_path: Path, stage: P
     if observed_names != expected_names:
         raise AssertionError("receipt manifest coverage drift")
 
-    bundle_path = directory / "microduck-complete-assets-v1.tar.gz"
-    bundle = validate_bundle(root, allowlist_path, bundle_path)
-    allowlist = json.loads(allowlist_path.read_text())
-    expected_result = {
-        "schema_version": "microduck.m6-local-distribution-result/v1",
+
+def _expected_receipt_result(
+    allowlist_path: Path,
+    bundle_path: Path,
+    bundle: dict[str, Any],
+    schema_version: str,
+    portable: bool,
+) -> dict[str, Any]:
+    result = {
+        "schema_version": schema_version,
         "source_revision": SOURCE_REVISION,
         "allowlist": {"path": "artifact_contract/distribution-allowlist-v1.json", "sha256": _sha256(allowlist_path.read_bytes())},
         "bundle": {"path": bundle_path.name, "sha256": bundle["sha256"], "size_bytes": bundle["size_bytes"], "format": "deterministic_tar_gzip"},
@@ -300,6 +311,35 @@ def validate_receipt(directory: Path, root: Path, allowlist_path: Path, stage: P
         },
         "result": "local_complete_asset_bundle_staged_publication_not_authorized",
     }
+    if portable:
+        result.update({
+            "correction_base": CORRECTION_BASE,
+            "supersedes_receipt": "receipts/m6/distribution/20260904-local-complete-assets-v1",
+            "deterministic_encoding": {
+                "gzip_header_hex": "1f8b08000000000002ff",
+                "gzip_mtime": 0,
+                "gzip_os_byte": 255,
+                "tar_format": "ustar",
+            },
+        })
+    return result
+
+
+def _validate_receipt(
+    directory: Path,
+    root: Path,
+    allowlist_path: Path,
+    bundle_name: str,
+    schema_version: str,
+    portable: bool,
+    stage: Path | None,
+) -> dict[str, Any]:
+    _validate_receipt_manifest(directory, bundle_name)
+
+    bundle_path = directory / bundle_name
+    bundle = validate_bundle(root, allowlist_path, bundle_path)
+    allowlist = json.loads(allowlist_path.read_text())
+    expected_result = _expected_receipt_result(allowlist_path, bundle_path, bundle, schema_version, portable)
     if json.loads((directory / "SEARCH_RESULT.json").read_text()) != expected_result:
         raise AssertionError("distribution receipt result drift")
     boundary = (directory / "EVIDENCE_BOUNDARY.txt").read_text()
@@ -317,3 +357,27 @@ def validate_receipt(directory: Path, root: Path, allowlist_path: Path, stage: P
     if stage is not None:
         return validate_bundle(root, allowlist_path, bundle_path, stage)
     return expected_result
+
+
+def validate_legacy_receipt(directory: Path, root: Path, allowlist_path: Path) -> dict[str, Any]:
+    return _validate_receipt(
+        directory, root, allowlist_path,
+        "microduck-complete-assets-v1.tar.gz",
+        "microduck.m6-local-distribution-result/v1",
+        False,
+        None,
+    )
+
+
+def validate_receipt(directory: Path, root: Path, allowlist_path: Path, stage: Path | None = None) -> dict[str, Any]:
+    result = _validate_receipt(
+        directory, root, allowlist_path,
+        "microduck-complete-assets-v2.tar.gz",
+        "microduck.m6-local-distribution-result/v2",
+        True,
+        stage,
+    )
+    bundle = (directory / "microduck-complete-assets-v2.tar.gz").read_bytes()
+    if bundle[:10] != bytes.fromhex("1f8b08000000000002ff"):
+        raise AssertionError("portable receipt gzip header drift")
+    return result

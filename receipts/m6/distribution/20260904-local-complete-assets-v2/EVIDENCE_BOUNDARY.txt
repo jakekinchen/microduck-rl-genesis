@@ -1,0 +1,13 @@
+This corrected receipt proves portable deterministic local packaging, byte-only
+validation, and library staging of the 65 complete provenance records only.
+
+The rejected v1 receipt remains unchanged. Its gzip header was interpreter-
+dependent and grants no distribution acceptance. The v2 writer fixes every
+gzip header field, including OS byte 0xff.
+
+The two legacy media files and three legacy ONNX policies remain in the source
+repository and are quarantined from this bundle. No policy was imported,
+parsed, loaded, executed, evaluated, approved, activated, or published. No
+credential, hardware, remote publication, or compute action occurred.
+
+The official and community ten-role policy-manifest requirements remain open.

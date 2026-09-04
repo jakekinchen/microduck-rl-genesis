@@ -359,6 +359,12 @@ versioned archive validates byte-only and can reach `staged_not_imported`; both
 official/community ten-role policy-manifest requirements and publication stay
 open pending independent review.
 
+Reviewer 051 accepted every semantic and safety property but rejected the first
+archive because Python 3.12 emitted gzip OS byte `0x13` while Python 3.9/3.13
+emitted `0xff`. Slice 052 preserves that failed receipt and adds a corrected v2
+whose gzip header is fixed to `1f8b08000000000002ff`; system, project, and
+Python 3.13 builds now reproduce exact bytes pending independent re-review.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.
