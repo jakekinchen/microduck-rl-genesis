@@ -15,17 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/044-m5-seventh-pilot-reliability-proposal.md` - Executor proposal
-committed at `e22e7e2`; independent Reviewer decision required. No compute
-authority or paid execution is active.
+`docs/reviewer-messages/044-m5-seventh-pilot-reliability-proposal.md` -
+Reviewer NUDGE requires a fresh authenticated exact catalog row before the
+seventh-pilot proposal can be accepted. No compute authority or paid execution
+is active.
 
 ## Current Status
 
-`SEVENTH_PILOT_RELIABILITY_PROPOSAL_REVIEW_REQUIRED` - exact proposal SHA-256
-`d92a9f8c507762d15b66bb1ff70f2227697985f3967610bd8323b69ae8f9df24`
-is fail-closed and locally validated for unused direct Crusoe type
-`a100-80gb.1x`, with `compute_authorized=false`. Independent review is
-required; no compute authority is active.
+`SEVENTH_PILOT_LIVE_CATALOG_CORRECTION_REQUIRED` - Reviewer 044 verified the
+captured Crusoe snapshot but the independent live catalog no longer exposed
+exact type `a100-80gb.1x`. Rerun the catalog gate or refreeze to a currently
+eligible type before re-review. The proposal remains `compute_authorized=false`.
 
 ## Stop Conditions
 
