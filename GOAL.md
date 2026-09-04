@@ -15,19 +15,23 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/032-m5-deterministic-evidence-correction.md` - Executor-complete
-local correction awaiting independent Reviewer decision.
+`docs/briefs/032-m5-deterministic-evidence-correction.md` - Reviewer NUDGE at
+`docs/reviewer-messages/032-m5-deterministic-evidence-correction.md`; one
+bounded compiled-manifest canonicalization correction is required.
 
 ## Current Status
 
-`REVIEW_REQUIRED_LOCAL_DETERMINISM_CORRECTION` - implementation `bac0375`
-closes all three observed gates in native macOS and local Linux/amd64 evidence,
-with the full authority-enabled local suite passing. The accepted receipts,
-frozen evaluator core, and M5 experiment freeze are unchanged. The separate
+`NUDGE_REQUIRED_LOCAL_DETERMINISM_CORRECTION` - implementation `bac0375`
+passes the focused and full local authority suites, and its evaluator-report
+and development-bundle corrections satisfy their bounded gates. It is not yet
+accepted because compiled-model canonicalization rounds every manifest float
+rather than only the measured mesh-inertia tails, allowing unapproved
+non-inertia floating drift to be masked. The accepted receipts, frozen
+evaluator core, and M5 experiment freeze remain unchanged. The separate
 third-pilot card remains `compute_authorized=false`; no Brev workspace, third
 pilot, full CUDA, candidate, held-out, publication, activation, transfer, or
-physical work is authorized pending independent review and a later exact
-Manager decision.
+physical work is authorized pending a bounded implementation correction,
+another independent review, and any later exact Manager decision.
 
 ## Stop Conditions
 
