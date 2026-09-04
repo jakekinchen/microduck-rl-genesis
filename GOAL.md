@@ -15,19 +15,19 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/035-m5-evaluator-bundle-determinism.md` - diagnose and correct the
-single same-host five-file evaluator-bundle hash mismatch locally; correction
-and stress evidence are ready for independent review.
+`docs/briefs/035-m5-evaluator-bundle-determinism.md` - accepted by Reviewer
+035 as a local producer-determinism correction with unchanged receipts and
+evidence boundaries; workflow stopped before any separate proposal slice.
 
 ## Current Status
 
-`LOCAL_EVALUATOR_BUNDLE_DETERMINISM_CORRECTION_REVIEW_REQUIRED` - exact
-per-file A100 attribution remains unavailable because the temporary bundles
-were discarded. Fail-closed per-file/byte/JSON/Parquet/video/attestation
-diagnostics now exist, and the MP4 producer uses FFmpeg bit-exact muxer/codec
-flags plus explicit single-thread x264 ordering. Six-run and separate-process
-stress, focused authority tests, and the full suite pass; accepted receipts and
-all model/evaluator/M5 freezes remain unchanged.
+`LOCAL_EVALUATOR_BUNDLE_DETERMINISM_CORRECTION_ACCEPTED` - Reviewer 035
+accepted Executor commit `4a743bb` with no correction. Exact A100 per-file
+attribution remains unavailable; the accepted result is a local diagnostic and
+FFmpeg producer-boundary correction only. Independent six-run and
+separate-process stress, focused authority tests, full suite, receipt
+immutability, branch hygiene, and empty Brev inventory all pass. M5 remains
+open and no fourth-pilot proposal or compute authority is active.
 
 ## Stop Conditions
 
