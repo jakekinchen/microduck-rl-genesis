@@ -15,18 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/034-m5-third-cuda-pilot.md` - accepted by Reviewer 034 strictly as
-a terminal-negative A100 receipt with verified recovery and teardown; workflow
-stopped before a separate local diagnostic/correction slice.
+`docs/briefs/035-m5-evaluator-bundle-determinism.md` - diagnose and correct the
+single same-host five-file evaluator-bundle hash mismatch locally, preserve all
+evidence and experiment freezes, then obtain independent review.
 
 ## Current Status
 
-`THIRD_CUDA_SMOKE_TERMINAL_NEGATIVE_ACCEPTED_LOCAL_CORRECTION_REQUIRED` -
-Reviewer 034 accepted evidence commit `f8dfc80` only as terminal-negative CUDA
-evidence. The sole failure is the same-host five-file hash comparison in
-`test_evaluator_bundle.py:69`; all smokes and exports were skipped. Manifest
-`4bac1d24...7deee`, `$0.708750` conservative cost, teardown, empty inventory,
-and strict non-success claim boundary are independently verified.
+`LOCAL_EVALUATOR_BUNDLE_DETERMINISM_CORRECTION_ACTIVE` - Reviewer 034 accepted
+the third-pilot receipt only as terminal-negative evidence and permits this
+local no-paid-compute diagnostic slice. The target is the sole same-host
+five-file hash mismatch at `test_evaluator_bundle.py:69`; accepted receipts,
+truthful provenance, five-file completeness, and all model/evaluator/M5 freezes
+remain immutable.
 
 ## Stop Conditions
 
@@ -65,5 +65,3 @@ and strict non-success claim boundary are independently verified.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
