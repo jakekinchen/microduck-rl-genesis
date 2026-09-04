@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -48,21 +49,29 @@ def digest_json(value: object) -> str:
 
 
 def canonical_compiled_manifest(value: object) -> object:
-    """Remove only host floating tails from compiled-model evidence.
+    """Remove only measured mesh-inertia tails from compiled-model evidence.
 
     MuJoCo's mesh inertia compiler differs by one or a few ULPs between the
     Darwin arm64 and Linux x86-64 builds. Fourteen significant decimal digits
     retains substantially more precision than any model acceptance threshold
-    while mapping those measured tails to one representation.
+    while mapping those measured tails to one representation. Every other
+    manifest field remains byte-for-byte exact.
     """
-    if isinstance(value, float):
-        canonical = float(format(value, f".{COMPILED_MANIFEST_SIGNIFICANT_DIGITS}g"))
-        return 0.0 if canonical == 0.0 else canonical
-    if isinstance(value, list):
-        return [canonical_compiled_manifest(item) for item in value]
-    if isinstance(value, dict):
-        return {key: canonical_compiled_manifest(item) for key, item in value.items()}
-    return value
+    canonical = copy.deepcopy(value)
+    if not isinstance(canonical, dict):
+        return canonical
+    for body in canonical.get("bodies", []):
+        inertia = body.get("inertia_kg_m2") if isinstance(body, dict) else None
+        if not isinstance(inertia, list):
+            continue
+        rounded_inertia = []
+        for item in inertia:
+            rounded = float(
+                format(item, f".{COMPILED_MANIFEST_SIGNIFICANT_DIGITS}g")
+            )
+            rounded_inertia.append(0.0 if rounded == 0.0 else rounded)
+        body["inertia_kg_m2"] = rounded_inertia
+    return canonical
 
 
 def name(model: mujoco.MjModel, obj_type, index: int) -> str:

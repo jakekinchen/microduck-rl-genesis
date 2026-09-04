@@ -27,25 +27,36 @@ assert contract["compiled_manifest_significant_digits"] == COMPILED_MANIFEST_SIG
 assert contract["trajectory_decimal_places"] == TRAJECTORY_DECIMAL_PLACES
 
 
-darwin_inertia = {
-    "inertia_kg_m2": [
-        0.00014079887191245798,
-        1.1597556037198693e-06,
-        3.52458396277689e-07,
-    ]
+darwin_manifest = {
+    "bodies": [{
+        "name": "trunk",
+        "mass_kg": 0.12345678901234567,
+        "inertia_kg_m2": [
+            0.00014079887191245798,
+            1.1597556037198693e-06,
+            3.52458396277689e-07,
+        ],
+    }],
+    "joints": [{"name": "hip", "damping": 0.12345678901234567}],
 }
-linux_inertia = {
-    "inertia_kg_m2": [
-        0.000140798871912458,
-        1.159755603719869e-06,
-        3.5245839627768903e-07,
-    ]
-}
-assert canonical_compiled_manifest(darwin_inertia) == canonical_compiled_manifest(linux_inertia)
-semantic_inertia_change = copy.deepcopy(linux_inertia)
-semantic_inertia_change["inertia_kg_m2"][0] += 1e-9
-assert canonical_compiled_manifest(darwin_inertia) != canonical_compiled_manifest(
+linux_manifest = copy.deepcopy(darwin_manifest)
+linux_manifest["bodies"][0]["inertia_kg_m2"] = [
+    0.000140798871912458,
+    1.159755603719869e-06,
+    3.5245839627768903e-07,
+]
+assert canonical_compiled_manifest(darwin_manifest) == canonical_compiled_manifest(
+    linux_manifest
+)
+semantic_inertia_change = copy.deepcopy(linux_manifest)
+semantic_inertia_change["bodies"][0]["inertia_kg_m2"][0] += 1e-9
+assert canonical_compiled_manifest(darwin_manifest) != canonical_compiled_manifest(
     semantic_inertia_change
+)
+non_inertia_tail_change = copy.deepcopy(darwin_manifest)
+non_inertia_tail_change["bodies"][0]["mass_kg"] = 0.12345678901234568
+assert canonical_compiled_manifest(darwin_manifest) != canonical_compiled_manifest(
+    non_inertia_tail_change
 )
 
 darwin_rows = [{"case_id": "case", "physics_step": 1, "velocity": [1.0, 1.4779288903810087e-13]}]
