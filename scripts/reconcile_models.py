@@ -27,6 +27,7 @@ VARIANTS = {
     "rollers": "scene_rollers.xml",
     "rollers_backlash": "robot_allcollisions_rollers_backlash.xml",
 }
+COMPILED_MANIFEST_SIGNIFICANT_DIGITS = 14
 
 
 def command(*args: str, cwd: Path) -> str:
@@ -44,6 +45,24 @@ def json_bytes(value: object) -> bytes:
 def digest_json(value: object) -> str:
     encoded = json.dumps(value, sort_keys=True, separators=(",", ":")).encode()
     return "sha256:" + hashlib.sha256(encoded).hexdigest()
+
+
+def canonical_compiled_manifest(value: object) -> object:
+    """Remove only host floating tails from compiled-model evidence.
+
+    MuJoCo's mesh inertia compiler differs by one or a few ULPs between the
+    Darwin arm64 and Linux x86-64 builds. Fourteen significant decimal digits
+    retains substantially more precision than any model acceptance threshold
+    while mapping those measured tails to one representation.
+    """
+    if isinstance(value, float):
+        canonical = float(format(value, f".{COMPILED_MANIFEST_SIGNIFICANT_DIGITS}g"))
+        return 0.0 if canonical == 0.0 else canonical
+    if isinstance(value, list):
+        return [canonical_compiled_manifest(item) for item in value]
+    if isinstance(value, dict):
+        return {key: canonical_compiled_manifest(item) for key, item in value.items()}
+    return value
 
 
 def name(model: mujoco.MjModel, obj_type, index: int) -> str:

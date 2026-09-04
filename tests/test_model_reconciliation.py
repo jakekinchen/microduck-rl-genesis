@@ -11,7 +11,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.reconcile_models import LOCAL_ROOT, compiled_manifest, digest_json  # noqa: E402
+from scripts.reconcile_models import (  # noqa: E402
+    LOCAL_ROOT,
+    canonical_compiled_manifest,
+    compiled_manifest,
+    digest_json,
+)
 
 REPORT = ROOT / "microduck_contract" / "model" / "reconciliation-v1.json"
 LOCK = ROOT / "microduck_contract" / "model" / "reconciliation-v1.lock.json"
@@ -47,7 +52,8 @@ def main() -> int:
         assert row["compiled_classification"] == "semantically-identical-compiled-model"
         assert row["differing_sections"] == []
         actual = compiled_manifest(LOCAL_ROOT / row["root"])
-        assert digest_json(actual) == row["local_manifest_sha256"]
+        assert digest_json(row["manifest"]) == row["local_manifest_sha256"]
+        assert canonical_compiled_manifest(actual) == canonical_compiled_manifest(row["manifest"])
         assert row["local_manifest_sha256"] == row["official_manifest_sha256"]
         print(
             f"{variant}: {actual['counts']['nbody']} bodies, "

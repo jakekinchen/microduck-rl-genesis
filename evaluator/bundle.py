@@ -30,6 +30,8 @@ FILES = (
     "environment-lock.json",
     "attestation.json",
 )
+DETERMINISTIC_OFFSCREEN_SAMPLES = 1
+DETERMINISTIC_SYNTHETIC_LATENCY_MS = 0.0
 
 
 def parquet_table(rows: list[dict[str, Any]]) -> pa.Table:
@@ -118,8 +120,13 @@ def write_bundle(policy: Path, bam_repo: Path, output: Path) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     frames: list[np.ndarray] = []
     for case in suite["cases"]:
-        case = {"task_id": suite["task_id"], **case}
+        case = {
+            "task_id": suite["task_id"],
+            **case,
+            "synthetic_inference_latency_ms": DETERMINISTIC_SYNTHETIC_LATENCY_MS,
+        }
         core = EvaluatorCore(policy, bam_repo, suite["task_id"])
+        core.model.vis.quality.offsamples = DETERMINISTIC_OFFSCREEN_SAMPLES
         report, case_rows, case_frames = core.run_case(case, capture_frames=True)
         reports.append(report)
         rows.extend(case_rows)
@@ -183,6 +190,7 @@ def write_bundle(policy: Path, bam_repo: Path, output: Path) -> dict[str, Any]:
             "width": int(frames[0].shape[1]),
             "height": int(frames[0].shape[0]),
             "codec": "libx264/yuv420p",
+            "offscreen_samples": DETERMINISTIC_OFFSCREEN_SAMPLES,
             "codec_level_cross_host_byte_determinism": "not_claimed",
         },
         "evidence_boundary": suite["evidence_boundary"],

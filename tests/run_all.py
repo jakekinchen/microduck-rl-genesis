@@ -20,6 +20,7 @@ TESTS = [
     ("vecteurs BAM dorés épinglés", "test_bam_golden_vectors.py"),
     ("trajectoire BAM 14 servos épinglée", "test_bam_closed_loop_fixture.py"),
     ("réconciliation des modèles épinglée", "test_model_reconciliation.py"),
+    ("déterminisme d'évidence multiplateforme", "test_cross_platform_determinism.py"),
     ("sémantique de marche épinglée", "test_walking_semantics.py"),
     ("sémantique de backflip épinglée", "test_backflip_semantics.py"),
     ("décision de divergence versionnée", "test_divergence_decision.py"),
