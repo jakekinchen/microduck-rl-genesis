@@ -45,12 +45,17 @@ No bundle was uploaded.
 ## Proposal And Guards
 
 - Opening commit: `e10a68d`; proposal implementation commit: `ae3729f`.
+- Reviewer NUDGE on handoff `c0fe5ab` found that the machine-readable workspace
+  did not independently prohibit retrying the proposed sixth pilot. Correction
+  commit `fd19eac` adds `workspace.retry_allowed=false`, explicit
+  `sixth_pilot_retry` prohibition, semantic validation, and direct mutation
+  probes.
 - Proposal byte SHA-256:
-  `3c6fee263bcffff8c93fc49448e68bab6fc5ac204317df61d8c799328ce03579`.
+  `cca90ab98458df37668b1c8391705a196693d2ecddc4d9a349af848d37f052cc`.
 - Proposal semantic SHA-256:
-  `ef5cdaf97fad2b41474c69d3c28c913a5c8c736f167c3a891fc69bc3d5d3a21c`.
+  `09f2277544dadef850fe9d3f7e71e00a7adc46f6d4aa8ed01bde3e0fede1050e`.
 - Schema SHA-256:
-  `4c25f28d4df35a7e4707fde3370ba1e04d485df9b24e861b3bcbf45175c9a059`.
+  `dfc396e245013563814b0f908807042b9b430914cd5a7a84bf32953b75defdc2`.
 - Sixth-specific harness SHA-256:
   `7b6e2d324fd6d72fbf810daaafe48295b7a2b7dd96228a2a2975962eb818085f`.
 - The proposal binds the accepted fifth-pilot terminal chain and receipt,
@@ -59,6 +64,8 @@ No bundle was uploaded.
   and exact `$8.816124` ceiling inside the `$210` total planning envelope.
 - Both `hyperstack_A100_80G` and
   `massedcompute_A100_sxm4_80G_DGX` retries are prohibited.
+- Retrying the proposed sixth pilot is independently prohibited in both the
+  workspace block and the prohibition set.
 - The 10 GB catalog target-disk risk is explicit. A future authorized operator
   must prove at least 8 GiB free before any upload; the sixth-specific harness
   independently repeats the same gate before package installation and retains
@@ -66,10 +73,11 @@ No bundle was uploaded.
 
 ## Validation
 
-- Exact proposal validator and mutation suite: pass with 173 scalar mutations,
-  203 deletions, extra-field and explicit authority rejection, both prior type
-  rejections, both historical-rate rejections, disk-threshold weakening
-  rejection, prior-alias rejection, and native-name receipt attestation.
+- Exact proposal validator and mutation suite: pass with 175 scalar mutations,
+  205 deletions, extra-field and explicit authority rejection, sixth-pilot
+  retry rejection, both prior type rejections, both historical-rate rejections,
+  disk-threshold weakening rejection, prior-alias rejection, and native-name
+  receipt attestation.
 - Full authority-enabled `.venv-apple/bin/python tests/run_all.py`: pass with
   clean BAM `62bd8ce`, official walking `109e06d`, locked official MJLab
   Python, and `GS_ENABLE_ZEROCOPY=1`; both environment smokes pass.
@@ -99,8 +107,8 @@ success.
 - Confirm direct GCP selection and all live catalog fields, while rejecting any
   claim that the 420-second row has proven shell readiness or faster boot.
 - Exercise every mutation/deletion probe, both failed-type prohibitions,
-  historical-rate rejection, native-name receipt attestation, and the 8 GiB
-  disk gate before install.
+  explicit sixth-pilot retry prohibition, historical-rate rejection,
+  native-name receipt attestation, and the 8 GiB disk gate before install.
 - Re-run the full authority suite, receipt manifests, branch hygiene from
   `49f1177`, accepted-receipt immutability, workflow audit, and empty inventory.
 - Retain the stop sentinel. Do not create a Manager record or Brev workspace.

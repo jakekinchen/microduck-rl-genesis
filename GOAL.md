@@ -16,13 +16,13 @@ M5 Linux CUDA runtime reconciliation
 ## Current Slice
 
 `docs/briefs/042-m5-sixth-pilot-replacement-provider-proposal.md` - Executor
-proposal committed at `ae3729f`; independent Reviewer decision required. No
+proposal corrected at `fd19eac`; independent Reviewer decision required. No
 compute authority or paid execution is active.
 
 ## Current Status
 
 `SIXTH_PILOT_REPLACEMENT_PROPOSAL_REVIEW_REQUIRED` - exact proposal SHA-256
-`3c6fee263bcffff8c93fc49448e68bab6fc5ac204317df61d8c799328ce03579`
+`cca90ab98458df37668b1c8391705a196693d2ecddc4d9a349af848d37f052cc`
 is fail-closed and locally validated for direct GCP A100 type
 `a2-highgpu-1g:nvidia-tesla-a100:1`, with `compute_authorized=false`.
 Independent review is required; no compute authority is active.
@@ -31,7 +31,7 @@ Independent review is required; no compute authority is active.
 
 - Do not provision from consumed Manager authorizations 007, 009, 010, or 011.
   Authorization 011 was consumed by its one terminal fifth-pilot workspace.
-  No fallback, substitute, second workspace, or retry is authorized.
+  No fallback, substitute, second workspace, or sixth-pilot retry is authorized.
 - For the proposed sixth pilot only, stop at two hours or `$8.816124`, whichever
   occurs first, and stop immediately on source/image drift, hardware/runtime
   integrity failure, receipt loss, or a second-workspace requirement. This is
