@@ -1,0 +1,5 @@
+The readiness state machine never reached three qualifying polls. Therefore the
+no-op shell and disk probes were not permitted, no upload occurred, and the
+harness never ran. No remote run-scoped receipt or remote SHA256SUMS could
+exist. Primary pre-create, create, readiness, deletion, and teardown outputs
+are retained under control-plane/.

@@ -15,20 +15,21 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/046-m5-seventh-cuda-pilot.md` - consume Manager authority 013 once
-for the exact bounded seventh CUDA pilot, recover evidence, tear down the exact
-workspace, and obtain independent review.
+`docs/session-logs/046-executor-m5-seventh-cuda-pilot.md` - terminal-negative
+seventh-pilot readiness-window receipt and exact teardown; independent Reviewer
+decision required.
 
 ## Current Status
 
-`SEVENTH_PILOT_MANAGER_AUTHORITY_COMMIT_REQUIRED` - Manager authority 013 binds
-the accepted proposal and one-use paid envelope. It becomes usable only after
-this record is committed; the proposal remains `compute_authorized=false`.
+`SEVENTH_PILOT_TERMINAL_REVIEW_REQUIRED` - workspace `qcolxobcf` produced zero
+qualifying readiness polls before the 900-second deadline; shell/disk probes,
+uploads, and harness did not run. Exact-ID teardown is complete and inventory
+is empty. Manager 013 is consumed; no retry or replacement is authorized.
 
 ## Stop Conditions
 
-- Do not provision from consumed Manager authorizations 007, 009, 010, 011, or
-  012. Authorization 012 was consumed by its one terminal sixth-pilot workspace.
+- Do not provision from consumed Manager authorizations 007, 009, 010, 011,
+  012, or 013. Authorization 013 was consumed by its terminal seventh workspace.
   No fallback, substitute, second workspace, or sixth-pilot retry is authorized.
 - The sixth-pilot `$8.816124` / two-hour ceiling is historical and consumed.
   Do not reopen execution because of the belated post-terminal READY signal.
@@ -43,11 +44,12 @@ this record is committed; the proposal remains `compute_authorized=false`.
 
 ## Human Constraints
 
-- Manager logs 009, 010, 011, and 012 were one-use authorities. They were consumed by
+- Manager logs 009, 010, 011, 012, and 013 were one-use authorities. They were consumed by
   terminal receipts `20260904T030457Z-4qe7ph6p7` and
   `20260904T044136Z-tpo91g7kj`, then terminal receipt
   `20260904T055749Z-i1bsb56r7`, then terminal receipt
-  `20260904T070121Z-urmhasks7`; none can be reused.
+  `20260904T070121Z-urmhasks7`, then terminal receipt
+  `20260904T082021Z-qcolxobcf`; none can be reused.
 - Historical fourth-pilot constraint only: `hyperstack_A100_80G` was selected
   at `$1.62/hour` with a two-hour / `$3.24` ceiling. That authorization is
   consumed; do not retry this type under the fifth-pilot proposal.
@@ -70,3 +72,5 @@ this record is committed; the proposal remains `compute_authorized=false`.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
