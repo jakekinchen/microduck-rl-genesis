@@ -15,17 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/session-logs/039-executor-m5-fifth-pilot-cost-binding-correction.md` -
-Executor correction committed at `c98ac67`; independent Reviewer decision
-required. No compute authority or paid execution is active.
+`docs/reviewer-messages/039-m5-fifth-pilot-cost-binding-correction.md` -
+Reviewer NUDGE requires native-name fifth-harness staging and receipt
+self-attestation. No compute authority or paid execution is active.
 
 ## Current Status
 
-`FIFTH_PILOT_REPLACEMENT_PROPOSAL_CORRECTED_REVIEW_REQUIRED` - corrected
-proposal SHA-256
-`54d61f03930478fcb66955d60314b682eb3fb5e1c746ba226b29a9f04c263349`
-binds a fifth-specific harness at exact `$1.656/hour`; all local gates pass.
-Independent re-review is required; no compute authority is active.
+`FIFTH_PILOT_HARNESS_SELF_ATTESTATION_CORRECTION_REQUIRED` - Reviewer 039
+verified the cost and GOAL corrections, but found that the fifth harness still
+expects and receipts the old harness filename. A local-only native-name
+correction and independent re-review are required; no compute authority is
+active.
 
 ## Stop Conditions
 
