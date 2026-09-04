@@ -1,0 +1,17 @@
+# Direct dependencies for the reproducible Linux CUDA lane.
+#
+# Compile only for linux/amd64 / Python 3.12 with the CUDA 12.8 Torch index:
+#   uv pip compile --python-platform x86_64-manylinux_2_39 \
+#     --python-version 3.12 --torch-backend cu128 --generate-hashes \
+#     environments/cuda/requirements.in \
+#     --output-file environments/cuda/requirements.lock
+
+genesis-world==1.3.3
+torch==2.9.1
+rsl-rl-lib==5.4.2
+
+tensorboard>=2.20
+onnx>=1.17
+onnxruntime>=1.19
+mujoco==3.12.0
+pyarrow>=21,<22

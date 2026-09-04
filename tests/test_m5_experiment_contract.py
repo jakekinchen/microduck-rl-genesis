@@ -21,7 +21,7 @@ assert committed_matrix == matrix
 assert matrix["row_count"] == 32
 assert matrix["heldout_seeds_included"] is False
 assert matrix["resource_authorized"] is False
-assert matrix["pilot_resource_authorized"] is True
+assert matrix["pilot_resource_authorized"] is False
 assert matrix["candidate_or_heldout_execution_authorized"] is False
 assert {row["state"] for row in matrix["rows"]} == {"planned_not_executed"}
 
@@ -41,6 +41,9 @@ rejected(lambda value: value["tasks"][0]["candidate_comparison_seeds"].__setitem
 rejected(lambda value: value["tasks"][0]["backends"][0].__setitem__("candidate_iterations", 11999))
 rejected(lambda value: value["tasks"][0]["checkpoint_transitions"].append(294912001))
 rejected(lambda value: value["bindings"].pop("evaluator/success.py"))
+rejected(lambda value: value.__setitem__("state", "pilot_authorized"))
+rejected(lambda value: value["blocking_gates"].pop())
+rejected(lambda value: value["bindings"].pop("environments/cuda/runtime-v1.json"))
 rejected(lambda value: value["resource_proposal"].__setitem__("authorization", "full_authorized"))
 rejected(lambda value: value["resource_proposal"]["container"].__setitem__("manifest_digest", "sha256:" + "0" * 64))
 rejected(lambda value: value["resource_proposal"].__setitem__("proposed_type", "H100"))

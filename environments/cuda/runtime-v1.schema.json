@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.cuda-runtime/v1",
+  "title": "MicroDuck immutable Linux CUDA runtime",
+  "type": "object",
+  "required": [
+    "$schema", "schema_version", "state", "platform", "lock_platform",
+    "python", "torch_backend", "container", "requirements_lock",
+    "packages", "genesis_upstream", "rejected_runtime", "consumer_source",
+    "required_api", "headless_env", "preflight", "compute_authorized"
+  ],
+  "properties": {
+    "$schema": {"const": "runtime-v1.schema.json"},
+    "schema_version": {"const": "microduck.cuda-runtime/v1"},
+    "state": {"const": "local_refreeze_review_required"},
+    "platform": {"const": "linux/amd64"},
+    "lock_platform": {"const": "x86_64-manylinux_2_39"},
+    "python": {"const": "3.12"},
+    "torch_backend": {"const": "cu128"},
+    "container": {"type": "object"},
+    "requirements_lock": {"type": "object"},
+    "packages": {"type": "object"},
+    "genesis_upstream": {"type": "object"},
+    "rejected_runtime": {"type": "object"},
+    "consumer_source": {"type": "object"},
+    "required_api": {"type": "array", "minItems": 2, "maxItems": 2},
+    "headless_env": {"type": "object"},
+    "preflight": {"type": "object"},
+    "compute_authorized": {"const": false}
+  },
+  "additionalProperties": false
+}

@@ -79,12 +79,13 @@ Runtime logs for the background loop live under `/tmp/autonomous-project-workflo
 
 ## Immutable Receipt Whitespace
 
-Raw `receipts/apple-baseline/**/*.log` files preserve subprocess output
-byte-for-byte, including ANSI sequences and trailing spaces. They are exempt
-from Git's `trailing-space` and `space-before-tab` diagnostics only when they
-are tracked beneath a run root and listed in that root's verified
-`SHA256SUMS`. Source, tests, Markdown, generated JSON, and every other path keep
-the default whitespace policy.
+Raw `receipts/**/*.log` files preserve subprocess output byte-for-byte,
+including ANSI sequences and trailing spaces. They are exempt from Git's
+`trailing-space` and `space-before-tab` diagnostics only when they are tracked
+beneath a run root and listed in that root's verified `SHA256SUMS`. The hygiene
+checker discovers every tracked receipt manifest regardless of receipt family.
+Source, tests, Markdown, generated JSON, and every other path keep the default
+whitespace policy.
 
 Run `scripts/check_branch_hygiene.sh <base-commit>` to verify every receipt
 manifest, confirm each exempt log is manifest-bound, and apply `git diff

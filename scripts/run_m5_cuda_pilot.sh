@@ -6,23 +6,75 @@ INPUT_ROOT=${INPUT_ROOT:-$WORKSPACE_ROOT/input}
 SOURCE_ROOT=${SOURCE_ROOT:-$WORKSPACE_ROOT/src}
 VENV_ROOT=${VENV_ROOT:-$WORKSPACE_ROOT/venvs}
 RECEIPT_ROOT=${RECEIPT_ROOT:?set RECEIPT_ROOT to the run-scoped remote receipt directory}
-CONTRACT_COMMIT=${CONTRACT_COMMIT:-bb2a23596bc7d676c616f3f4277812d009df645f}
+CONTRACT_COMMIT=${CONTRACT_COMMIT:?set CONTRACT_COMMIT to the independently reviewed runtime-refreeze commit}
 GENESIS_COMMIT=93cd5f261200acb5176f12c417c31c1d877be41a
 WALKING_COMMIT=109e06d4ce4921b635c5609e5304079fc30960ae
 BACKFLIP_COMMIT=8bde27eb141c8f14db05fc4370e536521203a98d
 BAM_COMMIT=62bd8ce12154340be97e06f7f41a0ca8f116d967
 PRICE_USD_PER_HOUR=1.62
 export PYGLET_HEADLESS=1
+export MUJOCO_GL=egl
 
 mkdir -p "$SOURCE_ROOT" "$VENV_ROOT" "$RECEIPT_ROOT/logs" "$RECEIPT_ROOT/artifacts"
 START_EPOCH=$(date -u +%s)
+CURRENT_STAGE=bootstrap
+RUN_COMPLETE=false
 if [[ ! -f "$RECEIPT_ROOT/start-utc.txt" ]]; then
   date -u +%Y-%m-%dT%H:%M:%SZ > "$RECEIPT_ROOT/start-utc.txt"
 fi
 
+finalize_receipt() {
+  local exit_code=$?
+  local end_epoch checksum_tmp
+  trap - EXIT
+  set +e
+  end_epoch=$(date -u +%s)
+  date -u +%Y-%m-%dT%H:%M:%SZ > "$RECEIPT_ROOT/end-utc.txt"
+  python3 - "$START_EPOCH" "$end_epoch" "$PRICE_USD_PER_HOUR" \
+    "$exit_code" "$CURRENT_STAGE" "$RUN_COMPLETE" "$RECEIPT_ROOT" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+start, end = int(sys.argv[1]), int(sys.argv[2])
+rate = float(sys.argv[3])
+exit_code = int(sys.argv[4])
+stage = sys.argv[5]
+complete = sys.argv[6] == "true"
+root = Path(sys.argv[7])
+elapsed = end - start
+(root / "cost.json").write_text(json.dumps({
+    "billing_clock_requires_manager_reconciliation": True,
+    "computed_inside_pilot_cost_usd": round(elapsed * rate / 3600, 6),
+    "currency": "USD",
+    "elapsed_seconds_inside_pilot": elapsed,
+    "price_usd_per_hour": rate,
+}, indent=2, sort_keys=True) + "\n")
+(root / "TERMINAL_STATUS.json").write_text(json.dumps({
+    "classification": "pipeline_complete" if complete and exit_code == 0 else "terminal_negative",
+    "exit_code": exit_code,
+    "failure_stage": None if complete and exit_code == 0 else stage,
+    "pilot_smoke_pipeline_completed": complete and exit_code == 0,
+}, indent=2, sort_keys=True) + "\n")
+PY
+  printf '%s\n' \
+    'CUDA pilot pipeline evidence only; not task success, candidate admission, held-out evaluation, policy acceptance, activation, transfer, or physical authority' \
+    > "$RECEIPT_ROOT/EVIDENCE_BOUNDARY.txt"
+  checksum_tmp=$(mktemp /tmp/m5-pilot-sha256.XXXXXX)
+  (
+    cd "$RECEIPT_ROOT" || exit 1
+    find . -type f ! -name SHA256SUMS -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > "$checksum_tmp"
+    mv "$checksum_tmp" SHA256SUMS
+    sha256sum -c SHA256SUMS
+  )
+  exit "$exit_code"
+}
+trap finalize_receipt EXIT
+
 run_logged() {
   local name=$1
   shift
+  CURRENT_STAGE=$name
   "$@" 2>&1 | tee "$RECEIPT_ROOT/logs/$name.log"
 }
 
@@ -69,9 +121,11 @@ git -C "$SOURCE_ROOT/microduck-backflip" checkout --detach "$BACKFLIP_COMMIT"
 if [[ ! -x "$VENV_ROOT/genesis/bin/python" ]]; then
   "$UV" venv --python python3 "$VENV_ROOT/genesis"
 fi
+run_logged cuda-contract-static python3 \
+  "$SOURCE_ROOT/genesis-current/scripts/validate_cuda_runtime.py" --mode static
 run_logged genesis-dependencies "$UV" pip install \
-  --python "$VENV_ROOT/genesis/bin/python" torch==2.9.1 \
-  -r "$SOURCE_ROOT/genesis-training/requirements.txt"
+  --python "$VENV_ROOT/genesis/bin/python" --require-hashes --strict \
+  -r "$SOURCE_ROOT/genesis-current/environments/cuda/requirements.lock"
 
 run_logged official-walking-sync "$UV" sync \
   --project "$SOURCE_ROOT/microduck-rl" --frozen
@@ -93,8 +147,10 @@ test "$(git -C "$SOURCE_ROOT/bam" rev-parse HEAD)" = "$BAM_COMMIT"
   printf 'bam_commit=%s\n' "$(git -C "$SOURCE_ROOT/bam" rev-parse HEAD)"
 } > "$RECEIPT_ROOT/source-identities.txt"
 
+run_logged cuda-contract-runtime "$VENV_ROOT/genesis/bin/python" \
+  "$SOURCE_ROOT/genesis-current/scripts/validate_cuda_runtime.py" --mode cuda
 run_logged runtime-versions "$VENV_ROOT/genesis/bin/python" -c \
-  'import importlib.metadata as m, genesis, mujoco, torch; print("python packages"); print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available(), "device", torch.cuda.get_device_name(0)); print("genesis", genesis.__version__); print("mujoco", mujoco.__version__); print("rsl-rl", m.version("rsl-rl-lib"))'
+  'import importlib.metadata as m, genesis, mujoco, torch; print("python packages"); print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available(), "device", torch.cuda.get_device_name(0)); print("genesis", genesis.__version__); print("mujoco", mujoco.__version__); print("rsl-rl", m.version("rsl-rl-lib")); print("MUJOCO_GL", __import__("os").environ["MUJOCO_GL"]); print("PYGLET_HEADLESS", __import__("os").environ["PYGLET_HEADLESS"])'
 run_logged official-runtime-versions "$SOURCE_ROOT/microduck-rl/.venv/bin/python" -c \
   'import importlib.metadata as m, mujoco, torch, warp; import mujoco_warp; print("torch", torch.__version__, "cuda", torch.version.cuda, "available", torch.cuda.is_available(), "device", torch.cuda.get_device_name(0)); print("mujoco", mujoco.__version__); print("warp", warp.__version__); print("mujoco-warp", m.version("mujoco-warp")); print("mjlab", m.version("mjlab"))'
 
@@ -149,33 +205,5 @@ run_logged official-backflip-export .venv/bin/python scripts/export.py \
   --onnx-file "$RECEIPT_ROOT/artifacts/official-backflip.normalized.onnx"
 cp -a logs/rsl_rl/m5_pilot_backflip "$RECEIPT_ROOT/artifacts/official-backflip-log"
 
-END_EPOCH=$(date -u +%s)
-date -u +%Y-%m-%dT%H:%M:%SZ > "$RECEIPT_ROOT/end-utc.txt"
-"$VENV_ROOT/genesis/bin/python" - "$START_EPOCH" "$END_EPOCH" \
-  "$PRICE_USD_PER_HOUR" "$RECEIPT_ROOT/cost.json" <<'PY'
-import json
-import sys
-start, end = int(sys.argv[1]), int(sys.argv[2])
-rate = float(sys.argv[3])
-elapsed = end - start
-record = {
-    "currency": "USD",
-    "elapsed_seconds_inside_pilot": elapsed,
-    "price_usd_per_hour": rate,
-    "computed_inside_pilot_cost_usd": round(elapsed * rate / 3600, 6),
-    "billing_clock_requires_manager_reconciliation": True,
-}
-with open(sys.argv[4], "w", encoding="utf-8") as handle:
-    json.dump(record, handle, indent=2, sort_keys=True)
-    handle.write("\n")
-PY
-
-printf '%s\n' \
-  'pilot pipeline execution only; not task success, candidate admission, held-out evaluation, policy acceptance, activation, transfer, or physical authority' \
-  > "$RECEIPT_ROOT/EVIDENCE_BOUNDARY.txt"
-
-cd "$RECEIPT_ROOT"
-CHECKSUM_TMP=$(mktemp /tmp/m5-pilot-sha256.XXXXXX)
-find . -type f ! -name SHA256SUMS -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > "$CHECKSUM_TMP"
-mv "$CHECKSUM_TMP" SHA256SUMS
-sha256sum -c SHA256SUMS
+CURRENT_STAGE=complete
+RUN_COMPLETE=true

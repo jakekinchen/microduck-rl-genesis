@@ -227,6 +227,19 @@ authorize another paid pilot/full CUDA execution. Any later CUDA route remains
 blocked on a separately reviewed/refrozen Linux runtime reconciliation. No
 candidate or held-out seed was executed.
 
+Slice 029 locally refreezes that pairing to Genesis World 1.3.3 with exact
+upstream release commit and wheel/source hashes. Its Python 3.12 linux/amd64
+lock resolves 126 packages for Ubuntu 24.04/glibc 2.39 and Torch cu128; a
+deterministic wheel probe proves 1.2.2 lacks and 1.3.3 exposes the required
+`RigidSolver.dyn_state` assignment. The paid harness now validates the contract
+before the suite and emits a terminal checksummed receipt on failure. Generic
+receipt hygiene discovers every tracked manifest without altering the accepted
+pilot-028 bytes. Local static/runtime checks and the full applicable Apple suite
+pass; the Apple host cannot prove CUDA execution, and its linux/amd64 Colima
+probe is blocked by absent QEMU. A precise second-pilot card exists only as
+`proposed_not_authorized`; independent review plus a new durable Manager
+authorization are required before any Brev creation.
+
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.

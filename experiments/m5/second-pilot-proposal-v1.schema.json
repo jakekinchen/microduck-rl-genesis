@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "microduck.m5-second-pilot-proposal/v1",
+  "title": "MicroDuck proposed second CUDA pilot",
+  "type": "object",
+  "required": [
+    "$schema", "schema_version", "state", "compute_authorized",
+    "catalog_snapshot", "container", "runtime_contract", "workspace",
+    "limits", "preconditions", "launch", "recovery", "teardown",
+    "evidence_boundary"
+  ],
+  "properties": {
+    "$schema": {"const": "second-pilot-proposal-v1.schema.json"},
+    "schema_version": {"const": "microduck.m5-second-pilot-proposal/v1"},
+    "state": {"const": "proposed_not_authorized"},
+    "compute_authorized": {"const": false},
+    "catalog_snapshot": {"type": "object"},
+    "container": {"type": "object"},
+    "runtime_contract": {"type": "object"},
+    "workspace": {"type": "object"},
+    "limits": {"type": "object"},
+    "preconditions": {"type": "array", "minItems": 5, "maxItems": 5},
+    "launch": {"type": "array", "minItems": 3, "maxItems": 3},
+    "recovery": {"type": "array", "minItems": 3, "maxItems": 3},
+    "teardown": {"type": "array", "minItems": 2, "maxItems": 2},
+    "evidence_boundary": {"type": "string"}
+  },
+  "additionalProperties": false
+}

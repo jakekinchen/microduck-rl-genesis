@@ -1,4 +1,4 @@
 # Raw execution logs are immutable receipt payloads. Their SHA-256 manifests,
 # not whitespace normalization, are authoritative. All other files retain
 # Git's default whitespace checks.
-receipts/apple-baseline/**/*.log whitespace=-trailing-space,-space-before-tab
+receipts/**/*.log whitespace=-trailing-space,-space-before-tab

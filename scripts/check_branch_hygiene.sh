@@ -23,14 +23,22 @@ while IFS= read -r manifest; do
         (cd "$receipt_root" && shasum -a 256 -c SHA256SUMS >/dev/null)
     fi
     manifest_count=$((manifest_count + 1))
-done < <(find receipts/apple-baseline -mindepth 2 -maxdepth 2 -name SHA256SUMS -type f -print | sort)
+done < <(git ls-files 'receipts/**/SHA256SUMS' | sort)
 
 log_count=0
 while IFS= read -r receipt_log; do
-    receipt_root="$(printf '%s\n' "$receipt_log" | awk -F/ '{print $1 "/" $2 "/" $3}')"
+    receipt_root="$(dirname "$receipt_log")"
+    while [[ "$receipt_root" != "." && ! -f "$receipt_root/SHA256SUMS" ]]; do
+        receipt_root="$(dirname "$receipt_root")"
+    done
+    if [[ "$receipt_root" == "." ]]; then
+        echo "Raw receipt log has no containing SHA256SUMS: $receipt_log" >&2
+        exit 1
+    fi
     relative_log="${receipt_log#"$receipt_root/"}"
     manifest="$receipt_root/SHA256SUMS"
-    if [[ ! -f "$manifest" ]] || ! grep -Fq "  $relative_log" "$manifest"; then
+    if ! grep -Fq "  $relative_log" "$manifest" \
+        && ! grep -Fq "  ./$relative_log" "$manifest"; then
         echo "Raw receipt log is not manifest-bound: $receipt_log" >&2
         exit 1
     fi
@@ -40,7 +48,7 @@ while IFS= read -r receipt_log; do
         exit 1
     fi
     log_count=$((log_count + 1))
-done < <(git ls-files 'receipts/apple-baseline/**/*.log' | sort)
+done < <(git ls-files 'receipts/**/*.log' | sort)
 
 git diff --check "$DIFF_BASE"...HEAD
 echo "Branch hygiene passed: base=$DIFF_BASE manifests=$manifest_count immutable_logs=$log_count"

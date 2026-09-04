@@ -2,7 +2,7 @@
   "$schema": "contract-v1.schema.json",
   "schema_version": "microduck.m5-experiment-contract/v1",
   "experiment_id": "microduck.m5.cross-backend.walking-backflip.v1",
-  "state": "pilot_authorized",
+  "state": "local_runtime_refreeze_review_required",
   "evidence_boundary": "experiment_infrastructure_only",
   "blocking_gates": [
     {
@@ -10,6 +10,12 @@
       "state": "blocking",
       "binding": "microduck_contract/policies/official-walking-authority-v1.json",
       "effect": "blocks official-policy repeatability and all final candidate admission"
+    },
+    {
+      "id": "cuda_runtime_refreeze_review_required",
+      "state": "blocking",
+      "binding": "environments/cuda/runtime-v1.json",
+      "effect": "blocks any second paid pilot until independent review and a new durable Manager authorization"
     }
   ],
   "repositories": {
@@ -62,6 +68,15 @@
     "microduck_contract/interface/control-v1.json": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
     "export_onnx.py": "sha256:a69a5283646deec0adae0305b4822cc1ddd64baa72e2c20a8abbcaf578f1ed91",
     "environments/apple/requirements.lock": "sha256:4425348d7092188c4f81a63e5e227642c666d34d498cb3e6557e9371d8ad8ff0",
+    "environments/cuda/requirements.in": "sha256:982eed6b6049cc8bbd34d731e2b4980d80c9e1c6eaadd562e322020e998d3d07",
+    "environments/cuda/requirements.lock": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f",
+    "environments/cuda/runtime-v1.json": "sha256:039499e853a53c79abc889167b50c89b411fb08d620fb54e8bac4b2ff40a12e9",
+    "environments/cuda/runtime-v1.schema.json": "sha256:ecf9e1ec357774cee918f87462ebc324974522ce57b2c1dbbd195e84c6058c0c",
+    "scripts/validate_cuda_runtime.py": "sha256:91eec0ae99018afe8789e13246a1ac234154db6068b0924484c163541e1b48f0",
+    "scripts/probe_genesis_runtime_wheels.py": "sha256:f1d0c596f739f506fb4cb1abf81e7f2edee7880178054eddacfc92fff615a2f8",
+    "scripts/run_m5_cuda_pilot.sh": "sha256:e0ee89da93486a0f1f6d5d51b9aae1fe822ec46a504072159194790eddd3c731",
+    "experiments/m5/second-pilot-proposal-v1.json": "sha256:7ae997c0c99e2be6c961c2bb9f40e33f2bb8698eb3eb736f7cd18439ddf97c31",
+    "experiments/m5/second-pilot-proposal-v1.schema.json": "sha256:5b1db498f400e609bdbdce7abc40dc9f06709d47747717ba1f242af06e0c1b65",
     "validation/official-mjlab/uv.lock": "sha256:3f77f5cb67ac561025d5450e8edd42b62909ad7ab05dd17e9741c45497e0c2eb",
     "evaluator/config-v1.json": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
     "evaluator/development-suite-v1.json": "sha256:6f32fbed6aad35997de5d219dfa38e352d42197721b60c219eec3eb3b691c77f",
@@ -138,7 +153,7 @@
     "any bound source or artifact hash drifts",
     "official_policy_authority_missing remains unresolved at candidate admission",
     "the bound CUDA image digest, linux/amd64 platform, resource type, price ceiling, or one-workspace rule drifts",
-    "paid provisioning begins before independent Reviewer acceptance of the pilot contract amendment",
+    "paid provisioning begins before independent Reviewer acceptance of the local CUDA refreeze and a new durable Manager authorization",
     "candidate or held-out execution begins before independent pilot acceptance and the separately frozen candidate/held-out gates",
     "seed sets overlap or a held-out seed is realized before candidate freeze",
     "transition budgets differ between backends",
@@ -163,9 +178,9 @@
     "partial_or_failed_runs_retained_with_terminal_reason": true
   },
   "resource_proposal": {
-    "authorization": "pilot_only_manager_authorized_2026-09-03",
-    "manager_authority": "docs/manager-log/005-full-program-authorization.md",
-    "execution_precondition": "independent Reviewer GO for the committed corrected slice-027 contract amendment",
+    "authorization": "proposed_second_pilot_not_authorized",
+    "manager_authority": "docs/manager-log/006-m5-second-pilot-proposal.md",
+    "execution_precondition": "independent Reviewer GO for committed slice 029 plus new durable Manager authorization naming the exact proposal",
     "price_snapshot_date": "2026-09-03",
     "query": "brev search --gpu-name A100 --sort price --json",
     "proposed_type": "hyperstack_A100_80G",
@@ -178,8 +193,8 @@
     "pilot_cost_ceiling_usd": 3.24,
     "full_cuda_seed_runtime_ceiling_hours": 104,
     "full_cuda_cost_ceiling_usd": 210,
-    "full_cuda_authorization_condition": "independent Reviewer GO on complete pilot receipts; requery resource and price before continuation",
-    "workspace_name": "microduck-m5-pilot-20260903",
+    "full_cuda_authorization_condition": "not eligible from slice 029; requires a separately successful reviewed second pilot and explicit later authorization",
+    "workspace_name": "microduck-m5-pilot2-20260903",
     "workspace_count": 1,
     "inventory_precondition": "authenticated brev ls --json must report workspaces null immediately before creation",
     "fallback_allowed": false,
@@ -199,9 +214,9 @@
       "retain configs, checkpoints, normalized ONNX exports, logs, manifests, SHA256SUMS, elapsed time, and exact cost"
     ],
     "candidate_or_heldout_execution_authorized": false,
-    "requirements": ["requery price and availability immediately before creation", "independent Reviewer GO for corrected slice 027", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or higher price"],
-    "provisioning": ["brev ls --json", "brev search --gpu-name A100 --sort price --json", "brev create microduck-m5-pilot-20260903 --type hyperstack_A100_80G --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300"],
-    "recovery_before_teardown": ["inside the remote receipt root generate SHA256SUMS over every unique checkpoint normalized ONNX normalizer config training/evaluator output log and manifest", "brev copy microduck-m5-pilot-20260903:/workspace/receipts/m5/pilot/<run-id>/ receipts/m5/pilot/<run-id>/", "locally regenerate SHA256SUMS over the recovered files in byte-sorted relative-path order", "require exact remote/local SHA256SUMS equality and presence of every required pilot artifact before deletion"],
-    "teardown": ["brev delete microduck-m5-pilot-20260903 only after verified recovery because this type is non-stoppable", "poll brev ls --json until workspaces is null; any remaining paid workspace is a blocking failure"]
+    "requirements": ["requery price and availability immediately before creation", "independent Reviewer GO for committed slice 029 and new durable Manager authorization", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or price above 1.62 USD/hour"],
+    "provisioning": ["brev ls --json", "brev search --gpu-name A100 --sort price --json", "brev create microduck-m5-pilot2-20260903 --type hyperstack_A100_80G --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300"],
+    "recovery_before_teardown": ["inside the remote receipt root generate SHA256SUMS even on preflight or suite failure", "brev copy microduck-m5-pilot2-20260903:/workspace/receipts/m5/pilot/<run-id>/ receipts/m5/pilot/<run-id>/", "locally regenerate SHA256SUMS over the recovered files in byte-sorted relative-path order", "require exact remote/local SHA256SUMS equality and presence of every produced pilot artifact before deletion"],
+    "teardown": ["brev delete microduck-m5-pilot2-20260903 only after verified recovery because this type is non-stoppable", "poll brev ls --json until workspaces is null; any remaining paid workspace is a blocking failure"]
   }
 }

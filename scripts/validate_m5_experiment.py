@@ -29,7 +29,10 @@ def main() -> int:
     if args.matrix_output:
         args.matrix_output.parent.mkdir(parents=True, exist_ok=True)
         args.matrix_output.write_text(json.dumps(matrix, indent=2, sort_keys=True) + "\n")
-    print(f"M5 contract valid: {matrix['row_count']} planned rows; pilot only authorized; candidate/held-out execution not authorized")
+    print(
+        f"M5 contract valid: {matrix['row_count']} planned rows; "
+        "second pilot proposed but not authorized; candidate/held-out execution not authorized"
+    )
     return 0
 
 

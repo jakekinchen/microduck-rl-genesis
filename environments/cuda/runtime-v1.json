@@ -1,0 +1,65 @@
+{
+  "$schema": "runtime-v1.schema.json",
+  "compute_authorized": false,
+  "consumer_source": {
+    "commit": "93cd5f261200acb5176f12c417c31c1d877be41a",
+    "files": {
+      "microduck/bam_actuator.py": "sha256:840338b249ebfb01a434e76cc49d7c90ebdb734ef5f0b113c63438c77e46bf36",
+      "tests/test_external_torque.py": "sha256:d75abb49f07440ddf43c688af002be7cff71ab87f5873e5116bfa6af8b786c26"
+    }
+  },
+  "container": {
+    "glibc": "2.39",
+    "immutable_reference": "docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c",
+    "platform": "linux/amd64",
+    "tag_for_humans_only": "12.8.1-cudnn-devel-ubuntu24.04"
+  },
+  "genesis_upstream": {
+    "release_commit": "76f8f5b3457e7c6d6a078de2244066f9a8694c45",
+    "release_url": "https://github.com/Genesis-Embodied-AI/genesis-world/releases/tag/v1.3.3",
+    "rigid_solver_sha256": "sha256:39e2af4ca559ece184ad4a12e8e59490f8127c89ced631299767a98ae58fd183",
+    "source_url": "https://github.com/Genesis-Embodied-AI/genesis-world/blob/76f8f5b3457e7c6d6a078de2244066f9a8694c45/genesis/engine/solvers/rigid/rigid_solver.py",
+    "version": "1.3.3",
+    "wheel_filename": "genesis_world-1.3.3-py3-none-any.whl",
+    "wheel_sha256": "sha256:74fcece3f080d2de86a25da9c26c979c192ed4a115d556133e8103169f74b3bf"
+  },
+  "headless_env": {
+    "MUJOCO_GL": "egl",
+    "PYGLET_HEADLESS": "1"
+  },
+  "lock_platform": "x86_64-manylinux_2_39",
+  "packages": {
+    "genesis-world": "1.3.3",
+    "mujoco": "3.12.0",
+    "rsl-rl-lib": "5.4.2",
+    "torch": "2.9.1+cu128"
+  },
+  "platform": "linux/amd64",
+  "preflight": {
+    "cuda_device_required": true,
+    "install_requires_hashes": true,
+    "run_before_repository_suite": true,
+    "runtime_contract_validation_required": true,
+    "terminal_receipt_on_failure": true
+  },
+  "python": "3.12",
+  "rejected_runtime": {
+    "required_api_present": false,
+    "rigid_solver_sha256": "sha256:cf664fdc9bc7b7fda5560f12ef4bb56cd4837848d1449327891d2058b5117c7e",
+    "version": "1.2.2",
+    "wheel_filename": "genesis_world-1.2.2-py3-none-any.whl",
+    "wheel_sha256": "sha256:567d49f287e597b7118421a8d63ed3259875a5f3906c0a4b8585fc21a9a0fb9a"
+  },
+  "required_api": [
+    "RigidSolver.dyn_state.dofs.qf_bias",
+    "RigidSolver.dyn_state.dofs.qf_constraint"
+  ],
+  "requirements_lock": {
+    "compile_command": "uv pip compile --python-platform x86_64-manylinux_2_39 --python-version 3.12 --torch-backend cu128 --generate-hashes environments/cuda/requirements.in --output-file environments/cuda/requirements.lock",
+    "path": "environments/cuda/requirements.lock",
+    "sha256": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f"
+  },
+  "schema_version": "microduck.cuda-runtime/v1",
+  "state": "local_refreeze_review_required",
+  "torch_backend": "cu128"
+}

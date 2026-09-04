@@ -1,7 +1,5 @@
 # GOAL
 
-<stop-orchestrator/>
-
 ## Active Mission
 
 Turn the working Genesis Metal/MPS pipeline into a reproducible,
@@ -13,28 +11,28 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M5 paid CUDA pilot
+M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/028-m5-paid-cuda-pilot.md` - closed terminal-negative;
-no Executor slice is active.
+`docs/briefs/029-m5-linux-cuda-runtime-reconciliation.md` - Executor-complete
+local refreeze awaiting independent Reviewer decision.
 
 ## Current Status
 
-`STOPPED_TERMINAL_NEGATIVE` - Reviewer 028 accepted closure of the bounded A100
-pilot only as terminal-negative evidence. The frozen Linux lane installed
-Genesis 1.2.2, while bound validation and training source accesses the
-incompatible `RigidSolver.dyn_state` API. The checksum-bound receipt is tracked,
-the non-stoppable workspace was deleted, and authenticated Brev inventory is
-empty. Full CUDA candidate work is not authorized. Any follow-up must first
-reconcile and refreeze the Linux CUDA runtime locally and receive a new
-independent review rather than mutating the runtime inside an evidence run.
+`REVIEW_REQUIRED` - Executor 029 refroze Genesis World 1.3.3 with a hash-locked
+linux/amd64 Python 3.12/cu128 lane, fail-closed runtime validation and receipt
+finalization, and generic manifest-bound log hygiene. Local tests pass; no local
+CUDA runtime proof exists. The exact second-pilot card remains proposed and not
+authorized. Authenticated Brev inventory is empty. No paid workspace, pilot
+rerun, candidate work, held-out realization, or accepted receipt mutation is
+authorized.
 
 ## Stop Conditions
 
 - Do not provision another Brev workspace or begin full CUDA work from Reviewer
-  028; its `GO` applies only to terminal-negative closure.
+  028 or slice 029; Reviewer 028's `GO` applies only to terminal-negative
+  closure and slice 029 is local-only.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
@@ -48,10 +46,9 @@ independent review rather than mutating the runtime inside an evidence run.
 
 ## Human Constraints
 
-- Manager authorization dated 2026-09-03 permits required authenticated
-  artifact retrieval/publication, one bounded Brev A100 workspace, candidate
-  execution/evaluation, and staged physical validation only after every frozen
-  evaluator, deployment, provenance, and safety gate passes.
+- The Manager authorization dated 2026-09-03 was consumed by the completed
+  terminal-negative pilot; it does not authorize a second workspace. The new
+  proposal requires a fresh durable authorization after independent review.
 - Prefer `hyperstack_A100_80G` at the current $1.62/hour snapshot. It is
   non-stoppable: after verified artifact recovery and independent checksums,
   delete it and confirm the authenticated Brev inventory is empty.
@@ -63,3 +60,5 @@ independent review rather than mutating the runtime inside an evidence run.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>

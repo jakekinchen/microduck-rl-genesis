@@ -1,0 +1,67 @@
+{
+  "$schema": "second-pilot-proposal-v1.schema.json",
+  "catalog_snapshot": {
+    "arch": "x86_64",
+    "boot_time_seconds": 390,
+    "cloud": "hyperstack",
+    "gpu_count": 1,
+    "gpu_name": "A100",
+    "memory": "120GiB",
+    "observed_at_utc": "2026-09-04T00:21:18Z",
+    "price_per_hour_usd": 1.62,
+    "provider": "shadeform",
+    "query": "brev search --gpu-name A100 --sort price --json",
+    "rebootable": false,
+    "stoppable": false,
+    "total_vram_gb": 80,
+    "type": "hyperstack_A100_80G",
+    "vcpus": 28
+  },
+  "compute_authorized": false,
+  "container": {
+    "immutable_reference": "docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c",
+    "platform": "linux/amd64",
+    "tag_for_humans_only": "12.8.1-cudnn-devel-ubuntu24.04"
+  },
+  "evidence_boundary": "A future second pilot could prove only CUDA pipeline compatibility. It would not authorize candidate or held-out execution, task success, publication, activation, transfer, or physical operation.",
+  "launch": [
+    "brev create microduck-m5-pilot2-20260903 --type hyperstack_A100_80G --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300",
+    "copy exact reviewed source bundles and reviewed run_m5_cuda_pilot.sh, then verify every SHA-256 before execution",
+    "run with CONTRACT_COMMIT set to the independently reviewed refreeze commit and an inner timeout of at most 4800 seconds"
+  ],
+  "limits": {
+    "hard_cost_usd": 3.24,
+    "hard_elapsed_hours_create_to_delete": 2,
+    "harness_timeout_seconds": 4800,
+    "price_per_hour_usd": 1.62,
+    "workspace_count": 1
+  },
+  "preconditions": [
+    "independent Reviewer GO on the committed slice-029 local refreeze",
+    "new durable Manager authorization naming this exact proposal after Reviewer GO",
+    "authenticated brev ls --json is empty immediately before creation",
+    "catalog requery exactly matches type, provider, cloud, GPU count, architecture, stoppability, and price no greater than 1.62 USD/hour",
+    "reviewed contract commit, source bundles, runtime lock, validator, harness, and container digest all match their frozen hashes"
+  ],
+  "recovery": [
+    "generate remote SHA256SUMS even on preflight or suite failure",
+    "recover the complete run-scoped receipt and independently regenerate the sorted local manifest",
+    "require exact remote/local manifest equality before teardown"
+  ],
+  "runtime_contract": {
+    "path": "environments/cuda/runtime-v1.json",
+    "requirements_lock_sha256": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f",
+    "runtime_contract_sha256": "sha256:039499e853a53c79abc889167b50c89b411fb08d620fb54e8bac4b2ff40a12e9"
+  },
+  "schema_version": "microduck.m5-second-pilot-proposal/v1",
+  "state": "proposed_not_authorized",
+  "teardown": [
+    "delete the non-stoppable workspace immediately after verified recovery or terminal failure",
+    "poll authenticated brev ls --json until workspaces is null"
+  ],
+  "workspace": {
+    "fallback_allowed": false,
+    "name": "microduck-m5-pilot2-20260903",
+    "second_workspace_allowed": false
+  }
+}
