@@ -15,31 +15,29 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/032-m5-deterministic-evidence-correction.md` - accepted at the
-local deterministic-evidence class by Reviewer 033 for implementation
-`d741e60`; workflow stopped at the separate Manager authority boundary.
+`docs/briefs/034-m5-third-cuda-pilot.md` - execute the one exact A100 smoke
+pilot authorized by committed Manager log 009, then recover, independently
+verify, tear down, commit, and obtain Reviewer judgment.
 
 ## Current Status
 
-`LOCAL_DETERMINISM_CORRECTION_ACCEPTED_MANAGER_REVIEW_REQUIRED` - Reviewer 033
-accepted the bounded correction after independently confirming that only
-`bodies[*].inertia_kg_m2` is canonicalized and that Reviewer 032's one-ULP mass
-probe remains visible. Focused and full authority suites pass. The accepted
-receipts, evaluator core, and M5 experiment freeze remain unchanged. The draft
-third-pilot card is eligible only for later Manager consideration and remains
-`compute_authorized=false`; no Brev, third-pilot, full CUDA, candidate,
-held-out, publication, activation, transfer, or physical authority is opened.
+`THIRD_CUDA_SMOKE_PILOT_AUTHORIZED_PRECREATE` - Manager log 009 is committed
+and authorizes exactly one `microduck-m5-pilot3-20260904` A100 80 GB workspace
+within two hours / $3.24. Pre-create source, catalog, inventory, image, and hash
+gates must pass before provisioning. The proposal card remains historically
+`compute_authorized=false`; no full CUDA, candidate, held-out, publication,
+activation, transfer, or physical authority is opened.
 
 ## Stop Conditions
 
-- Do not provision another workspace or begin full CUDA work from Manager
-  authorization 007; its one exact second-pilot workspace is closed.
+- Do not provision from consumed Manager authorizations 007 or earlier. Manager
+  authorization 009 permits exactly one named third-pilot workspace and no
+  fallback, substitute, second workspace, or fourth pilot.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
-- Do not begin the full CUDA seed matrix until a separately reviewed local
-  correction closes all three deterministic suite failures and a new durable
-  Manager authorization explicitly reopens compute.
+- Do not begin the full CUDA seed matrix from this smoke authorization,
+  regardless of the pilot outcome.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -47,10 +45,9 @@ held-out, publication, activation, transfer, or physical authority is opened.
 
 ## Human Constraints
 
-- The Manager authorization dated 2026-09-03 was consumed by the completed
-  terminal-negative pilot; it does not authorize a third pilot or another
-  workspace. Any later paid-compute proposal requires a fresh durable Manager
-  authorization after independent local correction review.
+- Manager log 009 is fresh one-use authority for the exact third pilot after
+  Reviewer 033 accepted the local deterministic correction. It grants no
+  reusable authority after the named workspace reaches a terminal path.
 - Prefer `hyperstack_A100_80G` at the current $1.62/hour snapshot. It is
   non-stoppable: after verified artifact recovery and independent checksums,
   delete it and confirm the authenticated Brev inventory is empty.
@@ -62,5 +59,3 @@ held-out, publication, activation, transfer, or physical authority is opened.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
