@@ -15,16 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/session-logs/041-executor-m5-fifth-cuda-pilot.md` - terminal-negative
-fifth-pilot provisioning/connectivity receipt committed for independent
-review. No compute authority or paid execution remains active.
+`docs/reviewer-messages/041-m5-fifth-cuda-pilot.md` - Reviewer acceptance of
+the terminal-negative fifth-pilot provisioning/connectivity receipt and exact
+teardown. No compute authority or paid execution remains active.
 
 ## Current Status
 
-`FIFTH_PILOT_TERMINAL_NEGATIVE_REVIEW_REQUIRED` - the one authorized workspace
-`i1bsb56r7` never exposed a shell, so zero uploads and zero harness invocations
-occurred. Exact-ID teardown completed and authenticated Brev inventory is
-empty. Manager authority 011 is consumed; independent review is required.
+`FIFTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 041 accepted exact handoff
+`c6f953e` strictly as provisioning/connectivity failure evidence. Workspace
+`i1bsb56r7` was deleted and authenticated Brev inventory is empty. Manager
+authority 011 is consumed; no retry or replacement compute is authorized.
 
 ## Stop Conditions
 

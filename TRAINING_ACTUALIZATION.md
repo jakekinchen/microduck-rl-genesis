@@ -278,6 +278,21 @@ local suite pass again with pinned BAM and official MJLab authority. This is
 local deterministic compatibility only; a third-pilot card exists with
 `compute_authorized=false` pending re-review and separate Manager authorization.
 
+After subsequent proposal corrections and independent acceptance, Manager
+authorization 011 opened exactly one fifth-pilot workspace on the exact
+`massedcompute_A100_sxm4_80G_DGX` row at `$1.656/hour`. The create command
+briefly reported ready, but authenticated inventory remained or regressed to
+`UNHEALTHY / BUILDING / NOT READY`; the sole SSH access operation exhausted 20
+retries without obtaining a shell. Zero files were uploaded and the harness,
+suite, training, smokes, and exports were never invoked. The exact-ID workspace
+was deleted after 504 seconds create-to-empty, with a conservative estimated
+cost of `$0.231840`; receipt
+`receipts/m5/pilot/20260904T055749Z-i1bsb56r7/` is independently accepted and
+authenticated Brev inventory is empty. This is terminal-negative provisioning/
+connectivity evidence only. It proves no CUDA compatibility or M5 progress,
+and Manager authorization 011 is consumed with no retry, replacement, or sixth
+pilot authorized.
+
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.
