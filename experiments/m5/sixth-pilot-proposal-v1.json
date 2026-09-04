@@ -1,0 +1,235 @@
+{
+  "$schema": "sixth-pilot-proposal-v1.schema.json",
+  "schema_version": "microduck.m5-sixth-pilot-proposal/v1",
+  "state": "proposed_not_authorized",
+  "compute_authorized": false,
+  "authority": {
+    "accepted_correction_commit": "4a743bbb4fcae9782f4218fd1f0e0c0f9599dff3",
+    "accepted_evaluator_reviewer_head": "7bc61d5b5b4c3275a9b2b0e5bfeb282b687ce55a",
+    "accepted_fifth_proposal_review_commit": "89d8a65cae6947d45c4a8047c4b1208eb27b8f29",
+    "consumed_fifth_manager_authorization_commit": "1e835c527bc6661cd7e390f973d54c4cdb5eb4dc",
+    "accepted_fifth_terminal_executor_commit": "6dcdd25d30d4054d49b6a48f1a9727d692d3a034",
+    "accepted_fifth_terminal_reviewer_head": "49f1177edec40b2d9f2dba3691a6410636cdf8bf",
+    "accepted_fifth_terminal_reviewer_record": "docs/reviewer-messages/041-m5-fifth-cuda-pilot.md",
+    "manager_authority_present": false,
+    "proposal_grants_compute": false,
+    "required_later_authority": "a new committed Manager record after independent Reviewer acceptance that names this exact proposal path and SHA-256 and binds every immutable input, replacement resource field, and limit"
+  },
+  "catalog_snapshot": {
+    "observed_at_utc": "2026-09-04T06:27:44Z",
+    "query": "brev search --gpu-name A100 --sort price --json",
+    "inventory_query": "brev ls --json",
+    "inventory_was_empty": true,
+    "type": "a2-highgpu-1g:nvidia-tesla-a100:1",
+    "provider": "gcp",
+    "cloud": "gcp",
+    "arch": "x86_64",
+    "gpu_name": "A100",
+    "gpu_count": 1,
+    "vram_per_gpu_gb": 40,
+    "total_vram_gb": 40,
+    "vcpus": 12,
+    "memory": "85GiB",
+    "target_disk_gb": 10,
+    "disk_min_gb": 10,
+    "disk_max_gb": 16384,
+    "disk_price_per_gb_month_usd": 0.125,
+    "boot_time_seconds": 420,
+    "stoppable": true,
+    "rebootable": false,
+    "flex_ports": true,
+    "price_per_hour_usd": 4.408062,
+    "connectivity_recovery_indicators_better_than_failed_types": true,
+    "shell_readiness_proven": false,
+    "selection_rationale": "Direct GCP supply, flexible ports, and stoppability are materially better connectivity/recovery indicators than the failed fixed-port non-stoppable rows; the slower advertised boot time and 10 GB target-disk capacity risk remain explicit, and none of these fields proves shell readiness.",
+    "proposal_evidence_only": true
+  },
+  "container_dry_run": {
+    "command": "brev create microduck-m5-pilot6-20260904 --type a2-highgpu-1g:nvidia-tesla-a100:1 --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300 --dry-run",
+    "exit_code": 0,
+    "selected_type": "a2-highgpu-1g:nvidia-tesla-a100:1",
+    "container_mode_and_digest_accepted": true,
+    "created_workspace": false
+  },
+  "container": {
+    "immutable_reference": "docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c",
+    "platform": "linux/amd64",
+    "tag_for_humans_only": "12.8.1-cudnn-devel-ubuntu24.04"
+  },
+  "inputs": {
+    "pilot_harness": {
+      "path": "scripts/run_m5_cuda_pilot_6.sh",
+      "sha256": "sha256:7b6e2d324fd6d72fbf810daaafe48295b7a2b7dd96228a2a2975962eb818085f"
+    },
+    "runtime_contract": {
+      "path": "environments/cuda/runtime-v1.json",
+      "sha256": "sha256:c9f64efb52d7ae0c220ff0f03c9b207af11a792251bd1eb69ef9357e1658f46d"
+    },
+    "requirements_lock": {
+      "path": "environments/cuda/requirements.lock",
+      "sha256": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f"
+    },
+    "source_bundles": {
+      "genesis.bundle": {
+        "source_commit": "7bc61d5b5b4c3275a9b2b0e5bfeb282b687ce55a",
+        "bundle_ref": "refs/m5-pilot6/genesis",
+        "sha256": "sha256:1754b718029721f13cd94a232d092720f62342e51f45f88a8cb11d02d2b7fb39"
+      },
+      "official-walking.bundle": {
+        "source_commit": "109e06d4ce4921b635c5609e5304079fc30960ae",
+        "bundle_ref": "refs/m5-pilot6/official-walking",
+        "sha256": "sha256:2e33c08e16fc6b5e3ef9eb41cb7c2d93d68b9ec08577417ebf8833f71c9ca719"
+      },
+      "official-backflip.bundle": {
+        "source_commit": "8bde27eb141c8f14db05fc4370e536521203a98d",
+        "bundle_ref": "refs/m5-pilot6/official-backflip",
+        "sha256": "sha256:e43cf5d5c8faee37b64eb0a5594b37a4565a97e3a0e2686f27ae0777e09e1271"
+      }
+    },
+    "bundle_generation": {
+      "git_config": [
+        "pack.threads=1",
+        "pack.windowMemory=64m"
+      ],
+      "procedure": "create the named temporary bundle_ref at source_commit, run git bundle create for exactly that ref with the bound git_config, verify the bundle, then delete only that temporary ref",
+      "two_generation_byte_equality_required": true,
+      "remote_hash_equality_required_before_execution": true
+    }
+  },
+  "workspace": {
+    "name": "microduck-m5-pilot6-20260904",
+    "count": 1,
+    "parallel": 1,
+    "mode": "container",
+    "jupyter": false,
+    "fallback_allowed": false,
+    "second_workspace_allowed": false,
+    "substitute_type_allowed": false
+  },
+  "limits": {
+    "harness_timeout_seconds": 4800,
+    "hard_elapsed_seconds_create_to_delete": 7200,
+    "hard_elapsed_hours_create_to_delete": 2,
+    "hard_cost_usd": 8.816124,
+    "exact_price_per_hour_usd": 4.408062,
+    "total_program_envelope_usd": 210,
+    "proposal_ceiling_within_total_envelope": true
+  },
+  "execution": {
+    "ordered_gates": [
+      "authority_enabled_full_suite",
+      "four_public_development_smokes",
+      "normalized_onnx_retention"
+    ],
+    "suite": {
+      "must_pass_before_any_smoke": true,
+      "command": "tests/run_all.py",
+      "authority_enabled": true
+    },
+    "public_development_smokes": [
+      {
+        "backend": "genesis",
+        "task": "walking",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 51001,
+        "normalized_onnx": "artifacts/genesis-walking.normalized.onnx"
+      },
+      {
+        "backend": "genesis",
+        "task": "backflip",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 52001,
+        "normalized_onnx": "artifacts/genesis-backflip.normalized.onnx"
+      },
+      {
+        "backend": "official-mjlab",
+        "task": "walking",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 51001,
+        "normalized_onnx": "artifacts/official-walking.normalized.onnx"
+      },
+      {
+        "backend": "official-mjlab",
+        "task": "backflip",
+        "num_envs": 64,
+        "max_iterations": 5,
+        "seed": 52001,
+        "normalized_onnx": "artifacts/official-backflip.normalized.onnx"
+      }
+    ],
+    "normalized_onnx_retention_required": true,
+    "launch_allowed_in_this_proposal": false
+  },
+  "preconditions_for_any_later_authorized_create": [
+    "independent Reviewer acceptance of the committed sixth-pilot proposal",
+    "new committed Manager authority binding this exact proposal path and SHA-256",
+    "clean source state and exact accepted correction and Reviewer-chain identities",
+    "exact harness, runtime, requirements lock, source bundle, and image hashes",
+    "fresh authenticated inventory is empty immediately before creation",
+    "fresh catalog row exactly matches all bound GCP resource fields and exact price 4.408062 USD/hour",
+    "exact container-mode immutable-digest dry run succeeds immediately before any authorized creation",
+    "after shell readiness, verify at least 8 GiB free before any upload and abort before upload if the bound disk gate fails"
+  ],
+  "failure_receipt": {
+    "required_on_every_terminal_path": true,
+    "remote_sorted_sha256sums_required_when_shell_exists": true,
+    "remote_unavailability_must_be_explicit_when_shell_never_exists": true,
+    "complete_run_scoped_receipt_recovery_required": true,
+    "independent_local_sorted_manifest_required": true,
+    "remote_local_manifest_exact_equality_required_when_remote_receipt_exists": true,
+    "terminal_status_and_failure_stage_required": true,
+    "runtime_and_source_identities_required": true,
+    "elapsed_and_conservative_cost_required": true,
+    "evidence_boundary_required": true
+  },
+  "teardown": {
+    "delete_exact_workspace_id_only": true,
+    "delete_after_verified_recovery_on_success_or_failure": true,
+    "workspace_is_non_stoppable": false,
+    "authenticated_empty_inventory_required": true,
+    "cleanup_requires_no_additional_confirmation": true,
+    "stop_is_available_but_exact_id_delete_remains_required": true
+  },
+  "prohibited": [
+    "candidate_seeds",
+    "heldout_seeds",
+    "full_cuda_matrix",
+    "publication",
+    "policy_activation",
+    "transfer",
+    "physical_operation",
+    "fallback_resource",
+    "substitute_resource",
+    "h100",
+    "multi_gpu",
+    "second_workspace",
+    "automatic_overspend",
+    "hyperstack_A100_80G_retry",
+    "massedcompute_A100_sxm4_80G_DGX_retry"
+  ],
+  "evidence_boundary": "At most a future separately authorized sixth pilot could prove CUDA pipeline compatibility. Catalog indicators and dry-run acceptance do not prove shell readiness. This proposal proves no CUDA smoke, M5, task, policy, candidate, held-out, publication, activation, transfer, or physical success.",
+  "fifth_pilot_terminal_boundary": {
+    "classification": "terminal_negative",
+    "failure_stage": "workspace-provisioning-connectivity",
+    "receipt": "receipts/m5/pilot/20260904T055749Z-i1bsb56r7",
+    "receipt_manifest_sha256": "sha256:ab14168c73f6829a2168cfe34710e3d380b1c1b5e331967d6233382f09b6b1c3",
+    "consumed_workspace_id": "i1bsb56r7",
+    "consumed_workspace_name": "microduck-m5-pilot5-20260904",
+    "consumed_type": "massedcompute_A100_sxm4_80G_DGX",
+    "retry_allowed": false,
+    "shell_reached": false,
+    "uploaded_files": 0,
+    "harness_invocations": 0
+  },
+  "disk_preflight": {
+    "catalog_target_disk_gb": 10,
+    "capacity_risk_acknowledged": true,
+    "minimum_free_disk_gb_before_upload": 8,
+    "repeat_in_harness_before_install": true,
+    "abort_before_upload_if_below_minimum": true,
+    "no_disk_size_assumption": true
+  }
+}
