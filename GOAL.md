@@ -15,24 +15,28 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/029-m5-linux-cuda-runtime-reconciliation.md` - Executor-complete
-local refreeze awaiting independent Reviewer decision.
+`docs/reviewer-messages/029-m5-linux-cuda-runtime-reconciliation.md` - reviewed
+NO-GO; no Executor slice is active.
 
 ## Current Status
 
-`REVIEW_REQUIRED` - Executor 029 refroze Genesis World 1.3.3 with a hash-locked
-linux/amd64 Python 3.12/cu128 lane, fail-closed runtime validation and receipt
-finalization, and generic manifest-bound log hygiene. Local tests pass; no local
-CUDA runtime proof exists. The exact second-pilot card remains proposed and not
-authorized. Authenticated Brev inventory is empty. No paid workspace, pilot
-rerun, candidate work, held-out realization, or accepted receipt mutation is
-authorized.
+`STOPPED_REVIEW_NO_GO` - Reviewer 029 confirmed the Genesis 1.3.3 API/source
+reconciliation and preserved receipt boundaries, but the exact paid-harness
+install command cannot resolve the committed `torch==2.9.1+cu128` lock because
+it does not select the cu128 PyTorch index. The same pinned-uv linux/amd64
+dry-run resolves all 126 packages only when explicit cu128 backend selection is
+added. A new local Executor correction and independent review are required.
+The second-pilot card remains proposed and not authorized; authenticated Brev
+inventory is empty.
 
 ## Stop Conditions
 
 - Do not provision another Brev workspace or begin full CUDA work from Reviewer
   028 or slice 029; Reviewer 028's `GO` applies only to terminal-negative
   closure and slice 029 is local-only.
+- Do not run the proposed second pilot while the harness's exact dependency
+  install command cannot replay the frozen cu128 lock from its declared package
+  sources.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
