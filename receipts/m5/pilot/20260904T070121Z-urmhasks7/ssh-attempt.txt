@@ -1,0 +1,5 @@
+Command target: brev exec urmhasks7
+Command purpose: prove at least 8 GiB free at /workspace before any upload.
+Initial failure: ssh could not resolve hostname urmhasks7.
+Brev then waited for SSH availability and reported seven failed attempts before the bounded wait was interrupted.
+Result: no shell obtained; disk preflight not run; zero uploads; zero harness invocations.

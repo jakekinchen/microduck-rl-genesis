@@ -1,0 +1,6 @@
+No usable remote shell was obtained before the terminal decision. No input was
+uploaded and the sixth-pilot harness was never invoked, so no remote run-scoped
+receipt or remote SHA256SUMS could exist. One teardown poll after the terminal
+decision and exact-ID delete request belatedly reported shell_status=READY;
+no-retry authority prohibited reopening execution. This local receipt preserves
+the complete control-plane terminal boundary.

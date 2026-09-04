@@ -15,21 +15,21 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/043-m5-sixth-cuda-pilot.md` - consume Manager authority 012 once
-for the exact bounded sixth CUDA pilot, then recover evidence, tear down the
-exact workspace, and obtain independent review.
+`docs/session-logs/043-executor-m5-sixth-cuda-pilot.md` - terminal-negative
+sixth-pilot provisioning/connectivity receipt and exact teardown; independent
+Reviewer decision required.
 
 ## Current Status
 
-`SIXTH_PILOT_MANAGER_AUTHORITY_COMMIT_REQUIRED` - Manager authority 012 binds
-the exact accepted proposal and one-use paid-compute envelope. It becomes
-usable only after the Manager record is committed; the proposal itself remains
-`compute_authorized=false`.
+`SIXTH_PILOT_TERMINAL_REVIEW_REQUIRED` - workspace `urmhasks7` never yielded a
+usable shell before the terminal decision, so the disk gate, uploads, and
+harness never ran. Exact-ID teardown is complete and Brev inventory is empty.
+Manager authority 012 is consumed; no retry or replacement is authorized.
 
 ## Stop Conditions
 
-- Do not provision from consumed Manager authorizations 007, 009, 010, or 011.
-  Authorization 011 was consumed by its one terminal fifth-pilot workspace.
+- Do not provision from consumed Manager authorizations 007, 009, 010, 011, or
+  012. Authorization 012 was consumed by its one terminal sixth-pilot workspace.
   No fallback, substitute, second workspace, or sixth-pilot retry is authorized.
 - For the proposed sixth pilot only, stop at two hours or `$8.816124`, whichever
   occurs first, and stop immediately on source/image drift, hardware/runtime
@@ -71,3 +71,5 @@ usable only after the Manager record is committed; the proposal itself remains
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>

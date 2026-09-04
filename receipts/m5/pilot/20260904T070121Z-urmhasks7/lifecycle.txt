@@ -1,0 +1,13 @@
+2026-09-04T07:01:21Z create requested for exact type a2-highgpu-1g:nvidia-tesla-a100:1
+2026-09-04T07:03:05Z create command reported Ready
+2026-09-04T07:03:06Z authenticated inventory identified exact workspace urmhasks7 as RUNNING / BUILDING / NOT READY / UNAVAILABLE
+2026-09-04T07:03:27Z authenticated inventory briefly reported health_status=HEALTHY while build remained BUILDING and shell NOT READY
+2026-09-04T07:03:38Z authenticated inventory regressed to UNHEALTHY / BUILDING / NOT READY
+2026-09-04T07:03:16Z..2026-09-04T07:08:46Z thirty authenticated readiness polls never reported shell readiness
+2026-09-04T07:09:04Z pre-upload disk command attempted through brev exec; shell connection unavailable
+2026-09-04T07:09:51Z terminal negative declared at workspace-provisioning-connectivity
+2026-09-04T07:11:00Z exact-ID deletion requested for urmhasks7
+2026-09-04T07:11:02Z first teardown poll belatedly showed RUNNING / COMPLETED / READY / HEALTHY after terminal declaration and delete request; execution remained closed under no-retry authority
+2026-09-04T07:11:13Z deletion state first observed
+2026-09-04T07:12:31Z authenticated inventory first observed empty
+2026-09-04T07:13:44Z..2026-09-04T07:14:08Z five additional authenticated polls remained empty
