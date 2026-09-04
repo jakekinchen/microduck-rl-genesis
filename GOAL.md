@@ -15,22 +15,24 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/031-m5-second-cuda-pilot.md` - active bounded second-pilot
-execution under Manager authorization 007 and Reviewer 030.
+`docs/briefs/031-m5-second-cuda-pilot.md` - Executor-complete terminal-negative
+second pilot awaiting independent Reviewer decision.
 
 ## Current Status
 
-`AUTHORIZED_SECOND_PILOT_ACTIVE` - Manager authorization 007 opens exactly the
-independently reviewed second-pilot proposal after Reviewer 030 accepted the
-cu128 correction. One named A100 workspace, the full applicable suite, and four
-64x5 public-development smokes are authorized within two hours/$3.24. Candidate
-work, held-out realization, the full CUDA matrix, publication, activation,
-transfer, physical work, and any second workspace remain unauthorized.
+`REVIEW_REQUIRED_TERMINAL_NEGATIVE` - the exact A100 CUDA runtime passed, but
+the full suite failed three frozen manifest/byte-determinism gates before any
+smoke training. A Brev exec reconnect replay was interrupted before its suite
+and overwrote terminal/cost metadata in the same self-consistent receipt;
+Manager reconciliation 008 records the authoritative create-to-empty bound.
+The recovered receipt is independently checksummed and authenticated Brev
+inventory is empty. No third pilot, full CUDA, candidate, or held-out work is
+authorized pending independent review and a later separate Manager decision.
 
 ## Stop Conditions
 
-- Do not provision more than the one exact second-pilot workspace or begin full
-  CUDA work from this authorization.
+- Do not provision another workspace or begin full CUDA work from Manager
+  authorization 007; its one exact second-pilot workspace is closed.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
@@ -58,3 +60,5 @@ transfer, physical work, and any second workspace remain unauthorized.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>

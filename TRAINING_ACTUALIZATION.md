@@ -248,6 +248,18 @@ exact pinned `uv==0.8.19`, Python 3.12, and `x86_64-manylinux_2_39`. The replay
 resolves all 126 hash-locked packages. This correction remains local evidence
 awaiting independent review and grants no second-pilot or broader authority.
 
+Reviewer 030 accepted slice 030 as local resolver evidence only. Fresh Manager
+authorization 007 then opened exactly one second smoke pilot. On the A100, the
+corrected Genesis 1.3.3 / Torch 2.9.1+cu128 runtime passed CUDA validation and
+ran the full authority-supplied suite, which failed model-reconciliation,
+evaluator-core byte, and evaluator-bundle determinism gates before any smoke
+training. A Brev exec reconnect replay was interrupted before its suite and
+overwrote the same receipt's terminal/cost metadata; Manager reconciliation 008
+preserves that distinction and uses the conservative 1,515-second / `$0.681750`
+create-to-empty bound. The final 24-file receipt was independently checksummed,
+the non-stoppable workspace was deleted, and authenticated inventory is empty.
+No checkpoint, candidate, held-out, ONNX, or task-success evidence was produced.
+
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.

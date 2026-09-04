@@ -28,7 +28,21 @@ result = subprocess.run(
     capture_output=True,
 )
 assert result.returncode == 0, result.stdout + result.stderr
-assert "manifests=6" in result.stdout
-assert "immutable_logs=38" in result.stdout
+tracked_manifests = subprocess.run(
+    ["git", "ls-files", "receipts/**/SHA256SUMS"],
+    cwd=ROOT,
+    text=True,
+    capture_output=True,
+    check=True,
+).stdout.splitlines()
+tracked_logs = subprocess.run(
+    ["git", "ls-files", "receipts/**/*.log"],
+    cwd=ROOT,
+    text=True,
+    capture_output=True,
+    check=True,
+).stdout.splitlines()
+assert f"manifests={len(tracked_manifests)}" in result.stdout
+assert f"immutable_logs={len(tracked_logs)}" in result.stdout
 
 print("generic manifest-bound receipt hygiene verified")
