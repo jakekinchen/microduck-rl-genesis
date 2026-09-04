@@ -15,17 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/045-m5-seventh-pilot-current-catalog-correction.md` - corrected
-Executor proposal committed at `562730a`; independent Reviewer decision is
-required. No compute authority or paid execution is active.
+`docs/reviewer-messages/045-m5-seventh-pilot-current-catalog-correction.md` -
+Reviewer acceptance of the corrected Lambda-bound seventh-pilot proposal. No
+compute authority or paid execution is active.
 
 ## Current Status
 
-`SEVENTH_PILOT_CURRENT_CATALOG_CORRECTION_REVIEW_REQUIRED` - exact corrected
-proposal SHA-256
+`SEVENTH_PILOT_PROPOSAL_ACCEPTED_MANAGER_AUTHORITY_REQUIRED` - Reviewer 045
+accepted exact corrected proposal SHA-256
 `714da8cdd4e521e1ba0d088809ff568f29ec909b514d796a2d67c0a1c0564f53`
-is fail-closed for current unused direct Lambda type `gpu_1x_a100_sxm4`, with
-`compute_authorized=false`. Independent review is required.
+for current unused direct Lambda type `gpu_1x_a100_sxm4`. The proposal remains
+`compute_authorized=false`; any paid create requires a fresh exact committed
+Manager authority and all pre-create gates.
 
 ## Stop Conditions
 
