@@ -15,17 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/044-m5-seventh-pilot-reliability-proposal.md` -
-Reviewer NUDGE requires a fresh authenticated exact catalog row before the
-seventh-pilot proposal can be accepted. No compute authority or paid execution
-is active.
+`docs/briefs/045-m5-seventh-pilot-current-catalog-correction.md` - local-only
+correction after Reviewer 044 found the proposed Crusoe row absent. No compute
+authority or paid execution is active.
 
 ## Current Status
 
-`SEVENTH_PILOT_LIVE_CATALOG_CORRECTION_REQUIRED` - Reviewer 044 verified the
-captured Crusoe snapshot but the independent live catalog no longer exposed
-exact type `a100-80gb.1x`. Rerun the catalog gate or refreeze to a currently
-eligible type before re-review. The proposal remains `compute_authorized=false`.
+`SEVENTH_PILOT_CURRENT_CATALOG_CORRECTION_IN_PROGRESS` - refreeze the
+non-authorizing proposal from the unavailable Crusoe row to current unused
+direct Lambda type `gpu_1x_a100_sxm4`, preserving the accepted readiness
+protocol and all evidence boundaries.
 
 ## Stop Conditions
 
@@ -72,5 +71,3 @@ eligible type before re-review. The proposal remains `compute_authorized=false`.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
