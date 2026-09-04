@@ -15,18 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/042-m5-sixth-pilot-replacement-provider-proposal.md` -
-Reviewer acceptance of corrected handoff `eb52e63`. A fresh exact Manager
-decision is required; no compute authority or paid execution is active.
+`docs/briefs/043-m5-sixth-cuda-pilot.md` - consume Manager authority 012 once
+for the exact bounded sixth CUDA pilot, then recover evidence, tear down the
+exact workspace, and obtain independent review.
 
 ## Current Status
 
-`SIXTH_PILOT_REPLACEMENT_PROPOSAL_ACCEPTED_MANAGER_REQUIRED` - exact proposal SHA-256
-`cca90ab98458df37668b1c8391705a196693d2ecddc4d9a349af848d37f052cc`
-is fail-closed and locally validated for direct GCP A100 type
-`a2-highgpu-1g:nvidia-tesla-a100:1`, with `compute_authorized=false`.
-Independent Reviewer acceptance is recorded. No Manager authority or compute
-is active.
+`SIXTH_PILOT_MANAGER_AUTHORITY_COMMIT_REQUIRED` - Manager authority 012 binds
+the exact accepted proposal and one-use paid-compute envelope. It becomes
+usable only after the Manager record is committed; the proposal itself remains
+`compute_authorized=false`.
 
 ## Stop Conditions
 
@@ -73,5 +71,3 @@ is active.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
