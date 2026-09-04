@@ -15,16 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/043-m5-sixth-cuda-pilot.md` - Reviewer acceptance of
-the terminal-negative sixth-pilot provisioning/connectivity receipt and exact
-teardown. No compute authority or paid execution remains active.
+`docs/briefs/044-m5-seventh-pilot-reliability-proposal.md` - local-only
+seventh-pilot readiness-protocol and replacement-provider proposal. No compute
+authority or paid execution is active.
 
 ## Current Status
 
-`SIXTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 043 accepted exact handoff
-`a70af4e` strictly as provisioning/connectivity failure evidence. Workspace
-`urmhasks7` was deleted and authenticated Brev inventory is empty. Manager
-authority 012 is consumed; no retry or replacement compute is authorized.
+`SEVENTH_PILOT_RELIABILITY_PROPOSAL_IN_PROGRESS` - diagnose and report the
+repeated Brev readiness race, then freeze an unused single-A100 provider/type
+with stronger explicit shell-readiness gates. This slice is proposal-only;
+`compute_authorized=false` and no paid execution is authorized.
 
 ## Stop Conditions
 
@@ -71,5 +71,3 @@ authority 012 is consumed; no retry or replacement compute is authorized.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
