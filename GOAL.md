@@ -15,16 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/041-m5-fifth-cuda-pilot.md` - consume Manager authority 011 once
-for the exact bounded fifth CUDA pilot, then recover evidence, tear down the
-exact workspace, and obtain independent review.
+`docs/session-logs/041-executor-m5-fifth-cuda-pilot.md` - terminal-negative
+fifth-pilot provisioning/connectivity receipt committed for independent
+review. No compute authority or paid execution remains active.
 
 ## Current Status
 
-`FIFTH_PILOT_MANAGER_AUTHORITY_COMMIT_REQUIRED` - Manager authority 011 binds
-the exact accepted proposal and one-use paid-compute envelope. It becomes
-usable only after the Manager record is committed; the proposal itself remains
-`compute_authorized=false`.
+`FIFTH_PILOT_TERMINAL_NEGATIVE_REVIEW_REQUIRED` - the one authorized workspace
+`i1bsb56r7` never exposed a shell, so zero uploads and zero harness invocations
+occurred. Exact-ID teardown completed and authenticated Brev inventory is
+empty. Manager authority 011 is consumed; independent review is required.
 
 ## Stop Conditions
 
@@ -67,3 +67,5 @@ usable only after the Manager record is committed; the proposal itself remains
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
