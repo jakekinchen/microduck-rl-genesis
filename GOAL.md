@@ -15,16 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/044-m5-seventh-pilot-reliability-proposal.md` - local-only
-seventh-pilot readiness-protocol and replacement-provider proposal. No compute
+`docs/briefs/044-m5-seventh-pilot-reliability-proposal.md` - Executor proposal
+committed at `e22e7e2`; independent Reviewer decision required. No compute
 authority or paid execution is active.
 
 ## Current Status
 
-`SEVENTH_PILOT_RELIABILITY_PROPOSAL_IN_PROGRESS` - diagnose and report the
-repeated Brev readiness race, then freeze an unused single-A100 provider/type
-with stronger explicit shell-readiness gates. This slice is proposal-only;
-`compute_authorized=false` and no paid execution is authorized.
+`SEVENTH_PILOT_RELIABILITY_PROPOSAL_REVIEW_REQUIRED` - exact proposal SHA-256
+`d92a9f8c507762d15b66bb1ff70f2227697985f3967610bd8323b69ae8f9df24`
+is fail-closed and locally validated for unused direct Crusoe type
+`a100-80gb.1x`, with `compute_authorized=false`. Independent review is
+required; no compute authority is active.
 
 ## Stop Conditions
 
@@ -71,3 +72,5 @@ with stronger explicit shell-readiness gates. This slice is proposal-only;
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
