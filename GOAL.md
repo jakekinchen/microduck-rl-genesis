@@ -15,9 +15,9 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/039-m5-fifth-pilot-cost-binding-correction.md` -
-Reviewer NUDGE requires native-name fifth-harness staging and receipt
-self-attestation. No compute authority or paid execution is active.
+`docs/briefs/040-m5-fifth-pilot-harness-self-attestation.md` - Executor
+correction of Reviewer 039's native-name staging and receipt self-attestation
+finding. No compute authority or paid execution is active.
 
 ## Current Status
 
@@ -68,5 +68,3 @@ active.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
