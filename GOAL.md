@@ -15,18 +15,15 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/045-m5-seventh-pilot-current-catalog-correction.md` -
-Reviewer acceptance of the corrected Lambda-bound seventh-pilot proposal. No
-compute authority or paid execution is active.
+`docs/briefs/046-m5-seventh-cuda-pilot.md` - consume Manager authority 013 once
+for the exact bounded seventh CUDA pilot, recover evidence, tear down the exact
+workspace, and obtain independent review.
 
 ## Current Status
 
-`SEVENTH_PILOT_PROPOSAL_ACCEPTED_MANAGER_AUTHORITY_REQUIRED` - Reviewer 045
-accepted exact corrected proposal SHA-256
-`714da8cdd4e521e1ba0d088809ff568f29ec909b514d796a2d67c0a1c0564f53`
-for current unused direct Lambda type `gpu_1x_a100_sxm4`. The proposal remains
-`compute_authorized=false`; any paid create requires a fresh exact committed
-Manager authority and all pre-create gates.
+`SEVENTH_PILOT_MANAGER_AUTHORITY_COMMIT_REQUIRED` - Manager authority 013 binds
+the accepted proposal and one-use paid envelope. It becomes usable only after
+this record is committed; the proposal remains `compute_authorized=false`.
 
 ## Stop Conditions
 
@@ -73,5 +70,3 @@ Manager authority and all pre-create gates.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
