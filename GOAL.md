@@ -15,16 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/036-m5-fourth-pilot-proposal-refreeze.md` - Executor proposal
-committed at `04a8fc8`; independent Reviewer decision required. No compute
-authority or paid execution is active.
+`docs/briefs/036-m5-fourth-pilot-proposal-refreeze.md` - accepted by Reviewer
+036 at Executor HEAD `0cbdb4c` as an exact non-authorizing proposal. Workflow
+stopped before any separate Manager decision.
 
 ## Current Status
 
-`FOURTH_PILOT_PROPOSAL_REVIEW_REQUIRED` - the exact proposal at SHA-256
+`FOURTH_PILOT_PROPOSAL_ACCEPTED_NOT_AUTHORIZED` - the exact proposal at SHA-256
 `0513d276aa6ca591e5a4232ffe914a5b9107910a7366b397a77e421df3a09ec2`
-is fail-closed and locally validated, with `compute_authorized=false`.
-Independent review is required; no fourth pilot or compute authority is active.
+is independently accepted, fail-closed, and remains `compute_authorized=false`.
+No fourth pilot or compute authority is active; only a later new exact Manager
+record may authorize creation.
 
 ## Stop Conditions
 
