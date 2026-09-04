@@ -260,6 +260,22 @@ create-to-empty bound. The final 24-file receipt was independently checksummed,
 the non-stoppable workspace was deleted, and authenticated inventory is empty.
 No checkpoint, candidate, held-out, ONNX, or task-success evidence was produced.
 
+Slice 032 diagnoses the three terminal-negative suite gates without mutating
+either pilot receipt or the frozen M5 experiment inputs. MuJoCo's compiled mesh
+inertias differed between Darwin/arm64 and Linux/x86-64 only in 11 to 18
+last-bit fields per variant (maximum absolute delta `1.0843e-19`); a 14-digit
+semantic projection now compares the retained raw manifest instead of treating
+its host-specific digest as cross-host authority. The evaluator report differed
+only in truthful ONNX Runtime provenance and raw floating-point trajectory
+bytes; an 11-decimal canonical row digest is byte-identical across measured
+hosts while the raw provenance remains untouched. Development bundles now
+exclude wall-clock inference jitter from their synthetic artifact bytes and use
+single-sample offscreen rendering. Implementation `bac0375` passes the three
+focused gates, a Linux/amd64 reproduction, and the full local suite with pinned
+BAM and official MJLab authority. This is local deterministic compatibility
+only; a third-pilot card exists with `compute_authorized=false` pending review
+and separate Manager authorization.
+
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.

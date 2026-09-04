@@ -15,17 +15,19 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/032-m5-deterministic-evidence-correction.md` - active local-only
-diagnosis and correction of the three Reviewer-031 deterministic evidence
-failures.
+`docs/briefs/032-m5-deterministic-evidence-correction.md` - Executor-complete
+local correction awaiting independent Reviewer decision.
 
 ## Current Status
 
-`ACTIVE_LOCAL_DETERMINISM_CORRECTION` - Reviewer 031 closed the second pilot as
-terminal negative. Slice 032 may reproduce, diagnose, and minimally correct
-only its three deterministic evidence failures using local authority. No Brev
-workspace, third pilot, full CUDA, candidate, held-out, publication,
-activation, transfer, or physical work is authorized.
+`REVIEW_REQUIRED_LOCAL_DETERMINISM_CORRECTION` - implementation `bac0375`
+closes all three observed gates in native macOS and local Linux/amd64 evidence,
+with the full authority-enabled local suite passing. The accepted receipts,
+frozen evaluator core, and M5 experiment freeze are unchanged. The separate
+third-pilot card remains `compute_authorized=false`; no Brev workspace, third
+pilot, full CUDA, candidate, held-out, publication, activation, transfer, or
+physical work is authorized pending independent review and a later exact
+Manager decision.
 
 ## Stop Conditions
 
@@ -59,3 +61,5 @@ activation, transfer, or physical work is authorized.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
