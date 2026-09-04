@@ -1,0 +1,152 @@
+#!/usr/bin/env python3
+"""Fail-closed validator for the non-authorizing M5 fifth-pilot proposal."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parents[1]
+PROPOSAL = ROOT / "experiments/m5/fifth-pilot-proposal-v1.json"
+SCHEMA = ROOT / "experiments/m5/fifth-pilot-proposal-v1.schema.json"
+
+EXPECTED_PROPOSAL_FILE_SHA256 = "7cec37d6fe17788eb3097103548e4afc019ed0bbe5b91993515940695811d918"
+EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "ce93bd16450b184a4032ff2dff6dee5d5bb7d5322198cbdd303e6db340b45601"
+EXPECTED_SCHEMA_FILE_SHA256 = "5ffa816b0e4c649359e07500974c29dc1674565577ed8dd63fc285c598688102"
+
+
+def _assert(condition: bool, message: str) -> None:
+    if not condition:
+        raise AssertionError(message)
+
+
+def _file_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _semantic_sha256(value: Any) -> str:
+    encoded = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def _git(*args: str) -> str:
+    return subprocess.check_output(["git", "-C", str(ROOT), *args], text=True).strip()
+
+
+def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
+    _assert(isinstance(proposal, dict), "proposal must be an object")
+    _assert(proposal.get("compute_authorized") is False, "compute_authorized must remain false")
+    _assert(
+        _semantic_sha256(proposal) == EXPECTED_PROPOSAL_SEMANTIC_SHA256,
+        "proposal semantic binding drift",
+    )
+
+    authority = proposal["authority"]
+    _assert(authority["manager_authority_present"] is False, "Manager authority drift")
+    _assert(authority["proposal_grants_compute"] is False, "proposal authority drift")
+    _assert(proposal["execution"]["launch_allowed_in_this_proposal"] is False, "launch authority drift")
+    _assert(proposal["catalog_snapshot"]["proposal_evidence_only"] is True, "catalog evidence boundary drift")
+
+    fourth = proposal["fourth_pilot_terminal_boundary"]
+    _assert(fourth["classification"] == "terminal_negative", "fourth-pilot classification drift")
+    _assert(fourth["failure_stage"] == "workspace-provisioning-health", "fourth-pilot failure stage drift")
+    _assert(fourth["retry_allowed"] is False, "fourth-pilot retry became allowed")
+    _assert(fourth["harness_invocations"] == 0, "fourth-pilot execution drift")
+
+    catalog = proposal["catalog_snapshot"]
+    dry_run = proposal["container_dry_run"]
+    workspace = proposal["workspace"]
+    limits = proposal["limits"]
+    _assert(catalog["type"] == dry_run["selected_type"], "catalog/dry-run type drift")
+    _assert(dry_run["container_mode_and_digest_accepted"] is True, "container dry-run gate drift")
+    _assert(dry_run["created_workspace"] is False, "dry run claims workspace creation")
+    _assert(workspace["count"] == catalog["gpu_count"] == 1, "GPU/workspace count drift")
+    _assert(workspace["parallel"] == 1, "parallel workspace drift")
+    _assert(workspace["fallback_allowed"] is False, "fallback became allowed")
+    _assert(workspace["second_workspace_allowed"] is False, "second workspace became allowed")
+    _assert(workspace["substitute_type_allowed"] is False, "substitution became allowed")
+    _assert(catalog["stoppable"] is False, "stoppability drift")
+    _assert(catalog["rebootable"] is False, "rebootability drift")
+    _assert(limits["hard_cost_usd"] == limits["hard_elapsed_hours_create_to_delete"] * limits["exact_price_per_hour_usd"], "cost ceiling drift")
+    _assert(limits["hard_elapsed_seconds_create_to_delete"] == limits["hard_elapsed_hours_create_to_delete"] * 3600, "elapsed ceilings disagree")
+    _assert(limits["harness_timeout_seconds"] < limits["hard_elapsed_seconds_create_to_delete"], "inner timeout must be below outer ceiling")
+
+    execution = proposal["execution"]
+    _assert(execution["ordered_gates"] == ["authority_enabled_full_suite", "four_public_development_smokes", "normalized_onnx_retention"], "suite/smoke/export order drift")
+    _assert(execution["suite"]["must_pass_before_any_smoke"] is True, "suite-first gate drift")
+    _assert(execution["suite"]["authority_enabled"] is True, "suite authority drift")
+    _assert(len(execution["public_development_smokes"]) == 4, "smoke count drift")
+    for smoke in execution["public_development_smokes"]:
+        _assert(smoke["num_envs"] == 64, "smoke environment count drift")
+        _assert(smoke["max_iterations"] == 5, "smoke iteration count drift")
+        _assert(smoke["normalized_onnx"].endswith(".normalized.onnx"), "ONNX retention drift")
+
+    _assert(all(proposal["failure_receipt"].values()), "failure receipt requirement disabled")
+    _assert(all(proposal["teardown"].values()), "teardown requirement disabled")
+    _assert(len(proposal["prohibited"]) == 14, "prohibition set drift")
+    _assert("hyperstack_A100_80G_retry" in proposal["prohibited"], "failed provider retry prohibition missing")
+
+    if not verify_local_inputs:
+        return
+
+    _assert(_file_sha256(PROPOSAL) == EXPECTED_PROPOSAL_FILE_SHA256, "proposal byte hash drift")
+    _assert(_file_sha256(SCHEMA) == EXPECTED_SCHEMA_FILE_SHA256, "proposal schema byte hash drift")
+    for binding in (
+        proposal["inputs"]["pilot_harness"],
+        proposal["inputs"]["runtime_contract"],
+        proposal["inputs"]["requirements_lock"],
+    ):
+        expected = binding["sha256"].removeprefix("sha256:")
+        _assert(_file_sha256(ROOT / binding["path"]) == expected, f"input hash drift: {binding['path']}")
+
+    receipt_manifest = ROOT / fourth["receipt"] / "SHA256SUMS"
+    _assert(_file_sha256(receipt_manifest) == fourth["receipt_manifest_sha256"].removeprefix("sha256:"), "fourth-pilot receipt manifest drift")
+
+    chain = [
+        authority["accepted_correction_commit"],
+        authority["accepted_evaluator_reviewer_head"],
+        authority["accepted_fourth_proposal_review_commit"],
+        authority["consumed_fourth_manager_authorization_commit"],
+        authority["accepted_fourth_terminal_executor_commit"],
+        authority["accepted_fourth_terminal_reviewer_head"],
+    ]
+    for commit in chain:
+        _assert(_git("rev-parse", commit) == commit, f"commit binding drift: {commit}")
+    for parent, child in zip(chain, chain[1:]):
+        subprocess.check_call(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", parent, child])
+    subprocess.check_call(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", chain[-1], "HEAD"])
+
+    command = dry_run["command"]
+    for required in (
+        "--type massedcompute_A100_sxm4_80G_DGX",
+        "--count 1",
+        "--parallel 1",
+        "--mode container",
+        proposal["container"]["immutable_reference"],
+        "--dry-run",
+    ):
+        _assert(required in command, f"dry-run command binding missing: {required}")
+
+    harness = (ROOT / proposal["inputs"]["pilot_harness"]["path"]).read_text()
+    _assert(harness.index("run_logged full-suite") < harness.index("run_logged genesis-walking"), "harness is not suite-first")
+
+
+def validate_repository() -> None:
+    validate_proposal(json.loads(PROPOSAL.read_text()), verify_local_inputs=True)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--proposal", type=Path, default=PROPOSAL)
+    args = parser.parse_args()
+    proposal = json.loads(args.proposal.read_text())
+    validate_proposal(proposal, verify_local_inputs=args.proposal.resolve() == PROPOSAL.resolve())
+    print("M5 fifth-pilot proposal validated: compute_authorized=false")
+
+
+if __name__ == "__main__":
+    main()
