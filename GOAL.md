@@ -15,17 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/038-m5-fifth-pilot-replacement-provider-proposal.md` - Executor
-proposal committed at `111ddf7`; independent Reviewer decision required. No
-compute authority or paid execution is active.
+`docs/reviewer-messages/038-m5-fifth-pilot-replacement-provider-proposal.md` -
+Reviewer NUDGE requires a fifth-specific cost-bound harness and correction of
+stale fourth-pilot authority text. No compute authority or paid execution is
+active.
 
 ## Current Status
 
-`FIFTH_PILOT_REPLACEMENT_PROPOSAL_REVIEW_REQUIRED` - exact proposal SHA-256
-`7cec37d6fe17788eb3097103548e4afc019ed0bbe5b91993515940695811d918`
-is fail-closed and locally validated for exact massedcompute A100 type
-`massedcompute_A100_sxm4_80G_DGX`, with `compute_authorized=false`.
-Independent review is required; no compute authority is active.
+`FIFTH_PILOT_REPLACEMENT_PROPOSAL_CORRECTION_REQUIRED` - Reviewer 038 found
+that the proposal's bound harness retains the historical fourth-pilot
+`$1.62/hour` cost constant instead of the replacement type's exact
+`$1.656/hour` rate. A separately scoped local-only correction and independent
+re-review are required; no compute authority is active.
 
 ## Stop Conditions
 
