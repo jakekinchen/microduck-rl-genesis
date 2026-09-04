@@ -15,29 +15,29 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/037-m5-fourth-cuda-pilot.md` - exact one-use fourth-pilot execution
-slice under Manager authorization 010; authority becomes usable only after its
-commit.
+`docs/briefs/037-m5-fourth-cuda-pilot.md` - terminal provisioning-health result
+under consumed Manager authorization 010; Executor receipt ready for
+independent review.
 
 ## Current Status
 
-`FOURTH_PILOT_AUTHORIZATION_COMMIT_REQUIRED` - Manager log 010 binds the exact
-Reviewer-036-accepted proposal and one no-fallback A100 pilot. Do not provision
-until this authority record is committed and every fresh pre-create gate passes.
+`FOURTH_PILOT_TERMINAL_NEGATIVE_REVIEW_REQUIRED` - exact workspace
+`tpo91g7kj` never exposed a ready shell; no upload, harness, suite, smoke, or
+export occurred. The local control-plane receipt is complete and the
+authenticated Brev inventory is empty. Independent review is required.
 
 ## Stop Conditions
 
-- Do not provision from consumed Manager authorizations 007 or earlier. Manager
-  authorization 009 is now also consumed by its one terminal third-pilot
-  workspace. No fallback, substitute, second workspace, or fourth pilot is
-  authorized.
+- Do not provision from consumed Manager authorizations 007, 009, or 010.
+  Authorization 010 was consumed by its one terminal fourth-pilot workspace.
+  No fallback, substitute, second workspace, or retry is authorized.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
-- Run only the exact fourth pilot authorized by committed Manager log 010. No
-  fallback, substitute, second workspace, replay, or expansion is authorized.
+- Do not retry the fourth pilot. Any later compute would require a separate
+  independently reviewed proposal and fresh exact Manager authorization.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -45,10 +45,9 @@ until this authority record is committed and every fresh pre-create gate passes.
 
 ## Human Constraints
 
-- Manager log 009 is fresh one-use authority for the exact third pilot after
-  Reviewer 033 accepted the local deterministic correction. That authority was
-  consumed by terminal receipt `20260904T030457Z-4qe7ph6p7` and cannot be
-  reused.
+- Manager logs 009 and 010 were one-use authorities. They were consumed by
+  terminal receipts `20260904T030457Z-4qe7ph6p7` and
+  `20260904T044136Z-tpo91g7kj` and cannot be reused.
 - Prefer `hyperstack_A100_80G` at the current $1.62/hour snapshot. It is
   non-stoppable: after verified artifact recovery and independent checksums,
   delete it and confirm the authenticated Brev inventory is empty.
@@ -60,3 +59,5 @@ until this authority record is committed and every fresh pre-create gate passes.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
