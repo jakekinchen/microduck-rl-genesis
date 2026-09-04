@@ -16,8 +16,8 @@ M5 Linux CUDA runtime reconciliation
 ## Current Slice
 
 `docs/session-logs/039-executor-m5-fifth-pilot-cost-binding-correction.md` -
-Executor correction complete; committed handoff and independent Reviewer
-decision required. No compute authority or paid execution is active.
+Executor correction committed at `c98ac67`; independent Reviewer decision
+required. No compute authority or paid execution is active.
 
 ## Current Status
 
