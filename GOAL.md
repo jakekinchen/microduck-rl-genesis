@@ -15,17 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/040-m5-fifth-pilot-harness-self-attestation.md` - Executor
-correction of Reviewer 039's native-name staging and receipt self-attestation
-finding. No compute authority or paid execution is active.
+`docs/session-logs/040-executor-m5-fifth-pilot-harness-self-attestation.md` -
+Executor correction complete; committed handoff and independent Reviewer
+decision required. No compute authority or paid execution is active.
 
 ## Current Status
 
-`FIFTH_PILOT_HARNESS_SELF_ATTESTATION_CORRECTION_REQUIRED` - Reviewer 039
-verified the cost and GOAL corrections, but found that the fifth harness still
-expects and receipts the old harness filename. A local-only native-name
-correction and independent re-review are required; no compute authority is
-active.
+`FIFTH_PILOT_HARNESS_SELF_ATTESTATION_REVIEW_REQUIRED` - corrected proposal
+SHA-256 `1d27fd55dee168fcf4f54f38432b2bad65a067aef8f821c4e1746a2afaeca4b1`
+binds exact native fifth-harness staging and receipt attestation; all local
+gates pass. Independent re-review is required; no compute authority is active.
 
 ## Stop Conditions
 
@@ -68,3 +67,5 @@ active.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>

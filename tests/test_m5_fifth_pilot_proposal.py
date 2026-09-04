@@ -3,8 +3,12 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import importlib.util
 import json
+import shutil
+import subprocess
+import tempfile
 from pathlib import Path
 from typing import Any, Iterator
 
@@ -31,6 +35,58 @@ except AssertionError as exc:
     assert str(exc) == "pilot harness price/catalog rate disagreement"
 else:
     raise AssertionError("historical fourth-pilot rate was accepted by fifth-pilot harness validation")
+
+module.validate_harness_self_attestation(proposal, harness_text)
+try:
+    module.validate_harness_self_attestation(
+        proposal,
+        harness_text.replace("run_m5_cuda_pilot_5.sh", "run_m5_cuda_pilot.sh"),
+    )
+except AssertionError:
+    pass
+else:
+    raise AssertionError("fourth-harness alias was accepted by fifth-pilot self-attestation validation")
+
+with tempfile.TemporaryDirectory(prefix="m5-fifth-harness-native-") as temp_dir:
+    temp = Path(temp_dir)
+    input_root = temp / "input"
+    receipt_root = temp / "receipt"
+    tool_root = temp / "bin"
+    input_root.mkdir()
+    tool_root.mkdir()
+    for tool in ("cp", "date", "find", "mkdir", "mktemp", "mv", "python3", "sha256sum", "sort", "tee", "xargs"):
+        source = shutil.which(tool)
+        assert source is not None, f"required local failure-probe tool unavailable: {tool}"
+        (tool_root / tool).symlink_to(source)
+    for bundle_name in ("genesis.bundle", "official-walking.bundle", "official-backflip.bundle"):
+        (input_root / bundle_name).write_bytes(b"nonempty-local-failure-probe")
+    harness_path = ROOT / proposal["inputs"]["pilot_harness"]["path"]
+    staged_harness = input_root / harness_path.name
+    staged_harness.write_bytes(harness_path.read_bytes())
+    result = subprocess.run(
+        ["/bin/bash", str(harness_path)],
+        env={
+            "CONTRACT_COMMIT": "local-failure-probe",
+            "INPUT_ROOT": str(input_root),
+            "PATH": str(tool_root),
+            "RECEIPT_ROOT": str(receipt_root),
+            "SOURCE_ROOT": str(temp / "src"),
+            "VENV_ROOT": str(temp / "venvs"),
+            "WORKSPACE_ROOT": str(temp / "workspace"),
+        },
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode != 0
+    terminal = json.loads((receipt_root / "TERMINAL_STATUS.json").read_text())
+    assert terminal["failure_stage"] == "host-nvidia-smi"
+    retained_harness = receipt_root / harness_path.name
+    assert retained_harness.read_bytes() == harness_path.read_bytes()
+    expected_harness_sha256 = proposal["inputs"]["pilot_harness"]["sha256"].removeprefix("sha256:")
+    assert hashlib.sha256(retained_harness.read_bytes()).hexdigest() == expected_harness_sha256
+    assert (receipt_root / "harness-sha256.txt").read_text().split()[0] == expected_harness_sha256
+    assert not (input_root / "run_m5_cuda_pilot.sh").exists()
+    assert not (receipt_root / "run_m5_cuda_pilot.sh").exists()
 
 
 def leaf_paths(value: Any, path: tuple[Any, ...] = ()) -> Iterator[tuple[Any, ...]]:
@@ -117,5 +173,6 @@ assert deletion_probes >= scalar_probes
 print(
     "M5 fifth-pilot proposal fail-closed probes passed: "
     f"{scalar_probes} scalar mutations, {deletion_probes} deletions, "
-    "extra-field, explicit compute-authority, and historical harness-rate rejection"
+    "extra-field, explicit compute-authority, historical harness-rate, and "
+    "fourth-alias rejection with native-name receipt self-attestation"
 )

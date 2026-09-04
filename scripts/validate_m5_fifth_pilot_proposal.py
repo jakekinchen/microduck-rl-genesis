@@ -16,8 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PROPOSAL = ROOT / "experiments/m5/fifth-pilot-proposal-v1.json"
 SCHEMA = ROOT / "experiments/m5/fifth-pilot-proposal-v1.schema.json"
 
-EXPECTED_PROPOSAL_FILE_SHA256 = "54d61f03930478fcb66955d60314b682eb3fb5e1c746ba226b29a9f04c263349"
-EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "cd958e6a359bd5f347b840eecde566af10ff9aebb573f55bc913d896d9174371"
+EXPECTED_PROPOSAL_FILE_SHA256 = "1d27fd55dee168fcf4f54f38432b2bad65a067aef8f821c4e1746a2afaeca4b1"
+EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "dd62db31aa5e1dd6b35d1213b744342a17d1a1099008d5764b399dbcfbdb6d57"
 EXPECTED_SCHEMA_FILE_SHA256 = "5ffa816b0e4c649359e07500974c29dc1674565577ed8dd63fc285c598688102"
 
 
@@ -47,6 +47,18 @@ def validate_harness_price(proposal: Any, harness_text: str) -> None:
     limit_price = Decimal(str(proposal["limits"]["exact_price_per_hour_usd"]))
     _assert(harness_price == catalog_price, "pilot harness price/catalog rate disagreement")
     _assert(harness_price == limit_price, "pilot harness price/limit rate disagreement")
+
+
+def validate_harness_self_attestation(proposal: Any, harness_text: str) -> None:
+    harness_name = Path(proposal["inputs"]["pilot_harness"]["path"]).name
+    required = (
+        f'test -s "$INPUT_ROOT/{harness_name}"',
+        f'cp "$INPUT_ROOT/{harness_name}" "$RECEIPT_ROOT/{harness_name}"',
+        f'sha256sum "$RECEIPT_ROOT/{harness_name}" > "$RECEIPT_ROOT/harness-sha256.txt"',
+    )
+    for statement in required:
+        _assert(harness_text.count(statement) == 1, f"pilot harness self-attestation drift: {statement}")
+    _assert("run_m5_cuda_pilot.sh" not in harness_text, "fifth harness depends on fourth-harness alias")
 
 
 def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
@@ -145,6 +157,7 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
 
     harness = (ROOT / proposal["inputs"]["pilot_harness"]["path"]).read_text()
     validate_harness_price(proposal, harness)
+    validate_harness_self_attestation(proposal, harness)
     _assert(harness.index("run_logged full-suite") < harness.index("run_logged genesis-walking"), "harness is not suite-first")
 
 
