@@ -64,6 +64,8 @@ policy success, candidate admission, held-out evidence, publication,
 activation, transfer, or physical authority. Manager authority 011 is consumed
 and cannot be reused.
 
+Executor terminal receipt commit: `6dcdd25`.
+
 ## Step-9 Flags For Reviewer
 
 - Revalidate the exact Manager/proposal/Reviewer chain and immutable hashes.
