@@ -15,22 +15,23 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/session-logs/053-executor-m6-external-authority-handoff.md` - deterministic
-blocker/contact/publication packet; independent Reviewer decision required
-before the final external-input and human-publication stop.
+`docs/reviewer-messages/053-m6-external-authority-handoff.md` - Reviewer accepts
+the final local authority packet and escalates/stops at the external-input,
+third-party-contact, and human-publication authority boundary.
 
 ## Current Status
 
-`M6_EXTERNAL_AUTHORITY_HANDOFF_REVIEW_REQUIRED` - Reviewer 052 accepted the
-portable 65-file local distribution gate. A deterministic final handoff packet
-now binds the eight missing official roles, four missing community roles,
-acceptable immutable evidence, two unsent outreach drafts, an unexecuted
-publication plan, and a no-local-substitute audit. Existing authority covers
-local audit/edit/validation/staging/drafting only; contact, push/tag/release,
-Hugging Face selection/upload, public credential use, and policy actions require
-new explicit human authority. Independent review is required. M6 remains open,
-M5 remains externally blocked, Brev is empty, and no contact, publication,
-policy, compute, activation, or physical action occurred.
+`M6_EXTERNAL_AUTHORITY_REQUIRED_STOP` - Reviewer 053 accepts exact Executor
+handoff `e8ba065` from accepted base `f22c799` and records an evidence-anchor-
+100 ESCALATE with terminal local STOP. The packet exactly binds eight missing
+official roles, four missing community roles, acceptable immutable evidence,
+two unsent drafts, an unauthorized/unexecuted publication plan, and zero honest
+repo-owned closures. Existing authority covers local audit/edit/validation/
+staging/drafting only. Resume requires user-supplied immutable upstream input
+or explicit authority for a named contact/publication action and destination.
+M6 remains open with five files quarantined, M5 remains externally blocked,
+Brev is empty, and no contact, publication, policy, compute, activation, or
+physical action occurred. Do not create or delegate another local slice.
 
 ## Stop Conditions
 
