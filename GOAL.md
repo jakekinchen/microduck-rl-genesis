@@ -15,16 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/038-m5-fifth-pilot-replacement-provider-proposal.md` - bounded
-local-only replacement-provider proposal slice opened after Reviewer 037; no
+`docs/briefs/038-m5-fifth-pilot-replacement-provider-proposal.md` - Executor
+proposal committed at `111ddf7`; independent Reviewer decision required. No
 compute authority or paid execution is active.
 
 ## Current Status
 
-`FIFTH_PILOT_REPLACEMENT_PROPOSAL_IN_PROGRESS` - drafting a fail-closed,
-non-authorizing proposal for exact massedcompute A100 type
-`massedcompute_A100_sxm4_80G_DGX`. The fourth pilot remains terminal negative,
-Manager authorization 010 is consumed, and no compute authority is active.
+`FIFTH_PILOT_REPLACEMENT_PROPOSAL_REVIEW_REQUIRED` - exact proposal SHA-256
+`7cec37d6fe17788eb3097103548e4afc019ed0bbe5b91993515940695811d918`
+is fail-closed and locally validated for exact massedcompute A100 type
+`massedcompute_A100_sxm4_80G_DGX`, with `compute_authorized=false`.
+Independent review is required; no compute authority is active.
 
 ## Stop Conditions
 
@@ -60,3 +61,5 @@ Manager authorization 010 is consumed, and no compute authority is active.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
