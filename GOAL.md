@@ -15,18 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/031-m5-second-cuda-pilot.md` - Reviewer-closed terminal-negative
-second pilot; no successor compute or evaluation slice is authorized.
+`docs/briefs/032-m5-deterministic-evidence-correction.md` - active local-only
+diagnosis and correction of the three Reviewer-031 deterministic evidence
+failures.
 
 ## Current Status
 
-`STOPPED_TERMINAL_NEGATIVE` - Reviewer 031 accepts commit `5f86bf5` only as
-terminal-negative closure. The exact A100 CUDA runtime passed, but the full
-suite failed three frozen manifest/byte-determinism gates before any smoke
-training. The replay distinction, immutable receipt, conservative
-1,515-second / `$0.681750` cost bound, and empty Brev inventory are independently
-verified. M5 remains open; no third pilot, full CUDA, candidate, held-out,
-publication, activation, transfer, or physical work is authorized.
+`ACTIVE_LOCAL_DETERMINISM_CORRECTION` - Reviewer 031 closed the second pilot as
+terminal negative. Slice 032 may reproduce, diagnose, and minimally correct
+only its three deterministic evidence failures using local authority. No Brev
+workspace, third pilot, full CUDA, candidate, held-out, publication,
+activation, transfer, or physical work is authorized.
 
 ## Stop Conditions
 
@@ -60,5 +59,3 @@ publication, activation, transfer, or physical work is authorized.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
