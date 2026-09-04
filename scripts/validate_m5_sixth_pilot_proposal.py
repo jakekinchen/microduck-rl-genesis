@@ -16,9 +16,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PROPOSAL = ROOT / "experiments/m5/sixth-pilot-proposal-v1.json"
 SCHEMA = ROOT / "experiments/m5/sixth-pilot-proposal-v1.schema.json"
 
-EXPECTED_PROPOSAL_FILE_SHA256 = "3c6fee263bcffff8c93fc49448e68bab6fc5ac204317df61d8c799328ce03579"
-EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "ef5cdaf97fad2b41474c69d3c28c913a5c8c736f167c3a891fc69bc3d5d3a21c"
-EXPECTED_SCHEMA_FILE_SHA256 = "4c25f28d4df35a7e4707fde3370ba1e04d485df9b24e861b3bcbf45175c9a059"
+EXPECTED_PROPOSAL_FILE_SHA256 = "cca90ab98458df37668b1c8391705a196693d2ecddc4d9a349af848d37f052cc"
+EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "09f2277544dadef850fe9d3f7e71e00a7adc46f6d4aa8ed01bde3e0fede1050e"
+EXPECTED_SCHEMA_FILE_SHA256 = "dfc396e245013563814b0f908807042b9b430914cd5a7a84bf32953b75defdc2"
 
 SELECTED_TYPE = "a2-highgpu-1g:nvidia-tesla-a100:1"
 FAILED_TYPES = {
@@ -121,6 +121,7 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
     _assert(workspace["count"] == catalog["gpu_count"] == 1, "GPU/workspace count drift")
     _assert(workspace["parallel"] == 1, "parallel workspace drift")
     _assert(workspace["fallback_allowed"] is False, "fallback became allowed")
+    _assert(workspace["retry_allowed"] is False, "sixth-pilot retry became allowed")
     _assert(workspace["second_workspace_allowed"] is False, "second workspace became allowed")
     _assert(workspace["substitute_type_allowed"] is False, "substitution became allowed")
 
@@ -158,9 +159,10 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
     ):
         _assert(teardown[key] is True, f"teardown requirement disabled: {key}")
     _assert(teardown["workspace_is_non_stoppable"] is False, "stoppable workspace classification drift")
-    _assert(len(proposal["prohibited"]) == 15, "prohibition set drift")
+    _assert(len(proposal["prohibited"]) == 16, "prohibition set drift")
     _assert("hyperstack_A100_80G_retry" in proposal["prohibited"], "first failed type retry prohibition missing")
     _assert("massedcompute_A100_sxm4_80G_DGX_retry" in proposal["prohibited"], "second failed type retry prohibition missing")
+    _assert("sixth_pilot_retry" in proposal["prohibited"], "sixth-pilot retry prohibition missing")
 
     if not verify_local_inputs:
         return

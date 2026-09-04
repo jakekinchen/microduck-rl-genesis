@@ -42,7 +42,7 @@
     "preconditions_for_any_later_authorized_create": {"type": "array", "minItems": 8, "maxItems": 8},
     "failure_receipt": {"type": "object"},
     "teardown": {"type": "object"},
-    "prohibited": {"type": "array", "minItems": 15, "maxItems": 15, "uniqueItems": true},
+    "prohibited": {"type": "array", "minItems": 16, "maxItems": 16, "uniqueItems": true},
     "evidence_boundary": {"type": "string"}
   },
   "additionalProperties": false

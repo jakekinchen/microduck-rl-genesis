@@ -103,6 +103,7 @@
     "mode": "container",
     "jupyter": false,
     "fallback_allowed": false,
+    "retry_allowed": false,
     "second_workspace_allowed": false,
     "substitute_type_allowed": false
   },
@@ -208,7 +209,8 @@
     "second_workspace",
     "automatic_overspend",
     "hyperstack_A100_80G_retry",
-    "massedcompute_A100_sxm4_80G_DGX_retry"
+    "massedcompute_A100_sxm4_80G_DGX_retry",
+    "sixth_pilot_retry"
   ],
   "evidence_boundary": "At most a future separately authorized sixth pilot could prove CUDA pipeline compatibility. Catalog indicators and dry-run acceptance do not prove shell readiness. This proposal proves no CUDA smoke, M5, task, policy, candidate, held-out, publication, activation, transfer, or physical success.",
   "fifth_pilot_terminal_boundary": {

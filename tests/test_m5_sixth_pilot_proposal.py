@@ -186,6 +186,14 @@ except AssertionError as exc:
 else:
     raise AssertionError("compute_authorized=true was accepted")
 
+candidate = copy.deepcopy(proposal)
+candidate["workspace"]["retry_allowed"] = True
+rejected(candidate)
+
+candidate = copy.deepcopy(proposal)
+candidate["prohibited"].remove("sixth_pilot_retry")
+rejected(candidate)
+
 for failed_type in sorted(module.FAILED_TYPES):
     candidate = copy.deepcopy(proposal)
     candidate["catalog_snapshot"]["type"] = failed_type
@@ -201,6 +209,6 @@ assert deletion_probes >= scalar_probes
 print(
     "M5 sixth-pilot proposal fail-closed probes passed: "
     f"{scalar_probes} scalar mutations, {deletion_probes} deletions, "
-    "extra-field, explicit compute-authority, prior-type, historical-rate, "
+    "extra-field, explicit compute-authority, sixth-retry, prior-type, historical-rate, "
     "disk-threshold, and prior-alias rejection with native-name receipt self-attestation"
 )
