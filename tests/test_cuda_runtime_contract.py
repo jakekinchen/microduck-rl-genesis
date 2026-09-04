@@ -38,6 +38,7 @@ assert runtime["packages"] == {
     "torch": "2.9.1+cu128",
 }
 assert runtime["requirements_lock"]["sha256"] == sha256(LOCK)
+assert runtime["requirements_lock"]["install_torch_backend"] == "cu128"
 assert runtime["genesis_upstream"]["wheel_sha256"] == (
     "sha256:74fcece3f080d2de86a25da9c26c979c192ed4a115d556133e8103169f74b3bf"
 )
@@ -137,6 +138,7 @@ assert proposal["limits"] == {
 }
 assert proposal["runtime_contract"]["requirements_lock_sha256"] == sha256(LOCK)
 assert proposal["runtime_contract"]["runtime_contract_sha256"] == sha256(RUNTIME)
+assert proposal["runtime_contract"]["install_torch_backend"] == "cu128"
 
 receipt_manifest = ROOT / "receipts/m5/pilot/20260903T2334Z-tudexszf6/SHA256SUMS"
 assert hashlib.sha256(receipt_manifest.read_bytes()).hexdigest() == (

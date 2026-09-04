@@ -8,7 +8,10 @@ tagged wheel exposes the `RigidSolver.dyn_state` surface consumed by the source.
 Regenerate only with the command embedded in `runtime-v1.json`, then update the
 lock digest and pass `scripts/validate_cuda_runtime.py`. The lock targets Python
 3.12, glibc 2.39-compatible x86-64 wheels, and Torch cu128. Installation in an
-evidence run must use `uv pip install --require-hashes -r requirements.lock`.
+evidence run must use
+`uv pip install --torch-backend cu128 --require-hashes --strict -r requirements.lock`;
+the backend flag is the frozen package-source selection for the `+cu128`
+artifacts, not an optional accelerator preference.
 
 To reproduce the precise API boundary after downloading both named wheels, run
 `scripts/probe_genesis_runtime_wheels.py --wheel-dir <download-directory>`.

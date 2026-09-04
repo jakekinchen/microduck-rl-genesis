@@ -240,6 +240,14 @@ probe is blocked by absent QEMU. A precise second-pilot card exists only as
 `proposed_not_authorized`; independent review plus a new durable Manager
 authorization are required before any Brev creation.
 
+Reviewer 029 returned `NO-GO / REDIRECT` because the refrozen lock named
+`torch==2.9.1+cu128` while the harness install omitted the cu128 package-source
+selection. Corrective slice 030 adds `--torch-backend cu128`, schema-binds that
+install choice, and adds a standalone harness-equivalent regression using the
+exact pinned `uv==0.8.19`, Python 3.12, and `x86_64-manylinux_2_39`. The replay
+resolves all 126 hash-locked packages. This correction remains local evidence
+awaiting independent review and grants no second-pilot or broader authority.
+
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
 - [ ] Candidate comparison: five seeds per backend or a predeclared equivalent power analysis.

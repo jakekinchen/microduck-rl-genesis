@@ -30,6 +30,7 @@ REQUIRED_BINDINGS = {
     "scripts/validate_cuda_runtime.py",
     "scripts/probe_genesis_runtime_wheels.py",
     "scripts/run_m5_cuda_pilot.sh",
+    "tests/test_cuda_lock_resolution.py",
     "experiments/m5/second-pilot-proposal-v1.json",
     "experiments/m5/second-pilot-proposal-v1.schema.json",
     "validation/official-mjlab/uv.lock",
@@ -199,7 +200,7 @@ def validate_contract(
     resource = contract["resource_proposal"]
     _assert(resource["authorization"] == "proposed_second_pilot_not_authorized", "second-pilot proposal authority drift")
     _assert(resource["manager_authority"] == "docs/manager-log/006-m5-second-pilot-proposal.md", "Manager proposal binding drift")
-    _assert(resource["execution_precondition"] == "independent Reviewer GO for committed slice 029 plus new durable Manager authorization naming the exact proposal", "second-pilot review gate drift")
+    _assert(resource["execution_precondition"] == "independent Reviewer GO for committed correction through slice 030 plus new durable Manager authorization naming the exact proposal", "second-pilot review gate drift")
     _assert(resource["proposed_type"] == "hyperstack_A100_80G", "Brev resource type drift")
     _assert(resource["cloud"] == "hyperstack" and resource["provider"] == "shadeform", "Brev cloud/provider drift")
     _assert(resource["gpu"] == "1x A100 80GB", "Brev GPU drift")
@@ -221,7 +222,7 @@ def validate_contract(
     _assert(resource["provisioning"][-1] == expected_create, "digest-bound provisioning command drift")
     _assert(len(resource["pilot_contents"]) == 4, "pilot contents drift")
     _assert(len(resource["recovery_before_teardown"]) == 4, "recovery/checksum semantics drift")
-    _assert(resource["requirements"] == ["requery price and availability immediately before creation", "independent Reviewer GO for committed slice 029 and new durable Manager authorization", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or price above 1.62 USD/hour"], "second-pilot requirements drift")
+    _assert(resource["requirements"] == ["requery price and availability immediately before creation", "independent Reviewer GO for committed correction through slice 030 and new durable Manager authorization", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or price above 1.62 USD/hour"], "second-pilot requirements drift")
     _assert(resource["full_cuda_authorization_condition"] == "not eligible from slice 029; requires a separately successful reviewed second pilot and explicit later authorization", "full CUDA review gate drift")
     _assert(resource["teardown"] == ["brev delete microduck-m5-pilot2-20260903 only after verified recovery because this type is non-stoppable", "poll brev ls --json until workspaces is null; any remaining paid workspace is a blocking failure"], "teardown semantics drift")
     _assert(contract["artifacts"]["checkpoint_export_rule"].startswith("export every predetermined checkpoint"), "late export selection admitted")

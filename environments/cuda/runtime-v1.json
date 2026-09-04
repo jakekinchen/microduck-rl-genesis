@@ -56,6 +56,7 @@
   ],
   "requirements_lock": {
     "compile_command": "uv pip compile --python-platform x86_64-manylinux_2_39 --python-version 3.12 --torch-backend cu128 --generate-hashes environments/cuda/requirements.in --output-file environments/cuda/requirements.lock",
+    "install_torch_backend": "cu128",
     "path": "environments/cuda/requirements.lock",
     "sha256": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f"
   },

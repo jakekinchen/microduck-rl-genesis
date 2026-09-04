@@ -42,7 +42,7 @@
       "properties": {
         "authorization": {"const": "proposed_second_pilot_not_authorized"},
         "manager_authority": {"const": "docs/manager-log/006-m5-second-pilot-proposal.md"},
-        "execution_precondition": {"const": "independent Reviewer GO for committed slice 029 plus new durable Manager authorization naming the exact proposal"},
+        "execution_precondition": {"const": "independent Reviewer GO for committed correction through slice 030 plus new durable Manager authorization naming the exact proposal"},
         "price_snapshot_date": {"const": "2026-09-03"},
         "query": {"const": "brev search --gpu-name A100 --sort price --json"},
         "proposed_type": {"const": "hyperstack_A100_80G"},
@@ -76,7 +76,7 @@
         },
         "pilot_contents": {"const": ["record nvidia-smi, CUDA, container manifest, Python, Torch, Warp, MuJoCo, MuJoCo Warp, Genesis, and source identities", "run the full applicable repository test suite with exact BAM and official source bindings", "run frozen Genesis walking and backflip at 64 environments for 5 iterations on CUDA", "retain configs, checkpoints, normalized ONNX exports, logs, manifests, SHA256SUMS, elapsed time, and exact cost"]},
         "candidate_or_heldout_execution_authorized": {"const": false},
-        "requirements": {"const": ["requery price and availability immediately before creation", "independent Reviewer GO for committed slice 029 and new durable Manager authorization", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or price above 1.62 USD/hour"]},
+        "requirements": {"const": ["requery price and availability immediately before creation", "independent Reviewer GO for committed correction through slice 030 and new durable Manager authorization", "authenticated inventory is empty", "exactly one instance and no fallback", "abort rather than substitute H100 multi-GPU second workspace or price above 1.62 USD/hour"]},
         "provisioning": {"const": ["brev ls --json", "brev search --gpu-name A100 --sort price --json", "brev create microduck-m5-pilot2-20260903 --type hyperstack_A100_80G --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300"]},
         "recovery_before_teardown": {"const": ["inside the remote receipt root generate SHA256SUMS even on preflight or suite failure", "brev copy microduck-m5-pilot2-20260903:/workspace/receipts/m5/pilot/<run-id>/ receipts/m5/pilot/<run-id>/", "locally regenerate SHA256SUMS over the recovered files in byte-sorted relative-path order", "require exact remote/local SHA256SUMS equality and presence of every produced pilot artifact before deletion"]},
         "teardown": {"const": ["brev delete microduck-m5-pilot2-20260903 only after verified recovery because this type is non-stoppable", "poll brev ls --json until workspaces is null; any remaining paid workspace is a blocking failure"]}

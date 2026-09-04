@@ -80,6 +80,7 @@ def validate_contract(contract: dict[str, object], root: Path, check_runtime: bo
     lock_path = root / str(lock["path"])
     _assert(lock_path.is_file(), "CUDA requirements lock missing")
     _assert(lock["compile_command"] == EXPECTED_COMPILE_COMMAND, "CUDA lock compile command drift")
+    _assert(lock["install_torch_backend"] == "cu128", "CUDA install source selection drift")
     _assert(lock["sha256"] == sha256_file(lock_path), "CUDA requirements lock digest drift")
     lock_text = lock_path.read_text()
     for requirement in ("genesis-world==1.3.3", "mujoco==3.12.0", "rsl-rl-lib==5.4.2", "torch==2.9.1+cu128"):

@@ -37,7 +37,7 @@
     "workspace_count": 1
   },
   "preconditions": [
-    "independent Reviewer GO on the committed slice-029 local refreeze",
+    "independent Reviewer GO on the committed slice-030 correction including the slice-029 local refreeze",
     "new durable Manager authorization naming this exact proposal after Reviewer GO",
     "authenticated brev ls --json is empty immediately before creation",
     "catalog requery exactly matches type, provider, cloud, GPU count, architecture, stoppability, and price no greater than 1.62 USD/hour",
@@ -49,9 +49,10 @@
     "require exact remote/local manifest equality before teardown"
   ],
   "runtime_contract": {
+    "install_torch_backend": "cu128",
     "path": "environments/cuda/runtime-v1.json",
     "requirements_lock_sha256": "sha256:e813cbdaec942ad2de23d70532b664286bed4f12965f5b933dd8c9ff342b749f",
-    "runtime_contract_sha256": "sha256:039499e853a53c79abc889167b50c89b411fb08d620fb54e8bac4b2ff40a12e9"
+    "runtime_contract_sha256": "sha256:c9f64efb52d7ae0c220ff0f03c9b207af11a792251bd1eb69ef9357e1658f46d"
   },
   "schema_version": "microduck.m5-second-pilot-proposal/v1",
   "state": "proposed_not_authorized",

@@ -18,7 +18,17 @@
     "python": {"const": "3.12"},
     "torch_backend": {"const": "cu128"},
     "container": {"type": "object"},
-    "requirements_lock": {"type": "object"},
+    "requirements_lock": {
+      "type": "object",
+      "required": ["compile_command", "install_torch_backend", "path", "sha256"],
+      "properties": {
+        "compile_command": {"type": "string"},
+        "install_torch_backend": {"const": "cu128"},
+        "path": {"const": "environments/cuda/requirements.lock"},
+        "sha256": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
     "packages": {"type": "object"},
     "genesis_upstream": {"type": "object"},
     "rejected_runtime": {"type": "object"},

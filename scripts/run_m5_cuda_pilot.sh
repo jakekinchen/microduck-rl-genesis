@@ -124,7 +124,8 @@ fi
 run_logged cuda-contract-static python3 \
   "$SOURCE_ROOT/genesis-current/scripts/validate_cuda_runtime.py" --mode static
 run_logged genesis-dependencies "$UV" pip install \
-  --python "$VENV_ROOT/genesis/bin/python" --require-hashes --strict \
+  --python "$VENV_ROOT/genesis/bin/python" --torch-backend cu128 \
+  --require-hashes --strict \
   -r "$SOURCE_ROOT/genesis-current/environments/cuda/requirements.lock"
 
 run_logged official-walking-sync "$UV" sync \

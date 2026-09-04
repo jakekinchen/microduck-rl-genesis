@@ -7,7 +7,7 @@
 This entry records a proposal only. `compute_authorized=false`; it grants no
 Brev creation, training, candidate execution, held-out realization, or policy
 action. A new durable Manager authorization is required after independent
-Reviewer acceptance of slice 029.
+Reviewer acceptance of the slice-029 refreeze and slice-030 correction.
 
 ## Runtime reconciliation
 
@@ -33,6 +33,16 @@ whose full suite passes. Linux x86-64/Python 3.12/cu128 resolution produces a
 container. A local x86-64 Colima probe could not start because QEMU is absent;
 no VM was created and no dependency was installed to conceal that limitation.
 This slice can prove source/API and resolver compatibility, not CUDA execution.
+
+## Corrective source binding
+
+Reviewer 029 found that the first refreeze compiled through the cu128 source
+but did not pass that source selection during installation. Slice 030 proposes
+to correct the harness with `--torch-backend cu128`; the schema-bound runtime
+records the same choice. A dry-run using the harness-pinned `uv==0.8.19`, Python
+3.12, `x86_64-manylinux_2_39`, exact hashes, and strict mode resolves all 126
+packages including `torch==2.9.1+cu128`. This local correction does not change
+the proposal's authorization state.
 
 ## Current proposal
 
