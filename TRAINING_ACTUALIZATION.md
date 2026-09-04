@@ -351,6 +351,14 @@ field is bound by value and key coverage, and new rehashed mutation probes cover
 all reported blind spots. The working 65 / 0 / 5 inventory remains pending
 independent re-review; no artifact authority changes before acceptance.
 
+Reviewer 050 accepted the corrected 65 / 0 / 5 inventory. Slice 051 derives a
+deterministic local distribution allowlist from that accepted inventory: all 65
+complete, license-bound, byte-identical source records are included, while the
+two legacy media and three legacy ONNX files are retained but quarantined. A
+versioned archive validates byte-only and can reach `staged_not_imported`; both
+official/community ten-role policy-manifest requirements and publication stay
+open pending independent review.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.

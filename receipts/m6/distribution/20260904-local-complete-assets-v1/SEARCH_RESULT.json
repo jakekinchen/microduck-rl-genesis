@@ -1,0 +1,41 @@
+{
+  "schema_version": "microduck.m6-local-distribution-result/v1",
+  "source_revision": "c9a610b8005287dc83130660719af94f80274f67",
+  "allowlist": {
+    "path": "artifact_contract/distribution-allowlist-v1.json",
+    "sha256": "sha256:8b473f6e4f00a1a1644edbf126647d92add6082fe6cecb2d5cdd2386d67857e7"
+  },
+  "bundle": {
+    "path": "microduck-complete-assets-v1.tar.gz",
+    "sha256": "sha256:f732dcbda8a77dbe11adbfcb5b85ab4bbd11699dae885649a2357166fb73093c",
+    "size_bytes": 9272643,
+    "format": "deterministic_tar_gzip"
+  },
+  "inventory": {
+    "total_files": 70,
+    "allowlisted_complete": 65,
+    "quarantined_partial": 0,
+    "quarantined_missing": 5,
+    "fully_resolved": false
+  },
+  "verification": {
+    "retrieval": "exact_local_revision_and_digest_verified",
+    "validation": "byte_only_complete",
+    "library_stage": "staged_not_imported",
+    "official_policy_manifest": "open_no_complete_policy_manifest",
+    "community_policy_manifest": "open_no_complete_policy_manifest"
+  },
+  "actions": {
+    "policy_imported_or_parsed": false,
+    "policy_loaded": false,
+    "policy_executed": false,
+    "evaluation_performed": false,
+    "approval_requested": false,
+    "activation_authorized": false,
+    "publication_performed": false,
+    "credentials_used": false,
+    "compute_provisioned": false,
+    "hardware_action_performed": false
+  },
+  "result": "local_complete_asset_bundle_staged_publication_not_authorized"
+}

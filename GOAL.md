@@ -15,21 +15,21 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/reviewer-messages/050-m6-local-provenance-validator-correction.md` -
-Reviewer acceptance of the versioned v2 receipt, exact semantic bindings, and
-stable accepted-base history scope.
+`docs/session-logs/051-executor-m6-local-distribution-gate.md` - deterministic
+complete-file allowlist and local source/artifact bundle; independent Reviewer
+review and isolated exact-commit verification required.
 
 ## Current Status
 
-`M6_LOCAL_PROVENANCE_ARCHAEOLOGY_ACCEPTED` - Reviewer 050 accepts exact
-Executor handoff `263bbb7` from Reviewer base `18e79c6`. The rejected v1
-receipt remains unchanged; the v2 receipt binds the exact license chain, media
-records, public repositories/branches/root-only histories, meniuniu separate
-policy and evidence maps, action boundaries, and stable 150-commit ancestry of
-accepted base `321f0a9`. Independent rehashed mutations fail closed. The
-accepted inventory is 65 complete / 0 partial / 5 missing with
-`fully_resolved=false`. M6 remains open, M5 remains externally blocked, Brev is
-empty, and no candidate, compute, activation, or physical authority exists.
+`M6_LOCAL_DISTRIBUTION_REVIEW_REQUIRED` - a deterministic local bundle now
+includes only the accepted 65 complete, license-bound files and both license
+texts. The two legacy media and three legacy ONNX weights remain in the source
+tree but are quarantined from distribution. Byte-only validation reaches only
+`staged_not_imported`; official/community ten-role manifests and publication
+remain open. The accepted inventory remains 65 complete / 0 partial / 5
+missing with `fully_resolved=false`; independent review is required. M6 remains
+open, M5 remains externally blocked, Brev is empty, and no policy, compute,
+publication, activation, or physical authority exists.
 
 ## Stop Conditions
 

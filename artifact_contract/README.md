@@ -18,6 +18,13 @@ is deliberately not a policy manifest: missing roles force
 `rejected_incomplete`, `authority=none`, and no `policy-manifest-v2.json` is
 emitted. Bound upstream Python is hashed as inert data and is never imported.
 
+`distribution-allowlist-v1.json` is the local source/artifact distribution
+gate. It includes only the 65 inventory records with complete, license-bound,
+byte-identical source provenance and quarantines the five missing media/policy
+records without deleting them. Its retained deterministic archive supports
+byte-only validation and library staging; it grants no policy-manifest,
+publication, import, evaluation, approval, or activation authority.
+
 Run:
 
 ```bash
@@ -27,4 +34,5 @@ Run:
   artifact_contract/fixtures/community --source-class community
 .venv-apple/bin/python tests/test_m6_real_artifact_resolution.py
 .venv-apple/bin/python scripts/verify_m6_real_candidate_downloads.py
+.venv-apple/bin/python scripts/validate_m6_distribution_bundle.py
 ```
