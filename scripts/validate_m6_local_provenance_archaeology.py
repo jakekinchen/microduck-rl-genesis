@@ -12,7 +12,7 @@ sys.path.insert(0, os.fspath(ROOT))
 
 from artifact_contract.local_provenance_archaeology import validate_local_provenance_archaeology
 
-RECEIPT = ROOT / "receipts/m6/provenance/20260904-local-provenance-archaeology"
+RECEIPT = ROOT / "receipts/m6/provenance/20260904-local-provenance-archaeology-v2"
 
 
 if __name__ == "__main__":

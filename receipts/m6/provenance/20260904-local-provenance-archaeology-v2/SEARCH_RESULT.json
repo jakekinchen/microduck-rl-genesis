@@ -1,0 +1,44 @@
+{
+  "schema_version": "microduck.m6-local-provenance-archaeology/v2",
+  "audited_on": "2026-09-04",
+  "correction_base": "18e79c6a727d503cb03e30ff90c7708b95ab0b9c",
+  "history_base": "321f0a9396b7596e62a0834d79c167a9fe8ce32a",
+  "result": "ball_source_resolved_five_files_still_missing",
+  "ball": {
+    "path": "microduck/assets/microduck/ball.xml",
+    "old_status": "partial",
+    "new_status": "complete",
+    "source_revision": "84790795a6647f7dbd2353f53f7263229d7b7051",
+    "source_path": "src/mjlab_microduck/robot/microduck/ball.xml",
+    "byte_identical": true,
+    "sha256": "54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865",
+    "license_declaration_revision": "fc1697699c478ed4f67373808a23caccc6bed785",
+    "later_upstream_change": "7831c5142f93cc863327ae607bf0d262d127c767"
+  },
+  "unresolved": {
+    "demo/apercu.gif": "missing: production source receipt, file-level media license, and digest-bound depicted-asset attribution",
+    "demo/microduck-parcours-30s.mp4": "missing: production source receipt, file-level media license, and digest-bound depicted-asset attribution",
+    "policies/backlash.onnx": "missing: source checkpoint, training run, exporter invocation, normalizer provenance, and file-level policy license",
+    "policies/rough.onnx": "missing: source checkpoint, training run, exporter invocation, normalizer provenance, and file-level policy license",
+    "policies/velocity.onnx": "missing: source checkpoint, training run, exporter invocation, normalizer provenance, and file-level policy license"
+  },
+  "inventory_after": {
+    "total_files": 70,
+    "complete": 65,
+    "partial": 0,
+    "missing": 5,
+    "fully_resolved": false
+  },
+  "actions": {
+    "target_artifact_downloaded": false,
+    "onnx_imported_or_parsed": false,
+    "onnx_loaded": false,
+    "policy_executed": false,
+    "evaluation_performed": false,
+    "training_performed": false,
+    "publication_performed": false,
+    "activation_performed": false,
+    "compute_provisioned": false,
+    "credentials_used": false
+  }
+}

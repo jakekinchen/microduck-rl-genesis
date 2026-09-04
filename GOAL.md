@@ -15,19 +15,19 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/reviewer-messages/049-m6-local-provenance-archaeology.md` - Reviewer
-NUDGE requiring fail-closed semantic receipt bindings and a stable exact
-history scope before the local provenance archaeology can be accepted.
+`docs/session-logs/050-executor-m6-local-provenance-validator-correction.md` -
+versioned v2 receipt with exact semantic bindings and stable accepted-base
+history scope; independent Reviewer re-review required.
 
 ## Current Status
 
-`M6_LOCAL_PROVENANCE_ARCHAEOLOGY_NUDGE_REQUIRED` - Reviewer 049 independently
-confirmed the ball source/license chain and five terminal negatives but did
-not accept handoff `69c89263ee77655eebe17d0292d8c6eec4baa4f2`. The new validator
-accepts critical license, remote-coverage, and media mutations after manifest
-rehashing, and the 153-commit scope includes transient Codex refs not named by
-the receipt. The working inventory is 65 complete / 0 partial / 5 missing; the
-last accepted inventory remains 64 / 1 / 5 until correction and re-review. M6
+`M6_LOCAL_PROVENANCE_CORRECTION_REVIEW_REQUIRED` - Reviewer 049's factual
+archaeology remains substantiated. A preserved versioned v2 receipt now binds
+the exact license chain, media digests, public repositories/branches/history,
+separate-policy identity/disposition, evidence-map coverage, and exact 150-
+commit ancestry of accepted base `321f0a9`; all reported counterexample
+mutations fail closed. The working inventory is 65 complete / 0 partial / 5
+missing; the last accepted inventory remains 64 / 1 / 5 until re-review. M6
 remains open, M5 remains externally blocked, Brev is empty, and no candidate,
 compute, activation, or physical authority exists.
 

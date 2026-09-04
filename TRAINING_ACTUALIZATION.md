@@ -343,6 +343,14 @@ checkpoint/run/export/normalizer/evidence or file-level license authority for
 the two demo files or three original ONNX policies. Those five remain missing,
 M6 remains open, and no policy action was performed.
 
+Reviewer 049 substantiated those facts but withheld acceptance because the v1
+validator did not bind several material license/remote/media fields and its
+153-commit scope included transient refs. Slice 050 preserves that receipt and
+adds a corrected v2: exact accepted-base ancestry is 150 commits, every decision
+field is bound by value and key coverage, and new rehashed mutation probes cover
+all reported blind spots. The working 65 / 0 / 5 inventory remains pending
+independent re-review; no artifact authority changes before acceptance.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.
