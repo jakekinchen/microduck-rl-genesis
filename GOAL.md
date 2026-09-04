@@ -15,10 +15,9 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/038-m5-fifth-pilot-replacement-provider-proposal.md` -
-Reviewer NUDGE requires a fifth-specific cost-bound harness and correction of
-stale fourth-pilot authority text. No compute authority or paid execution is
-active.
+`docs/briefs/039-m5-fifth-pilot-cost-binding-correction.md` - Executor
+correction of Reviewer 038's cost-binding and stale-authority findings. No
+compute authority or paid execution is active.
 
 ## Current Status
 
@@ -62,5 +61,3 @@ re-review are required; no compute authority is active.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
