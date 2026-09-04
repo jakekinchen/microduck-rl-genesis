@@ -15,31 +15,31 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/042-m5-sixth-pilot-replacement-provider-proposal.md` - local-only
-sixth-pilot replacement-provider proposal after accepted fifth-pilot terminal
-failure. No compute authority or paid execution is active.
+`docs/briefs/042-m5-sixth-pilot-replacement-provider-proposal.md` - Executor
+proposal committed at `ae3729f`; independent Reviewer decision required. No
+compute authority or paid execution is active.
 
 ## Current Status
 
-`SIXTH_PILOT_REPLACEMENT_PROPOSAL_IN_PROGRESS` - investigate and freeze one
-different single-A100 provider/type with stronger catalog-visible connectivity
-and recovery indicators. This slice is proposal-only;
-`compute_authorized=false` and no paid execution is authorized.
+`SIXTH_PILOT_REPLACEMENT_PROPOSAL_REVIEW_REQUIRED` - exact proposal SHA-256
+`3c6fee263bcffff8c93fc49448e68bab6fc5ac204317df61d8c799328ce03579`
+is fail-closed and locally validated for direct GCP A100 type
+`a2-highgpu-1g:nvidia-tesla-a100:1`, with `compute_authorized=false`.
+Independent review is required; no compute authority is active.
 
 ## Stop Conditions
 
-- Do not provision from consumed Manager authorizations 007, 009, or 010.
-  Authorization 010 was consumed by its one terminal fourth-pilot workspace.
+- Do not provision from consumed Manager authorizations 007, 009, 010, or 011.
+  Authorization 011 was consumed by its one terminal fifth-pilot workspace.
   No fallback, substitute, second workspace, or retry is authorized.
-- For the proposed fifth pilot only, stop at two hours or `$3.312`, whichever
+- For the proposed sixth pilot only, stop at two hours or `$8.816124`, whichever
   occurs first, and stop immediately on source/image drift, hardware/runtime
   integrity failure, receipt loss, or a second-workspace requirement. This is
   a proposed limit, not compute authority.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
-- Do not retry the fourth pilot. This slice permits only a new
-  replacement-provider proposal; any compute requires independent acceptance
-  and a fresh exact Manager authorization.
+- Do not retry the fourth or fifth pilot types. Any sixth-pilot compute requires
+  independent proposal acceptance and a fresh exact Manager authorization.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -47,23 +47,30 @@ and recovery indicators. This slice is proposal-only;
 
 ## Human Constraints
 
-- Manager logs 009 and 010 were one-use authorities. They were consumed by
+- Manager logs 009, 010, and 011 were one-use authorities. They were consumed by
   terminal receipts `20260904T030457Z-4qe7ph6p7` and
-  `20260904T044136Z-tpo91g7kj` and cannot be reused.
+  `20260904T044136Z-tpo91g7kj`, then terminal receipt
+  `20260904T055749Z-i1bsb56r7`; none can be reused.
 - Historical fourth-pilot constraint only: `hyperstack_A100_80G` was selected
   at `$1.62/hour` with a two-hour / `$3.24` ceiling. That authorization is
   consumed; do not retry this type under the fifth-pilot proposal.
 - The proposed fifth-pilot replacement is exactly
   `massedcompute_A100_sxm4_80G_DGX` at `$1.656/hour`, non-stoppable and
-  non-rebootable, with a two-hour / `$3.312` ceiling. It requires independent
-  proposal acceptance and fresh exact Manager authority before creation. After
-  verified receipt recovery and independent checksums, delete its exact ID and
-  confirm the authenticated Brev inventory is empty.
-- The previously proposed 104-GPU-hour / $210 full CUDA envelope is inactive
-  after the terminal-negative review. No H100, multi-GPU, second workspace, or
+  non-rebootable. That type failed before shell readiness under consumed
+  authority 011 and cannot be retried.
+- The proposed sixth-pilot replacement is exactly direct GCP type
+  `a2-highgpu-1g:nvidia-tesla-a100:1` at `$4.408062/hour`, stoppable with
+  flexible ports, one A100 40 GB, and a two-hour / `$8.816124` ceiling. Its
+  catalog target disk is only 10 GB, so at least 8 GiB free must be verified
+  before upload and again before install. Catalog indicators do not prove shell
+  readiness. Fresh exact Manager authority is required before creation.
+- The `$210` total CUDA envelope remains a planning ceiling, not active compute
+  authority. No H100, multi-GPU, second workspace, fallback, substitution, or
   automatic overspend.
 - Publication is limited to reviewed immutable artifacts required by this
   program. Policy activation and physical operation remain gated actions, not
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
