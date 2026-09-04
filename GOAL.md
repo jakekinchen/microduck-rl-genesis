@@ -15,17 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/040-m5-fifth-pilot-harness-self-attestation.md` -
-Reviewer acceptance of exact handoff `9af3634`; stopped at the fresh Manager
-authority boundary. No compute authority or paid execution is active.
+`docs/briefs/041-m5-fifth-cuda-pilot.md` - consume Manager authority 011 once
+for the exact bounded fifth CUDA pilot, then recover evidence, tear down the
+exact workspace, and obtain independent review.
 
 ## Current Status
 
-`FIFTH_PILOT_PROPOSAL_ACCEPTED_MANAGER_AUTHORITY_REQUIRED` - Reviewer 040
-accepted exact handoff `9af3634` and proposal SHA-256
-`1d27fd55dee168fcf4f54f38432b2bad65a067aef8f821c4e1746a2afaeca4b1`.
-The proposal is eligible only for a fresh exact committed Manager decision;
-`compute_authorized=false` and no paid execution is active.
+`FIFTH_PILOT_MANAGER_AUTHORITY_COMMIT_REQUIRED` - Manager authority 011 binds
+the exact accepted proposal and one-use paid-compute envelope. It becomes
+usable only after the Manager record is committed; the proposal itself remains
+`compute_authorized=false`.
 
 ## Stop Conditions
 
@@ -68,5 +67,3 @@ The proposal is eligible only for a fresh exact committed Manager decision;
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
