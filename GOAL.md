@@ -15,19 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/031-m5-second-cuda-pilot.md` - Executor-complete terminal-negative
-second pilot awaiting independent Reviewer decision.
+`docs/briefs/031-m5-second-cuda-pilot.md` - Reviewer-closed terminal-negative
+second pilot; no successor compute or evaluation slice is authorized.
 
 ## Current Status
 
-`REVIEW_REQUIRED_TERMINAL_NEGATIVE` - the exact A100 CUDA runtime passed, but
-the full suite failed three frozen manifest/byte-determinism gates before any
-smoke training. A Brev exec reconnect replay was interrupted before its suite
-and overwrote terminal/cost metadata in the same self-consistent receipt;
-Manager reconciliation 008 records the authoritative create-to-empty bound.
-The recovered receipt is independently checksummed and authenticated Brev
-inventory is empty. No third pilot, full CUDA, candidate, or held-out work is
-authorized pending independent review and a later separate Manager decision.
+`STOPPED_TERMINAL_NEGATIVE` - Reviewer 031 accepts commit `5f86bf5` only as
+terminal-negative closure. The exact A100 CUDA runtime passed, but the full
+suite failed three frozen manifest/byte-determinism gates before any smoke
+training. The replay distinction, immutable receipt, conservative
+1,515-second / `$0.681750` cost bound, and empty Brev inventory are independently
+verified. M5 remains open; no third pilot, full CUDA, candidate, held-out,
+publication, activation, transfer, or physical work is authorized.
 
 ## Stop Conditions
 
@@ -36,9 +35,9 @@ authorized pending independent review and a later separate Manager decision.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
-- Do not begin the full CUDA seed matrix until a separately reviewed Linux
-  runtime reconciliation/refreeze closes the terminal incompatibility and a
-  new durable authorization explicitly reopens compute.
+- Do not begin the full CUDA seed matrix until a separately reviewed local
+  correction closes all three deterministic suite failures and a new durable
+  Manager authorization explicitly reopens compute.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -47,8 +46,9 @@ authorized pending independent review and a later separate Manager decision.
 ## Human Constraints
 
 - The Manager authorization dated 2026-09-03 was consumed by the completed
-  terminal-negative pilot; it does not authorize a second workspace. The new
-  proposal requires a fresh durable authorization after independent review.
+  terminal-negative pilot; it does not authorize a third pilot or another
+  workspace. Any later paid-compute proposal requires a fresh durable Manager
+  authorization after independent local correction review.
 - Prefer `hyperstack_A100_80G` at the current $1.62/hour snapshot. It is
   non-stoppable: after verified artifact recovery and independent checksums,
   delete it and confirm the authenticated Brev inventory is empty.
