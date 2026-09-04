@@ -15,26 +15,27 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/030-m5-cu128-install-source-correction.md` - Executor-complete
-bounded correction awaiting independent Reviewer decision.
+`docs/reviewer-messages/030-m5-cu128-install-source-correction.md` - reviewed
+GO for the bounded local correction only; no Executor slice is active.
 
 ## Current Status
 
-`REVIEW_REQUIRED` - Executor 030 adds explicit cu128 package-source selection
-to the harness and a pinned-uv linux/amd64 dry-run regression that resolves all
-126 frozen packages. Cascading runtime, proposal, and M5 hashes are refrozen.
-This is local resolver evidence, not CUDA execution proof. The second-pilot
-card remains proposed and not authorized; no paid compute, candidate work,
-held-out realization, or accepted receipt mutation is authorized.
+`STOPPED_REVIEW_GO` - Reviewer 030 accepted the exact cu128 package-source
+correction and cascading refreeze as local resolver evidence. The pinned-uv
+linux/amd64 dry-run resolves all 126 frozen packages, while the matching
+no-backend control reproduces Reviewer 029's failure. This is not CUDA
+execution proof. No second pilot is authorized; a new durable Manager
+authorization naming the exact proposal is still required before any Brev
+creation. Candidate work, held-out realization, and accepted receipt mutation
+remain unauthorized.
 
 ## Stop Conditions
 
 - Do not provision another Brev workspace or begin full CUDA work from Reviewer
-  028 or slice 029; Reviewer 028's `GO` applies only to terminal-negative
-  closure and slice 029 is local-only.
-- Do not run the proposed second pilot until a fresh Reviewer accepts the
-  corrected exact dependency replay and a new durable Manager authorization
-  names the exact proposal.
+  030; its `GO` accepts only the local source-selection correction and refreeze.
+- Do not run the proposed second pilot until a new durable Manager
+  authorization names the exact committed proposal. Reviewer 030's `GO` is
+  necessary but not sufficient execution authority.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
