@@ -32,6 +32,9 @@ FILES = (
 )
 DETERMINISTIC_OFFSCREEN_SAMPLES = 1
 DETERMINISTIC_SYNTHETIC_LATENCY_MS = 0.0
+DETERMINISTIC_X264_PARAMS = (
+    "threads=1:lookahead_threads=1:sliced_threads=0:sync-lookahead=0"
+)
 
 
 def parquet_table(rows: list[dict[str, Any]]) -> pa.Table:
@@ -85,6 +88,9 @@ def write_video(frames: list[np.ndarray], path: Path) -> None:
         ffmpeg_log_level="error",
         output_params=[
             "-threads", "1",
+            "-fflags", "+bitexact",
+            "-flags:v", "+bitexact",
+            "-x264-params", DETERMINISTIC_X264_PARAMS,
             "-map_metadata", "-1",
             "-metadata", "creation_time=",
             "-metadata", "encoder=microduck-evaluator",

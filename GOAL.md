@@ -16,17 +16,18 @@ M5 Linux CUDA runtime reconciliation
 ## Current Slice
 
 `docs/briefs/035-m5-evaluator-bundle-determinism.md` - diagnose and correct the
-single same-host five-file evaluator-bundle hash mismatch locally, preserve all
-evidence and experiment freezes, then obtain independent review.
+single same-host five-file evaluator-bundle hash mismatch locally; correction
+and stress evidence are ready for independent review.
 
 ## Current Status
 
-`LOCAL_EVALUATOR_BUNDLE_DETERMINISM_CORRECTION_ACTIVE` - Reviewer 034 accepted
-the third-pilot receipt only as terminal-negative evidence and permits this
-local no-paid-compute diagnostic slice. The target is the sole same-host
-five-file hash mismatch at `test_evaluator_bundle.py:69`; accepted receipts,
-truthful provenance, five-file completeness, and all model/evaluator/M5 freezes
-remain immutable.
+`LOCAL_EVALUATOR_BUNDLE_DETERMINISM_CORRECTION_REVIEW_REQUIRED` - exact
+per-file A100 attribution remains unavailable because the temporary bundles
+were discarded. Fail-closed per-file/byte/JSON/Parquet/video/attestation
+diagnostics now exist, and the MP4 producer uses FFmpeg bit-exact muxer/codec
+flags plus explicit single-thread x264 ordering. Six-run and separate-process
+stress, focused authority tests, and the full suite pass; accepted receipts and
+all model/evaluator/M5 freezes remain unchanged.
 
 ## Stop Conditions
 
@@ -65,3 +66,5 @@ remain immutable.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
+
+<stop-orchestrator/>
