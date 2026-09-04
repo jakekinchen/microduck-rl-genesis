@@ -15,27 +15,22 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/030-m5-cu128-install-source-correction.md` - reviewed
-GO for the bounded local correction only; no Executor slice is active.
+`docs/briefs/031-m5-second-cuda-pilot.md` - active bounded second-pilot
+execution under Manager authorization 007 and Reviewer 030.
 
 ## Current Status
 
-`STOPPED_REVIEW_GO` - Reviewer 030 accepted the exact cu128 package-source
-correction and cascading refreeze as local resolver evidence. The pinned-uv
-linux/amd64 dry-run resolves all 126 frozen packages, while the matching
-no-backend control reproduces Reviewer 029's failure. This is not CUDA
-execution proof. No second pilot is authorized; a new durable Manager
-authorization naming the exact proposal is still required before any Brev
-creation. Candidate work, held-out realization, and accepted receipt mutation
-remain unauthorized.
+`AUTHORIZED_SECOND_PILOT_ACTIVE` - Manager authorization 007 opens exactly the
+independently reviewed second-pilot proposal after Reviewer 030 accepted the
+cu128 correction. One named A100 workspace, the full applicable suite, and four
+64x5 public-development smokes are authorized within two hours/$3.24. Candidate
+work, held-out realization, the full CUDA matrix, publication, activation,
+transfer, physical work, and any second workspace remain unauthorized.
 
 ## Stop Conditions
 
-- Do not provision another Brev workspace or begin full CUDA work from Reviewer
-  030; its `GO` accepts only the local source-selection correction and refreeze.
-- Do not run the proposed second pilot until a new durable Manager
-  authorization names the exact committed proposal. Reviewer 030's `GO` is
-  necessary but not sufficient execution authority.
+- Do not provision more than the one exact second-pilot workspace or begin full
+  CUDA work from this authorization.
 - Stop the paid pilot at two hours or $3.24, whichever occurs first, and stop
   immediately on source/image drift, hardware/runtime integrity failure,
   receipt loss, or a second-workspace requirement.
@@ -63,5 +58,3 @@ remain unauthorized.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
