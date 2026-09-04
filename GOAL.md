@@ -15,20 +15,21 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/session-logs/049-executor-m6-local-provenance-archaeology.md` - exact
-public `ball.xml` source-chain closure plus terminal history/remote archaeology
-for the five remaining missing files; independent Reviewer decision required.
+`docs/reviewer-messages/049-m6-local-provenance-archaeology.md` - Reviewer
+NUDGE requiring fail-closed semantic receipt bindings and a stable exact
+history scope before the local provenance archaeology can be accepted.
 
 ## Current Status
 
-`M6_LOCAL_PROVENANCE_ARCHAEOLOGY_REVIEW_REQUIRED` - local `ball.xml` is
-byte-identical to public official source commit `84790795...`; its apparent
-`109e06d...` mismatch is a later upstream-only contact-priority change, not an
-unexplained local transform. The two media and three original policy files have
-no digest-bound production/source/license authority in reachable history or
-anonymous immutable remotes and remain missing. Inventory is 65 complete / 0
-partial / 5 missing. M6 remains open, M5 remains externally blocked, Brev is
-empty, and no candidate, compute, activation, or physical authority exists.
+`M6_LOCAL_PROVENANCE_ARCHAEOLOGY_NUDGE_REQUIRED` - Reviewer 049 independently
+confirmed the ball source/license chain and five terminal negatives but did
+not accept handoff `69c89263ee77655eebe17d0292d8c6eec4baa4f2`. The new validator
+accepts critical license, remote-coverage, and media mutations after manifest
+rehashing, and the 153-commit scope includes transient Codex refs not named by
+the receipt. The working inventory is 65 complete / 0 partial / 5 missing; the
+last accepted inventory remains 64 / 1 / 5 until correction and re-review. M6
+remains open, M5 remains externally blocked, Brev is empty, and no candidate,
+compute, activation, or physical authority exists.
 
 ## Stop Conditions
 
