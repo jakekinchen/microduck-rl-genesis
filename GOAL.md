@@ -15,23 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/032-m5-deterministic-evidence-correction.md` - Reviewer NUDGE at
-`docs/reviewer-messages/032-m5-deterministic-evidence-correction.md`; one
-bounded compiled-manifest canonicalization correction is required.
+`docs/briefs/032-m5-deterministic-evidence-correction.md` - active bounded
+follow-up to Reviewer 032, limited to the compiled-manifest canonicalization
+scope and its negative regression.
 
 ## Current Status
 
-`NUDGE_REQUIRED_LOCAL_DETERMINISM_CORRECTION` - implementation `bac0375`
-passes the focused and full local authority suites, and its evaluator-report
-and development-bundle corrections satisfy their bounded gates. It is not yet
-accepted because compiled-model canonicalization rounds every manifest float
-rather than only the measured mesh-inertia tails, allowing unapproved
-non-inertia floating drift to be masked. The accepted receipts, frozen
-evaluator core, and M5 experiment freeze remain unchanged. The separate
-third-pilot card remains `compute_authorized=false`; no Brev workspace, third
-pilot, full CUDA, candidate, held-out, publication, activation, transfer, or
-physical work is authorized pending a bounded implementation correction,
-another independent review, and any later exact Manager decision.
+`ACTIVE_REVIEWER_NUDGE_CORRECTION` - narrow the 14-significant-digit projection
+to `bodies[*].inertia_kg_m2` only and prove every non-inertia field remains
+exact. The accepted evaluator-report and bundle changes are otherwise frozen
+for this follow-up. The accepted receipts, evaluator core, M5 experiment
+freeze, and `compute_authorized=false` proposal remain unchanged; no Brev or
+downstream authority is opened.
 
 ## Stop Conditions
 
@@ -65,5 +60,3 @@ another independent review, and any later exact Manager decision.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
