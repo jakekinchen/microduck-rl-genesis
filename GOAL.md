@@ -15,19 +15,17 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/035-m5-evaluator-bundle-determinism.md` - accepted by Reviewer
-035 as a local producer-determinism correction with unchanged receipts and
-evidence boundaries; workflow stopped before any separate proposal slice.
+`docs/briefs/036-m5-fourth-pilot-proposal-refreeze.md` - bounded local-only
+proposal/refreeze slice opened after Reviewer 035 acceptance; no compute
+authority or paid execution is active.
 
 ## Current Status
 
-`LOCAL_EVALUATOR_BUNDLE_DETERMINISM_CORRECTION_ACCEPTED` - Reviewer 035
-accepted Executor commit `4a743bb` with no correction. Exact A100 per-file
-attribution remains unavailable; the accepted result is a local diagnostic and
-FFmpeg producer-boundary correction only. Independent six-run and
-separate-process stress, focused authority tests, full suite, receipt
-immutability, branch hygiene, and empty Brev inventory all pass. M5 remains
-open and no fourth-pilot proposal or compute authority is active.
+`FOURTH_PILOT_PROPOSAL_REFREEZE_IN_PROGRESS` - drafting a machine-validated,
+fail-closed proposal that binds accepted correction `4a743bb`, Reviewer/HEAD
+`7bc61d5`, exact inputs, one A100 envelope, suite-first execution, receipt and
+teardown rules, and `compute_authorized=false`. No fourth pilot or compute
+authority is active.
 
 ## Stop Conditions
 
@@ -40,10 +38,9 @@ open and no fourth-pilot proposal or compute authority is active.
   receipt loss, or a second-workspace requirement.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
-- Do not run a fourth pilot. Reviewer 034 permits only a local,
-  no-paid-compute diagnostic/correction slice followed by independent review;
-  any later compute would require a separate proposal and fresh Manager
-  authorization.
+- Do not run a fourth pilot. Reviewer 035 permits this separate local-only
+  proposal slice, but any later compute requires independent acceptance of the
+  exact proposal and a fresh, exact Manager authorization.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -66,5 +63,3 @@ open and no fourth-pilot proposal or compute authority is active.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
