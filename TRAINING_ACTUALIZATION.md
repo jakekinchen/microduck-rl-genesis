@@ -380,6 +380,15 @@ but unauthorized source/Hugging Face publication plan, and a repo-owned closure
 audit finding no honest local substitute. Pending review, the next boundary is
 external input, third-party contact, or human-authorized public release.
 
+On 2026-09-04, the project owner explicitly authorized only the prepared Pollen
+Robotics request. It was posted by `jakekinchen` as
+`https://github.com/pollen-robotics/microduck_rl/issues/40`; the checksummed
+contact receipt binds the destination, timestamp, authenticated identity, exact
+sent-body digest, and unchanged source-draft digest. A response is pending. This
+contact closes no official role, the official candidate remains 2/10, the
+community candidate remains 6/10, and the community request remains unsent. No
+artifact was published, imported, parsed, evaluated, approved, or activated.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.

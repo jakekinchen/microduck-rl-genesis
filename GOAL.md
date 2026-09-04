@@ -21,17 +21,20 @@ M6 immutable attributable artifacts
 
 ## Current Status
 
-`M6_EXTERNAL_AUTHORITY_REQUIRED_STOP` — local work has reached an external
-authority boundary.
+`M6_EXTERNAL_AUTHORITY_RESPONSE_PENDING` — the authorized official request is
+public and awaits an upstream response.
 
 - M5 is blocked after four distinct Brev provider/type provisioning failures.
 - M6 has an accepted deterministic 65-file bundle, but the official candidate
   is missing 8 of 10 roles and the community candidate is missing 4 of 10.
 - Five legacy files remain quarantined.
-- Brev is empty, and no contact, publication, policy, compute, activation, or
-  physical action is authorized or in progress.
-- Resume only when the user supplies immutable upstream inputs or explicitly
-  authorizes a named contact or publication action and destination.
+- The official request was posted as Pollen Robotics GitHub issue 40; its
+  checksummed contact receipt records the exact body, identity, destination,
+  and timestamp. No role is closed and a response is pending.
+- The community request remains unsent. Brev is empty, and no publication,
+  policy, compute, activation, or physical action is authorized or in progress.
+- Resume artifact resolution only when upstream supplies immutable inputs. Any
+  additional contact or publication action still requires exact authority.
 
 ## Task List
 
