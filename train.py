@@ -35,6 +35,15 @@ def _physics_backend(name: str):
     return {"metal": gs.metal, "cpu": gs.cpu, "gpu": gs.gpu}[name]
 
 
+def _init_genesis(physics_name: str, seed: int) -> None:
+    """Seed Genesis before any environment or policy object is constructed."""
+    gs.init(
+        backend=_physics_backend(physics_name),
+        logging_level="warning",
+        seed=seed,
+    )
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("-e", "--exp-name", default=None)
@@ -77,7 +86,7 @@ def main():
     if args.learner_device == "mps" and not torch.backends.mps.is_available():
         raise RuntimeError("PPO sur MPS requis, mais torch.backends.mps.is_available() est faux")
 
-    gs.init(backend=_physics_backend(physics_name), logging_level="warning")
+    _init_genesis(physics_name, args.seed)
     if physics_name == "metal" and gs.backend != gs.metal:
         raise RuntimeError(f"physique Metal requise, backend obtenu: {gs.backend}")
     if physics_name == "cpu" and gs.backend != gs.cpu:

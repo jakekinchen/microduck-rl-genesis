@@ -107,12 +107,21 @@ class OnnxPolicy:
 
 
 class EvaluatorCore:
-    def __init__(self, policy_path: Path, bam_repo: Path, task_id: str):
+    def __init__(
+        self,
+        policy_path: Path,
+        bam_repo: Path,
+        task_id: str,
+        proof_class: str = "infrastructure_only",
+    ):
         self.config = json.loads(CONFIG_PATH.read_text())
         self._validate_static_config()
         if task_id not in self.config["tasks"]:
             raise EvaluationError(f"unsupported task: {task_id}")
         self.task_id = task_id
+        if proof_class not in {"infrastructure_only", "first_party_development"}:
+            raise EvaluationError(f"unsupported proof class: {proof_class}")
+        self.proof_class = proof_class
         self.task_cfg = self.config["tasks"][task_id]
         self.task_path = ROOT / self.task_cfg["task_contract"]
         self.model_lock_path = ROOT / self.task_cfg["model_lock"]
@@ -265,6 +274,8 @@ class EvaluatorCore:
     ) -> tuple[dict[str, Any], list[dict[str, Any]], list[np.ndarray]]:
         if case["task_id"] != self.task_id:
             raise EvaluationError("case task mismatch")
+        if self.proof_class == "first_party_development" and "synthetic_inference_latency_ms" in case:
+            raise EvaluationError("first-party learned-policy reports require measured inference latency")
         self.reset(case["root_xyz_m"], case["root_quaternion_wxyz"])
         initial_offset = np.asarray(
             case.get("initial_joint_offset_rad", [0.0] * 14), dtype=np.float64
@@ -291,6 +302,7 @@ class EvaluatorCore:
             if not np.isfinite(synthetic_latency_ms) or synthetic_latency_ms < 0.0:
                 raise EvaluationError("invalid synthetic inference latency")
         policy_calls = 0
+        measured_latencies_ms: list[float] = []
         records = []
         rows: list[dict[str, Any]] = []
         frames: list[np.ndarray] = []
@@ -321,6 +333,7 @@ class EvaluatorCore:
                     if not np.isfinite(observation).all():
                         raise EvaluationError("non-finite observation")
                     action, latency_ms = self.policy.infer(observation)
+                    measured_latencies_ms.append(latency_ms)
                     if synthetic_latency_ms is not None:
                         latency_ms = synthetic_latency_ms
                     deadline_misses += int(latency_ms > deadline_ms)
@@ -384,18 +397,21 @@ class EvaluatorCore:
         trajectory = np.asarray(records, dtype="<f8")
         trajectory_digest = "sha256:" + hashlib.sha256(trajectory.tobytes(order="C")).hexdigest()
         case_key = f"{case['case_id']}\0{case['seed']}".encode()
-        classification = "infrastructure_pass"
+        prefix = "development" if self.proof_class == "first_party_development" else "infrastructure"
+        classification = f"{prefix}_completed"
+        if self.proof_class == "infrastructure_only":
+            classification = "infrastructure_pass"
         joint_margin_threshold = case.get("joint_margin_min_rad")
         if terminated_step is not None:
-            classification = "infrastructure_terminated"
+            classification = f"{prefix}_terminated"
         elif joint_margin_threshold is not None and min_joint_margin_rad < float(joint_margin_threshold):
-            classification = "infrastructure_joint_margin_violation"
+            classification = f"{prefix}_joint_margin_violation"
         elif deadline_misses:
-            classification = "infrastructure_deadline_miss"
+            classification = f"{prefix}_deadline_miss"
         report = {
             "schema_version": "microduck.evaluator-report/v1",
             "evaluator_id": self.config["evaluator_id"],
-            "proof_class": "infrastructure_only",
+            "proof_class": self.proof_class,
             "classification": classification,
             "task_success": "not_evaluated",
             "held_out": False,
@@ -439,8 +455,24 @@ class EvaluatorCore:
                 "onnxruntime": ort.__version__,
                 "numpy": importlib.metadata.version("numpy"),
             },
-            "evidence_boundary": "Synthetic zero-policy plumbing proof only; no walking/backflip success, held-out result, transfer, or physical authority.",
+            "evidence_boundary": (
+                "First-party learned-policy execution on visible development cases only; "
+                "not gait success, held-out acceptance, transfer, or physical authority."
+                if self.proof_class == "first_party_development"
+                else "Synthetic zero-policy plumbing proof only; no walking/backflip success, held-out result, transfer, or physical authority."
+            ),
         }
+        if self.proof_class == "first_party_development":
+            latency = np.asarray(measured_latencies_ms, dtype=np.float64)
+            report["integrity"]["deadline_latency_source"] = "measured_wall_clock"
+            report["integrity"]["measured_inference_latency_ms"] = {
+                "count": int(latency.size),
+                "minimum": float(latency.min()),
+                "maximum": float(latency.max()),
+                "mean": float(latency.mean()),
+                "p50": float(np.percentile(latency, 50)),
+                "p95": float(np.percentile(latency, 95)),
+            }
         if synthetic_latency_ms is not None:
             report["integrity"]["deadline_latency_source"] = "synthetic_case_fixture"
         if any(

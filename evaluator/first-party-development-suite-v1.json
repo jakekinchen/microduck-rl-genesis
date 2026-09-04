@@ -1,0 +1,37 @@
+{
+  "schema_version": "microduck.first-party-evaluator-suite/v1",
+  "suite_id": "microduck.walking-first-party-visible-development.v1",
+  "visibility": "public-development",
+  "held_out": false,
+  "task_id": "microduck.walking.v1",
+  "proof_class": "first_party_development",
+  "required_policy_origin": "first_party_local_from_scratch",
+  "cases": [
+    {
+      "case_id": "first-party-development.home-stand.v1",
+      "seed": 74101,
+      "physics_steps": 400,
+      "root_xyz_m": [0.0, 0.0, 0.125],
+      "root_quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "twist_command": [0.0, 0.0, 0.0],
+      "head_command": [0.0, 0.0, 0.0, 0.0],
+      "body_command": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    {
+      "case_id": "first-party-development.command-sequence.v1",
+      "seed": 74102,
+      "physics_steps": 400,
+      "root_xyz_m": [0.0, 0.0, 0.125],
+      "root_quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "head_command": [0.0, 0.0, 0.0, 0.0],
+      "body_command": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      "twist_schedule": [
+        {"control_step": 0, "value": [0.0, 0.0, 0.0]},
+        {"control_step": 20, "value": [0.2, 0.0, 0.0]},
+        {"control_step": 50, "value": [-0.2, 0.0, 0.0]},
+        {"control_step": 80, "value": [0.0, 0.0, 0.0]}
+      ]
+    }
+  ],
+  "evidence_boundary": "First-party learned-policy execution on frozen visible development cases only; no gait success, held-out acceptance, official/community authority, transfer, or physical authority."
+}

@@ -75,13 +75,13 @@ def write_parquet(rows: list[dict[str, Any]], path: Path) -> None:
     )
 
 
-def write_video(frames: list[np.ndarray], path: Path) -> None:
+def write_video(frames: list[np.ndarray], path: Path, fps: int = 25) -> None:
     if not frames:
         raise RuntimeError("rollout video requires at least one frame")
     imageio.mimsave(
         path,
         frames,
-        fps=25,
+        fps=fps,
         codec="libx264",
         quality=8,
         macro_block_size=None,

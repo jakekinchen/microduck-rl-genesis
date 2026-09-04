@@ -19,6 +19,7 @@ TESTS = [
     ("archéologie provenance locale M6", "test_m6_local_provenance_archaeology.py"),
     ("distribution locale provenance-gated M6", "test_m6_distribution_bundle.py"),
     ("handoff autorité externe M6", "test_m6_authority_handoff.py"),
+    ("admission développement first-party", "test_first_party_development.py"),
     ("contrat immuable expérience M5", "test_m5_experiment_contract.py"),
     ("proposition M5 quatrième pilote non autorisée", "test_m5_fourth_pilot_proposal.py"),
     ("proposition M5 cinquième pilote non autorisée", "test_m5_fifth_pilot_proposal.py"),
