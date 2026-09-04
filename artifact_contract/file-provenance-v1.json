@@ -1018,24 +1018,27 @@
     },
     {
       "artifact_class": "mjcf",
-      "blockers": [
-        "local bytes differ from the exact declared upstream revision; transformation provenance is unresolved"
-      ],
+      "blockers": [],
       "declared_license": "CC-BY-SA-NC",
       "license_evidence": {
         "path": "microduck/assets/LICENSE-ASSETS.md",
         "sha256": "sha256:7b0bb41adae491f8834e9ef154d16b527ead819ab3b9d9a7aeb5868862dae500"
       },
       "path": "microduck/assets/microduck/ball.xml",
-      "provenance_status": "partial",
+      "provenance_status": "complete",
       "sha256": "sha256:54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865",
       "size_bytes": 706,
       "source": {
-        "byte_identical": false,
+        "byte_identical": true,
         "path": "src/mjlab_microduck/robot/microduck/ball.xml",
         "repository": "https://github.com/pollen-robotics/microduck_rl.git",
-        "revision": "109e06d4ce4921b635c5609e5304079fc30960ae",
-        "sha256": "sha256:eee47ed46f954c25277cb885258ab0bce59335e7439be8152ba08f701c4abc23"
+        "revision": "84790795a6647f7dbd2353f53f7263229d7b7051",
+        "sha256": "sha256:54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865"
+      },
+      "source_history": {
+        "later_change_commit": "7831c5142f93cc863327ae607bf0d262d127c767",
+        "later_declared_revision": "109e06d4ce4921b635c5609e5304079fc30960ae",
+        "selection": "exact public upstream bytes predating a later upstream-only contact-priority change"
       }
     },
     {
@@ -1404,10 +1407,10 @@
   "proof_class": "provenance_inventory_only",
   "schema_version": "microduck.file-provenance-inventory/v1",
   "summary": {
-    "complete": 64,
+    "complete": 65,
     "fully_resolved": false,
     "missing": 5,
-    "partial": 1,
+    "partial": 0,
     "total_files": 70
   }
 }

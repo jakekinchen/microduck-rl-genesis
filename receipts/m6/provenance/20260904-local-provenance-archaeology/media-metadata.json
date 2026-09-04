@@ -1,0 +1,33 @@
+{
+  "schema_version": "microduck.inert-media-metadata/v1",
+  "inspection": "ffprobe container metadata only; no visual-evidence or provenance inference",
+  "files": {
+    "demo/apercu.gif": {
+      "sha256": "eea3bf85da13b859485e342e69d076656838780c2c6421c5298de6fe58eec030",
+      "format": "gif",
+      "codec": "gif",
+      "width": 760,
+      "height": 414,
+      "duration_seconds": 9.0,
+      "frame_count": 108,
+      "author_tag": null,
+      "copyright_tag": null,
+      "source_receipt_tag": null
+    },
+    "demo/microduck-parcours-30s.mp4": {
+      "sha256": "3c380ebba4d1f333a769f10342d132fdb1df2251c9eec89ca718236d80fb5e1e",
+      "format": "mov,mp4,m4a,3gp,3g2,mj2",
+      "codec": "h264",
+      "width": 1600,
+      "height": 872,
+      "duration_seconds": 30.0,
+      "frame_count": 1500,
+      "generic_encoder_tags": ["Lavf61.1.100", "Lavc61.3.100 libx264"],
+      "author_tag": null,
+      "copyright_tag": null,
+      "source_receipt_tag": null
+    }
+  },
+  "result": "no_embedded_production_source_or_file_license",
+  "authority": "none"
+}

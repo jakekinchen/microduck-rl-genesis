@@ -10,6 +10,9 @@ from typing import Any
 
 OFFICIAL_REPOSITORY = "https://github.com/pollen-robotics/microduck_rl.git"
 OFFICIAL_COMMIT = "109e06d4ce4921b635c5609e5304079fc30960ae"
+BALL_SOURCE_COMMIT = "84790795a6647f7dbd2353f53f7263229d7b7051"
+BALL_LATER_CHANGE_COMMIT = "7831c5142f93cc863327ae607bf0d262d127c767"
+BALL_PATH = "src/mjlab_microduck/robot/microduck/ball.xml"
 ASSET_LICENSE = "CC-BY-SA-NC"
 CODE_LICENSE = "Apache-2.0"
 BAM_REPOSITORY = "https://github.com/Rhoban/bam.git"
@@ -58,15 +61,22 @@ def build_inventory(root: Path, official_repo: Path) -> dict[str, Any]:
         item = local_record(root, path, "mjcf" if path.suffix == ".xml" else "mesh")
         relative_asset = path.relative_to(asset_root).as_posix()
         source_path = f"src/mjlab_microduck/robot/microduck/{relative_asset}"
-        source_bytes = git_blob(official_repo, OFFICIAL_COMMIT, source_path)
+        source_revision = BALL_SOURCE_COMMIT if source_path == BALL_PATH else OFFICIAL_COMMIT
+        source_bytes = git_blob(official_repo, source_revision, source_path)
         matches = source_bytes == path.read_bytes()
         item.update({
             "declared_license": ASSET_LICENSE,
             "license_evidence": {"path": "microduck/assets/LICENSE-ASSETS.md", "sha256": sha256_file(license_path)},
-            "source": {"repository": OFFICIAL_REPOSITORY, "revision": OFFICIAL_COMMIT, "path": source_path, "sha256": sha256_bytes(source_bytes), "byte_identical": matches},
+            "source": {"repository": OFFICIAL_REPOSITORY, "revision": source_revision, "path": source_path, "sha256": sha256_bytes(source_bytes), "byte_identical": matches},
             "provenance_status": "complete" if matches else "partial",
             "blockers": [] if matches else ["local bytes differ from the exact declared upstream revision; transformation provenance is unresolved"],
         })
+        if source_path == BALL_PATH:
+            item["source_history"] = {
+                "selection": "exact public upstream bytes predating a later upstream-only contact-priority change",
+                "later_change_commit": BALL_LATER_CHANGE_COMMIT,
+                "later_declared_revision": OFFICIAL_COMMIT,
+            }
         files.append(item)
 
     add_backlash = asset_root / "add_backlash.py"
@@ -162,11 +172,29 @@ def validate_inventory(inventory: dict[str, Any], root: Path, official_repo: Pat
         evidence = item.get("license_evidence")
         if evidence and sha256_file(root / evidence["path"]) != evidence["sha256"]:
             raise AssertionError(f"license evidence drift: {item['path']}")
+        if item["path"] == "microduck/assets/microduck/ball.xml":
+            source = item.get("source", {})
+            if status != "complete" or source != {
+                "repository": OFFICIAL_REPOSITORY,
+                "revision": BALL_SOURCE_COMMIT,
+                "path": BALL_PATH,
+                "sha256": sha256_file(path),
+                "byte_identical": True,
+            } or item.get("source_history") != {
+                "selection": "exact public upstream bytes predating a later upstream-only contact-priority change",
+                "later_change_commit": BALL_LATER_CHANGE_COMMIT,
+                "later_declared_revision": OFFICIAL_COMMIT,
+            }:
+                raise AssertionError("ball source-history binding drift")
         if official_repo and item["artifact_class"] in {"mjcf", "mesh", "asset_transform_code"}:
             source = item["source"]
             source_bytes = git_blob(official_repo, source["revision"], source["path"])
             if sha256_bytes(source_bytes) != source["sha256"] or (source_bytes == path.read_bytes()) != source["byte_identical"]:
                 raise AssertionError(f"upstream source comparison drift: {item['path']}")
+            if source["path"] == BALL_PATH:
+                later_bytes = git_blob(official_repo, OFFICIAL_COMMIT, BALL_PATH)
+                if later_bytes == path.read_bytes() or b'priority="1"' not in later_bytes:
+                    raise AssertionError("ball later upstream divergence drift")
         if item["artifact_class"] == "actuator_parameter":
             source = item["source"]
             expected_source = root / "artifact_contract/real-candidates/community-rough-walk-e-fa7b27e/bam_xl330_m6.json"

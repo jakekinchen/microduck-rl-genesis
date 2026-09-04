@@ -1,0 +1,34 @@
+{
+  "schema_version": "microduck.source-exclusion-summary/v1",
+  "root_commit": "8659972a88cb6d6eab89ace269ef585bb172a581",
+  "ignored_training_and_render_paths": [
+    "logs/",
+    "runs/",
+    "videos/",
+    "*.pt",
+    "RAPPORT_NUIT.md",
+    "RESULTATS.md",
+    "run_*.sh",
+    "progress_video.py",
+    "render_course.py",
+    "microduck/course.py",
+    "tools/"
+  ],
+  "current_upstream_additional_exclusion": "cloud/",
+  "root_tree_findings": {
+    "source_checkpoint": false,
+    "training_run_receipt": false,
+    "artifact_specific_export_receipt": false,
+    "normalizer_source": false,
+    "raw_policy_evidence": false,
+    "media_production_chain": false,
+    "file_level_policy_license": false,
+    "file_level_media_license": false
+  },
+  "retained_self_claims": [
+    "root commit message says three trained policies ship",
+    "policies/README.md names tasks, iterations, episode lengths, and generic regeneration commands",
+    "README.md names campaign metrics and demo content"
+  ],
+  "disposition": "self_claims_and_explicit_exclusions_are_not_digest_bound_provenance"
+}

@@ -15,16 +15,18 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/reviewer-messages/048-m6-community-authority-search.md` - Reviewer
-acceptance of the terminal public community-authority search and exact BAM
-parameter provenance closure. No candidate or compute authority exists.
+`docs/session-logs/049-executor-m6-local-provenance-archaeology.md` - exact
+public `ball.xml` source-chain closure plus terminal history/remote archaeology
+for the five remaining missing files; independent Reviewer decision required.
 
 ## Current Status
 
-`M6_COMMUNITY_AUTHORITY_SEARCH_ACCEPTED` - Reviewer 048 accepted exact handoff
-`6ebdec5fe4bdbec15dbc391a4f8c2cedf24ec5dd` strictly as terminal negative
-public-attribution evidence plus one BAM file-level provenance closure.
-Community remains 6/10 and `rejected_incomplete`; inventory is 64 complete / 1
+`M6_LOCAL_PROVENANCE_ARCHAEOLOGY_REVIEW_REQUIRED` - local `ball.xml` is
+byte-identical to public official source commit `84790795...`; its apparent
+`109e06d...` mismatch is a later upstream-only contact-priority change, not an
+unexplained local transform. The two media and three original policy files have
+no digest-bound production/source/license authority in reachable history or
+anonymous immutable remotes and remain missing. Inventory is 65 complete / 0
 partial / 5 missing. M6 remains open, M5 remains externally blocked, Brev is
 empty, and no candidate, compute, activation, or physical authority exists.
 

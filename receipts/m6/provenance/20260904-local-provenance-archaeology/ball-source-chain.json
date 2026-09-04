@@ -1,0 +1,53 @@
+{
+  "schema_version": "microduck.ball-source-chain/v1",
+  "genesis_introduction": {
+    "repository": "https://github.com/Macmachi/microduck-rl-genesis.git",
+    "commit": "8659972a88cb6d6eab89ace269ef585bb172a581",
+    "tree": "313ea430f69061d643820288d1be988d5c5e729e",
+    "parents": [],
+    "committed_at": "2026-08-29T11:38:23+02:00",
+    "path": "microduck/assets/microduck/ball.xml",
+    "git_blob_sha1": "42c3278eb5f5498e8204bc9696bf223c810e7d2e",
+    "sha256": "54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865",
+    "size_bytes": 706
+  },
+  "exact_public_source": {
+    "repository": "https://github.com/pollen-robotics/microduck_rl.git",
+    "commit": "84790795a6647f7dbd2353f53f7263229d7b7051",
+    "tree": "0b5d3766442f3c2bb1405c2a61dff75c6891eb40",
+    "parent": "1699fa9610d54e754281b4f44eb9c86511d8e3ec",
+    "committed_at": "2026-07-28T13:45:46+02:00",
+    "path": "src/mjlab_microduck/robot/microduck/ball.xml",
+    "git_blob_sha1": "42c3278eb5f5498e8204bc9696bf223c810e7d2e",
+    "sha256": "54a455bf454a9b6167655381df91593bbca86695d8d71e29fb6af69454c7c865",
+    "size_bytes": 706,
+    "public_commit_url": "https://github.com/pollen-robotics/microduck_rl/commit/84790795a6647f7dbd2353f53f7263229d7b7051",
+    "public_raw_url": "https://raw.githubusercontent.com/pollen-robotics/microduck_rl/84790795a6647f7dbd2353f53f7263229d7b7051/src/mjlab_microduck/robot/microduck/ball.xml"
+  },
+  "later_upstream_state": {
+    "change_commit": "7831c5142f93cc863327ae607bf0d262d127c767",
+    "tree": "ec4e9b7bfaeef36bec155ad4dad92b5d2fa89a07",
+    "parent": "0faa25078aaf99f6deda960376a9497da60a305b",
+    "committed_at": "2026-08-29T13:07:46-05:00",
+    "declared_inventory_revision": "109e06d4ce4921b635c5609e5304079fc30960ae",
+    "declared_inventory_tree": "98d8b93e4425388ec077a4847117c5043fc4552e",
+    "git_blob_sha1": "e1f50c9b772fa6a2a9c53daf0911c12ce3584a40",
+    "sha256": "eee47ed46f954c25277cb885258ab0bce59335e7439be8152ba08f701c4abc23",
+    "semantic_delta": "adds priority=1 to ball_geom plus an explanatory comment and line wrapping; mass, inertia, size, rgba, and friction stay unchanged"
+  },
+  "license": {
+    "declared_license": "CC-BY-SA-NC",
+    "local_evidence_path": "microduck/assets/LICENSE-ASSETS.md",
+    "local_evidence_sha256": "7b0bb41adae491f8834e9ef154d16b527ead819ab3b9d9a7aeb5868862dae500",
+    "upstream_declaration_revision": "109e06d4ce4921b635c5609e5304079fc30960ae",
+    "upstream_readme_sha256": "13b2fee4370e773d1f4b63f463e7d6a8f26049db264cebf2ef181dadd2784a81",
+    "scope": "3D model files"
+  },
+  "verified_relations": {
+    "source_is_ancestor_of_declared_inventory_revision": true,
+    "only_ball_path_change_between_source_and_declared_revision": "7831c5142f93cc863327ae607bf0d262d127c767",
+    "genesis_and_source_git_blob_identical": true,
+    "genesis_and_source_sha256_identical": true,
+    "unresolved_local_transform": false
+  }
+}

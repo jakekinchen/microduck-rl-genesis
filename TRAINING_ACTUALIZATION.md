@@ -333,6 +333,16 @@ could be bound; the candidate remains 6/10. The adjacent BAM parameter source
 was resolved exactly, moving the file inventory to 64 complete, 1 partial, and
 5 missing without changing policy authority.
 
+Slice 049 traced the remaining partial `ball.xml` entry to byte-identical public
+official source commit `84790795...`. The later `priority="1"` difference was
+introduced upstream by `7831c514...`; it is not an undocumented Genesis
+transformation. Exact license/source closure moves the inventory to 65 complete,
+0 partial, and 5 missing. Reachable Git history plus all public forks, branches,
+tags, releases, action artifacts, and inert media metadata resolved no
+checkpoint/run/export/normalizer/evidence or file-level license authority for
+the two demo files or three original ONNX policies. Those five remain missing,
+M6 remains open, and no policy action was performed.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.

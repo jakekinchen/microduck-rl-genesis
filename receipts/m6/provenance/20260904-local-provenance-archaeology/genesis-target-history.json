@@ -1,0 +1,53 @@
+{
+  "schema_version": "microduck.genesis-target-history/v1",
+  "reachable_commit_count": 153,
+  "history_scope": "all local heads, remotes, and tags reachable at accepted base 321f0a9396b7596e62a0834d79c167a9fe8ce32a",
+  "common_introduction_commit": "8659972a88cb6d6eab89ace269ef585bb172a581",
+  "common_introduction_tree": "313ea430f69061d643820288d1be988d5c5e729e",
+  "common_introduction_parent_count": 0,
+  "targets": [
+    {
+      "path": "demo/apercu.gif",
+      "history_commit_count": 1,
+      "git_blob_sha1": "7f84e0062b408e8b9565dd7003cd40a4f4d9c41e",
+      "sha256": "eea3bf85da13b859485e342e69d076656838780c2c6421c5298de6fe58eec030",
+      "size_bytes": 4387435
+    },
+    {
+      "path": "demo/microduck-parcours-30s.mp4",
+      "history_commit_count": 1,
+      "git_blob_sha1": "2ba6e6a5081c2691e4c137f70bf163154f50a14d",
+      "sha256": "3c380ebba4d1f333a769f10342d132fdb1df2251c9eec89ca718236d80fb5e1e",
+      "size_bytes": 5234921
+    },
+    {
+      "path": "policies/backlash.onnx",
+      "history_commit_count": 1,
+      "git_blob_sha1": "b386dd537c36805de8e9f86dfc2000c04e5e7a2a",
+      "sha256": "3f8db8bc2c11b2e41665633c1780af21bae3fda7db229eb5035e6c2d5698c075",
+      "size_bytes": 793295
+    },
+    {
+      "path": "policies/rough.onnx",
+      "history_commit_count": 1,
+      "git_blob_sha1": "47ed1e389812fe87246f4be4302a714d4bcf93a5",
+      "sha256": "04261902d3651dc02303e3e9e5ab756062c4d93c45400f431a0ae68b5969185c",
+      "size_bytes": 793295
+    },
+    {
+      "path": "policies/velocity.onnx",
+      "history_commit_count": 1,
+      "git_blob_sha1": "1afef746646caf89b7366a69a951275c7232546f",
+      "sha256": "c315b9159a1b6f30976c90074ed6df2a33e7e1d14ef1505aed6c2c673f59061d",
+      "size_bytes": 793295
+    }
+  ],
+  "reachable_checkpoint_paths": [
+    "receipts/apple-baseline/20260901T215219Z-2ce72a94/backflip/model_0.pt",
+    "receipts/apple-baseline/20260901T215219Z-2ce72a94/backflip/model_4.pt",
+    "receipts/apple-baseline/20260901T215219Z-2ce72a94/walking/model_0.pt",
+    "receipts/apple-baseline/20260901T215219Z-2ce72a94/walking/model_4.pt"
+  ],
+  "checkpoint_disposition": "later five-iteration M0 smoke checkpoints with different digests; none is a source for the three root-commit policies",
+  "root_commit_claim_disposition": "self-description only; no digest-bound source checkpoint, run receipt, exporter invocation, normalizer source, evaluator evidence, or file-level policy/media license"
+}

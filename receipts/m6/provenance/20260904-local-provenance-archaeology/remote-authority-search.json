@@ -1,0 +1,38 @@
+{
+  "schema_version": "microduck.public-remote-authority-search/v1",
+  "queried_on": "2026-09-04",
+  "authentication": "anonymous_public_only",
+  "repositories": {
+    "Macmachi/microduck-rl-genesis": {
+      "branches": {"main": "9d1f213879650f2623e3bbd7bf06fe63dbf71a10"},
+      "tags": [],
+      "releases": [],
+      "actions_artifact_count": 0,
+      "target_files_changed_only_in_root_commit": true,
+      "latest_commit_disposition": "adds cloud/ to ignored account-specific campaign automation; supplies no retained campaign artifact"
+    },
+    "jakekinchen/microduck-rl-genesis": {
+      "branches": {"main": "3257775beeeb8b1df646dd295bf84e34967e42ec"},
+      "tags": [],
+      "releases": [],
+      "actions_artifact_count": 0,
+      "target_files_changed_only_in_root_commit": true
+    },
+    "meniuniu/microduck-rl-genesis": {
+      "branches": {
+        "main": "9fa4b270023b8b9b50809fa6dc15a28996f5c724",
+        "codex/macos-metal": "1082c025f3ce102fbd8f75a2e94897b293535098"
+      },
+      "tags": [],
+      "releases": [],
+      "actions_artifact_count": 0,
+      "target_files_changed_only_in_root_commit": true,
+      "separate_policy": "policies/microduck_walk_macos_scratch_seed1.onnx",
+      "separate_policy_disposition": "different digest and lineage; does not resolve any original target",
+      "original_policy_statement": "inference-only positive controls; not outputs or evidence from the macOS run"
+    }
+  },
+  "search_engine_exact_digest_results": 0,
+  "search_engine_exact_filename_result": "root repository only",
+  "result": "no_immutable_remote_production_or_license_authority_for_five_targets"
+}
