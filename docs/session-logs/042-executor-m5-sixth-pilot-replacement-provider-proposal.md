@@ -100,6 +100,14 @@ dry-run acceptance do not prove shell readiness, CUDA compatibility, M5, task,
 policy, candidate, held-out, publication, activation, transfer, or physical
 success.
 
+## Reviewer Outcome
+
+The independent Reviewer first returned NUDGE on `c0fe5ab`, then returned
+CONTINUE on corrected handoff `eb52e63`. Reviewer Message 042 records the exact
+accepted hashes and confirms the full suite, live catalog, receipt integrity,
+workflow, stop sentinel, and empty Brev inventory. The program stops here at a
+fresh Manager boundary; Reviewer acceptance grants no compute authority.
+
 ## Step-9 Flags For Reviewer
 
 - Recompute proposal/schema/harness/input/source-bundle hashes and the accepted

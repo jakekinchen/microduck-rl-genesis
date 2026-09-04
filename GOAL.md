@@ -15,17 +15,18 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/042-m5-sixth-pilot-replacement-provider-proposal.md` - Executor
-proposal corrected at `fd19eac`; independent Reviewer decision required. No
-compute authority or paid execution is active.
+`docs/reviewer-messages/042-m5-sixth-pilot-replacement-provider-proposal.md` -
+Reviewer acceptance of corrected handoff `eb52e63`. A fresh exact Manager
+decision is required; no compute authority or paid execution is active.
 
 ## Current Status
 
-`SIXTH_PILOT_REPLACEMENT_PROPOSAL_REVIEW_REQUIRED` - exact proposal SHA-256
+`SIXTH_PILOT_REPLACEMENT_PROPOSAL_ACCEPTED_MANAGER_REQUIRED` - exact proposal SHA-256
 `cca90ab98458df37668b1c8391705a196693d2ecddc4d9a349af848d37f052cc`
 is fail-closed and locally validated for direct GCP A100 type
 `a2-highgpu-1g:nvidia-tesla-a100:1`, with `compute_authorized=false`.
-Independent review is required; no compute authority is active.
+Independent Reviewer acceptance is recorded. No Manager authority or compute
+is active.
 
 ## Stop Conditions
 
