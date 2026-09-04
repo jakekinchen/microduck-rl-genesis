@@ -15,17 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/037-m5-fourth-cuda-pilot.md` - terminal provisioning-health result
-accepted by Reviewer 037 at Executor HEAD `922b0ec`; workflow stopped before
-any retry or new compute proposal.
+`docs/briefs/038-m5-fifth-pilot-replacement-provider-proposal.md` - bounded
+local-only replacement-provider proposal slice opened after Reviewer 037; no
+compute authority or paid execution is active.
 
 ## Current Status
 
-`FOURTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 037 accepted the complete
-local control-plane receipt and verified teardown. Exact workspace `tpo91g7kj`
-never exposed a ready shell; no upload, harness, suite, smoke, or export
-occurred. Manager authorization 010 is consumed, M5 remains open, and the
-authenticated Brev inventory is empty.
+`FIFTH_PILOT_REPLACEMENT_PROPOSAL_IN_PROGRESS` - drafting a fail-closed,
+non-authorizing proposal for exact massedcompute A100 type
+`massedcompute_A100_sxm4_80G_DGX`. The fourth pilot remains terminal negative,
+Manager authorization 010 is consumed, and no compute authority is active.
 
 ## Stop Conditions
 
@@ -37,8 +36,9 @@ authenticated Brev inventory is empty.
   receipt loss, or a second-workspace requirement.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
-- Do not retry the fourth pilot. Any later compute would require a separate
-  independently reviewed proposal and fresh exact Manager authorization.
+- Do not retry the fourth pilot. This slice permits only a new
+  replacement-provider proposal; any compute requires independent acceptance
+  and a fresh exact Manager authorization.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -60,5 +60,3 @@ authenticated Brev inventory is empty.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
