@@ -16,16 +16,17 @@ ROOT = Path(__file__).resolve().parents[1]
 PROPOSAL = ROOT / "experiments/m5/seventh-pilot-proposal-v1.json"
 SCHEMA = ROOT / "experiments/m5/seventh-pilot-proposal-v1.schema.json"
 
-EXPECTED_PROPOSAL_FILE_SHA256 = "d92a9f8c507762d15b66bb1ff70f2227697985f3967610bd8323b69ae8f9df24"
-EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "e22529422a7d13957363b78365db0579f10cd13de920c09790ab7c0c4d1265e2"
-EXPECTED_SCHEMA_FILE_SHA256 = "2a4ae12487cb8d616d2b26647ecb4c694539a95a5ad3fc7834930d96375bd3a9"
+EXPECTED_PROPOSAL_FILE_SHA256 = "714da8cdd4e521e1ba0d088809ff568f29ec909b514d796a2d67c0a1c0564f53"
+EXPECTED_PROPOSAL_SEMANTIC_SHA256 = "604eb30d560cbb5045c551af5094dada621d23e0c92697defccccdc6532c8b4c"
+EXPECTED_SCHEMA_FILE_SHA256 = "4d38202f7b97971b11af8d0e417fe0cef03ffa3a25b47d9aa1096104cfd970c7"
 
-SELECTED_TYPE = "a100-80gb.1x"
+SELECTED_TYPE = "gpu_1x_a100_sxm4"
 FAILED_TYPES = {
     "hyperstack_A100_80G",
     "massedcompute_A100_sxm4_80G_DGX",
     "a2-highgpu-1g:nvidia-tesla-a100:1",
 }
+UNAVAILABLE_TYPES = {"a100-80gb.1x"}
 
 
 def _assert(condition: bool, message: str) -> None:
@@ -74,7 +75,7 @@ def validate_readiness_protocol(proposal: Any, harness_text: str) -> None:
     protocol = proposal["readiness_protocol"]
     catalog = proposal["catalog_snapshot"]
     _assert(protocol["advertised_boot_time_is_estimate_only"] is True, "boot estimate became readiness proof")
-    _assert(protocol["advertised_boot_time_seconds"] == catalog["boot_time_seconds"] == 420, "advertised boot binding drift")
+    _assert(protocol["advertised_boot_time_seconds"] == catalog["boot_time_seconds"] == 600, "advertised boot binding drift")
     _assert(protocol["advertised_boot_time_expiry_is_not_terminal"] is True, "boot estimate became terminal deadline")
     _assert(limits["shell_readiness_window_seconds_create_to_probe_success"] == 900, "shell-readiness window drift")
     _assert(protocol["window_starts_at_create_request"] is True, "readiness clock anchor drift")
@@ -137,15 +138,16 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
     _assert(catalog["type"] == dry_run["selected_type"] == SELECTED_TYPE, "catalog/dry-run type drift")
     _assert(catalog["type"] not in FAILED_TYPES, "prior failed exact type selected")
     _assert(catalog["previously_used_exact_type"] is False, "selected type is marked previously used")
-    _assert(catalog["provider"] == catalog["cloud"] == "crusoe", "direct-provider selection drift")
+    _assert(catalog["provider"] == catalog["cloud"] == "lambda-labs", "direct-provider selection drift")
     _assert(catalog["arch"] == "x86_64", "architecture drift")
     _assert(catalog["gpu_name"] == "A100" and catalog["gpu_count"] == 1, "single-A100 boundary drift")
-    _assert(catalog["vram_per_gpu_gb"] == catalog["total_vram_gb"] == 80, "VRAM binding drift")
-    _assert(catalog["target_disk_gb"] == catalog["disk_min_gb"] == catalog["disk_max_gb"] == 128, "fixed disk binding drift")
+    _assert(catalog["vram_per_gpu_gb"] == catalog["total_vram_gb"] == 40, "VRAM binding drift")
+    _assert(catalog["target_disk_gb"] == catalog["disk_min_gb"] == catalog["disk_max_gb"] == 512, "fixed disk binding drift")
     _assert(catalog["practical_fixed_disk"] is True, "practical disk classification drift")
-    _assert(catalog["stoppable"] is True, "stoppability drift")
-    _assert(catalog["rebootable"] is False, "rebootability drift")
-    _assert(catalog["flex_ports"] is True, "flexible-port drift")
+    _assert(catalog["currently_exposed"] is True, "current catalog exposure drift")
+    _assert(catalog["stoppable"] is False, "stoppability drift")
+    _assert(catalog["rebootable"] is True, "rebootability drift")
+    _assert(catalog["flex_ports"] is False, "flexible-port drift")
     _assert(dry_run["container_mode_and_digest_accepted"] is True, "container dry-run gate drift")
     _assert(dry_run["created_workspace"] is False, "dry run claims workspace creation")
     _assert(workspace["count"] == catalog["gpu_count"] == 1, "GPU/workspace count drift")
@@ -158,8 +160,8 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
     exact_price = Decimal(str(limits["exact_price_per_hour_usd"]))
     hard_hours = Decimal(str(limits["hard_elapsed_hours_create_to_delete"]))
     hard_cost = Decimal(str(limits["hard_cost_usd"]))
-    _assert(exact_price == Decimal("1.98"), "exact catalog rate drift")
-    _assert(hard_cost == hard_hours * exact_price == Decimal("3.96"), "cost ceiling drift")
+    _assert(exact_price == Decimal("2.388"), "exact catalog rate drift")
+    _assert(hard_cost == hard_hours * exact_price == Decimal("4.776"), "cost ceiling drift")
     _assert(Decimal(str(catalog["price_per_hour_usd"])) == exact_price, "catalog/limit rate drift")
     _assert(limits["hard_elapsed_seconds_create_to_delete"] == int(hard_hours * 3600), "elapsed ceilings disagree")
     _assert(limits["shell_readiness_window_seconds_create_to_probe_success"] < limits["harness_timeout_seconds"] < limits["hard_elapsed_seconds_create_to_delete"], "nested time ceilings disagree")
@@ -184,15 +186,16 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
         "delete_after_verified_recovery_on_success_or_failure",
         "authenticated_empty_inventory_required",
         "cleanup_requires_no_additional_confirmation",
-        "stop_is_available_but_exact_id_delete_remains_required",
+        "reboot_is_available_but_exact_id_delete_remains_required",
     ):
         _assert(teardown[key] is True, f"teardown requirement disabled: {key}")
-    _assert(teardown["workspace_is_non_stoppable"] is False, "stoppable workspace classification drift")
-    _assert(len(proposal["prohibited"]) == 17, "prohibition set drift")
+    _assert(teardown["workspace_is_non_stoppable"] is True, "non-stoppable workspace classification drift")
+    _assert(len(proposal["prohibited"]) == 18, "prohibition set drift")
     for item in (
         "hyperstack_A100_80G_retry",
         "massedcompute_A100_sxm4_80G_DGX_retry",
         "a2-highgpu-1g:nvidia-tesla-a100:1_retry",
+        "a100-80gb.1x_unavailable_substitution",
         "seventh_pilot_retry",
     ):
         _assert(item in proposal["prohibited"], f"retry prohibition missing: {item}")
@@ -239,6 +242,8 @@ def validate_proposal(proposal: Any, *, verify_local_inputs: bool) -> None:
         _assert(required in command, f"dry-run command binding missing: {required}")
     for failed_type in FAILED_TYPES:
         _assert(f"--type {failed_type}" not in command, f"dry run retries failed type: {failed_type}")
+    for unavailable_type in UNAVAILABLE_TYPES:
+        _assert(f"--type {unavailable_type}" not in command, f"dry run selects unavailable type: {unavailable_type}")
 
     harness = (ROOT / proposal["inputs"]["pilot_harness"]["path"]).read_text()
     validate_harness_price(proposal, harness)

@@ -25,11 +25,11 @@ proposal = json.loads(PROPOSAL.read_text())
 module.validate_proposal(proposal, verify_local_inputs=True)
 harness_text = (ROOT / proposal["inputs"]["pilot_harness"]["path"]).read_text()
 
-for historical_rate in ("1.62", "1.656", "4.408062"):
+for historical_rate in ("1.62", "1.656", "1.98", "4.408062"):
     try:
         module.validate_harness_price(
             proposal,
-            harness_text.replace("PRICE_USD_PER_HOUR=1.98", f"PRICE_USD_PER_HOUR={historical_rate}"),
+            harness_text.replace("PRICE_USD_PER_HOUR=2.388", f"PRICE_USD_PER_HOUR={historical_rate}"),
         )
     except AssertionError as exc:
         assert str(exc) == "pilot harness price/catalog rate disagreement"
@@ -216,7 +216,7 @@ candidate = copy.deepcopy(proposal)
 candidate["workspace"]["retry_allowed"] = True
 rejected(candidate)
 
-for failed_type in sorted(module.FAILED_TYPES):
+for failed_type in sorted(module.FAILED_TYPES | module.UNAVAILABLE_TYPES):
     candidate = copy.deepcopy(proposal)
     candidate["catalog_snapshot"]["type"] = failed_type
     candidate["container_dry_run"]["selected_type"] = failed_type

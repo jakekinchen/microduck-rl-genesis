@@ -16,36 +16,38 @@
     "required_later_authority": "a new committed Manager record after independent Reviewer acceptance that names this exact proposal path and SHA-256 and binds every immutable input, replacement resource field, readiness gate, and limit"
   },
   "catalog_snapshot": {
-    "observed_at_utc": "2026-09-04T07:30:58Z",
+    "observed_at_utc": "2026-09-04T07:50:14Z",
     "query": "brev search --gpu-name A100 --sort price --json",
     "inventory_query": "brev ls --json",
     "inventory_was_empty": true,
     "previously_used_exact_type": false,
-    "type": "a100-80gb.1x",
-    "provider": "crusoe",
-    "cloud": "crusoe",
+    "type": "gpu_1x_a100_sxm4",
+    "provider": "lambda-labs",
+    "cloud": "lambda-labs",
     "arch": "x86_64",
     "gpu_name": "A100",
     "gpu_count": 1,
-    "vram_per_gpu_gb": 80,
-    "total_vram_gb": 80,
-    "vcpus": 12,
-    "memory": "120GiB",
-    "target_disk_gb": 128,
-    "disk_min_gb": 128,
-    "disk_max_gb": 128,
-    "boot_time_seconds": 420,
-    "stoppable": true,
-    "rebootable": false,
-    "flex_ports": true,
-    "price_per_hour_usd": 1.98,
+    "vram_per_gpu_gb": 40,
+    "total_vram_gb": 40,
+    "vcpus": 30,
+    "memory": "200GiB",
+    "target_disk_gb": 512,
+    "disk_min_gb": 512,
+    "disk_max_gb": 512,
+    "boot_time_seconds": 600,
+    "stoppable": false,
+    "rebootable": true,
+    "flex_ports": false,
+    "price_per_hour_usd": 2.388,
     "practical_fixed_disk": true,
+    "currently_exposed": true,
+    "selection_rationale": "No currently exposed unused direct-provider row combines practical fixed disk with stoppability. Lambda Labs provides a practical fixed 512 GB disk and rebootability, but is explicitly non-stoppable and lacks flexible ports; exact-ID deletion remains mandatory.",
     "proposal_evidence_only": true
   },
   "container_dry_run": {
-    "command": "brev create microduck-m5-pilot7-20260904 --type a100-80gb.1x --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300 --dry-run",
+    "command": "brev create microduck-m5-pilot7-20260904 --type gpu_1x_a100_sxm4 --count 1 --parallel 1 --mode container --container-image docker.io/nvidia/cuda@sha256:3986465b3dd3b4d602c07061f2cff417e0bfb24810129408d4eb12e111015a6c --jupyter=false --timeout 300 --dry-run",
     "exit_code": 0,
-    "selected_type": "a100-80gb.1x",
+    "selected_type": "gpu_1x_a100_sxm4",
     "container_mode_and_digest_accepted": true,
     "created_workspace": false
   },
@@ -57,7 +59,7 @@
   "inputs": {
     "pilot_harness": {
       "path": "scripts/run_m5_cuda_pilot_7.sh",
-      "sha256": "sha256:c185bf79846f3b406e53776071e82461352407b9166d99102077c1e0577c521e"
+      "sha256": "sha256:a960bfd3b88bf9bad74eb3a53c0460b2d96d42c372b01464d55bc2c103f60571"
     },
     "runtime_contract": {
       "path": "environments/cuda/runtime-v1.json",
@@ -112,8 +114,8 @@
     "harness_timeout_seconds": 4800,
     "hard_elapsed_seconds_create_to_delete": 7200,
     "hard_elapsed_hours_create_to_delete": 2,
-    "hard_cost_usd": 3.96,
-    "exact_price_per_hour_usd": 1.98,
+    "hard_cost_usd": 4.776,
+    "exact_price_per_hour_usd": 2.388,
     "total_program_envelope_usd": 210,
     "proposal_ceiling_within_total_envelope": true
   },
@@ -171,7 +173,7 @@
     "clean source state and exact accepted correction and Reviewer-chain identities",
     "exact harness, runtime, requirements lock, source bundle, and image hashes",
     "fresh authenticated inventory is empty immediately before creation",
-    "fresh catalog row exactly matches all bound Crusoe resource fields and exact price 1.98 USD/hour",
+    "fresh catalog row exactly matches all bound Lambda Labs resource fields and exact price 2.388 USD/hour",
     "exact container-mode immutable-digest dry run succeeds immediately before any authorized creation",
     "within 900 seconds of create, obtain three qualifying polls at least 15 seconds apart, resetting the count on any regression",
     "after qualifying polls, require successful no-op shell and separate 8 GiB free-disk probe before upload"
@@ -193,10 +195,10 @@
   "teardown": {
     "delete_exact_workspace_id_only": true,
     "delete_after_verified_recovery_on_success_or_failure": true,
-    "workspace_is_non_stoppable": false,
+    "workspace_is_non_stoppable": true,
     "authenticated_empty_inventory_required": true,
     "cleanup_requires_no_additional_confirmation": true,
-    "stop_is_available_but_exact_id_delete_remains_required": true
+    "reboot_is_available_but_exact_id_delete_remains_required": true
   },
   "prohibited": [
     "candidate_seeds",
@@ -215,6 +217,7 @@
     "hyperstack_A100_80G_retry",
     "massedcompute_A100_sxm4_80G_DGX_retry",
     "a2-highgpu-1g:nvidia-tesla-a100:1_retry",
+    "a100-80gb.1x_unavailable_substitution",
     "seventh_pilot_retry"
   ],
   "evidence_boundary": "At most a future separately authorized seventh pilot could prove CUDA pipeline compatibility. Catalog properties, advertised boot estimates, consecutive control-plane polls, and dry-run acceptance do not prove shell readiness. This proposal proves no CUDA smoke, M5, task, policy, candidate, held-out, publication, activation, transfer, or physical success.",
@@ -267,7 +270,7 @@
   },
   "readiness_protocol": {
     "advertised_boot_time_is_estimate_only": true,
-    "advertised_boot_time_seconds": 420,
+    "advertised_boot_time_seconds": 600,
     "advertised_boot_time_expiry_is_not_terminal": true,
     "window_starts_at_create_request": true,
     "window_closes_only_after_shell_and_disk_probe_success": true,
