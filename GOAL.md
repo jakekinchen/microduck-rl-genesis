@@ -15,16 +15,16 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/reviewer-messages/041-m5-fifth-cuda-pilot.md` - Reviewer acceptance of
-the terminal-negative fifth-pilot provisioning/connectivity receipt and exact
-teardown. No compute authority or paid execution remains active.
+`docs/briefs/042-m5-sixth-pilot-replacement-provider-proposal.md` - local-only
+sixth-pilot replacement-provider proposal after accepted fifth-pilot terminal
+failure. No compute authority or paid execution is active.
 
 ## Current Status
 
-`FIFTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 041 accepted exact handoff
-`c6f953e` strictly as provisioning/connectivity failure evidence. Workspace
-`i1bsb56r7` was deleted and authenticated Brev inventory is empty. Manager
-authority 011 is consumed; no retry or replacement compute is authorized.
+`SIXTH_PILOT_REPLACEMENT_PROPOSAL_IN_PROGRESS` - investigate and freeze one
+different single-A100 provider/type with stronger catalog-visible connectivity
+and recovery indicators. This slice is proposal-only;
+`compute_authorized=false` and no paid execution is authorized.
 
 ## Stop Conditions
 
@@ -67,5 +67,3 @@ authority 011 is consumed; no retry or replacement compute is authorized.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
