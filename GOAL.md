@@ -15,21 +15,21 @@ M6 immutable attributable artifacts
 
 ## Current Slice
 
-`docs/session-logs/050-executor-m6-local-provenance-validator-correction.md` -
-versioned v2 receipt with exact semantic bindings and stable accepted-base
-history scope; independent Reviewer re-review required.
+`docs/reviewer-messages/050-m6-local-provenance-validator-correction.md` -
+Reviewer acceptance of the versioned v2 receipt, exact semantic bindings, and
+stable accepted-base history scope.
 
 ## Current Status
 
-`M6_LOCAL_PROVENANCE_CORRECTION_REVIEW_REQUIRED` - Reviewer 049's factual
-archaeology remains substantiated. A preserved versioned v2 receipt now binds
-the exact license chain, media digests, public repositories/branches/history,
-separate-policy identity/disposition, evidence-map coverage, and exact 150-
-commit ancestry of accepted base `321f0a9`; all reported counterexample
-mutations fail closed. The working inventory is 65 complete / 0 partial / 5
-missing; the last accepted inventory remains 64 / 1 / 5 until re-review. M6
-remains open, M5 remains externally blocked, Brev is empty, and no candidate,
-compute, activation, or physical authority exists.
+`M6_LOCAL_PROVENANCE_ARCHAEOLOGY_ACCEPTED` - Reviewer 050 accepts exact
+Executor handoff `263bbb7` from Reviewer base `18e79c6`. The rejected v1
+receipt remains unchanged; the v2 receipt binds the exact license chain, media
+records, public repositories/branches/root-only histories, meniuniu separate
+policy and evidence maps, action boundaries, and stable 150-commit ancestry of
+accepted base `321f0a9`. Independent rehashed mutations fail closed. The
+accepted inventory is 65 complete / 0 partial / 5 missing with
+`fully_resolved=false`. M6 remains open, M5 remains externally blocked, Brev is
+empty, and no candidate, compute, activation, or physical authority exists.
 
 ## Stop Conditions
 
