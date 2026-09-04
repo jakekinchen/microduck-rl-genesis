@@ -221,9 +221,11 @@ any smoke training. The frozen Linux `requirements.txt` installed Genesis
 1.2.2, but frozen validation/training source uses `RigidSolver.dyn_state`, which
 is absent in that runtime; the authority-supplied suite therefore failed. The
 failure receipt was recovered and independently checksummed, and Brev inventory
-was verified empty after deletion. Full CUDA execution remains blocked pending
-independent receipt review and a separately reviewed/refrozen Linux runtime
-reconciliation. No candidate or held-out seed was executed.
+was verified empty after deletion. Reviewer 028 accepted closure only as
+terminal-negative evidence; it did not accept the pilot as successful or
+authorize another paid pilot/full CUDA execution. Any later CUDA route remains
+blocked on a separately reviewed/refrozen Linux runtime reconciliation. No
+candidate or held-out seed was executed.
 
 - [x] Freeze task semantics, reward, DR, actor/PPO configuration, transition checkpoints, seed list, and evaluator before candidate training.
 - [ ] Development: at least three fixed public seeds per backend.
