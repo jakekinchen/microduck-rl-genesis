@@ -93,7 +93,8 @@ physical authority is claimed.
 - [x] Implement deterministic standing, command-grid, start/stop/reversal, perturbation, friction, joint-margin, NaN, deadline, and termination cases.
 - [x] Emit `evaluation.json`, `trajectory.parquet`, `rollout.mp4`, `environment-lock.json`, and `attestation.json` bound to the exact policy digest.
 - [x] Split visible development cases from held-out acceptance seeds/cases.
-- [ ] Prove deterministic reports with the official walking ONNX before evaluating Genesis policies.
+- [ ] Prove deterministic reports with the official walking ONNX when its immutable provenance arrives; this official-reference gate does not block separately admitted first-party development.
+- [x] Evaluate one provenance-admitted first-party Genesis policy twice on a frozen visible-development suite with measured latency and no held-out seeds.
 
 Exit gate: repeated evaluation of the same ONNX and suite ID yields identical
 classification and stable numerical metrics within declared tolerances.
@@ -110,6 +111,13 @@ all five required artifacts. Two same-host runs reproduced every artifact byte,
 including 160-row Parquet and 40-frame decoded MP4 outputs. This remains
 infrastructure-only; deterministic acceptance cases, held-out separation, and
 the designated official walking ONNX proof remain open.
+
+First-party learned-policy development completed on 2026-09-04 without using
+the unavailable official checkpoint: two 800-step visible-development runs of
+the exact new ONNX had identical semantic outputs, trajectory bytes, and video
+bytes while retaining measured wall-clock inference latency. This satisfies the
+separate first-party development item only. It does not satisfy the official
+reference, success-classifier, or held-out acceptance gates.
 
 Official walking authority search stopped on 2026-09-02 with durable result
 `official_policy_authority_missing`. The exact project-owned runtime/Hugging
@@ -389,6 +397,29 @@ contact closes no official role, the official candidate remains 2/10, the
 community candidate remains 6/10, and the community request remains unsent. No
 artifact was published, imported, parsed, evaluated, approved, or activated.
 
+The versioned first-party development amendment then removed the unnecessary
+overall dependency on Pollen's unavailable checkpoint history without changing
+the official-policy gate. From clean source `d050920`, public seed `26090401`
+ran 1,024 Metal environments for 100 MPS PPO iterations from scratch: exactly
+2,457,600 transitions, with no resume, tuning, seed search, or checkpoint
+selection. Receipt
+`receipts/first-party-development/20260904-walking-seed-26090401-v1/`
+retains the source checkpoint, normalizer/order, fixed-batch normalized ONNX,
+random and real-observation parity, two CPU MuJoCo/BAM/ORT evaluations,
+trajectories, rollouts, real inference latency, and all digests. The policy is
+`sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f`;
+parity maxima are `3.338e-6` rad on 33 frozen probes and `5.365e-7` rad on 60
+environment observations. Both 800-step evaluation passes have byte-identical
+Parquet and MP4 plus canonical trajectory digest
+`sha256:f8830fdfa416ba31174dfbcd2259e7e739de9eb71aa595db82e29856a6dde9af`.
+Measured case displacement was only about 1.1 cm over two seconds and root
+height fell about 6 mm, so this short smoke is not evidence of a useful gait.
+It closes no official/community M6 role and does not open held-out, CUDA,
+licensing/publication, transfer, activation, or hardware gates. The next local
+work is additional preregistered visible-development diagnosis or a separately
+frozen longer first-party run; Pollen issue 40 remains pending for exact
+official-policy repeatability.
+
 - [x] Add policy manifest v2 and reference/hardware attestation JSON Schemas.
 - [ ] Validate one official and one community artifact without executing repository code.
 - [ ] Bind ONNX, normalizer, source checkpoint, exporter, model, BAM, task, evaluator, evidence, and license files by SHA-256.
@@ -422,13 +453,18 @@ resources and verify disappearance with `brev ls --json` before ending the task.
 Exit gate: the exact ONNX passes or fails the declared physical protocol. No
 simulation or reference result grants physical authority.
 
-## Blocked continuation order
+## Official-only blocked continuation order
 
 1. Ingest an upstream immutable manifest or reproducible checkpoint/export
    chain that closes `official_policy_authority_missing`.
 2. Prove report repeatability with that official policy on visible development
    cases only.
-3. Split visible development cases from held-out acceptance seeds and cases.
+
+That sequence applies to the official-policy reference gate, not to the
+versioned first-party development lane. Visible and held-out definitions are
+already split; no held-out seed has been realized. Further local work may use
+the retained first-party policy only on preregistered visible diagnostics or a
+separately frozen longer first-party run.
 
 The BAM fixture, official-adapter consumption, and model-reconciliation runs
 are complete and must not be reopened without new contradictory evidence.

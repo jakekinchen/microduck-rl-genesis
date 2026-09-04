@@ -1,0 +1,71 @@
+{
+  "authority_inputs": {
+    "action_contract": {
+      "path": "microduck_contract/interface/action-v1.json",
+      "sha256": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896"
+    },
+    "apple_dependency_lock": {
+      "path": "environments/apple/requirements.lock",
+      "sha256": "sha256:4425348d7092188c4f81a63e5e227642c666d34d498cb3e6557e9371d8ad8ff0"
+    },
+    "bam_lock": {
+      "path": "microduck_contract/actuator/bam-m6-xl330-v1.lock.json",
+      "sha256": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3"
+    },
+    "bam_parameters": {
+      "path": "microduck/assets/xl330_m6.json",
+      "sha256": "sha256:61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3"
+    },
+    "control_contract": {
+      "path": "microduck_contract/interface/control-v1.json",
+      "sha256": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1"
+    },
+    "model_lock": {
+      "path": "microduck_contract/model/microduck-walk-v1.lock.json",
+      "sha256": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae"
+    },
+    "observation_contract": {
+      "path": "microduck_contract/interface/observation-v1.json",
+      "sha256": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce"
+    },
+    "walking_task": {
+      "path": "microduck_contract/tasks/walking-v1.json",
+      "sha256": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71"
+    }
+  },
+  "commands": {
+    "run": "GS_ENABLE_ZEROCOPY=1 .venv-apple/bin/python scripts/run_first_party_development.py run --output receipts/first-party-development/<run-id> --bam-repo <clean-pinned-bam-checkout>",
+    "verify": ".venv-apple/bin/python scripts/run_first_party_development.py verify --output receipts/first-party-development/<run-id> --bam-repo <clean-pinned-bam-checkout>"
+  },
+  "evidence_boundary": "A short, public-seed first-party development smoke for pipeline debugging only; it is not gait success, held-out acceptance, an official/community artifact, CUDA comparison, publication authority, license closure, transfer, or physical authority.",
+  "learning_iterations": 100,
+  "num_environments": 1024,
+  "origin": "first_party_local_from_scratch",
+  "plan": {
+    "path": "experiments/first_party/development-plan-v1.json",
+    "sha256": "sha256:260578c8e1d68ed894606f21811ef07a7eb905113f10bd024967432eb6f1ab8b"
+  },
+  "planned_transitions": 2457600,
+  "resume": null,
+  "schema_version": "microduck.first-party-frozen-run/v1",
+  "seed": 26090401,
+  "source_files": {
+    "evaluator/core.py": "sha256:a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+    "evaluator/first-party-development-suite-v1.json": "sha256:8a68977cedcbe21dac7fe9c407cd090b5c2fef259a28c95e25a282ed0c2d39cd",
+    "evaluator/first_party_development.py": "sha256:fd0edcc2e78b37c9005016de376ecae84fcdf99d390a05b4c0b8dd9159633189",
+    "experiments/first_party/development-plan-v1.json": "sha256:260578c8e1d68ed894606f21811ef07a7eb905113f10bd024967432eb6f1ab8b",
+    "experiments/first_party/development.py": "sha256:ccaddb671a29b7e059703ec0e0e599460002ccaf0e8cfa57f74dc284ad8750b4",
+    "experiments/first_party/exporter.py": "sha256:2baf999b4af2061ae3d039b3eef7cb4e0fc499a0b6e7c436fdd2bfd793eff9ac",
+    "export_onnx.py": "sha256:a69a5283646deec0adae0305b4822cc1ddd64baa72e2c20a8abbcaf578f1ed91",
+    "microduck/bam_actuator.py": "sha256:840338b249ebfb01a434e76cc49d7c90ebdb734ef5f0b113c63438c77e46bf36",
+    "microduck/constants.py": "sha256:913740a765989104f9c04bf60022199ac376014ba58a2eb2dd4067aabf628e1b",
+    "microduck/terrain.py": "sha256:43432285dfd4494d57cd6b6ab8dbe0516d6810cbea334cefdb47035dabce10e2",
+    "microduck/velocity_cfg.py": "sha256:1a7d58e527cbc4694493739a4efa49b7634906e01036adbc806190c84460c251",
+    "microduck/velocity_env.py": "sha256:e52eec8b2b5fa0df1335d13c14492766ab746a29cfb60795150af83c48f90623",
+    "scripts/run_first_party_development.py": "sha256:d30e9fb1caa0a96ed1c4e988927910f5bee09c94bed8a32ea9080c5e59ce7e55",
+    "train.py": "sha256:dc99459d037070051dca44da0186bb8165baafd205961b3116e2890f1b9f7c4c"
+  },
+  "source_revision": "d050920c9578ac05358d0fd3576f1ef260437275",
+  "source_tree_clean_before_run": true,
+  "steps_per_environment_per_iteration": 24
+}

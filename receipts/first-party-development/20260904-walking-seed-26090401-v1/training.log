@@ -1,0 +1,3537 @@
+COMMAND: /Users/kelly/Developer/microduck-rl-genesis/.venv-apple/bin/python train.py --task walking --physics-backend metal --learner-device mps --num-envs 1024 --max-iterations 100 --seed 26090401 --exp-name walking-metal-mps-seed-26090401-v1
+[38;5;226m[Genesis] [17:31:20] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+devices: physics=metal/gs.metal (mps), ppo=mps, task=walking, envs=1024, iterations=100
+[38;5;226m[Genesis] [17:31:22] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+/Users/kelly/Developer/microduck-rl-genesis/.venv-apple/lib/python3.12/site-packages/quadrants/lang/ast/ast_transformers/function_def_transformer.py:715: DeprecationWarning: ast.Str is deprecated and will be removed in Python 3.14; use ast.Constant instead
+  return index == 0 and isinstance(stmt, ast.Expr) and isinstance(stmt.value, (ast.Constant, ast.Str))
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['policy']
+	 critic :  ['policy', 'privileged']
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (distribution): GaussianDistribution()
+  (mlp): MLP(
+    (0): Linear(in_features=61, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=14, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=90, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+Storing git diff for 'microduck-rl-genesis' in: logs/walking-metal-mps-seed-26090401-v1/git/microduck-rl-genesis.diff
+################################################################################
+[1m                            Learning iteration 0/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 24576 
+                       Steps per second: 3580 
+                        Collection time: 6.175s 
+                          Learning time: 0.689s 
+                        Mean value loss: 0.0452
+                    Mean surrogate loss: -0.0011
+                      Mean entropy loss: 19.8202
+                            Mean reward: -0.06
+                    Mean episode length: 23.70
+                        Mean action std: 1.00
+               Mean episode rew_upright: 0.0096
+    Mean episode rew_head_pose_tracking: 0.0203
+        Mean episode rew_action_rate_l2: -0.0322
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0001
+     Mean episode rew_foot_swing_height: -0.0003
+ Mean episode rew_track_linear_velocity: 0.0077
+          Mean episode rew_body_ang_vel: -0.0110
+Mean episode rew_track_angular_velocity: 0.0002
+        Mean episode rew_dof_pos_limits: -0.0001
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0028
+              Mean episode rew_air_time: 0.0054
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 6.86s
+                           Time elapsed: 0:00:06
+                                    ETA: 0:11:19
+
+################################################################################
+[1m                            Learning iteration 1/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 49152 
+                       Steps per second: 5936 
+                        Collection time: 3.795s 
+                          Learning time: 0.345s 
+                        Mean value loss: 0.0444
+                    Mean surrogate loss: -0.0094
+                      Mean entropy loss: 19.7930
+                            Mean reward: -0.02
+                    Mean episode length: 26.92
+                        Mean action std: 0.99
+               Mean episode rew_upright: 0.0185
+    Mean episode rew_head_pose_tracking: 0.0465
+        Mean episode rew_action_rate_l2: -0.0785
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0003
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0187
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0003
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0049
+              Mean episode rew_air_time: 0.0152
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 4.14s
+                           Time elapsed: 0:00:11
+                                    ETA: 0:08:59
+
+################################################################################
+[1m                            Learning iteration 2/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 73728 
+                       Steps per second: 8371 
+                        Collection time: 2.648s 
+                          Learning time: 0.288s 
+                        Mean value loss: 0.0414
+                    Mean surrogate loss: -0.0106
+                      Mean entropy loss: 19.7391
+                            Mean reward: 0.05
+                    Mean episode length: 27.86
+                        Mean action std: 0.99
+               Mean episode rew_upright: 0.0171
+    Mean episode rew_head_pose_tracking: 0.0451
+        Mean episode rew_action_rate_l2: -0.0740
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0003
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0180
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0003
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0048
+              Mean episode rew_air_time: 0.0147
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.94s
+                           Time elapsed: 0:00:13
+                                    ETA: 0:07:30
+
+################################################################################
+[1m                            Learning iteration 3/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 98304 
+                       Steps per second: 8151 
+                        Collection time: 2.712s 
+                          Learning time: 0.303s 
+                        Mean value loss: 0.0371
+                    Mean surrogate loss: -0.0101
+                      Mean entropy loss: 19.6920
+                            Mean reward: 0.12
+                    Mean episode length: 28.33
+                        Mean action std: 0.99
+               Mean episode rew_upright: 0.0178
+    Mean episode rew_head_pose_tracking: 0.0459
+        Mean episode rew_action_rate_l2: -0.0737
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0003
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0175
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0003
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0000
+                  Mean episode rew_pose: 0.0049
+              Mean episode rew_air_time: 0.0148
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 3.01s
+                           Time elapsed: 0:00:16
+                                    ETA: 0:06:46
+
+################################################################################
+[1m                            Learning iteration 4/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 122880 
+                       Steps per second: 7597 
+                        Collection time: 2.894s 
+                          Learning time: 0.340s 
+                        Mean value loss: 0.0363
+                    Mean surrogate loss: -0.0103
+                      Mean entropy loss: 19.6370
+                            Mean reward: 0.15
+                    Mean episode length: 29.78
+                        Mean action std: 0.98
+               Mean episode rew_upright: 0.0185
+    Mean episode rew_head_pose_tracking: 0.0469
+        Mean episode rew_action_rate_l2: -0.0736
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0003
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0188
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0003
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0051
+              Mean episode rew_air_time: 0.0152
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 3.23s
+                           Time elapsed: 0:00:20
+                                    ETA: 0:06:23
+
+################################################################################
+[1m                            Learning iteration 5/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 147456 
+                       Steps per second: 9393 
+                        Collection time: 2.320s 
+                          Learning time: 0.296s 
+                        Mean value loss: 0.0380
+                    Mean surrogate loss: -0.0091
+                      Mean entropy loss: 19.5946
+                            Mean reward: 0.16
+                    Mean episode length: 28.40
+                        Mean action std: 0.98
+               Mean episode rew_upright: 0.0180
+    Mean episode rew_head_pose_tracking: 0.0464
+        Mean episode rew_action_rate_l2: -0.0721
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0003
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0176
+          Mean episode rew_body_ang_vel: -0.0234
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0003
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0053
+              Mean episode rew_air_time: 0.0157
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.62s
+                           Time elapsed: 0:00:22
+                                    ETA: 0:05:57
+
+################################################################################
+[1m                            Learning iteration 6/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 172032 
+                       Steps per second: 9589 
+                        Collection time: 2.231s 
+                          Learning time: 0.331s 
+                        Mean value loss: 0.0390
+                    Mean surrogate loss: -0.0091
+                      Mean entropy loss: 19.5432
+                            Mean reward: 0.24
+                    Mean episode length: 28.30
+                        Mean action std: 0.98
+               Mean episode rew_upright: 0.0193
+    Mean episode rew_head_pose_tracking: 0.0485
+        Mean episode rew_action_rate_l2: -0.0738
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0003
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0191
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0056
+              Mean episode rew_air_time: 0.0164
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.56s
+                           Time elapsed: 0:00:25
+                                    ETA: 0:05:37
+
+################################################################################
+[1m                            Learning iteration 7/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 196608 
+                       Steps per second: 9444 
+                        Collection time: 2.304s 
+                          Learning time: 0.299s 
+                        Mean value loss: 0.0387
+                    Mean surrogate loss: -0.0088
+                      Mean entropy loss: 19.5017
+                            Mean reward: 0.28
+                    Mean episode length: 29.58
+                        Mean action std: 0.97
+               Mean episode rew_upright: 0.0193
+    Mean episode rew_head_pose_tracking: 0.0483
+        Mean episode rew_action_rate_l2: -0.0727
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0003
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0186
+          Mean episode rew_body_ang_vel: -0.0237
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0057
+              Mean episode rew_air_time: 0.0175
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.60s
+                           Time elapsed: 0:00:27
+                                    ETA: 0:05:21
+
+################################################################################
+[1m                            Learning iteration 8/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 221184 
+                       Steps per second: 9881 
+                        Collection time: 2.197s 
+                          Learning time: 0.290s 
+                        Mean value loss: 0.0384
+                    Mean surrogate loss: -0.0101
+                      Mean entropy loss: 19.4525
+                            Mean reward: 0.36
+                    Mean episode length: 29.22
+                        Mean action std: 0.97
+               Mean episode rew_upright: 0.0194
+    Mean episode rew_head_pose_tracking: 0.0484
+        Mean episode rew_action_rate_l2: -0.0713
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0193
+          Mean episode rew_body_ang_vel: -0.0232
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0057
+              Mean episode rew_air_time: 0.0175
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.49s
+                           Time elapsed: 0:00:30
+                                    ETA: 0:05:07
+
+################################################################################
+[1m                            Learning iteration 9/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 245760 
+                       Steps per second: 8364 
+                        Collection time: 2.590s 
+                          Learning time: 0.348s 
+                        Mean value loss: 0.0443
+                    Mean surrogate loss: -0.0090
+                      Mean entropy loss: 19.4109
+                            Mean reward: 0.32
+                    Mean episode length: 28.80
+                        Mean action std: 0.97
+               Mean episode rew_upright: 0.0202
+    Mean episode rew_head_pose_tracking: 0.0499
+        Mean episode rew_action_rate_l2: -0.0725
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0191
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0060
+              Mean episode rew_air_time: 0.0174
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.94s
+                           Time elapsed: 0:00:33
+                                    ETA: 0:05:00
+
+################################################################################
+[1m                           Learning iteration 10/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 270336 
+                       Steps per second: 9806 
+                        Collection time: 2.221s 
+                          Learning time: 0.285s 
+                        Mean value loss: 0.0397
+                    Mean surrogate loss: -0.0085
+                      Mean entropy loss: 19.3616
+                            Mean reward: 0.37
+                    Mean episode length: 29.56
+                        Mean action std: 0.96
+               Mean episode rew_upright: 0.0208
+    Mean episode rew_head_pose_tracking: 0.0501
+        Mean episode rew_action_rate_l2: -0.0716
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0198
+          Mean episode rew_body_ang_vel: -0.0235
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0060
+              Mean episode rew_air_time: 0.0176
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.51s
+                           Time elapsed: 0:00:35
+                                    ETA: 0:04:50
+
+################################################################################
+[1m                           Learning iteration 11/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 294912 
+                       Steps per second: 9859 
+                        Collection time: 2.201s 
+                          Learning time: 0.292s 
+                        Mean value loss: 0.0379
+                    Mean surrogate loss: -0.0084
+                      Mean entropy loss: 19.3230
+                            Mean reward: 0.34
+                    Mean episode length: 29.69
+                        Mean action std: 0.96
+               Mean episode rew_upright: 0.0206
+    Mean episode rew_head_pose_tracking: 0.0503
+        Mean episode rew_action_rate_l2: -0.0712
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0196
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0061
+              Mean episode rew_air_time: 0.0175
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.49s
+                           Time elapsed: 0:00:38
+                                    ETA: 0:04:41
+
+################################################################################
+[1m                           Learning iteration 12/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 319488 
+                       Steps per second: 8727 
+                        Collection time: 2.488s 
+                          Learning time: 0.328s 
+                        Mean value loss: 0.0384
+                    Mean surrogate loss: -0.0100
+                      Mean entropy loss: 19.2815
+                            Mean reward: 0.33
+                    Mean episode length: 29.12
+                        Mean action std: 0.96
+               Mean episode rew_upright: 0.0201
+    Mean episode rew_head_pose_tracking: 0.0503
+        Mean episode rew_action_rate_l2: -0.0703
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0193
+          Mean episode rew_body_ang_vel: -0.0231
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0061
+              Mean episode rew_air_time: 0.0184
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.82s
+                           Time elapsed: 0:00:41
+                                    ETA: 0:04:35
+
+################################################################################
+[1m                           Learning iteration 13/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 344064 
+                       Steps per second: 8709 
+                        Collection time: 2.470s 
+                          Learning time: 0.352s 
+                        Mean value loss: 0.0409
+                    Mean surrogate loss: -0.0096
+                      Mean entropy loss: 19.2375
+                            Mean reward: 0.39
+                    Mean episode length: 28.01
+                        Mean action std: 0.95
+               Mean episode rew_upright: 0.0199
+    Mean episode rew_head_pose_tracking: 0.0498
+        Mean episode rew_action_rate_l2: -0.0687
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0193
+          Mean episode rew_body_ang_vel: -0.0232
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0061
+              Mean episode rew_air_time: 0.0182
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.82s
+                           Time elapsed: 0:00:44
+                                    ETA: 0:04:30
+
+################################################################################
+[1m                           Learning iteration 14/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 368640 
+                       Steps per second: 8442 
+                        Collection time: 2.551s 
+                          Learning time: 0.359s 
+                        Mean value loss: 0.0376
+                    Mean surrogate loss: -0.0090
+                      Mean entropy loss: 19.2007
+                            Mean reward: 0.53
+                    Mean episode length: 31.50
+                        Mean action std: 0.95
+               Mean episode rew_upright: 0.0212
+    Mean episode rew_head_pose_tracking: 0.0521
+        Mean episode rew_action_rate_l2: -0.0709
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0198
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0062
+              Mean episode rew_air_time: 0.0205
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.91s
+                           Time elapsed: 0:00:46
+                                    ETA: 0:04:26
+
+################################################################################
+[1m                           Learning iteration 15/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 393216 
+                       Steps per second: 8573 
+                        Collection time: 2.530s 
+                          Learning time: 0.336s 
+                        Mean value loss: 0.0390
+                    Mean surrogate loss: -0.0092
+                      Mean entropy loss: 19.1645
+                            Mean reward: 0.47
+                    Mean episode length: 29.79
+                        Mean action std: 0.95
+               Mean episode rew_upright: 0.0206
+    Mean episode rew_head_pose_tracking: 0.0508
+        Mean episode rew_action_rate_l2: -0.0685
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0191
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0007
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0063
+              Mean episode rew_air_time: 0.0197
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.87s
+                           Time elapsed: 0:00:49
+                                    ETA: 0:04:21
+
+################################################################################
+[1m                           Learning iteration 16/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 417792 
+                       Steps per second: 9180 
+                        Collection time: 2.360s 
+                          Learning time: 0.317s 
+                        Mean value loss: 0.0391
+                    Mean surrogate loss: -0.0083
+                      Mean entropy loss: 19.1331
+                            Mean reward: 0.44
+                    Mean episode length: 28.73
+                        Mean action std: 0.95
+               Mean episode rew_upright: 0.0215
+    Mean episode rew_head_pose_tracking: 0.0526
+        Mean episode rew_action_rate_l2: -0.0705
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0004
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0198
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0199
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.68s
+                           Time elapsed: 0:00:52
+                                    ETA: 0:04:16
+
+################################################################################
+[1m                           Learning iteration 17/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 442368 
+                       Steps per second: 9368 
+                        Collection time: 2.329s 
+                          Learning time: 0.294s 
+                        Mean value loss: 0.0396
+                    Mean surrogate loss: -0.0089
+                      Mean entropy loss: 19.0973
+                            Mean reward: 0.68
+                    Mean episode length: 32.43
+                        Mean action std: 0.95
+               Mean episode rew_upright: 0.0228
+    Mean episode rew_head_pose_tracking: 0.0540
+        Mean episode rew_action_rate_l2: -0.0712
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0005
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0202
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0217
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.62s
+                           Time elapsed: 0:00:55
+                                    ETA: 0:04:11
+
+################################################################################
+[1m                           Learning iteration 18/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 466944 
+                       Steps per second: 8516 
+                        Collection time: 2.520s 
+                          Learning time: 0.365s 
+                        Mean value loss: 0.0396
+                    Mean surrogate loss: -0.0078
+                      Mean entropy loss: 19.0624
+                            Mean reward: 0.46
+                    Mean episode length: 29.33
+                        Mean action std: 0.94
+               Mean episode rew_upright: 0.0212
+    Mean episode rew_head_pose_tracking: 0.0522
+        Mean episode rew_action_rate_l2: -0.0681
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0005
+     Mean episode rew_foot_swing_height: -0.0007
+ Mean episode rew_track_linear_velocity: 0.0191
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0063
+              Mean episode rew_air_time: 0.0211
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.89s
+                           Time elapsed: 0:00:57
+                                    ETA: 0:04:07
+
+################################################################################
+[1m                           Learning iteration 19/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 491520 
+                       Steps per second: 8774 
+                        Collection time: 2.452s 
+                          Learning time: 0.349s 
+                        Mean value loss: 0.0381
+                    Mean surrogate loss: -0.0093
+                      Mean entropy loss: 19.0245
+                            Mean reward: 0.56
+                    Mean episode length: 30.28
+                        Mean action std: 0.94
+               Mean episode rew_upright: 0.0223
+    Mean episode rew_head_pose_tracking: 0.0535
+        Mean episode rew_action_rate_l2: -0.0701
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0005
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0208
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0063
+              Mean episode rew_air_time: 0.0220
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.80s
+                           Time elapsed: 0:01:00
+                                    ETA: 0:04:03
+
+################################################################################
+[1m                           Learning iteration 20/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 516096 
+                       Steps per second: 8730 
+                        Collection time: 2.465s 
+                          Learning time: 0.350s 
+                        Mean value loss: 0.0412
+                    Mean surrogate loss: -0.0087
+                      Mean entropy loss: 18.9903
+                            Mean reward: 0.63
+                    Mean episode length: 31.78
+                        Mean action std: 0.94
+               Mean episode rew_upright: 0.0216
+    Mean episode rew_head_pose_tracking: 0.0530
+        Mean episode rew_action_rate_l2: -0.0686
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0005
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0201
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0062
+              Mean episode rew_air_time: 0.0216
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.81s
+                           Time elapsed: 0:01:03
+                                    ETA: 0:03:59
+
+################################################################################
+[1m                           Learning iteration 21/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 540672 
+                       Steps per second: 9373 
+                        Collection time: 2.320s 
+                          Learning time: 0.302s 
+                        Mean value loss: 0.0421
+                    Mean surrogate loss: -0.0081
+                      Mean entropy loss: 18.9573
+                            Mean reward: 0.66
+                    Mean episode length: 31.62
+                        Mean action std: 0.94
+               Mean episode rew_upright: 0.0220
+    Mean episode rew_head_pose_tracking: 0.0528
+        Mean episode rew_action_rate_l2: -0.0674
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0005
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0199
+          Mean episode rew_body_ang_vel: -0.0233
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0213
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.62s
+                           Time elapsed: 0:01:06
+                                    ETA: 0:03:54
+
+################################################################################
+[1m                           Learning iteration 22/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 565248 
+                       Steps per second: 8979 
+                        Collection time: 2.439s 
+                          Learning time: 0.298s 
+                        Mean value loss: 0.0414
+                    Mean surrogate loss: -0.0080
+                      Mean entropy loss: 18.9248
+                            Mean reward: 0.61
+                    Mean episode length: 30.87
+                        Mean action std: 0.93
+               Mean episode rew_upright: 0.0220
+    Mean episode rew_head_pose_tracking: 0.0537
+        Mean episode rew_action_rate_l2: -0.0685
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0200
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0231
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.74s
+                           Time elapsed: 0:01:08
+                                    ETA: 0:03:50
+
+################################################################################
+[1m                           Learning iteration 23/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 589824 
+                       Steps per second: 9148 
+                        Collection time: 2.366s 
+                          Learning time: 0.321s 
+                        Mean value loss: 0.0418
+                    Mean surrogate loss: -0.0081
+                      Mean entropy loss: 18.8902
+                            Mean reward: 0.68
+                    Mean episode length: 32.07
+                        Mean action std: 0.93
+               Mean episode rew_upright: 0.0216
+    Mean episode rew_head_pose_tracking: 0.0531
+        Mean episode rew_action_rate_l2: -0.0670
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0199
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0063
+              Mean episode rew_air_time: 0.0235
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.69s
+                           Time elapsed: 0:01:11
+                                    ETA: 0:03:46
+
+################################################################################
+[1m                           Learning iteration 24/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 614400 
+                       Steps per second: 8662 
+                        Collection time: 2.478s 
+                          Learning time: 0.359s 
+                        Mean value loss: 0.0416
+                    Mean surrogate loss: -0.0085
+                      Mean entropy loss: 18.8616
+                            Mean reward: 0.63
+                    Mean episode length: 31.20
+                        Mean action std: 0.93
+               Mean episode rew_upright: 0.0230
+    Mean episode rew_head_pose_tracking: 0.0547
+        Mean episode rew_action_rate_l2: -0.0688
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0208
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0237
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.84s
+                           Time elapsed: 0:01:14
+                                    ETA: 0:03:43
+
+################################################################################
+[1m                           Learning iteration 25/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 638976 
+                       Steps per second: 8703 
+                        Collection time: 2.473s 
+                          Learning time: 0.351s 
+                        Mean value loss: 0.0428
+                    Mean surrogate loss: -0.0095
+                      Mean entropy loss: 18.8295
+                            Mean reward: 0.70
+                    Mean episode length: 31.20
+                        Mean action std: 0.93
+               Mean episode rew_upright: 0.0218
+    Mean episode rew_head_pose_tracking: 0.0541
+        Mean episode rew_action_rate_l2: -0.0671
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0203
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0063
+              Mean episode rew_air_time: 0.0244
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.82s
+                           Time elapsed: 0:01:17
+                                    ETA: 0:03:40
+
+################################################################################
+[1m                           Learning iteration 26/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 663552 
+                       Steps per second: 8680 
+                        Collection time: 2.479s 
+                          Learning time: 0.352s 
+                        Mean value loss: 0.0407
+                    Mean surrogate loss: -0.0091
+                      Mean entropy loss: 18.7908
+                            Mean reward: 0.65
+                    Mean episode length: 30.98
+                        Mean action std: 0.93
+               Mean episode rew_upright: 0.0218
+    Mean episode rew_head_pose_tracking: 0.0536
+        Mean episode rew_action_rate_l2: -0.0665
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0200
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0240
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.83s
+                           Time elapsed: 0:01:20
+                                    ETA: 0:03:36
+
+################################################################################
+[1m                           Learning iteration 27/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 688128 
+                       Steps per second: 8838 
+                        Collection time: 2.417s 
+                          Learning time: 0.363s 
+                        Mean value loss: 0.0404
+                    Mean surrogate loss: -0.0084
+                      Mean entropy loss: 18.7559
+                            Mean reward: 0.65
+                    Mean episode length: 30.70
+                        Mean action std: 0.92
+               Mean episode rew_upright: 0.0233
+    Mean episode rew_head_pose_tracking: 0.0556
+        Mean episode rew_action_rate_l2: -0.0681
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0211
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0257
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.78s
+                           Time elapsed: 0:01:22
+                                    ETA: 0:03:33
+
+################################################################################
+[1m                           Learning iteration 28/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 712704 
+                       Steps per second: 8835 
+                        Collection time: 2.458s 
+                          Learning time: 0.324s 
+                        Mean value loss: 0.0431
+                    Mean surrogate loss: -0.0085
+                      Mean entropy loss: 18.7243
+                            Mean reward: 0.75
+                    Mean episode length: 32.43
+                        Mean action std: 0.92
+               Mean episode rew_upright: 0.0230
+    Mean episode rew_head_pose_tracking: 0.0554
+        Mean episode rew_action_rate_l2: -0.0673
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0212
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0066
+              Mean episode rew_air_time: 0.0245
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.78s
+                           Time elapsed: 0:01:25
+                                    ETA: 0:03:29
+
+################################################################################
+[1m                           Learning iteration 29/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 737280 
+                       Steps per second: 8939 
+                        Collection time: 2.395s 
+                          Learning time: 0.355s 
+                        Mean value loss: 0.0435
+                    Mean surrogate loss: -0.0082
+                      Mean entropy loss: 18.6951
+                            Mean reward: 0.79
+                    Mean episode length: 31.67
+                        Mean action std: 0.92
+               Mean episode rew_upright: 0.0226
+    Mean episode rew_head_pose_tracking: 0.0552
+        Mean episode rew_action_rate_l2: -0.0663
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0210
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0065
+              Mean episode rew_air_time: 0.0250
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.75s
+                           Time elapsed: 0:01:28
+                                    ETA: 0:03:26
+
+################################################################################
+[1m                           Learning iteration 30/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 761856 
+                       Steps per second: 8674 
+                        Collection time: 2.491s 
+                          Learning time: 0.342s 
+                        Mean value loss: 0.0443
+                    Mean surrogate loss: -0.0087
+                      Mean entropy loss: 18.6681
+                            Mean reward: 0.77
+                    Mean episode length: 31.89
+                        Mean action std: 0.92
+               Mean episode rew_upright: 0.0233
+    Mean episode rew_head_pose_tracking: 0.0564
+        Mean episode rew_action_rate_l2: -0.0675
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0006
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0208
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0265
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.83s
+                           Time elapsed: 0:01:31
+                                    ETA: 0:03:23
+
+################################################################################
+[1m                           Learning iteration 31/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 786432 
+                       Steps per second: 8512 
+                        Collection time: 2.533s 
+                          Learning time: 0.354s 
+                        Mean value loss: 0.0421
+                    Mean surrogate loss: -0.0096
+                      Mean entropy loss: 18.6443
+                            Mean reward: 0.75
+                    Mean episode length: 31.54
+                        Mean action std: 0.92
+               Mean episode rew_upright: 0.0229
+    Mean episode rew_head_pose_tracking: 0.0553
+        Mean episode rew_action_rate_l2: -0.0661
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0204
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0063
+              Mean episode rew_air_time: 0.0265
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.89s
+                           Time elapsed: 0:01:34
+                                    ETA: 0:03:20
+
+################################################################################
+[1m                           Learning iteration 32/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 811008 
+                       Steps per second: 9150 
+                        Collection time: 2.347s 
+                          Learning time: 0.339s 
+                        Mean value loss: 0.0426
+                    Mean surrogate loss: -0.0090
+                      Mean entropy loss: 18.6166
+                            Mean reward: 0.77
+                    Mean episode length: 31.61
+                        Mean action std: 0.91
+               Mean episode rew_upright: 0.0228
+    Mean episode rew_head_pose_tracking: 0.0560
+        Mean episode rew_action_rate_l2: -0.0668
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0214
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0063
+              Mean episode rew_air_time: 0.0265
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.69s
+                           Time elapsed: 0:01:36
+                                    ETA: 0:03:16
+
+################################################################################
+[1m                           Learning iteration 33/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 835584 
+                       Steps per second: 9601 
+                        Collection time: 2.268s 
+                          Learning time: 0.292s 
+                        Mean value loss: 0.0427
+                    Mean surrogate loss: -0.0120
+                      Mean entropy loss: 18.5525
+                            Mean reward: 0.80
+                    Mean episode length: 31.89
+                        Mean action std: 0.91
+               Mean episode rew_upright: 0.0228
+    Mean episode rew_head_pose_tracking: 0.0557
+        Mean episode rew_action_rate_l2: -0.0663
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0206
+          Mean episode rew_body_ang_vel: -0.0237
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0062
+              Mean episode rew_air_time: 0.0268
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.56s
+                           Time elapsed: 0:01:39
+                                    ETA: 0:03:13
+
+################################################################################
+[1m                           Learning iteration 34/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 860160 
+                       Steps per second: 8832 
+                        Collection time: 2.424s 
+                          Learning time: 0.359s 
+                        Mean value loss: 0.0412
+                    Mean surrogate loss: -0.0089
+                      Mean entropy loss: 18.5136
+                            Mean reward: 0.82
+                    Mean episode length: 31.60
+                        Mean action std: 0.91
+               Mean episode rew_upright: 0.0230
+    Mean episode rew_head_pose_tracking: 0.0559
+        Mean episode rew_action_rate_l2: -0.0656
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0202
+          Mean episode rew_body_ang_vel: -0.0245
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0062
+              Mean episode rew_air_time: 0.0273
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.78s
+                           Time elapsed: 0:01:42
+                                    ETA: 0:03:09
+
+################################################################################
+[1m                           Learning iteration 35/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 884736 
+                       Steps per second: 8779 
+                        Collection time: 2.442s 
+                          Learning time: 0.357s 
+                        Mean value loss: 0.0437
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 18.4914
+                            Mean reward: 0.79
+                    Mean episode length: 30.76
+                        Mean action std: 0.91
+               Mean episode rew_upright: 0.0225
+    Mean episode rew_head_pose_tracking: 0.0553
+        Mean episode rew_action_rate_l2: -0.0646
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0198
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0059
+              Mean episode rew_air_time: 0.0267
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.80s
+                           Time elapsed: 0:01:45
+                                    ETA: 0:03:06
+
+################################################################################
+[1m                           Learning iteration 36/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 909312 
+                       Steps per second: 8558 
+                        Collection time: 2.508s 
+                          Learning time: 0.364s 
+                        Mean value loss: 0.0427
+                    Mean surrogate loss: -0.0103
+                      Mean entropy loss: 18.4628
+                            Mean reward: 0.86
+                    Mean episode length: 31.44
+                        Mean action std: 0.90
+               Mean episode rew_upright: 0.0231
+    Mean episode rew_head_pose_tracking: 0.0563
+        Mean episode rew_action_rate_l2: -0.0653
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0205
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0062
+              Mean episode rew_air_time: 0.0276
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.87s
+                           Time elapsed: 0:01:47
+                                    ETA: 0:03:03
+
+################################################################################
+[1m                           Learning iteration 37/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 933888 
+                       Steps per second: 8423 
+                        Collection time: 2.512s 
+                          Learning time: 0.405s 
+                        Mean value loss: 0.0440
+                    Mean surrogate loss: -0.0087
+                      Mean entropy loss: 18.4359
+                            Mean reward: 0.82
+                    Mean episode length: 31.06
+                        Mean action std: 0.90
+               Mean episode rew_upright: 0.0231
+    Mean episode rew_head_pose_tracking: 0.0567
+        Mean episode rew_action_rate_l2: -0.0654
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0209
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0008
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0061
+              Mean episode rew_air_time: 0.0278
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.92s
+                           Time elapsed: 0:01:50
+                                    ETA: 0:03:00
+
+################################################################################
+[1m                           Learning iteration 38/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 958464 
+                       Steps per second: 9431 
+                        Collection time: 2.310s 
+                          Learning time: 0.296s 
+                        Mean value loss: 0.0429
+                    Mean surrogate loss: -0.0108
+                      Mean entropy loss: 18.3930
+                            Mean reward: 0.98
+                    Mean episode length: 33.54
+                        Mean action std: 0.90
+               Mean episode rew_upright: 0.0238
+    Mean episode rew_head_pose_tracking: 0.0572
+        Mean episode rew_action_rate_l2: -0.0658
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0212
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0066
+              Mean episode rew_air_time: 0.0283
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.61s
+                           Time elapsed: 0:01:53
+                                    ETA: 0:02:57
+
+################################################################################
+[1m                           Learning iteration 39/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 983040 
+                       Steps per second: 9571 
+                        Collection time: 2.253s 
+                          Learning time: 0.314s 
+                        Mean value loss: 0.0428
+                    Mean surrogate loss: -0.0090
+                      Mean entropy loss: 18.3533
+                            Mean reward: 0.95
+                    Mean episode length: 32.97
+                        Mean action std: 0.90
+               Mean episode rew_upright: 0.0231
+    Mean episode rew_head_pose_tracking: 0.0570
+        Mean episode rew_action_rate_l2: -0.0650
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0209
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0067
+              Mean episode rew_air_time: 0.0284
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.57s
+                           Time elapsed: 0:01:55
+                                    ETA: 0:02:53
+
+################################################################################
+[1m                           Learning iteration 40/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1007616 
+                       Steps per second: 9110 
+                        Collection time: 2.352s 
+                          Learning time: 0.345s 
+                        Mean value loss: 0.0431
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 18.3295
+                            Mean reward: 0.93
+                    Mean episode length: 32.47
+                        Mean action std: 0.90
+               Mean episode rew_upright: 0.0227
+    Mean episode rew_head_pose_tracking: 0.0557
+        Mean episode rew_action_rate_l2: -0.0629
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0201
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0273
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.70s
+                           Time elapsed: 0:01:58
+                                    ETA: 0:02:50
+
+################################################################################
+[1m                           Learning iteration 41/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1032192 
+                       Steps per second: 8772 
+                        Collection time: 2.493s 
+                          Learning time: 0.308s 
+                        Mean value loss: 0.0461
+                    Mean surrogate loss: -0.0083
+                      Mean entropy loss: 18.3047
+                            Mean reward: 0.82
+                    Mean episode length: 31.30
+                        Mean action std: 0.89
+               Mean episode rew_upright: 0.0222
+    Mean episode rew_head_pose_tracking: 0.0554
+        Mean episode rew_action_rate_l2: -0.0624
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0201
+          Mean episode rew_body_ang_vel: -0.0237
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0273
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.80s
+                           Time elapsed: 0:02:01
+                                    ETA: 0:02:47
+
+################################################################################
+[1m                           Learning iteration 42/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1056768 
+                       Steps per second: 8963 
+                        Collection time: 2.399s 
+                          Learning time: 0.343s 
+                        Mean value loss: 0.0434
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 18.2745
+                            Mean reward: 0.82
+                    Mean episode length: 32.31
+                        Mean action std: 0.89
+               Mean episode rew_upright: 0.0235
+    Mean episode rew_head_pose_tracking: 0.0571
+        Mean episode rew_action_rate_l2: -0.0642
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0201
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0065
+              Mean episode rew_air_time: 0.0278
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.74s
+                           Time elapsed: 0:02:04
+                                    ETA: 0:02:44
+
+################################################################################
+[1m                           Learning iteration 43/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1081344 
+                       Steps per second: 8881 
+                        Collection time: 2.421s 
+                          Learning time: 0.346s 
+                        Mean value loss: 0.0439
+                    Mean surrogate loss: -0.0073
+                      Mean entropy loss: 18.2514
+                            Mean reward: 0.87
+                    Mean episode length: 32.19
+                        Mean action std: 0.89
+               Mean episode rew_upright: 0.0235
+    Mean episode rew_head_pose_tracking: 0.0566
+        Mean episode rew_action_rate_l2: -0.0636
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0008
+ Mean episode rew_track_linear_velocity: 0.0201
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0277
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.77s
+                           Time elapsed: 0:02:06
+                                    ETA: 0:02:41
+
+################################################################################
+[1m                           Learning iteration 44/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1105920 
+                       Steps per second: 9033 
+                        Collection time: 2.377s 
+                          Learning time: 0.344s 
+                        Mean value loss: 0.0457
+                    Mean surrogate loss: -0.0090
+                      Mean entropy loss: 18.2278
+                            Mean reward: 0.97
+                    Mean episode length: 32.66
+                        Mean action std: 0.89
+               Mean episode rew_upright: 0.0235
+    Mean episode rew_head_pose_tracking: 0.0569
+        Mean episode rew_action_rate_l2: -0.0634
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0204
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0066
+              Mean episode rew_air_time: 0.0272
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.72s
+                           Time elapsed: 0:02:09
+                                    ETA: 0:02:38
+
+################################################################################
+[1m                           Learning iteration 45/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1130496 
+                       Steps per second: 9294 
+                        Collection time: 2.337s 
+                          Learning time: 0.307s 
+                        Mean value loss: 0.0436
+                    Mean surrogate loss: -0.0089
+                      Mean entropy loss: 18.2039
+                            Mean reward: 1.00
+                    Mean episode length: 32.83
+                        Mean action std: 0.89
+               Mean episode rew_upright: 0.0237
+    Mean episode rew_head_pose_tracking: 0.0576
+        Mean episode rew_action_rate_l2: -0.0637
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0206
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0065
+              Mean episode rew_air_time: 0.0286
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.64s
+                           Time elapsed: 0:02:12
+                                    ETA: 0:02:35
+
+################################################################################
+[1m                           Learning iteration 46/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1155072 
+                       Steps per second: 8605 
+                        Collection time: 2.527s 
+                          Learning time: 0.329s 
+                        Mean value loss: 0.0455
+                    Mean surrogate loss: -0.0082
+                      Mean entropy loss: 18.1811
+                            Mean reward: 0.92
+                    Mean episode length: 31.78
+                        Mean action std: 0.89
+               Mean episode rew_upright: 0.0230
+    Mean episode rew_head_pose_tracking: 0.0566
+        Mean episode rew_action_rate_l2: -0.0626
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0204
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0064
+              Mean episode rew_air_time: 0.0281
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.86s
+                           Time elapsed: 0:02:15
+                                    ETA: 0:02:32
+
+################################################################################
+[1m                           Learning iteration 47/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1179648 
+                       Steps per second: 8831 
+                        Collection time: 2.424s 
+                          Learning time: 0.359s 
+                        Mean value loss: 0.0476
+                    Mean surrogate loss: -0.0087
+                      Mean entropy loss: 18.1578
+                            Mean reward: 0.97
+                    Mean episode length: 32.32
+                        Mean action std: 0.88
+               Mean episode rew_upright: 0.0227
+    Mean episode rew_head_pose_tracking: 0.0564
+        Mean episode rew_action_rate_l2: -0.0618
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0202
+          Mean episode rew_body_ang_vel: -0.0237
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0066
+              Mean episode rew_air_time: 0.0276
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.78s
+                           Time elapsed: 0:02:17
+                                    ETA: 0:02:29
+
+################################################################################
+[1m                           Learning iteration 48/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1204224 
+                       Steps per second: 8719 
+                        Collection time: 2.461s 
+                          Learning time: 0.358s 
+                        Mean value loss: 0.0477
+                    Mean surrogate loss: -0.0096
+                      Mean entropy loss: 18.1252
+                            Mean reward: 1.05
+                    Mean episode length: 33.48
+                        Mean action std: 0.88
+               Mean episode rew_upright: 0.0241
+    Mean episode rew_head_pose_tracking: 0.0584
+        Mean episode rew_action_rate_l2: -0.0640
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0206
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0065
+              Mean episode rew_air_time: 0.0290
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.82s
+                           Time elapsed: 0:02:20
+                                    ETA: 0:02:26
+
+################################################################################
+[1m                           Learning iteration 49/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1228800 
+                       Steps per second: 9056 
+                        Collection time: 2.386s 
+                          Learning time: 0.328s 
+                        Mean value loss: 0.0478
+                    Mean surrogate loss: -0.0083
+                      Mean entropy loss: 18.1005
+                            Mean reward: 1.01
+                    Mean episode length: 31.85
+                        Mean action std: 0.88
+               Mean episode rew_upright: 0.0244
+    Mean episode rew_head_pose_tracking: 0.0589
+        Mean episode rew_action_rate_l2: -0.0645
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0235
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0067
+              Mean episode rew_air_time: 0.0296
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.71s
+                           Time elapsed: 0:02:23
+                                    ETA: 0:02:23
+
+################################################################################
+[1m                           Learning iteration 50/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1253376 
+                       Steps per second: 9152 
+                        Collection time: 2.380s 
+                          Learning time: 0.306s 
+                        Mean value loss: 0.0489
+                    Mean surrogate loss: -0.0112
+                      Mean entropy loss: 18.0599
+                            Mean reward: 0.96
+                    Mean episode length: 32.32
+                        Mean action std: 0.88
+               Mean episode rew_upright: 0.0240
+    Mean episode rew_head_pose_tracking: 0.0579
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0206
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0067
+              Mean episode rew_air_time: 0.0288
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.69s
+                           Time elapsed: 0:02:26
+                                    ETA: 0:02:20
+
+################################################################################
+[1m                           Learning iteration 51/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1277952 
+                       Steps per second: 9509 
+                        Collection time: 2.252s 
+                          Learning time: 0.332s 
+                        Mean value loss: 0.0494
+                    Mean surrogate loss: -0.0107
+                      Mean entropy loss: 18.0145
+                            Mean reward: 0.97
+                    Mean episode length: 31.81
+                        Mean action std: 0.88
+               Mean episode rew_upright: 0.0243
+    Mean episode rew_head_pose_tracking: 0.0593
+        Mean episode rew_action_rate_l2: -0.0646
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0215
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0067
+              Mean episode rew_air_time: 0.0302
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.58s
+                           Time elapsed: 0:02:28
+                                    ETA: 0:02:17
+
+################################################################################
+[1m                           Learning iteration 52/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1302528 
+                       Steps per second: 8762 
+                        Collection time: 2.444s 
+                          Learning time: 0.361s 
+                        Mean value loss: 0.0464
+                    Mean surrogate loss: -0.0084
+                      Mean entropy loss: 17.9951
+                            Mean reward: 1.13
+                    Mean episode length: 33.44
+                        Mean action std: 0.87
+               Mean episode rew_upright: 0.0244
+    Mean episode rew_head_pose_tracking: 0.0591
+        Mean episode rew_action_rate_l2: -0.0634
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0215
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0068
+              Mean episode rew_air_time: 0.0302
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.80s
+                           Time elapsed: 0:02:31
+                                    ETA: 0:02:14
+
+################################################################################
+[1m                           Learning iteration 53/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1327104 
+                       Steps per second: 8626 
+                        Collection time: 2.499s 
+                          Learning time: 0.350s 
+                        Mean value loss: 0.0494
+                    Mean surrogate loss: -0.0091
+                      Mean entropy loss: 17.9717
+                            Mean reward: 1.05
+                    Mean episode length: 34.28
+                        Mean action std: 0.87
+               Mean episode rew_upright: 0.0244
+    Mean episode rew_head_pose_tracking: 0.0597
+        Mean episode rew_action_rate_l2: -0.0642
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0209
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0068
+              Mean episode rew_air_time: 0.0311
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.85s
+                           Time elapsed: 0:02:34
+                                    ETA: 0:02:11
+
+################################################################################
+[1m                           Learning iteration 54/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1351680 
+                       Steps per second: 9251 
+                        Collection time: 2.360s 
+                          Learning time: 0.297s 
+                        Mean value loss: 0.0469
+                    Mean surrogate loss: -0.0083
+                      Mean entropy loss: 17.9483
+                            Mean reward: 1.10
+                    Mean episode length: 34.25
+                        Mean action std: 0.87
+               Mean episode rew_upright: 0.0243
+    Mean episode rew_head_pose_tracking: 0.0591
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0067
+              Mean episode rew_air_time: 0.0300
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.66s
+                           Time elapsed: 0:02:37
+                                    ETA: 0:02:08
+
+################################################################################
+[1m                           Learning iteration 55/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1376256 
+                       Steps per second: 8832 
+                        Collection time: 2.434s 
+                          Learning time: 0.348s 
+                        Mean value loss: 0.0476
+                    Mean surrogate loss: -0.0081
+                      Mean entropy loss: 17.9251
+                            Mean reward: 1.01
+                    Mean episode length: 32.79
+                        Mean action std: 0.87
+               Mean episode rew_upright: 0.0244
+    Mean episode rew_head_pose_tracking: 0.0591
+        Mean episode rew_action_rate_l2: -0.0629
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0209
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0068
+              Mean episode rew_air_time: 0.0302
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.78s
+                           Time elapsed: 0:02:39
+                                    ETA: 0:02:05
+
+################################################################################
+[1m                           Learning iteration 56/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1400832 
+                       Steps per second: 8785 
+                        Collection time: 2.498s 
+                          Learning time: 0.299s 
+                        Mean value loss: 0.0475
+                    Mean surrogate loss: -0.0088
+                      Mean entropy loss: 17.9014
+                            Mean reward: 1.07
+                    Mean episode length: 32.50
+                        Mean action std: 0.87
+               Mean episode rew_upright: 0.0246
+    Mean episode rew_head_pose_tracking: 0.0596
+        Mean episode rew_action_rate_l2: -0.0633
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0216
+          Mean episode rew_body_ang_vel: -0.0237
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0071
+              Mean episode rew_air_time: 0.0301
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.80s
+                           Time elapsed: 0:02:42
+                                    ETA: 0:02:02
+
+################################################################################
+[1m                           Learning iteration 57/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1425408 
+                       Steps per second: 9141 
+                        Collection time: 2.320s 
+                          Learning time: 0.369s 
+                        Mean value loss: 0.0533
+                    Mean surrogate loss: -0.0103
+                      Mean entropy loss: 17.8694
+                            Mean reward: 0.95
+                    Mean episode length: 32.35
+                        Mean action std: 0.87
+               Mean episode rew_upright: 0.0247
+    Mean episode rew_head_pose_tracking: 0.0596
+        Mean episode rew_action_rate_l2: -0.0635
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0211
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0009
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0067
+              Mean episode rew_air_time: 0.0302
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.69s
+                           Time elapsed: 0:02:45
+                                    ETA: 0:01:59
+
+################################################################################
+[1m                           Learning iteration 58/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1449984 
+                       Steps per second: 8886 
+                        Collection time: 2.466s 
+                          Learning time: 0.300s 
+                        Mean value loss: 0.0533
+                    Mean surrogate loss: -0.0111
+                      Mean entropy loss: 17.8105
+                            Mean reward: 1.07
+                    Mean episode length: 33.74
+                        Mean action std: 0.86
+               Mean episode rew_upright: 0.0250
+    Mean episode rew_head_pose_tracking: 0.0596
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0209
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0069
+              Mean episode rew_air_time: 0.0306
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.77s
+                           Time elapsed: 0:02:48
+                                    ETA: 0:01:56
+
+################################################################################
+[1m                           Learning iteration 59/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1474560 
+                       Steps per second: 8874 
+                        Collection time: 2.450s 
+                          Learning time: 0.319s 
+                        Mean value loss: 0.0538
+                    Mean surrogate loss: -0.0089
+                      Mean entropy loss: 17.7901
+                            Mean reward: 1.18
+                    Mean episode length: 34.45
+                        Mean action std: 0.86
+               Mean episode rew_upright: 0.0248
+    Mean episode rew_head_pose_tracking: 0.0597
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0220
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0069
+              Mean episode rew_air_time: 0.0304
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.77s
+                           Time elapsed: 0:02:50
+                                    ETA: 0:01:53
+
+################################################################################
+[1m                           Learning iteration 60/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1499136 
+                       Steps per second: 9565 
+                        Collection time: 2.267s 
+                          Learning time: 0.303s 
+                        Mean value loss: 0.0564
+                    Mean surrogate loss: -0.0093
+                      Mean entropy loss: 17.7672
+                            Mean reward: 1.14
+                    Mean episode length: 34.34
+                        Mean action std: 0.86
+               Mean episode rew_upright: 0.0246
+    Mean episode rew_head_pose_tracking: 0.0588
+        Mean episode rew_action_rate_l2: -0.0617
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0068
+              Mean episode rew_air_time: 0.0293
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.57s
+                           Time elapsed: 0:02:53
+                                    ETA: 0:01:50
+
+################################################################################
+[1m                           Learning iteration 61/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1523712 
+                       Steps per second: 9304 
+                        Collection time: 2.353s 
+                          Learning time: 0.288s 
+                        Mean value loss: 0.0528
+                    Mean surrogate loss: -0.0096
+                      Mean entropy loss: 17.7361
+                            Mean reward: 1.14
+                    Mean episode length: 33.38
+                        Mean action std: 0.86
+               Mean episode rew_upright: 0.0250
+    Mean episode rew_head_pose_tracking: 0.0596
+        Mean episode rew_action_rate_l2: -0.0624
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0209
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0072
+              Mean episode rew_air_time: 0.0304
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.64s
+                           Time elapsed: 0:02:56
+                                    ETA: 0:01:47
+
+################################################################################
+[1m                           Learning iteration 62/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1548288 
+                       Steps per second: 9270 
+                        Collection time: 2.349s 
+                          Learning time: 0.302s 
+                        Mean value loss: 0.0518
+                    Mean surrogate loss: -0.0075
+                      Mean entropy loss: 17.7165
+                            Mean reward: 1.25
+                    Mean episode length: 34.93
+                        Mean action std: 0.86
+               Mean episode rew_upright: 0.0252
+    Mean episode rew_head_pose_tracking: 0.0602
+        Mean episode rew_action_rate_l2: -0.0628
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0233
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0071
+              Mean episode rew_air_time: 0.0299
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.65s
+                           Time elapsed: 0:02:58
+                                    ETA: 0:01:44
+
+################################################################################
+[1m                           Learning iteration 63/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1572864 
+                       Steps per second: 9118 
+                        Collection time: 2.361s 
+                          Learning time: 0.334s 
+                        Mean value loss: 0.0528
+                    Mean surrogate loss: -0.0087
+                      Mean entropy loss: 17.6963
+                            Mean reward: 1.13
+                    Mean episode length: 32.93
+                        Mean action std: 0.86
+               Mean episode rew_upright: 0.0259
+    Mean episode rew_head_pose_tracking: 0.0605
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0218
+          Mean episode rew_body_ang_vel: -0.0235
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0074
+              Mean episode rew_air_time: 0.0312
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.70s
+                           Time elapsed: 0:03:01
+                                    ETA: 0:01:42
+
+################################################################################
+[1m                           Learning iteration 64/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1597440 
+                       Steps per second: 8634 
+                        Collection time: 2.480s 
+                          Learning time: 0.367s 
+                        Mean value loss: 0.0536
+                    Mean surrogate loss: -0.0087
+                      Mean entropy loss: 17.6747
+                            Mean reward: 1.06
+                    Mean episode length: 33.87
+                        Mean action std: 0.85
+               Mean episode rew_upright: 0.0251
+    Mean episode rew_head_pose_tracking: 0.0593
+        Mean episode rew_action_rate_l2: -0.0617
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0070
+              Mean episode rew_air_time: 0.0295
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.85s
+                           Time elapsed: 0:03:04
+                                    ETA: 0:01:39
+
+################################################################################
+[1m                           Learning iteration 65/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1622016 
+                       Steps per second: 8717 
+                        Collection time: 2.463s 
+                          Learning time: 0.356s 
+                        Mean value loss: 0.0547
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 17.6501
+                            Mean reward: 1.14
+                    Mean episode length: 33.31
+                        Mean action std: 0.85
+               Mean episode rew_upright: 0.0256
+    Mean episode rew_head_pose_tracking: 0.0605
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0071
+              Mean episode rew_air_time: 0.0307
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.82s
+                           Time elapsed: 0:03:07
+                                    ETA: 0:01:36
+
+################################################################################
+[1m                           Learning iteration 66/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1646592 
+                       Steps per second: 8904 
+                        Collection time: 2.413s 
+                          Learning time: 0.346s 
+                        Mean value loss: 0.0542
+                    Mean surrogate loss: -0.0085
+                      Mean entropy loss: 17.6275
+                            Mean reward: 1.25
+                    Mean episode length: 35.08
+                        Mean action std: 0.85
+               Mean episode rew_upright: 0.0254
+    Mean episode rew_head_pose_tracking: 0.0606
+        Mean episode rew_action_rate_l2: -0.0626
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0072
+              Mean episode rew_air_time: 0.0311
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.76s
+                           Time elapsed: 0:03:09
+                                    ETA: 0:01:33
+
+################################################################################
+[1m                           Learning iteration 67/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1671168 
+                       Steps per second: 8715 
+                        Collection time: 2.491s 
+                          Learning time: 0.329s 
+                        Mean value loss: 0.0550
+                    Mean surrogate loss: -0.0076
+                      Mean entropy loss: 17.6091
+                            Mean reward: 1.07
+                    Mean episode length: 32.88
+                        Mean action std: 0.85
+               Mean episode rew_upright: 0.0243
+    Mean episode rew_head_pose_tracking: 0.0591
+        Mean episode rew_action_rate_l2: -0.0614
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0210
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0004
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0070
+              Mean episode rew_air_time: 0.0293
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.82s
+                           Time elapsed: 0:03:12
+                                    ETA: 0:01:30
+
+################################################################################
+[1m                           Learning iteration 68/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1695744 
+                       Steps per second: 9393 
+                        Collection time: 2.273s 
+                          Learning time: 0.343s 
+                        Mean value loss: 0.0508
+                    Mean surrogate loss: -0.0088
+                      Mean entropy loss: 17.5921
+                            Mean reward: 1.30
+                    Mean episode length: 35.70
+                        Mean action std: 0.85
+               Mean episode rew_upright: 0.0266
+    Mean episode rew_head_pose_tracking: 0.0617
+        Mean episode rew_action_rate_l2: -0.0634
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0227
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0071
+              Mean episode rew_air_time: 0.0315
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.62s
+                           Time elapsed: 0:03:15
+                                    ETA: 0:01:27
+
+################################################################################
+[1m                           Learning iteration 69/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1720320 
+                       Steps per second: 8550 
+                        Collection time: 2.539s 
+                          Learning time: 0.335s 
+                        Mean value loss: 0.0559
+                    Mean surrogate loss: -0.0113
+                      Mean entropy loss: 17.5638
+                            Mean reward: 1.21
+                    Mean episode length: 34.21
+                        Mean action std: 0.85
+               Mean episode rew_upright: 0.0253
+    Mean episode rew_head_pose_tracking: 0.0599
+        Mean episode rew_action_rate_l2: -0.0616
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0213
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0070
+              Mean episode rew_air_time: 0.0307
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.87s
+                           Time elapsed: 0:03:18
+                                    ETA: 0:01:24
+
+################################################################################
+[1m                           Learning iteration 70/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1744896 
+                       Steps per second: 8723 
+                        Collection time: 2.505s 
+                          Learning time: 0.312s 
+                        Mean value loss: 0.0607
+                    Mean surrogate loss: -0.0113
+                      Mean entropy loss: 17.5055
+                            Mean reward: 1.25
+                    Mean episode length: 34.33
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0249
+    Mean episode rew_head_pose_tracking: 0.0597
+        Mean episode rew_action_rate_l2: -0.0608
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0211
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0068
+              Mean episode rew_air_time: 0.0311
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.82s
+                           Time elapsed: 0:03:21
+                                    ETA: 0:01:22
+
+################################################################################
+[1m                           Learning iteration 71/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1769472 
+                       Steps per second: 8992 
+                        Collection time: 2.417s 
+                          Learning time: 0.316s 
+                        Mean value loss: 0.0557
+                    Mean surrogate loss: -0.0095
+                      Mean entropy loss: 17.4828
+                            Mean reward: 1.15
+                    Mean episode length: 34.62
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0268
+    Mean episode rew_head_pose_tracking: 0.0628
+        Mean episode rew_action_rate_l2: -0.0637
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0221
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0072
+              Mean episode rew_air_time: 0.0324
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.73s
+                           Time elapsed: 0:03:23
+                                    ETA: 0:01:19
+
+################################################################################
+[1m                           Learning iteration 72/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1794048 
+                       Steps per second: 9292 
+                        Collection time: 2.353s 
+                          Learning time: 0.292s 
+                        Mean value loss: 0.0583
+                    Mean surrogate loss: -0.0101
+                      Mean entropy loss: 17.4478
+                            Mean reward: 1.53
+                    Mean episode length: 38.69
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0268
+    Mean episode rew_head_pose_tracking: 0.0624
+        Mean episode rew_action_rate_l2: -0.0627
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0228
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0073
+              Mean episode rew_air_time: 0.0327
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.64s
+                           Time elapsed: 0:03:26
+                                    ETA: 0:01:16
+
+################################################################################
+[1m                           Learning iteration 73/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1818624 
+                       Steps per second: 9294 
+                        Collection time: 2.348s 
+                          Learning time: 0.297s 
+                        Mean value loss: 0.0580
+                    Mean surrogate loss: -0.0074
+                      Mean entropy loss: 17.4301
+                            Mean reward: 1.11
+                    Mean episode length: 32.88
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0251
+    Mean episode rew_head_pose_tracking: 0.0603
+        Mean episode rew_action_rate_l2: -0.0609
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0217
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0071
+              Mean episode rew_air_time: 0.0313
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.64s
+                           Time elapsed: 0:03:29
+                                    ETA: 0:01:13
+
+################################################################################
+[1m                           Learning iteration 74/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1843200 
+                       Steps per second: 9137 
+                        Collection time: 2.387s 
+                          Learning time: 0.303s 
+                        Mean value loss: 0.0596
+                    Mean surrogate loss: -0.0082
+                      Mean entropy loss: 17.4098
+                            Mean reward: 1.23
+                    Mean episode length: 33.90
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0270
+    Mean episode rew_head_pose_tracking: 0.0625
+        Mean episode rew_action_rate_l2: -0.0625
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0233
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0073
+              Mean episode rew_air_time: 0.0320
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.69s
+                           Time elapsed: 0:03:31
+                                    ETA: 0:01:10
+
+################################################################################
+[1m                           Learning iteration 75/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1867776 
+                       Steps per second: 8823 
+                        Collection time: 2.426s 
+                          Learning time: 0.359s 
+                        Mean value loss: 0.0594
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 17.3891
+                            Mean reward: 1.19
+                    Mean episode length: 32.83
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0256
+    Mean episode rew_head_pose_tracking: 0.0608
+        Mean episode rew_action_rate_l2: -0.0609
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0224
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0068
+              Mean episode rew_air_time: 0.0306
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.79s
+                           Time elapsed: 0:03:34
+                                    ETA: 0:01:07
+
+################################################################################
+[1m                           Learning iteration 76/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1892352 
+                       Steps per second: 8691 
+                        Collection time: 2.477s 
+                          Learning time: 0.350s 
+                        Mean value loss: 0.0615
+                    Mean surrogate loss: -0.0085
+                      Mean entropy loss: 17.3688
+                            Mean reward: 1.33
+                    Mean episode length: 35.80
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0273
+    Mean episode rew_head_pose_tracking: 0.0630
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0230
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0075
+              Mean episode rew_air_time: 0.0330
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.83s
+                           Time elapsed: 0:03:37
+                                    ETA: 0:01:04
+
+################################################################################
+[1m                           Learning iteration 77/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1916928 
+                       Steps per second: 9092 
+                        Collection time: 2.371s 
+                          Learning time: 0.332s 
+                        Mean value loss: 0.0590
+                    Mean surrogate loss: -0.0084
+                      Mean entropy loss: 17.3490
+                            Mean reward: 1.34
+                    Mean episode length: 35.46
+                        Mean action std: 0.84
+               Mean episode rew_upright: 0.0270
+    Mean episode rew_head_pose_tracking: 0.0618
+        Mean episode rew_action_rate_l2: -0.0617
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0231
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0002
+                  Mean episode rew_pose: 0.0076
+              Mean episode rew_air_time: 0.0322
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.70s
+                           Time elapsed: 0:03:40
+                                    ETA: 0:01:02
+
+################################################################################
+[1m                           Learning iteration 78/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1941504 
+                       Steps per second: 8990 
+                        Collection time: 2.423s 
+                          Learning time: 0.310s 
+                        Mean value loss: 0.0569
+                    Mean surrogate loss: -0.0091
+                      Mean entropy loss: 17.3226
+                            Mean reward: 1.28
+                    Mean episode length: 34.49
+                        Mean action std: 0.83
+               Mean episode rew_upright: 0.0260
+    Mean episode rew_head_pose_tracking: 0.0608
+        Mean episode rew_action_rate_l2: -0.0603
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0007
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0215
+          Mean episode rew_body_ang_vel: -0.0238
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0073
+              Mean episode rew_air_time: 0.0315
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.73s
+                           Time elapsed: 0:03:42
+                                    ETA: 0:00:59
+
+################################################################################
+[1m                           Learning iteration 79/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1966080 
+                       Steps per second: 9050 
+                        Collection time: 2.398s 
+                          Learning time: 0.317s 
+                        Mean value loss: 0.0610
+                    Mean surrogate loss: -0.0075
+                      Mean entropy loss: 17.3058
+                            Mean reward: 1.25
+                    Mean episode length: 34.84
+                        Mean action std: 0.83
+               Mean episode rew_upright: 0.0253
+    Mean episode rew_head_pose_tracking: 0.0611
+        Mean episode rew_action_rate_l2: -0.0607
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0216
+          Mean episode rew_body_ang_vel: -0.0236
+Mean episode rew_track_angular_velocity: 0.0010
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0073
+              Mean episode rew_air_time: 0.0315
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.72s
+                           Time elapsed: 0:03:45
+                                    ETA: 0:00:56
+
+################################################################################
+[1m                           Learning iteration 80/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 1990656 
+                       Steps per second: 8583 
+                        Collection time: 2.551s 
+                          Learning time: 0.312s 
+                        Mean value loss: 0.0604
+                    Mean surrogate loss: -0.0079
+                      Mean entropy loss: 17.2863
+                            Mean reward: 1.31
+                    Mean episode length: 35.41
+                        Mean action std: 0.83
+               Mean episode rew_upright: 0.0264
+    Mean episode rew_head_pose_tracking: 0.0618
+        Mean episode rew_action_rate_l2: -0.0610
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0009
+ Mean episode rew_track_linear_velocity: 0.0221
+          Mean episode rew_body_ang_vel: -0.0239
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0005
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0075
+              Mean episode rew_air_time: 0.0318
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.86s
+                           Time elapsed: 0:03:48
+                                    ETA: 0:00:53
+
+################################################################################
+[1m                           Learning iteration 81/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2015232 
+                       Steps per second: 8679 
+                        Collection time: 2.496s 
+                          Learning time: 0.335s 
+                        Mean value loss: 0.0562
+                    Mean surrogate loss: -0.0085
+                      Mean entropy loss: 17.2645
+                            Mean reward: 1.28
+                    Mean episode length: 35.28
+                        Mean action std: 0.83
+               Mean episode rew_upright: 0.0278
+    Mean episode rew_head_pose_tracking: 0.0642
+        Mean episode rew_action_rate_l2: -0.0637
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0238
+          Mean episode rew_body_ang_vel: -0.0245
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0076
+              Mean episode rew_air_time: 0.0341
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.83s
+                           Time elapsed: 0:03:51
+                                    ETA: 0:00:50
+
+################################################################################
+[1m                           Learning iteration 82/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2039808 
+                       Steps per second: 8997 
+                        Collection time: 2.412s 
+                          Learning time: 0.319s 
+                        Mean value loss: 0.0605
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 17.2425
+                            Mean reward: 1.28
+                    Mean episode length: 35.43
+                        Mean action std: 0.83
+               Mean episode rew_upright: 0.0272
+    Mean episode rew_head_pose_tracking: 0.0637
+        Mean episode rew_action_rate_l2: -0.0628
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0228
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0073
+              Mean episode rew_air_time: 0.0332
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.73s
+                           Time elapsed: 0:03:53
+                                    ETA: 0:00:47
+
+################################################################################
+[1m                           Learning iteration 83/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2064384 
+                       Steps per second: 9676 
+                        Collection time: 2.215s 
+                          Learning time: 0.325s 
+                        Mean value loss: 0.0615
+                    Mean surrogate loss: -0.0077
+                      Mean entropy loss: 17.2214
+                            Mean reward: 1.24
+                    Mean episode length: 34.87
+                        Mean action std: 0.83
+               Mean episode rew_upright: 0.0263
+    Mean episode rew_head_pose_tracking: 0.0621
+        Mean episode rew_action_rate_l2: -0.0611
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0226
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0071
+              Mean episode rew_air_time: 0.0323
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.54s
+                           Time elapsed: 0:03:56
+                                    ETA: 0:00:45
+
+################################################################################
+[1m                           Learning iteration 84/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2088960 
+                       Steps per second: 8920 
+                        Collection time: 2.425s 
+                          Learning time: 0.330s 
+                        Mean value loss: 0.0645
+                    Mean surrogate loss: -0.0087
+                      Mean entropy loss: 17.2009
+                            Mean reward: 1.27
+                    Mean episode length: 36.20
+                        Mean action std: 0.83
+               Mean episode rew_upright: 0.0266
+    Mean episode rew_head_pose_tracking: 0.0630
+        Mean episode rew_action_rate_l2: -0.0621
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0218
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0073
+              Mean episode rew_air_time: 0.0328
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.76s
+                           Time elapsed: 0:03:59
+                                    ETA: 0:00:42
+
+################################################################################
+[1m                           Learning iteration 85/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2113536 
+                       Steps per second: 8983 
+                        Collection time: 2.395s 
+                          Learning time: 0.341s 
+                        Mean value loss: 0.0606
+                    Mean surrogate loss: -0.0105
+                      Mean entropy loss: 17.1711
+                            Mean reward: 1.40
+                    Mean episode length: 36.66
+                        Mean action std: 0.82
+               Mean episode rew_upright: 0.0279
+    Mean episode rew_head_pose_tracking: 0.0639
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0011
+ Mean episode rew_track_linear_velocity: 0.0235
+          Mean episode rew_body_ang_vel: -0.0246
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0076
+              Mean episode rew_air_time: 0.0338
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.74s
+                           Time elapsed: 0:04:01
+                                    ETA: 0:00:39
+
+################################################################################
+[1m                           Learning iteration 86/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2138112 
+                       Steps per second: 8925 
+                        Collection time: 2.412s 
+                          Learning time: 0.341s 
+                        Mean value loss: 0.0592
+                    Mean surrogate loss: -0.0118
+                      Mean entropy loss: 17.1177
+                            Mean reward: 1.46
+                    Mean episode length: 38.32
+                        Mean action std: 0.82
+               Mean episode rew_upright: 0.0278
+    Mean episode rew_head_pose_tracking: 0.0650
+        Mean episode rew_action_rate_l2: -0.0640
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0235
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0076
+              Mean episode rew_air_time: 0.0346
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.75s
+                           Time elapsed: 0:04:04
+                                    ETA: 0:00:36
+
+################################################################################
+[1m                           Learning iteration 87/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2162688 
+                       Steps per second: 8977 
+                        Collection time: 2.400s 
+                          Learning time: 0.337s 
+                        Mean value loss: 0.0582
+                    Mean surrogate loss: -0.0102
+                      Mean entropy loss: 17.0814
+                            Mean reward: 1.35
+                    Mean episode length: 36.22
+                        Mean action std: 0.82
+               Mean episode rew_upright: 0.0276
+    Mean episode rew_head_pose_tracking: 0.0649
+        Mean episode rew_action_rate_l2: -0.0635
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0009
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0231
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0077
+              Mean episode rew_air_time: 0.0355
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.74s
+                           Time elapsed: 0:04:07
+                                    ETA: 0:00:33
+
+################################################################################
+[1m                           Learning iteration 88/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2187264 
+                       Steps per second: 8301 
+                        Collection time: 2.631s 
+                          Learning time: 0.330s 
+                        Mean value loss: 0.0643
+                    Mean surrogate loss: -0.0081
+                      Mean entropy loss: 17.0629
+                            Mean reward: 1.22
+                    Mean episode length: 34.57
+                        Mean action std: 0.82
+               Mean episode rew_upright: 0.0269
+    Mean episode rew_head_pose_tracking: 0.0636
+        Mean episode rew_action_rate_l2: -0.0618
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0009
+     Mean episode rew_foot_swing_height: -0.0011
+ Mean episode rew_track_linear_velocity: 0.0222
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0076
+              Mean episode rew_air_time: 0.0339
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.96s
+                           Time elapsed: 0:04:10
+                                    ETA: 0:00:30
+
+################################################################################
+[1m                           Learning iteration 89/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2211840 
+                       Steps per second: 9164 
+                        Collection time: 2.368s 
+                          Learning time: 0.313s 
+                        Mean value loss: 0.0647
+                    Mean surrogate loss: -0.0078
+                      Mean entropy loss: 17.0426
+                            Mean reward: 1.22
+                    Mean episode length: 34.18
+                        Mean action std: 0.82
+               Mean episode rew_upright: 0.0269
+    Mean episode rew_head_pose_tracking: 0.0633
+        Mean episode rew_action_rate_l2: -0.0611
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0225
+          Mean episode rew_body_ang_vel: -0.0242
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0075
+              Mean episode rew_air_time: 0.0335
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.68s
+                           Time elapsed: 0:04:13
+                                    ETA: 0:00:28
+
+################################################################################
+[1m                           Learning iteration 90/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2236416 
+                       Steps per second: 8376 
+                        Collection time: 2.611s 
+                          Learning time: 0.323s 
+                        Mean value loss: 0.0671
+                    Mean surrogate loss: -0.0079
+                      Mean entropy loss: 17.0210
+                            Mean reward: 1.46
+                    Mean episode length: 37.80
+                        Mean action std: 0.82
+               Mean episode rew_upright: 0.0278
+    Mean episode rew_head_pose_tracking: 0.0644
+        Mean episode rew_action_rate_l2: -0.0622
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0238
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0078
+              Mean episode rew_air_time: 0.0334
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.93s
+                           Time elapsed: 0:04:16
+                                    ETA: 0:00:25
+
+################################################################################
+[1m                           Learning iteration 91/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2260992 
+                       Steps per second: 9102 
+                        Collection time: 2.393s 
+                          Learning time: 0.306s 
+                        Mean value loss: 0.0679
+                    Mean surrogate loss: -0.0077
+                      Mean entropy loss: 17.0010
+                            Mean reward: 1.53
+                    Mean episode length: 37.98
+                        Mean action std: 0.81
+               Mean episode rew_upright: 0.0279
+    Mean episode rew_head_pose_tracking: 0.0645
+        Mean episode rew_action_rate_l2: -0.0620
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0236
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0013
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0080
+              Mean episode rew_air_time: 0.0335
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.70s
+                           Time elapsed: 0:04:18
+                                    ETA: 0:00:22
+
+################################################################################
+[1m                           Learning iteration 92/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2285568 
+                       Steps per second: 8402 
+                        Collection time: 2.570s 
+                          Learning time: 0.355s 
+                        Mean value loss: 0.0656
+                    Mean surrogate loss: -0.0078
+                      Mean entropy loss: 16.9803
+                            Mean reward: 1.32
+                    Mean episode length: 35.37
+                        Mean action std: 0.81
+               Mean episode rew_upright: 0.0280
+    Mean episode rew_head_pose_tracking: 0.0643
+        Mean episode rew_action_rate_l2: -0.0620
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0228
+          Mean episode rew_body_ang_vel: -0.0240
+Mean episode rew_track_angular_velocity: 0.0011
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0077
+              Mean episode rew_air_time: 0.0330
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.92s
+                           Time elapsed: 0:04:21
+                                    ETA: 0:00:19
+
+################################################################################
+[1m                           Learning iteration 93/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2310144 
+                       Steps per second: 8280 
+                        Collection time: 2.621s 
+                          Learning time: 0.346s 
+                        Mean value loss: 0.0646
+                    Mean surrogate loss: -0.0107
+                      Mean entropy loss: 16.9532
+                            Mean reward: 1.40
+                    Mean episode length: 36.60
+                        Mean action std: 0.81
+               Mean episode rew_upright: 0.0284
+    Mean episode rew_head_pose_tracking: 0.0652
+        Mean episode rew_action_rate_l2: -0.0625
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0237
+          Mean episode rew_body_ang_vel: -0.0246
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0079
+              Mean episode rew_air_time: 0.0338
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.97s
+                           Time elapsed: 0:04:24
+                                    ETA: 0:00:16
+
+################################################################################
+[1m                           Learning iteration 94/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2334720 
+                       Steps per second: 8189 
+                        Collection time: 2.652s 
+                          Learning time: 0.349s 
+                        Mean value loss: 0.0661
+                    Mean surrogate loss: -0.0122
+                      Mean entropy loss: 16.9048
+                            Mean reward: 1.30
+                    Mean episode length: 34.70
+                        Mean action std: 0.81
+               Mean episode rew_upright: 0.0272
+    Mean episode rew_head_pose_tracking: 0.0634
+        Mean episode rew_action_rate_l2: -0.0605
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0000
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0223
+          Mean episode rew_body_ang_vel: -0.0237
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0079
+              Mean episode rew_air_time: 0.0325
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 3.00s
+                           Time elapsed: 0:04:27
+                                    ETA: 0:00:14
+
+################################################################################
+[1m                           Learning iteration 95/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2359296 
+                       Steps per second: 7504 
+                        Collection time: 2.895s 
+                          Learning time: 0.380s 
+                        Mean value loss: 0.0664
+                    Mean surrogate loss: -0.0116
+                      Mean entropy loss: 16.8709
+                            Mean reward: 1.13
+                    Mean episode length: 33.69
+                        Mean action std: 0.81
+               Mean episode rew_upright: 0.0274
+    Mean episode rew_head_pose_tracking: 0.0645
+        Mean episode rew_action_rate_l2: -0.0616
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0229
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0081
+              Mean episode rew_air_time: 0.0328
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 3.27s
+                           Time elapsed: 0:04:30
+                                    ETA: 0:00:11
+
+################################################################################
+[1m                           Learning iteration 96/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2383872 
+                       Steps per second: 8069 
+                        Collection time: 2.700s 
+                          Learning time: 0.346s 
+                        Mean value loss: 0.0692
+                    Mean surrogate loss: -0.0079
+                      Mean entropy loss: 16.8529
+                            Mean reward: 1.30
+                    Mean episode length: 35.43
+                        Mean action std: 0.81
+               Mean episode rew_upright: 0.0280
+    Mean episode rew_head_pose_tracking: 0.0650
+        Mean episode rew_action_rate_l2: -0.0616
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0011
+ Mean episode rew_track_linear_velocity: 0.0240
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0082
+              Mean episode rew_air_time: 0.0339
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 3.05s
+                           Time elapsed: 0:04:33
+                                    ETA: 0:00:08
+
+################################################################################
+[1m                           Learning iteration 97/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2408448 
+                       Steps per second: 8575 
+                        Collection time: 2.537s 
+                          Learning time: 0.329s 
+                        Mean value loss: 0.0695
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 16.8334
+                            Mean reward: 1.56
+                    Mean episode length: 36.34
+                        Mean action std: 0.80
+               Mean episode rew_upright: 0.0279
+    Mean episode rew_head_pose_tracking: 0.0646
+        Mean episode rew_action_rate_l2: -0.0609
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0010
+ Mean episode rew_track_linear_velocity: 0.0237
+          Mean episode rew_body_ang_vel: -0.0241
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0081
+              Mean episode rew_air_time: 0.0345
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.87s
+                           Time elapsed: 0:04:36
+                                    ETA: 0:00:05
+
+################################################################################
+[1m                           Learning iteration 98/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2433024 
+                       Steps per second: 8226 
+                        Collection time: 2.657s 
+                          Learning time: 0.331s 
+                        Mean value loss: 0.0659
+                    Mean surrogate loss: -0.0086
+                      Mean entropy loss: 16.8135
+                            Mean reward: 1.60
+                    Mean episode length: 38.68
+                        Mean action std: 0.80
+               Mean episode rew_upright: 0.0292
+    Mean episode rew_head_pose_tracking: 0.0666
+        Mean episode rew_action_rate_l2: -0.0629
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0011
+ Mean episode rew_track_linear_velocity: 0.0240
+          Mean episode rew_body_ang_vel: -0.0243
+Mean episode rew_track_angular_velocity: 0.0012
+        Mean episode rew_dof_pos_limits: -0.0006
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0085
+              Mean episode rew_air_time: 0.0350
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.99s
+                           Time elapsed: 0:04:39
+                                    ETA: 0:00:02
+
+################################################################################
+[1m                           Learning iteration 99/100                            [0m 
+
+                               Run name: walking-metal-mps-seed-26090401-v1
+                            Total steps: 2457600 
+                       Steps per second: 8586 
+                        Collection time: 2.534s 
+                          Learning time: 0.329s 
+                        Mean value loss: 0.0693
+                    Mean surrogate loss: -0.0083
+                      Mean entropy loss: 16.7925
+                            Mean reward: 1.40
+                    Mean episode length: 36.14
+                        Mean action std: 0.80
+               Mean episode rew_upright: 0.0286
+    Mean episode rew_head_pose_tracking: 0.0667
+        Mean episode rew_action_rate_l2: -0.0630
+    Mean episode rew_body_pose_tracking: 0.0000
+             Mean episode rew_foot_slip: -0.0001
+        Mean episode rew_foot_clearance: -0.0008
+     Mean episode rew_foot_swing_height: -0.0011
+ Mean episode rew_track_linear_velocity: 0.0236
+          Mean episode rew_body_ang_vel: -0.0244
+Mean episode rew_track_angular_velocity: 0.0013
+        Mean episode rew_dof_pos_limits: -0.0007
+        Mean episode rew_head_pose_bias: 0.0000
+       Mean episode rew_self_collisions: -0.0001
+                  Mean episode rew_pose: 0.0088
+              Mean episode rew_air_time: 0.0359
+      Mean episode rew_angular_momentum: -0.0000
+--------------------------------------------------------------------------------
+                         Iteration time: 2.86s
+                           Time elapsed: 0:04:42
+                                    ETA: 0:00:00
+

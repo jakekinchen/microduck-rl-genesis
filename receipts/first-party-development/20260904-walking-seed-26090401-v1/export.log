@@ -1,0 +1,41 @@
+COMMAND: /Users/kelly/Developer/microduck-rl-genesis/.venv-apple/bin/python -m experiments.first_party.exporter --log-dir /Users/kelly/Developer/microduck-rl-genesis/receipts/first-party-development/20260904-walking-seed-26090401-v1/training --checkpoint /Users/kelly/Developer/microduck-rl-genesis/receipts/first-party-development/20260904-walking-seed-26090401-v1/training/source-checkpoint.pt --output /Users/kelly/Developer/microduck-rl-genesis/receipts/first-party-development/20260904-walking-seed-26090401-v1/policy.normalized.fixed-batch.onnx --normalizer-output /Users/kelly/Developer/microduck-rl-genesis/receipts/first-party-development/20260904-walking-seed-26090401-v1/normalizer.json --parity-output /Users/kelly/Developer/microduck-rl-genesis/receipts/first-party-development/20260904-walking-seed-26090401-v1/export-parity.json --admission /Users/kelly/Developer/microduck-rl-genesis/receipts/first-party-development/20260904-walking-seed-26090401-v1/ARTIFACT_ADMISSION.json
+[38;5;226m[Genesis] [17:39:54] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+W0904 17:40:18.510000 9570 .venv-apple/lib/python3.12/site-packages/torch/onnx/_internal/exporter/_compat.py:114] Setting ONNX exporter to use operator set version 18 because the requested opset_version 17 is a lower version than we have implementations for. Automatic version conversion will be performed, which may not be successful at converting to the requested version. If version conversion is unsuccessful, the opset version of the exported model will be kept at 18. Please consider setting opset_version >=18 to leverage latest ONNX features
+The model version conversion is not supported by the onnxscript version converter and fallback is enabled. The model will be converted using the onnx C API (target version: 17).
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['policy']
+	 critic :  ['policy', 'privileged']
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (distribution): GaussianDistribution()
+  (mlp): MLP(
+    (0): Linear(in_features=61, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=14, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=90, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+[torch.onnx] Obtain model graph for `ExportedPolicy([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ExportedPolicy([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decomposition...
+[torch.onnx] Run decomposition... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+{"fixed_batch": true, "random_probe": {"max_abs_action_error_rad": 3.337860107421875e-06, "max_action_std_rad": 2.4914214611053467, "observation_count": 33, "passed": true, "seed": 0, "threshold_rad": 0.0001}, "real_observation_episode": {"max_abs_action_error_rad": 5.364418029785156e-07, "max_observation_std": 1.6315412521362305, "observation_max": 4.521530628204346, "observation_min": -8.77889347076416, "passed": true, "step_count": 60, "threshold_rad": 0.0001}, "schema_version": "microduck.first-party-export-parity/v1"}

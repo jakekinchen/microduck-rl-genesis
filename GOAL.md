@@ -17,12 +17,12 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M6 immutable attributable artifacts
+M2 first-party development evaluation; M6 upstream response pending
 
 ## Current Status
 
-`M6_EXTERNAL_AUTHORITY_RESPONSE_PENDING` — the authorized official request is
-public and awaits an upstream response.
+`FIRST_PARTY_DEVELOPMENT_EVALUATED` — the local training/export/evaluator chain
+now runs without depending on unavailable third-party checkpoint provenance.
 
 - M5 is blocked after four distinct Brev provider/type provisioning failures.
 - M6 has an accepted deterministic 65-file bundle, but the official candidate
@@ -31,10 +31,18 @@ public and awaits an upstream response.
 - The official request was posted as Pollen Robotics GitHub issue 40; its
   checksummed contact receipt records the exact body, identity, destination,
   and timestamp. No role is closed and a response is pending.
-- The community request remains unsent. Brev is empty, and no publication,
-  policy, compute, activation, or physical action is authorized or in progress.
-- Resume artifact resolution only when upstream supplies immutable inputs. Any
-  additional contact or publication action still requires exact authority.
+- A new first-party walking policy was trained from scratch at public seed
+  `26090401` for 2,457,600 transitions, exported with a separately recorded
+  normalizer, and evaluated twice on frozen visible-development cases. The two
+  semantic trajectories match exactly; this is pipeline evidence, not gait
+  success or held-out acceptance.
+- The community request remains unsent. Brev is empty, and no third-party
+  policy action, paid compute, publication, activation, or physical action is
+  authorized or in progress. The completed local first-party run was explicitly
+  authorized development work.
+- Third-party artifact resolution still waits for immutable upstream inputs.
+  Local first-party development may continue under the versioned development
+  amendment; held-out, publication, activation, and hardware gates remain shut.
 
 ## Task List
 

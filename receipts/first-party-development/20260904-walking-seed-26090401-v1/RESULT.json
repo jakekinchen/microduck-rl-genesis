@@ -1,0 +1,455 @@
+{
+  "evaluation": {
+    "first": {
+      "artifacts": {
+        "environment-lock.json": "sha256:59d9ab3c92dc1043fcf646411526526896716e40836b17778a084bf6c2b49a3c",
+        "rollout.mp4": "sha256:8d8128c2a0bf8041fe61c1841c39e592ebbe245d4a759d750b04bca180f6d8a6",
+        "trajectory.parquet": "sha256:23da0b8e41a5dc25cff319182a60cb38436cd38e5e93366a66d28ae0e9b2e816"
+      },
+      "case_reports": [
+        {
+          "authorities": {
+            "action_contract_sha256": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896",
+            "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+            "bam_lock_sha256": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+            "control_contract_sha256": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
+            "evaluator_config_sha256": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
+            "evaluator_core_sha256": "sha256:a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+            "model_lock_sha256": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae",
+            "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+            "model_scene_sha256": "sha256:6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+            "observation_contract_sha256": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce",
+            "task_contract_sha256": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71"
+          },
+          "case": {
+            "id": "first-party-development.home-stand.v1",
+            "seed": 74101,
+            "seed_material_sha256": "sha256:47f68e89ede87b9156e162aad9d598cc066370574aec1acd2c599464b6bfdcc6",
+            "seed_stream": "sha256-counter-v1"
+          },
+          "classification": "development_pass",
+          "evaluator_id": "microduck.c-mujoco-onnx-bam.v1",
+          "evidence_boundary": "First-party learned-policy execution on visible development cases only; not gait success, held-out acceptance, transfer, or physical authority.",
+          "held_out": false,
+          "integrity": {
+            "deadline_latency_source": "measured_wall_clock",
+            "deadline_miss_count": 0,
+            "finite": true,
+            "inference_deadline_ms": 20.0,
+            "measured_inference_latency_ms": {
+              "count": 100,
+              "maximum": 0.085958,
+              "mean": 0.06663788999999999,
+              "minimum": 0.054792,
+              "p50": 0.06627050000000001,
+              "p95": 0.07758365
+            },
+            "trajectory_sha256": "sha256:f5129fcf1b2c0dfea991ed29dc33bf7a5834e32bc0f8abd6f03028ea998b4f6e"
+          },
+          "loop": {
+            "action_filter": "none",
+            "bam_updates": 400,
+            "control_decimation": 4,
+            "control_hz": 50,
+            "physics_dt_s": 0.005,
+            "physics_steps": 400,
+            "policy_calls": 100
+          },
+          "policy": {
+            "execution_provider": "CPUExecutionProvider",
+            "sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f"
+          },
+          "proof_class": "first_party_development",
+          "runtime": {
+            "mujoco": "3.12.0",
+            "numpy": "2.5.2",
+            "onnxruntime": "1.23.2"
+          },
+          "schema_version": "microduck.evaluator-report/v1",
+          "task_success": "not_evaluated"
+        },
+        {
+          "authorities": {
+            "action_contract_sha256": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896",
+            "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+            "bam_lock_sha256": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+            "control_contract_sha256": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
+            "evaluator_config_sha256": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
+            "evaluator_core_sha256": "sha256:a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+            "model_lock_sha256": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae",
+            "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+            "model_scene_sha256": "sha256:6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+            "observation_contract_sha256": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce",
+            "task_contract_sha256": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71"
+          },
+          "case": {
+            "id": "first-party-development.command-sequence.v1",
+            "seed": 74102,
+            "seed_material_sha256": "sha256:085f0f5384aadff88246bce6ce956638d9653ca4132395668484d8fac49d3eb1",
+            "seed_stream": "sha256-counter-v1"
+          },
+          "classification": "development_pass",
+          "evaluator_id": "microduck.c-mujoco-onnx-bam.v1",
+          "evidence_boundary": "First-party learned-policy execution on visible development cases only; not gait success, held-out acceptance, transfer, or physical authority.",
+          "held_out": false,
+          "integrity": {
+            "deadline_latency_source": "measured_wall_clock",
+            "deadline_miss_count": 0,
+            "finite": true,
+            "inference_deadline_ms": 20.0,
+            "measured_inference_latency_ms": {
+              "count": 100,
+              "maximum": 0.090375,
+              "mean": 0.06492706,
+              "minimum": 0.049042,
+              "p50": 0.065333,
+              "p95": 0.0729726
+            },
+            "trajectory_sha256": "sha256:1ead2b4f68018ceee1a0bf63106d55f82d9d62de245ae9ac1f8e926536b95b36"
+          },
+          "loop": {
+            "action_filter": "none",
+            "bam_updates": 400,
+            "control_decimation": 4,
+            "control_hz": 50,
+            "physics_dt_s": 0.005,
+            "physics_steps": 400,
+            "policy_calls": 100
+          },
+          "policy": {
+            "execution_provider": "CPUExecutionProvider",
+            "sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f"
+          },
+          "proof_class": "first_party_development",
+          "runtime": {
+            "mujoco": "3.12.0",
+            "numpy": "2.5.2",
+            "onnxruntime": "1.23.2"
+          },
+          "schema_version": "microduck.evaluator-report/v1",
+          "task_success": "not_evaluated"
+        }
+      ],
+      "evidence_boundary": "First-party learned-policy execution on frozen visible development cases only; no gait success, held-out acceptance, official/community authority, transfer, or physical authority.",
+      "held_out": false,
+      "measured_case_metrics": [
+        {
+          "case_id": "first-party-development.home-stand.v1",
+          "duration_s": 1.9999999999999793,
+          "final_root_position_m": [
+            0.011155570641128376,
+            -0.0021965022923128284,
+            0.11843256615128482
+          ],
+          "maximum_absolute_action_rad": 0.6048454642295837,
+          "maximum_absolute_actuator_torque_nm": 0.29859881045193365,
+          "maximum_root_height_m": 0.12475171296226543,
+          "minimum_root_height_m": 0.11480422311856674,
+          "physics_steps": 400,
+          "root_displacement_m": [
+            0.011101194459720841,
+            -0.00219315250426495,
+            -0.006319146810980614
+          ]
+        },
+        {
+          "case_id": "first-party-development.command-sequence.v1",
+          "duration_s": 1.9999999999999793,
+          "final_root_position_m": [
+            0.010936818623084868,
+            -0.0030921596457152804,
+            0.11856676614445909
+          ],
+          "maximum_absolute_action_rad": 0.6048454642295837,
+          "maximum_absolute_actuator_torque_nm": 0.29859881045193365,
+          "maximum_root_height_m": 0.12475171296226543,
+          "minimum_root_height_m": 0.11480422311856674,
+          "physics_steps": 400,
+          "root_displacement_m": [
+            0.010882442441677333,
+            -0.003088809857667402,
+            -0.006184946817806347
+          ]
+        }
+      ],
+      "policy_sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f",
+      "proof_class": "first_party_development",
+      "schema_version": "microduck.first-party-evaluation/v1",
+      "suite_id": "microduck.walking-first-party-visible-development.v1",
+      "task_success": "not_evaluated",
+      "trajectory": {
+        "all_finite": true,
+        "canonical_sha256": "sha256:f8830fdfa416ba31174dfbcd2259e7e739de9eb71aa595db82e29856a6dde9af",
+        "case_count": 2,
+        "row_count": 800
+      },
+      "video": {
+        "codec": "libx264/yuv420p",
+        "fps": 50,
+        "frame_count": 200,
+        "height": 240,
+        "offscreen_samples": 1,
+        "width": 320
+      },
+      "visibility": "public-development"
+    },
+    "repeatability": {
+      "canonical_trajectory_sha256": [
+        "sha256:f8830fdfa416ba31174dfbcd2259e7e739de9eb71aa595db82e29856a6dde9af",
+        "sha256:f8830fdfa416ba31174dfbcd2259e7e739de9eb71aa595db82e29856a6dde9af"
+      ],
+      "held_out": false,
+      "measured_inference_latency_retained_not_compared_for_determinism": true,
+      "policy_sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f",
+      "repeat_count": 2,
+      "rollout_mp4_bytes_equal": true,
+      "schema_version": "microduck.first-party-repeatability/v1",
+      "semantic_outputs_equal": true,
+      "task_success": "not_evaluated",
+      "trajectory_parquet_bytes_equal": true
+    },
+    "second": {
+      "artifacts": {
+        "environment-lock.json": "sha256:59d9ab3c92dc1043fcf646411526526896716e40836b17778a084bf6c2b49a3c",
+        "rollout.mp4": "sha256:8d8128c2a0bf8041fe61c1841c39e592ebbe245d4a759d750b04bca180f6d8a6",
+        "trajectory.parquet": "sha256:23da0b8e41a5dc25cff319182a60cb38436cd38e5e93366a66d28ae0e9b2e816"
+      },
+      "case_reports": [
+        {
+          "authorities": {
+            "action_contract_sha256": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896",
+            "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+            "bam_lock_sha256": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+            "control_contract_sha256": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
+            "evaluator_config_sha256": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
+            "evaluator_core_sha256": "sha256:a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+            "model_lock_sha256": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae",
+            "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+            "model_scene_sha256": "sha256:6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+            "observation_contract_sha256": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce",
+            "task_contract_sha256": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71"
+          },
+          "case": {
+            "id": "first-party-development.home-stand.v1",
+            "seed": 74101,
+            "seed_material_sha256": "sha256:47f68e89ede87b9156e162aad9d598cc066370574aec1acd2c599464b6bfdcc6",
+            "seed_stream": "sha256-counter-v1"
+          },
+          "classification": "development_pass",
+          "evaluator_id": "microduck.c-mujoco-onnx-bam.v1",
+          "evidence_boundary": "First-party learned-policy execution on visible development cases only; not gait success, held-out acceptance, transfer, or physical authority.",
+          "held_out": false,
+          "integrity": {
+            "deadline_latency_source": "measured_wall_clock",
+            "deadline_miss_count": 0,
+            "finite": true,
+            "inference_deadline_ms": 20.0,
+            "measured_inference_latency_ms": {
+              "count": 100,
+              "maximum": 0.096458,
+              "mean": 0.06708955999999999,
+              "minimum": 0.055709,
+              "p50": 0.0663125,
+              "p95": 0.07818365
+            },
+            "trajectory_sha256": "sha256:f5129fcf1b2c0dfea991ed29dc33bf7a5834e32bc0f8abd6f03028ea998b4f6e"
+          },
+          "loop": {
+            "action_filter": "none",
+            "bam_updates": 400,
+            "control_decimation": 4,
+            "control_hz": 50,
+            "physics_dt_s": 0.005,
+            "physics_steps": 400,
+            "policy_calls": 100
+          },
+          "policy": {
+            "execution_provider": "CPUExecutionProvider",
+            "sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f"
+          },
+          "proof_class": "first_party_development",
+          "runtime": {
+            "mujoco": "3.12.0",
+            "numpy": "2.5.2",
+            "onnxruntime": "1.23.2"
+          },
+          "schema_version": "microduck.evaluator-report/v1",
+          "task_success": "not_evaluated"
+        },
+        {
+          "authorities": {
+            "action_contract_sha256": "sha256:d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896",
+            "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+            "bam_lock_sha256": "sha256:bc9ae46bb228acf6f7d4f4f4e5b57e0e79f79c8a926c9591ab9c401dd2de31f3",
+            "control_contract_sha256": "sha256:a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1",
+            "evaluator_config_sha256": "sha256:2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c",
+            "evaluator_core_sha256": "sha256:a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+            "model_lock_sha256": "sha256:158e82bd0c57dc742b272d9b3fb70a06ab15718519a583ca3190e85f4778d8ae",
+            "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+            "model_scene_sha256": "sha256:6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+            "observation_contract_sha256": "sha256:bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce",
+            "task_contract_sha256": "sha256:15b78f894bb6580c004f49881c8151cc740ca1ae7d7a8fbe28729f7e41295a71"
+          },
+          "case": {
+            "id": "first-party-development.command-sequence.v1",
+            "seed": 74102,
+            "seed_material_sha256": "sha256:085f0f5384aadff88246bce6ce956638d9653ca4132395668484d8fac49d3eb1",
+            "seed_stream": "sha256-counter-v1"
+          },
+          "classification": "development_pass",
+          "evaluator_id": "microduck.c-mujoco-onnx-bam.v1",
+          "evidence_boundary": "First-party learned-policy execution on visible development cases only; not gait success, held-out acceptance, transfer, or physical authority.",
+          "held_out": false,
+          "integrity": {
+            "deadline_latency_source": "measured_wall_clock",
+            "deadline_miss_count": 0,
+            "finite": true,
+            "inference_deadline_ms": 20.0,
+            "measured_inference_latency_ms": {
+              "count": 100,
+              "maximum": 0.087125,
+              "mean": 0.06502878,
+              "minimum": 0.035084,
+              "p50": 0.065625,
+              "p95": 0.07622949999999999
+            },
+            "trajectory_sha256": "sha256:1ead2b4f68018ceee1a0bf63106d55f82d9d62de245ae9ac1f8e926536b95b36"
+          },
+          "loop": {
+            "action_filter": "none",
+            "bam_updates": 400,
+            "control_decimation": 4,
+            "control_hz": 50,
+            "physics_dt_s": 0.005,
+            "physics_steps": 400,
+            "policy_calls": 100
+          },
+          "policy": {
+            "execution_provider": "CPUExecutionProvider",
+            "sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f"
+          },
+          "proof_class": "first_party_development",
+          "runtime": {
+            "mujoco": "3.12.0",
+            "numpy": "2.5.2",
+            "onnxruntime": "1.23.2"
+          },
+          "schema_version": "microduck.evaluator-report/v1",
+          "task_success": "not_evaluated"
+        }
+      ],
+      "evidence_boundary": "First-party learned-policy execution on frozen visible development cases only; no gait success, held-out acceptance, official/community authority, transfer, or physical authority.",
+      "held_out": false,
+      "measured_case_metrics": [
+        {
+          "case_id": "first-party-development.home-stand.v1",
+          "duration_s": 1.9999999999999793,
+          "final_root_position_m": [
+            0.011155570641128376,
+            -0.0021965022923128284,
+            0.11843256615128482
+          ],
+          "maximum_absolute_action_rad": 0.6048454642295837,
+          "maximum_absolute_actuator_torque_nm": 0.29859881045193365,
+          "maximum_root_height_m": 0.12475171296226543,
+          "minimum_root_height_m": 0.11480422311856674,
+          "physics_steps": 400,
+          "root_displacement_m": [
+            0.011101194459720841,
+            -0.00219315250426495,
+            -0.006319146810980614
+          ]
+        },
+        {
+          "case_id": "first-party-development.command-sequence.v1",
+          "duration_s": 1.9999999999999793,
+          "final_root_position_m": [
+            0.010936818623084868,
+            -0.0030921596457152804,
+            0.11856676614445909
+          ],
+          "maximum_absolute_action_rad": 0.6048454642295837,
+          "maximum_absolute_actuator_torque_nm": 0.29859881045193365,
+          "maximum_root_height_m": 0.12475171296226543,
+          "minimum_root_height_m": 0.11480422311856674,
+          "physics_steps": 400,
+          "root_displacement_m": [
+            0.010882442441677333,
+            -0.003088809857667402,
+            -0.006184946817806347
+          ]
+        }
+      ],
+      "policy_sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f",
+      "proof_class": "first_party_development",
+      "schema_version": "microduck.first-party-evaluation/v1",
+      "suite_id": "microduck.walking-first-party-visible-development.v1",
+      "task_success": "not_evaluated",
+      "trajectory": {
+        "all_finite": true,
+        "canonical_sha256": "sha256:f8830fdfa416ba31174dfbcd2259e7e739de9eb71aa595db82e29856a6dde9af",
+        "case_count": 2,
+        "row_count": 800
+      },
+      "video": {
+        "codec": "libx264/yuv420p",
+        "fps": 50,
+        "frame_count": 200,
+        "height": 240,
+        "offscreen_samples": 1,
+        "width": 320
+      },
+      "visibility": "public-development"
+    },
+    "wall_seconds": [
+      4.517354333773255,
+      4.455892542377114
+    ]
+  },
+  "evidence_boundary": "A short, public-seed first-party development smoke for pipeline debugging only; it is not gait success, held-out acceptance, an official/community artifact, CUDA comparison, publication authority, license closure, transfer, or physical authority.",
+  "export": {
+    "normalizer": {
+      "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/normalizer.json",
+      "sha256": "sha256:df4d8d433e8e5ab45489e06e2ec071676e69e1ddad46effc0cd8e03f876c713f"
+    },
+    "parity": {
+      "fixed_batch": true,
+      "random_probe": {
+        "max_abs_action_error_rad": 3.337860107421875e-06,
+        "max_action_std_rad": 2.4914214611053467,
+        "observation_count": 33,
+        "passed": true,
+        "seed": 0,
+        "threshold_rad": 0.0001
+      },
+      "real_observation_episode": {
+        "max_abs_action_error_rad": 5.364418029785156e-07,
+        "max_observation_std": 1.6315412521362305,
+        "observation_max": 4.521530628204346,
+        "observation_min": -8.77889347076416,
+        "passed": true,
+        "step_count": 60,
+        "threshold_rad": 0.0001
+      },
+      "schema_version": "microduck.first-party-export-parity/v1"
+    },
+    "policy": {
+      "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/policy.normalized.fixed-batch.onnx",
+      "sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f"
+    },
+    "wall_seconds": 31.597776709124446
+  },
+  "official_or_community_roles_closed": [],
+  "origin": "first_party_local_from_scratch",
+  "result": "bounded_smoke_and_visible_development_evaluation_complete",
+  "schema_version": "microduck.first-party-development-result/v1",
+  "source_revision": "d050920c9578ac05358d0fd3576f1ef260437275",
+  "training": {
+    "checkpoint": {
+      "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/training/source-checkpoint.pt",
+      "sha256": "sha256:30648b221c189fd2ddd3f81cd0217eb648a372057319497d8c50e2378766dd07"
+    },
+    "transitions": 2457600,
+    "wall_seconds": 510.90917779225856
+  }
+}

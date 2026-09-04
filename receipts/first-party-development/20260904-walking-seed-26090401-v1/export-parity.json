@@ -1,0 +1,21 @@
+{
+  "fixed_batch": true,
+  "random_probe": {
+    "max_abs_action_error_rad": 3.337860107421875e-06,
+    "max_action_std_rad": 2.4914214611053467,
+    "observation_count": 33,
+    "passed": true,
+    "seed": 0,
+    "threshold_rad": 0.0001
+  },
+  "real_observation_episode": {
+    "max_abs_action_error_rad": 5.364418029785156e-07,
+    "max_observation_std": 1.6315412521362305,
+    "observation_max": 4.521530628204346,
+    "observation_min": -8.77889347076416,
+    "passed": true,
+    "step_count": 60,
+    "threshold_rad": 0.0001
+  },
+  "schema_version": "microduck.first-party-export-parity/v1"
+}

@@ -1,0 +1,29 @@
+{
+  "checkpoint": {
+    "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/training/source-checkpoint.pt",
+    "sha256": "sha256:30648b221c189fd2ddd3f81cd0217eb648a372057319497d8c50e2378766dd07"
+  },
+  "control_hz": 50,
+  "input_shape": [
+    1,
+    61
+  ],
+  "normalized_onnx": {
+    "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/policy.normalized.fixed-batch.onnx",
+    "sha256": "sha256:843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f"
+  },
+  "normalizer": {
+    "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/normalizer.json",
+    "sha256": "sha256:df4d8d433e8e5ab45489e06e2ec071676e69e1ddad46effc0cd8e03f876c713f"
+  },
+  "origin": "first_party_local_from_scratch",
+  "output_shape": [
+    1,
+    14
+  ],
+  "parity": {
+    "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/export-parity.json",
+    "sha256": "sha256:069a11f193cbb720fdf61eb7e9dfa2c037799914367d7f03ea9c7b635198f671"
+  },
+  "schema_version": "microduck.first-party-export-association/v1"
+}
