@@ -15,30 +15,28 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/session-logs/043-executor-m5-sixth-cuda-pilot.md` - terminal-negative
-sixth-pilot provisioning/connectivity receipt and exact teardown; independent
-Reviewer decision required.
+`docs/reviewer-messages/043-m5-sixth-cuda-pilot.md` - Reviewer acceptance of
+the terminal-negative sixth-pilot provisioning/connectivity receipt and exact
+teardown. No compute authority or paid execution remains active.
 
 ## Current Status
 
-`SIXTH_PILOT_TERMINAL_REVIEW_REQUIRED` - workspace `urmhasks7` never yielded a
-usable shell before the terminal decision, so the disk gate, uploads, and
-harness never ran. Exact-ID teardown is complete and Brev inventory is empty.
-Manager authority 012 is consumed; no retry or replacement is authorized.
+`SIXTH_PILOT_TERMINAL_NEGATIVE_ACCEPTED` - Reviewer 043 accepted exact handoff
+`a70af4e` strictly as provisioning/connectivity failure evidence. Workspace
+`urmhasks7` was deleted and authenticated Brev inventory is empty. Manager
+authority 012 is consumed; no retry or replacement compute is authorized.
 
 ## Stop Conditions
 
 - Do not provision from consumed Manager authorizations 007, 009, 010, 011, or
   012. Authorization 012 was consumed by its one terminal sixth-pilot workspace.
   No fallback, substitute, second workspace, or sixth-pilot retry is authorized.
-- For the proposed sixth pilot only, stop at two hours or `$8.816124`, whichever
-  occurs first, and stop immediately on source/image drift, hardware/runtime
-  integrity failure, receipt loss, or a second-workspace requirement. This is
-  a proposed limit, not compute authority.
+- The sixth-pilot `$8.816124` / two-hour ceiling is historical and consumed.
+  Do not reopen execution because of the belated post-terminal READY signal.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
-- Do not retry the fourth or fifth pilot types. Any sixth-pilot compute requires
-  independent proposal acceptance and a fresh exact Manager authorization.
+- Do not retry the fourth, fifth, or sixth pilot types. No replacement compute
+  is authorized.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -46,10 +44,11 @@ Manager authority 012 is consumed; no retry or replacement is authorized.
 
 ## Human Constraints
 
-- Manager logs 009, 010, and 011 were one-use authorities. They were consumed by
+- Manager logs 009, 010, 011, and 012 were one-use authorities. They were consumed by
   terminal receipts `20260904T030457Z-4qe7ph6p7` and
   `20260904T044136Z-tpo91g7kj`, then terminal receipt
-  `20260904T055749Z-i1bsb56r7`; none can be reused.
+  `20260904T055749Z-i1bsb56r7`, then terminal receipt
+  `20260904T070121Z-urmhasks7`; none can be reused.
 - Historical fourth-pilot constraint only: `hyperstack_A100_80G` was selected
   at `$1.62/hour` with a two-hour / `$3.24` ceiling. That authorization is
   consumed; do not retry this type under the fifth-pilot proposal.
@@ -57,12 +56,13 @@ Manager authority 012 is consumed; no retry or replacement is authorized.
   `massedcompute_A100_sxm4_80G_DGX` at `$1.656/hour`, non-stoppable and
   non-rebootable. That type failed before shell readiness under consumed
   authority 011 and cannot be retried.
-- The proposed sixth-pilot replacement is exactly direct GCP type
+- The consumed sixth-pilot replacement was exactly direct GCP type
   `a2-highgpu-1g:nvidia-tesla-a100:1` at `$4.408062/hour`, stoppable with
   flexible ports, one A100 40 GB, and a two-hour / `$8.816124` ceiling. Its
   catalog target disk is only 10 GB, so at least 8 GiB free must be verified
   before upload and again before install. Catalog indicators do not prove shell
-  readiness. Fresh exact Manager authority is required before creation.
+  readiness. It failed before a usable shell, was torn down under consumed
+  authority 012, and cannot be retried.
 - The `$210` total CUDA envelope remains a planning ceiling, not active compute
   authority. No H100, multi-GPU, second workspace, fallback, substitution, or
   automatic overspend.
