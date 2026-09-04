@@ -15,17 +15,15 @@ M5 Linux CUDA runtime reconciliation
 
 ## Current Slice
 
-`docs/briefs/036-m5-fourth-pilot-proposal-refreeze.md` - accepted by Reviewer
-036 at Executor HEAD `0cbdb4c` as an exact non-authorizing proposal. Workflow
-stopped before any separate Manager decision.
+`docs/briefs/037-m5-fourth-cuda-pilot.md` - exact one-use fourth-pilot execution
+slice under Manager authorization 010; authority becomes usable only after its
+commit.
 
 ## Current Status
 
-`FOURTH_PILOT_PROPOSAL_ACCEPTED_NOT_AUTHORIZED` - the exact proposal at SHA-256
-`0513d276aa6ca591e5a4232ffe914a5b9107910a7366b397a77e421df3a09ec2`
-is independently accepted, fail-closed, and remains `compute_authorized=false`.
-No fourth pilot or compute authority is active; only a later new exact Manager
-record may authorize creation.
+`FOURTH_PILOT_AUTHORIZATION_COMMIT_REQUIRED` - Manager log 010 binds the exact
+Reviewer-036-accepted proposal and one no-fallback A100 pilot. Do not provision
+until this authority record is committed and every fresh pre-create gate passes.
 
 ## Stop Conditions
 
@@ -38,9 +36,8 @@ record may authorize creation.
   receipt loss, or a second-workspace requirement.
 - Do not begin the full CUDA seed matrix from this smoke authorization,
   regardless of the pilot outcome.
-- Do not run a fourth pilot. Reviewer 035 permits this separate local-only
-  proposal slice, but any later compute requires independent acceptance of the
-  exact proposal and a fresh, exact Manager authorization.
+- Run only the exact fourth pilot authorized by committed Manager log 010. No
+  fallback, substitute, second workspace, replay, or expansion is authorized.
 - Stop when an authoritative upstream input is unavailable and no honest
   repo-local fixture can close the gate.
 - Stop on a verified safety boundary or destructive operation requiring human
@@ -63,5 +60,3 @@ record may authorize creation.
   consequences of compute or publication authority.
 - Scoped local commits and isolated clean-clone/worktree verification are
   authorized; preserve the intentional readiness work already in the tree.
-
-<stop-orchestrator/>
