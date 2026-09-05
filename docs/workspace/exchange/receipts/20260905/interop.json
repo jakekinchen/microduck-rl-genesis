@@ -1,0 +1,1039 @@
+{
+  "schema": "microduck.workspace-interop-receipt/v1",
+  "generated_at": "2026-09-05T10:16:26.618851+00:00",
+  "passed": true,
+  "scope": "source-bound metadata and finite fixture conformance; not robot or physics conformance",
+  "files": {
+    "microduck_reader": {
+      "path": "/Users/kelly/Developer/microduck-rl-genesis/duck_workspace/exchange.py",
+      "sha256": "d07bdcd9594fd8aed47277861e922cf6b6b46020755f96db2476e4f8d052c6d3"
+    },
+    "sim2claw_reader": {
+      "path": "/Users/kelly/Developer/sim2claw/src/sim2claw/ops/adapter.py",
+      "sha256": "2f96b8edb30f75d9a28525c77aa8e43676173e32ef94d2f94c9f0128946d0a5f"
+    },
+    "microduck_schema": {
+      "path": "/Users/kelly/Developer/microduck-rl-genesis/docs/workspace/exchange/workspace_adapter.v1.schema.json",
+      "sha256": "7f6115335dac03c0493940ed9f63d1aba0c741ba55defd434b5208acedf52bf0"
+    },
+    "sim2claw_schema": {
+      "path": "/Users/kelly/Developer/sim2claw/configs/operations/workspace_adapter.v1.schema.json",
+      "sha256": "7f6115335dac03c0493940ed9f63d1aba0c741ba55defd434b5208acedf52bf0"
+    },
+    "microduck_fixtures": {
+      "path": "/Users/kelly/Developer/microduck-rl-genesis/docs/workspace/exchange/workspace_adapter.v1.fixtures.json",
+      "sha256": "7ea788e0ddce6ce77a99ae18fb1c87589ec5437806ed68ed6d2b8efde0f6eaa4"
+    },
+    "sim2claw_fixtures": {
+      "path": "/Users/kelly/Developer/sim2claw/configs/operations/workspace_adapter.v1.fixtures.json",
+      "sha256": "7ea788e0ddce6ce77a99ae18fb1c87589ec5437806ed68ed6d2b8efde0f6eaa4"
+    }
+  },
+  "exports": {
+    "microduck": {
+      "path": "microduck.json",
+      "sha256": "f173b5618311b8ef3dc0d4db1da5f91e6347ceb570f928b508219ac69eb53aee"
+    },
+    "sim2claw": {
+      "path": "sim2claw.json",
+      "sha256": "6338565601416770ea5de78d799cc976955e39c3bfa4f360607924358381ec38"
+    }
+  },
+  "source_bound_checks": {
+    "microduck_reads_microduck": {
+      "schema": "microduck.workspace-exchange-inspection/v1",
+      "valid": true,
+      "errors": [],
+      "source_verification": "verified",
+      "native_gate_checked": false,
+      "execution_authorized": false,
+      "policy_portable": false,
+      "policy_portability": "not_established",
+      "note": "Structure and optional source-byte identity only. Native gate and dirty flag are producer observations; evaluator acceptance is not checked."
+    },
+    "sim2claw_reads_microduck": {
+      "claim": "Metadata schema and optional source-byte identity only; native ABI semantics and task acceptance remain native.",
+      "errors": [],
+      "execution_authorized": false,
+      "policy_portable": false,
+      "schema_version": "robotics.workspace_validation.v1",
+      "source_verification": {
+        "checks": [
+          {
+            "id": "agents",
+            "matches": true,
+            "path": "AGENTS.md"
+          },
+          {
+            "id": "queue",
+            "matches": true,
+            "path": "TRAINING_ACTUALIZATION.md"
+          },
+          {
+            "id": "goal",
+            "matches": true,
+            "path": "GOAL.md"
+          },
+          {
+            "id": "action",
+            "matches": true,
+            "path": "microduck_contract/interface/action-v1.json"
+          },
+          {
+            "id": "observation",
+            "matches": true,
+            "path": "microduck_contract/interface/observation-v1.json"
+          },
+          {
+            "id": "control",
+            "matches": true,
+            "path": "microduck_contract/interface/control-v1.json"
+          },
+          {
+            "id": "environment",
+            "matches": true,
+            "path": "microduck/velocity_env.py"
+          },
+          {
+            "id": "runtime",
+            "matches": true,
+            "path": "environments/apple/requirements.lock"
+          },
+          {
+            "id": "skill",
+            "matches": true,
+            "path": ".agents/skills/microduck-experiments/SKILL.md"
+          },
+          {
+            "id": "lessons",
+            "matches": true,
+            "path": "docs/workspace/RETROSPECTIVE.md"
+          },
+          {
+            "id": "inspector",
+            "matches": true,
+            "path": "duck_workspace/core.py"
+          },
+          {
+            "id": "exporter",
+            "matches": true,
+            "path": "duck_workspace/exchange.py"
+          }
+        ],
+        "status": "hash_verified"
+      },
+      "valid": true,
+      "workspace_id": "microduck-rl-genesis"
+    },
+    "microduck_reads_sim2claw": {
+      "schema": "microduck.workspace-exchange-inspection/v1",
+      "valid": true,
+      "errors": [],
+      "source_verification": "verified",
+      "native_gate_checked": false,
+      "execution_authorized": false,
+      "policy_portable": false,
+      "policy_portability": "not_established",
+      "note": "Structure and optional source-byte identity only. Native gate and dirty flag are producer observations; evaluator acceptance is not checked."
+    },
+    "sim2claw_reads_sim2claw": {
+      "claim": "Metadata schema and optional source-byte identity only; native ABI semantics and task acceptance remain native.",
+      "errors": [],
+      "execution_authorized": false,
+      "policy_portable": false,
+      "schema_version": "robotics.workspace_validation.v1",
+      "source_verification": {
+        "checks": [
+          {
+            "id": "agent_rules",
+            "matches": true,
+            "path": "AGENTS.md"
+          },
+          {
+            "id": "goal",
+            "matches": true,
+            "path": "GOAL.md"
+          },
+          {
+            "id": "manifest",
+            "matches": true,
+            "path": "configs/agent/current_state_v1.json"
+          },
+          {
+            "id": "campaign",
+            "matches": true,
+            "path": "configs/sail/observable_registration_current_graph_v1.json"
+          },
+          {
+            "id": "project_state",
+            "matches": true,
+            "path": "docs/autonomous-workflow/project_state.json"
+          },
+          {
+            "id": "queue",
+            "matches": true,
+            "path": "docs/autonomous-workflow/observable-registration-successor-task-queue-20260729.md"
+          },
+          {
+            "id": "operations_plan",
+            "matches": true,
+            "path": "docs/operations/plan.md"
+          },
+          {
+            "id": "adapter_design",
+            "matches": true,
+            "path": "docs/operations/DOJO_ADAPTER.md"
+          },
+          {
+            "id": "adapter_schema",
+            "matches": true,
+            "path": "configs/operations/workspace_adapter.v1.schema.json"
+          },
+          {
+            "id": "adapter_fixtures",
+            "matches": true,
+            "path": "configs/operations/workspace_adapter.v1.fixtures.json"
+          },
+          {
+            "id": "adapter_implementation",
+            "matches": true,
+            "path": "src/sim2claw/ops/adapter.py"
+          },
+          {
+            "id": "source_episode",
+            "matches": true,
+            "path": "configs/tasks/chess_pick_place_source_episode_v4.json"
+          },
+          {
+            "id": "act_state",
+            "matches": true,
+            "path": "configs/tasks/chess_pick_place_act_state_v1.json"
+          },
+          {
+            "id": "scene",
+            "matches": true,
+            "path": "src/sim2claw/scene.py"
+          },
+          {
+            "id": "gateway",
+            "matches": true,
+            "path": "src/sim2claw/physical_gateway.py"
+          },
+          {
+            "id": "physical_replay",
+            "matches": true,
+            "path": "src/sim2claw/physical_sim_replay.py"
+          },
+          {
+            "id": "exact_replay",
+            "matches": true,
+            "path": "src/sim2claw/replay_eligibility.py"
+          },
+          {
+            "id": "proof_classes",
+            "matches": true,
+            "path": "configs/sail/proof_classes_v1.json"
+          }
+        ],
+        "status": "hash_verified"
+      },
+      "valid": true,
+      "workspace_id": "sim2claw"
+    }
+  },
+  "shared_fixture_checks": {
+    "microduck": {
+      "schema": "microduck.workspace-exchange-conformance/v1",
+      "contract_sha256": "7f6115335dac03c0493940ed9f63d1aba0c741ba55defd434b5208acedf52bf0",
+      "fixtures_sha256": "7ea788e0ddce6ce77a99ae18fb1c87589ec5437806ed68ed6d2b8efde0f6eaa4",
+      "passed": true,
+      "cases": [
+        {
+          "id": "valid_refused_arm",
+          "expected_valid": true,
+          "actual_valid": true,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "valid_different_robot_same_observation_dimension",
+          "expected_valid": true,
+          "actual_valid": true,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "valid_inert_untrusted_entrypoint",
+          "expected_valid": true,
+          "actual_valid": true,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "unknown_version",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "changed_schema",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "absolute_source",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "traversal_source",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "backslash_source",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "missing_source_reference",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "missing_mandate_reference",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "action_length",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "units_length",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "aliased_action_names",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "boolean_action_dimension",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "boolean_clock_rate",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "zero_clock_rate",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "bad_timestamp",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "numeric_authority",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "exports_records",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "extra_field",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "duplicate_sources",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "duplicate_profiles",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "duplicate_capabilities",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "authority_inspect",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "authority_execute",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "authority_mutate_sources",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "authority_train",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "authority_hardware",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "authority_promote",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        },
+        {
+          "id": "authority_paid_compute",
+          "expected_valid": false,
+          "actual_valid": false,
+          "passed": true,
+          "execution_authorized": false,
+          "policy_portable": false
+        }
+      ],
+      "source_verification": "not_requested_synthetic_fixtures",
+      "execution_authorized": false,
+      "policy_portable": false
+    },
+    "sim2claw": {
+      "cases": [
+        {
+          "actual_valid": true,
+          "errors": [],
+          "expected_valid": true,
+          "id": "valid_refused_arm",
+          "passed": true
+        },
+        {
+          "actual_valid": true,
+          "errors": [],
+          "expected_valid": true,
+          "id": "valid_different_robot_same_observation_dimension",
+          "passed": true
+        },
+        {
+          "actual_valid": true,
+          "errors": [],
+          "expected_valid": true,
+          "id": "valid_inert_untrusted_entrypoint",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "schema_version: 'robotics.workspace_exchange.v1' was expected",
+            "unsupported workspace exchange version"
+          ],
+          "expected_valid": false,
+          "id": "unknown_version",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "shared schema digest mismatch"
+          ],
+          "expected_valid": false,
+          "id": "changed_schema",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "source mandate: path must be repository-relative without parent traversal"
+          ],
+          "expected_valid": false,
+          "id": "absolute_source",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "source mandate: path must be repository-relative without parent traversal"
+          ],
+          "expected_valid": false,
+          "id": "traversal_source",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "source mandate: path must be repository-relative without parent traversal"
+          ],
+          "expected_valid": false,
+          "id": "backslash_source",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "source references do not resolve"
+          ],
+          "expected_valid": false,
+          "id": "missing_source_reference",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "source references do not resolve"
+          ],
+          "expected_valid": false,
+          "id": "missing_mandate_reference",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "fixture.arm: action names and per-axis units must match integer dimension"
+          ],
+          "expected_valid": false,
+          "id": "action_length",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "fixture.arm: action names and per-axis units must match integer dimension"
+          ],
+          "expected_valid": false,
+          "id": "units_length",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "fixture.arm: action names are duplicated"
+          ],
+          "expected_valid": false,
+          "id": "aliased_action_names",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "profiles.0.action.dimension: True is not of type 'integer'"
+          ],
+          "expected_valid": false,
+          "id": "boolean_action_dimension",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "profiles.0.timing.control_hz: True is not of type 'number', 'null'"
+          ],
+          "expected_valid": false,
+          "id": "boolean_clock_rate",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "profiles.0.timing.control_hz: 0 is less than or equal to the minimum of 0"
+          ],
+          "expected_valid": false,
+          "id": "zero_clock_rate",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "generated_at: invalid timezone-qualified date-time"
+          ],
+          "expected_valid": false,
+          "id": "bad_timestamp",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.execute: False was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "numeric_authority",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "evidence.records_exported: False was expected"
+          ],
+          "expected_valid": false,
+          "id": "exports_records",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "<root>: Additional properties are not allowed ('implicit_acceptance' was unexpected)"
+          ],
+          "expected_valid": false,
+          "id": "extra_field",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "duplicate source IDs"
+          ],
+          "expected_valid": false,
+          "id": "duplicate_sources",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "duplicate profiles IDs"
+          ],
+          "expected_valid": false,
+          "id": "duplicate_profiles",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "duplicate capabilities IDs"
+          ],
+          "expected_valid": false,
+          "id": "duplicate_capabilities",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.inspect: True was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "authority_inspect",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.execute: False was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "authority_execute",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.mutate_sources: False was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "authority_mutate_sources",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.train: False was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "authority_train",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.hardware: False was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "authority_hardware",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.promote: False was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "authority_promote",
+          "passed": true
+        },
+        {
+          "actual_valid": false,
+          "errors": [
+            "permissions.paid_compute: False was expected",
+            "metadata exchange cannot grant execution or external authority"
+          ],
+          "expected_valid": false,
+          "id": "authority_paid_compute",
+          "passed": true
+        }
+      ],
+      "claim": "Synthetic metadata rejection/acceptance only; real exports require separate source-bound checks.",
+      "contract_sha256": "7f6115335dac03c0493940ed9f63d1aba0c741ba55defd434b5208acedf52bf0",
+      "execution_authorized": false,
+      "fixtures_sha256": "7ea788e0ddce6ce77a99ae18fb1c87589ec5437806ed68ed6d2b8efde0f6eaa4",
+      "passed": true,
+      "policy_portable": false,
+      "schema_version": "robotics.workspace_conformance.v1"
+    }
+  },
+  "native_comparison": {
+    "execution_authorized": false,
+    "level": "source_bound_metadata",
+    "local_validation": {
+      "claim": "Metadata schema and optional source-byte identity only; native ABI semantics and task acceptance remain native.",
+      "errors": [],
+      "execution_authorized": false,
+      "policy_portable": false,
+      "schema_version": "robotics.workspace_validation.v1",
+      "source_verification": {
+        "checks": [
+          {
+            "id": "agent_rules",
+            "matches": true,
+            "path": "AGENTS.md"
+          },
+          {
+            "id": "goal",
+            "matches": true,
+            "path": "GOAL.md"
+          },
+          {
+            "id": "manifest",
+            "matches": true,
+            "path": "configs/agent/current_state_v1.json"
+          },
+          {
+            "id": "campaign",
+            "matches": true,
+            "path": "configs/sail/observable_registration_current_graph_v1.json"
+          },
+          {
+            "id": "project_state",
+            "matches": true,
+            "path": "docs/autonomous-workflow/project_state.json"
+          },
+          {
+            "id": "queue",
+            "matches": true,
+            "path": "docs/autonomous-workflow/observable-registration-successor-task-queue-20260729.md"
+          },
+          {
+            "id": "operations_plan",
+            "matches": true,
+            "path": "docs/operations/plan.md"
+          },
+          {
+            "id": "adapter_design",
+            "matches": true,
+            "path": "docs/operations/DOJO_ADAPTER.md"
+          },
+          {
+            "id": "adapter_schema",
+            "matches": true,
+            "path": "configs/operations/workspace_adapter.v1.schema.json"
+          },
+          {
+            "id": "adapter_fixtures",
+            "matches": true,
+            "path": "configs/operations/workspace_adapter.v1.fixtures.json"
+          },
+          {
+            "id": "adapter_implementation",
+            "matches": true,
+            "path": "src/sim2claw/ops/adapter.py"
+          },
+          {
+            "id": "source_episode",
+            "matches": true,
+            "path": "configs/tasks/chess_pick_place_source_episode_v4.json"
+          },
+          {
+            "id": "act_state",
+            "matches": true,
+            "path": "configs/tasks/chess_pick_place_act_state_v1.json"
+          },
+          {
+            "id": "scene",
+            "matches": true,
+            "path": "src/sim2claw/scene.py"
+          },
+          {
+            "id": "gateway",
+            "matches": true,
+            "path": "src/sim2claw/physical_gateway.py"
+          },
+          {
+            "id": "physical_replay",
+            "matches": true,
+            "path": "src/sim2claw/physical_sim_replay.py"
+          },
+          {
+            "id": "exact_replay",
+            "matches": true,
+            "path": "src/sim2claw/replay_eligibility.py"
+          },
+          {
+            "id": "proof_classes",
+            "matches": true,
+            "path": "configs/sail/proof_classes_v1.json"
+          }
+        ],
+        "status": "hash_verified"
+      },
+      "valid": true,
+      "workspace_id": "sim2claw"
+    },
+    "local_workspace": "sim2claw",
+    "metadata_compatible": true,
+    "next_gate": "Versioned robot-specific scene/task/trace adapters with independent units, clock, reset/model and evaluator conformance.",
+    "passed": true,
+    "peer_validation": {
+      "claim": "Metadata schema and optional source-byte identity only; native ABI semantics and task acceptance remain native.",
+      "errors": [],
+      "execution_authorized": false,
+      "policy_portable": false,
+      "schema_version": "robotics.workspace_validation.v1",
+      "source_verification": {
+        "checks": [
+          {
+            "id": "agents",
+            "matches": true,
+            "path": "AGENTS.md"
+          },
+          {
+            "id": "queue",
+            "matches": true,
+            "path": "TRAINING_ACTUALIZATION.md"
+          },
+          {
+            "id": "goal",
+            "matches": true,
+            "path": "GOAL.md"
+          },
+          {
+            "id": "action",
+            "matches": true,
+            "path": "microduck_contract/interface/action-v1.json"
+          },
+          {
+            "id": "observation",
+            "matches": true,
+            "path": "microduck_contract/interface/observation-v1.json"
+          },
+          {
+            "id": "control",
+            "matches": true,
+            "path": "microduck_contract/interface/control-v1.json"
+          },
+          {
+            "id": "environment",
+            "matches": true,
+            "path": "microduck/velocity_env.py"
+          },
+          {
+            "id": "runtime",
+            "matches": true,
+            "path": "environments/apple/requirements.lock"
+          },
+          {
+            "id": "skill",
+            "matches": true,
+            "path": ".agents/skills/microduck-experiments/SKILL.md"
+          },
+          {
+            "id": "lessons",
+            "matches": true,
+            "path": "docs/workspace/RETROSPECTIVE.md"
+          },
+          {
+            "id": "inspector",
+            "matches": true,
+            "path": "duck_workspace/core.py"
+          },
+          {
+            "id": "exporter",
+            "matches": true,
+            "path": "duck_workspace/exchange.py"
+          }
+        ],
+        "status": "hash_verified"
+      },
+      "valid": true,
+      "workspace_id": "microduck-rl-genesis"
+    },
+    "peer_workspace": "microduck-rl-genesis",
+    "policy_portable": false,
+    "profile_comparisons": [
+      {
+        "differences": [
+          "robot_family",
+          "native_schema",
+          "scope",
+          "action",
+          "observation",
+          "timing"
+        ],
+        "local": "so101.source_episode.v4",
+        "matching_declared_fields": false,
+        "peer": "microduck-local-v1",
+        "policy_portable": false,
+        "reason": "Actual model, observation, action, reset and evaluator conformance require a separately reviewed robot-specific adapter."
+      },
+      {
+        "differences": [
+          "robot_family",
+          "native_schema",
+          "scope",
+          "action",
+          "observation",
+          "timing"
+        ],
+        "local": "so101.act_state.v1",
+        "matching_declared_fields": false,
+        "peer": "microduck-local-v1",
+        "policy_portable": false,
+        "reason": "Actual model, observation, action, reset and evaluator conformance require a separately reviewed robot-specific adapter."
+      },
+      {
+        "differences": [
+          "robot_family",
+          "native_schema",
+          "scope",
+          "action",
+          "observation",
+          "timing"
+        ],
+        "local": "so101.physical_gateway.v2",
+        "matching_declared_fields": false,
+        "peer": "microduck-local-v1",
+        "policy_portable": false,
+        "reason": "Actual model, observation, action, reset and evaluator conformance require a separately reviewed robot-specific adapter."
+      },
+      {
+        "differences": [
+          "robot_family",
+          "native_schema",
+          "scope",
+          "action",
+          "observation",
+          "timing"
+        ],
+        "local": "so101.exact_replay.v1",
+        "matching_declared_fields": false,
+        "peer": "microduck-local-v1",
+        "policy_portable": false,
+        "reason": "Actual model, observation, action, reset and evaluator conformance require a separately reviewed robot-specific adapter."
+      }
+    ],
+    "schema_version": "robotics.workspace_compatibility.v1"
+  },
+  "execution_authorized": false,
+  "policy_portable": false,
+  "limitations": [
+    "Source checks apply at the recorded time; concurrent edits and later commits invalidate current identity.",
+    "Reader semantics differ outside the shared corpus; see CONFORMANCE.md.",
+    "Native gate results remain producer observations; no training, policy activation or hardware was run."
+  ]
+}

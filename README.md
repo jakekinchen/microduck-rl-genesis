@@ -19,6 +19,26 @@ because the recipe is what has value, not the code.
 
 ## Quick start
 
+For the local experiment workspace:
+
+```sh
+./scripts/duck status                 # current queue and development evidence
+./scripts/duck prepare                # source-checked active case and next-experiment brief
+./scripts/duck doctor                 # runtime, frozen contract and BAM checks
+./scripts/duck studio                 # read-only video and metric comparison
+```
+
+Open Duck Lab at `http://127.0.0.1:8766`. See the
+[behavior workflow](docs/workspace/BEHAVIOR_WORKFLOW.md) for new experiments and
+the [experiment retrospective](docs/workspace/RETROSPECTIVE.md) for lessons from
+the prior MicroDuck and sim2claw work. New behavior specs are drafts; the viewer
+does not launch training or control the robot.
+
+Use [offline diagnostics](docs/experiment-ops/README.md) (`./scripts/duck-ops`)
+for advisory process inventory and first-divergence trace comparisons. The
+[workspace exchange](docs/workspace/exchange/README.md) shares source-bound
+metadata with other robot workspaces; it conveys no execution authority.
+
 On Apple Silicon:
 
 ```bash

@@ -18,3 +18,20 @@ Work directly in the current Codex task as a single agent.
   artifact, or local checkpoint is not task success or physical authority.
 - Do not start paid compute, publish artifacts, contact third parties, activate
   a policy, or operate hardware without the required user authority.
+
+## Workspace entry points
+
+- Use `./scripts/duck status` for a small current-state projection and
+  `./scripts/duck doctor` when checking local runtime/evaluator readiness.
+- Use `./scripts/duck studio` to compare retained development videos and
+  trajectories. It reads receipts; it cannot start training or operate hardware.
+- For a new behavior, consult `.agents/skills/microduck-experiments/SKILL.md`
+  and `docs/workspace/BEHAVIOR_WORKFLOW.md`. Reuse an existing experiment when
+  appropriate; `duck new` creates only a draft, not an executable training task.
+- Consult `docs/workspace/RETROSPECTIVE.md` for history lessons instead of
+  loading every historical role log. Keep private history extracts and local
+  dependency checkouts under ignored `.workspace/`.
+- For current laser work, run `./scripts/duck prepare` and follow
+  `docs/workspace/ACTIVE_EXPERIMENT.md` before another intervention. Inspect
+  the first failure, test one active property group at a time, freeze a fresh
+  test bank, and rerun the advisory `./scripts/duck-ops guard` before launch.

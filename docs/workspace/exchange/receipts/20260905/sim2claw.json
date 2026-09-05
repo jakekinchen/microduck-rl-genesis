@@ -1,0 +1,409 @@
+{
+  "capabilities": [
+    {
+      "availability": "implemented",
+      "description": "Current native authority refusal/state and local evidence coverage.",
+      "entrypoint": [
+        "uv",
+        "run",
+        "--locked",
+        "sim2claw",
+        "ops",
+        "--json",
+        "status"
+      ],
+      "id": "ops.status",
+      "kind": "workspace",
+      "native_schema": "sim2claw.ops.v1",
+      "read_only": true
+    },
+    {
+      "availability": "implemented",
+      "description": "Bounded cited context and advisory lessons; never execution authority.",
+      "entrypoint": [
+        "uv",
+        "run",
+        "--locked",
+        "sim2claw",
+        "ops",
+        "--json",
+        "brief",
+        "<query>"
+      ],
+      "id": "ops.brief",
+      "kind": "evidence",
+      "native_schema": "sim2claw.ops.brief.v1",
+      "read_only": true
+    },
+    {
+      "availability": "implemented",
+      "description": "Responsibilities and native scene/replay/evaluation component paths, with proposed gates distinct.",
+      "entrypoint": [
+        "uv",
+        "run",
+        "--locked",
+        "sim2claw",
+        "ops",
+        "--json",
+        "map"
+      ],
+      "id": "ops.map",
+      "kind": "scene",
+      "native_schema": "sim2claw.ops.architecture.v1",
+      "read_only": true
+    }
+  ],
+  "contract_sha256": "7f6115335dac03c0493940ed9f63d1aba0c741ba55defd434b5208acedf52bf0",
+  "evidence": {
+    "acceptance_meaning": "Native evaluator and campaign own acceptance. Metadata conformance grants no simulation, task or physical success.",
+    "integrity_meaning": "Source hashes identify exported declaration bytes; no run artifact or evaluator receipt is verified by this export.",
+    "native_classes": [
+      "fixture",
+      "synthetic",
+      "synthetic_benchmark",
+      "simulation",
+      "prospective_simulator_experiment",
+      "retained_action_frozen_simulator_replay",
+      "retrospective_reanalysis",
+      "learned_policy_simulation",
+      "retrospective_physical_teleoperation_observation",
+      "physical_teleoperation_source_unqualified",
+      "physical_read_only",
+      "physical_task"
+    ],
+    "native_record_schemas": [
+      "sim2claw.manipulation_source_recording_receipt.v1",
+      "sim2claw.exact_replay_eligibility_report.v1"
+    ],
+    "records_exported": false
+  },
+  "generated_at": "2026-09-05T10:16:25.938911+00:00",
+  "limitations": [
+    "Capability entrypoints are inert descriptions; consumers never execute them from this envelope.",
+    "SO-101 profiles are not MicroDuck 14-action policies; matching observation dimensions do not imply shared feature meaning.",
+    "No scene, policy, action tensor, training log, media or held-out data is transferred in v1.",
+    "Native source declarations can drift during active work. Re-export and reverify exact bytes before using an updated contract.",
+    "Runtime environments, active processes and all physical/paid authority remain native."
+  ],
+  "native_gate": {
+    "detail": "repository branch drift: expected main, got codex/operations-atlas",
+    "status": "refused"
+  },
+  "permissions": {
+    "execute": false,
+    "hardware": false,
+    "inspect": true,
+    "mutate_sources": false,
+    "paid_compute": false,
+    "promote": false,
+    "train": false
+  },
+  "profiles": [
+    {
+      "action": {
+        "dimension": 6,
+        "encoding": "float32",
+        "ordered_names": [
+          "shoulder_pan",
+          "shoulder_lift",
+          "elbow_flex",
+          "wrist_flex",
+          "wrist_roll",
+          "gripper"
+        ],
+        "representation": "absolute_joint_position_target",
+        "transform_policy": "Exact source actions; original scene and reset seed; no conversion by exchange.",
+        "units": [
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad"
+        ]
+      },
+      "id": "so101.source_episode.v4",
+      "native_schema": "sim2claw.canonical_manipulation_source_contract.v4",
+      "observation": {
+        "description": "Model-agnostic RGB/language/robot/goal source fields; adapter-specific observation dimensionality.",
+        "dimension": null,
+        "privileged_state_policy": "Evaluator-owned privileged state is never supplied by this metadata adapter."
+      },
+      "robot_family": "so101",
+      "scope": "one selected arm; combined scene has two six-actuator arms",
+      "source_ids": [
+        "source_episode",
+        "scene"
+      ],
+      "timing": {
+        "clock": "monotonic_seconds_from_action_start",
+        "control_hz": 20,
+        "frame_policy": "Native source/model binding; world poses use metres and wxyz quaternions where declared. No implicit conversion.",
+        "physics_step_s": 0.005
+      }
+    },
+    {
+      "action": {
+        "dimension": 6,
+        "encoding": "float32",
+        "ordered_names": [
+          "left_shoulder_pan_target_rad",
+          "left_shoulder_lift_target_rad",
+          "left_elbow_flex_target_rad",
+          "left_wrist_flex_target_rad",
+          "left_wrist_roll_target_rad",
+          "left_gripper_target_rad"
+        ],
+        "representation": "absolute_joint_position_target",
+        "transform_policy": "Native ACT task declares actuator-range clipping; this is not an exact-replay claim.",
+        "units": [
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad"
+        ]
+      },
+      "id": "so101.act_state.v1",
+      "native_schema": "sim2claw.chess_pick_place_act_state_task.v1",
+      "observation": {
+        "description": "Frozen named robot/goal/contact features; same dimension as MicroDuck does not imply matching semantics.",
+        "dimension": 61,
+        "privileged_state_policy": "Evaluator-owned privileged state is never supplied by this metadata adapter."
+      },
+      "robot_family": "so101",
+      "scope": "left-arm historical ACT state task; distinct from source episode v4 scene",
+      "source_ids": [
+        "act_state",
+        "scene"
+      ],
+      "timing": {
+        "clock": "native_task_execution; no global control rate inferred",
+        "control_hz": null,
+        "frame_policy": "Native source/model binding; world poses use metres and wxyz quaternions where declared. No implicit conversion.",
+        "physics_step_s": null
+      }
+    },
+    {
+      "action": {
+        "dimension": 6,
+        "encoding": "little_endian_float64_c_order",
+        "ordered_names": [
+          "shoulder_pan",
+          "shoulder_lift",
+          "elbow_flex",
+          "wrist_flex",
+          "wrist_roll",
+          "gripper"
+        ],
+        "representation": "physical_follower_targets",
+        "transform_policy": "First five degree conversions and calibrated gripper mapping are separate; existing gripper clipping precludes silent exact-action reuse.",
+        "units": [
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "degree",
+          "calibrated_gripper_0_100"
+        ]
+      },
+      "id": "so101.physical_gateway.v2",
+      "native_schema": "sim2claw.so101_physical_gateway.v2",
+      "observation": {
+        "description": "Measured robot/camera state is artifact-specific and unavailable through this exchange.",
+        "dimension": null,
+        "privileged_state_policy": "Evaluator-owned privileged state is never supplied by this metadata adapter."
+      },
+      "robot_family": "so101",
+      "scope": "single physical follower; description only",
+      "source_ids": [
+        "gateway",
+        "physical_replay",
+        "scene"
+      ],
+      "timing": {
+        "clock": "observed_host_intervals; exposure and actuator application timing not implied",
+        "control_hz": null,
+        "frame_policy": "Native source/model binding; world poses use metres and wxyz quaternions where declared. No implicit conversion.",
+        "physics_step_s": null
+      }
+    },
+    {
+      "action": {
+        "dimension": 6,
+        "encoding": "little_endian_float64_c_order",
+        "ordered_names": [
+          "shoulder_pan",
+          "shoulder_lift",
+          "elbow_flex",
+          "wrist_flex",
+          "wrist_roll",
+          "gripper"
+        ],
+        "representation": "joint_position_target",
+        "transform_policy": "Identity transform only; no clipping, IK, offset, corrective suffix or assistance.",
+        "units": [
+          "radian",
+          "radian",
+          "radian",
+          "radian",
+          "radian",
+          "radian"
+        ]
+      },
+      "id": "so101.exact_replay.v1",
+      "native_schema": "sim2claw.exact_replay_eligibility_manifest.v1",
+      "observation": {
+        "description": "Measured initial joint position and velocity plus declared action/source hashes.",
+        "dimension": null,
+        "privileged_state_policy": "Evaluator-owned privileged state is never supplied by this metadata adapter."
+      },
+      "robot_family": "so101",
+      "scope": "one timestamped arm action tensor",
+      "source_ids": [
+        "exact_replay",
+        "scene"
+      ],
+      "timing": {
+        "clock": "manifest_source_timestamps; no resampling or exposure-time inference",
+        "control_hz": null,
+        "frame_policy": "Native source/model binding; world poses use metres and wxyz quaternions where declared. No implicit conversion.",
+        "physics_step_s": null
+      }
+    }
+  ],
+  "schema_version": "robotics.workspace_exchange.v1",
+  "sources": [
+    {
+      "id": "agent_rules",
+      "path": "AGENTS.md",
+      "role": "native_work_mode",
+      "sha256": "80e07f9d4813ebd46090635e9ca94289ad57e7d8f491a25faa293c6782d80d3c"
+    },
+    {
+      "id": "goal",
+      "path": "GOAL.md",
+      "role": "current_status_projection",
+      "sha256": "d4318848e30d1b01251df3fc5ae10a32156eb81b67933d2bc110bd30917886b1"
+    },
+    {
+      "id": "manifest",
+      "path": "configs/agent/current_state_v1.json",
+      "role": "current_source_order",
+      "sha256": "e4b17fbfebf72a0b1741756241f8ccb3c13e05636fc9c2ce32c684fce94b5883"
+    },
+    {
+      "id": "campaign",
+      "path": "configs/sail/observable_registration_current_graph_v1.json",
+      "role": "campaign_authority",
+      "sha256": "45e7e07fb3210cf9c03f7b79d6489ed76219665f52fb59c198c166d11a86e81e"
+    },
+    {
+      "id": "project_state",
+      "path": "docs/autonomous-workflow/project_state.json",
+      "role": "native_project_state",
+      "sha256": "a5a7c2f5263def37e0923e4a9ee1b672dd0585090ff77dc2758ba7a279d1a5ba"
+    },
+    {
+      "id": "queue",
+      "path": "docs/autonomous-workflow/observable-registration-successor-task-queue-20260729.md",
+      "role": "campaign_queue",
+      "sha256": "22e306e529cfe23daa67350259cb137876a9579044f49a242a2245aaf738a39a"
+    },
+    {
+      "id": "operations_plan",
+      "path": "docs/operations/plan.md",
+      "role": "separate_software_integration_lane",
+      "sha256": "d20eee140600e55f32117299d26df3e034a231cf838297418177b20a0143eee4"
+    },
+    {
+      "id": "adapter_design",
+      "path": "docs/operations/DOJO_ADAPTER.md",
+      "role": "bilateral_ownership_and_growth_contract",
+      "sha256": "4817c56e796ec75ddb79e9568862abfa6f0022bc1e2cd9b9eba48a04eacb1482"
+    },
+    {
+      "id": "adapter_schema",
+      "path": "configs/operations/workspace_adapter.v1.schema.json",
+      "role": "shared_metadata_schema",
+      "sha256": "7f6115335dac03c0493940ed9f63d1aba0c741ba55defd434b5208acedf52bf0"
+    },
+    {
+      "id": "adapter_fixtures",
+      "path": "configs/operations/workspace_adapter.v1.fixtures.json",
+      "role": "shared_synthetic_conformance_cases",
+      "sha256": "7ea788e0ddce6ce77a99ae18fb1c87589ec5437806ed68ed6d2b8efde0f6eaa4"
+    },
+    {
+      "id": "adapter_implementation",
+      "path": "src/sim2claw/ops/adapter.py",
+      "role": "native_metadata_export_and_validation",
+      "sha256": "2f96b8edb30f75d9a28525c77aa8e43676173e32ef94d2f94c9f0128946d0a5f"
+    },
+    {
+      "id": "source_episode",
+      "path": "configs/tasks/chess_pick_place_source_episode_v4.json",
+      "role": "native_source_episode_contract",
+      "sha256": "d2e11406c2bd8609a158692a00c9e7edc45245c1219e799ddd6d7ae03051564d"
+    },
+    {
+      "id": "act_state",
+      "path": "configs/tasks/chess_pick_place_act_state_v1.json",
+      "role": "native_policy_observation_contract",
+      "sha256": "b8e527286caacfb13b3b4ca6bd2352c2f0704e9d5054d164e416bd1b2f24299c"
+    },
+    {
+      "id": "scene",
+      "path": "src/sim2claw/scene.py",
+      "role": "ordered_robot_joint_definition",
+      "sha256": "4b7dd7b251c87580505a40164117cc0999f36960244a5c66c2065165afcf3e46"
+    },
+    {
+      "id": "gateway",
+      "path": "src/sim2claw/physical_gateway.py",
+      "role": "physical_gateway_input_semantics",
+      "sha256": "700f9e657e42d7e8fe67b00f4909f177f1ee7e8f4c97ef753611a21f8bad4cbb"
+    },
+    {
+      "id": "physical_replay",
+      "path": "src/sim2claw/physical_sim_replay.py",
+      "role": "physical_to_sim_conversion_boundary",
+      "sha256": "4ab0cba06d4ea7c244aaeef6c1423a89ea6f1b762a308cdd3c4b95c9bce5b98d"
+    },
+    {
+      "id": "exact_replay",
+      "path": "src/sim2claw/replay_eligibility.py",
+      "role": "timestamped_exact_replay_semantics",
+      "sha256": "ea8ddae2d8db85183ad98eb23b42daf793f4530d6cec22a2e39fc160a3b208ce"
+    },
+    {
+      "id": "proof_classes",
+      "path": "configs/sail/proof_classes_v1.json",
+      "role": "native_proof_classes",
+      "sha256": "53b6889fd0dc5ae04c668869649b0f0aca7ed8eb28d6bc2fedede8529a63a046"
+    }
+  ],
+  "workspace": {
+    "domain": "SO-101 manipulation simulation, reconstruction/metrology, replay and evidence validation",
+    "id": "sim2claw",
+    "mandate": {
+      "source_priority": [
+        "agent_rules",
+        "manifest",
+        "project_state",
+        "campaign",
+        "queue",
+        "goal",
+        "operations_plan"
+      ],
+      "summary": "Build interpretable manipulation simulation/evidence tools while preserving native campaign, evaluator and physical-gateway authority. The operations lane does not reactivate OR156."
+    },
+    "owner_task": "01a070d8-106e-7e92-9867-7fe1ab6c7e8f",
+    "repository": {
+      "branch": "codex/operations-atlas",
+      "dirty": true,
+      "head": "ee9e532825fe72a0eca4f34443e138a28fdb344d"
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "schema_version": "robotics.workspace_exchange.v1",
+  "contract_sha256": "7f6115335dac03c0493940ed9f63d1aba0c741ba55defd434b5208acedf52bf0",
+  "generated_at": "2026-09-05T10:16:25.751411+00:00",
+  "workspace": {
+    "id": "microduck-rl-genesis",
+    "domain": "simulated biped behavior training on macOS",
+    "repository": {
+      "head": "9d23561f28566a4de7cb77fe63ce0c523b18dc6d",
+      "branch": "main",
+      "dirty": true
+    },
+    "mandate": {
+      "summary": "Work in one task. Follow the ordered training queue; retain native interface, evaluator and authority boundaries. Historical lessons do not grant actions.",
+      "source_priority": [
+        "agents",
+        "queue",
+        "goal",
+        "action",
+        "observation",
+        "control"
+      ]
+    },
+    "owner_task": "01a070d3-b64d-7011-9870-2a537ca4bf22"
+  },
+  "sources": [
+    {
+      "id": "agents",
+      "path": "AGENTS.md",
+      "role": "current operating instructions",
+      "sha256": "e0fde6b8b91784a35c3d422b5bbb1fb3986ddf56884480e28115499faf1613f4"
+    },
+    {
+      "id": "queue",
+      "path": "TRAINING_ACTUALIZATION.md",
+      "role": "ordered work and acceptance gates",
+      "sha256": "237a5ef84c36a042f4668472db10b5e1d0b5fedbfb3411dd41c1f83b9f75bd90"
+    },
+    {
+      "id": "goal",
+      "path": "GOAL.md",
+      "role": "concise current status; subordinate to the ordered queue",
+      "sha256": "ff9345f13c66c35f85b41fb740efde630125226c94a6b7f8c46390cc582f1f33"
+    },
+    {
+      "id": "action",
+      "path": "microduck_contract/interface/action-v1.json",
+      "role": "candidate local action interface",
+      "sha256": "d315d3f985483779880d473d95c81b9109f945ebf0de3dba8a01930c274da896"
+    },
+    {
+      "id": "observation",
+      "path": "microduck_contract/interface/observation-v1.json",
+      "role": "candidate local observation interface",
+      "sha256": "bb3339cbadf3b771013779824cef428d008089ef4541fd3098db24b39060a0ce"
+    },
+    {
+      "id": "control",
+      "path": "microduck_contract/interface/control-v1.json",
+      "role": "candidate local timing interface",
+      "sha256": "a26e9a2dcfe807d5ffd1f86968ff99a8491b2f9c7612ff564a01d4460dad40b1"
+    },
+    {
+      "id": "environment",
+      "path": "microduck/velocity_env.py",
+      "role": "native frame and observation implementation",
+      "sha256": "e52eec8b2b5fa0df1335d13c14492766ab746a29cfb60795150af83c48f90623"
+    },
+    {
+      "id": "runtime",
+      "path": "environments/apple/requirements.lock",
+      "role": "pinned Apple runtime dependencies",
+      "sha256": "4425348d7092188c4f81a63e5e227642c666d34d498cb3e6557e9371d8ad8ff0"
+    },
+    {
+      "id": "skill",
+      "path": ".agents/skills/microduck-experiments/SKILL.md",
+      "role": "project workflow guidance",
+      "sha256": "85d9b31de0f9205b4dfa153c8f3f57870d4b65e050c08eb318077c1e611e0d9d"
+    },
+    {
+      "id": "lessons",
+      "path": "docs/workspace/RETROSPECTIVE.md",
+      "role": "historical findings; no execution authority",
+      "sha256": "65a1b197232a272ccb680d8567a2cf098e48618cc9ae4cffb725e1bcc915fde0"
+    },
+    {
+      "id": "inspector",
+      "path": "duck_workspace/core.py",
+      "role": "native evidence inspection semantics",
+      "sha256": "b41a097eef94c4a53a1f08b7c3a2cc35830df4ad44b67865c0f3b646dfbc2035"
+    },
+    {
+      "id": "exporter",
+      "path": "duck_workspace/exchange.py",
+      "role": "metadata projection and validation semantics",
+      "sha256": "d07bdcd9594fd8aed47277861e922cf6b6b46020755f96db2476e4f8d052c6d3"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "microduck-local-v1",
+      "robot_family": "MicroDuck",
+      "native_schema": "microduck.interface/v1",
+      "scope": "Candidate repository-local locomotion interface; no checkpoint, backend conformance, held-out acceptance or physical transfer is asserted.",
+      "action": {
+        "dimension": 14,
+        "ordered_names": [
+          "left_hip_yaw",
+          "left_hip_roll",
+          "left_hip_pitch",
+          "left_knee",
+          "left_ankle",
+          "neck_pitch",
+          "head_pitch",
+          "head_yaw",
+          "head_roll",
+          "right_hip_yaw",
+          "right_hip_roll",
+          "right_hip_pitch",
+          "right_knee",
+          "right_ankle"
+        ],
+        "units": [
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad",
+          "rad"
+        ],
+        "encoding": "float32 tensor [1,14]; metadata contains no action payload",
+        "representation": "unfiltered_delta_from_home_rad",
+        "transform_policy": "Native target is home joint position plus action, scale 1.0, no post-policy filter. No shared conversion, clipping or assistance is supplied."
+      },
+      "observation": {
+        "dimension": 61,
+        "description": "base_ang_vel:3; projected_gravity:3; joint_pos:14; joint_vel:14; actions:14; twist_command:3; head_pose_command:4; body_pose_command:6",
+        "privileged_state_policy": "This layout is the actor interface. Reward/evaluation simulator state and command-source privilege require task-specific declarations; current laser target input is simulator ground truth, not camera control."
+      },
+      "timing": {
+        "control_hz": 50,
+        "physics_step_s": 0.005,
+        "clock": "simulation seconds; four physics steps per control tick; no wall-clock deadline guarantee",
+        "frame_policy": "Native velocity_env.py body-frame angular velocity and projected gravity; home-relative ordered joint positions. No coordinate conversion or camera extrinsic is exported."
+      },
+      "source_ids": [
+        "action",
+        "observation",
+        "control",
+        "environment",
+        "goal"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "status",
+      "kind": "workspace",
+      "native_schema": "microduck.workspace/v1",
+      "availability": "implemented",
+      "description": "Queue and development-receipt projection; recorded process liveness remains unchecked.",
+      "read_only": true,
+      "entrypoint": [
+        "./scripts/duck",
+        "status",
+        "--json"
+      ]
+    },
+    {
+      "id": "doctor",
+      "kind": "diagnostic",
+      "native_schema": "microduck.workspace-doctor/v1",
+      "availability": "implemented",
+      "description": "Native read-only dependency and frozen-contract readiness checks; not run by this exporter.",
+      "read_only": true,
+      "entrypoint": [
+        "./scripts/duck",
+        "doctor"
+      ]
+    },
+    {
+      "id": "studio",
+      "kind": "evidence",
+      "native_schema": "microduck.workspace/v1",
+      "availability": "implemented",
+      "description": "Local recorded video, trajectory and metric inspection; its URLs are not portable artifact addresses.",
+      "read_only": true,
+      "entrypoint": [
+        "./scripts/duck",
+        "studio"
+      ]
+    },
+    {
+      "id": "behavior-spec",
+      "kind": "behavior_spec",
+      "native_schema": "microduck.behavior-draft/v1",
+      "availability": "implemented",
+      "description": "Inspect completeness of an existing task draft; does not validate experiment design or authorize training.",
+      "read_only": true,
+      "entrypoint": [
+        "./scripts/duck",
+        "check-spec",
+        "<existing-spec.json>"
+      ]
+    },
+    {
+      "id": "lessons",
+      "kind": "lesson",
+      "native_schema": "markdown",
+      "availability": "implemented",
+      "description": "Source-linked retrospective covering successful and negative experiment evidence.",
+      "read_only": true,
+      "entrypoint": [
+        "docs/workspace/RETROSPECTIVE.md"
+      ]
+    }
+  ],
+  "evidence": {
+    "native_classes": [
+      "first_party_development",
+      "visible_development",
+      "unspecified"
+    ],
+    "native_record_schemas": [
+      "microduck.laser-evaluation/v1",
+      "microduck.dynamic-laser-evaluation/v1",
+      "microduck.first-party-evaluation/v1"
+    ],
+    "integrity_meaning": "Native containing-manifest verification establishes covered file bytes. Missing, unknown or corrupt evidence is not promoted; semantic validity is separate.",
+    "acceptance_meaning": "Native task evaluator and current authority govern acceptance. Historical, visible-development, held-out and physical claims remain distinct. This packet evaluates none of them.",
+    "records_exported": false
+  },
+  "permissions": {
+    "inspect": true,
+    "execute": false,
+    "mutate_sources": false,
+    "train": false,
+    "hardware": false,
+    "promote": false,
+    "paid_compute": false
+  },
+  "native_gate": {
+    "status": "source_only",
+    "detail": "Read-only source projection. No evaluator, physics runtime, paid-compute inventory or hardware gateway was invoked."
+  },
+  "limitations": [
+    "Only metadata is shared. Entrypoints are descriptions, never commands to execute from a received packet.",
+    "Owner task identifies this workspace-tool export; it does not claim exclusive ownership of concurrent behavior experiments.",
+    "Source hashes bind current file bytes, including uncommitted changes. HEAD alone does not bind a dirty worktree; this is not an atomic snapshot of every repository file.",
+    "Queue and concise status can disagree during ongoing work. Preserve their recorded priority and hashes; do not infer a merged completion or permission.",
+    "No policy, trace, media, checkpoint, training result or hardware authority is exported. Shape and units alone do not establish policy portability.",
+    "The native interface remains candidate-repo-local. Metadata conformance does not establish cross-backend physics equivalence."
+  ]
+}

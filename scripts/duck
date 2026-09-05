@@ -1,0 +1,6 @@
+#!/bin/sh
+# Inspection tools run without importing a simulator or installing dependencies.
+DUCK_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+DUCK_PYTHON="$DUCK_ROOT/.venv-apple/bin/python"
+if [ ! -x "$DUCK_PYTHON" ]; then DUCK_PYTHON=python3; fi
+exec "$DUCK_PYTHON" "$DUCK_ROOT/scripts/duck_workspace.py" "$@"

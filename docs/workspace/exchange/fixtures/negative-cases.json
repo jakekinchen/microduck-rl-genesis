@@ -1,0 +1,16 @@
+[
+  {"id": "execution-permission", "path": ["permissions", "execute"], "value": true},
+  {"id": "hardware-permission", "path": ["permissions", "hardware"], "value": true},
+  {"id": "numeric-permission", "path": ["permissions", "inspect"], "value": 1},
+  {"id": "unknown-version", "path": ["schema_version"], "value": "robotics.workspace_exchange.v2"},
+  {"id": "wrong-contract", "path": ["contract_sha256"], "value": "0000000000000000000000000000000000000000000000000000000000000000"},
+  {"id": "traversal", "path": ["sources", 0, "path"], "value": "../AGENTS.md"},
+  {"id": "absolute-source", "path": ["sources", 0, "path"], "value": "/tmp/AGENTS.md"},
+  {"id": "dimension", "path": ["profiles", 0, "action", "dimension"], "value": 13},
+  {"id": "unit-count", "path": ["profiles", 0, "action", "units"], "value": ["rad"]},
+  {"id": "missing-reference", "path": ["profiles", 0, "source_ids"], "value": ["missing"]},
+  {"id": "missing-priority-reference", "path": ["workspace", "mandate", "source_priority"], "value": ["missing"]},
+  {"id": "record-payload", "path": ["evidence", "records_exported"], "value": true},
+  {"id": "invalid-time", "path": ["generated_at"], "value": "2026-99-05T10:00:00Z"},
+  {"id": "unknown-field", "path": ["execute_me"], "value": "ignored-looking extra command"}
+]

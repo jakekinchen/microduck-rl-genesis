@@ -1,0 +1,22 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "laser-startup-stability-v1",
+  "phase": "diagnose_before_intervention",
+  "question": "Which active randomized property group changes the selected policy's startup fall on visible development seed 75003?",
+  "primary": "receipts/laser-dynamic/20260905-turn-dev",
+  "primary_policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed",
+  "comparison": "receipts/laser-dynamic/20260905-robust-dev",
+  "comparison_policy_sha256": "b5046aab0e48b3a1c741fe5277341982357a1f43df9f17d14789d4db267ed561",
+  "suite_sha256": "a07148a02afee79f99d4b1d573416bdca75cd1be49668483c3133405d888bb48",
+  "case_id": "75003-figure-eight",
+  "source_paths": ["experiments/laser/world.py", "microduck/laser_dynamics.py", "microduck/laser_steering.py", "microduck/laser_task.py"],
+  "before_training": [
+    "Retain baseline reproduction of the visible startup fall and isolate one property group per diagnostic.",
+    "Bind model, BAM, reset, action/observation and perturbation schedule; keep policy bytes fixed during property tests.",
+    "If asserting physics causality, use saved action tensors; a feedback rollout or parsed JSON action comparison is insufficient.",
+    "Specify one intervention, its hypothesis, bounded transition budget and unchanged regression gates from the diagnosis.",
+    "Freeze a fresh test bank before the intervention and keep all consumed reserved seeds out of tuning.",
+    "Run duck doctor and duck-ops guard immediately before any separately authorized launch; the guard is advisory, not a lease."
+  ],
+  "boundary": "Working focus and inspection only. TRAINING_ACTUALIZATION.md remains the queue. This file does not authorize a launch, choose a new policy or alter any evaluator."
+}

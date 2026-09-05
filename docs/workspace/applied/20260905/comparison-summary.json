@@ -1,0 +1,156 @@
+{
+  "schema": "microduck.startup-comparison-summary/v1",
+  "proof_class": "offline_trace_diagnostic",
+  "source_comparison_sha256": "b459de2a1e6dd18562092fc09ff7029620c1641f352175a0a039276d173c787a",
+  "sources": [
+    {
+      "path": "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-dynamic/20260905-turn-dev/trajectory.jsonl",
+      "sha256": "6763609182adc0d3ed731fb51a463895d8f518db34ff0b39f14f5daa5d977ddb",
+      "bytes": 9607080,
+      "rows": 12078
+    },
+    {
+      "path": "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-dynamic/20260905-robust-dev/trajectory.jsonl",
+      "sha256": "be700102bae6af127097fcbdd39ad7996c14df2a8ae19d6371536efdbc924f82",
+      "bytes": 11286101,
+      "rows": 14400
+    }
+  ],
+  "case": {
+    "case_id": "75003-figure-eight",
+    "comparison_kind": "incomplete_or_misaligned",
+    "left_rows": 78,
+    "right_rows": 2400,
+    "aligned_rows": 78,
+    "unmatched_time_count": 2322,
+    "first_unmatched_time_s": 1.58,
+    "coverage": {
+      "action_rad": {
+        "left": 78,
+        "right": 2400
+      },
+      "command": {
+        "left": 78,
+        "right": 2400
+      },
+      "robot_xyz_m": {
+        "left": 78,
+        "right": 2400
+      },
+      "target_xy_m": {
+        "left": 78,
+        "right": 2400
+      },
+      "fell": {
+        "left": 78,
+        "right": 2400
+      },
+      "visible": {
+        "left": 78,
+        "right": 2400
+      },
+      "contacts": {
+        "left": 0,
+        "right": 0
+      }
+    },
+    "first_differences": {
+      "action_rad": {
+        "time_s": 0.02,
+        "left_line": 4801,
+        "right_line": 4801,
+        "left": [
+          -3.5100209712982178,
+          0.4429868459701538,
+          0.38808637857437134,
+          0.6342085599899292,
+          -0.9892147183418274,
+          0.13905325531959534,
+          -0.6735039353370667,
+          0.4822700619697571,
+          0.2865315079689026,
+          2.813056230545044,
+          0.018580403178930283,
+          0.07422930002212524,
+          -0.7255619168281555,
+          0.5929561257362366
+        ],
+        "right": [
+          -1.739036202430725,
+          -0.09485765546560287,
+          0.5540088415145874,
+          -0.07034188508987427,
+          -1.1278655529022217,
+          0.37200191617012024,
+          -0.410288542509079,
+          0.07353542000055313,
+          0.030886773020029068,
+          1.870147466659546,
+          -0.07490701973438263,
+          -0.26580411195755005,
+          -0.6494375467300415,
+          0.8583439588546753
+        ]
+      },
+      "robot_xyz_m": {
+        "time_s": 0.02,
+        "left_line": 4801,
+        "right_line": 4801,
+        "left": [
+          0.0007960958742410204,
+          -0.0002657831248482649,
+          0.12224217246304493
+        ],
+        "right": [
+          0.0011640824581543264,
+          4.049704831757555e-05,
+          0.12240884603710638
+        ]
+      },
+      "command": {
+        "time_s": 0.04,
+        "left_line": 4802,
+        "right_line": 4802,
+        "left": [
+          0.20552098751068115,
+          0.0,
+          -1.0
+        ],
+        "right": [
+          0.20444484055042267,
+          0.0,
+          -1.0
+        ]
+      },
+      "fell": {
+        "time_s": 1.56,
+        "left_line": 4878,
+        "right_line": 4878,
+        "left": true,
+        "right": false
+      }
+    },
+    "different_rows": {
+      "action_rad": 78,
+      "command": 77,
+      "robot_xyz_m": 78,
+      "target_xy_m": 0,
+      "fell": 1,
+      "visible": 0,
+      "contacts": 0
+    },
+    "max_abs_component_error": {
+      "action_rad": 10.26719331741333,
+      "command": 0.4136143997311592,
+      "robot_xyz_m": 0.1667881943583922,
+      "target_xy_m": 0
+    },
+    "recorded_action_values_equal": null,
+    "recorded_command_values_equal": null,
+    "aligned_action_value_sha256": null,
+    "physics_causality": "not_established"
+  },
+  "behavior_acceptance": "not_evaluated",
+  "physics_causality": "not_established",
+  "training_started": false
+}
