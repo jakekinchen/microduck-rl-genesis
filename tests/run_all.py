@@ -12,6 +12,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TESTS = [
+    ("laser steering and perception", "test_laser_task.py"),
     ("inventaire provenance fichiers M6", "test_file_provenance.py"),
     ("contrats artefact et attestations M6", "test_artifact_contract.py"),
     ("résolution artefacts réels M6", "test_m6_real_artifact_resolution.py"),

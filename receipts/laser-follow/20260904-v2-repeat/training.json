@@ -1,0 +1,146 @@
+{
+  "schema": "microduck.laser-training/v1",
+  "proof_class": "first_party_development",
+  "target_source": "simulated-ground-truth",
+  "held_out": false,
+  "args": {
+    "run_id": "laser-follow-20260904-v1",
+    "num_envs": 1024,
+    "iterations": 500,
+    "seed": 26090402,
+    "warm_start_own_baseline": true
+  },
+  "train_cfg": {
+    "algorithm": {
+      "class_name": "PPO",
+      "clip_param": 0.2,
+      "desired_kl": 0.01,
+      "entropy_coef": 0.01,
+      "gamma": 0.99,
+      "lam": 0.95,
+      "learning_rate": 0.001,
+      "max_grad_norm": 1.0,
+      "num_learning_epochs": 5,
+      "num_mini_batches": 4,
+      "schedule": "adaptive",
+      "use_clipped_value_loss": true,
+      "value_loss_coef": 1.0
+    },
+    "actor": {
+      "class_name": "MLPModel",
+      "hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true,
+      "distribution_cfg": {
+        "class_name": "GaussianDistribution",
+        "init_std": 1.0,
+        "std_type": "scalar"
+      }
+    },
+    "critic": {
+      "class_name": "MLPModel",
+      "hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true
+    },
+    "obs_groups": {
+      "actor": [
+        "policy"
+      ],
+      "critic": [
+        "policy",
+        "privileged"
+      ]
+    },
+    "num_steps_per_env": 24,
+    "save_interval": 50,
+    "logger": "tensorboard",
+    "seed": 26090402,
+    "run_name": "laser-follow-20260904-v1"
+  },
+  "source_commit": "59acc99e6a5c785a354efb8369adb1eaf9a6ba92",
+  "source_sha256": {
+    "scripts/train_laser.py": "a8337d1a411eaf087ed04bb7786e6ed4e637c2c798fc11cfb3a7cbd1c2d0e6e1",
+    "microduck/laser_env.py": "bb5b126017ade32d5bc921edab3c0b7c7a8afd814b7e6959abd243c139e061d5",
+    "microduck/laser_task.py": "a7796a8fd6576e37a80d5de870b06bdf5d137f4f21cdfa9f5e4dc7cedd400a81",
+    "microduck/velocity_env.py": "e52eec8b2b5fa0df1335d13c14492766ab746a29cfb60795150af83c48f90623",
+    "microduck/velocity_cfg.py": "1a7d58e527cbc4694493739a4efa49b7634906e01036adbc806190c84460c251",
+    "microduck/bam_actuator.py": "840338b249ebfb01a434e76cc49d7c90ebdb734ef5f0b113c63438c77e46bf36"
+  },
+  "packages": {
+    "genesis-world": "1.3.3",
+    "torch": "2.9.1",
+    "rsl-rl-lib": "5.4.2"
+  },
+  "status": "completed",
+  "new_transitions": 12288000,
+  "env_cfg": {
+    "task": "Laser-Follow-Oracle-v1",
+    "num_envs": 1024,
+    "sim_dt": 0.005,
+    "decimation": 4,
+    "control_hz": 50.0,
+    "episode_length_s": 20.0,
+    "action_scale": 1.0,
+    "num_obs": 61,
+    "num_actions": 14,
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "reward_weights": {
+      "track_linear_velocity": 5.0,
+      "track_angular_velocity": 2.0,
+      "upright": 3.0,
+      "pose": 0.5,
+      "body_ang_vel": -0.05,
+      "angular_momentum": -0.02,
+      "dof_pos_limits": -1.0,
+      "action_rate_l2": -0.1,
+      "air_time": 3.0,
+      "foot_clearance": -2.0,
+      "foot_swing_height": -0.25,
+      "foot_slip": -0.1,
+      "self_collisions": -1.0,
+      "head_pose_tracking": 2.0,
+      "head_pose_bias": 0.0,
+      "body_pose_tracking": 0.0
+    },
+    "target_source": "simulated-ground-truth",
+    "reward_version": "laser-v1",
+    "stop_radius_m": 0.18,
+    "laser_reward_weights": {
+      "robot_progress": 4.0,
+      "settled_stop": 1.0,
+      "fall_event": -5.0
+    }
+  },
+  "warm_start": {
+    "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/training/source-checkpoint.pt",
+    "sha256": "30648b221c189fd2ddd3f81cd0217eb648a372057319497d8c50e2378766dd07",
+    "prior_transitions": 2457600
+  },
+  "elapsed_s": 1282.696588541381,
+  "checkpoint": "model_499.pt",
+  "checkpoint_sha256": "d5c6592881d061cd47c0c66b220cdebc9c9f43fe2a3d9f9fcff4d58703e827f6"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "microduck.laser-camera-audit/v1",
+  "policy_executed": false,
+  "model_modified": false,
+  "physical_authority": false,
+  "camera": "head_camera",
+  "pose": "HOME, root=(0,0,0.125), yaw=0",
+  "camera_world_position_m": [
+    0.064297388337279,
+    -9.137779999999784e-05,
+    0.25309864701932516
+  ],
+  "camera_world_optical_forward": [
+    -0.9999999999999996,
+    -0.0,
+    -2.5023402338326227e-34
+  ],
+  "camera_world_image_right": [
+    -2.5023402338326227e-34,
+    4.474228634151475e-17,
+    -0.9999999999999996
+  ],
+  "camera_world_image_up": [
+    0.0,
+    0.9999999999999996,
+    4.474228634151475e-17
+  ],
+  "target_world_m": [
+    0.65,
+    0.0,
+    0.006
+  ],
+  "target_camera_m": [
+    0.24709864701932505,
+    9.137779999998674e-05,
+    0.5857026116627209
+  ],
+  "target_behind_camera": true,
+  "detected_pixel": null,
+  "source_sha256": "c466139ea0a887acf4b37d30cdb36ad1c8071aa55bd65fbb5409ca093b5dfc57",
+  "scene_sha256": "6e23146c1a5025473b55ec94cbe37b08104ca388b7eb005ea277f8230736c8be",
+  "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+  "convention_source": "https://mujoco.readthedocs.io/en/latest/modeling.html#cameras",
+  "conclusion": "Resolve camera/body frame conventions with a versioned adapter before onboard pixel control; oracle targeting is not visual proof."
+}

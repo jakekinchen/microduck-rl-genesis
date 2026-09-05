@@ -202,6 +202,14 @@ python play.py -e microduck-velocity
 python export_onnx.py -e microduck-velocity -o walk.onnx
 ```
 
+### Laser-following development task (Apple)
+
+The [laser experiment](experiments/laser/README.md) adds target-pursuit rewards,
+a local PPO curriculum, conservative spot detection, and six independent
+MuJoCo/BAM development tests. See that page for commands, retained evidence,
+and current results. Targets currently use simulator coordinates; onboard
+camera control and physical laser following are not validated.
+
 ## 4. The problem, in one measurement
 
 `microduck_rl` is built on mjlab, itself built on MuJoCo Warp. The upstream

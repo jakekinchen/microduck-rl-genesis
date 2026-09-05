@@ -1,0 +1,111 @@
+{
+  "schema": "microduck.laser-genesis-diagnostic/v1",
+  "backend": "Genesis CPU",
+  "proof_class": "first_party_development",
+  "held_out": false,
+  "target_source": "simulated-ground-truth",
+  "policy_sha256": "8c5fd28e4f65125d469f6946c51fdd9561a3c35b5bbabb71e6af2515270208ad",
+  "steering_gain_s_inv": 3.0,
+  "suite_sha256": "e7f4084eb5db91143eae05cef7382bf97abd52c98c796e0120b39ac6534395ba",
+  "source_sha256": "4b333a19cd4e13fcd71b506c79a26fd2d5a79cd6c294c710c0e65832735897fb",
+  "passed_cases": 6,
+  "case_reports": [
+    {
+      "case_id": "forward",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6491873132213339,
+      "final_distance_m": 0.1803978364443071,
+      "minimum_distance_m": 0.17852048428079664,
+      "max_settled_duration_s": 9.58,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.4698098301887512,
+        -0.008653444238007069
+      ]
+    },
+    {
+      "case_id": "left",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6096790098796209,
+      "final_distance_m": 0.18274888978511203,
+      "minimum_distance_m": 0.18213046462312668,
+      "max_settled_duration_s": 9.62,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.35200196504592896,
+        0.24279114603996277
+      ]
+    },
+    {
+      "case_id": "right",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6097220918610009,
+      "final_distance_m": 0.18121790263975807,
+      "minimum_distance_m": 0.17934616126634859,
+      "max_settled_duration_s": 9.88,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.3422866761684418,
+        -0.260745108127594
+      ]
+    },
+    {
+      "case_id": "near-stop",
+      "passed": true,
+      "fell": false,
+      "duration_s": 6.0,
+      "initial_distance_m": 0.1396494872204307,
+      "final_distance_m": 0.13233342469649154,
+      "minimum_distance_m": 0.12843728420249154,
+      "max_settled_duration_s": 5.86,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.00766665767878294,
+        0.00014765499508939683
+      ]
+    },
+    {
+      "case_id": "target-loss",
+      "passed": true,
+      "fell": false,
+      "duration_s": 8.0,
+      "initial_distance_m": 0.6492104596552306,
+      "final_distance_m": 0.18337517216157476,
+      "minimum_distance_m": 0.1825495521642261,
+      "max_settled_duration_s": 5.54,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": 0.0012964183697476983,
+      "final_robot_xy_m": [
+        0.4670414626598358,
+        0.012354245409369469
+      ]
+    },
+    {
+      "case_id": "moving",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.4492107135150004,
+      "final_distance_m": 0.21458652634545483,
+      "minimum_distance_m": 0.184619484742042,
+      "max_settled_duration_s": 3.18,
+      "moving_track_fraction_after_4s": 1.0,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.5349708795547485,
+        -0.02393706515431404
+      ]
+    }
+  ],
+  "boundary": "Training-simulator diagnostic; not independent acceptance, camera, transfer, or physical proof."
+}

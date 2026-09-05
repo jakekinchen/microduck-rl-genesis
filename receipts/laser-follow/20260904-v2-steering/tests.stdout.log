@@ -1,0 +1,313 @@
+
+======================================================================
+laser steering and perception
+======================================================================
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.008s
+
+OK
+
+======================================================================
+inventaire provenance fichiers M6
+======================================================================
+file-level MJCF/mesh/policy/dataset/media provenance and negative statuses verified
+
+======================================================================
+contrats artefact et attestations M6
+======================================================================
+policy manifest v2 and reference/hardware attestation fixtures verified without execution
+
+======================================================================
+résolution artefacts réels M6
+======================================================================
+real official/community bytes resolved against manifest v2 with missing roles fail-closed
+
+======================================================================
+recherche autorité communautaire M6
+======================================================================
+M6 community authority search and negative promotion probes verified
+
+======================================================================
+archéologie provenance locale M6
+======================================================================
+M6 local provenance archaeology and negative promotion probes verified
+
+======================================================================
+distribution locale provenance-gated M6
+======================================================================
+M6 provenance-gated deterministic distribution bundle verified
+
+======================================================================
+handoff autorité externe M6
+======================================================================
+M6 external authority handoff and negative promotion probes verified
+
+======================================================================
+admission développement first-party
+======================================================================
+first-party development admission verified: seeded init, origin/digest/symlink rejection, held-out boundary
+
+======================================================================
+contrat immuable expérience M5
+======================================================================
+M5 immutable experiment contract and negative drift probes verified
+
+======================================================================
+proposition M5 quatrième pilote non autorisée
+======================================================================
+M5 fourth-pilot proposal fail-closed probes passed: 131 scalar mutations, 158 deletions, extra-field and explicit compute-authority rejection
+
+======================================================================
+proposition M5 cinquième pilote non autorisée
+======================================================================
+M5 fifth-pilot proposal fail-closed probes passed: 153 scalar mutations, 182 deletions, extra-field, explicit compute-authority, historical harness-rate, and fourth-alias rejection with native-name receipt self-attestation
+
+======================================================================
+proposition M5 sixième pilote non autorisée
+======================================================================
+M5 sixth-pilot proposal fail-closed probes passed: 175 scalar mutations, 205 deletions, extra-field, explicit compute-authority, sixth-retry, prior-type, historical-rate, disk-threshold, and prior-alias rejection with native-name receipt self-attestation
+
+======================================================================
+proposition M5 septième pilote non autorisée
+======================================================================
+M5 seventh-pilot proposal fail-closed probes passed: 222 scalar mutations, 261 deletions, extra-field, explicit compute-authority, seventh-retry, prior-type, historical-rate, readiness-window, consecutive-poll, poll-interval, disk-threshold, and prior-alias rejection with native-name receipt self-attestation
+
+======================================================================
+schéma benchmark Apple
+======================================================================
+Apple scaling schema/default selection verified
+
+======================================================================
+matérialisation BAM épinglée
+======================================================================
+BAM authority materializer verified: moved branch cannot repin exact commit
+
+======================================================================
+vecteurs BAM dorés épinglés
+======================================================================
+29 pinned BAM vectors verified
+control_voltage_v: max error 1.776e-15
+motor_torque_nm: max error 2.220e-16
+bam_core_frictionloss_nm: max error 2.776e-17
+mjlab_deployed_frictionloss_nm: max error 0.000e+00
+reset state verified; battery voltage preserved
+
+======================================================================
+trajectoire BAM 14 servos épinglée
+======================================================================
+maximum joint error over 120 steps:
+  left_hip_yaw     0.063 deg at step 103
+  left_hip_roll    0.314 deg at step 107
+  left_hip_pitch   0.180 deg at step  23
+  left_knee        0.410 deg at step 120
+  left_ankle       0.251 deg at step  42
+  neck_pitch       0.174 deg at step  20
+  head_pitch       0.103 deg at step  32
+  head_yaw         0.001 deg at step 112
+  head_roll        0.009 deg at step 120
+  right_hip_yaw    0.057 deg at step 107
+  right_hip_roll   0.296 deg at step 103
+  right_hip_pitch  0.117 deg at step 120
+  right_knee       0.332 deg at step 120
+  right_ankle      0.279 deg at step 120
+all-step joint max: 0.410 deg
+step-60 joint max: 0.184 deg
+all-step base-z max: 1.811 mm
+step-60 base-z error: 0.237 mm
+OK - Genesis BAM-core follows pinned MuJoCo 14-servo fixture
+
+======================================================================
+réconciliation des modèles épinglée
+======================================================================
+allcollisions: 16 bodies, 15 joints, 14 actuators
+allcollisions_backlash: 16 bodies, 29 joints, 14 actuators
+rollers: 20 bodies, 19 joints, 14 actuators
+rollers_backlash: 20 bodies, 33 joints, 14 actuators
+walk: 16 bodies, 15 joints, 14 actuators
+walk_backlash: 16 bodies, 29 joints, 14 actuators
+OK - retained official/local model reconciliation is current
+
+======================================================================
+déterminisme d'évidence multiplateforme
+======================================================================
+cross-platform deterministic evidence canonicalization verified
+
+======================================================================
+sémantique de marche épinglée
+======================================================================
+walking semantics verified: 61D/14D/50Hz, 28 classified fields, 230 preregistered cases
+
+======================================================================
+sémantique de backflip épinglée
+======================================================================
+backflip semantics verified: 61D/14D/50Hz, 32 classified fields, 20 zero-assistance cases
+
+======================================================================
+décision de divergence versionnée
+======================================================================
+versioned divergence decision verified: 45 non-exact fields, local and not submitted
+
+======================================================================
+coeur évaluateur C MuJoCo
+======================================================================
+evaluator core verified: two byte-identical 40-step reports, 10 CPU ONNX calls, 40 pinned BAM updates
+
+======================================================================
+matrice de cas évaluateur
+======================================================================
+evaluator case matrix verified: 10 cases, 9 required families, byte-identical repeats
+
+======================================================================
+protocole held-out aveugle
+======================================================================
+held-out protocol verified: post-freeze derivation only, no live seed realized
+
+======================================================================
+classifieurs de réussite
+======================================================================
+success classifiers verified: walking 230 cells, backflip 20 cells, assisted/failure/coverage rejected
+
+======================================================================
+bundle évaluateur de développement
+======================================================================
+evaluator bundle verified: five files byte-identical across six same-host runs, isolated Parquet/MP4 producers stable, diagnostics fail closed, 160 Parquet rows, 40 decoded MP4 frames
+
+======================================================================
+autorité ONNX marche officielle
+======================================================================
+official walking authority verified: terminal missing-authority result, official artifact not executed
+
+======================================================================
+formules BAM vs référence Rhoban
+======================================================================
+tension (loi firmware)             écart max = 0.000e+00
+couple moteur (contre-FEM)         écart max = 0.000e+00
+frottement m6 (version papier)     écart max = 5.551e-17
+frottement m6 (version mjlab)      écart max = 3.092e-03 (1.52 % — garde enable_quadratic omise en amont, cf. README)
+OK — formules BAM bit-exactes
+
+======================================================================
+couple externe vs MuJoCo
+======================================================================
+articulation        genesis     mujoco      écart
+left_hip_yaw        0.00000   -0.00000   2.20e-09
+left_hip_roll      -0.03056   -0.03056   1.31e-08
+left_hip_pitch     -0.00940   -0.00940  -2.49e-08
+left_knee          -0.01014   -0.01014  -7.21e-09
+left_ankle          0.00181    0.00181   1.20e-09
+neck_pitch          0.01696    0.01696   3.11e-08
+head_pitch          0.02691    0.02691   1.22e-08
+head_yaw           -0.00000   -0.00000  -3.29e-10
+head_roll           0.00222    0.00222  -1.18e-09
+right_hip_yaw      -0.00000   -0.00000  -2.68e-09
+right_hip_roll      0.03056    0.03056   6.28e-09
+right_hip_pitch     0.00940    0.00940   2.34e-08
+right_knee          0.01014    0.01014  -9.03e-10
+right_ankle        -0.00181   -0.00181  -8.89e-10
+
+écart max = 3.115e-08 N·m   (couple max = 0.0306 N·m, soit 0.000 %)
+OK — conventions de signe et indexation validées
+
+======================================================================
+boucle actionneur vs MuJoCo+BAM
+======================================================================
+  t (s)   z mujoco  z genesis     |Δq| max   |Δq| moy
+  0.050     0.1147     0.1163       0.22°      0.06°
+  0.150     0.1157     0.1160       0.38°      0.11°
+  0.300     0.1151     0.1153       0.18°      0.08°
+  0.500     0.1143     0.1147       0.31°      0.10°
+  0.600     0.1139     0.1144       0.41°      0.16°
+
+écart max sur l'horizon, par articulation :
+  left_hip_yaw       0.06°   (amplitude mujoco   0.01°)
+  left_hip_roll      0.31°   (amplitude mujoco   0.37°)
+  left_hip_pitch     0.18°   (amplitude mujoco   1.30°)
+  left_knee          0.41°   (amplitude mujoco   6.69°)
+  left_ankle         0.25°   (amplitude mujoco   3.07°)
+  neck_pitch         0.17°   (amplitude mujoco   1.35°)
+  head_pitch         0.10°   (amplitude mujoco   2.29°)
+  head_yaw           0.00°   (amplitude mujoco   0.00°)
+  head_roll          0.01°   (amplitude mujoco   0.04°)
+  right_hip_yaw      0.06°   (amplitude mujoco   0.01°)
+  right_hip_roll     0.30°   (amplitude mujoco   0.33°)
+  right_hip_pitch    0.12°   (amplitude mujoco   1.24°)
+  right_knee         0.33°   (amplitude mujoco   6.66°)
+  right_ankle        0.28°   (amplitude mujoco   3.12°)
+
+écart max à 0.30 s : 0.19°
+écart de hauteur à 0.30 s : 0.2 mm
+OK — l'actionneur porté suit la référence MuJoCo+BAM
+
+======================================================================
+randomisation de domaine
+======================================================================
+[38;5;226m[Genesis] [19:04:50] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+[38;5;226m[Genesis] [19:04:52] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+frictionloss ratio scale 2.0 : 2.0000 (attendu 2.0)
+frictionloss ratio scale 0.5 : 0.5000 (attendu 0.5)
+armature : défaut 0.001808  après ×1.1 0.001989  après 6×(×1.1) 0.001989
+|COM shift| max sur 4 resets : [0.00967, 0.00953, 0.00976, 0.00977]
+biais encodeur : [-0.0148, 0.0145] rad
+OK
+
+======================================================================
+contrat d'observation 61-D
+======================================================================
+[38;5;226m[Genesis] [19:05:02] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+découpe : 61 dimensions, 8 tranches
+projected_gravity debout : [0.0, 0.0, -1.0]
+joint_pos à la pose HOME  : max |·| = 0.00e+00
+tranches de commande : conformes
+  left_hip_yaw     → indice 0 ✓
+  neck_pitch       → indice 5 ✓
+  right_ankle      → indice 13 ✓
+head_pose pilote ('neck_pitch', 'head_pitch', 'head_yaw', 'head_roll') → indices [5, 6, 7, 8]
+action[3] = +0.2 rad → left_knee se déplace de +0.0099 rad
+OK — contrat d'observation et d'action conforme à SIM2REAL.md
+
+======================================================================
+variante à jeu d'engrenage
+======================================================================
+[38;5;226m[Genesis] [19:05:09] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+modèle : 29 articulations dont 14 de jeu
+jeu imposé +0,500° sur left_knee → vue encodeur +0.500°
+joint_pos de l'observation = vue encodeur ✓
+jeu après relâchement : max 1.016° (butée ±1°)
+contrat inchangé : obs 61, action 14
+OK — variante à jeu d'engrenage conforme
+
+======================================================================
+ONNX de déploiement vs politique
+======================================================================
+aucun checkpoint dans logs/microduck-velocity — test non applicable
+
+======================================================================
+env sol plat
+======================================================================
+[38;5;226m[Genesis] [19:05:17] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+[38;5;226m[Genesis] [19:05:19] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+obs policy    : (16, 61)
+obs privileged: (16, 29)
+step 0: rew=+0.1419 done=0 z=0.1246 foot_h=0.0075 contact=0.00
+step 29: rew=+0.1030 done=0 z=0.1115 foot_h=0.0030 contact=0.94
+30 pas en 1.57s
+OK
+
+======================================================================
+env terrain accidenté
+======================================================================
+[38;5;226m[Genesis] [19:05:28] [WARNING] 'torch<2.9.1' does not supported zero-copy on Apple Metal. Consider upgrading pytorch to improve runtime performance: https://pytorch.org/get-started/locally/[0m
+[38;5;226m[Genesis] [19:05:31] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+[38;5;226m[Genesis] [19:05:32] [WARNING] Beware that SDF pre-processing of mesh  having more than 50000 vertices may take a very long time (>10min) and require large RAM allocation (>20Gb). Please either enable convexify or decimation. (see FileMorph options)[0m
+[38;5;226m[Genesis] [19:05:33] [WARNING] Geom idx 0 is not watertight; skipping wall-thickness SDF refinement.[0m
+[38;5;226m[Genesis] [19:05:34] [WARNING] Mesh is not watertight. Falling back to convex hull for estimating inertial properties.[0m
+obs policy    : (16, 61)
+obs privileged: (16, 29)
+step 0: rew=+0.1365 done=0 z=0.1327 foot_h=0.0059 contact=0.00
+step 29: rew=+0.0899 done=1 z=0.1218 foot_h=0.0038 contact=0.94
+30 pas en 2.20s
+OK
+
+======================================================================
+tous les tests passent

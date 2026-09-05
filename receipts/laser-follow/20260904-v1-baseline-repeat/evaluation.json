@@ -1,0 +1,124 @@
+{
+  "schema": "microduck.laser-evaluation/v1",
+  "proof_class": "first_party_development",
+  "held_out": false,
+  "target_source": "simulated-ground-truth",
+  "policy_sha256": "843d5d9aa788334d43e95607fb917af560c61550080c92357825d360fb5b690f",
+  "suite_sha256": "e7f4084eb5db91143eae05cef7382bf97abd52c98c796e0120b39ac6534395ba",
+  "evaluator_sha256": "38733404c0e05c9a451d9c92d1f51602179cdc7cb2ac21b585274cff7e7ee0d3",
+  "core_sha256": "a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+  "case_reports": [
+    {
+      "case_id": "forward",
+      "passed": false,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6494457091956116,
+      "final_distance_m": 0.6355583334353964,
+      "minimum_distance_m": 0.6269230182457435,
+      "max_settled_duration_s": 0.0,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.014455142799163097,
+        -0.0041388023323420545
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "left",
+      "passed": false,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.609853813746415,
+      "final_distance_m": 0.6006530805016965,
+      "minimum_distance_m": 0.5963028883830368,
+      "max_settled_duration_s": 0.0,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.015018746505648016,
+        -0.004368885309114813
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "right",
+      "passed": false,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6099432480848332,
+      "final_distance_m": 0.6009251092836876,
+      "minimum_distance_m": 0.5962154000689911,
+      "max_settled_duration_s": 0.0,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.010575556323816288,
+        -0.0013243614763572284
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "near-stop",
+      "passed": true,
+      "fell": false,
+      "duration_s": 6.0,
+      "initial_distance_m": 0.13960615651794958,
+      "final_distance_m": 0.12978273175759927,
+      "minimum_distance_m": 0.12714185034982073,
+      "max_settled_duration_s": 5.9,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.010223676958910567,
+        -0.00128974431565692
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "target-loss",
+      "passed": true,
+      "fell": false,
+      "duration_s": 8.0,
+      "initial_distance_m": 0.6494457091956116,
+      "final_distance_m": 0.6400410724318624,
+      "minimum_distance_m": 0.6269230182457435,
+      "max_settled_duration_s": 0.0,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": 0.0036973773894665375,
+      "final_robot_xy_m": [
+        0.009967713181335422,
+        -0.0033535398311456913
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "moving",
+      "passed": false,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.44944570930179123,
+      "final_distance_m": 0.7354687481685225,
+      "minimum_distance_m": 0.4375870202011947,
+      "max_settled_duration_s": 0.0,
+      "moving_track_fraction_after_4s": 0.0,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.014429236485107409,
+        -0.004708321625278395
+      ],
+      "inference_deadline_misses": 0
+    }
+  ],
+  "passed_cases": 2,
+  "total_cases": 6,
+  "export_random_parity": null,
+  "export_real_observation_max_error_rad": null,
+  "rendered_spot_detector": {
+    "visible_frames": 0,
+    "detections": 0,
+    "controls_robot": false
+  },
+  "boundary": "Visible development behavior only. Oracle spot coordinates, not camera-loop validation, canonical held-out walking acceptance, transfer, or physical authority."
+}

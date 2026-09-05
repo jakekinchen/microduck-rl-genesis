@@ -1,0 +1,80 @@
+{
+  "schema": "microduck.laser-visible-suite/v1",
+  "visibility": "public-development",
+  "target_source": "simulated-ground-truth",
+  "held_out": false,
+  "physics_dt_s": 0.005,
+  "control_hz": 50,
+  "thresholds": {
+    "reach_radius_m": 0.24,
+    "minimum_settled_s": 1.0,
+    "settled_speed_m_s": 0.08,
+    "minimum_height_m": 0.07,
+    "maximum_tilt_deg": 70,
+    "lost_target_grace_s": 0.5,
+    "lost_target_speed_m_s": 0.08,
+    "moving_track_radius_m": 0.28,
+    "moving_min_fraction_after_4s": 0.6
+  },
+  "cases": [
+    {
+      "id": "forward",
+      "target_xy_m": [
+        0.65,
+        0.0
+      ],
+      "seconds": 12,
+      "kind": "stationary"
+    },
+    {
+      "id": "left",
+      "target_xy_m": [
+        0.5,
+        0.35
+      ],
+      "seconds": 12,
+      "kind": "stationary"
+    },
+    {
+      "id": "right",
+      "target_xy_m": [
+        0.5,
+        -0.35
+      ],
+      "seconds": 12,
+      "kind": "stationary"
+    },
+    {
+      "id": "near-stop",
+      "target_xy_m": [
+        0.14,
+        0.0
+      ],
+      "seconds": 6,
+      "kind": "stationary"
+    },
+    {
+      "id": "target-loss",
+      "target_xy_m": [
+        0.65,
+        0.0
+      ],
+      "seconds": 8,
+      "kind": "loss",
+      "lost_at_s": 3
+    },
+    {
+      "id": "moving",
+      "target_xy_m": [
+        0.45,
+        0.0
+      ],
+      "seconds": 12,
+      "kind": "moving",
+      "velocity_x_m_s": 0.025,
+      "sine_y_amplitude_m": 0.1,
+      "sine_frequency_rad_s": 0.5
+    }
+  ],
+  "boundary": "Visible development behavior only. Oracle spot coordinates, not camera-loop validation, canonical held-out walking acceptance, transfer, or physical authority."
+}

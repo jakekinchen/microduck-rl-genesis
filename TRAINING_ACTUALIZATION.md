@@ -34,6 +34,41 @@ status requires its own receipt; no earlier status implies a later one.
 Only one milestone should be promoted at a time. A checked implementation item
 does not close its milestone until every exit gate and receipt is present.
 
+### L1 — Laser-following RL (active user priority, 2026-09-04)
+
+This explicit local-development request takes priority over waiting for
+official upstream provenance. It does not close M2/M5/M6 or authorize hardware.
+Work remains in this single task; do not revive reviewer/executor cycles.
+
+- [x] Research the Microduck laser demo and primary runtime/training sources.
+- [x] Add a separate 61D-compatible laser command/reward environment; preserve
+  the frozen walking/M5 source bindings and unfiltered 14D actions.
+- [x] Run a 64-env × 5-iteration smoke; test steering parity, target loss,
+  detection, ambiguity, and distractor rejection.
+- [x] Freeze six visible C MuJoCo/BAM development cases before inspecting the
+  trained result; baseline is 2/6 (stop/loss only), 0/3 target acquisitions.
+- [x] Finish local 1024-env × 500-iteration PPO fine-tuning (12,288,000 new
+  transitions) from the digest-verified first-party baseline.
+- [x] Retain final checkpoint, config, source hashes, stdout, normalized ONNX,
+  export parity, full evaluator records, videos, and checksums.
+- [x] Inspect behavior and compare target acquisition, stopping, loss, moving
+  target tracking, and falls against baseline; iterate on measured failures.
+- [x] Diagnose the first failed result and preserve it: trained v1 stopped
+  25.1–25.6 cm away (2/6 C MuJoCo cases); v2 strengthens only the approach
+  velocity command, with unchanged policy bytes and thresholds, and passes 6/6.
+- [x] Audit the locked head-camera frame and retain its HOME image; forward
+  positive-X targets are behind that camera. Do not silently alter frozen assets.
+- [ ] Connect camera pixels to metric targeting and validate the actual vision
+  control loop. Current targets are privileged simulator coordinates.
+- [ ] Separately authorize and validate physical laser following.
+
+Implementation/reproduction: `experiments/laser/README.md`.
+Receipts: `receipts/laser-follow/`; completed run: `logs/laser-follow-20260904-v1/`.
+`20260904-v2-steering/` is a 6/6 visible-development simulated target-following
+result: 20.9–21.4 cm stand-off on distant stationary dots, settled near/lost
+targets, and 100% moving-target tracking within 28 cm after the 4 s warmup.
+No falls occurred. This is not camera-loop, blind held-out, or physical proof.
+
 ### M0 — Freeze and reproduce the Apple baseline (P0)
 
 - [x] Separate the Apple dependency lane from vendor-PyTorch ROCm/CUDA installs.

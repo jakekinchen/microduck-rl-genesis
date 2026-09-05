@@ -1,0 +1,133 @@
+{
+  "schema": "microduck.laser-evaluation/v1",
+  "proof_class": "first_party_development",
+  "held_out": false,
+  "target_source": "simulated-ground-truth",
+  "policy_sha256": "8c5fd28e4f65125d469f6946c51fdd9561a3c35b5bbabb71e6af2515270208ad",
+  "suite_sha256": "e7f4084eb5db91143eae05cef7382bf97abd52c98c796e0120b39ac6534395ba",
+  "steering": {
+    "id": "laser-steering-approach-v2",
+    "distance_gain_s_inv": 3.0,
+    "source_sha256": "038596dd6df7990c86e3020b71f51068ab922f137d6ab58d12366d648d8fbaac",
+    "policy_actions_postprocessed": false
+  },
+  "evaluator_sha256": "97f73faeaf35341a71d34fcdb254eb03dc7a498b5a48818ec62564e4745f7c8a",
+  "core_sha256": "a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+  "case_reports": [
+    {
+      "case_id": "forward",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6490675575173918,
+      "final_distance_m": 0.2090260517408539,
+      "minimum_distance_m": 0.20902400360875006,
+      "max_settled_duration_s": 9.52,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.44169230369562656,
+        -0.017314559386107698
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "left",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6095502153070426,
+      "final_distance_m": 0.2121203596804968,
+      "minimum_distance_m": 0.21210941368663447,
+      "max_settled_duration_s": 9.64,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.33225589601835875,
+        0.2201656340933585
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "right",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.6096338559226345,
+      "final_distance_m": 0.2135745092367576,
+      "minimum_distance_m": 0.21355833592891427,
+      "max_settled_duration_s": 9.78,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.32736445230308664,
+        -0.22425804730676152
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "near-stop",
+      "passed": true,
+      "fell": false,
+      "duration_s": 6.0,
+      "initial_distance_m": 0.13958815006560255,
+      "final_distance_m": 0.130946923658747,
+      "minimum_distance_m": 0.1264965810154581,
+      "max_settled_duration_s": 5.86,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.009102645422755939,
+        0.0036026907123635223
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "target-loss",
+      "passed": true,
+      "fell": false,
+      "duration_s": 8.0,
+      "initial_distance_m": 0.6490675575173918,
+      "final_distance_m": 0.21609941303517807,
+      "minimum_distance_m": 0.21124518859332392,
+      "max_settled_duration_s": 5.52,
+      "moving_track_fraction_after_4s": null,
+      "max_lost_target_speed_m_s": 0.009954531194749037,
+      "final_robot_xy_m": [
+        0.4344555532663112,
+        -0.015477331695627249
+      ],
+      "inference_deadline_misses": 0
+    },
+    {
+      "case_id": "moving",
+      "passed": true,
+      "fell": false,
+      "duration_s": 12.0,
+      "initial_distance_m": 0.44906756066463643,
+      "final_distance_m": 0.21976592595300196,
+      "minimum_distance_m": 0.2156368671497234,
+      "max_settled_duration_s": 1.86,
+      "moving_track_fraction_after_4s": 1.0,
+      "max_lost_target_speed_m_s": null,
+      "final_robot_xy_m": [
+        0.5297408445899882,
+        -0.027175249514667835
+      ],
+      "inference_deadline_misses": 0
+    }
+  ],
+  "passed_cases": 6,
+  "total_cases": 6,
+  "export_random_parity": {
+    "random_observations": 65,
+    "max_abs_action_error_rad": 3.337860107421875e-06
+  },
+  "export_real_observation_max_error_rad": 1.6689300537109375e-06,
+  "rendered_spot_detector": {
+    "visible_frames": 0,
+    "detections": 0,
+    "controls_robot": false
+  },
+  "boundary": "Visible development behavior only. Oracle spot coordinates, not camera-loop validation, canonical held-out walking acceptance, transfer, or physical authority."
+}

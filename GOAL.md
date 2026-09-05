@@ -17,12 +17,19 @@ classes; reward movement or a plausible rollout is never task success.
 
 ## Current Milestone
 
-M2 first-party development evaluation; M6 upstream response pending
+Laser-following camera integration next; simulated pursuit validated on visible cases
 
 ## Current Status
 
-`FIRST_PARTY_DEVELOPMENT_EVALUATED` — the local training/export/evaluator chain
-now runs without depending on unavailable third-party checkpoint provenance.
+`LASER_SIM_TARGET_FOLLOWING_VALIDATED_DEVELOPMENT` — the 1024×500 local PPO
+fine-tune completed 12,288,000 new transitions in 21.4 minutes including startup.
+With a versioned approach-gain refinement and byte-identical learned policy,
+all six frozen visible C MuJoCo/BAM laser cases pass, without falls. V1's
+2/6 result remains retained; thresholds were not relaxed. See
+`experiments/laser/README.md` and `receipts/laser-follow/20260904-v2-steering/`.
+Target input is still simulated ground truth. Onboard camera control is next:
+the locked HOME head-camera frame faces opposite positive walking X and its
+forward-dot image has no detection. No physical or held-out result is claimed.
 
 - M5 is blocked after four distinct Brev provider/type provisioning failures.
 - M6 has an accepted deterministic 65-file bundle, but the official candidate
