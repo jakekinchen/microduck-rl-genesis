@@ -43,6 +43,23 @@ def prepare(root: Path = ROOT) -> dict:
               "focus": active, "ready_for_diagnosis": False, "execution_authorized_by_report": False,
               "training_started": False, "physics_causality": "not_established",
               "activity": inspect(root), "discovery_errors": discovery_errors, "errors": []}
+    result["active_training_records"] = []
+    for path in sorted((root / "logs").glob("*/run.json")):
+        safe_path(root, str(path.relative_to(root)))
+        record = read_json(path)
+        if record.get("status") not in {"starting", "running"}:
+            continue
+        checks = []
+        for relative, expected in record.get("source_sha256", {}).items():
+            try:
+                checks.append({"path": relative, "matches": sha256(safe_path(root, relative)) == expected})
+            except (OSError, ValueError):
+                checks.append({"path": relative, "matches": False})
+        result["active_training_records"].append({"id": path.parent.name, "variant": record.get("variant"),
+            "recorded_status": record["status"], "source_commit": record.get("source_commit"),
+            "planned_transitions": record.get("new_transitions"), "source_checks": checks,
+            "current_sources_match_record": bool(checks) and all(check["matches"] for check in checks),
+            "exact_process_to_run_binding": "not_checked"})
     if active["status"] != "verified":
         result["errors"].append(active.get("error", "no active experiment configured"))
         return result

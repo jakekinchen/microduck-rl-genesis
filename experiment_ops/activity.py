@@ -7,7 +7,7 @@ import shlex
 import shutil
 import subprocess
 
-ENTRYPOINTS = {"train_laser.py", "train_laser_robust.py", "train_laser_turn.py",
+ENTRYPOINTS = {"train_laser.py", "train_laser_robust.py", "train_laser_turn.py", "train_laser_gait.py",
                "train.py", "train_backflip.py", "train_first_party.py",
                "train_first_party_development.py"}
 

@@ -99,6 +99,32 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(run["cases"][0]["mean_visible_distance_m"], .6)
         self.assertNotIn("final_distance_m", run["cases"][0])
 
+    def test_gait_reader_keeps_target_and_gait_gates_separate(self):
+        self.report = {"schema": "microduck.laser-gait-evaluation/v3", "proof_class": "visible_development",
+                       "reserved_opened": False, "physical_transfer_validated": False, "passed_cases": 0,
+                       "spec_sha256": "a" * 64, "case_reports": [{"case_id": "face-circle",
+                       "development_passed": False, "failures": ["missing_bilateral_steps"],
+                       "target": {"passed": True, "fell": False, "mean_visible_distance_m": .2},
+                       "gait": {"rejection_gate_passed": False}}]}
+        self.write_report()
+        run = self.inspector.snapshot()["evaluations"][0]
+        self.assertEqual((run["passed"], run["total"]), (0, 1))
+        self.assertFalse(run["cases"][0]["passed"])
+        self.assertTrue(run["cases"][0]["target"]["passed"])
+        self.assertEqual(run["suite_sha256"], "a" * 64)
+        (self.directory / "face-circle.mp4").write_bytes(b"fixture")
+        (self.directory / "trajectory.jsonl").write_text(json.dumps({"case_id": "face-circle", "time_s": .02})+"\n")
+        self.assertEqual(self.inspector.detail("receipts/laser-follow/example")["video_time_origins_s"]["face-circle"], .02)
+        self.report["case_reports"][0]["development_passed"] = True
+        self.write_report()
+        self.assertEqual(self.inspector.snapshot()["evaluations"], [])
+
+    def test_reserved_gait_result_is_not_admitted(self):
+        self.report.update(schema="microduck.laser-gait-evaluation/v3", proof_class="visible_development",
+                           reserved_opened=True, physical_transfer_validated=False)
+        self.write_report()
+        self.assertEqual(self.inspector.snapshot()["evaluations"], [])
+
     def test_reserved_named_receipt_is_not_even_parsed(self):
         reserved = self.directory.parent / "reserved-candidate"
         reserved.mkdir()

@@ -29,3 +29,21 @@ clock (legacy first video frame at 0.02 s, dynamic at 0.04 s).
 The diagnostic comparison aligns only 78 rows before the fall against 2,400
 comparison rows. It preserves incomplete coverage and missing contacts;
 physics causality and new behavior acceptance remain unestablished.
+
+## Live gait-lane follow-up
+
+While this integration was being applied, the training owner advanced to gait
+correction. The guard now recognizes `train_laser_gait.py`; a repository-owned
+trainer was observed active. All ten gait-v3 source hashes initially matched.
+A later preflight caught source drift against that record and a new gait-v4
+starting record, retained in `gait-running-source-check.json`. Those records
+are time-specific; no exact PID-to-run association is claimed. The training
+owner received the finding and the requirement to preserve earlier source bytes
+and terminal negative status when creating the successor.
+
+Duck Lab now has a tested `microduck.laser-gait-evaluation/v3` reader. It keeps
+target and gait gates separate, rejects contradictory composite counts/gates,
+excludes reserved-opened reports, and uses the native gait video origin of
+0.02 s. Actual gait evaluation is still the training owner's work; the reader
+was tested with fixtures. Updated suites: eight active-workspace, twenty-two
+viewer/workspace, eighteen exchange and twenty-three offline-diagnostic tests.

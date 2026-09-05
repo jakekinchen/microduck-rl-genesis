@@ -29,6 +29,8 @@ SOURCES = (
     ("skill", ".agents/skills/microduck-experiments/SKILL.md", "project workflow guidance"),
     ("lessons", "docs/workspace/RETROSPECTIVE.md", "historical findings; no execution authority"),
     ("inspector", "duck_workspace/core.py", "native evidence inspection semantics"),
+    ("active_work", "duck_workspace/active.py", "read-only active evidence and training-source checks"),
+    ("active_focus", "docs/workspace/active-experiment.json", "working inspection focus; subordinate to the ordered queue"),
     ("exporter", "duck_workspace/exchange.py", "metadata projection and validation semantics"),
 )
 
@@ -269,13 +271,14 @@ def export_workspace(owner_task: str, root: Path = ROOT) -> dict:
         }],
         "capabilities": [
             capability("status", "workspace", "microduck.workspace/v1", "Queue and development-receipt projection; recorded process liveness remains unchecked.", "./scripts/duck", "status", "--json"),
+            capability("prepare", "diagnostic", "microduck.active-preflight/v1", "Source-bound working-case and active-training-record inspection; never launches a job.", "./scripts/duck", "prepare"),
             capability("doctor", "diagnostic", "microduck.workspace-doctor/v1", "Native read-only dependency and frozen-contract readiness checks; not run by this exporter.", "./scripts/duck", "doctor"),
             capability("studio", "evidence", "microduck.workspace/v1", "Local recorded video, trajectory and metric inspection; its URLs are not portable artifact addresses.", "./scripts/duck", "studio"),
             capability("behavior-spec", "behavior_spec", "microduck.behavior-draft/v1", "Inspect completeness of an existing task draft; does not validate experiment design or authorize training.", "./scripts/duck", "check-spec", "<existing-spec.json>"),
             capability("lessons", "lesson", "markdown", "Source-linked retrospective covering successful and negative experiment evidence.", "docs/workspace/RETROSPECTIVE.md"),
         ],
         "evidence": {"native_classes": ["first_party_development", "visible_development", "unspecified"],
-                     "native_record_schemas": ["microduck.laser-evaluation/v1", "microduck.dynamic-laser-evaluation/v1", "microduck.first-party-evaluation/v1"],
+                     "native_record_schemas": ["microduck.laser-evaluation/v1", "microduck.dynamic-laser-evaluation/v1", "microduck.laser-gait-evaluation/v3", "microduck.first-party-evaluation/v1"],
                      "integrity_meaning": "Native containing-manifest verification establishes covered file bytes. Missing, unknown or corrupt evidence is not promoted; semantic validity is separate.",
                      "acceptance_meaning": "Native task evaluator and current authority govern acceptance. Historical, visible-development, held-out and physical claims remain distinct. This packet evaluates none of them.",
                      "records_exported": False},

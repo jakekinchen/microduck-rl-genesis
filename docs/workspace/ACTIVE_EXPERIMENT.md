@@ -5,6 +5,33 @@ queue. `TRAINING_ACTUALIZATION.md` remains authoritative for task ordering.
 The active training task retains ownership of physics, reward and evaluator
 changes. The workspace task supplies source-checked inspection and preflight.
 
+## Current lane: versioned gait correction
+
+The training task has advanced to the versioned face-first gait correction in
+`experiments/laser/gait-correction-v3.json`. The initially observed running record was
+`laser-gait-20260905-v3`: 1,024 environments, 600 iterations, 14,745,600 planned
+transitions. All ten source hashes matched at the recorded check; the updated
+process guard recognizes `train_laser_gait.py`. A later snapshot detected a
+gait-v4 starting record and source drift against the earlier gait-v3 record.
+`duck prepare` lists these separately; exact process-to-run identity is not
+asserted. Read the current records for the live version, preserve each version's
+source bytes and terminal status, and do not interrupt or duplicate a run merely
+to adopt this workflow.
+
+The evaluator now requires both target pursuit and measured gait rejection
+gates. Its negative controls cover standing, backward motion, loaded-foot
+sliding, one-foot hopping, mechanical-stop parking, and legitimate BAM target
+overshoot. Candidate selection is the declared final checkpoint only. The
+fresh reserved bank remains closed until all visible composite gates pass.
+Current robot/world code differs from the old startup receipt, so `prepare`
+correctly refuses direct reproduction through that changed source while
+separately checking the running gait record's source hashes.
+
+The retained startup comparison below is a negative control and an example of
+the diagnosis process. It is not a direction to restart the old intervention.
+Duck Lab reads the new `microduck.laser-gait-evaluation/v3` composite reports
+under `receipts/laser-gait/` or `receipts/laser-dynamic/` when they are retained.
+
 ```sh
 ./scripts/duck prepare
 ./scripts/duck doctor

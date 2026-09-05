@@ -108,6 +108,18 @@ class ActiveWorkspaceTests(unittest.TestCase):
         self.manifest(directory)
         self.assertFalse(self.prepare()["ready_for_diagnosis"])
 
+    def test_running_record_sources_are_checked_without_claiming_process_identity(self):
+        directory = self.root / "logs/gait-v3"
+        directory.mkdir(parents=True)
+        record = {"status": "running", "variant": "gait-v3", "source_sha256": {
+            "world.py": hashlib.sha256((self.root / "world.py").read_bytes()).hexdigest()}}
+        (directory / "run.json").write_text(json.dumps(record))
+        running = self.prepare()["active_training_records"][0]
+        self.assertTrue(running["current_sources_match_record"])
+        self.assertEqual(running["exact_process_to_run_binding"], "not_checked")
+        (self.root / "world.py").write_text("drift")
+        self.assertFalse(self.prepare()["active_training_records"][0]["current_sources_match_record"])
+
 
 if __name__ == "__main__":
     unittest.main()

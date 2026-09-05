@@ -1,8 +1,8 @@
 {
   "schema": "microduck.active-workspace/v1",
-  "id": "laser-startup-stability-v1",
-  "phase": "diagnose_before_intervention",
-  "question": "Which active randomized property group changes the selected policy's startup fall on visible development seed 75003?",
+  "id": "laser-gait-v3-with-retained-startup-control",
+  "phase": "gait_training_in_progress",
+  "question": "Does the versioned face-first gait satisfy both target pursuit and measured gait rejection gates? The earlier startup failure remains a negative control.",
   "primary": "receipts/laser-dynamic/20260905-turn-dev",
   "primary_policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed",
   "comparison": "receipts/laser-dynamic/20260905-robust-dev",
@@ -11,6 +11,8 @@
   "case_id": "75003-figure-eight",
   "source_paths": ["experiments/laser/world.py", "microduck/laser_dynamics.py", "microduck/laser_steering.py", "microduck/laser_task.py"],
   "before_training": [
+    "Inspect the existing gait-v3 run and its recorded source hashes before proposing another job; do not duplicate an active run.",
+    "Use experiments/laser/gait-correction-v3.json for the current bounded intervention and its fresh reserved-bank gate. Target-only success cannot select its candidate.",
     "Retain baseline reproduction of the visible startup fall and isolate one property group per diagnostic.",
     "Bind model, BAM, reset, action/observation and perturbation schedule; keep policy bytes fixed during property tests.",
     "If asserting physics causality, use saved action tensors; a feedback rollout or parsed JSON action comparison is insufficient.",

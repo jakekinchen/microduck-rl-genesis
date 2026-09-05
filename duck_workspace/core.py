@@ -11,8 +11,9 @@ import subprocess
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
-DEVELOPMENT_ROOTS = ("receipts/laser-follow", "receipts/first-party-development", "receipts/laser-dynamic")
-LASER_SCHEMAS = {"microduck.laser-evaluation/v1", "microduck.dynamic-laser-evaluation/v1"}
+DEVELOPMENT_ROOTS = ("receipts/laser-follow", "receipts/first-party-development", "receipts/laser-dynamic", "receipts/laser-gait")
+GAIT_SCHEMA = "microduck.laser-gait-evaluation/v3"
+LASER_SCHEMAS = {"microduck.laser-evaluation/v1", "microduck.dynamic-laser-evaluation/v1", GAIT_SCHEMA}
 JSON_LIMIT = 32 * 1024 * 1024
 
 
@@ -144,7 +145,8 @@ class Inspector:
                         raise ValueError("evaluation report must be an object")
                     schema = report.get("schema", report.get("schema_version", ""))
                     dynamic = schema == "microduck.dynamic-laser-evaluation/v1"
-                    visible = (report.get("canonical_held_out") is False and report.get("split") in {"nominal", "development"}) if dynamic else report.get("held_out") is False
+                    gait = schema == GAIT_SCHEMA
+                    visible = (report.get("reserved_opened") is False and report.get("physical_transfer_validated") is False and report.get("proof_class") == "visible_development") if gait else (report.get("canonical_held_out") is False and report.get("split") in {"nominal", "development"}) if dynamic else report.get("held_out") is False
                     if not visible:
                         raise ValueError("only explicitly visible development reports are supported")
                     laser = schema in LASER_SCHEMAS
@@ -156,6 +158,19 @@ class Inspector:
                     cases = report.get("case_reports", []) if laser else []
                     if not isinstance(cases, list):
                         raise ValueError("case_reports must be a list")
+                    if gait:
+                        normalized = []
+                        for case in cases:
+                            target, movement = case["target"], case["gait"]
+                            passed = case["development_passed"]
+                            if type(passed) is not bool or passed != (target["passed"] is True and movement["rejection_gate_passed"] is True and case["failures"] == []):
+                                raise ValueError("inconsistent composite gait/target gates")
+                            normalized.append({**case, "passed": passed, "fell": target.get("fell"),
+                                               "mean_visible_distance_m": target.get("mean_visible_distance_m"),
+                                               "deadline_misses": target.get("deadline_misses")})
+                        cases = normalized
+                        if report.get("passed_cases") != sum(case["passed"] for case in cases):
+                            raise ValueError("composite pass count disagrees with case gates")
                     directory = path.parent
                     runs.append({"id": str(directory.relative_to(self.root)),
                                  "name": directory.name, "schema": schema,
@@ -165,14 +180,14 @@ class Inspector:
                                  "split": report.get("split", "visible-development"),
                                  "target_source": report.get("target_source", "See report"),
                                  "held_out": False, "policy_sha256": report.get("policy_sha256"),
-                                 "suite_sha256": report.get("suite_sha256"),
+                                 "suite_sha256": report.get("suite_sha256", report.get("spec_sha256")),
                                  "steering": report.get("steering"),
                                  "cases": cases, "passed": report.get("passed_cases") if laser else None,
-                                 "total": report.get("total_cases") if laser else None,
+                                 "total": len(cases) if gait else report.get("total_cases") if laser else None,
                                  "boundary": report.get("boundary", report.get("evidence_boundary", "Development evidence; see report.")),
                                  "integrity": self.integrity(directory),
                                  "artifacts": self.artifacts(directory)})
-                except (OSError, ValueError, TypeError, AttributeError) as error:
+                except (OSError, ValueError, TypeError, AttributeError, KeyError) as error:
                     errors.append({"path": relative, "error": str(error)})
         return runs, errors
 
@@ -251,7 +266,7 @@ class Inspector:
                                                           "speed_m_s", "visible", "command", "tilt_deg", "fell", "latency_ms", "target_label", "target_epoch")}
                     trajectories.setdefault(row["case_id"], []).append(point)
         curve = read_json(directory / "learning-curve.json") if "learning-curve.json" in run["artifacts"] else []
-        # Known evaluators render after the first control step (legacy) or
+        # Known evaluators render after the first control step (legacy/gait) or
         # after each second step (dynamic). UI time remains simulation time.
         frame_index = 1 if run["schema"] == "microduck.dynamic-laser-evaluation/v1" else 0
         video_origins = {case: rows[frame_index]["time_s"] for case, rows in trajectories.items()

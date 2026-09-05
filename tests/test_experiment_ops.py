@@ -170,6 +170,11 @@ class TraceTests(unittest.TestCase):
 
 
 class ActivityTests(unittest.TestCase):
+    def test_current_gait_trainer_is_detected(self):
+        result = parse_processes('28394 1 01:20 /x/python3.12 scripts/train_laser_gait.py --run-id private-name\n')
+        self.assertEqual([p["entrypoint"] for p in result], ["train_laser_gait.py"])
+        self.assertNotIn("private-name", json.dumps(result))
+
     def test_only_python_training_commands_and_no_argument_disclosure(self):
         text = '12 1 01:20 /x/python3.12 -u scripts/train_laser.py --api-key SECRET\n13 1 01:20 /bin/zsh -c "python train.py"\n14 1 00:02 python3 scripts/evaluate_laser.py\n'
         result = parse_processes(text)

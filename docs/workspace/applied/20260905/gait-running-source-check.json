@@ -1,0 +1,304 @@
+{
+  "schema": "microduck.active-preflight/v1",
+  "read_only": true,
+  "focus": {
+    "status": "verified",
+    "primary": "receipts/laser-dynamic/20260905-turn-dev",
+    "comparison": "receipts/laser-dynamic/20260905-robust-dev",
+    "case_id": "75003-figure-eight",
+    "id": "laser-gait-v3-with-retained-startup-control",
+    "question": "Does face-first gait-v3 satisfy both target pursuit and measured gait rejection gates? The earlier startup failure remains a negative control.",
+    "phase": "gait_training_in_progress",
+    "config_sha256": "bb34a0962aa13bbdcddafdaf1decf8f57e7e540314c9fc8a562ba444982ffe59",
+    "boundary": "Working focus and inspection only. TRAINING_ACTUALIZATION.md remains the queue. This file does not authorize a launch, choose a new policy or alter any evaluator."
+  },
+  "ready_for_diagnosis": false,
+  "execution_authorized_by_report": false,
+  "training_started": false,
+  "physics_causality": "not_established",
+  "activity": {
+    "schema_version": "microduck.ops.activity.v1",
+    "root": "/Users/kelly/Developer/microduck-rl-genesis",
+    "generated_at": "2026-09-05T10:57:47.123452+00:00",
+    "read_only": true,
+    "status": "busy",
+    "processes": [
+      {
+        "pid": 40663,
+        "ppid": 1366,
+        "elapsed": "00:19",
+        "entrypoint": "train_laser_gait.py",
+        "ownership": "cwd_matches_repository"
+      }
+    ],
+    "boundary": "Instantaneous advisory inventory of known Python training entrypoints. Absence is not proof of idleness; unrecognized launchers and remote jobs are outside coverage. No lock, admission, process control or training status mutation."
+  },
+  "discovery_errors": [],
+  "errors": [
+    "current implementation differs from retained case: experiments/laser/world.py"
+  ],
+  "active_training_records": [
+    {
+      "id": "laser-gait-20260905-v3",
+      "variant": "gait-v3",
+      "recorded_status": "running",
+      "source_commit": "9d23561f28566a4de7cb77fe63ce0c523b18dc6d",
+      "planned_transitions": 14745600,
+      "source_checks": [
+        {
+          "path": "scripts/train_laser_gait.py",
+          "matches": false
+        },
+        {
+          "path": "microduck/laser_gait_env.py",
+          "matches": false
+        },
+        {
+          "path": "microduck/laser_face_command.py",
+          "matches": false
+        },
+        {
+          "path": "microduck/laser_robust_env.py",
+          "matches": true
+        },
+        {
+          "path": "microduck/laser_env.py",
+          "matches": true
+        },
+        {
+          "path": "microduck/laser_task.py",
+          "matches": true
+        },
+        {
+          "path": "microduck/velocity_env.py",
+          "matches": true
+        },
+        {
+          "path": "microduck/velocity_cfg.py",
+          "matches": true
+        },
+        {
+          "path": "microduck/bam_actuator.py",
+          "matches": true
+        },
+        {
+          "path": "experiments/laser/gait-correction-v3.json",
+          "matches": true
+        }
+      ],
+      "current_sources_match_record": false,
+      "exact_process_to_run_binding": "not_checked"
+    },
+    {
+      "id": "laser-gait-20260905-v4",
+      "variant": "gait-v4",
+      "recorded_status": "starting",
+      "source_commit": null,
+      "planned_transitions": 14745600,
+      "source_checks": [],
+      "current_sources_match_record": false,
+      "exact_process_to_run_binding": "not_checked"
+    }
+  ],
+  "before_training": [
+    "Inspect the existing gait-v3 run and its recorded source hashes before proposing another job; do not duplicate an active run.",
+    "Use experiments/laser/gait-correction-v3.json for the current bounded intervention and its fresh reserved-bank gate. Target-only success cannot select its candidate.",
+    "Retain baseline reproduction of the visible startup fall and isolate one property group per diagnostic.",
+    "Bind model, BAM, reset, action/observation and perturbation schedule; keep policy bytes fixed during property tests.",
+    "If asserting physics causality, use saved action tensors; a feedback rollout or parsed JSON action comparison is insufficient.",
+    "Specify one intervention, its hypothesis, bounded transition budget and unchanged regression gates from the diagnosis.",
+    "Freeze a fresh test bank before the intervention and keep all consumed reserved seeds out of tuning.",
+    "Run duck doctor and duck-ops guard immediately before any separately authorized launch; the guard is advisory, not a lease."
+  ],
+  "cases": {
+    "primary": {
+      "receipt": "receipts/laser-dynamic/20260905-turn-dev",
+      "policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed",
+      "case": {
+        "case_id": "75003-figure-eight",
+        "program": "figure-eight",
+        "domain": {
+          "seed": 75003,
+          "randomized": true,
+          "friction_ratio": 1.341937073121622,
+          "trunk_mass_ratio": 0.9085236835990957,
+          "motor_kp_ratio": 0.9058383891624631,
+          "trunk_com_shift_m": [
+            0.000992346558683286,
+            -0.004931192757047738,
+            -9.524465616363109e-05
+          ],
+          "sensor_delay_steps": 0,
+          "encoder_bias_rad": [
+            0.0014702468737140641,
+            -0.0008186268720864991,
+            0.0012377086044644292,
+            -0.007669507930661509,
+            0.002446888361413527,
+            -0.006864807791059457,
+            -0.003744735888944363,
+            0.006745400191872083,
+            -0.00622551271398287,
+            0.0031524123071738686,
+            -0.007532514869791473,
+            0.0030788078022084653,
+            0.0034364335309861557,
+            -0.007684051214857956
+          ],
+          "sensor_noise": true,
+          "push_at_s": 23.0,
+          "push_delta_v_m_s": [
+            -0.061344368349735584,
+            0.03701414942239572
+          ],
+          "route_rotation_rad": -0.6206794754049265,
+          "visual_palette": 1,
+          "ground": "flat; no obstacles"
+        },
+        "passed": false,
+        "fell": true,
+        "duration_s": 1.56,
+        "tracking_fraction": 0.0,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 1.52
+        },
+        "mean_visible_distance_m": null,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "trajectory": {
+        "path": "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-dynamic/20260905-turn-dev/trajectory.jsonl",
+        "sha256": "6763609182adc0d3ed731fb51a463895d8f518db34ff0b39f14f5daa5d977ddb",
+        "bytes": 9607080,
+        "rows": 12078
+      },
+      "first_fall": {
+        "time_s": 1.56,
+        "_line": 4878,
+        "robot_xyz_m": [
+          0.3621523804103422,
+          -0.17139404759324023,
+          0.05829194900846638
+        ],
+        "tilt_deg": 78.2311916429117,
+        "command": [
+          0.23042941093444824,
+          0.0,
+          0.7966206669807434
+        ],
+        "action_rad": [
+          0.3654913604259491,
+          1.776076316833496,
+          0.30806949734687805,
+          -2.5961742401123047,
+          7.149990081787109,
+          -6.367225170135498,
+          3.1700263023376465,
+          -0.34954318404197693,
+          -3.3775782585144043,
+          3.8731844425201416,
+          0.650328516960144,
+          6.711399555206299,
+          -0.8547784686088562,
+          -1.8972225189208984
+        ]
+      }
+    },
+    "comparison": {
+      "receipt": "receipts/laser-dynamic/20260905-robust-dev",
+      "policy_sha256": "b5046aab0e48b3a1c741fe5277341982357a1f43df9f17d14789d4db267ed561",
+      "case": {
+        "case_id": "75003-figure-eight",
+        "program": "figure-eight",
+        "domain": {
+          "seed": 75003,
+          "randomized": true,
+          "friction_ratio": 1.341937073121622,
+          "trunk_mass_ratio": 0.9085236835990957,
+          "motor_kp_ratio": 0.9058383891624631,
+          "trunk_com_shift_m": [
+            0.000992346558683286,
+            -0.004931192757047738,
+            -9.524465616363109e-05
+          ],
+          "sensor_delay_steps": 0,
+          "encoder_bias_rad": [
+            0.0014702468737140641,
+            -0.0008186268720864991,
+            0.0012377086044644292,
+            -0.007669507930661509,
+            0.002446888361413527,
+            -0.006864807791059457,
+            -0.003744735888944363,
+            0.006745400191872083,
+            -0.00622551271398287,
+            0.0031524123071738686,
+            -0.007532514869791473,
+            0.0030788078022084653,
+            0.0034364335309861557,
+            -0.007684051214857956
+          ],
+          "sensor_noise": true,
+          "push_at_s": 23.0,
+          "push_delta_v_m_s": [
+            -0.061344368349735584,
+            0.03701414942239572
+          ],
+          "route_rotation_rad": -0.6206794754049265,
+          "visual_palette": 1,
+          "ground": "flat; no obstacles"
+        },
+        "passed": false,
+        "fell": false,
+        "duration_s": 48.0,
+        "tracking_fraction": 0.4495583449558345,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 2.46
+        },
+        "mean_visible_distance_m": 0.3463120844154829,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "trajectory": {
+        "path": "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-dynamic/20260905-robust-dev/trajectory.jsonl",
+        "sha256": "be700102bae6af127097fcbdd39ad7996c14df2a8ae19d6371536efdbc924f82",
+        "bytes": 11286101,
+        "rows": 14400
+      },
+      "first_fall": null
+    }
+  },
+  "source_bindings": [
+    {
+      "path": "experiments/laser/world.py",
+      "current_sha256": "22a0bc9b5405c757db88729ab5d3bfe8b9027d9e549acd12f5bd874cef95134d",
+      "retained_sha256": "8ac26527ec4ba4e5e58163a55a152da20baca45ffbd4c7b0c2ed57c034b54e75",
+      "matches": false
+    },
+    {
+      "path": "microduck/laser_dynamics.py",
+      "current_sha256": "d378c4385dbd15a654b5bfa863d4e3f2fa564e56d277c698c43357b9e29eb342",
+      "retained_sha256": "d378c4385dbd15a654b5bfa863d4e3f2fa564e56d277c698c43357b9e29eb342",
+      "matches": true
+    },
+    {
+      "path": "microduck/laser_steering.py",
+      "current_sha256": "038596dd6df7990c86e3020b71f51068ab922f137d6ab58d12366d648d8fbaac",
+      "retained_sha256": "038596dd6df7990c86e3020b71f51068ab922f137d6ab58d12366d648d8fbaac",
+      "matches": true
+    },
+    {
+      "path": "microduck/laser_task.py",
+      "current_sha256": "a7796a8fd6576e37a80d5de870b06bdf5d137f4f21cdfa9f5e4dc7cedd400a81",
+      "retained_sha256": "a7796a8fd6576e37a80d5de870b06bdf5d137f4f21cdfa9f5e4dc7cedd400a81",
+      "matches": true
+    }
+  ],
+  "observations": [
+    "Fall at 1.56 s precedes the scheduled push at 23.0 s; that scheduled push cannot explain this recorded startup fall.",
+    "This case has zero sensor-delay steps; added delay is not active in its recorded domain.",
+    "The two policies differ. Feedback rollout comparison cannot isolate a physics cause."
+  ]
+}
