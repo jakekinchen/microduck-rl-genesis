@@ -1,0 +1,4 @@
+#!/bin/sh
+# Intentionally use a standard-library runtime; never import training libraries.
+DUCK_OPS_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+exec python3 "$DUCK_OPS_ROOT/scripts/duck_ops.py" "$@"

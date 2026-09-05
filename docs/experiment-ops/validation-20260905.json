@@ -1,0 +1,804 @@
+{
+  "schema_version": "microduck.ops.trace-comparison.v1",
+  "proof_class": "offline_trace_diagnostic",
+  "sources": [
+    {
+      "path": "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-follow/20260904-v1-trained/trajectory.jsonl",
+      "sha256": "7a47b9ddaacef6436b1a481361598a24f3a20ccc1a5263dcffc1040c18ceb08f",
+      "bytes": 2103313,
+      "rows": 3100
+    },
+    {
+      "path": "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-follow/20260904-v1-genesis/trajectory.jsonl",
+      "sha256": "9ee6eeeea3cb7a0a3b27f8a728b50c50414fd9e74f315809a2aaddca4ca6508e",
+      "bytes": 2093057,
+      "rows": 3100
+    }
+  ],
+  "action_width": 14,
+  "position_tolerance_m": 1e-06,
+  "cases": [
+    {
+      "case_id": "forward",
+      "comparison_kind": "different_recorded_actions",
+      "left_rows": 600,
+      "right_rows": 600,
+      "aligned_rows": 600,
+      "unmatched_time_count": 0,
+      "first_unmatched_time_s": null,
+      "coverage": {
+        "action_rad": {
+          "left": 600,
+          "right": 600
+        },
+        "command": {
+          "left": 600,
+          "right": 600
+        },
+        "robot_xyz_m": {
+          "left": 600,
+          "right": 600
+        },
+        "target_xy_m": {
+          "left": 600,
+          "right": 600
+        },
+        "fell": {
+          "left": 600,
+          "right": 600
+        },
+        "visible": {
+          "left": 600,
+          "right": 600
+        },
+        "contacts": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "first_differences": {
+        "robot_xyz_m": {
+          "time_s": 0.02,
+          "left_line": 1,
+          "right_line": 1,
+          "left": [
+            0.000932449549235897,
+            9.577806288848014e-05,
+            0.12246389550702445
+          ],
+          "right": [
+            0.0008126921020448208,
+            8.31368743092753e-05,
+            0.12247107177972794
+          ]
+        },
+        "action_rad": {
+          "time_s": 0.04,
+          "left_line": 2,
+          "right_line": 2,
+          "left": [
+            -1.46681547164917,
+            0.07517660409212112,
+            -0.3534269332885742,
+            -0.4201620817184448,
+            -0.33904674649238586,
+            -0.15933459997177124,
+            -0.27221617102622986,
+            -0.05630786716938019,
+            -0.4805551767349243,
+            1.2534791231155396,
+            0.030136603862047195,
+            -0.02214830182492733,
+            -0.18452662229537964,
+            0.1520126760005951
+          ],
+          "right": [
+            -1.9633055925369263,
+            0.08558781445026398,
+            0.06279291957616806,
+            -0.3581409454345703,
+            -0.444120854139328,
+            -0.028487594798207283,
+            -0.36610284447669983,
+            -0.056343287229537964,
+            -0.4705315828323364,
+            1.626758337020874,
+            0.1085696667432785,
+            -0.048421695828437805,
+            0.09983158856630325,
+            0.2796192765235901
+          ]
+        },
+        "command": {
+          "time_s": 0.04,
+          "left_line": 2,
+          "right_line": 2,
+          "left": [
+            0.2499975711107254,
+            0.0,
+            -0.008829333819448948
+          ],
+          "right": [
+            0.2499982863664627,
+            0.0,
+            -0.007407287135720253
+          ]
+        }
+      },
+      "different_rows": {
+        "action_rad": 599,
+        "command": 599,
+        "robot_xyz_m": 600,
+        "target_xy_m": 0,
+        "fell": 0,
+        "visible": 0,
+        "contacts": 0
+      },
+      "max_abs_component_error": {
+        "action_rad": 2.431516170501709,
+        "command": 0.6607916280627251,
+        "robot_xyz_m": 0.06833471973417754,
+        "target_xy_m": 0
+      },
+      "recorded_action_values_equal": false,
+      "recorded_command_values_equal": false,
+      "aligned_action_value_sha256": {
+        "left": "17bf4717bb861b5a48c676ff3a1999f083b3939ece1f941d4a490074345e2bfd",
+        "right": "df58e84cfae02cd9b13f6d9fa114cad23e36c6b8b783dab8686b3da4eb47e66f"
+      },
+      "physics_causality": "not_established"
+    },
+    {
+      "case_id": "left",
+      "comparison_kind": "different_recorded_actions",
+      "left_rows": 600,
+      "right_rows": 600,
+      "aligned_rows": 600,
+      "unmatched_time_count": 0,
+      "first_unmatched_time_s": null,
+      "coverage": {
+        "action_rad": {
+          "left": 600,
+          "right": 600
+        },
+        "command": {
+          "left": 600,
+          "right": 600
+        },
+        "robot_xyz_m": {
+          "left": 600,
+          "right": 600
+        },
+        "target_xy_m": {
+          "left": 600,
+          "right": 600
+        },
+        "fell": {
+          "left": 600,
+          "right": 600
+        },
+        "visible": {
+          "left": 600,
+          "right": 600
+        },
+        "contacts": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "first_differences": {
+        "robot_xyz_m": {
+          "time_s": 0.02,
+          "left_line": 601,
+          "right_line": 601,
+          "left": [
+            0.0008206323421989125,
+            0.0001837283864288545,
+            0.12239792374053336
+          ],
+          "right": [
+            0.0006895754486322403,
+            0.0001459678605897352,
+            0.12241888791322708
+          ]
+        },
+        "action_rad": {
+          "time_s": 0.04,
+          "left_line": 602,
+          "right_line": 602,
+          "left": [
+            -1.2852052450180054,
+            0.12713268399238586,
+            -0.05826413258910179,
+            0.5394385457038879,
+            0.2856117784976959,
+            -0.2789076268672943,
+            -0.29812535643577576,
+            0.07362750917673111,
+            -0.41408926248550415,
+            1.6762630939483643,
+            -0.036125548183918,
+            0.11889110505580902,
+            0.7861336469650269,
+            0.6303097009658813
+          ],
+          "right": [
+            -1.6069632768630981,
+            0.014067023992538452,
+            0.20207256078720093,
+            0.37155821919441223,
+            -0.05541430413722992,
+            -0.07353827357292175,
+            -0.3812697231769562,
+            -0.0028880685567855835,
+            -0.5183446407318115,
+            1.8452677726745605,
+            0.026483744382858276,
+            -0.1331331729888916,
+            0.6878185272216797,
+            0.5044105648994446
+          ]
+        },
+        "command": {
+          "time_s": 0.04,
+          "left_line": 602,
+          "right_line": 602,
+          "left": [
+            0.20662052929401398,
+            0.0,
+            1.0
+          ],
+          "right": [
+            0.20642738044261932,
+            0.0,
+            1.0
+          ]
+        }
+      },
+      "different_rows": {
+        "action_rad": 599,
+        "command": 599,
+        "robot_xyz_m": 600,
+        "target_xy_m": 0,
+        "fell": 0,
+        "visible": 0,
+        "contacts": 0
+      },
+      "max_abs_component_error": {
+        "action_rad": 2.5376699566841125,
+        "command": 0.48606066405773163,
+        "robot_xyz_m": 0.03612825470343811,
+        "target_xy_m": 0
+      },
+      "recorded_action_values_equal": false,
+      "recorded_command_values_equal": false,
+      "aligned_action_value_sha256": {
+        "left": "10044f01bb3908b2ff3a091316ca5b4dfe96f9d788b6186cbf2afe76ad51ed82",
+        "right": "c6c7f6e064834e1409ca496e589ae8ea4f08cf126fd6a3198dca7ce366b09030"
+      },
+      "physics_causality": "not_established"
+    },
+    {
+      "case_id": "moving",
+      "comparison_kind": "different_recorded_actions",
+      "left_rows": 600,
+      "right_rows": 600,
+      "aligned_rows": 600,
+      "unmatched_time_count": 0,
+      "first_unmatched_time_s": null,
+      "coverage": {
+        "action_rad": {
+          "left": 600,
+          "right": 600
+        },
+        "command": {
+          "left": 600,
+          "right": 600
+        },
+        "robot_xyz_m": {
+          "left": 600,
+          "right": 600
+        },
+        "target_xy_m": {
+          "left": 600,
+          "right": 600
+        },
+        "fell": {
+          "left": 600,
+          "right": 600
+        },
+        "visible": {
+          "left": 600,
+          "right": 600
+        },
+        "contacts": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "first_differences": {
+        "robot_xyz_m": {
+          "time_s": 0.02,
+          "left_line": 2501,
+          "right_line": 2501,
+          "left": [
+            0.000932449549235897,
+            9.577806288848014e-05,
+            0.12246389550702445
+          ],
+          "right": [
+            0.0007892475696280599,
+            8.173479000106454e-05,
+            0.12247025966644287
+          ]
+        },
+        "action_rad": {
+          "time_s": 0.04,
+          "left_line": 2502,
+          "right_line": 2502,
+          "left": [
+            -1.4659959077835083,
+            0.07432767003774643,
+            -0.3534385859966278,
+            -0.417370080947876,
+            -0.3388707637786865,
+            -0.16028058528900146,
+            -0.2722613215446472,
+            -0.05712127685546875,
+            -0.4811440110206604,
+            1.2543379068374634,
+            0.02995966747403145,
+            -0.023039067164063454,
+            -0.18272177875041962,
+            0.15192383527755737
+          ],
+          "right": [
+            -1.9611374139785767,
+            0.08256753534078598,
+            0.06147047132253647,
+            -0.3534039258956909,
+            -0.44745948910713196,
+            -0.0289444737136364,
+            -0.3674657940864563,
+            -0.05637226998806,
+            -0.4704931974411011,
+            1.6270731687545776,
+            0.10857248306274414,
+            -0.05000636726617813,
+            0.10206049680709839,
+            0.28197789192199707
+          ]
+        },
+        "command": {
+          "time_s": 0.04,
+          "left_line": 2502,
+          "right_line": 2502,
+          "left": [
+            0.24999935925006866,
+            0.0,
+            -0.004511658102273941
+          ],
+          "right": [
+            0.24999971687793732,
+            0.0,
+            -0.003030703868716955
+          ]
+        }
+      },
+      "different_rows": {
+        "action_rad": 599,
+        "command": 599,
+        "robot_xyz_m": 600,
+        "target_xy_m": 0,
+        "fell": 0,
+        "visible": 0,
+        "contacts": 0
+      },
+      "max_abs_component_error": {
+        "action_rad": 2.9213499426841736,
+        "command": 0.5614223796874285,
+        "robot_xyz_m": 0.05239393935314424,
+        "target_xy_m": 0
+      },
+      "recorded_action_values_equal": false,
+      "recorded_command_values_equal": false,
+      "aligned_action_value_sha256": {
+        "left": "01754d5c0c55ec1035c1a0b08f399d155190bfa218f0b3ddf3b3e925cfd217bc",
+        "right": "a0cc0f7892a71a779d5feefad6a6f9cbd5b4f2c771cbc5384dc5747c094830a8"
+      },
+      "physics_causality": "not_established"
+    },
+    {
+      "case_id": "near-stop",
+      "comparison_kind": "different_recorded_actions",
+      "left_rows": 300,
+      "right_rows": 300,
+      "aligned_rows": 300,
+      "unmatched_time_count": 0,
+      "first_unmatched_time_s": null,
+      "coverage": {
+        "action_rad": {
+          "left": 300,
+          "right": 300
+        },
+        "command": {
+          "left": 300,
+          "right": 300
+        },
+        "robot_xyz_m": {
+          "left": 300,
+          "right": 300
+        },
+        "target_xy_m": {
+          "left": 300,
+          "right": 300
+        },
+        "fell": {
+          "left": 300,
+          "right": 300
+        },
+        "visible": {
+          "left": 300,
+          "right": 300
+        },
+        "contacts": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "first_differences": {
+        "robot_xyz_m": {
+          "time_s": 0.02,
+          "left_line": 1801,
+          "right_line": 1801,
+          "left": [
+            0.0004118540984112206,
+            3.409536527204866e-05,
+            0.1226888772096048
+          ],
+          "right": [
+            0.00035042251693084836,
+            2.246145231765695e-05,
+            0.12266863882541656
+          ]
+        },
+        "action_rad": {
+          "time_s": 0.04,
+          "left_line": 1802,
+          "right_line": 1802,
+          "left": [
+            -1.3110767602920532,
+            0.013209633529186249,
+            -0.10092201828956604,
+            -0.28478720784187317,
+            -0.22425208985805511,
+            -0.09376057982444763,
+            -0.2234981805086136,
+            -0.16376100480556488,
+            -0.06338608264923096,
+            1.6919400691986084,
+            -0.1470150649547577,
+            0.23873548209667206,
+            0.03399573266506195,
+            -0.01603391021490097
+          ],
+          "right": [
+            -1.7284319400787354,
+            -0.09500986337661743,
+            0.04276780039072037,
+            -0.17559891939163208,
+            -0.18629153072834015,
+            -0.0009638834744691849,
+            -0.10990539938211441,
+            -0.0473293662071228,
+            -0.07716012001037598,
+            1.8999979496002197,
+            0.13101069629192352,
+            0.3284834921360016,
+            0.1602465808391571,
+            -0.08629082143306732
+          ]
+        }
+      },
+      "different_rows": {
+        "action_rad": 299,
+        "command": 0,
+        "robot_xyz_m": 300,
+        "target_xy_m": 0,
+        "fell": 0,
+        "visible": 0,
+        "contacts": 0
+      },
+      "max_abs_component_error": {
+        "action_rad": 0.6259139776229858,
+        "command": 0,
+        "robot_xyz_m": 0.004601117795344389,
+        "target_xy_m": 0
+      },
+      "recorded_action_values_equal": false,
+      "recorded_command_values_equal": true,
+      "aligned_action_value_sha256": {
+        "left": "b3ae1913439544cfcab8a8fd9075dec27bc30cfc16998ae14e8aa83e02e7f8f2",
+        "right": "b27f072e1dd1b71e8034ad09eb5d869a08b5da0284b709350d41abab35c1cf14"
+      },
+      "physics_causality": "not_established"
+    },
+    {
+      "case_id": "right",
+      "comparison_kind": "different_recorded_actions",
+      "left_rows": 600,
+      "right_rows": 600,
+      "aligned_rows": 600,
+      "unmatched_time_count": 0,
+      "first_unmatched_time_s": null,
+      "coverage": {
+        "action_rad": {
+          "left": 600,
+          "right": 600
+        },
+        "command": {
+          "left": 600,
+          "right": 600
+        },
+        "robot_xyz_m": {
+          "left": 600,
+          "right": 600
+        },
+        "target_xy_m": {
+          "left": 600,
+          "right": 600
+        },
+        "fell": {
+          "left": 600,
+          "right": 600
+        },
+        "visible": {
+          "left": 600,
+          "right": 600
+        },
+        "contacts": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "first_differences": {
+        "robot_xyz_m": {
+          "time_s": 0.02,
+          "left_line": 1201,
+          "right_line": 1201,
+          "left": [
+            0.0007981558047805202,
+            -7.006838626768515e-05,
+            0.12258845038704966
+          ],
+          "right": [
+            0.0007026224047876894,
+            -5.410611265688203e-05,
+            0.12258034199476242
+          ]
+        },
+        "action_rad": {
+          "time_s": 0.04,
+          "left_line": 1202,
+          "right_line": 1202,
+          "left": [
+            -1.6946676969528198,
+            0.35537582635879517,
+            -0.6468890905380249,
+            -0.753142774105072,
+            -0.7664555311203003,
+            0.2465246021747589,
+            -0.5082713961601257,
+            -0.1310882419347763,
+            -0.2411525547504425,
+            1.0900342464447021,
+            -0.5961722135543823,
+            -0.21013395488262177,
+            -0.5386039018630981,
+            -0.1417825073003769
+          ],
+          "right": [
+            -2.267815351486206,
+            0.3084332346916199,
+            -0.2984718084335327,
+            -0.734677791595459,
+            -0.7508144378662109,
+            0.22664222121238708,
+            -0.5177591443061829,
+            -0.11455607414245605,
+            -0.17478956282138824,
+            1.5270850658416748,
+            -0.2915743589401245,
+            -0.052555061876773834,
+            -0.2852180302143097,
+            0.053114086389541626
+          ]
+        },
+        "command": {
+          "time_s": 0.04,
+          "left_line": 1202,
+          "right_line": 1202,
+          "left": [
+            0.2055608332157135,
+            0.0,
+            -1.0
+          ],
+          "right": [
+            0.20557914674282074,
+            0.0,
+            -1.0
+          ]
+        }
+      },
+      "different_rows": {
+        "action_rad": 599,
+        "command": 599,
+        "robot_xyz_m": 600,
+        "target_xy_m": 0,
+        "fell": 0,
+        "visible": 0,
+        "contacts": 0
+      },
+      "max_abs_component_error": {
+        "action_rad": 2.6511212587356567,
+        "command": 0.5926992986351252,
+        "robot_xyz_m": 0.050772939128045425,
+        "target_xy_m": 0
+      },
+      "recorded_action_values_equal": false,
+      "recorded_command_values_equal": false,
+      "aligned_action_value_sha256": {
+        "left": "c70807a4cd43f1826616947483abaa505ff74362b9399e1948b3ad81eff197c4",
+        "right": "dd85b185deae71cc8139426d2844256326bede2ed5141dbb2229e824f6891257"
+      },
+      "physics_causality": "not_established"
+    },
+    {
+      "case_id": "target-loss",
+      "comparison_kind": "different_recorded_actions",
+      "left_rows": 400,
+      "right_rows": 400,
+      "aligned_rows": 400,
+      "unmatched_time_count": 0,
+      "first_unmatched_time_s": null,
+      "coverage": {
+        "action_rad": {
+          "left": 400,
+          "right": 400
+        },
+        "command": {
+          "left": 400,
+          "right": 400
+        },
+        "robot_xyz_m": {
+          "left": 400,
+          "right": 400
+        },
+        "target_xy_m": {
+          "left": 400,
+          "right": 400
+        },
+        "fell": {
+          "left": 400,
+          "right": 400
+        },
+        "visible": {
+          "left": 400,
+          "right": 400
+        },
+        "contacts": {
+          "left": 0,
+          "right": 0
+        }
+      },
+      "first_differences": {
+        "robot_xyz_m": {
+          "time_s": 0.02,
+          "left_line": 2101,
+          "right_line": 2101,
+          "left": [
+            0.000932449549235897,
+            9.577806288848014e-05,
+            0.12246389550702445
+          ],
+          "right": [
+            0.0007895459420979023,
+            8.162818994605914e-05,
+            0.12247028946876526
+          ]
+        },
+        "action_rad": {
+          "time_s": 0.04,
+          "left_line": 2102,
+          "right_line": 2102,
+          "left": [
+            -1.46681547164917,
+            0.07517660409212112,
+            -0.3534269332885742,
+            -0.4201620817184448,
+            -0.33904674649238586,
+            -0.15933459997177124,
+            -0.27221617102622986,
+            -0.05630786716938019,
+            -0.4805551767349243,
+            1.2534791231155396,
+            0.030136603862047195,
+            -0.02214830182492733,
+            -0.18452662229537964,
+            0.1520126760005951
+          ],
+          "right": [
+            -1.9535846710205078,
+            0.07565566897392273,
+            0.05815460532903671,
+            -0.3451250195503235,
+            -0.47055184841156006,
+            -0.013862861320376396,
+            -0.378570020198822,
+            -0.053790606558322906,
+            -0.46896159648895264,
+            1.6248242855072021,
+            0.10652601718902588,
+            -0.05856206268072128,
+            0.09959776699542999,
+            0.29793643951416016
+          ]
+        },
+        "command": {
+          "time_s": 0.04,
+          "left_line": 2102,
+          "right_line": 2102,
+          "left": [
+            0.2499975711107254,
+            0.0,
+            -0.008829333819448948
+          ],
+          "right": [
+            0.2499983012676239,
+            0.0,
+            -0.007357897702604532
+          ]
+        }
+      },
+      "different_rows": {
+        "action_rad": 399,
+        "command": 149,
+        "robot_xyz_m": 400,
+        "target_xy_m": 0,
+        "fell": 0,
+        "visible": 0,
+        "contacts": 0
+      },
+      "max_abs_component_error": {
+        "action_rad": 2.8927911520004272,
+        "command": 0.6889514103531837,
+        "robot_xyz_m": 0.056023948876976704,
+        "target_xy_m": 0
+      },
+      "recorded_action_values_equal": false,
+      "recorded_command_values_equal": false,
+      "aligned_action_value_sha256": {
+        "left": "b56d7e5d6bdac1bbee26b4fcf58849e37bf1c6930afb349bc8522516e4d40ce9",
+        "right": "6e9715c442684eb3ac01d6971e3b42d6e6fae9c336dcf2a81879d0f644c06858"
+      },
+      "physics_causality": "not_established"
+    }
+  ],
+  "behavior_acceptance": "not_evaluated",
+  "hardware_authority": false,
+  "boundary": "Recorded JSON values only; original tensor bytes/dtype are unavailable. Exact action values are a prerequisite, not proof of physics isolation. Reset, model, observation, actuator and applied-force provenance require separate inspection. Missing contact telemetry stays unknown. Position tolerance is diagnostic, never a behavior acceptance threshold.",
+  "validation": {
+    "tests": 22,
+    "test_runtime_s": 0.143,
+    "browser": "case selection, 4.000s scrub, desktop and 390px narrow layout verified over localhost",
+    "file_url_open": "blocked by browser URL policy; not attempted through another route",
+    "simulation_started": false,
+    "training_process_signals_sent": false,
+    "retained_repeat": "3100 samples, six cases, identical recorded actions/commands/positions/targets/events; latency excluded",
+    "active_job_observed": {
+      "pid": 46386,
+      "entrypoint": "train_laser_turn.py",
+      "ownership": "cwd_matches_repository"
+    }
+  }
+}
