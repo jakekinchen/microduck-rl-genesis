@@ -7,8 +7,10 @@ process review covering progress, tools, frameworks and methodology. This
 priority supersedes automatic continuation of the experiment sequence below.
 No new training or simulation is part of the publication task.
 
-- [ ] Reconcile current documentation, preserve experiment evidence, verify the
+- [x] Reconcile current documentation, preserve experiment evidence, verify the
   publication snapshot, and push to `origin/main` with accessible bulk evidence.
+  Delivery: [publication record](docs/workspace/publication-20260916/delivery.json);
+  public archive, all 17 remote asset hashes and both CI workflows verified.
 - [ ] Review the full process using
   [PROCESS_REVIEW_20260916.md](docs/workspace/PROCESS_REVIEW_20260916.md), then
   choose whether to continue, simplify or replace the proposed next experiment.

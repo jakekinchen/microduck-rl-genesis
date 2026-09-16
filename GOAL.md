@@ -14,13 +14,20 @@ policy contract and distinguish simulation development from physical acceptance.
 
 ## Current Milestone
 
-Document and publish the complete project state, then review the approach
+Review the process and choose the next approach
 
 ## Current Status
 
-The owner requested repository and evidence synchronization before assessing
-whether progress has stagnated and whether tools, frameworks or methodology
-should change. New training and simulation are paused for that review.
+Repository and evidence synchronization is complete: the accumulated source,
+protocols and readable results are on origin/main. The public research-evidence
+release contains 84,041 files in 14 archive parts (14.9 GB compressed); all 17
+release assets match GitHub-provided SHA-256 digests. All 3,420 closed V62–V66
+artifacts are unchanged. Both repository CI workflows pass; 77 additional
+manifest-bound logs are preserved in Git.
+
+The owner requested this synchronization before assessing whether progress has
+stagnated and whether tools, frameworks or methodology should change. New
+training and simulation are paused for that review.
 The review entry point is [PROCESS_REVIEW_20260916.md](docs/workspace/PROCESS_REVIEW_20260916.md).
 
 Latest experiment: **V66 guided first-impact numerical gate passes in all
@@ -48,7 +55,7 @@ HOME_RAMP. There is no general carpet, recovery or physical capability admission
 
 ## Next Decision
 
-Complete publication and review the process before selecting another experiment.
+Review the published process evidence before selecting another experiment.
 The prior proposal is a short 0.035–0.135 s full-robot impact window, capturing
 complete solver/BAM/FIFO state at 0.035 s and reproducing exact 5 ms controls
 before finer comparisons. Fixed-input plant integration and live BAM feedback
@@ -57,7 +64,8 @@ Runtime startup, perception failure isolation and broader terrain remain queued.
 
 ## Verification and Evidence
 
-- Publication tooling check: 141 tests pass, with no failures or skips.
+- Publication checks: 141 workspace tests, six receipt-hygiene tests and four
+  archive-tool boundary checks pass. The workspace suite has no failures or skips.
   Publication verification and archive checks are recorded in
   [the evidence guide](docs/workspace/publication-20260916/README.md).
 - V66 has seven focused tests; V65 has nine. Their closed results remain scoped

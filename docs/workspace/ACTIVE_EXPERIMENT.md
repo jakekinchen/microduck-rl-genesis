@@ -1,8 +1,8 @@
-# Current priority: publish evidence and review the approach
+# Current priority: review the published process evidence
 
-September 16: V66 is closed. The owner requested complete documentation and
-origin synchronization before assessing progress, tools, frameworks and
-methodology. Read [the process-review packet](PROCESS_REVIEW_20260916.md) and
+September 16: V66 is closed and repository/evidence publication is complete.
+The owner requested this synchronization before assessing progress, tools,
+frameworks and methodology. Read [the process-review packet](PROCESS_REVIEW_20260916.md) and
 [GOAL](../../GOAL.md). No new training/simulation is selected by this brief.
 The proposed full-state robot impact window is pending that review. The viewer
 retains V30's local reference; it does not claim to serve external V54–V66 data.

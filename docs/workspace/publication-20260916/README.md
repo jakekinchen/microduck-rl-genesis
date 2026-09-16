@@ -68,7 +68,9 @@ python3 scripts/review_evidence_archive.py \
 ```
 
 Do not extract over the working repository or its external-drive symlinks.
-Restoration makes the original files available under `experiments/`, `receipts/`,
+Restored duplicate files share hardlinks; treat this directory as immutable and
+copy files before changing them for another experiment. Restoration makes the
+original files available under `experiments/`, `receipts/`,
 `outputs/` and `logs/` in the new directory. The read-only verifier creates only
 the requested output/report; it does not remap local absolute paths in frozen
 XML, commands or receipts. Executable reproduction still requires the documented

@@ -79,6 +79,12 @@ failure is not success merely because more diagnostics now pass. Thresholds
 and sampled geometry requirements also need engineering justification; more
 strictness is not a substitute for measured task relevance.
 
+The publication audit also found 166 local commits beyond origin and 44.3 GB
+of logical experiment, receipt, output and training-log files. Deduplication
+and compression reduce the evidence transfer to 14.9 GB. Include this evidence
+management and synchronization cost when comparing experiment workflows;
+useful review should not require reconstructing weeks of unpublished state.
+
 ## Toolchain and methodological distinctions to audit
 
 - **Simulation:** Genesis 1.3.3 for the original Apple parallel-training lane;

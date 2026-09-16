@@ -10,7 +10,7 @@
     "skipped": 0
   },
   "python_source_syntax": {
-    "passed": 451,
+    "passed": 453,
     "failed": 0
   },
   "secrets": {
@@ -45,7 +45,7 @@
   "new_simulation_or_training": false,
   "paid_compute_used": false,
   "hardware_used": false,
-  "publication_state": "prepared; remote delivery recorded separately",
+  "publication_state": "published; all 17 remote asset sizes and SHA-256 digests verified",
   "publication_hygiene_tests": {
     "passed": 6,
     "failed": 0
@@ -64,5 +64,29 @@
     "files": 84041,
     "parts": 14,
     "status": "passed"
-  }
+  },
+  "corrected_ci": {
+    "commit": "46e54e5bb74229df7a09a55598d0e9548f9c8e41",
+    "workspace_tools": {
+      "status": "success",
+      "url": "https://github.com/jakekinchen/microduck-rl-genesis/actions/runs/35119308360"
+    },
+    "contract_drift": {
+      "status": "success",
+      "url": "https://github.com/jakekinchen/microduck-rl-genesis/actions/runs/35119308291"
+    }
+  },
+  "workspace_inspector": {
+    "development_evaluations": 121,
+    "local_training_records": 70,
+    "inspection_errors": 24,
+    "reason": "All 24 are expected refusals to serve external symlinked V54/V55 training records. Archive contains dereferenced evidence; no viewer portability claim."
+  },
+  "compute_guard": {
+    "status": "no_known_training_process",
+    "processes": [],
+    "captured_utc": "2026-09-16T16:03:33.480820+00:00",
+    "scope": "Advisory local known-entrypoint inventory; no remote/Brev compute used in this publication task."
+  },
+  "unauthenticated_checksum_download": "matches local SHA256SUMS"
 }
