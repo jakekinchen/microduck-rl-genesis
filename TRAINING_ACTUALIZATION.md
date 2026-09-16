@@ -1,7 +1,8 @@
 # Training actualization — process-review implementation
 
 September 16, 2026. The owner accepted the methodology review and requested an
-implementation PR. This is the only ordered execution queue. There are no
+implementation PR, then explicitly authorized its review and merge. This is the
+only ordered execution queue. There are no
 role cycles, autonomous launches, policy promotions, hardware operations or
 paid-compute authorizations in this change.
 
@@ -20,9 +21,12 @@ Historical scores, source freezes and receipts are not edited or rescored.
   impact probes, and separate camera command candidates.
 - [x] Add portable contract tests and an independent CI job; CI success is not
   behavior acceptance. See [implementation scope](docs/workspace/RETOOLING_20260916.md).
-- [ ] Pass the pinned-RSL default-update equivalence test and retained-follower
-  integration in a full checkout; inspect the new CI result, not just its exit.
-- [ ] Run existing `./scripts/duck verify` on the full checkout.
+- [x] Pass the pinned-RSL synthetic default-update equivalence test and retained-
+  follower interface test in the full checkout and CI; 42 tests passed before
+  review, expanded to 46 locally after review fixes. Native trainer integration
+  remains separate. See [review evidence](docs/workspace/PR1_REVIEW_20260916.md).
+- [x] Run existing `./scripts/duck verify` on the full checkout: 141 passed,
+  no failures, errors or skips.
 
 ## 1. Make the numerical/model decision finite
 

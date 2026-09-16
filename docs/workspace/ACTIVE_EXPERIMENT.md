@@ -1,10 +1,12 @@
-# Current priority: review the published process evidence
+# Current priority: native validation of the accepted review
 
 September 16: V66 is closed and repository/evidence publication is complete.
-The owner requested this synchronization before assessing progress, tools,
-frameworks and methodology. Read [the process-review packet](PROCESS_REVIEW_20260916.md) and
-[GOAL](../../GOAL.md). No new training/simulation is selected by this brief.
-The proposed full-state robot impact window is pending that review. The viewer
+The methodology review is now accepted and PR #1 supplies opt-in foundations.
+Follow [the ordered queue](../../TRAINING_ACTUALIZATION.md), starting with exact
+native clone controls and one bounded full-state robot impact comparison.
+Read [the continuation prompt](NEXT_AGENT_PROMPT.md),
+[the process-review packet](PROCESS_REVIEW_20260916.md) and [GOAL](../../GOAL.md).
+No native experiment is claimed complete by the implementation PR. The viewer
 retains V30's local reference; it does not claim to serve external V54–V66 data.
 The [publication guide](publication-20260916/README.md) provides those artifacts.
 

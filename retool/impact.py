@@ -5,6 +5,8 @@ from dataclasses import dataclass
 import math
 import numpy as np
 
+TIMESTEPS_S = (.005, .0025, .00125, .000625, .0003125, .00015625)
+
 
 @dataclass(frozen=True)
 class ImpactSchedule:
@@ -44,7 +46,7 @@ def run_window(world, checkpoint, schedule: ImpactSchedule, timestep_s: float,
         import mujoco as physics
     if mode not in ("fixed_output", "live_bam"):
         raise ValueError("unknown diagnostic mode")
-    if timestep_s not in (.005, .0025, .00125, .000625, .0003125, .00015625):
+    if timestep_s not in TIMESTEPS_S:
         raise ValueError("unregistered timestep; no automatic refinement")
     schedule.validate(world)
     checkpoint.restore(world, copy_data=physics.mj_copyData)
@@ -88,9 +90,34 @@ def run_window(world, checkpoint, schedule: ImpactSchedule, timestep_s: float,
     finally:
         # All other state remains the diagnostic endpoint; a new arm must restore.
         c.model.opt.timestep = original_dt
-    return dict(mode=mode, timestep_s=timestep_s, samples=records,
+    return dict(mode=mode, timestep_s=timestep_s, start_s=schedule.start_s,
+                end_s=schedule.start_s + len(schedule.torque) * schedule.bam_period_s,
+                samples=records,
                 evidence="open_loop_diagnostic", closed_loop_score=False,
                 physical_acceptance=False)
+
+
+def _validate_trace(trace, tolerance):
+    """Check every integration sample, including rows off the common grid."""
+    dt, start, end = trace["timestep_s"], trace["start_s"], trace["end_s"]
+    if (dt not in TIMESTEPS_S or not all(math.isfinite(v) for v in (start, end))
+            or not math.isclose(start, .035, rel_tol=0, abs_tol=tolerance)):
+        raise ValueError("registered rate and finite 0.035-second window required")
+    ticks = round((end - start) / .005)
+    if not 1 <= ticks <= 20 or abs(end - start - ticks * .005) > tolerance:
+        raise ValueError("one to twenty complete BAM intervals required")
+    rows = trace["samples"]
+    if len(rows) != ticks * round(.005 / dt):
+        raise ValueError("complete full-rate trace required")
+    shape = None
+    for index, row in enumerate(rows, 1):
+        time = row["time_s"]
+        qpos = np.asarray(row["qpos"])
+        if (not math.isfinite(time) or abs(time - (start + index * dt)) > tolerance
+                or qpos.ndim != 1 or len(qpos) < 3 or not np.isfinite(qpos).all()
+                or (shape is not None and qpos.shape != shape)):
+            raise ValueError("missing, reordered or invalid full-rate state sample")
+        shape = qpos.shape
 
 
 def compare_common_grid(left, right, *, time_tolerance_s=1e-9):
@@ -99,6 +126,13 @@ def compare_common_grid(left, right, *, time_tolerance_s=1e-9):
     Peak contact values must additionally be evaluated on each full-rate trace;
     this state comparison is not a substitute for contact/load acceptance.
     """
+    if not math.isfinite(time_tolerance_s) or not 0 < time_tolerance_s < min(TIMESTEPS_S) / 2:
+        raise ValueError("finite sub-sample time tolerance required")
+    for trace in (left, right):
+        _validate_trace(trace, time_tolerance_s)
+    if (abs(left["start_s"] - right["start_s"]) > time_tolerance_s
+            or abs(left["end_s"] - right["end_s"]) > time_tolerance_s):
+        raise ValueError("complete equal-duration traces required")
     if left["timestep_s"] < right["timestep_s"]:
         left, right = right, left
     a, b = left["samples"], right["samples"]

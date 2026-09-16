@@ -13,10 +13,13 @@ une carte NVIDIA**. Ce dépôt refait l'environnement sur Genesis, qui
 tourne sur ROCm, **en conservant la recette sim2real amont**, parce que c'est
 elle qui a de la valeur, pas le code.
 
-**État au 16 septembre :** les nouvelles expériences sont suspendues pendant
-la préparation d'une revue de la démarche. Voir le
-[dossier de revue](docs/workspace/PROCESS_REVIEW_20260916.md),
+**État au 16 septembre :** la revue méthodologique est acceptée. La PR #1 fournit
+des outils expérimentaux optionnels relus ; leur validation native reste à faire,
+d'abord par une reproduction exacte de l'état puis un diagnostic d'impact borné.
+Voir les [instructions de reprise](docs/workspace/NEXT_AGENT_PROMPT.md),
 [GOAL.md](GOAL.md) et la [liste ordonnée](TRAINING_ACTUALIZATION.md).
+Le [dossier de revue](docs/workspace/PROCESS_REVIEW_20260916.md) conserve les
+résultats qui motivent cette direction.
 Les acteurs conservés V21/V15 avec le correcteur V30 ont des résultats utiles
 sur sol plat dans les conditions exposées. V54/V55 ne valident que 5/14 sessions
 de surfaces. V62 valide la géométrie statique ; V63–V65 échouent aux diagnostics

@@ -64,6 +64,23 @@ class MetricsTests(unittest.TestCase):
             if mutation == 'status': rows[0]['status'] = 'failed'
             with self.assertRaises(ValueError): paired_summary(rows, [1,2,3], ('control','candidate'))
 
+    def test_missing_or_malformed_comparison_identity_rejected(self):
+        for field in ('comparison_sha256','bank_sha256','model_sha256','gates_sha256'):
+            for value in (None, '', 'unfrozen', 'z'*64):
+                with self.subTest(field=field, value=value):
+                    rows = self.runs()
+                    for row in rows: row[field] = value
+                    with self.assertRaises(ValueError):
+                        paired_summary(rows, [1,2,3], ('control','candidate'))
+
+    def test_exact_two_arms_and_integer_run_seeds_required(self):
+        with self.assertRaises(ValueError):
+            paired_summary(self.runs(), [1,2,3], ('control','candidate','control'))
+        for value in (True, 1.):
+            rows = self.runs(); rows[0]['training_seed'] = value
+            with self.assertRaises(ValueError):
+                paired_summary(rows, [1,2,3], ('control','candidate'))
+
 
 class ReplayTests(unittest.TestCase):
     def test_transition_phases(self):
@@ -240,6 +257,12 @@ class CheckpointTests(unittest.TestCase):
 
 
 class ImpactTests(unittest.TestCase):
+    @staticmethod
+    def trace(dt=.005):
+        return dict(timestep_s=dt, start_s=.035, end_s=.135,
+                    samples=[dict(time_s=.035+i*dt, qpos=np.zeros(7))
+                             for i in range(1, round(.1/dt)+1)])
+
     def test_fixed_clock_and_restore_between_rates(self):
         w=CheckpointTests.world();s=WorldCheckpoint.capture(w)
         schedule=ImpactSchedule(.035,np.ones((20,14)),np.ones((20,20)),np.ones((20,20)),np.zeros((20,14)))
@@ -260,9 +283,33 @@ class ImpactTests(unittest.TestCase):
         with self.assertRaises(ValueError):run_window(w,s,schedule,.000001,physics=NS())
 
     def test_partial_traces_not_compared(self):
-        a={'timestep_s':.005,'samples':[{'time_s':.04,'qpos':np.zeros(7)}]}
-        b={'timestep_s':.0025,'samples':[{'time_s':.045,'qpos':np.zeros(7)}]}
-        with self.assertRaises(ValueError):compare_common_grid(a,b)
+        for dt in (.005, .0025):
+            for index in (0, 1, -1):
+                with self.subTest(dt=dt, missing_index=index):
+                    a,b = self.trace(),self.trace(dt)
+                    del b['samples'][index]
+                    with self.assertRaises(ValueError):compare_common_grid(a,b)
+
+    def test_full_rate_faults_off_common_grid_rejected(self):
+        for fault in ('nan_time','nan_position','short_position','duplicate','reordered'):
+            with self.subTest(fault=fault):
+                a,b = self.trace(),self.trace(.0025)
+                if fault == 'nan_time': b['samples'][0]['time_s'] = float('nan')
+                if fault == 'nan_position': b['samples'][0]['qpos'][0] = float('nan')
+                if fault == 'short_position': b['samples'][0]['qpos'] = np.zeros(2)
+                if fault == 'duplicate': b['samples'][0] = copy.deepcopy(b['samples'][1])
+                if fault == 'reordered': b['samples'][0],b['samples'][1] = b['samples'][1],b['samples'][0]
+                with self.assertRaises(ValueError):compare_common_grid(a,b)
+
+    def test_invalid_clock_metadata_rejected(self):
+        for field,value in (('start_s',.04),('end_s',float('nan')),('end_s',.14),
+                            ('timestep_s',0.),('timestep_s',float('nan'))):
+            with self.subTest(field=field, value=value):
+                a,b = self.trace(),self.trace(.0025); b[field] = value
+                with self.assertRaises(ValueError):compare_common_grid(a,b)
+        for tolerance in (float('nan'), float('inf'), 0., .005):
+            with self.assertRaises(ValueError):
+                compare_common_grid(self.trace(),self.trace(),time_tolerance_s=tolerance)
 
 
 class VisionTests(unittest.TestCase):

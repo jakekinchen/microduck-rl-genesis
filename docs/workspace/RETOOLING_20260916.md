@@ -17,9 +17,12 @@ paid resource, protected bank or automatic policy promotion is performed.
 | Useful progress reporting | Signed gate margins, missing/hard failures, complete matched three-seed comparison, portable CLI and CI | These summaries do not authenticate input receipts or promote behavior. |
 | Model/framework simplification | Explicit queue and decision rules; detailed V62 model stays an offline reference | Simplified collision generation, asymmetric critic and matched mjlab benchmark are design-only. No migration is claimed. |
 
-This is intentionally a **draft implementation PR** until integration validation
-and the remaining native work are completed. Helper unit tests are not a claim
-that all recommendations have been executed end to end.
+The owner subsequently authorized review and merge of these **opt-in
+foundations**. Portable contracts and workspace tooling are validated; the
+native experiments remain ordered follow-up work, not claimed PR outcomes.
+See [the merge review](PR1_REVIEW_20260916.md) and
+[the continuation prompt](NEXT_AGENT_PROMPT.md). Helper unit tests do not mean
+all recommendations have been executed end to end.
 
 ## Offline entry points
 
@@ -56,6 +59,8 @@ Each run needs `training_seed`, `arm`, `status: completed`,
 `gates_sha256`, `required_case_ids`, and `cases` mapping every required ID to a
 boolean. Missing/aborted runs and changed denominators reject aggregation. Exact
 repeats are not extra training seeds. This is descriptive, not a confidence bound.
+All four identity fields must be 64-character lowercase hexadecimal SHA-256s;
+format/equality checks do not authenticate the underlying receipts.
 
 ## Native integration contracts
 
@@ -74,6 +79,9 @@ clone parity against original V65 output. `fixed_output` holds the recorded
 outputs; `live_bam` advances the restored FIFO and original BAM at 200 Hz.
 No policy inference is added. All-rate contact traces remain necessary: common-
 grid root differences alone do not score joint, impulse, penetration or load gates.
+Each result declares its start/end time. Comparison checks the full sample count,
+timestamps and finite qpos at every integration tick, including finer-rate rows
+that are absent from the common grid. Truncated traces cannot be compared.
 The native clone gate MUST catch any unsupported mutable world/controller state.
 Do not infer a complete whole-robot reference from a synthetic unit test.
 
@@ -133,10 +141,12 @@ original camera geometry and frozen behavior gates; do not combine interventions
 
 ## Test evidence and limitations
 
-The sandbox has NumPy/Torch but cannot clone GitHub or install/run the Apple,
-MuJoCo, BAM, RSL-RL and archived-checkpoint stack. Local verification is a partial
-checkout of the new code, not a run of the repository's complete existing suite.
-The committed validation record reports exact local test counts and versions.
+The original sandbox validation used a partial checkout. Its immutable
+`experiments/retool-v1/local-validation.json` records 40 passes and two skips;
+it is historical, not the current full-checkout result. Subsequent pinned CPU CI
+passed all 42 tests. Review on the local Apple checkout passed all 46 candidate
+tests after regression fixes and all 141 existing workspace tests, without skips.
+Both doctors found the expected inputs; this is readiness, not native execution.
 Synthetic physics/runtime doubles test sequencing and restoration contracts,
 not MuJoCo correctness or actual daemon performance.
 

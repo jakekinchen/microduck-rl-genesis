@@ -32,3 +32,13 @@ Version pairing reference: https://pytorch.org/get-started/previous-versions/#v2
 Existing workspace-tools and contract-drift workflows passed on the first head.
 Native experiments, full Rust transport, training and physical acceptance remain
 pending regardless of portable CI results.
+
+## Subsequent verified result and merge review
+
+The corrected pinned-CPU workflow at `761cc8e` passed all 42 tests without skips
+([run 35138408961](https://github.com/jakekinchen/microduck-rl-genesis/actions/runs/35138408961)).
+The owner then requested review and merge. That review fixed impact-trace and
+comparison-identity validation, expanding the suite to 46 passing local tests;
+see [the review record](../../docs/workspace/PR1_REVIEW_20260916.md). The final
+corrected commit's checks remain a separate merge prerequisite. The original
+partial-checkout validation and failed CI attempt above remain historical.

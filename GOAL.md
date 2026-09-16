@@ -8,9 +8,9 @@ envelope. Work in one task; no role cycles or autonomous experiments.
 
 ## Current Milestone
 
-Implement the accepted process review on a PR branch, then validate the new
-candidates against the retained native stack. The review is no longer awaiting
-a decision. Implementation is not evidence that the proposed experiments passed.
+Validate the accepted methodology-review candidates against the retained native
+stack, starting with exact native clone controls and one bounded impact/model
+decision. PR #1 delivers reviewed foundations, not completed native experiments.
 
 ## Current Status
 
@@ -18,9 +18,14 @@ New opt-in code covers transition-aware replay, actor-gradient diagnostics,
 strict body-side step sequencing, full in-memory checkpoint capture, bounded
 impact windows, two separate camera-command candidates and failure-margin/
 matched-seed reporting. Portable tests exercise synthetic contracts and gradient
-noninterference. Native physics, pinned-RSL integration, actual Rust transport,
+noninterference. All 46 candidate tests and 141 workspace tests pass locally;
+the candidate suite includes pinned-RSL synthetic update parity and the retained
+follower interface. Native trainer integration, physics, actual Rust transport,
 recorded RGB replay and complete behavior banks still need their own results.
 See [scope and validation](docs/workspace/RETOOLING_20260916.md).
+The [continuation prompt](docs/workspace/NEXT_AGENT_PROMPT.md) explains the next
+deliverable; the [PR review](docs/workspace/PR1_REVIEW_20260916.md) records fixes
+and remaining validation boundaries.
 
 Retained actors remain V21 walking / V15 standing / V30 heading. V54 shared is
 a development initializer. V54/V55 remain 5/14 exposed surfaces; the coordinate
@@ -39,9 +44,9 @@ The ordered queue specifies independent scopes and stopping rules.
 
 ## Current Boundaries
 
-The owner authorized implementing the review and opening a PR. No merge,
-paid compute, protected-bank access, hardware operation or policy activation
-is implied. Library/physical acceptance still requires
+The owner explicitly authorized review and merge of PR #1. This grants no paid
+compute, protected-bank access, hardware operation or policy activation.
+Library/physical acceptance still requires
 `docs/workspace/BEHAVIOR_VALIDATION.md`. A test, artifact hash, simulation or
 cross-engine agreement does not establish physical calibration.
 

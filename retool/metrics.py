@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 import math
+import re
 from typing import Iterable
 
 
@@ -49,26 +50,34 @@ def paired_summary(records: list[dict], seeds: list[int], arms: tuple[str, str])
     A run summary must include all required cases, even failed/missing ones.
     Independent training seeds are not inferred from repeated evaluation rows.
     """
-    if len(seeds) < 3 or len(set(seeds)) != len(seeds) or len(set(arms)) != 2:
+    if (len(seeds) < 3 or len(set(seeds)) != len(seeds) or len(arms) != 2
+            or any(not isinstance(a, str) or not a for a in arms) or len(set(arms)) != 2):
         raise ValueError("at least three unique seeds and two distinct arms required")
-    if any(type(s) is not int for s in seeds):
-        raise ValueError("integer training seeds required")
+    if any(type(s) is not int or s < 0 for s in seeds):
+        raise ValueError("nonnegative integer training seeds required")
     expected = {(s, a) for s in seeds for a in arms}
     runs = {}
     identities = set()
     for r in records:
+        if type(r["training_seed"]) is not int:
+            raise ValueError("integer run seed required")
+        hashes = tuple(r[field] for field in
+                       ("comparison_sha256", "bank_sha256", "model_sha256", "gates_sha256"))
+        if any(not isinstance(h, str) or re.fullmatch(r"[0-9a-f]{64}", h) is None for h in hashes):
+            raise ValueError("explicit SHA-256 protocol/model/bank/gate identities required")
         key = (r["training_seed"], r["arm"])
         if key not in expected or key in runs:
             raise ValueError("unexpected or duplicate seed/arm")
         if r["status"] != "completed" or r["split"] != "exposed_development":
             raise ValueError("completed exposed-development runs required")
+        if any(not isinstance(case, str) or not case for case in r["required_case_ids"]):
+            raise ValueError("nonempty case identifiers required")
         ids = tuple(sorted(r["required_case_ids"]))
         if not ids or len(set(ids)) != len(ids) or set(r["cases"]) != set(ids):
             raise ValueError("complete unique case denominator required")
         if any(type(v) is not bool for v in r["cases"].values()):
             raise ValueError("case results must be booleans; missing is not a pass")
-        identities.add((r["comparison_sha256"], r["bank_sha256"],
-                        r["model_sha256"], r["gates_sha256"], ids))
+        identities.add((*hashes, ids))
         runs[key] = r
     if set(runs) != expected or len(identities) != 1:
         raise ValueError("missing run or unmatched protocol/model/bank/gates")
