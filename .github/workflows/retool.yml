@@ -1,0 +1,38 @@
+name: Review candidate contracts
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  portable-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install and enforce CPU test dependencies (no simulator or BAM)
+        run: |
+          # Install the official matched CPU pair, then constrain ALL later resolution.
+          python -m pip install torch==2.9.1 torchvision==0.24.1 --index-url https://download.pytorch.org/whl/cpu
+          printf 'torch==2.9.1+cpu\ntorchvision==0.24.1+cpu\n' > "$RUNNER_TEMP/review-constraints.txt"
+          python -m pip install -c "$RUNNER_TEMP/review-constraints.txt" 'numpy>=2,<3' 'rsl-rl-lib==5.4.2' 'tensordict>=0.6'
+          python -m pip check
+          python -c "import torch, torchvision; assert torch.__version__ == '2.9.1+cpu'; assert torchvision.__version__ == '0.24.1+cpu'; assert torch.version.cuda is None"
+          python -m pip freeze > retool-test-packages.txt
+      - name: Compile and run candidate contracts
+        run: |
+          python -m compileall -q retool microduck/recipe_ppo_review.py
+          python -m retool status
+          set -o pipefail
+          python -m unittest discover -s tests/retool -v 2>&1 | tee retool-tests.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: retool-portable-contract-results
+          path: |
+            retool-tests.log
+            retool-test-packages.txt

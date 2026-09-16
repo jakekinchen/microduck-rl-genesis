@@ -15,10 +15,13 @@ upstream repository trains its policies with **mjlab (MuJoCo Warp)**, which
 which does run on ROCm, **while preserving the upstream sim-to-real recipe**,
 because the recipe is what has value, not the code.
 
-**September 16 status:** the project is preparing a process and methodology
-review; new experiments are paused for that review. Start with the
-[process-review packet](docs/workspace/PROCESS_REVIEW_20260916.md),
+**September 16 status:** the methodology review is accepted. PR #1 provides
+reviewed, opt-in experiment tools; native validation is next, starting with
+exact clone controls and a bounded impact/model decision. Start with the
+[continuation prompt](docs/workspace/NEXT_AGENT_PROMPT.md),
 [current status](GOAL.md), and [ordered queue](TRAINING_ACTUALIZATION.md).
+The [process-review packet](docs/workspace/PROCESS_REVIEW_20260916.md) preserves
+the evidence behind this direction.
 Retained V21 walking/V15 standing actors with V30 heading have useful exposed
 flat-floor results. V54/V55 still pass only 5/14 exposed surface sessions.
 V62 passes static collision-geometry checks; V63–V65 fail full-robot diagnostic
