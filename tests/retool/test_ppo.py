@@ -1,27 +1,56 @@
 """Default-update equivalence on synthetic batches with the pinned RSL imports.
 
-This is not an on-robot test or a reproduction of a training run.
+This tests the actual recipe files, not native physics or the simulator-importing
+microduck package initializer. No algorithm implementation is substituted.
 """
 import copy
+import importlib
 import importlib.util
 import json
 from pathlib import Path
+import sys
 import tempfile
-from types import SimpleNamespace as NS
+from types import ModuleType, SimpleNamespace as NS
 import unittest
-import numpy as np
 import torch
 
 AVAILABLE = (importlib.util.find_spec('rsl_rl') is not None
              and importlib.util.find_spec('tensordict') is not None)
 
 
+def recipe_types_without_simulator_bootstrap():
+    """Load real child modules without running microduck/__init__.py.
+
+    The retained package initializer imports Genesis environments eagerly. That
+    entrypoint belongs to native integration, not this CPU update-equivalence
+    test. Restore all prior package/module identities after loading the classes.
+    """
+    def belongs(name):
+        return name == 'microduck' or name.startswith('microduck.')
+
+    saved = {name: module for name, module in sys.modules.items() if belongs(name)}
+    for name in saved:
+        del sys.modules[name]
+    package = ModuleType('microduck')
+    package.__path__ = [str(Path(__file__).resolve().parents[2] / 'microduck')]
+    package.__package__ = 'microduck'
+    sys.modules['microduck'] = package
+    try:
+        original = importlib.import_module('microduck.recipe_actor_v54')
+        candidate = importlib.import_module('microduck.recipe_ppo_review')
+        return original.RecipePPO, original.mode_pools, candidate.ReviewPPO
+    finally:
+        for name in tuple(sys.modules):
+            if belongs(name):
+                del sys.modules[name]
+        sys.modules.update(saved)
+
+
 @unittest.skipUnless(AVAILABLE, 'pinned RSL-RL/TensorDict unavailable in this sandbox')
 class UpdateParityTests(unittest.TestCase):
     def test_default_candidate_matches_frozen_update(self):
         from tensordict import TensorDict
-        from microduck.recipe_actor_v54 import RecipePPO, mode_pools
-        from microduck.recipe_ppo_review import ReviewPPO
+        RecipePPO, mode_pools, ReviewPPO = recipe_types_without_simulator_bootstrap()
 
         class Actor(torch.nn.Module):
             is_recurrent=False
@@ -58,7 +87,6 @@ class UpdateParityTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             for candidate in (False,True):
                 a,c=copy.deepcopy(actor),copy.deepcopy(critic)
-                # Detach cached distributions before deepcopying modules elsewhere.
                 alg=NS(actor=a,critic=c,rnd=None,symmetry=None,is_multi_gpu=False,schedule='fixed',
                        entropy_coef=0.,num_mini_batches=1,num_learning_epochs=1,clip_param=.2,
                        use_clipped_value_loss=True,value_loss_coef=1.,max_grad_norm=1.,
