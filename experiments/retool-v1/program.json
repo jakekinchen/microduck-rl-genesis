@@ -1,0 +1,72 @@
+{
+  "schema": "microduck.review-program/v1",
+  "base_commit": "942430fb3aeddb9300f07ee99d71010db9ea6295",
+  "state": "implementation_candidates_native_validation_pending",
+  "retained": "V21 walking / V15 standing / V30 heading; no replacement",
+  "automatic_promotion": false,
+  "execution_queue": "TRAINING_ACTUALIZATION.md",
+  "workstreams": [
+    {
+      "id": "impact",
+      "scope": "model_validation",
+      "implementation": ["retool/checkpoint.py", "retool/impact.py"],
+      "validation_status": "synthetic_contract_tests_only; native_clone_gate_pending",
+      "max_attempts": 1,
+      "stop_rule": "One frozen .035-.135 s window/model/arm/rate after exact 5 ms controls. Decide retain/revise/reject; no automatic finer sweep.",
+      "rates_s": [0.005, 0.0025, 0.00125, 0.000625, 0.0003125, 0.00015625]
+    },
+    {
+      "id": "runtime",
+      "scope": "runtime_component",
+      "implementation": ["retool/runtime.py"],
+      "validation_status": "synthetic_contract_tests_only; Rust_transport_and_rehearsal_pending",
+      "max_attempts": 1,
+      "stop_rule": "Reject stale epochs/steps, altered observations/actions, missing four BAM/load samples or partial steps. No pose repair or automatic retry."
+    },
+    {
+      "id": "visual_follow",
+      "scope": "exploratory_capability",
+      "implementation": ["retool/vision.py"],
+      "validation_status": "candidate_only; recorded_RGB_and_full_bank_pending",
+      "max_attempts": 1,
+      "stop_rule": "One candidate arm per frozen comparison; unchanged 16 required cases plus two negatives. Do not open fresh layouts until complete.",
+      "arms": ["control", "edge_speed", "reacquisition_yaw"]
+    },
+    {
+      "id": "learning",
+      "scope": "exploratory_capability",
+      "implementation": ["retool/learning.py", "microduck/recipe_ppo_review.py"],
+      "validation_status": "helper_tests_only; pinned_RSL_update_parity_and_native_learning_pending",
+      "max_attempts": 1,
+      "stop_rule": "Freeze posture-only comparison after independent feasibility witness; retain diagnostics-only control; no automatic penalty increase.",
+      "training_seeds": [26091601, 26091602, 26091603],
+      "selection": "preregistered final checkpoint; no best-checkpoint search",
+      "actor_observations": 61,
+      "actions": 14
+    },
+    {
+      "id": "collision_representation",
+      "scope": "model_validation",
+      "implementation": [],
+      "validation_status": "design_only; simplified_candidate_not_generated",
+      "max_attempts": 1,
+      "stop_rule": "Keep V62 as offline reference. Compare one justified task model preserving support and dangerous collision pairs; reject disabled real contacts."
+    },
+    {
+      "id": "framework_baseline",
+      "scope": "model_validation",
+      "implementation": [],
+      "validation_status": "design_only; no_CUDA_resource_created",
+      "max_attempts": 1,
+      "stop_rule": "Matched upstream mjlab task only after semantic audit. Migration needs behavior/cost/throughput evidence. Paid resources need separate authority."
+    },
+    {
+      "id": "reporting",
+      "scope": "tooling",
+      "implementation": ["retool/metrics.py", "retool/__main__.py"],
+      "validation_status": "portable_unit_tests; no_behavior_admission",
+      "max_attempts": 1,
+      "stop_rule": "Report complete fixed denominators, signed margins and matched seeds; no automatic promotion or hardware claims."
+    }
+  ]
+}
