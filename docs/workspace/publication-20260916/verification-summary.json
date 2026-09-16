@@ -45,5 +45,24 @@
   "new_simulation_or_training": false,
   "paid_compute_used": false,
   "hardware_used": false,
-  "publication_state": "prepared; remote delivery recorded separately"
+  "publication_state": "prepared; remote delivery recorded separately",
+  "publication_hygiene_tests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "retained_manifest_logs": {
+    "files": 77,
+    "bytes": 2175711,
+    "secret_findings": 0
+  },
+  "initial_ci": {
+    "workspace_tools": "passed",
+    "contract_drift": "failed on missing archive-resident receipt payloads; compile and contract generation passed",
+    "correction": "Verify Git bytes and archive catalog references separately; preserve whitespace only under exact-hash exemptions."
+  },
+  "full_archive_verification": {
+    "files": 84041,
+    "parts": 14,
+    "status": "passed"
+  }
 }

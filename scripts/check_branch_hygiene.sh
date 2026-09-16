@@ -14,16 +14,7 @@ if [[ -z "$DIFF_BASE" || "$DIFF_BASE" =~ ^0+$ ]]; then
 fi
 git rev-parse --verify "$DIFF_BASE^{commit}" >/dev/null
 
-manifest_count=0
-while IFS= read -r manifest; do
-    receipt_root="$(dirname "$manifest")"
-    if command -v sha256sum >/dev/null 2>&1; then
-        (cd "$receipt_root" && sha256sum -c SHA256SUMS >/dev/null)
-    else
-        (cd "$receipt_root" && shasum -a 256 -c SHA256SUMS >/dev/null)
-    fi
-    manifest_count=$((manifest_count + 1))
-done < <(git ls-files 'receipts/**/SHA256SUMS' | sort)
+python3 scripts/check_published_receipts.py --whitespace-base "$DIFF_BASE"
 
 log_count=0
 while IFS= read -r receipt_log; do
@@ -50,5 +41,4 @@ while IFS= read -r receipt_log; do
     log_count=$((log_count + 1))
 done < <(git ls-files 'receipts/**/*.log' | sort)
 
-git diff --check "$DIFF_BASE"...HEAD
-echo "Branch hygiene passed: base=$DIFF_BASE manifests=$manifest_count immutable_logs=$log_count"
+echo "Branch hygiene passed: base=$DIFF_BASE immutable_logs=$log_count (archive payload checks are separate)"

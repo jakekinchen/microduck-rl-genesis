@@ -19,7 +19,9 @@ jobs:
         run: python -m compileall -q microduck scripts tests train.py play.py export_onnx.py
       - name: Verify generated contract snapshots after compilation
         run: python scripts/freeze_contract.py --check
-      - name: Verify branch whitespace and immutable receipt manifests
+      - name: Test publication receipt checks
+        run: python -m unittest discover -s tests -p test_publication_hygiene.py -v
+      - name: Verify branch whitespace, Git receipt bytes and archive references
         env:
           DIFF_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: scripts/check_branch_hygiene.sh "$DIFF_BASE"

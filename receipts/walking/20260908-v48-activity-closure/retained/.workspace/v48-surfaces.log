@@ -1,0 +1,29 @@
+{"case": "rigid-control-start-1--window-1", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "rigid-control-start-1--window-2", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "rigid-control-start-2--window-1", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "rigid-control-start-2--window-2", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "soft-low-traction-start-1--window-1", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "soft-low-traction-start-1--window-2", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "soft-low-traction-start-2--window-1", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "soft-low-traction-start-2--window-2", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "soft-middle-start-1--window-1", "passed": false, "failures": ["fall", "incomplete_duration", "insufficient_active_evidence", "missing_bilateral_steps", "missing_tracking_or_stop_evidence", "no_useful_translation", "persistent_loaded_foot_slip", "unsustained_bilateral_stepping", "self_contact:incomplete_duration", "self_load:incomplete_duration", "endurance:incomplete_endurance_evidence", "endurance:missing_final_standing_posture"], "duration_s": 1.8}
+{"case": "soft-middle-start-1--window-2", "passed": false, "failures": ["not_run_after_terminal_fall"], "duration_s": 0.0}
+{"case": "soft-middle-start-2--window-1", "passed": false, "failures": ["fall", "incomplete_duration", "missing_tracking_or_stop_evidence", "persistent_loaded_foot_slip", "self_contact:incomplete_duration", "self_load:incomplete_duration", "endurance:incomplete_endurance_evidence", "endurance:missing_final_standing_posture"], "duration_s": 3.16}
+{"case": "soft-middle-start-2--window-2", "passed": false, "failures": ["not_run_after_terminal_fall"], "duration_s": 0.0}
+{"case": "soft-high-traction-start-1--window-1", "passed": false, "failures": ["missing_or_invalid_case_evidence:no posture evidence", "self_contact:incomplete_duration", "self_load:incomplete_duration", "endurance:incomplete_endurance_evidence", "endurance:missing_final_standing_posture"], "duration_s": 0.22}
+{"case": "soft-high-traction-start-1--window-2", "passed": false, "failures": ["not_run_after_terminal_fall"], "duration_s": 0.0}
+{"case": "soft-high-traction-start-2--window-1", "passed": false, "failures": ["missing_or_invalid_case_evidence:no posture evidence", "self_contact:incomplete_duration", "self_load:incomplete_duration", "endurance:incomplete_endurance_evidence", "endurance:missing_final_standing_posture"], "duration_s": 0.22}
+{"case": "soft-high-traction-start-2--window-2", "passed": false, "failures": ["not_run_after_terminal_fall"], "duration_s": 0.0}
+{"case": "unseen-low-medium-start-1--window-1", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "unseen-low-medium-start-1--window-2", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "unseen-low-medium-start-2--window-1", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "unseen-low-medium-start-2--window-2", "passed": false, "failures": ["persistent_loaded_foot_slip"], "duration_s": 18.0}
+{"case": "unseen-high-mild-start-1--window-1", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "unseen-high-mild-start-1--window-2", "passed": true, "failures": [], "duration_s": 18.0}
+{"case": "unseen-high-mild-start-2--window-1", "passed": false, "failures": ["mean_abs_yaw_error_rad_s", "endurance:tracking_bucket_2:mean_abs_yaw_error_rad_s"], "duration_s": 18.0}
+{"case": "unseen-high-mild-start-2--window-2", "passed": false, "failures": ["mean_abs_yaw_error_rad_s", "endurance:tracking_bucket_2:mean_abs_yaw_error_rad_s"], "duration_s": 18.0}
+{"case": "unseen-low-soft-start-1--window-1", "passed": false, "failures": ["persistent_loaded_foot_slip"], "duration_s": 18.0}
+{"case": "unseen-low-soft-start-1--window-2", "passed": false, "failures": ["persistent_loaded_foot_slip"], "duration_s": 18.0}
+{"case": "unseen-low-soft-start-2--window-1", "passed": false, "failures": ["persistent_loaded_foot_slip"], "duration_s": 18.0}
+{"case": "unseen-low-soft-start-2--window-2", "passed": false, "failures": ["fall", "incomplete_duration", "missing_tracking_or_stop_evidence", "persistent_loaded_foot_slip", "self_contact:incomplete_duration", "self_contact:self_penetration_over_1mm", "self_load:incomplete_duration", "self_load:sustained_self_load_occupancy", "self_load:continuous_body_bracing", "endurance:incomplete_endurance_evidence", "endurance:missing_final_standing_posture"], "duration_s": 13.9}
+{"passed_sessions": 4, "total_sessions": 14, "exception": null}

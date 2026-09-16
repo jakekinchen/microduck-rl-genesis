@@ -1,0 +1,151 @@
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['policy']
+	 critic :  ['policy']
+--------------------------------------------------------------------------------
+Actor Model: RetainedWalkerActor(
+  (walking): MLPModel(
+    (obs_normalizer): EmpiricalNormalization()
+    (distribution): GaussianDistribution()
+    (mlp): MLP(
+      (0): Linear(in_features=61, out_features=512, bias=True)
+      (1): ELU(alpha=1.0)
+      (2): Linear(in_features=512, out_features=256, bias=True)
+      (3): ELU(alpha=1.0)
+      (4): Linear(in_features=256, out_features=128, bias=True)
+      (5): ELU(alpha=1.0)
+      (6): Linear(in_features=128, out_features=14, bias=True)
+    )
+  )
+  (standing): MLPModel(
+    (obs_normalizer): EmpiricalNormalization()
+    (distribution): GaussianDistribution()
+    (mlp): MLP(
+      (0): Linear(in_features=61, out_features=512, bias=True)
+      (1): ELU(alpha=1.0)
+      (2): Linear(in_features=512, out_features=256, bias=True)
+      (3): ELU(alpha=1.0)
+      (4): Linear(in_features=256, out_features=128, bias=True)
+      (5): ELU(alpha=1.0)
+      (6): Linear(in_features=128, out_features=14, bias=True)
+    )
+  )
+  (distribution): GaussianDistribution()
+  (teacher): MLPModel(
+    (obs_normalizer): EmpiricalNormalization()
+    (distribution): GaussianDistribution()
+    (mlp): MLP(
+      (0): Linear(in_features=61, out_features=512, bias=True)
+      (1): ELU(alpha=1.0)
+      (2): Linear(in_features=512, out_features=256, bias=True)
+      (3): ELU(alpha=1.0)
+      (4): Linear(in_features=256, out_features=128, bias=True)
+      (5): ELU(alpha=1.0)
+      (6): Linear(in_features=128, out_features=14, bias=True)
+    )
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=61, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=256, out_features=128, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+Storing git diff for 'microduck-rl-genesis' in: /Users/kelly/Developer/microduck-rl-genesis/logs/retention-native-20260908-v50-smoke/git/microduck-rl-genesis.diff
+################################################################################
+[1m                             Learning iteration 0/5                             [0m 
+
+                               Run name: retention-native-20260908-v50-smoke
+                            Total steps: 576 
+                       Steps per second: 103 
+                        Collection time: 2.245s 
+                          Learning time: 3.315s 
+                        Mean value loss: 0.1720
+                    Mean surrogate loss: 0.0000
+             Mean online_retention loss: 0.0000
+          Mean rehearsal_retention loss: 0.0050
+                        Mean action std: 0.00
+--------------------------------------------------------------------------------
+                         Iteration time: 5.56s
+                           Time elapsed: 0:00:05
+                                    ETA: 0:00:22
+
+################################################################################
+[1m                             Learning iteration 1/5                             [0m 
+
+                               Run name: retention-native-20260908-v50-smoke
+                            Total steps: 1152 
+                       Steps per second: 738 
+                        Collection time: 0.621s 
+                          Learning time: 0.158s 
+                        Mean value loss: 0.4393
+                    Mean surrogate loss: 0.0000
+             Mean online_retention loss: 0.0000
+          Mean rehearsal_retention loss: 0.0004
+                        Mean action std: 0.00
+--------------------------------------------------------------------------------
+                         Iteration time: 0.78s
+                           Time elapsed: 0:00:06
+                                    ETA: 0:00:09
+
+################################################################################
+[1m                             Learning iteration 2/5                             [0m 
+
+                               Run name: retention-native-20260908-v50-smoke
+                            Total steps: 1728 
+                       Steps per second: 703 
+                        Collection time: 0.656s 
+                          Learning time: 0.163s 
+                        Mean value loss: 0.2621
+                    Mean surrogate loss: -0.0678
+             Mean online_retention loss: 0.0070
+          Mean rehearsal_retention loss: 0.0050
+                        Mean action std: 0.04
+--------------------------------------------------------------------------------
+                         Iteration time: 0.82s
+                           Time elapsed: 0:00:07
+                                    ETA: 0:00:04
+
+################################################################################
+[1m                             Learning iteration 3/5                             [0m 
+
+                               Run name: retention-native-20260908-v50-smoke
+                            Total steps: 2304 
+                       Steps per second: 726 
+                        Collection time: 0.634s 
+                          Learning time: 0.160s 
+                        Mean value loss: 0.2537
+                    Mean surrogate loss: -0.0396
+             Mean online_retention loss: 0.0103
+          Mean rehearsal_retention loss: 0.0088
+                        Mean action std: 0.04
+--------------------------------------------------------------------------------
+                         Iteration time: 0.79s
+                           Time elapsed: 0:00:07
+                                    ETA: 0:00:01
+
+################################################################################
+[1m                             Learning iteration 4/5                             [0m 
+
+                               Run name: retention-native-20260908-v50-smoke
+                            Total steps: 2880 
+                       Steps per second: 737 
+                        Collection time: 0.622s 
+                          Learning time: 0.160s 
+                        Mean value loss: 0.2765
+                    Mean surrogate loss: -0.0348
+             Mean online_retention loss: 0.0123
+          Mean rehearsal_retention loss: 0.0115
+                        Mean action std: 0.04
+--------------------------------------------------------------------------------
+                         Iteration time: 0.78s
+                           Time elapsed: 0:00:08
+                                    ETA: 0:00:00
+
+{"status": "completed", "checkpoint": "model_4.pt", "elapsed_s": 15.536959374992875, "new_transitions": 2880}

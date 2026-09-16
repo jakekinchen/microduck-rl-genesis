@@ -40,6 +40,11 @@ local; it is not robot experiment evidence. The exclusion list is
 [excluded-generated-paths.json](excluded-generated-paths.json). No original
 experiment payload was edited to redact, normalize or shrink this release.
 
+Seventy-seven additional manifest-bound training/test log copies (2,175,711
+bytes) under `receipts/.../retained/.workspace/` are published in Git. These
+scoped receipt copies are distinct from the private root `.workspace/` folder;
+the archive's hidden-directory exclusion does not prevent retrieving them.
+
 ## Download, verify and restore
 
 Use Python 3.12 and GitHub CLI. Download into a directory with sufficient space:
@@ -94,3 +99,13 @@ Some unchanged source-bound reports, third-party snapshots and generated SVGs
 contain original trailing whitespace or terminal blank lines. Their bytes are
 preserved rather than invalidating recorded hashes for cosmetic cleanup.
 Software checks and archive integrity do not replace behavior acceptance.
+
+CI verifies all Git-resident receipt bytes and matches archive-only references
+against the checksummed catalog. It reports these counts separately; it does
+not download or claim to reverify the 14.9 GB archive on every push. Full payload
+verification is [archive-verification.json](archive-verification.json), and can
+be repeated with the command above. Seventeen formatting exemptions are bound
+to exact file hashes in [immutable-formatting.json](immutable-formatting.json):
+future edits fail the exemption check instead of silently bypassing whitespace
+validation. The initial sync's legacy CI failure and its publication-layout
+correction are part of the process record, not a failed robotics result.
