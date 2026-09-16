@@ -1,0 +1,44 @@
+{
+  "schema": "microduck.dynamic-laser-comparison/v1",
+  "evidence": "flat-ground simulated-coordinate development only",
+  "baseline_development": {
+    "receipt": "receipts/laser-dynamic/20260905-baseline-dev-r2",
+    "policy_sha256": "8c5fd28e4f65125d469f6946c51fdd9561a3c35b5bbabb71e6af2515270208ad",
+    "passed": 1,
+    "total": 6,
+    "falls": 0,
+    "mean_tracking_fraction": 0.4202872467256205,
+    "mean_distance_m": 0.42298532680148077,
+    "cases_with_post_warmup_distance": 6
+  },
+  "candidate_development": {
+    "receipt": "receipts/laser-dynamic/20260905-turn-dev",
+    "policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed",
+    "passed": 5,
+    "total": 6,
+    "falls": 1,
+    "mean_tracking_fraction": 0.7285876808061108,
+    "mean_distance_m": 0.2564557085769311,
+    "cases_with_post_warmup_distance": 5
+  },
+  "baseline_reserved": {
+    "receipt": "receipts/laser-dynamic/20260905-baseline-reserved",
+    "policy_sha256": "8c5fd28e4f65125d469f6946c51fdd9561a3c35b5bbabb71e6af2515270208ad",
+    "passed": 2,
+    "total": 12,
+    "falls": 0,
+    "mean_tracking_fraction": 0.44211731861852527,
+    "mean_distance_m": 0.42298630570098594,
+    "cases_with_post_warmup_distance": 12
+  },
+  "candidate_reserved": {
+    "receipt": "receipts/laser-dynamic/20260905-turn-reserved",
+    "policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed",
+    "passed": 11,
+    "total": 12,
+    "falls": 1,
+    "mean_tracking_fraction": 0.8044931346586424,
+    "mean_distance_m": 0.24942691443636172,
+    "cases_with_post_warmup_distance": 11
+  }
+}

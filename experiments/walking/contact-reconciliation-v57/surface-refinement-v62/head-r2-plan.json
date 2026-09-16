@@ -1,0 +1,42 @@
+{
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/head-r2-protocol.json": "bb5bd62711ed65c4cb2d8ac8cde2097107169c52fde6785d66441f7653e2a0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".workspace/geometry-deps-v62/site/manifold3d.cpython-312-darwin.so": "d405628ac45f7d5037117c5b06fe596061b524471d2708b1572b973b887f45a9",
+    ".workspace/geometry-deps-v62/site/manifold3d-3.5.3.dist-info/METADATA": "639bd96e419d61a0fd2d0739cef4e7495710435e7b9937d8f978da1ad2a07c1b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r2.py": "0ee90a5b131399b7fa242124638da739bcec3c2a5500e1924a5ebb566d5162b0",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r2.py": "81b1e71cc8bb7ee4f48f3b6cac787198049626f16dd127e698e91a405aec7fc5",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/numerical-scale-diagnosis.json": "a46750e88d3b749f67f7773bf60a77432669d64fda0b0bc4a84d15337195045c",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/test_cad_refinement_v62r2.py": "63881f270379699c852ce877292e199a8583f34bd26a7b7f07e2071b0494e0d6",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/complete.json": "748ac96c4737f143ee55edb3ffd18883b1a5214de91a661ab0345762e58a6ae8",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/parts.npz": "8b8dead0e0c09d5726d8a230b82d224a9f33bee29b3bfd9cb42d07f54d7c2c8a",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/complete.json": "e955d577eb5b23a49a5e44ee3ff2c72053fcebb59db9091afea01abac77afa83"
+  },
+  "attempt_marker": "head-r2-attempt.json",
+  "process_report": "head-r2-processes.json",
+  "steps": [
+    {
+      "id": "refine-bottom_head_shell",
+      "script": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r2.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/head-r2-protocol.json",
+        "bottom_head_shell"
+      ],
+      "wall_seconds": 900,
+      "log": "bottom_head_shell-r2-refinement.log"
+    },
+    {
+      "id": "refine-jaw",
+      "script": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r2.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/head-r2-protocol.json",
+        "jaw"
+      ],
+      "wall_seconds": 900,
+      "log": "jaw-r2-refinement.log"
+    }
+  ]
+}

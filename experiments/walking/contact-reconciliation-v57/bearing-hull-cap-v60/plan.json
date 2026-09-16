@@ -1,0 +1,38 @@
+{
+  "id": "v60-bearing-only-hull-cap-comparison",
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/protocol.json": "8de607c4d8d857b3f5ed88c6ef75deccdde2a0e59a8e5a25256a997bc0b5c00b",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/coacd_worker_v60.py": "79cc90f368320b818a470b55c2383087519f3e3f568dced43c07df6c3697986f",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/material-bank.json": "81c7ab6a565796a188b3f3a0ad4b7fad8204cdc50006291452fc93a4a69d93a5",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py": "0a597e950e9a86472369b1d0bc2559117cbb2422d1feb88bc96d20f2e979f05e",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/run_geometry_v59.py": "2820ea84df3ce3b981043e0d0c2fd439bb8db5195cdb8768aa982f5edc8eb9d8",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/shell-fragment/result.json": "b2fcb3aff20d337bc38998dba2ba142cb31d5f8b8e116ddff20c7585bdc3afb4",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material-review.json": "2560121cac84dd497aad8fbfd74c3bc585e7483ed6be85add19d9c7df26cfcde",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a"
+  },
+  "attempt_marker": "attempt-started.json",
+  "process_report": "processes.json",
+  "steps": [
+    {
+      "id": "one-bearing-generation",
+      "script": "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/coacd_worker_v60.py",
+      "args": [
+        "seeed_bearing__configuration__22x16x4"
+      ],
+      "wall_seconds": 120,
+      "log": "generation.log"
+    },
+    {
+      "id": "independent-material-validation",
+      "script": "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/material-bank.json"
+      ],
+      "wall_seconds": 180,
+      "log": "validation.log"
+    }
+  ]
+}

@@ -1,0 +1,1081 @@
+{
+  "schema": "microduck.walking-genesis-backend-diagnostic/v5",
+  "cases": [
+    {
+      "case_id": "m4s1-forward-08",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.01264104964836972,
+        "mean_abs_lateral_velocity_m_s": 0.01098071503702901,
+        "mean_abs_yaw_error_rad_s": 0.12324519351546478,
+        "signed_mean_yaw_error_rad_s": 0.05904115280140692,
+        "stop_max_speed_m_s": 0.0025924891233444214,
+        "stop_max_yaw_rate_rad_s": 0.0075802491046488285,
+        "peak_sole_clearance_m": [
+          0.017343897372484207,
+          0.014582421630620956
+        ],
+        "loaded_fraction_left_right": [
+          0.5063520871143375,
+          0.4954627949183303
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.16248617114566885,
+        "p95_worst_joint_error_rad": 0.23395974445939066,
+        "mean_absolute_face_pitch_deg": 16.402146254200144,
+        "per_head_joint_mean_abs_error_rad": [
+          0.16248617114566885,
+          0.10976328378659439,
+          0.06549227901829624,
+          0.06129858905742805
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 33.74226165479697,
+          "maximum_heading_error_deg": 33.74586093796235,
+          "signed_endpoint_heading_error_deg": 33.74226165479697,
+          "measured_heading_change_deg": 33.74226165479697,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13475453853607178,
+      "stop_max_tilt_deg": 4.32254972940988
+    },
+    {
+      "case_id": "m4s1-forward-12",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.015416557600082807,
+        "mean_abs_lateral_velocity_m_s": 0.01049737000996171,
+        "mean_abs_yaw_error_rad_s": 0.12815013561083405,
+        "signed_mean_yaw_error_rad_s": 0.031781472691661,
+        "stop_max_speed_m_s": 0.002694585593417287,
+        "stop_max_yaw_rate_rad_s": 0.007118682377040386,
+        "peak_sole_clearance_m": [
+          0.01867487281560898,
+          0.014897061511874199
+        ],
+        "loaded_fraction_left_right": [
+          0.515426497277677,
+          0.4863883847549909
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1562547162518798,
+        "p95_worst_joint_error_rad": 0.22431397322416308,
+        "mean_absolute_face_pitch_deg": 15.85450298847886,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1562547162518798,
+          0.10557304346424153,
+          0.05870396821933649,
+          0.06537452664228482
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 12.175469915154519,
+          "maximum_heading_error_deg": 12.512762840531353,
+          "signed_endpoint_heading_error_deg": 12.175469915154519,
+          "measured_heading_change_deg": 12.175469915154519,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.1353490650653839,
+      "stop_max_tilt_deg": 4.479995950292975
+    },
+    {
+      "case_id": "m4s1-forward-20",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.008739095428677951,
+        "mean_abs_lateral_velocity_m_s": 0.012336889361521523,
+        "mean_abs_yaw_error_rad_s": 0.16114178762163547,
+        "signed_mean_yaw_error_rad_s": -0.02155991592812107,
+        "stop_max_speed_m_s": 0.0020407058764249086,
+        "stop_max_yaw_rate_rad_s": 0.007696383632719517,
+        "peak_sole_clearance_m": [
+          0.019871674478054047,
+          0.016631709411740303
+        ],
+        "loaded_fraction_left_right": [
+          0.5172413793103449,
+          0.515426497277677
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1462455884438564,
+        "p95_worst_joint_error_rad": 0.22387758526802065,
+        "mean_absolute_face_pitch_deg": 14.721289382226502,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1462455884438564,
+          0.0934255180665945,
+          0.05343424188975599,
+          0.08146528435431062
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 16.004154885380274,
+          "maximum_heading_error_deg": 16.271463120276028,
+          "signed_endpoint_heading_error_deg": -16.004154885380274,
+          "measured_heading_change_deg": -16.004154885380274,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.12295651435852051,
+      "stop_max_tilt_deg": 4.63641555194194
+    },
+    {
+      "case_id": "m4s1-turn-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.013850611092196524,
+        "mean_abs_lateral_velocity_m_s": 0.014500326776058125,
+        "mean_abs_yaw_error_rad_s": 0.127396762411629,
+        "signed_mean_yaw_error_rad_s": 0.03812212894540517,
+        "stop_max_speed_m_s": 0.002620764309540391,
+        "stop_max_yaw_rate_rad_s": 0.007764559704810381,
+        "peak_sole_clearance_m": [
+          0.016414763405919075,
+          0.013771319761872292
+        ],
+        "loaded_fraction_left_right": [
+          0.5009074410163339,
+          0.515426497277677
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.15033468655677013,
+        "p95_worst_joint_error_rad": 0.20620571706295016,
+        "mean_absolute_face_pitch_deg": 16.1705455342941,
+        "per_head_joint_mean_abs_error_rad": [
+          0.15033468655677013,
+          0.12051291861029828,
+          0.09328519123290106,
+          0.06355893781318928
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 16.02357167820593,
+          "maximum_heading_error_deg": 16.09713508619584,
+          "signed_endpoint_heading_error_deg": 16.02357167820593,
+          "measured_heading_change_deg": 331.1503590001587,
+          "requested_heading_change_deg": 315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.10753616690635681,
+      "stop_max_tilt_deg": 4.580308027823598
+    },
+    {
+      "case_id": "m4s1-turn-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.015009198628673195,
+        "mean_abs_lateral_velocity_m_s": 0.010173320446305291,
+        "mean_abs_yaw_error_rad_s": 0.10475747081740149,
+        "signed_mean_yaw_error_rad_s": 0.025115471813293638,
+        "stop_max_speed_m_s": 0.0027336319908499718,
+        "stop_max_yaw_rate_rad_s": 0.007629753090441227,
+        "peak_sole_clearance_m": [
+          0.016231926158070564,
+          0.015556087717413902
+        ],
+        "loaded_fraction_left_right": [
+          0.4827586206896552,
+          0.5208711433756806
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.157640323716353,
+        "p95_worst_joint_error_rad": 0.2000776443243027,
+        "mean_absolute_face_pitch_deg": 15.82303226476209,
+        "per_head_joint_mean_abs_error_rad": [
+          0.157640323716353,
+          0.10982285512701186,
+          0.09116104349699725,
+          0.0673519769592099
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 11.663852449120734,
+          "maximum_heading_error_deg": 11.928953641737747,
+          "signed_endpoint_heading_error_deg": 11.663852449120734,
+          "measured_heading_change_deg": -303.462934872832,
+          "requested_heading_change_deg": -315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13545244932174683,
+      "stop_max_tilt_deg": 4.540060315821491
+    },
+    {
+      "case_id": "m4s1-arc-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.015260897748807817,
+        "mean_abs_lateral_velocity_m_s": 0.012988561262093913,
+        "mean_abs_yaw_error_rad_s": 0.13764559307867516,
+        "signed_mean_yaw_error_rad_s": 0.026631997107864493,
+        "stop_max_speed_m_s": 0.0024572594556957483,
+        "stop_max_yaw_rate_rad_s": 0.008278499357402325,
+        "peak_sole_clearance_m": [
+          0.01887703873217106,
+          0.015862924978137016
+        ],
+        "loaded_fraction_left_right": [
+          0.5226860254083484,
+          0.4863883847549909
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.151348807906334,
+        "p95_worst_joint_error_rad": 0.23347028601765635,
+        "mean_absolute_face_pitch_deg": 15.159974234975504,
+        "per_head_joint_mean_abs_error_rad": [
+          0.151348807906334,
+          0.10245802859402713,
+          0.05437436213528904,
+          0.06668104735979007
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 8.096756095554754,
+          "maximum_heading_error_deg": 8.885856023025951,
+          "signed_endpoint_heading_error_deg": 8.096756095554754,
+          "measured_heading_change_deg": 260.19818595311887,
+          "requested_heading_change_deg": 252.1014298575641
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.1339309811592102,
+      "stop_max_tilt_deg": 4.2291548332915
+    },
+    {
+      "case_id": "m4s1-arc-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.014912627485940766,
+        "mean_abs_lateral_velocity_m_s": 0.009845526007241983,
+        "mean_abs_yaw_error_rad_s": 0.1459506886556555,
+        "signed_mean_yaw_error_rad_s": 0.002732759847993665,
+        "stop_max_speed_m_s": 0.002665200736373663,
+        "stop_max_yaw_rate_rad_s": 0.007510153576731682,
+        "peak_sole_clearance_m": [
+          0.01946648210287094,
+          0.015679042786359787
+        ],
+        "loaded_fraction_left_right": [
+          0.5045372050816697,
+          0.4954627949183303
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1589765692020275,
+        "p95_worst_joint_error_rad": 0.23687854666113856,
+        "mean_absolute_face_pitch_deg": 16.35614523676616,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1589765692020275,
+          0.10896381302490639,
+          0.05960995163329407,
+          0.06890493354319073
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 3.913699907731788,
+          "maximum_heading_error_deg": 4.32819757049989,
+          "signed_endpoint_heading_error_deg": -3.913699907731788,
+          "measured_heading_change_deg": -256.0151297652959,
+          "requested_heading_change_deg": -252.1014298575641
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13474935293197632,
+      "stop_max_tilt_deg": 4.391506835431686
+    },
+    {
+      "case_id": "m0s0-forward-08",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.012180070721032183,
+        "mean_abs_lateral_velocity_m_s": 0.01173253001556681,
+        "mean_abs_yaw_error_rad_s": 0.10467960815851368,
+        "signed_mean_yaw_error_rad_s": 0.018422445101061745,
+        "stop_max_speed_m_s": 0.0016086065443232656,
+        "stop_max_yaw_rate_rad_s": 0.009008009918034077,
+        "peak_sole_clearance_m": [
+          0.010106638073921204,
+          0.011246491223573685
+        ],
+        "loaded_fraction_left_right": [
+          0.4863883847549909,
+          0.5136116152450091
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.15678225855959005,
+        "p95_worst_joint_error_rad": 0.19297657791376116,
+        "mean_absolute_face_pitch_deg": 16.634771688458535,
+        "per_head_joint_mean_abs_error_rad": [
+          0.15678225855959005,
+          0.11788304352412915,
+          0.05291740178621947,
+          0.061217472052418315
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 15.740394971309021,
+          "maximum_heading_error_deg": 16.316833296949383,
+          "signed_endpoint_heading_error_deg": 15.740394971309021,
+          "measured_heading_change_deg": 15.740394971309021,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13716614246368408,
+      "stop_max_tilt_deg": 4.467474272601603
+    },
+    {
+      "case_id": "m0s0-forward-12",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.012553733582938,
+        "mean_abs_lateral_velocity_m_s": 0.012612117213788002,
+        "mean_abs_yaw_error_rad_s": 0.10907859978233946,
+        "signed_mean_yaw_error_rad_s": -0.01796402183687568,
+        "stop_max_speed_m_s": 0.0003072876716032624,
+        "stop_max_yaw_rate_rad_s": 0.0007059893687255681,
+        "peak_sole_clearance_m": [
+          0.011956656351685524,
+          0.012000693008303642
+        ],
+        "loaded_fraction_left_right": [
+          0.4863883847549909,
+          0.5136116152450091
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.15153903184889625,
+        "p95_worst_joint_error_rad": 0.18926803652048113,
+        "mean_absolute_face_pitch_deg": 16.04921670627191,
+        "per_head_joint_mean_abs_error_rad": [
+          0.15153903184889625,
+          0.11392102623478928,
+          0.05652989117487757,
+          0.06316040434188414
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 6.864433581437178,
+          "maximum_heading_error_deg": 7.529385878503655,
+          "signed_endpoint_heading_error_deg": -6.864433581437178,
+          "measured_heading_change_deg": -6.864433581437178,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13812381029129028,
+      "stop_max_tilt_deg": 4.601811461160089
+    },
+    {
+      "case_id": "m0s0-forward-20",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.011612130363493782,
+        "mean_abs_lateral_velocity_m_s": 0.011299638428764178,
+        "mean_abs_yaw_error_rad_s": 0.10474165924909286,
+        "signed_mean_yaw_error_rad_s": -0.013167648132934409,
+        "stop_max_speed_m_s": 0.0017656941199675202,
+        "stop_max_yaw_rate_rad_s": 0.007757903076708317,
+        "peak_sole_clearance_m": [
+          0.011973464861512184,
+          0.012398114427924156
+        ],
+        "loaded_fraction_left_right": [
+          0.4573502722323049,
+          0.542649727767695
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.14649857278545367,
+        "p95_worst_joint_error_rad": 0.20640558633804323,
+        "mean_absolute_face_pitch_deg": 14.665832355654395,
+        "per_head_joint_mean_abs_error_rad": [
+          0.14649857278545367,
+          0.10280770852299612,
+          0.0658801728695386,
+          0.07042632099858252
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 14.776847989952458,
+          "maximum_heading_error_deg": 14.776847989952458,
+          "signed_endpoint_heading_error_deg": 14.776847989952458,
+          "measured_heading_change_deg": 14.776847989952458,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13737913966178894,
+      "stop_max_tilt_deg": 4.418274755050351
+    },
+    {
+      "case_id": "m0s0-turn-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.006715145287853045,
+        "mean_abs_lateral_velocity_m_s": 0.008535259358312118,
+        "mean_abs_yaw_error_rad_s": 0.08548428486025268,
+        "signed_mean_yaw_error_rad_s": 0.00401238307437966,
+        "stop_max_speed_m_s": 0.002332709264010191,
+        "stop_max_yaw_rate_rad_s": 0.008432154543697834,
+        "peak_sole_clearance_m": [
+          0.008614977821707726,
+          0.009899463504552841
+        ],
+        "loaded_fraction_left_right": [
+          0.4882032667876588,
+          0.5117967332123412
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.14641423701088518,
+        "p95_worst_joint_error_rad": 0.18545668456554415,
+        "mean_absolute_face_pitch_deg": 15.97367418317794,
+        "per_head_joint_mean_abs_error_rad": [
+          0.14641423701088518,
+          0.12046557592269819,
+          0.06379492929233753,
+          0.05335071095299374
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 1.0071632479461112,
+          "maximum_heading_error_deg": 1.0861168271422708,
+          "signed_endpoint_heading_error_deg": -1.0071632479461112,
+          "measured_heading_change_deg": 314.11962407400665,
+          "requested_heading_change_deg": 315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.11334031820297241,
+      "stop_max_tilt_deg": 4.567631942351837
+    },
+    {
+      "case_id": "m0s0-turn-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.007946742391533864,
+        "mean_abs_lateral_velocity_m_s": 0.011306266898989505,
+        "mean_abs_yaw_error_rad_s": 0.08034556108897048,
+        "signed_mean_yaw_error_rad_s": -0.043639802348592105,
+        "stop_max_speed_m_s": 0.0022397737484425306,
+        "stop_max_yaw_rate_rad_s": 0.008655775338411331,
+        "peak_sole_clearance_m": [
+          0.00964849442243576,
+          0.010405391454696655
+        ],
+        "loaded_fraction_left_right": [
+          0.47731397459165154,
+          0.5226860254083484
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1513693214209183,
+        "p95_worst_joint_error_rad": 0.1849365744352341,
+        "mean_absolute_face_pitch_deg": 15.856523518193935,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1513693214209183,
+          0.1157864269256592,
+          0.06096925446818354,
+          0.054470564130930064
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 28.43114195986308,
+          "maximum_heading_error_deg": 28.4569878009811,
+          "signed_endpoint_heading_error_deg": -28.43114195986308,
+          "measured_heading_change_deg": -343.55792928181586,
+          "requested_heading_change_deg": -315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.1358759105205536,
+      "stop_max_tilt_deg": 4.349516054226818
+    },
+    {
+      "case_id": "m0s0-arc-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.012717372050302647,
+        "mean_abs_lateral_velocity_m_s": 0.014502921570609019,
+        "mean_abs_yaw_error_rad_s": 0.12720049393993757,
+        "signed_mean_yaw_error_rad_s": -0.013817957258646395,
+        "stop_max_speed_m_s": 0.00039030457264743745,
+        "stop_max_yaw_rate_rad_s": 0.0014768785331398249,
+        "peak_sole_clearance_m": [
+          0.011746395379304886,
+          0.012845605611801147
+        ],
+        "loaded_fraction_left_right": [
+          0.5226860254083484,
+          0.47731397459165154
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.14191473072239147,
+        "p95_worst_joint_error_rad": 0.18967392179965975,
+        "mean_absolute_face_pitch_deg": 15.395017688315535,
+        "per_head_joint_mean_abs_error_rad": [
+          0.14191473072239147,
+          0.11310791784632782,
+          0.057411235936104234,
+          0.06474301604757612
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 9.091942681487721,
+          "maximum_heading_error_deg": 10.457267018203376,
+          "signed_endpoint_heading_error_deg": -9.091942681487721,
+          "measured_heading_change_deg": 243.0094871760764,
+          "requested_heading_change_deg": 252.1014298575641
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13822320103645325,
+      "stop_max_tilt_deg": 4.630454610368735
+    },
+    {
+      "case_id": "m0s0-arc-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.014164535472483903,
+        "mean_abs_lateral_velocity_m_s": 0.01314271675828868,
+        "mean_abs_yaw_error_rad_s": 0.10610243305158269,
+        "signed_mean_yaw_error_rad_s": -0.002492630327570005,
+        "stop_max_speed_m_s": 0.0013160310918465257,
+        "stop_max_yaw_rate_rad_s": 0.007942257449030876,
+        "peak_sole_clearance_m": [
+          0.012294134125113487,
+          0.011536270380020142
+        ],
+        "loaded_fraction_left_right": [
+          0.4863883847549909,
+          0.5136116152450091
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.15225316910609232,
+        "p95_worst_joint_error_rad": 0.19244069490432741,
+        "mean_absolute_face_pitch_deg": 16.57073203035457,
+        "per_head_joint_mean_abs_error_rad": [
+          0.15225316910609232,
+          0.1199424482984913,
+          0.06031423211524528,
+          0.06558395624182654
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 0.25334146266688196,
+          "maximum_heading_error_deg": 2.964121045767639,
+          "signed_endpoint_heading_error_deg": 0.25334146266688196,
+          "measured_heading_change_deg": -251.84808839489725,
+          "requested_heading_change_deg": -252.1014298575641
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13739964365959167,
+      "stop_max_tilt_deg": 4.484016484482714
+    },
+    {
+      "case_id": "m6s1-forward-08",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.014552380664108452,
+        "mean_abs_lateral_velocity_m_s": 0.014004849291230364,
+        "mean_abs_yaw_error_rad_s": 0.17000114356626939,
+        "signed_mean_yaw_error_rad_s": 0.06941200943865278,
+        "stop_max_speed_m_s": 0.0021148789674043655,
+        "stop_max_yaw_rate_rad_s": 0.00831716787070036,
+        "peak_sole_clearance_m": [
+          0.02032359689474106,
+          0.014510124921798706
+        ],
+        "loaded_fraction_left_right": [
+          0.49727767695099817,
+          0.5081669691470054
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1614893688151615,
+        "p95_worst_joint_error_rad": 0.22057340178489687,
+        "mean_absolute_face_pitch_deg": 16.603799856240503,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1614893688151615,
+          0.10939695752706428,
+          0.0775613344310576,
+          0.06763750069077563
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 43.54645362063105,
+          "maximum_heading_error_deg": 44.19086619529317,
+          "signed_endpoint_heading_error_deg": 43.54645362063105,
+          "measured_heading_change_deg": 43.54645362063105,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13767868280410767,
+      "stop_max_tilt_deg": 4.638443064657414
+    },
+    {
+      "case_id": "m6s1-forward-12",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.012963600031044435,
+        "mean_abs_lateral_velocity_m_s": 0.01712420290296292,
+        "mean_abs_yaw_error_rad_s": 0.1751573898359633,
+        "signed_mean_yaw_error_rad_s": 0.04542669061209648,
+        "stop_max_speed_m_s": 0.0027062760200351477,
+        "stop_max_yaw_rate_rad_s": 0.007562940940260887,
+        "peak_sole_clearance_m": [
+          0.021898221224546432,
+          0.015731781721115112
+        ],
+        "loaded_fraction_left_right": [
+          0.5009074410163339,
+          0.5009074410163339
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.15269173410700151,
+        "p95_worst_joint_error_rad": 0.22630257043838503,
+        "mean_absolute_face_pitch_deg": 15.292732260462024,
+        "per_head_joint_mean_abs_error_rad": [
+          0.15269173410700151,
+          0.09864651037119812,
+          0.0642947000218829,
+          0.07102904926447064
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 30.33130901068157,
+          "maximum_heading_error_deg": 31.391536992114695,
+          "signed_endpoint_heading_error_deg": 30.33130901068157,
+          "measured_heading_change_deg": 30.33130901068157,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.12108492851257324,
+      "stop_max_tilt_deg": 4.495228745028491
+    },
+    {
+      "case_id": "m6s1-forward-20",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.011217592378060744,
+        "mean_abs_lateral_velocity_m_s": 0.017628571855457003,
+        "mean_abs_yaw_error_rad_s": 0.21928079106030265,
+        "signed_mean_yaw_error_rad_s": 0.015497327767424083,
+        "stop_max_speed_m_s": 0.002713640220463276,
+        "stop_max_yaw_rate_rad_s": 0.007151786237955093,
+        "peak_sole_clearance_m": [
+          0.023352522403001785,
+          0.019537432119250298
+        ],
+        "loaded_fraction_left_right": [
+          0.49909255898366606,
+          0.5063520871143375
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.13815245600057685,
+        "p95_worst_joint_error_rad": 0.2310629065692425,
+        "mean_absolute_face_pitch_deg": 13.820334522819808,
+        "per_head_joint_mean_abs_error_rad": [
+          0.13815245600057685,
+          0.08617056816775708,
+          0.05890828355193055,
+          0.08426395653977937
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 8.23852390098114,
+          "maximum_heading_error_deg": 9.616308191912806,
+          "signed_endpoint_heading_error_deg": 8.23852390098114,
+          "measured_heading_change_deg": 8.23852390098114,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.10757625102996826,
+      "stop_max_tilt_deg": 4.4481414641869454
+    },
+    {
+      "case_id": "m6s1-turn-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.019854617284130415,
+        "mean_abs_lateral_velocity_m_s": 0.013507571417119772,
+        "mean_abs_yaw_error_rad_s": 0.14087525062168357,
+        "signed_mean_yaw_error_rad_s": -0.0018488952244366578,
+        "stop_max_speed_m_s": 0.001980107743293047,
+        "stop_max_yaw_rate_rad_s": 0.00779511546716094,
+        "peak_sole_clearance_m": [
+          0.0182102769613266,
+          0.013281026855111122
+        ],
+        "loaded_fraction_left_right": [
+          0.484573502722323,
+          0.5208711433756806
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.16418003442288842,
+        "p95_worst_joint_error_rad": 0.2515484392642975,
+        "mean_absolute_face_pitch_deg": 17.286546984276907,
+        "per_head_joint_mean_abs_error_rad": [
+          0.16418003442288842,
+          0.12398369318830983,
+          0.11502511210829353,
+          0.06348588401024896
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 13.131214292846762,
+          "maximum_heading_error_deg": 13.149852800182288,
+          "signed_endpoint_heading_error_deg": -13.131214292846762,
+          "measured_heading_change_deg": 301.995573029106,
+          "requested_heading_change_deg": 315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.09969210624694824,
+      "stop_max_tilt_deg": 4.605513223718509
+    },
+    {
+      "case_id": "m6s1-turn-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.021696195764549096,
+        "mean_abs_lateral_velocity_m_s": 0.009245897380818638,
+        "mean_abs_yaw_error_rad_s": 0.1352812475279758,
+        "signed_mean_yaw_error_rad_s": 0.033226044933073316,
+        "stop_max_speed_m_s": 0.002513936487957835,
+        "stop_max_yaw_rate_rad_s": 0.008203273639082909,
+        "peak_sole_clearance_m": [
+          0.017547056078910828,
+          0.01520129106938839
+        ],
+        "loaded_fraction_left_right": [
+          0.4954627949183303,
+          0.5063520871143375
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1703303106183871,
+        "p95_worst_joint_error_rad": 0.23067109543681147,
+        "mean_absolute_face_pitch_deg": 16.81604776653324,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1703303106183871,
+          0.1118414257468124,
+          0.10586975528240274,
+          0.07044982506382497
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 18.092818922625625,
+          "maximum_heading_error_deg": 19.213408138079192,
+          "signed_endpoint_heading_error_deg": 18.092818922625625,
+          "measured_heading_change_deg": -297.03396839932714,
+          "requested_heading_change_deg": -315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13674470782279968,
+      "stop_max_tilt_deg": 4.604279632837576
+    },
+    {
+      "case_id": "m6s1-arc-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.015217610364492491,
+        "mean_abs_lateral_velocity_m_s": 0.018267898716919036,
+        "mean_abs_yaw_error_rad_s": 0.1917862314311703,
+        "signed_mean_yaw_error_rad_s": 0.04111000074110855,
+        "stop_max_speed_m_s": 0.002683064201846719,
+        "stop_max_yaw_rate_rad_s": 0.007851075381040573,
+        "peak_sole_clearance_m": [
+          0.022612618282437325,
+          0.0162835493683815
+        ],
+        "loaded_fraction_left_right": [
+          0.4809437386569873,
+          0.5190562613430127
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.14950675128528848,
+        "p95_worst_joint_error_rad": 0.228148977047205,
+        "mean_absolute_face_pitch_deg": 15.090504249522851,
+        "per_head_joint_mean_abs_error_rad": [
+          0.14950675128528848,
+          0.10053486981167778,
+          0.06342917156036938,
+          0.07377670730379893
+        ]
+      },
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 30.577819913050977,
+          "maximum_heading_error_deg": 30.577819913050977,
+          "signed_endpoint_heading_error_deg": 30.577819913050977,
+          "measured_heading_change_deg": 282.6792497706151,
+          "requested_heading_change_deg": 252.1014298575641
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.13026854395866394,
+      "stop_max_tilt_deg": 4.398191792022454
+    },
+    {
+      "case_id": "m6s1-arc-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.01331261966708784,
+        "mean_abs_lateral_velocity_m_s": 0.012984656997869288,
+        "mean_abs_yaw_error_rad_s": 0.1792642861090857,
+        "signed_mean_yaw_error_rad_s": 0.012551874438885564,
+        "stop_max_speed_m_s": 0.0025026914663612843,
+        "stop_max_yaw_rate_rad_s": 0.007609698921442032,
+        "peak_sole_clearance_m": [
+          0.02215978130698204,
+          0.016588706523180008
+        ],
+        "loaded_fraction_left_right": [
+          0.5045372050816697,
+          0.4954627949183303
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.14991971746143803,
+        "p95_worst_joint_error_rad": 0.2285805891811848,
+        "mean_absolute_face_pitch_deg": 15.556450638733688,
+        "per_head_joint_mean_abs_error_rad": [
+          0.14991971746143803,
+          0.10383286848992776,
+          0.06526123874981643,
+          0.07427345750772435
+        ]
+      },
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 8.38147962507274,
+          "maximum_heading_error_deg": 8.863732193071431,
+          "signed_endpoint_heading_error_deg": 8.38147962507274,
+          "measured_heading_change_deg": -243.71995023249139,
+          "requested_heading_change_deg": -252.1014298575641
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "minimum_actual_joint_margin_rad": 0.12224835157394409,
+      "stop_max_tilt_deg": 4.466378055318536
+    }
+  ],
+  "heading_passed_cases": 12,
+  "full_exposed_bank": true,
+  "all_exposed_commands": true,
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "timing_sampling": "constant device profiles per case",
+  "checkpoint_sha256": "c79e02bc00dabca146b83592582926fc2053114cc5e44cdf822f95aa8ff8fb17",
+  "checkpoint": "model_749.pt",
+  "acceptance_eligible": false,
+  "inference": "Torch CPU normalized deterministic mean; same inference path for both physics backends",
+  "physics": {
+    "engine": "Genesis",
+    "backend": "cpu",
+    "batch_size": 1,
+    "observed_env": 0,
+    "class": "MicroduckViableWalkingEnv",
+    "constraint_timeconst_s": 0.02,
+    "floor_masks": [
+      1,
+      1
+    ],
+    "voltage_v": 7.35,
+    "drop_ohm": 0.0
+  },
+  "boundary": "Deterministic policy response on an explicit backend/batch size and named timing process. Training-jitter mode covers the command bank, NOT the fixed 21-case battery. Not fixed-action isolation, candidate selection, native acceptance or physical transfer."
+}

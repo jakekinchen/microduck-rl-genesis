@@ -1,0 +1,48 @@
+{
+  "id": "v62-local-hybrid-pilot",
+  "frozen_utc": "2026-09-16T03:28:12.024784+00:00",
+  "parent": 2,
+  "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl",
+  "parent_parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz",
+  "output_directory": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-hybrid-pilot",
+  "params": {
+    "threshold": 0.00012,
+    "real_metric": true,
+    "max_convex_hull": 64,
+    "preprocess_mode": "off",
+    "preprocess_resolution": 50,
+    "resolution": 1000,
+    "mcts_nodes": 20,
+    "mcts_iterations": 30,
+    "mcts_max_depth": 3,
+    "pca": false,
+    "merge": true,
+    "decimate": false,
+    "max_ch_vertex": 256,
+    "extrude": false,
+    "extrude_margin": 0.01,
+    "apx_mode": "ch",
+    "seed": 26091662
+  },
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/pilot_local_coacd_v62.py": "e06f204986d8401507bb8095f8d0c5345258bba1c373300da34b30c83e313abf",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r2.py": "0ee90a5b131399b7fa242124638da739bcec3c2a5500e1924a5ebb566d5162b0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/pilot_hybrid_v62.py": "f6823e712d9286c126dc39ce32a13ce12e591a65fac2d2c60ffe5932e299d74b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-coacd-pilot/parts.npz": "13490092ce6501d571391a84d212790f9b184796f2ec2dd99cab6f0afd8810ad",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-coacd-pilot/result.json": "e8298322240c8623da38c7777087ad2dc7dc5d18ee17204f28dba78c2a622d44"
+  },
+  "acceptance": "all dense excess <= .18mm; sampled clipped-source missing <= .25mm; convex/watertight; full independent model gates still required",
+  "initial_parts_npz": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-coacd-pilot/parts.npz",
+  "refinement_config": {
+    "selection_threshold_m": 0.00018,
+    "refinement_target_m": 0.00012,
+    "maximum_depth": 16,
+    "maximum_leaves_per_parent": 128,
+    "maximum_total_parts": 256
+  }
+}

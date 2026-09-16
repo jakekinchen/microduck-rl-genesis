@@ -1,0 +1,447 @@
+{
+  "schema": "microduck.raw-cad-intersection-witness/v1",
+  "cases": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "time_s": 0.9,
+      "hull_penetration_m": 0.0012047883961378983,
+      "raw_meshes": [
+        {
+          "id": 9,
+          "name": "",
+          "body": "trunk_base",
+          "mesh": "np_f970",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 20970
+        },
+        {
+          "id": 26,
+          "name": "",
+          "body": "leg",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 14776
+        }
+      ],
+      "noncoplanar_triangle_intersection": true,
+      "witness": {
+        "triangle_a": 352,
+        "triangle_b": 2205,
+        "intersection_segment_m": [
+          [
+            [
+              -0.041297577631912455,
+              -0.0014580210753944456,
+              0.05395674476681142
+            ]
+          ],
+          [
+            [
+              -0.04126184958706503,
+              -0.001387788996965138,
+              0.05415464166459662
+            ]
+          ]
+        ]
+      },
+      "qpos": [
+        0.006800916572056543,
+        0.008902965678510202,
+        0.08081032724961865,
+        0.9600238875242566,
+        -0.02856732846442395,
+        0.041796877484785756,
+        0.27530176926373134,
+        -0.2942459382173295,
+        -0.10530092005727545,
+        0.24826334040427556,
+        1.2188363328836054,
+        0.8775132809663936,
+        0.19740046830992464,
+        0.4941746743442645,
+        0.05051990078218306,
+        0.06759209745201591,
+        0.23065618566768253,
+        0.13912449078291617,
+        0.06198916551686256,
+        -1.1949935502949829,
+        -1.1720004746739199
+      ]
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "time_s": 1.16,
+      "hull_penetration_m": 0.0024979264231383314,
+      "raw_meshes": [
+        {
+          "id": 9,
+          "name": "",
+          "body": "trunk_base",
+          "mesh": "np_f970",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 20970
+        },
+        {
+          "id": 76,
+          "name": "",
+          "body": "leg_2",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 14776
+        }
+      ],
+      "noncoplanar_triangle_intersection": true,
+      "witness": {
+        "triangle_a": 0,
+        "triangle_b": 1447,
+        "intersection_segment_m": [
+          [
+            [
+              -0.0025591624132685724,
+              -0.02597779489533697,
+              0.048365986376369706
+            ]
+          ],
+          [
+            [
+              -0.002408349195592824,
+              -0.025911957875560807,
+              0.048135126890940495
+            ]
+          ]
+        ]
+      },
+      "qpos": [
+        0.010851653237827552,
+        0.013070351476613342,
+        0.0812928207084777,
+        0.9509893938421995,
+        -0.07623729755177672,
+        0.004802223112668095,
+        0.2996397602368948,
+        -0.20686392862184771,
+        0.05644167062464442,
+        0.4039474837666731,
+        1.1503768576363276,
+        0.6613930852357808,
+        0.2061310341469606,
+        0.4633323501590563,
+        0.006812625844399806,
+        0.08556223059878705,
+        0.2732171337411903,
+        0.20649233568012246,
+        -0.14385666587577484,
+        -1.1530819701458757,
+        -1.0607324723241456
+      ]
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-12",
+      "time_s": 17.56,
+      "hull_penetration_m": 0.009349898434651692,
+      "raw_meshes": [
+        {
+          "id": 9,
+          "name": "",
+          "body": "trunk_base",
+          "mesh": "np_f970",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 20970
+        },
+        {
+          "id": 26,
+          "name": "",
+          "body": "leg",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 14776
+        }
+      ],
+      "noncoplanar_triangle_intersection": true,
+      "witness": {
+        "triangle_a": 89,
+        "triangle_b": 3601,
+        "intersection_segment_m": [
+          [
+            [
+              1.0445634895817655,
+              -1.2624676978740108,
+              0.05000814204304497
+            ]
+          ],
+          [
+            [
+              1.0443016987843428,
+              -1.262526110572327,
+              0.049411505667692875
+            ]
+          ]
+        ]
+      },
+      "qpos": [
+        1.0511606904542632,
+        -1.2984971310975175,
+        0.07974991187286318,
+        0.9000340647558597,
+        0.01885420073991723,
+        0.09085645723624465,
+        -0.42582661444769304,
+        -0.44273146799490154,
+        -0.29463898517737747,
+        0.5052034488814211,
+        1.3395356930486382,
+        0.7286387993749552,
+        0.15021066662101254,
+        0.5051413664880876,
+        0.057618637391002404,
+        0.07768004389300724,
+        0.33654155388386137,
+        0.15270347638706316,
+        0.11231726350140996,
+        -1.2561401848974325,
+        -1.3096557000657003
+      ]
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-12",
+      "time_s": 17.84,
+      "hull_penetration_m": 0.004184382214836872,
+      "raw_meshes": [
+        {
+          "id": 9,
+          "name": "",
+          "body": "trunk_base",
+          "mesh": "np_f970",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 20970
+        },
+        {
+          "id": 76,
+          "name": "",
+          "body": "leg_2",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 14776
+        }
+      ],
+      "noncoplanar_triangle_intersection": true,
+      "witness": {
+        "triangle_a": 0,
+        "triangle_b": 6450,
+        "intersection_segment_m": [
+          [
+            [
+              1.0360747238204566,
+              -1.3007817615289659,
+              0.06331144580823551
+            ]
+          ],
+          [
+            [
+              1.0360642834922873,
+              -1.3007606072607876,
+              0.06334712767076706
+            ]
+          ]
+        ]
+      },
+      "qpos": [
+        1.0805638116180791,
+        -1.3204194619568983,
+        0.0804382173859906,
+        0.866171875873315,
+        0.03962471019344559,
+        0.250612878857528,
+        -0.4305454084518027,
+        -0.4007948138917956,
+        -0.20654838867622954,
+        0.5543037476383932,
+        1.1374347760755852,
+        0.6675821058618174,
+        0.11932018225826789,
+        0.6020092330908564,
+        0.09291815119700889,
+        -0.011847592933387389,
+        0.38317578935757723,
+        0.13901526947012924,
+        0.04141179410942943,
+        -1.1770932849826665,
+        -1.3127674410882046
+      ]
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "time_s": 16.740000000000002,
+      "hull_penetration_m": 0.009029099966994534,
+      "raw_meshes": [
+        {
+          "id": 9,
+          "name": "",
+          "body": "trunk_base",
+          "mesh": "np_f970",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 20970
+        },
+        {
+          "id": 26,
+          "name": "",
+          "body": "leg",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 14776
+        }
+      ],
+      "noncoplanar_triangle_intersection": true,
+      "witness": {
+        "triangle_a": 89,
+        "triangle_b": 7197,
+        "intersection_segment_m": [
+          [
+            [
+              -0.020446547423603034,
+              0.028136674176566914,
+              0.053252730873958314
+            ]
+          ],
+          [
+            [
+              -0.020457811698027135,
+              0.028148967110151246,
+              0.05325124746821789
+            ]
+          ]
+        ]
+      },
+      "qpos": [
+        0.013778584478601547,
+        0.036120291987544934,
+        0.07907060315356759,
+        -0.9308004522116821,
+        0.048590888590826865,
+        -0.07080284862524211,
+        -0.355297622191638,
+        -0.4456408455264547,
+        -0.23390313170325627,
+        0.4605320103323834,
+        1.3185527768581387,
+        0.756777340563705,
+        0.15744463980101472,
+        0.4880558822953112,
+        0.07332477173077874,
+        0.06482809346579,
+        0.3300184760514325,
+        0.148363426749853,
+        0.047327069621408924,
+        -1.278343900443991,
+        -1.27547972566508
+      ]
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "time_s": 1.16,
+      "hull_penetration_m": 0.004715685564428308,
+      "raw_meshes": [
+        {
+          "id": 9,
+          "name": "",
+          "body": "trunk_base",
+          "mesh": "np_f970",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 20970
+        },
+        {
+          "id": 76,
+          "name": "",
+          "body": "leg_2",
+          "mesh": "leg",
+          "contype": 1,
+          "conaffinity": 1,
+          "watertight": true,
+          "winding_consistent": true,
+          "raw_triangles": 14776
+        }
+      ],
+      "noncoplanar_triangle_intersection": true,
+      "witness": {
+        "triangle_a": 0,
+        "triangle_b": 6514,
+        "intersection_segment_m": [
+          [
+            [
+              -0.005133287748132989,
+              -0.025062363990588546,
+              0.045776184146442904
+            ]
+          ],
+          [
+            [
+              -0.005134531476110436,
+              -0.025056499992041396,
+              0.045837366660122884
+            ]
+          ]
+        ]
+      },
+      "qpos": [
+        0.008709871997788162,
+        0.00886952769734121,
+        0.08084163872437651,
+        0.9655791862305358,
+        -0.04893716327684231,
+        0.0031203746488893186,
+        0.25544520436062906,
+        -0.1353103201495639,
+        0.012225825039434663,
+        0.4037884736820261,
+        1.1637758298004166,
+        0.7114548425355913,
+        0.1993207369004982,
+        0.471056780961815,
+        -0.015030826417411876,
+        0.029465149149144665,
+        0.3354752075438946,
+        0.18121645492609056,
+        -0.06290664625594056,
+        -1.183372445390454,
+        -1.1529818041761288
+      ]
+    }
+  ],
+  "input_manifest_sha256": "81a42c494f16e5b0131eb3294d4ba721f328e86ffa8000f8ba55708f18c03178",
+  "contact_manifest_sha256": "3675cbc14e754d8bdd00093339ebe29adea32b29f2c347225052cc08d1a5c1a6",
+  "acceptance_eligible": false,
+  "boundary": "Raw compiled CAD triangle intersection witnesses at maximum recorded convex-hull penetration per case/pair, not all-frame geometry acceptance, contact forces, or calibrated hardware truth. A positive noncoplanar witness is not merely convex-hull filling a cavity."
+}

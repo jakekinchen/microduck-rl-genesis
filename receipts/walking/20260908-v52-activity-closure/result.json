@@ -1,0 +1,74 @@
+{
+  "schema": "microduck.activity-closure/v1",
+  "completed_at": "2026-09-08T21:38:07.808831+00:00",
+  "activity_complete": true,
+  "behavior_accepted": false,
+  "candidate_promoted": false,
+  "policy_activated": false,
+  "held_out_opened": false,
+  "new_rl_transitions": 0,
+  "supervised_updates": 2000,
+  "all_evaluations_complete": true,
+  "downhill_sessions_survived": 2,
+  "downhill_sessions_passed": 0,
+  "flat_passed": 38,
+  "flat_total": 63,
+  "endurance_passed": 0,
+  "endurance_total": 2,
+  "surface_passed": 3,
+  "surface_total": 14,
+  "verified_controls": 73242,
+  "exact_prebraking_prefix_controls": 36952,
+  "workspace_tests_passed": 140,
+  "focused_tests_passed": 4,
+  "source_receipts": {
+    "receipts/walking/20260908-v51-recovery-capture": {
+      "manifest_sha256": "5c5b0b9f3ed3172eb61e3480634df5861dbeccea1ac4ad7f1245ed3d97a9f134",
+      "verified_files": 1439
+    },
+    "receipts/walking/20260908-v51-recovery-comparisons": {
+      "manifest_sha256": "cc7db5b0243e0b770f98cc7243ad383fa64484bf95fee2efc0d5cbc1f8e8b5a2",
+      "verified_files": 297
+    },
+    "receipts/walking/20260908-v51-recovery-search": {
+      "manifest_sha256": "a4928c30fc2579071662a295777f6da730a4b52a5e7f71da64cfc38fde6f7440",
+      "verified_files": 248
+    },
+    "receipts/walking/20260908-v52-braking-flat": {
+      "manifest_sha256": "7c7a395ef91c01f61d3298cbe0818a09567be930b38591b90342b4f10e7ed389",
+      "verified_files": 480
+    },
+    "receipts/walking/20260908-v52-braking-repeated": {
+      "manifest_sha256": "699940445fd264af1a447d0c9f60dde4609f3231f14004c2af1ab605173c8a69",
+      "verified_files": 501
+    },
+    "receipts/walking/20260908-v52-braking-endurance": {
+      "manifest_sha256": "65020324964c98c9e401f7a4041240594f5f356f1a0680dd37c39fc73c9ba4c4",
+      "verified_files": 503
+    },
+    "receipts/walking/20260908-v52-braking-surfaces": {
+      "manifest_sha256": "7c7b8f53c2114d36b244ba5233704edb4b75c191a0c996622d2680557d0771f7",
+      "verified_files": 532
+    },
+    "logs/braking-distill-20260908-v52": {
+      "manifest_sha256": "db4d69b4d42f1ddab2de372afd384ee1284596630905c964be8425f15779de4e",
+      "verified_files": 227
+    },
+    "experiments/walking/braking-replay-v52": {
+      "manifest_sha256": "676412da04df288b7ea9ed6e4d0d34b26dd9a0d0248583aa9c17e5c5fe340454",
+      "verified_files": 2
+    },
+    "outputs/walking-braking-v52": {
+      "manifest_sha256": "4745a13cb4586516f2aa7673ce5bb16d3951e51a7990312f7e3f740af6a03871",
+      "verified_files": 7
+    }
+  },
+  "retained_controller": "Original V21 walking / V15 standing with V30 command controller",
+  "next_step": "Freeze retention-constrained braking: successful-stop zero-label fitting and verified corrections on learner-visited diverging states; preserve downhill gains and all existing gates.",
+  "free_bytes": 5688004608,
+  "known_compute_processes": [],
+  "compute_boundary": "Instantaneous advisory inventory of known Python training and simulation-test entrypoints. The legacy no_known_training_process status means no recognized compute candidate; absence is not proof of idleness; unrecognized launchers and remote jobs are outside coverage. No lock, admission, process control or training status mutation.",
+  "paid_compute_started": false,
+  "hardware_operated": false,
+  "boundary": "Completed negative local simulation experiment. No calibrated physical accuracy, carpet transfer, or general walking acceptance."
+}

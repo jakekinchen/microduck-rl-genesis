@@ -15,6 +15,25 @@ upstream repository trains its policies with **mjlab (MuJoCo Warp)**, which
 which does run on ROCm, **while preserving the upstream sim-to-real recipe**,
 because the recipe is what has value, not the code.
 
+**September 16 status:** the project is preparing a process and methodology
+review; new experiments are paused for that review. Start with the
+[process-review packet](docs/workspace/PROCESS_REVIEW_20260916.md),
+[current status](GOAL.md), and [ordered queue](TRAINING_ACTUALIZATION.md).
+Retained V21 walking/V15 standing actors with V30 heading have useful exposed
+flat-floor results. V54/V55 still pass only 5/14 exposed surface sessions.
+V62 passes static collision-geometry checks; V63–V65 fail full-robot diagnostic
+gates. V66 passes a guided ankle-impact numerical benchmark, which does not
+admit a full-robot model or establish carpet walking or physical transfer.
+
+The historical `train.py` and demo use a reduced collision model that allowed
+battery/leg interference. Even the version named `complete-contact-v11` has
+limited collision coverage; its name is not a full-CAD fidelity claim.
+[Historical walking results](experiments/walking/RESULTS.md) retain their
+original scores and dates. Code and readable results are in Git; the
+[evidence archive and restore instructions](docs/workspace/publication-20260916/README.md)
+cover large traces, training logs, checkpoints, geometry and videos, including
+data previously accessible only through external-drive links.
+
 ---
 
 ## Quick start
@@ -25,6 +44,7 @@ For the local experiment workspace:
 ./scripts/duck status                 # current queue and development evidence
 ./scripts/duck prepare                # source-checked active case and next-experiment brief
 ./scripts/duck doctor                 # runtime, frozen contract and BAM checks
+./scripts/duck verify                 # fast workspace tests, shared with CI
 ./scripts/duck studio                 # read-only video and metric comparison
 ```
 
@@ -33,6 +53,9 @@ Open Duck Lab at `http://127.0.0.1:8766`. See the
 the [experiment retrospective](docs/workspace/RETROSPECTIVE.md) for lessons from
 the prior MicroDuck and sim2claw work. New behavior specs are drafts; the viewer
 does not launch training or control the robot.
+
+The [verification guide](docs/workspace/VERIFICATION.md) explains tooling checks,
+failure/skip results, and use from fresh checkouts or worktrees.
 
 Use [offline diagnostics](docs/experiment-ops/README.md) (`./scripts/duck-ops`)
 for advisory process inventory and first-divergence trace comparisons. The

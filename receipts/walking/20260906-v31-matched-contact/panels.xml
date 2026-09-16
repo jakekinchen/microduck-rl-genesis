@@ -1,0 +1,8 @@
+<mujoco model="public-contact-panels-v25">
+  <worldbody>
+    <geom name="surface_0" type="box" pos="0 0 -.05" size="8 8 .05" contype="1" conaffinity="1" friction="1.0 .005 .0001" solref="0.02 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="surface_1" type="box" pos="0 16 -.05" size="8 8 .05" contype="1" conaffinity="1" friction="0.51 .005 .0001" solref="0.05 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="surface_2" type="box" pos="0 32 -.05" size="8 8 .05" contype="1" conaffinity="1" friction="1.0 .005 .0001" solref="0.08 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+    <geom name="surface_3" type="box" pos="0 48 -.05" size="8 8 .05" contype="1" conaffinity="1" friction="1.8 .005 .0001" solref="0.12000000000000001 1.0" solimp="0.9 0.95 0.001 0.5 2.0" />
+  </worldbody>
+</mujoco>

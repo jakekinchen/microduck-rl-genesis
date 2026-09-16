@@ -1,0 +1,79 @@
+{
+  "schema": "microduck.runtime-rehearsal-closure.v1",
+  "source_revisions": {
+    "runtime": "fead66bb21195971fcbb2858a19b1e290a9f2031",
+    "rl": "cb70b792312d559a4da09064d92009079671815f"
+  },
+  "sources_verified": {
+    "runtime": {
+      "git_blob_matches": 355,
+      "skipped_symlinks": [
+        "CLAUDE.md",
+        "spaces/policy-shop/control.py",
+        "spaces/policy-shop/rendezvous.py",
+        "spaces/policy-shop/wire.py",
+        "spaces/vision-demo/control.py",
+        "spaces/vision-demo/rendezvous.py",
+        "spaces/vision-demo/wire.py"
+      ],
+      "errors": []
+    },
+    "rl": {
+      "git_blob_matches": 239,
+      "skipped_symlinks": [],
+      "errors": []
+    }
+  },
+  "build": {
+    "rust": "rustc 1.93.1 (01f6ddf75 2026-02-11)",
+    "binary_sha256": {
+      "robotd": "5c5ec4a441958dea1fe6dde05146f2f4c63388e22b7b2ca5bdcd71abeb085646",
+      "robotctl": "e34469a19cbda05c82dc2e0b01725c0a1b3c6e97f15507e01fb2f8a3706e48d1",
+      "tofd": "bb47aecdd8210eef9c27f4e75e1de7846a0a08959c64124d147c42ec8799f6ee",
+      "policy-rehearsal": "3c762fe4e87349e8113f78d4eadeab233fa0560aa1fdba652a48ca1fc6c64e21"
+    }
+  },
+  "isolated_directory_bytes": 1530447950,
+  "hardware_authority": false,
+  "physics_conformance": false,
+  "all_owned_processes_reaped": true,
+  "listener_gone": true,
+  "accepted_rpc_responses": 12,
+  "run_source_snapshot_preserved": true,
+  "current_runner_hardening_not_physics_retested": [
+    "reject denied robot.enable or robot.move acknowledgement",
+    "continue owned-process cleanup if socket close raises"
+  ],
+  "artifact_sha256": {
+    ".workspace/runtime-rehearsal-v1/offline/result.json": "3d8fbdd27abb5fb3200fcfa891682330f535c7c42052d91d13bea9cd9abe90c2",
+    ".workspace/runtime-rehearsal-v1/offline/standing-rust.json": "41323e396e71744f086d04684889e18cdfbec88383df8fd691da03416c98f987",
+    ".workspace/runtime-rehearsal-v1/offline/standing-rust.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".workspace/runtime-rehearsal-v1/offline/standing-trace.json": "936ac2f43ee259a3b3fd26d9f12daeadc92ceb059a38fc56931763d37113ce48",
+    ".workspace/runtime-rehearsal-v1/offline/walking-rust.json": "f0b9bea3019a61f057d0f7835516f4645f8abda9d5e050b9490fa40c67796909",
+    ".workspace/runtime-rehearsal-v1/offline/walking-rust.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".workspace/runtime-rehearsal-v1/offline/walking-trace.json": "ce6d10f8f1b8caaaeb9f798289c37d416be2be54615594e0c192d47f04afa9b9",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/PROTOCOL.md": "49564334553be1709b1c12983f09ed8bb9edc9993dafa9dd111c874639bd3d92",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/acknowledgements.json": "a655621d60a5041b4bc54ea43d86351edf627af6427fbb4883fc21808182293a",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/body.log": "04dd8f260efb237fd0c13efd5c13dee919d3f1c18fd8a0dce2b164f9a316fc40",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/health.json": "d63f5915a238981d44c20496f4723d3eb46626ccf3f325703e1071d1a217b283",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/result.json": "6377f40fafd7c0bd36dd0d6acc97231f767e2aa51abfaf42364d2e75be987f69",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/robotd.log": "1a477ff4a35bdb3ad8d3fea9b89679fa0ebf2eb49859d0936629c5eb497afacf",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/run_upstream_diagnostic.py": "bbd4d7a88220135551e87eeb31e8fc90ef88b1621e0366825dc1db04fa7fd37e",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/samples.json": "766ab58ee7dd54c3864c918d9f7336d861cf4d865b39ae7e8449ba4d559c7ec4",
+    ".workspace/runtime-rehearsal-v1/upstream-diagnostic/tofd.log": "c80dd83e57beb46b65a9fd5bb02cbdc872375d0a4e343fc392356b791d504bae",
+    ".workspace/runtime-rehearsal-v1/source-provenance.json": "3d16a4ff8420f78ec099a9db29206d4c55182f3d34d3d685aaad65672d8a4df5",
+    ".workspace/runtime-rehearsal-v1/daemon-build.log": "072ebd6a76d64e0c4c64653b9999fdf22759f8e1e6363f117a68fe187e9183fd",
+    ".workspace/runtime-rehearsal-v1/adapter-verification.json": "303c11171f5e34319d22939e1faf1fcbc6d1e3bd1d329bc24dc7103f63a41d14",
+    ".workspace/runtime-rehearsal-v1/s/params.toml": "c3421fc6a35bf22f46aca8383ae5a103f848fdaa4948712f7d9e5990b9cd9681",
+    "experiments/runtime-rehearsal-v1/ADAPTER_CONTRACT.md": "2e6d157a167ee62b044874d67d6516480cac3ead26d10ced9eef4c450e7ad074",
+    "experiments/runtime-rehearsal-v1/PROTOCOL.md": "49564334553be1709b1c12983f09ed8bb9edc9993dafa9dd111c874639bd3d92",
+    "experiments/runtime-rehearsal-v1/command_adapter.py": "a0bdf19066083e092bfbad03261528f7eaae5a825ae9975c17725e172f917857",
+    "experiments/runtime-rehearsal-v1/offline_rehearsal.py": "77e3fd5890fde812f4ba59998290226bf3ba468b7a7bede686edf401fd0b64d8",
+    "experiments/runtime-rehearsal-v1/run_upstream_diagnostic.py": "963232893059211d87d810778c741995015c0d52fa7dedd9e69c7a99395410ab",
+    "experiments/runtime-rehearsal-v1/verify_adapter.py": "4581f7f28aa2170187de395b9c394dd209db4c588f755ac764fcaa7702ba6143",
+    "experiments/runtime-rehearsal-v1/RESULTS.md": "880a717b4de498eaf5c86e1193624362a10dcc4edbb24a76cc0dc6ae20615ef5",
+    "experiments/runtime-rehearsal-v1/adapter-result.json": "303c11171f5e34319d22939e1faf1fcbc6d1e3bd1d329bc24dc7103f63a41d14",
+    "experiments/runtime-rehearsal-v1/offline-result.json": "3d8fbdd27abb5fb3200fcfa891682330f535c7c42052d91d13bea9cd9abe90c2",
+    "experiments/runtime-rehearsal-v1/upstream-diagnostic-result.json": "6377f40fafd7c0bd36dd0d6acc97231f767e2aa51abfaf42364d2e75be987f69"
+  }
+}

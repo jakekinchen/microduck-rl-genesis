@@ -1,0 +1,19 @@
+{
+  "schema": "microduck.laser-gait-correction/v3",
+  "status": "visible-development intervention; no policy accepted",
+  "diagnosis": ["body +X pursuit is opposite HOME face -X", "endpoint-only acceptance omitted gait", "hip-yaw mechanical-stop parking and low-clearance shuffling"],
+  "intervention": "Versioned face-first command and gait reward/termination; unchanged model, BAM, observation/action ABI and export",
+  "no_action_assistance": true,
+  "warm_start": "early first-party walking baseline; reject stop-parking laser lineage",
+  "budget": {"smoke_envs": 64, "smoke_iterations": 5, "training_envs": 1024, "training_iterations": 600, "steps_per_env": 24, "seed": 26090503},
+  "visible_cases": [
+    {"id": "76041-face-circle", "program": "circle", "rotation_rad": 3.141592653589793, "seconds": 16},
+    {"id": "76042-face-retarget", "program": "retarget", "rotation_rad": 3.141592653589793, "seconds": 48},
+    {"id": "76043-face-eight", "program": "figure-eight", "rotation_rad": 3.141592653589793, "seconds": 16},
+    {"id": "76044-turn-around", "program": "circle", "rotation_rad": 0, "seconds": 16}
+  ],
+  "fresh_reserved_seeds_do_not_tune": [76101,76102,76103,76104,76105,76106],
+  "selection": "Final checkpoint only; all gait rejection gates AND original per-program target/stop gates required. Reward cannot select or promote a candidate. Do not open reserved cases unless all visible gates pass.",
+  "negative_controls": ["no-op", "backward traversal", "loaded-foot skate", "one-foot hopping", "joint-stop parking", "legitimate BAM target overshoot without actual stop"],
+  "limits": "Flat ground and privileged target. No calibrated contact/hardware/vision claim. Rejection thresholds are diagnostic, not proof of real transfer."
+}

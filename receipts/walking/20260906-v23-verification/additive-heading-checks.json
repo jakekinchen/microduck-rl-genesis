@@ -1,0 +1,12 @@
+{
+  "schema": "microduck.v23-additive-heading-check/v1",
+  "source_sha256": "71168654814bf3f3cea6cd3eee5a5e57957dd89758be9a6c02170ea5d226078c",
+  "synthetic_checks": [
+    "zero_drift_passes",
+    "cross_window_accumulation_rejected",
+    "missing_sample_rejected"
+  ],
+  "tests_passed": 3,
+  "physical_evidence": false,
+  "reason": "Frozen V23 scoring resets heading origin per window; add whole-session diagnostic without changing any original score."
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "microduck.walking-observer-invariance/v1",
+  "frames": 18749,
+  "cases": 21,
+  "before": "receipts/walking/20260905-v13-current-sensor",
+  "observed": "receipts/walking/20260906-v14-load-baseline",
+  "input_manifest_sha256": [
+    "eaeca95c69ff05ce9b2df4d5dc95be7397815971d5f5b50a5bb2c810c4297af2",
+    "97a36e30f76ed4c6f10023a47c77757db80b11e03c15f07b831782d8dc8224e4"
+  ],
+  "physical_qpos_qvel_bytes_identical": true,
+  "actor_observation_action_command_bytes_identical": true,
+  "all_original_action_files_identical": true,
+  "old_passed_cases": 20,
+  "additive_passed_cases": 0,
+  "source_sha256": "4b5098356b092ccc71a67d00b6d9ffae23aa5414e168e4e0f64a0b09892808a3",
+  "physical_transfer_validated": false,
+  "boundary": "The full recorded baseline is unchanged by applied-load observation. New rejection is additional evidence, not altered dynamics or a physical force calibration."
+}

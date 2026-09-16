@@ -1,0 +1,23 @@
+{
+  "schema": "microduck.paired-floor-replay/v1",
+  "steps": 100,
+  "source_json_sha256": "35c863e4a281f9423cd639fb83b5873e522355f0f4fa18267a355e3b031e16c0",
+  "paired_action_bytes_equal": true,
+  "paired_state_bytes_equal": true,
+  "maximum_absolute_state_difference": 0.0,
+  "old_floor_masks": [
+    65535,
+    65535
+  ],
+  "new_floor_masks": [
+    1,
+    1
+  ],
+  "physics_condition": {
+    "voltage_v": 7.35,
+    "drop_ohm": 0.0,
+    "motor_delay_physics_ticks": 4
+  },
+  "physical_transfer_validated": false,
+  "boundary": "Two-second fixed-input diagnostic, not gait acceptance. Input tensors reconstructed from retained JSON, then captured and kept byte-identical between these two simulations; not a claim about an absent original tensor file."
+}

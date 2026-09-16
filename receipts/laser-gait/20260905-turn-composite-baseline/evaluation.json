@@ -1,0 +1,678 @@
+{
+  "schema": "microduck.laser-gait-evaluation/v4",
+  "proof_class": "visible_development",
+  "policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed",
+  "spec_sha256": "82677ba2c077089f389d212001800c0d2c8fb9b8790cd7a9c9c7599e6e465bbd",
+  "evaluator_freeze_sha256": "477e4f0563d937098ea7c56448771d30a786fd7dfa1bda600bc1cab3fb82b462",
+  "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+  "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+  "camera_revision": {
+    "revision": "microduck.head-camera-site-aligned.v2",
+    "old_local_quaternion_wxyz": [
+      0.0,
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "new_local_quaternion_wxyz": [
+      0.7071067811865475,
+      0.0,
+      0.0,
+      -0.7071067811865475
+    ],
+    "physics_changed": false,
+    "physical_calibration": false
+  },
+  "target_only_passed_cases": 4,
+  "gait_rejection_passed_cases": 0,
+  "passed_cases": 0,
+  "case_reports": [
+    {
+      "case_id": "76341-front-circle",
+      "target": {
+        "passed": true,
+        "fell": false,
+        "duration_s": 16.0,
+        "tracking_fraction": 1.0,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 2.2800000000000002
+        },
+        "mean_visible_distance_m": 0.23116952418803285,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 16.0,
+        "active_s": 15.02,
+        "translation_s": 13.82,
+        "path_length_m": 1.3513778377449563,
+        "qualified_swings_left_right": [
+          1,
+          0
+        ],
+        "swing_events": [
+          {
+            "foot": 0,
+            "land_s": 2.44,
+            "air_s": 0.1,
+            "clearance_m": 0.005026993630833433
+          }
+        ],
+        "alternating_landing_fraction": null,
+        "both_feet_loaded_active_fraction": 0.05326231691078562,
+        "loaded_slip_over_3cm_s_fraction": 0.22756005056890014,
+        "loaded_slip_p95_m_s": 0.10046632990821643,
+        "backward_translation_fraction": 0.0,
+        "bilateral_step_coverage_during_translation": 0.0,
+        "target_outside_joint_limits_fraction": 1.0,
+        "joint_hard_stop_fraction": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 4.088194759907911,
+        "max_actual_limit_violation_rad": 0.08908260073739754,
+        "max_abs_servo_velocity_rad_s": 11.753884031342578,
+        "max_abs_actuator_torque_nm": 0.6405236195572269,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 2.5295211934098227,
+        "fell": false,
+        "rejection_reasons": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping",
+          "persistent_loaded_foot_slip",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping",
+        "persistent_loaded_foot_slip",
+        "persistent_joint_hard_stop",
+        "joint_limit_excursion"
+      ],
+      "physical_transfer_validated": false
+    },
+    {
+      "case_id": "76342-front-retarget",
+      "target": {
+        "passed": true,
+        "fell": false,
+        "duration_s": 48.0,
+        "tracking_fraction": 0.6070209653827401,
+        "waypoints_acquired": 6,
+        "first_acquisition_times_s": {
+          "0": 1.98,
+          "1": 9.1,
+          "2": 17.3,
+          "3": 25.96,
+          "4": 33.36,
+          "5": 43.5
+        },
+        "mean_visible_distance_m": 0.3454633643660435,
+        "max_lost_target_speed_m_s": 0.007041570394275195,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 48.0,
+        "active_s": 45.02,
+        "translation_s": 24.34,
+        "path_length_m": 3.7087474216756493,
+        "qualified_swings_left_right": [
+          22,
+          20
+        ],
+        "swing_events": [
+          {
+            "foot": 0,
+            "land_s": 1.3,
+            "air_s": 0.1,
+            "clearance_m": 0.005536592632950938
+          },
+          {
+            "foot": 0,
+            "land_s": 1.9000000000000001,
+            "air_s": 0.1,
+            "clearance_m": 0.005164466296445305
+          },
+          {
+            "foot": 0,
+            "land_s": 2.1,
+            "air_s": 0.1,
+            "clearance_m": 0.005047835696484541
+          },
+          {
+            "foot": 1,
+            "land_s": 7.5,
+            "air_s": 0.12,
+            "clearance_m": 0.005673019001557573
+          },
+          {
+            "foot": 1,
+            "land_s": 7.68,
+            "air_s": 0.1,
+            "clearance_m": 0.007195685063120728
+          },
+          {
+            "foot": 1,
+            "land_s": 7.88,
+            "air_s": 0.1,
+            "clearance_m": 0.006477055873423596
+          },
+          {
+            "foot": 0,
+            "land_s": 8.36,
+            "air_s": 0.1,
+            "clearance_m": 0.0052308461767530765
+          },
+          {
+            "foot": 0,
+            "land_s": 8.56,
+            "air_s": 0.1,
+            "clearance_m": 0.005338347480631642
+          },
+          {
+            "foot": 0,
+            "land_s": 8.76,
+            "air_s": 0.1,
+            "clearance_m": 0.0053383150206132175
+          },
+          {
+            "foot": 0,
+            "land_s": 8.96,
+            "air_s": 0.1,
+            "clearance_m": 0.00542378260598116
+          },
+          {
+            "foot": 1,
+            "land_s": 14.72,
+            "air_s": 0.08,
+            "clearance_m": 0.005292776124422945
+          },
+          {
+            "foot": 1,
+            "land_s": 14.88,
+            "air_s": 0.1,
+            "clearance_m": 0.006174127498999277
+          },
+          {
+            "foot": 1,
+            "land_s": 15.06,
+            "air_s": 0.1,
+            "clearance_m": 0.00786467921748779
+          },
+          {
+            "foot": 1,
+            "land_s": 15.24,
+            "air_s": 0.1,
+            "clearance_m": 0.0065598907748665326
+          },
+          {
+            "foot": 0,
+            "land_s": 15.52,
+            "air_s": 0.1,
+            "clearance_m": 0.005038220330751891
+          },
+          {
+            "foot": 0,
+            "land_s": 15.700000000000001,
+            "air_s": 0.1,
+            "clearance_m": 0.005772657151041367
+          },
+          {
+            "foot": 0,
+            "land_s": 15.9,
+            "air_s": 0.1,
+            "clearance_m": 0.0053436582479532806
+          },
+          {
+            "foot": 1,
+            "land_s": 16.2,
+            "air_s": 0.1,
+            "clearance_m": 0.005152830750486961
+          },
+          {
+            "foot": 0,
+            "land_s": 16.7,
+            "air_s": 0.1,
+            "clearance_m": 0.005007285546372487
+          },
+          {
+            "foot": 0,
+            "land_s": 17.5,
+            "air_s": 0.1,
+            "clearance_m": 0.005094740207327269
+          },
+          {
+            "foot": 1,
+            "land_s": 22.580000000000002,
+            "air_s": 0.1,
+            "clearance_m": 0.005961635799608829
+          },
+          {
+            "foot": 1,
+            "land_s": 22.78,
+            "air_s": 0.12,
+            "clearance_m": 0.007149629604391212
+          },
+          {
+            "foot": 1,
+            "land_s": 22.96,
+            "air_s": 0.1,
+            "clearance_m": 0.005841866692792725
+          },
+          {
+            "foot": 0,
+            "land_s": 23.42,
+            "air_s": 0.1,
+            "clearance_m": 0.00595503540819739
+          },
+          {
+            "foot": 0,
+            "land_s": 23.62,
+            "air_s": 0.1,
+            "clearance_m": 0.005561446533571978
+          },
+          {
+            "foot": 0,
+            "land_s": 24.38,
+            "air_s": 0.12,
+            "clearance_m": 0.005767630093769922
+          },
+          {
+            "foot": 0,
+            "land_s": 25.36,
+            "air_s": 0.1,
+            "clearance_m": 0.00520960975447376
+          },
+          {
+            "foot": 0,
+            "land_s": 25.76,
+            "air_s": 0.1,
+            "clearance_m": 0.005148526184601215
+          },
+          {
+            "foot": 0,
+            "land_s": 25.96,
+            "air_s": 0.1,
+            "clearance_m": 0.0055815277144403
+          },
+          {
+            "foot": 1,
+            "land_s": 30.68,
+            "air_s": 0.1,
+            "clearance_m": 0.005136408567185832
+          },
+          {
+            "foot": 1,
+            "land_s": 30.86,
+            "air_s": 0.1,
+            "clearance_m": 0.006634291578205604
+          },
+          {
+            "foot": 1,
+            "land_s": 31.04,
+            "air_s": 0.1,
+            "clearance_m": 0.006881571925843379
+          },
+          {
+            "foot": 1,
+            "land_s": 31.220000000000002,
+            "air_s": 0.1,
+            "clearance_m": 0.0054336916453463485
+          },
+          {
+            "foot": 0,
+            "land_s": 32.06,
+            "air_s": 0.1,
+            "clearance_m": 0.005300539263081067
+          },
+          {
+            "foot": 0,
+            "land_s": 32.660000000000004,
+            "air_s": 0.1,
+            "clearance_m": 0.0052241068070394935
+          },
+          {
+            "foot": 0,
+            "land_s": 33.06,
+            "air_s": 0.1,
+            "clearance_m": 0.005052703304079965
+          },
+          {
+            "foot": 1,
+            "land_s": 40.62,
+            "air_s": 0.08,
+            "clearance_m": 0.005638591229744213
+          },
+          {
+            "foot": 1,
+            "land_s": 40.76,
+            "air_s": 0.08,
+            "clearance_m": 0.007376639774198064
+          },
+          {
+            "foot": 1,
+            "land_s": 40.92,
+            "air_s": 0.1,
+            "clearance_m": 0.007599335182264804
+          },
+          {
+            "foot": 1,
+            "land_s": 41.08,
+            "air_s": 0.1,
+            "clearance_m": 0.0074877044607461266
+          },
+          {
+            "foot": 1,
+            "land_s": 41.26,
+            "air_s": 0.1,
+            "clearance_m": 0.006462541398035076
+          },
+          {
+            "foot": 0,
+            "land_s": 43.44,
+            "air_s": 0.1,
+            "clearance_m": 0.005052536164553256
+          }
+        ],
+        "alternating_landing_fraction": 0.2926829268292683,
+        "both_feet_loaded_active_fraction": 0.46956908040870726,
+        "loaded_slip_over_3cm_s_fraction": 0.06438935912938332,
+        "loaded_slip_p95_m_s": 0.04719098100903717,
+        "backward_translation_fraction": 0.030402629416598194,
+        "bilateral_step_coverage_during_translation": 0.2037797863599014,
+        "target_outside_joint_limits_fraction": 1.0,
+        "joint_hard_stop_fraction": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00552956188855806,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 4.250851543965529,
+        "max_actual_limit_violation_rad": 0.08900909748874858,
+        "max_abs_servo_velocity_rad_s": 11.810411079544592,
+        "max_abs_actuator_torque_nm": 0.6405236195572269,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 3.6115012979261905,
+        "fell": false,
+        "rejection_reasons": [
+          "unsustained_bilateral_stepping",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "unsustained_bilateral_stepping",
+        "persistent_joint_hard_stop",
+        "joint_limit_excursion"
+      ],
+      "physical_transfer_validated": false
+    },
+    {
+      "case_id": "76343-front-eight",
+      "target": {
+        "passed": true,
+        "fell": false,
+        "duration_s": 16.0,
+        "tracking_fraction": 0.7695099818511797,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 2.48
+        },
+        "mean_visible_distance_m": 0.2280240212099896,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 16.0,
+        "active_s": 11.66,
+        "translation_s": 8.5,
+        "path_length_m": 1.1603529349547888,
+        "qualified_swings_left_right": [
+          3,
+          3
+        ],
+        "swing_events": [
+          {
+            "foot": 1,
+            "land_s": 10.48,
+            "air_s": 0.08,
+            "clearance_m": 0.006048113575761667
+          },
+          {
+            "foot": 1,
+            "land_s": 10.66,
+            "air_s": 0.1,
+            "clearance_m": 0.0056074566444344436
+          },
+          {
+            "foot": 1,
+            "land_s": 10.86,
+            "air_s": 0.12,
+            "clearance_m": 0.005983920191188074
+          },
+          {
+            "foot": 0,
+            "land_s": 11.52,
+            "air_s": 0.1,
+            "clearance_m": 0.005446473550766415
+          },
+          {
+            "foot": 0,
+            "land_s": 11.72,
+            "air_s": 0.1,
+            "clearance_m": 0.005208974365467387
+          },
+          {
+            "foot": 0,
+            "land_s": 12.32,
+            "air_s": 0.1,
+            "clearance_m": 0.005348933766939876
+          }
+        ],
+        "alternating_landing_fraction": 0.2,
+        "both_feet_loaded_active_fraction": 0.2607204116638079,
+        "loaded_slip_over_3cm_s_fraction": 0.11564625850340136,
+        "loaded_slip_p95_m_s": 0.08588908685161,
+        "backward_translation_fraction": 0.004705882352941176,
+        "bilateral_step_coverage_during_translation": 0.1011764705882353,
+        "target_outside_joint_limits_fraction": 1.0,
+        "joint_hard_stop_fraction": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.037283621837549935,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 4.085796745839308,
+        "max_actual_limit_violation_rad": 0.08910156919178985,
+        "max_abs_servo_velocity_rad_s": 11.721056493613215,
+        "max_abs_actuator_torque_nm": 0.6405236195572269,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 2.769719783620846,
+        "fell": false,
+        "rejection_reasons": [
+          "unsustained_bilateral_stepping",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "unsustained_bilateral_stepping",
+        "persistent_joint_hard_stop",
+        "joint_limit_excursion"
+      ],
+      "physical_transfer_validated": false
+    },
+    {
+      "case_id": "76344-turn-around",
+      "target": {
+        "passed": true,
+        "fell": false,
+        "duration_s": 16.0,
+        "tracking_fraction": 1.0,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 3.56
+        },
+        "mean_visible_distance_m": 0.221283346346578,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 16.0,
+        "active_s": 15.02,
+        "translation_s": 12.72,
+        "path_length_m": 1.1654800909490706,
+        "qualified_swings_left_right": [
+          6,
+          1
+        ],
+        "swing_events": [
+          {
+            "foot": 0,
+            "land_s": 1.62,
+            "air_s": 0.08,
+            "clearance_m": 0.005430734540251879
+          },
+          {
+            "foot": 0,
+            "land_s": 1.76,
+            "air_s": 0.08,
+            "clearance_m": 0.005327290574386065
+          },
+          {
+            "foot": 0,
+            "land_s": 1.94,
+            "air_s": 0.1,
+            "clearance_m": 0.005716302487133637
+          },
+          {
+            "foot": 0,
+            "land_s": 2.12,
+            "air_s": 0.1,
+            "clearance_m": 0.006170334884023883
+          },
+          {
+            "foot": 0,
+            "land_s": 2.3000000000000003,
+            "air_s": 0.1,
+            "clearance_m": 0.00633422974441363
+          },
+          {
+            "foot": 0,
+            "land_s": 2.5,
+            "air_s": 0.1,
+            "clearance_m": 0.0055625076251567315
+          },
+          {
+            "foot": 1,
+            "land_s": 2.8000000000000003,
+            "air_s": 0.1,
+            "clearance_m": 0.005451807334284605
+          }
+        ],
+        "alternating_landing_fraction": 0.16666666666666666,
+        "both_feet_loaded_active_fraction": 0.16644474034620507,
+        "loaded_slip_over_3cm_s_fraction": 0.158675799086758,
+        "loaded_slip_p95_m_s": 0.0961975428697231,
+        "backward_translation_fraction": 0.0,
+        "bilateral_step_coverage_during_translation": 0.0959119496855346,
+        "target_outside_joint_limits_fraction": 1.0,
+        "joint_hard_stop_fraction": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 4.455016048970411,
+        "max_actual_limit_violation_rad": 0.05801957056411616,
+        "max_abs_servo_velocity_rad_s": 12.279016979987045,
+        "max_abs_actuator_torque_nm": 0.640523619557227,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 4.497525571362859,
+        "fell": false,
+        "rejection_reasons": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping",
+        "persistent_joint_hard_stop",
+        "joint_limit_excursion"
+      ],
+      "physical_transfer_validated": false
+    }
+  ],
+  "export_parity": {
+    "random_observations": 65,
+    "max_abs_action_error_rad": 7.62939453125e-06
+  },
+  "max_real_observation_action_error_rad": 3.337860107421875e-06,
+  "reserved_opened": false,
+  "physical_transfer_validated": false,
+  "boundary": "Composite development rejection gate. No candidate promotion or hardware operation; flat oracle task, uncalibrated gait envelope."
+}

@@ -1,0 +1,1294 @@
+{
+  "verification_passed": true,
+  "cases_verified": 28,
+  "samples_verified": 33616,
+  "checks": {
+    "v11-replay-base-r1": {
+      "verified": true,
+      "samples": 3600,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 9134
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration"
+      ]
+    },
+    "v11-passive-base-r1": {
+      "verified": true,
+      "samples": 1000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 12206
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v62-replay-base-r1": {
+      "verified": true,
+      "samples": 501,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": 1.4749999999999905,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1492
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-passive-base-r1": {
+      "verified": true,
+      "samples": 108,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 3709
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v11-replay-base-r2": {
+      "verified": true,
+      "samples": 3600,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 9134
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration"
+      ]
+    },
+    "v11-passive-base-r2": {
+      "verified": true,
+      "samples": 1000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 12206
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v62-replay-base-r2": {
+      "verified": true,
+      "samples": 501,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": 1.4749999999999905,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1492
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-passive-base-r2": {
+      "verified": true,
+      "samples": 108,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 3709
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v62-retry-replay-match_v11_export-retry-r1": {
+      "verified": true,
+      "samples": 501,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": 1.4749999999999905,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1485
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-retry-replay-match_v11_export-retry-r2": {
+      "verified": true,
+      "samples": 501,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": 1.4749999999999905,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1485
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-retry-replay-mask_shell_floor-retry-r1": {
+      "verified": true,
+      "samples": 497,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1412
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ]
+    },
+    "v62-retry-replay-mask_shell_floor-retry-r2": {
+      "verified": true,
+      "samples": 497,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1412
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ]
+    },
+    "v11-replay-dt2500us-r1": {
+      "verified": true,
+      "samples": 682,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 2338
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ]
+    },
+    "v11-replay-dt2500us-r2": {
+      "verified": true,
+      "samples": 682,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 2338
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ]
+    },
+    "v11-passive-dt2500us-r1": {
+      "verified": true,
+      "samples": 2000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 22582
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v11-passive-dt2500us-r2": {
+      "verified": true,
+      "samples": 2000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 22582
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v62-replay-dt2500us-r1": {
+      "verified": true,
+      "samples": 657,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05000000000000001,
+      "first_shell_loaded_s": 1.322499999999983,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 2367
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-replay-dt2500us-r2": {
+      "verified": true,
+      "samples": 657,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05000000000000001,
+      "first_shell_loaded_s": 1.322499999999983,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 2367
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-passive-dt2500us-r1": {
+      "verified": true,
+      "samples": 217,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05000000000000001,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 6754
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v62-passive-dt2500us-r2": {
+      "verified": true,
+      "samples": 217,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05000000000000001,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 6754
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v11-replay-dt1250us-r1": {
+      "verified": true,
+      "samples": 1313,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 4607
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ]
+    },
+    "v11-replay-dt1250us-r2": {
+      "verified": true,
+      "samples": 1313,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 4607
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ]
+    },
+    "v11-passive-dt1250us-r1": {
+      "verified": true,
+      "samples": 423,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1957
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v11-passive-dt1250us-r2": {
+      "verified": true,
+      "samples": 423,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1957
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v62-replay-dt1250us-r1": {
+      "verified": true,
+      "samples": 1309,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.050000000000000024,
+      "first_shell_loaded_s": 1.3224999999999774,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 4719
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-replay-dt1250us-r2": {
+      "verified": true,
+      "samples": 1309,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.050000000000000024,
+      "first_shell_loaded_s": 1.3224999999999774,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 4719
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-passive-dt1250us-r1": {
+      "verified": true,
+      "samples": 4000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.04875000000000002,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 94791
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "internal_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v62-passive-dt1250us-r2": {
+      "verified": true,
+      "samples": 4000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.04875000000000002,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 94791
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "internal_penetration",
+        "joint_stop_overshoot"
+      ]
+    }
+  },
+  "original_v63_controls_exact": {
+    "v11-replay-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-replay-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    }
+  },
+  "repeats": {
+    "v11-replay-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-retry-replay-match_v11_export-retry-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-retry-replay-mask_shell_floor-retry-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-replay-dt2500us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-dt2500us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-dt2500us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-dt2500us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-replay-dt1250us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-dt1250us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-dt1250us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-dt1250us-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    }
+  },
+  "model_admitted": false,
+  "walking_accepted": false,
+  "physical_acceptance": false
+}

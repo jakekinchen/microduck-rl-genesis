@@ -1,0 +1,53 @@
+{
+  "closed_utc": "2026-09-16T01:20:32.667556+00:00",
+  "status": "complete_material_negative_localized",
+  "material_passes": {
+    "bottom_head_shell": false,
+    "jaw": false,
+    "neck_pitch": false,
+    "seeed_bearing__configuration__22x16x4": true
+  },
+  "cavity_gates_passed": true,
+  "full_candidate_assembled": false,
+  "physics_steps": 0,
+  "model_admitted": false,
+  "physical_acceptance": false,
+  "geometry_generation_retries": 0,
+  "artifact_sha256": {
+    "README.md": "b55006b564706f4e3ec80b7aab35b4639d8df0ab7f0f8f000d89083021ba020c",
+    "attempt-started.json": "4fb9d1b5b17978bc101f2609a043c36fe9328acc4e0af31661fb8a79f18e0bbf",
+    "bottom_head_shell.log": "a0cb1740754bd1eb154daa897478254e90fdfe9ec3f02baf221bfc2b2b04e1fb",
+    "coacd_worker_v61.py": "79cc90f368320b818a470b55c2383087519f3e3f568dced43c07df6c3697986f",
+    "diagnose_excess_v61.py": "1c5fe8c1b63a0ed201fa68e8cd2d72f9ac2e84353534cc77dfe06166af50118b",
+    "excess-witnesses.json": "ff2f4bce50e342b8ce758b1339eaf30f68514966ada22ac3e46fef16e7ab4a2e",
+    "excess-witnesses.png": "4aedd7725e41cd50318c72b41a2cde72a9c7189467c67947a502db89bd9d7c76",
+    "jaw.log": "b76d03003695a751935764e7f49b067e7e948ebc3694ff15a3dc8b53f704bb91",
+    "localization-attempt-started.json": "2a0b9f91e3471cbd39a8cc93b1f7f7079a55365975c7111af3f5b3c271c86959",
+    "localization-plan.json": "82a11e8774d65107adbcb2d478b137b8a0177cd1578839dda16cf406bb1a01ac",
+    "localization-process.json": "217c90d466683f36f62102d3681da5a08f34432a45d7e196581f701c24a00f12",
+    "localization-review.json": "d9dc5d03fb5495495053f9126e9bf8328a5a79ef116ebee1cce002c21e5dcbd3",
+    "localization.log": "561f70d16b5bb92b5b95c40db600a1ba845752bd0caf0120c58ba6936054f41c",
+    "material-bank.json": "7a816253c3eea6a67c7fd1bba48d5c1cebaf7f3e30b9b446acef5c7cc06cdbb1",
+    "material-result.json": "ad6f873d5720abff47409f9a13272b70c24d9d377d4f0f33f40f36b78ad365a6",
+    "neck_pitch.log": "e0ea04a8f748a315f6be868d42d9601d780a8d6259e2ccebd66c78ab7bb3dc97",
+    "outputs/bottom_head_shell/complete.json": "748ac96c4737f143ee55edb3ffd18883b1a5214de91a661ab0345762e58a6ae8",
+    "outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "outputs/jaw/complete.json": "e955d577eb5b23a49a5e44ee3ff2c72053fcebb59db9091afea01abac77afa83",
+    "outputs/jaw/parts.npz": "8b8dead0e0c09d5726d8a230b82d224a9f33bee29b3bfd9cb42d07f54d7c2c8a",
+    "outputs/neck_pitch/complete.json": "5f6cab68f86c00049fcc446710089ee91c3ff382bc8002d07537f69f6f0f037e",
+    "outputs/neck_pitch/parts.npz": "31a26d24719c6934b21f030d437fa129cdfa552616e1aa67a5755a7c6f81698a",
+    "plan.json": "07befdba28e4a4eed15305625be76f5cb7cebbafdb650caea9039b26885e66de",
+    "processes.json": "f928f91171ab072d0f5ef100641a42931dc8d2eb6dcf399bb5efab63a82966c3",
+    "protocol.json": "f7109d90e100fe43af3973a6805c2dd892f9f42f778eff2f3ecde5366d8426ec",
+    "validation.log": "4951f7218910d87f5f2131c7d3947cd4cb73cae0608717940102ff62af7b83cb"
+  },
+  "closing_activity": {
+    "schema_version": "microduck.ops.activity.v1",
+    "root": "/Users/kelly/Developer/microduck-rl-genesis",
+    "generated_at": "2026-09-16T01:20:32.558643+00:00",
+    "read_only": true,
+    "status": "no_known_training_process",
+    "processes": [],
+    "boundary": "Instantaneous advisory inventory of known Python training and simulation-test entrypoints. The legacy no_known_training_process status means no recognized compute candidate; absence is not proof of idleness; unrecognized launchers and remote jobs are outside coverage. No lock, admission, process control or training status mutation."
+  }
+}

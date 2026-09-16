@@ -1,0 +1,29 @@
+{
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/bracket-r2-protocol.json": "b2695b872c9d653ff53080997baeb55d53537d255dfaa2d1389a52f9a46ca15f",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/parts.npz": "31a26d24719c6934b21f030d437fa129cdfa552616e1aa67a5755a7c6f81698a",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/complete.json": "5f6cab68f86c00049fcc446710089ee91c3ff382bc8002d07537f69f6f0f037e",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".workspace/geometry-deps-v62/site/manifold3d.cpython-312-darwin.so": "d405628ac45f7d5037117c5b06fe596061b524471d2708b1572b973b887f45a9",
+    ".workspace/geometry-deps-v62/site/manifold3d-3.5.3.dist-info/METADATA": "639bd96e419d61a0fd2d0739cef4e7495710435e7b9937d8f978da1ad2a07c1b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r2.py": "0ee90a5b131399b7fa242124638da739bcec3c2a5500e1924a5ebb566d5162b0",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r2.py": "81b1e71cc8bb7ee4f48f3b6cac787198049626f16dd127e698e91a405aec7fc5",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/numerical-scale-diagnosis.json": "a46750e88d3b749f67f7773bf60a77432669d64fda0b0bc4a84d15337195045c",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/test_cad_refinement_v62r2.py": "63881f270379699c852ce877292e199a8583f34bd26a7b7f07e2071b0494e0d6"
+  },
+  "attempt_marker": "bracket-r2-attempt.json",
+  "process_report": "bracket-r2-processes.json",
+  "steps": [
+    {
+      "id": "refine-neck-pitch-r2",
+      "script": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r2.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/bracket-r2-protocol.json",
+        "neck_pitch"
+      ],
+      "wall_seconds": 600,
+      "log": "bracket-r2-refinement.log"
+    }
+  ]
+}

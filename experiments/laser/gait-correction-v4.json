@@ -1,0 +1,20 @@
+{
+  "schema": "microduck.laser-gait-correction/v4",
+  "status": "visible-development intervention; no policy accepted",
+  "diagnosis": ["endpoint-only acceptance omitted gait", "hip-yaw mechanical-stop parking and low-clearance shuffling", "legacy render camera points inward while mouth and physical site face +X"],
+  "supersedes": "v3 is quarantined: it wrongly used the legacy camera optical axis as physical forward. Do not resume that lineage.",
+  "intervention": "Gait reward and actual-joint-stop termination; unchanged canonical +X steering, physical model, BAM, action ABI and normalization. Separately correct the render camera to the physical site frame.",
+  "no_action_assistance": true,
+  "warm_start": "early first-party walking baseline; reject stop-parking laser and wrong-axis v3 lineages",
+  "budget": {"smoke_envs":64,"smoke_iterations":5,"training_envs":1024,"training_iterations":600,"steps_per_env":24,"seed":26090504},
+  "visible_cases": [
+    {"id":"76341-front-circle","program":"circle","rotation_rad":0,"seconds":16},
+    {"id":"76342-front-retarget","program":"retarget","rotation_rad":0,"seconds":48},
+    {"id":"76343-front-eight","program":"figure-eight","rotation_rad":0,"seconds":16},
+    {"id":"76344-turn-around","program":"circle","rotation_rad":3.141592653589793,"seconds":16}
+  ],
+  "fresh_reserved_seeds_do_not_tune":[76401,76402,76403,76404,76405,76406],
+  "selection":"Final checkpoint only; target AND gait gates required. No reward-based promotion. Leave reserved data closed unless every visible gate passes.",
+  "negative_controls":["no-op","backward traversal relative to PHYSICAL SITE","loaded-foot skate","one-foot hopping","joint-stop parking","legitimate BAM target overshoot without actual stop","camera optical axis opposite physical mouth direction"],
+  "limits":"Flat ground, privileged target, uncalibrated diagnostic gait thresholds. No camera-driven policy, real transfer or physical acceptance claim."
+}

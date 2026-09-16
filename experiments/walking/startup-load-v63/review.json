@@ -1,0 +1,1131 @@
+{
+  "verification_passed": true,
+  "cases_verified": 12,
+  "physics_samples_verified": 11412,
+  "checks": {
+    "v11-home-r1": {
+      "passed": true,
+      "physics_samples": 249,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 1.2449999999999954,
+      "failures": [
+        "fall",
+        "home_drift",
+        "home_tilt",
+        "incomplete_duration"
+      ]
+    },
+    "v11-passive-r1": {
+      "passed": true,
+      "physics_samples": 1000,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 0.41000000000000025,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v11-replay-r1": {
+      "passed": true,
+      "physics_samples": 3600,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": null,
+      "failures": [
+        "ground_penetration"
+      ]
+    },
+    "v11-home-r2": {
+      "passed": true,
+      "physics_samples": 249,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 1.2449999999999954,
+      "failures": [
+        "fall",
+        "home_drift",
+        "home_tilt",
+        "incomplete_duration"
+      ]
+    },
+    "v11-passive-r2": {
+      "passed": true,
+      "physics_samples": 1000,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 0.41000000000000025,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v11-replay-r2": {
+      "passed": true,
+      "physics_samples": 3600,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": null,
+      "failures": [
+        "ground_penetration"
+      ]
+    },
+    "v62-home-r1": {
+      "passed": true,
+      "physics_samples": 248,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 1.2399999999999956,
+      "failures": [
+        "fall",
+        "home_drift",
+        "home_tilt",
+        "incomplete_duration"
+      ]
+    },
+    "v62-passive-r1": {
+      "passed": true,
+      "physics_samples": 108,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 0.41000000000000025,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v62-replay-r1": {
+      "passed": true,
+      "physics_samples": 501,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 2.504999999999969,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-home-r2": {
+      "passed": true,
+      "physics_samples": 248,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 1.2399999999999956,
+      "failures": [
+        "fall",
+        "home_drift",
+        "home_tilt",
+        "incomplete_duration"
+      ]
+    },
+    "v62-passive-r2": {
+      "passed": true,
+      "physics_samples": 108,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 0.41000000000000025,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v62-replay-r2": {
+      "passed": true,
+      "physics_samples": 501,
+      "action_values_byte_identical": true,
+      "manual_fifo_targets_exact": true,
+      "contact_loads_independently_reaggregated": true,
+      "state_arrays_equal_trace": true,
+      "original_case_passed": false,
+      "first_fall_s": 2.504999999999969,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    }
+  },
+  "repeats": {
+    "v11-home": {
+      "passed": true,
+      "array_counts": {
+        "initial-state.npz": 21,
+        "dynamics.npz": 8
+      }
+    },
+    "v11-passive": {
+      "passed": true,
+      "array_counts": {
+        "initial-state.npz": 21,
+        "dynamics.npz": 8
+      }
+    },
+    "v11-replay": {
+      "passed": true,
+      "array_counts": {
+        "initial-state.npz": 21,
+        "dynamics.npz": 8
+      }
+    },
+    "v62-home": {
+      "passed": true,
+      "array_counts": {
+        "initial-state.npz": 21,
+        "dynamics.npz": 8
+      }
+    },
+    "v62-passive": {
+      "passed": true,
+      "array_counts": {
+        "initial-state.npz": 21,
+        "dynamics.npz": 8
+      }
+    },
+    "v62-replay": {
+      "passed": true,
+      "array_counts": {
+        "initial-state.npz": 21,
+        "dynamics.npz": 8
+      }
+    }
+  },
+  "replay_divergence": {
+    "first_root_over_0_1mm_s": 1.01,
+    "first_root_over_1mm_s": 1.73,
+    "first_joint_over_0_1deg_s": 1.1,
+    "first_joint_over_1deg_s": 1.82,
+    "boundary": "posthoc localization, not a causal isolation or acceptance threshold"
+  },
+  "first_loaded_contacts": {
+    "v11-home-r1": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "names": [
+          "floor",
+          "left_foot_collision"
+        ],
+        "normal_n": 5.413661650889561,
+        "penetration_m": 0.0010113621987486755,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "names": [
+          "floor",
+          "right_foot_collision"
+        ],
+        "normal_n": 5.4157689581819595,
+        "penetration_m": 0.0010113618502867487,
+        "internal": false
+      }
+    ],
+    "v11-passive-r1": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "names": [
+          "floor",
+          "left_foot_collision"
+        ],
+        "normal_n": 5.413661650889072,
+        "penetration_m": 0.0010113621987486894,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "names": [
+          "floor",
+          "right_foot_collision"
+        ],
+        "normal_n": 5.415768958181591,
+        "penetration_m": 0.0010113618502866715,
+        "internal": false
+      },
+      {
+        "time_s": 0.5150000000000003,
+        "geom_ids": [
+          0,
+          49
+        ],
+        "names": [
+          "floor",
+          ""
+        ],
+        "normal_n": 16.133160495080197,
+        "penetration_m": 0.002024770004854619,
+        "internal": false
+      },
+      {
+        "time_s": 0.5150000000000003,
+        "geom_ids": [
+          0,
+          56
+        ],
+        "names": [
+          "floor",
+          ""
+        ],
+        "normal_n": 1.766518800005203,
+        "penetration_m": 0.0022618999720790817,
+        "internal": false
+      },
+      {
+        "time_s": 0.5150000000000003,
+        "geom_ids": [
+          0,
+          58
+        ],
+        "names": [
+          "floor",
+          ""
+        ],
+        "normal_n": 8.390610919056666,
+        "penetration_m": 0.0021062679685366764,
+        "internal": false
+      },
+      {
+        "time_s": 0.6550000000000005,
+        "geom_ids": [
+          19,
+          29
+        ],
+        "names": [
+          "",
+          "left_foot_collision"
+        ],
+        "normal_n": 0.7183618771429809,
+        "penetration_m": 2.5031753658772636e-05,
+        "internal": true
+      },
+      {
+        "time_s": 0.6700000000000005,
+        "geom_ids": [
+          67,
+          79
+        ],
+        "names": [
+          "",
+          "right_foot_collision"
+        ],
+        "normal_n": 0.8128085650710559,
+        "penetration_m": 7.470180236061668e-06,
+        "internal": true
+      }
+    ],
+    "v11-replay-r1": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "names": [
+          "floor",
+          "left_foot_collision"
+        ],
+        "normal_n": 10.741909034144996,
+        "penetration_m": 0.000445847577794394,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "names": [
+          "floor",
+          "right_foot_collision"
+        ],
+        "normal_n": 17.43634669736373,
+        "penetration_m": 0.0007578025839059836,
+        "internal": false
+      }
+    ],
+    "v11-home-r2": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "names": [
+          "floor",
+          "left_foot_collision"
+        ],
+        "normal_n": 5.413661650889561,
+        "penetration_m": 0.0010113621987486755,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "names": [
+          "floor",
+          "right_foot_collision"
+        ],
+        "normal_n": 5.4157689581819595,
+        "penetration_m": 0.0010113618502867487,
+        "internal": false
+      }
+    ],
+    "v11-passive-r2": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "names": [
+          "floor",
+          "left_foot_collision"
+        ],
+        "normal_n": 5.413661650889072,
+        "penetration_m": 0.0010113621987486894,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "names": [
+          "floor",
+          "right_foot_collision"
+        ],
+        "normal_n": 5.415768958181591,
+        "penetration_m": 0.0010113618502866715,
+        "internal": false
+      },
+      {
+        "time_s": 0.5150000000000003,
+        "geom_ids": [
+          0,
+          49
+        ],
+        "names": [
+          "floor",
+          ""
+        ],
+        "normal_n": 16.133160495080197,
+        "penetration_m": 0.002024770004854619,
+        "internal": false
+      },
+      {
+        "time_s": 0.5150000000000003,
+        "geom_ids": [
+          0,
+          56
+        ],
+        "names": [
+          "floor",
+          ""
+        ],
+        "normal_n": 1.766518800005203,
+        "penetration_m": 0.0022618999720790817,
+        "internal": false
+      },
+      {
+        "time_s": 0.5150000000000003,
+        "geom_ids": [
+          0,
+          58
+        ],
+        "names": [
+          "floor",
+          ""
+        ],
+        "normal_n": 8.390610919056666,
+        "penetration_m": 0.0021062679685366764,
+        "internal": false
+      },
+      {
+        "time_s": 0.6550000000000005,
+        "geom_ids": [
+          19,
+          29
+        ],
+        "names": [
+          "",
+          "left_foot_collision"
+        ],
+        "normal_n": 0.7183618771429809,
+        "penetration_m": 2.5031753658772636e-05,
+        "internal": true
+      },
+      {
+        "time_s": 0.6700000000000005,
+        "geom_ids": [
+          67,
+          79
+        ],
+        "names": [
+          "",
+          "right_foot_collision"
+        ],
+        "normal_n": 0.8128085650710559,
+        "penetration_m": 7.470180236061668e-06,
+        "internal": true
+      }
+    ],
+    "v11-replay-r2": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          29
+        ],
+        "names": [
+          "floor",
+          "left_foot_collision"
+        ],
+        "normal_n": 10.741909034144996,
+        "penetration_m": 0.000445847577794394,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          79
+        ],
+        "names": [
+          "floor",
+          "right_foot_collision"
+        ],
+        "normal_n": 17.43634669736373,
+        "penetration_m": 0.0007578025839059836,
+        "internal": false
+      }
+    ],
+    "v62-home-r1": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          48
+        ],
+        "names": [
+          "floor",
+          "ankle_left_1_sole_left_collision"
+        ],
+        "normal_n": 5.413663345336518,
+        "penetration_m": 0.001011362198748496,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          7658
+        ],
+        "names": [
+          "floor",
+          "ankle_right_3_sole_right_collision"
+        ],
+        "normal_n": 5.415769216343502,
+        "penetration_m": 0.0010113618186422925,
+        "internal": false
+      }
+    ],
+    "v62-passive-r1": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          48
+        ],
+        "names": [
+          "floor",
+          "ankle_left_1_sole_left_collision"
+        ],
+        "normal_n": 5.413663345336542,
+        "penetration_m": 0.0010113621987485983,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          7658
+        ],
+        "names": [
+          "floor",
+          "ankle_right_3_sole_right_collision"
+        ],
+        "normal_n": 5.415769216345301,
+        "penetration_m": 0.0010113618186423524,
+        "internal": false
+      },
+      {
+        "time_s": 0.41500000000000026,
+        "geom_ids": [
+          28,
+          54
+        ],
+        "names": [
+          "yaw2roll_7_bearing_roll_collision",
+          "ankle_left_7_ankle_left_collision"
+        ],
+        "normal_n": 7.278956675874525,
+        "penetration_m": 0.00018717282223407338,
+        "internal": true
+      },
+      {
+        "time_s": 0.42500000000000027,
+        "geom_ids": [
+          28,
+          52
+        ],
+        "names": [
+          "yaw2roll_7_bearing_roll_collision",
+          "ankle_left_5_seeed_bearing__configuration_default_collision"
+        ],
+        "normal_n": 5.714073268380437,
+        "penetration_m": 1.3460062957127176e-05,
+        "internal": true
+      },
+      {
+        "time_s": 0.43000000000000027,
+        "geom_ids": [
+          7634,
+          7656
+        ],
+        "names": [
+          "bearing_roll_5_bearing_roll_collision",
+          "ankle_right_1_ankle_right_collision"
+        ],
+        "normal_n": 7.83653490343467,
+        "penetration_m": 0.00011128311979798484,
+        "internal": true
+      },
+      {
+        "time_s": 0.4500000000000003,
+        "geom_ids": [
+          7638,
+          7656
+        ],
+        "names": [
+          "hip_l_2_1_hip_l_collision",
+          "ankle_right_1_ankle_right_collision"
+        ],
+        "normal_n": 11.061725304415415,
+        "penetration_m": 0.000219338466880339,
+        "internal": true
+      },
+      {
+        "time_s": 0.4850000000000003,
+        "geom_ids": [
+          24,
+          54
+        ],
+        "names": [
+          "yaw2roll_3_xl330_collision",
+          "ankle_left_7_ankle_left_collision"
+        ],
+        "normal_n": 0.8271827731730268,
+        "penetration_m": 1.4842256797427014e-06,
+        "internal": true
+      },
+      {
+        "time_s": 0.4900000000000003,
+        "geom_ids": [
+          28,
+          44
+        ],
+        "names": [
+          "yaw2roll_7_bearing_roll_collision",
+          "leg_1_leg_collision"
+        ],
+        "normal_n": 0.7232481373934403,
+        "penetration_m": 2.5808011777864366e-07,
+        "internal": true
+      },
+      {
+        "time_s": 0.5100000000000003,
+        "geom_ids": [
+          32,
+          54
+        ],
+        "names": [
+          "hip_l_3_hip_l_collision",
+          "ankle_left_7_ankle_left_collision"
+        ],
+        "normal_n": 1.8686080981394824,
+        "penetration_m": 7.170170974181838e-06,
+        "internal": true
+      },
+      {
+        "time_s": 0.5300000000000004,
+        "geom_ids": [
+          0,
+          944
+        ],
+        "names": [
+          "floor",
+          "jaw_soft_1_lens_collision"
+        ],
+        "normal_n": 10.36603459393157,
+        "penetration_m": 0.005413054810648339,
+        "internal": false
+      },
+      {
+        "time_s": 0.5300000000000004,
+        "geom_ids": [
+          0,
+          954
+        ],
+        "names": [
+          "floor",
+          "jaw_soft_11_top_head_shell_collision"
+        ],
+        "normal_n": 15.495541655774193,
+        "penetration_m": 0.005543346013481595,
+        "internal": false
+      },
+      {
+        "time_s": 0.5300000000000004,
+        "geom_ids": [
+          0,
+          964
+        ],
+        "names": [
+          "floor",
+          "jaw_soft_21_noenoeil_collision"
+        ],
+        "normal_n": 16.361376116195828,
+        "penetration_m": 0.0061853558261484465,
+        "internal": false
+      }
+    ],
+    "v62-replay-r1": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          48
+        ],
+        "names": [
+          "floor",
+          "ankle_left_1_sole_left_collision"
+        ],
+        "normal_n": 10.741907503491847,
+        "penetration_m": 0.0004458477069365441,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          7658
+        ],
+        "names": [
+          "floor",
+          "ankle_right_3_sole_right_collision"
+        ],
+        "normal_n": 17.43634880646983,
+        "penetration_m": 0.0007578028966302996,
+        "internal": false
+      },
+      {
+        "time_s": 1.4749999999999905,
+        "geom_ids": [
+          0,
+          50
+        ],
+        "names": [
+          "floor",
+          "ankle_left_3_foot_left_collision"
+        ],
+        "normal_n": 0.5538295418560298,
+        "penetration_m": 0.0001453388526706477,
+        "internal": false
+      },
+      {
+        "time_s": 1.6299999999999872,
+        "geom_ids": [
+          0,
+          7662
+        ],
+        "names": [
+          "floor",
+          "ankle_right_7_foot_right_collision"
+        ],
+        "normal_n": 1.3387050897267918,
+        "penetration_m": 2.857722253483616e-05,
+        "internal": false
+      }
+    ],
+    "v62-home-r2": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          48
+        ],
+        "names": [
+          "floor",
+          "ankle_left_1_sole_left_collision"
+        ],
+        "normal_n": 5.413663345336518,
+        "penetration_m": 0.001011362198748496,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          7658
+        ],
+        "names": [
+          "floor",
+          "ankle_right_3_sole_right_collision"
+        ],
+        "normal_n": 5.415769216343502,
+        "penetration_m": 0.0010113618186422925,
+        "internal": false
+      }
+    ],
+    "v62-passive-r2": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          48
+        ],
+        "names": [
+          "floor",
+          "ankle_left_1_sole_left_collision"
+        ],
+        "normal_n": 5.413663345336542,
+        "penetration_m": 0.0010113621987485983,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          7658
+        ],
+        "names": [
+          "floor",
+          "ankle_right_3_sole_right_collision"
+        ],
+        "normal_n": 5.415769216345301,
+        "penetration_m": 0.0010113618186423524,
+        "internal": false
+      },
+      {
+        "time_s": 0.41500000000000026,
+        "geom_ids": [
+          28,
+          54
+        ],
+        "names": [
+          "yaw2roll_7_bearing_roll_collision",
+          "ankle_left_7_ankle_left_collision"
+        ],
+        "normal_n": 7.278956675874525,
+        "penetration_m": 0.00018717282223407338,
+        "internal": true
+      },
+      {
+        "time_s": 0.42500000000000027,
+        "geom_ids": [
+          28,
+          52
+        ],
+        "names": [
+          "yaw2roll_7_bearing_roll_collision",
+          "ankle_left_5_seeed_bearing__configuration_default_collision"
+        ],
+        "normal_n": 5.714073268380437,
+        "penetration_m": 1.3460062957127176e-05,
+        "internal": true
+      },
+      {
+        "time_s": 0.43000000000000027,
+        "geom_ids": [
+          7634,
+          7656
+        ],
+        "names": [
+          "bearing_roll_5_bearing_roll_collision",
+          "ankle_right_1_ankle_right_collision"
+        ],
+        "normal_n": 7.83653490343467,
+        "penetration_m": 0.00011128311979798484,
+        "internal": true
+      },
+      {
+        "time_s": 0.4500000000000003,
+        "geom_ids": [
+          7638,
+          7656
+        ],
+        "names": [
+          "hip_l_2_1_hip_l_collision",
+          "ankle_right_1_ankle_right_collision"
+        ],
+        "normal_n": 11.061725304415415,
+        "penetration_m": 0.000219338466880339,
+        "internal": true
+      },
+      {
+        "time_s": 0.4850000000000003,
+        "geom_ids": [
+          24,
+          54
+        ],
+        "names": [
+          "yaw2roll_3_xl330_collision",
+          "ankle_left_7_ankle_left_collision"
+        ],
+        "normal_n": 0.8271827731730268,
+        "penetration_m": 1.4842256797427014e-06,
+        "internal": true
+      },
+      {
+        "time_s": 0.4900000000000003,
+        "geom_ids": [
+          28,
+          44
+        ],
+        "names": [
+          "yaw2roll_7_bearing_roll_collision",
+          "leg_1_leg_collision"
+        ],
+        "normal_n": 0.7232481373934403,
+        "penetration_m": 2.5808011777864366e-07,
+        "internal": true
+      },
+      {
+        "time_s": 0.5100000000000003,
+        "geom_ids": [
+          32,
+          54
+        ],
+        "names": [
+          "hip_l_3_hip_l_collision",
+          "ankle_left_7_ankle_left_collision"
+        ],
+        "normal_n": 1.8686080981394824,
+        "penetration_m": 7.170170974181838e-06,
+        "internal": true
+      },
+      {
+        "time_s": 0.5300000000000004,
+        "geom_ids": [
+          0,
+          944
+        ],
+        "names": [
+          "floor",
+          "jaw_soft_1_lens_collision"
+        ],
+        "normal_n": 10.36603459393157,
+        "penetration_m": 0.005413054810648339,
+        "internal": false
+      },
+      {
+        "time_s": 0.5300000000000004,
+        "geom_ids": [
+          0,
+          954
+        ],
+        "names": [
+          "floor",
+          "jaw_soft_11_top_head_shell_collision"
+        ],
+        "normal_n": 15.495541655774193,
+        "penetration_m": 0.005543346013481595,
+        "internal": false
+      },
+      {
+        "time_s": 0.5300000000000004,
+        "geom_ids": [
+          0,
+          964
+        ],
+        "names": [
+          "floor",
+          "jaw_soft_21_noenoeil_collision"
+        ],
+        "normal_n": 16.361376116195828,
+        "penetration_m": 0.0061853558261484465,
+        "internal": false
+      }
+    ],
+    "v62-replay-r2": [
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          48
+        ],
+        "names": [
+          "floor",
+          "ankle_left_1_sole_left_collision"
+        ],
+        "normal_n": 10.741907503491847,
+        "penetration_m": 0.0004458477069365441,
+        "internal": false
+      },
+      {
+        "time_s": 0.045,
+        "geom_ids": [
+          0,
+          7658
+        ],
+        "names": [
+          "floor",
+          "ankle_right_3_sole_right_collision"
+        ],
+        "normal_n": 17.43634880646983,
+        "penetration_m": 0.0007578028966302996,
+        "internal": false
+      },
+      {
+        "time_s": 1.4749999999999905,
+        "geom_ids": [
+          0,
+          50
+        ],
+        "names": [
+          "floor",
+          "ankle_left_3_foot_left_collision"
+        ],
+        "normal_n": 0.5538295418560298,
+        "penetration_m": 0.0001453388526706477,
+        "internal": false
+      },
+      {
+        "time_s": 1.6299999999999872,
+        "geom_ids": [
+          0,
+          7662
+        ],
+        "names": [
+          "floor",
+          "ankle_right_7_foot_right_collision"
+        ],
+        "normal_n": 1.3387050897267918,
+        "penetration_m": 2.857722253483616e-05,
+        "internal": false
+      }
+    ]
+  },
+  "initial_physical_comparison": {
+    "body_mass": {
+      "byte_equal": true,
+      "maximum_raw_absolute_difference": 0.0
+    },
+    "body_inertia": {
+      "byte_equal": false,
+      "maximum_raw_absolute_difference": 1.2358965440677563e-11
+    },
+    "body_ipos": {
+      "byte_equal": false,
+      "maximum_raw_absolute_difference": 1.0000000000287557e-07
+    },
+    "body_iquat": {
+      "byte_equal": false,
+      "maximum_raw_absolute_difference": 4.5072447714678e-06
+    },
+    "body_pos": {
+      "byte_equal": false,
+      "maximum_raw_absolute_difference": 0.0
+    },
+    "body_quat": {
+      "byte_equal": false,
+      "maximum_raw_absolute_difference": 2.0
+    },
+    "jnt_range": {
+      "byte_equal": false,
+      "maximum_raw_absolute_difference": 1.1368683772161603e-13
+    },
+    "dof_armature": {
+      "byte_equal": true,
+      "maximum_raw_absolute_difference": 0.0
+    },
+    "dof_damping": {
+      "byte_equal": true,
+      "maximum_raw_absolute_difference": 0.0
+    },
+    "dof_frictionloss": {
+      "byte_equal": true,
+      "maximum_raw_absolute_difference": 0.0
+    },
+    "body_rotation_matrix_maximum_difference": 0.0,
+    "body_frame_inertia_tensor_maximum_difference_kg_m2": 2.80000019043074e-11
+  },
+  "diagnostic_cases_passed": 0,
+  "candidate_replay_completed": false,
+  "model_admitted": false,
+  "walking_accepted": false,
+  "physical_acceptance": false
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "microduck.walking-fresh-development-freeze/v1",
+  "frozen_at_utc": "2026-09-06T04:21:43Z",
+  "held_out": false,
+  "fresh_rollouts_started": false,
+  "suite_sha256": "5763a0f62c50c59a97a409e077a9d26ca15f96aa46d063cd9ffc498a87404cbf",
+  "current_bank_manifest_sha256": "ada22867073ecd841d9436e04099046ad1792fe83fe7ae892ae401f54d84afc4",
+  "current_bank_combined": "21/21",
+  "evaluator_freeze_sha256": "7fbabe61041f31e4a503a6e81fc12962560cafdc04831d9697b2b396e4d7fa83",
+  "walking_checkpoint_sha256": "f31d47a5343b1283a1bbd28c2f7efb78f95ddd6940554b9c755b73d337c2b7f8",
+  "standing_checkpoint_sha256": "acab8402e262dbb6af5a3fab9b67fa4ce5e34a4d23cadb127fe6dfa475a70e46",
+  "walking_onnx_sha256": "feef32793eb4bf915d9dee93a8fe1a778d37d0b4619ee8c04526d1ff2cf615e2",
+  "standing_onnx_sha256": "2fddc9a9bc4ff9a17a34af51215a31c43503cbe68a1b815a97b3042abf248db8",
+  "expected_windows": 42,
+  "selection_rule": "Every unchanged motor, posture, heading, geometry and applied internal-load gate must pass in all 42 windows; preserve any failure. No checkpoint substitution or threshold changes.",
+  "boundary": "Fresh visible development after current-bank success, not blind held-out or physical acceptance. Flags describe this pre-run freeze, not subsequent process status."
+}

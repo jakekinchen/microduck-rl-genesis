@@ -1,0 +1,127 @@
+[
+  {
+    "id": "flat-forward10",
+    "terrain": {
+      "kind": "flat"
+    },
+    "command": [
+      0.1,
+      0,
+      0
+    ],
+    "steps": 656,
+    "handoff_available": true,
+    "action_bytes_sha256": "e2a8a77ccb34a887738a1d9df4236ba8dfa625c71ebcd8f93f0fd5b04188116c",
+    "exact_reset_continuation": true
+  },
+  {
+    "id": "flat-forward20",
+    "terrain": {
+      "kind": "flat"
+    },
+    "command": [
+      0.2,
+      0,
+      0
+    ],
+    "steps": 663,
+    "handoff_available": true,
+    "action_bytes_sha256": "f000ce39a31bb7e6f783a507f10f2b2021f3bac85fc7f8a4492c1eb5c8be6163",
+    "exact_reset_continuation": true
+  },
+  {
+    "id": "flat-left",
+    "terrain": {
+      "kind": "flat"
+    },
+    "command": [
+      0,
+      0,
+      0.6
+    ],
+    "steps": 662,
+    "handoff_available": true,
+    "action_bytes_sha256": "4a4d16d40f81c5e3dcc3af97349b10651094d4b18266f30accadd5e8ba820341",
+    "exact_reset_continuation": true
+  },
+  {
+    "id": "flat-right",
+    "terrain": {
+      "kind": "flat"
+    },
+    "command": [
+      0,
+      0,
+      -0.6
+    ],
+    "steps": 662,
+    "handoff_available": true,
+    "action_bytes_sha256": "e2cd565bdfbfcfacea25a184afba3a4b211ee9a27111e4765b73e9de6f0f6301",
+    "exact_reset_continuation": true
+  },
+  {
+    "id": "flat-arc-left",
+    "terrain": {
+      "kind": "flat"
+    },
+    "command": [
+      0.12,
+      0,
+      0.35
+    ],
+    "steps": 657,
+    "handoff_available": true,
+    "action_bytes_sha256": "edbbfdde4b5a3d08693deb18a9615441af1fa7922d69e176ffe2adeea4be833a",
+    "exact_reset_continuation": true
+  },
+  {
+    "id": "flat-arc-right",
+    "terrain": {
+      "kind": "flat"
+    },
+    "command": [
+      0.12,
+      0,
+      -0.35
+    ],
+    "steps": 657,
+    "handoff_available": true,
+    "action_bytes_sha256": "292f63f35b647b93ebeb48440a4cc0b42426893448d239e48a354ed0517e7ddf",
+    "exact_reset_continuation": true
+  },
+  {
+    "id": "downhill",
+    "terrain": {
+      "kind": "slope",
+      "axis": "y",
+      "degrees": 3.0
+    },
+    "command": [
+      0.12,
+      0,
+      0
+    ],
+    "steps": 657,
+    "handoff_available": true,
+    "action_bytes_sha256": "0129e128af68e425c67a4fdb77e3e8a4bb51997292e525557d925a0d775cd128",
+    "v30_prefix_action_bytes_identical": true,
+    "exact_reset_continuation": true
+  },
+  {
+    "id": "uphill",
+    "terrain": {
+      "kind": "slope",
+      "axis": "y",
+      "degrees": -3.0
+    },
+    "command": [
+      0.12,
+      0,
+      0
+    ],
+    "steps": 657,
+    "handoff_available": true,
+    "action_bytes_sha256": "cba1726fad7808f56d98c12ce5b30a6cea2da62714f42b2a055ef013848e9881",
+    "exact_reset_continuation": true
+  }
+]

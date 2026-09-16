@@ -1,0 +1,93 @@
+{
+  "completed_utc": "2026-09-08T04:07:03.259484+00:00",
+  "activity_complete": true,
+  "candidate_accepted": false,
+  "retained_controller": "V30 with original V21 walking and V15 standing",
+  "exposed_acceptance": {
+    "flat": {
+      "passed": 63,
+      "required": 63
+    },
+    "long_compositions": {
+      "passed": 1,
+      "required": 2
+    },
+    "downhill": {
+      "passed": 0,
+      "required": 2
+    },
+    "surfaces": {
+      "passed": 4,
+      "total": 14,
+      "lost_previous_passes": [
+        "soft-low-traction-start-1"
+      ]
+    }
+  },
+  "learning_transitions": 576000,
+  "workspace_tests": 139,
+  "focused_tests": 2,
+  "source_and_receipt_integrity": true,
+  "source_bindings": {
+    "receipts/walking/20260908-v47-original-handoff": {
+      "manifest_sha256": "31ca14b25b7497c8c9b2c4ccf4fbbc83d4c58a19ec4c466b791f6a6f23e19374",
+      "verified_files": 1640
+    },
+    "receipts/walking/20260908-v47-v46-handoff": {
+      "manifest_sha256": "490faa1c88eddd693cd4d1631b4a8417452f7b07f53a2ac11032478325789bcf",
+      "verified_files": 1690
+    },
+    "receipts/walking/20260908-v47-handoff-verification": {
+      "manifest_sha256": "1dbf4fd963ae83d8c1d5103630c096385af13f6556090243a8b07ded9194ec75",
+      "verified_files": 2
+    },
+    "receipts/walking/20260908-v48-conformance": {
+      "manifest_sha256": "929a2e473b7e926a98b583c7f4d5e5aa33fe01cc7a713632a80623f9adc0b990",
+      "verified_files": 73
+    },
+    "receipts/walking/20260908-v48-replay-parity": {
+      "manifest_sha256": "f64227677f90425895d37ab7c055bcf11e051d1cfa47159a4556a3deb332a1fd",
+      "verified_files": 1
+    },
+    "receipts/walking/20260908-v48-standing-retention-flat": {
+      "manifest_sha256": "0d80058fe772ad7435ecebceeaba8b270aab0271f27ce1e4e7a13a0c381ad41e",
+      "verified_files": 497
+    },
+    "receipts/walking/20260908-v48-standing-retention-repeated": {
+      "manifest_sha256": "e32162207763225186105f1582eb403bbfe24a4370dfc2a374c663d4b227c463",
+      "verified_files": 518
+    },
+    "receipts/walking/20260908-v48-standing-retention-endurance": {
+      "manifest_sha256": "a54858fbf4bfd2a0764e186f1d7a01e9816c79bb198936ff21f9b6df7f320f85",
+      "verified_files": 520
+    },
+    "receipts/walking/20260908-v48-standing-retention-surfaces": {
+      "manifest_sha256": "8be4d37e96b12a7b389539a00032c3dbd20eb5a08390362a3233f499e6f86adc",
+      "verified_files": 549
+    },
+    "receipts/walking/20260908-v48-standing-retention-verification": {
+      "manifest_sha256": "e68309cda121046dfb13ab076b6141798f0356fc8521ef929b96bfeb7804722c",
+      "verified_files": 8
+    },
+    "outputs/walking-standing-retention-v48": {
+      "manifest_sha256": "55ab55dbcad7f5718c5a3db90cbc5029a17f18cc4d137bce2558c6e39f15b196",
+      "verified_files": 5
+    },
+    "outputs/walking-downhill-v48": {
+      "manifest_sha256": "5e610276806e73e5593277e41a1e3cfb88f32cf534f1d45fe5e2d2a3f323c8d9",
+      "verified_files": 4
+    },
+    "/Users/kelly/.codex/maintenance-receipts/20260908T031400Z": {
+      "manifest_sha256": "f6ddf6b1cf3f2cfcecee02448b9a0f4fe2c022b2517e4f471e5286b29067084a",
+      "verified_files": 41
+    }
+  },
+  "fresh_sequence_bank_opened": false,
+  "protected_terrain_opened": false,
+  "physical_calibration": false,
+  "physical_transfer": false,
+  "policy_activated": false,
+  "paid_compute_used": false,
+  "next_step": "Freeze a bounded recovery-feasibility diagnostic under the original physics and gates, with original/new standing comparisons from identical full histories; retain full 180-second candidate-state continuations before another PPO correction.",
+  "boundary": "Completed bounded local activity and terminal negative candidate; no new walking-generalization or physical authority claim."
+}

@@ -1,0 +1,45 @@
+{
+  "id": "v61-four-material-bank",
+  "max_parts": 256,
+  "output": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/material-result.json",
+  "meshes": {
+    "seeed_bearing__configuration__22x16x4": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/complete.json",
+      "expected_source_sha256": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e"
+    },
+    "neck_pitch": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/complete.json",
+      "expected_source_sha256": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae"
+    },
+    "bottom_head_shell": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/complete.json",
+      "expected_source_sha256": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2"
+    },
+    "jaw": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/complete.json",
+      "expected_source_sha256": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf"
+    }
+  },
+  "cavity_witnesses": "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/shell-fragment/local-cavity-witnesses.json",
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/protocol.json": "f7109d90e100fe43af3973a6805c2dd892f9f42f778eff2f3ecde5366d8426ec",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py": "0a597e950e9a86472369b1d0bc2559117cbb2422d1feb88bc96d20f2e979f05e",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/shell-fragment/local-cavity-witnesses.json": "6cc87434412b370a8a1a9e4c2dd153165e39899cbb1c4c4d97eff6f48ab20ddd",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/parts.npz": "56cc84c46eac4bfe6c85546563d8afeb80266f21dd1cda43ec632c2e05cdfde7",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/complete.json": "0bc09c1c4968a522b9b2a1f6f83c060f615cb1b74f741a409efc8ac3437e7374"
+  },
+  "scope": "all four sampled material gates and eight fixed-point cavities; no compiled model or global error bound"
+}

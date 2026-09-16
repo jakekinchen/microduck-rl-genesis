@@ -1,0 +1,248 @@
+{
+  "schema": "microduck.laser-training/v1",
+  "variant": "gait-v3",
+  "proof_class": "first_party_development",
+  "held_out": false,
+  "target_source": "simulated-ground-truth",
+  "args": {
+    "run_id": "laser-gait-20260905-v3",
+    "num_envs": 1024,
+    "iterations": 600,
+    "seed": 26090503
+  },
+  "status": "running",
+  "new_transitions": 14745600,
+  "train_cfg": {
+    "algorithm": {
+      "class_name": "PPO",
+      "clip_param": 0.2,
+      "desired_kl": 0.01,
+      "entropy_coef": 0.01,
+      "gamma": 0.99,
+      "lam": 0.95,
+      "learning_rate": 0.001,
+      "max_grad_norm": 1.0,
+      "num_learning_epochs": 5,
+      "num_mini_batches": 4,
+      "schedule": "adaptive",
+      "use_clipped_value_loss": true,
+      "value_loss_coef": 1.0
+    },
+    "actor": {
+      "class_name": "MLPModel",
+      "hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true,
+      "distribution_cfg": {
+        "class_name": "GaussianDistribution",
+        "init_std": 1.0,
+        "std_type": "scalar"
+      }
+    },
+    "critic": {
+      "class_name": "MLPModel",
+      "hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true
+    },
+    "obs_groups": {
+      "actor": [
+        "policy"
+      ],
+      "critic": [
+        "policy",
+        "privileged"
+      ]
+    },
+    "num_steps_per_env": 24,
+    "save_interval": 50,
+    "logger": "tensorboard",
+    "seed": 26090503,
+    "run_name": "laser-gait-20260905-v3"
+  },
+  "gait": {
+    "version": "laser-gait-v3",
+    "forward_axis": "body -X; HOME face direction",
+    "linear_tracking_std_m_s": 0.08,
+    "angular_tracking_std_rad_s": 0.5,
+    "recent_step_window_s": 1.0,
+    "qualified_air_s": [
+      0.06,
+      0.5
+    ],
+    "qualified_site_clearance_m": 0.008,
+    "swing_site_target_m": 0.015,
+    "hard_stop_fraction_of_range": 0.05,
+    "hard_stop_timeout_s": 0.5,
+    "qpos_penalty_starts_at_fraction_of_half_range": 0.8,
+    "qpos_limit_weight": -4.0,
+    "loaded_foot_slip_weight": -2.0,
+    "action_rate_l2_weight": -0.1,
+    "pose_weight": 0.5,
+    "curriculum": "face-side narrow targets first; moving full-circle by 300 iterations",
+    "boundary": "Reward intervention, not a calibrated simulator or physical acceptance"
+  },
+  "source_commit": "9d23561f28566a4de7cb77fe63ce0c523b18dc6d",
+  "source_sha256": {
+    "scripts/train_laser_gait.py": "d0552bca891e863c05e964a03a8a20abf68259047c7bfc34c2539efcedf10d8e",
+    "microduck/laser_gait_env.py": "6cf335acf404e00661f00eb543fccf880d3186f14df5f2a13029d4ce2c6188e0",
+    "microduck/laser_face_command.py": "630c602220eefd9d1f454b265b4fa13eb9083d052debaf2af48c98d90b5efcbd",
+    "microduck/laser_robust_env.py": "c494897e615c47d846f2aed6cd02ffbf9077a20bab4e0905973d60a31b6786d2",
+    "microduck/laser_env.py": "bb5b126017ade32d5bc921edab3c0b7c7a8afd814b7e6959abd243c139e061d5",
+    "microduck/laser_task.py": "a7796a8fd6576e37a80d5de870b06bdf5d137f4f21cdfa9f5e4dc7cedd400a81",
+    "microduck/velocity_env.py": "e52eec8b2b5fa0df1335d13c14492766ab746a29cfb60795150af83c48f90623",
+    "microduck/velocity_cfg.py": "1a7d58e527cbc4694493739a4efa49b7634906e01036adbc806190c84460c251",
+    "microduck/bam_actuator.py": "840338b249ebfb01a434e76cc49d7c90ebdb734ef5f0b113c63438c77e46bf36",
+    "experiments/laser/gait-correction-v3.json": "7c60d5d66d694bbeb4acb03d693ef76868eef4db08fe79328fd4682f7f125ceb"
+  },
+  "packages": {
+    "genesis-world": "1.3.3",
+    "torch": "2.9.1",
+    "rsl-rl-lib": "5.4.2"
+  },
+  "warm_start": {
+    "path": "receipts/first-party-development/20260904-walking-seed-26090401-v1/training/source-checkpoint.pt",
+    "sha256": "30648b221c189fd2ddd3f81cd0217eb648a372057319497d8c50e2378766dd07",
+    "prior_transitions": 2457600
+  },
+  "env_cfg": {
+    "task": "Laser-Face-First-Gait-v3",
+    "num_envs": 1024,
+    "sim_dt": 0.005,
+    "decimation": 4,
+    "control_hz": 50.0,
+    "episode_length_s": 20.0,
+    "action_scale": 1.0,
+    "num_obs": 61,
+    "num_actions": 14,
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "reward_weights": {
+      "track_linear_velocity": 5.0,
+      "track_angular_velocity": 3.0,
+      "upright": 3.0,
+      "pose": 0.5,
+      "body_ang_vel": -0.05,
+      "angular_momentum": -0.02,
+      "dof_pos_limits": -4.0,
+      "action_rate_l2": -0.1,
+      "air_time": 3.0,
+      "foot_clearance": -2.0,
+      "foot_swing_height": -0.25,
+      "foot_slip": -2.0,
+      "self_collisions": -1.0,
+      "head_pose_tracking": 1.0,
+      "head_pose_bias": 0.0,
+      "body_pose_tracking": 0.0
+    },
+    "target_source": "simulated-ground-truth",
+    "reward_version": "gait-v3",
+    "stop_radius_m": 0.18,
+    "laser_reward_weights": {
+      "robot_progress": 4.0,
+      "settled_stop": 1.0,
+      "fall_event": -5.0
+    },
+    "robustness": {
+      "version": "laser-robust-v1",
+      "ground": "flat",
+      "foot_friction_ratio": [
+        0.55,
+        1.45
+      ],
+      "trunk_mass_ratio": [
+        0.9,
+        1.1
+      ],
+      "motor_kp_ratio": [
+        0.9,
+        1.1
+      ],
+      "motor_electrical_damping_ratio": [
+        0.9,
+        1.1
+      ],
+      "motor_friction_ratio": [
+        0.8,
+        1.2
+      ],
+      "trunk_com_m": 0.006,
+      "head_com_m": 0.004,
+      "imu_delay_control_steps": [
+        0,
+        2
+      ],
+      "joint_velocity_delay_control_steps": [
+        1,
+        2
+      ],
+      "target_speed_m_s": [
+        0.02,
+        0.12
+      ],
+      "target_resample_s": [
+        2,
+        6
+      ],
+      "dropout_s": [
+        0.3,
+        1.2
+      ],
+      "push_interval_s": [
+        4,
+        8
+      ],
+      "push_max_delta_v_m_s": 0.1,
+      "push_ramp_iterations": [
+        100,
+        250
+      ],
+      "approach_gain_s_inv": 3.0,
+      "inherited": "6 degree IMU mounting error, encoder bias, observation noise, armature DR and BAM delays"
+    },
+    "gait": {
+      "version": "laser-gait-v3",
+      "forward_axis": "body -X; HOME face direction",
+      "linear_tracking_std_m_s": 0.08,
+      "angular_tracking_std_rad_s": 0.5,
+      "recent_step_window_s": 1.0,
+      "qualified_air_s": [
+        0.06,
+        0.5
+      ],
+      "qualified_site_clearance_m": 0.008,
+      "swing_site_target_m": 0.015,
+      "hard_stop_fraction_of_range": 0.05,
+      "hard_stop_timeout_s": 0.5,
+      "qpos_penalty_starts_at_fraction_of_half_range": 0.8,
+      "qpos_limit_weight": -4.0,
+      "loaded_foot_slip_weight": -2.0,
+      "action_rate_l2_weight": -0.1,
+      "pose_weight": 0.5,
+      "curriculum": "face-side narrow targets first; moving full-circle by 300 iterations",
+      "boundary": "Reward intervention, not a calibrated simulator or physical acceptance"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "boundary": "Supplemental equal-duration peak comparison. comparison.json retains the original whole-observed-prefix peak differences. Neither changes the preregistered thresholds or admits a behavior.",
+  "comparisons": {
+    "v11-replay": {
+      "common_observed_time_s": 1.64125,
+      "ground_penetration_m": {
+        "peaks": [
+          0.002889838115183752,
+          0.003083610449999958
+        ],
+        "absolute_difference": 0.00019377233481620605
+      },
+      "internal_penetration_m": {
+        "peaks": [
+          0.0,
+          0.0
+        ],
+        "absolute_difference": 0.0
+      }
+    },
+    "v11-passive": {
+      "common_observed_time_s": 0.52875,
+      "ground_penetration_m": {
+        "peaks": [
+          0.008997330373991419,
+          0.010133511321523576
+        ],
+        "absolute_difference": 0.0011361809475321574
+      },
+      "internal_penetration_m": {
+        "peaks": [
+          0.0,
+          0.0
+        ],
+        "absolute_difference": 0.0
+      }
+    },
+    "v62-replay": {
+      "common_observed_time_s": 1.63625,
+      "ground_penetration_m": {
+        "peaks": [
+          0.0030567475750024886,
+          0.003117160213637119
+        ],
+        "absolute_difference": 6.041263863463056e-05
+      },
+      "internal_penetration_m": {
+        "peaks": [
+          0.0,
+          0.0
+        ],
+        "absolute_difference": 0.0
+      }
+    },
+    "v62-passive": {
+      "common_observed_time_s": 0.5425,
+      "ground_penetration_m": {
+        "peaks": [
+          0.01013606382732938,
+          0.009298917485181891
+        ],
+        "absolute_difference": 0.0008371463421474878
+      },
+      "internal_penetration_m": {
+        "peaks": [
+          0.0020336869456974377,
+          0.0020638041611295535
+        ],
+        "absolute_difference": 3.01172154321158e-05
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "positive_rows": 375,
+  "negative_rows": 11625,
+  "sources": [
+    {
+      "source": "receipts/walking/20260908-v51-recovery-comparisons/v50--downhill-3deg-start-1-650--witness-transient",
+      "rows": 125,
+      "kind": "eligible_recovery",
+      "observations_sha256": "de5d13dcec1c5a006a08bff99aea5e6dc987c83f9c07c82ceb76cfd966e39cf5",
+      "actions_sha256": "3a045aeb8da44f1d934e0a49f2a602e1cae014316d15a57c6de1e2a50b049e7b"
+    },
+    {
+      "source": "receipts/walking/20260908-v51-recovery-comparisons/v50--downhill-3deg-start-1-657--witness-v15",
+      "rows": 125,
+      "kind": "eligible_recovery",
+      "observations_sha256": "eb735a2b39b10bed8786cacf3f15b4f51e3884b4ef426dc68df5c132f72fc637",
+      "actions_sha256": "d458733740569af0580d135c619e43485d109dc510b80e2160730c69aab97a30"
+    },
+    {
+      "source": "receipts/walking/20260908-v51-recovery-search/v50--downhill-3deg-start-2-650--retargeted",
+      "rows": 125,
+      "kind": "eligible_recovery",
+      "observations_sha256": "d41b85c36009c2c81b1add1a6a5e73fbef61c5283b15bff97fed83a24c67f02c",
+      "actions_sha256": "729e4138e0200aa3a66cf91f0e0407bb135f616ee8eca89bd84e933c20f5998a"
+    },
+    {
+      "source": "receipts/walking/20260908-v50-retention-flat",
+      "rows": 2625,
+      "kind": "passing_brake_retention",
+      "manifest_sha256": "fcc47a8cc30923e48c116937eb99ae7d4fd05c5775783e15060437b18097526a"
+    },
+    {
+      "source": "receipts/walking/20260908-v50-retention-repeated",
+      "rows": 5250,
+      "kind": "passing_brake_retention",
+      "manifest_sha256": "8ef63f2f1a804fe1b88bca83d930759de24372034c7773995ee8616da4b92d1c"
+    },
+    {
+      "source": "receipts/walking/20260908-v50-retention-endurance",
+      "rows": 2500,
+      "kind": "passing_brake_retention",
+      "manifest_sha256": "93e2c71f6418d6c9b121f3e730163a7ba31b346ef28020f754640d735e4358d1"
+    },
+    {
+      "source": "receipts/walking/20260908-v50-retention-surfaces",
+      "rows": 1250,
+      "kind": "passing_brake_retention",
+      "manifest_sha256": "2cedaf41bafa81c45cc37b5e9b98f53e4dede64004ad0a953f1e7f78384151fa"
+    }
+  ],
+  "boundary": "Exposed demonstrations and successful-brake retention, not held out."
+}

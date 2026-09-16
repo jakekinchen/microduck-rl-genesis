@@ -1,0 +1,32 @@
+{
+  "schema": "microduck.genesis-gait-feedback/v1",
+  "engine": "Genesis CPU",
+  "source_action_file_sha256": "eb58b6b491b56f5b225c049d66a72861b34d1f5658486bcbed68d4afc6230ff3",
+  "captured_dtype": "float32",
+  "matched_action_steps": 400,
+  "original_tensor_bytes_equal_on_replayed_prefix": null,
+  "joint_stop_fraction_after_1s": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.06267806267806268,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "last_root_xyz_m": [
+    0.3858991861343384,
+    0.2570723593235016,
+    0.10231708735227585
+  ],
+  "boundary": "Feedback diagnostic in the training engine. Actions differ from the MuJoCo path; not a physics-isolation replay or physical acceptance.",
+  "first_root_below_7cm_s": null,
+  "policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed"
+}

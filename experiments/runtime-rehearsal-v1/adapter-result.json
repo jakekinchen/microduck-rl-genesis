@@ -1,0 +1,106 @@
+{
+  "schema": "microduck.runtime-command-adapter-verification.v1",
+  "scope": "recorded-state command and raw-target reconstruction; no physics",
+  "cases": [
+    {
+      "case": "heading-offset",
+      "rows": 3300,
+      "exact_rows": {
+        "routing_command": 3300,
+        "policy_command": 3300,
+        "actor_mode": 3300,
+        "motor_reference": 3300
+      },
+      "max_command_error": 0.0,
+      "upstream_threshold_disagreements": 3,
+      "source_sha256": "72daf182efa697214cbea28b3cf737274e51f42e2ac775932b91a2b0934f81f4",
+      "passed": true
+    },
+    {
+      "case": "higher-inertia",
+      "rows": 3300,
+      "exact_rows": {
+        "routing_command": 3300,
+        "policy_command": 3300,
+        "actor_mode": 3300,
+        "motor_reference": 3300
+      },
+      "max_command_error": 0.0,
+      "upstream_threshold_disagreements": 3,
+      "source_sha256": "5bb8ae6c42c772c82bd74c4cfa53305555624c6eadaf38904a58529a5955622a",
+      "passed": true
+    },
+    {
+      "case": "low-friction",
+      "rows": 3300,
+      "exact_rows": {
+        "routing_command": 3300,
+        "policy_command": 3300,
+        "actor_mode": 3300,
+        "motor_reference": 3300
+      },
+      "max_command_error": 0.0,
+      "upstream_threshold_disagreements": 3,
+      "source_sha256": "8ecd7c994700f89fedaa84701d396aee1435e5a3c07adc37ec75faa28c7cdf4e",
+      "passed": true
+    },
+    {
+      "case": "mirrored",
+      "rows": 3300,
+      "exact_rows": {
+        "routing_command": 3300,
+        "policy_command": 3300,
+        "actor_mode": 3300,
+        "motor_reference": 3300
+      },
+      "max_command_error": 0.0,
+      "upstream_threshold_disagreements": 3,
+      "source_sha256": "e47d25d5b069f7f5304c2155482d7c6e6fd188eb2edeb42516ac1aed10c412fd",
+      "passed": true
+    },
+    {
+      "case": "motor-30ms",
+      "rows": 3300,
+      "exact_rows": {
+        "routing_command": 3300,
+        "policy_command": 3300,
+        "actor_mode": 3300,
+        "motor_reference": 3300
+      },
+      "max_command_error": 0.0,
+      "upstream_threshold_disagreements": 3,
+      "source_sha256": "7a47d8721699af4be3ffdfe20b848e1d30305cfabe5379c1dff4c0b50b134af4",
+      "passed": true
+    },
+    {
+      "case": "nominal",
+      "rows": 3300,
+      "exact_rows": {
+        "routing_command": 3300,
+        "policy_command": 3300,
+        "actor_mode": 3300,
+        "motor_reference": 3300
+      },
+      "max_command_error": 0.0,
+      "upstream_threshold_disagreements": 3,
+      "source_sha256": "f7fdd408fbf424c2ec54eae80e2e14d4ffaebe7e15a8950e53f4d789eb032ed8",
+      "passed": true
+    }
+  ],
+  "invalid_action_inputs_rejected": 3,
+  "source_sha256": {
+    "experiments/walking/command_ramp.py": "e74e1ed06776262bc0a79198ba33acad8698024caa7b16a65576da853aadef7a",
+    "microduck/constants.py": "913740a765989104f9c04bf60022199ac376014ba58a2eb2dd4067aabf628e1b",
+    "microduck/heading_headroom_v30.py": "8e3602bd808a988de49d1ef2fffb455744410e1c087a6a32ca676e8cc489522e",
+    "microduck/motion_heading_servo_v28.py": "59a6a270bebeac80845becfc458ed99aa571d7160ed5ef08bc19bef9c4da244e",
+    "microduck/persistent_heading_servo_v24.py": "50609fe99b0dead98bf77a4f285719ccfaa02d2ec442d2e58524a199aac66155",
+    "microduck/filtered_heading_servo.py": "667fff25ec7fc5019e9d59b6d4498e205cafa56e80ee554b926e209b7cc7c0a5",
+    "microduck/heading_servo.py": "5c4a43ffdb111e33082dee6b020c6bdf410589bfeeb614385d464c2bd5c48941"
+  },
+  "adapter_sha256": "a0bdf19066083e092bfbad03261528f7eaae5a825ae9975c17725e172f917857",
+  "verification_script_sha256": "4581f7f28aa2170187de395b9c394dd209db4c588f755ac764fcaa7702ba6143",
+  "passed": true,
+  "body_transport_implemented": false,
+  "robotd_startup_modified": false,
+  "physical_authority": false
+}

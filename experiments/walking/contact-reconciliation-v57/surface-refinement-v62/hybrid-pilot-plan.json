@@ -1,0 +1,28 @@
+{
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/pilot_local_coacd_v62.py": "e06f204986d8401507bb8095f8d0c5345258bba1c373300da34b30c83e313abf",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r2.py": "0ee90a5b131399b7fa242124638da739bcec3c2a5500e1924a5ebb566d5162b0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/pilot_hybrid_v62.py": "f6823e712d9286c126dc39ce32a13ce12e591a65fac2d2c60ffe5932e299d74b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-coacd-pilot/parts.npz": "13490092ce6501d571391a84d212790f9b184796f2ec2dd99cab6f0afd8810ad",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-coacd-pilot/result.json": "e8298322240c8623da38c7777087ad2dc7dc5d18ee17204f28dba78c2a622d44",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/hybrid-pilot-bank.json": "a5c4d0b2ed72e4c875dfcf51800dcb3c86db2612792f12ad3e91d785c2c6d160"
+  },
+  "attempt_marker": "hybrid-pilot-attempt.json",
+  "process_report": "hybrid-pilot-processes.json",
+  "steps": [
+    {
+      "id": "local-hybrid-pilot",
+      "script": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/pilot_hybrid_v62.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/hybrid-pilot-bank.json"
+      ],
+      "wall_seconds": 180,
+      "log": "hybrid-pilot.log"
+    }
+  ]
+}

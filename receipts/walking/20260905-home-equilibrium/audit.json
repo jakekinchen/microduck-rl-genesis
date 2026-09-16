@@ -1,0 +1,53 @@
+{
+  "schema": "microduck.home-equilibrium-diagnostic/v1",
+  "cases": [
+    {
+      "case_id": "axis0-angle0.0",
+      "initial_tilt_rad": 0.0,
+      "duration_s": 1.26,
+      "fell": true,
+      "settled_max_tilt_deg": null,
+      "settled_max_speed_m_s": null,
+      "minimum_actual_joint_margin_rad": 0.296672435438752
+    },
+    {
+      "case_id": "axis0-angle0.02",
+      "initial_tilt_rad": 0.02,
+      "duration_s": 1.24,
+      "fell": true,
+      "settled_max_tilt_deg": null,
+      "settled_max_speed_m_s": null,
+      "minimum_actual_joint_margin_rad": 0.28862138659190195
+    },
+    {
+      "case_id": "axis0-angle-0.02",
+      "initial_tilt_rad": -0.02,
+      "duration_s": 1.24,
+      "fell": true,
+      "settled_max_tilt_deg": null,
+      "settled_max_speed_m_s": null,
+      "minimum_actual_joint_margin_rad": 0.28914887524994837
+    },
+    {
+      "case_id": "axis1-angle0.02",
+      "initial_tilt_rad": 0.02,
+      "duration_s": 1.16,
+      "fell": true,
+      "settled_max_tilt_deg": null,
+      "settled_max_speed_m_s": null,
+      "minimum_actual_joint_margin_rad": 0.2966724354387525
+    },
+    {
+      "case_id": "axis1-angle-0.02",
+      "initial_tilt_rad": -0.02,
+      "duration_s": 1.34,
+      "fell": true,
+      "settled_max_tilt_deg": null,
+      "settled_max_speed_m_s": null,
+      "minimum_actual_joint_margin_rad": 0.2966724354387523
+    }
+  ],
+  "action": "constant 14D zero delta = HOME servo targets",
+  "acceptance_eligible": false,
+  "boundary": "Five-second native rigid-model feasibility diagnostic from five initial tilts. Fixed targets are a diagnostic input, never action assistance to a policy. No walking or physical acceptance."
+}

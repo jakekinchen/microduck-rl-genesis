@@ -1,5 +1,40 @@
 # Training actualization plan
 
+## Active owner priority — document, publish, then review the approach (September 16)
+
+The owner requested a complete repository/evidence synchronization before a
+process review covering progress, tools, frameworks and methodology. This
+priority supersedes automatic continuation of the experiment sequence below.
+No new training or simulation is part of the publication task.
+
+- [ ] Reconcile current documentation, preserve experiment evidence, verify the
+  publication snapshot, and push to `origin/main` with accessible bulk evidence.
+- [ ] Review the full process using
+  [PROCESS_REVIEW_20260916.md](docs/workspace/PROCESS_REVIEW_20260916.md), then
+  choose whether to continue, simplify or replace the proposed next experiment.
+
+The older dated sections retain historical results and proposed next steps.
+Their use of "active" or "next" does not override this owner priority.
+
+## Owner-directed task complete — moving laser course (September 13)
+
+- [x] Diagnose old laser gait versus retained V21/V15 walking evidence.
+- [x] Build solid course geometry and continuously moving target adapter.
+- [x] Run a 12-second physics smoke; retain partial/negative setup evidence.
+- [x] Evaluate the full frozen course and six declared development conditions.
+- [x] Verify exact motor actions, collider coverage and observer invariance.
+- [x] Film one continuous recorded run from several angles; retain wide reference.
+- [x] Report all gait/contact/course results and remaining physical/camera limits.
+
+Plan: `experiments/laser/COURSE-v1.md`. This is scoped owner-requested local
+simulation work; prior walking/terrain prerequisites and protected banks remain
+unchanged. The ordered foundation tasks below remain the long-term queue.
+Result: `experiments/laser/COURSE-RESULTS-v2.md`; all six exposed conditions pass
+the stronger v2 gate-crossing/course and unchanged physical rejection checks.
+Delivered the checked 76-second film plus 66-second continuous wide reference.
+This closes the scoped demonstration request, not behavior-library admission.
+
+
 This is the execution queue for turning the working Genesis/MPS pipeline into a
 reproducible, independently evaluated policy-production system. Work is judged
 by closed gates and durable receipts, not by reward movement or a visually
@@ -13,7 +48,33 @@ loop. Historical role logs are retained as evidence only; they are not active
 instructions. Implement, test, review, and update this task list in the same
 task.
 
-## Current evidence boundary
+## Workspace support delivered — 2026-09-05
+
+- [x] Index 126 local historical sessions and 307 repository log documents;
+  preserve coverage metadata and evidence-backed lessons in
+  `docs/workspace/RETROSPECTIVE.md`.
+- [x] Add `./scripts/duck status`, `doctor`, `new`, `check-spec`, and `studio`;
+  reuse the existing queue and receipt formats rather than creating a role loop.
+- [x] Add a repository skill and behavior/physics workflow; materialize the
+  exact pinned BAM dependency under ignored `.workspace/bam`.
+- [x] Verify the read-only viewer with retained videos, synchronized
+  trajectories, negative case results, training telemetry and focused tests.
+- [x] Add source-bound metadata exchange with Sim2Claw, shared rejection
+  fixtures, and native-reader conformance; retain evidence under
+  `docs/workspace/exchange/`. Link the separately integrated offline diagnostics.
+- [x] Review the requested three parallel cleanup, performance and agent-DX
+  passes; remove redundant JSON traversal and report state, and reduce selected
+  receipt inspection work with measured baseline/candidate equivalence.
+- [x] Share `duck verify` across local use and CI, reject empty discovery, retain
+  explicit skips/results, and verify all 94 tooling tests plus browser flows.
+  Existing full-suite registrations and all 25 running v6 source bindings remain
+  intact. Review and evidence: `docs/refactor-opportunities.md`.
+
+This is workspace tooling evidence. It does not advance M2/M5/M6, accept a
+new behavior, grant physical authority, or replace the active L2/L1 work.
+Validation: `docs/workspace/VALIDATION.md`.
+
+## Historical foundation boundary — September 1 (not current status)
 
 | Gate | State on 2026-09-01 | What is established |
 |---|---|---|
@@ -34,7 +95,628 @@ status requires its own receipt; no earlier status implies a later one.
 Only one milestone should be promoted at a time. A checked implementation item
 does not close its milestone until every exit gate and receipt is present.
 
-### L1 — Laser-following RL (active user priority, 2026-09-04)
+### L2 — Dynamic pursuit and domain randomization (active user priority, 2026-09-05)
+
+Owner gait objection supersedes delivery: the counts below are **target-only**
+development results, not credible walking. Do not promote the current policy.
+
+- [x] Measure actual stepping, loaded-foot slip, non-foot contact, face/command
+  alignment and servo limits on visible cases; identify the causal mismatch.
+- [x] Correct the smallest evidenced root cause in a versioned lane and add
+  reward-independent gait rejection tests before any new training.
+- [x] Verify the intervention with fixed-scale close-up footage and measured
+  simulator contact/clearance/actual-joint telemetry. Stop parking is corrected,
+  but sustained stepping is absent: a terminal negative, not a walking pass.
+- [x] Complete bounded gait-v4 training and the target-AND-gait development
+  suite. Preserve the quarantined wrong-axis v3 attempt and do not resume it.
+  Correct physical forward is +X; the legacy render camera pointed inward.
+  Completed 14,745,600 new transitions; final target 1/4, gait 0/4, combined 0/4.
+  Old policy under the same frozen evaluator: target 4/4, gait 0/4. Reject both.
+  See `experiments/laser/GAIT_DIAGNOSIS.md` and `receipts/laser-gait/`.
+- [x] Freeze basic locomotion before pursuit in `experiments/walking/PLAN.md`
+  and `suite-v1.json`: seven walk/turn/arc-and-stop cases, three explicit timing
+  profiles, no hidden-bank use. A timing factorial identifies a missing
+  motor/sensor latency model in the old evaluator; old results stay unchanged.
+- [ ] **Active: establish basic locomotion before pursuit.** Pass nominal
+  command-conditioned walk/turn/stop cases with useful tracking, sustained
+  bilateral stepping, slip, actual joint/torque margin and settling gates.
+- [x] Pass command-only walking-v1 64×5 smoke with collision-sole reward checks.
+- [x] Stop and preserve walking-v1 when checkpoint250 diagnoses an unsafe
+  reward tradeoff: 8,773,632 logged transitions; four diagnostic failures on
+  torque/slip/stop, not an accepted walking candidate. The old v4 baseline is
+  0/21 on the frozen walking command/timing suite.
+- [x] Pass controlled walking-v2 smoke and retain its deliberate early stop
+  after 7,962,624 logged transitions. Nominal gait/torque/stop improve, but
+  zero-lag turning fails and the neck stays about 88 degrees off neutral.
+- [x] Complete walking-v3 neutral-head control smoke and 18,432,000-transition
+  run. Final posture 21/21, but composite 0/21: yaw 21 failures, stopping 11,
+  lateral speed 9. Stepping/slip/joint/torque gates pass in all cases. Retain
+  the failed candidate and exact training under `receipts/walking/20260905-v3-*`.
+- [x] Complete walking-v5 command response. Add only the
+  non-saturating command-error objective on the tested native-floor base;
+  pass 64×5 smoke then at most 1024×750 training. Fresh visible headings plus
+  all old regressions, same thresholds, final-only candidate. See
+  `experiments/walking/TRACKING-v5.md`. Completed 18,432,000 new transitions;
+  final 6/21 old, 5/21 fresh-heading legacy clock, 6/21 corrected sensor.
+  Head 21/21; joint/torque/slip pass. Remaining heading, stop tilt and one
+  no-op turn mean no complete walking acceptance.
+- [x] Retain v5 64×5 smoke: 7,680 transitions, 62.0 s. The unchanged bounded
+  1024×750 run is completed; no intermediate checkpoint is eligible for promotion.
+- [x] Complete walking-v6 native contact-default intervention. Apply the
+  separately tested 20-ms native constraint default to training, preserving
+  every v5 reward/action/timing function. Pass 64x5 smoke then bounded
+  1024x1500 training from v5 FINAL. Require all three unchanged exposed
+  visible batteries, body clearance, real-observation export parity and video.
+  See `experiments/walking/CONTACT-v6.md`. All three complete protocols are
+  0/21: stop lean remains, plus a long-delay fast-forward fall. Retained,
+  rejected final; this checked implementation item is not walking acceptance.
+- [x] Complete and reject walking-v8 trunk-balance final after v6 evaluation:
+  `experiments/walking/BALANCE-v8.md` adds a non-saturating torso-lean cost.
+  Checkpoint750 improves all four diagnostic motion/stepping/motor cases but
+  stops at 30–34 degrees tilt. The final confirms stop lean and longest-delay
+  falls. V8 64x5 smoke and bounded 1024x1000 run completed;
+  preserve v6 source and allow only its completed retained final as initializer.
+  Full-bank checkpoint150: all stops 5.6–6.4 degrees, no falls, 12/21 old and
+  4/21 old-plus-heading passes. Still diagnostic; yaw drift and three actual
+  hip-yaw margin violations remain. No intermediate selection or hot patch.
+  FINAL: 24,576,000 transitions, 0/21 in each protocol. Trunk stops/falls and
+  actual-motor gates improve, but all 21 cases fail head posture at stop.
+  Current-sensor yaw fails six; heading 9/21 and combined 0/21. Retain the
+  regression and final videos; do not promote the earlier intermediate.
+- [x] Complete and reject **walking-v9 posture-conditioned return** in
+  `experiments/walking/VIABILITY-v9.md`. Positive rewards are conditioned on
+  head/trunk posture; safety penalties stay active and persistent yaw bias
+  gets an explicit cost. No physics/action/timing/threshold change. Reward
+  decomposition passes 2,000 actual samples/183 landings; 50 focused tests pass.
+  64x5 smoke completed 7,680 transitions in 94.6 seconds; all 35 source hashes
+  match. The bounded 1024x750 run completed 18,432,000 transitions from exact
+  v8 FINAL in 3,913.2 seconds; all final protocols/videos are retained.
+  Final old/new/current motor-posture: 12/21, 15/21, 12/21; heading: 7/21,
+  6/21, 7/21; combined 5/21 each. Current-sensor has five falls and nine joint-
+  margin failures despite normal head posture in all 21. Reject the candidate.
+  Full process-isolated regression and 109 current workspace tests pass.
+  Intermediate150: 17/21 motor/posture, 6/21 heading and combined; all head,
+  stop, actual-motor/step/slip gates pass. Four yaw-rate cases and cumulative
+  direction drift remain. Full-CAD 18,900 poses clear by >=14.29 mm. No
+  intermediate selection; conditional v10 timing proposal is not active.
+  Intermediate500: 16/21 motor/posture, 9/21 heading, 7/21 combined; longest-
+  delay fast-forward braking falls at 13.88 s despite normal head posture.
+  Diagnose that stop transition and retain it; do not average away the fall.
+  Require all old and additive heading gates unchanged.
+- [x] **Isolate and correct collision-model semantics before retraining.**
+  Native Torch reproduces control failure while the complete Genesis bank
+  has no falls. Same-action full-collision replay makes nominal slow forward
+  fall at 1.94 s; reduced completes. Audit exact mesh pairs and masks: the
+  bundled full model also changes existing leg masks, not just added geometry.
+  Copied full-CAD floor clearance cannot certify self-contact. Preserve all
+  old gates and model hashes; do not activate the conditional v10 timing draft.
+- [x] Confirm actual raw-CAD battery/leg triangle intersections (six witnesses),
+  not merely convex-hull cavities. Add complete-contact-v11 model and 1-mm
+  all-frame self-interference rejection. Mass/joints/visuals unchanged. All
+  21 old v9 traces fail; corrected closed-loop baseline: self-contact 21/21,
+  no falls/head/stop/joint failures, motor/posture 17/21, full combined 6/21.
+- [x] Test explicit v12 IMU heading command controller with unchanged v9 actor:
+  heading 21/21, combined 17/21. Preserve both requested and policy commands;
+  no post-policy action edits or raw-actor success claim. Four long-delay
+  forward/arc yaw-rate failures remain; thresholds are not relaxed.
+- [x] **Complete and reject v13 persistent device delays on corrected geometry.**
+  `experiments/walking/PERSISTENT-CONTACT-v13.md`. Thirty correction tests,
+  115 workspace tests and the 64x5 smoke pass; 7,680 transitions in 82.12 s,
+  all 123 bound source/mesh files match. Bounded 1024x750 training completed
+  18,432,000 transitions from exact v9 FINAL. Final controller 20/21, raw 4/21
+  combined; long-delay fast forward falls at 14.98 s after STOP at 13 s.
+  Five complete final protocols/videos retained. Separately evaluate
+  the fixed v12 command controller; keep complete body/heading/motor gates.
+  Neither v11 model-only training nor the old v10 draft was run. No fresh
+  development or hidden-bank opening until all current complete gates pass.
+  Intermediate150 diagnosis: 21/21 in every component and combined, with the
+  fixed v12 command servo; worst yaw MAE .1674 rad/s. Actual videos show
+  alternating foot lifts and upright braking. Not ONNX acceptance or selection;
+  finish and evaluate the predeclared final, retaining any later regression.
+  Intermediate500 is 20/21: long-delay arc-left yaw MAE .21777 > .20, with
+  every other gate passing. The negative is retained, not rounded into a pass.
+- [x] Diagnose hidden internal bracing with 200-Hz applied-load replay. V13
+  loads legs against the battery at stand/stop despite small penetration;
+  three moving intervals have no self-load. Original action/qpos bytes replay
+  exactly. V5 FINAL has zero load throughout the same three comparison cases.
+- [x] Test unbraced standing and safe walk/stop transitions with a fixed pair.
+  `experiments/walking/STAND-SWITCH-v14.md`: fixed V5 standing / V13 walking
+  command-selected pair, same V12 heading servo, no blending or action edits.
+  Freeze and baseline-test the new 200-Hz load gate before evaluating the
+  pair. Preserve every motor/posture/heading/body-geometry threshold. Eight
+  focused tests pass. Baseline 0/21; V14 pair 13/21, no falls or internal loads
+  across 75,600 physics samples. Eight stop tilts exceed the unchanged limit
+  by 0.0712–1.5418 degrees. Full videos retained; not accepted walking.
+- [x] **Complete and reject V15 upright standing pair on fresh transitions.** Keep V13 walking fixed;
+  train only a standing component from V5 FINAL with zero commands, V9 posture
+  reward and additive internal-load gating/cost. Five reward tests pass;
+  64x5 smoke completed 7,680 transitions in 83.18 s; all 118 sources match.
+  Exactly 1024x250 local standing training completed all 6,144,000 transitions
+  in 1,416.893 s; retained FINAL249 and all matching source files. Evaluate
+  only FINAL249 in the unchanged pair architecture: all 21 full gate cases
+  now pass, with no falls and worst stop tilt 6.7963 degrees. One allowed
+  20-ms internal-contact transient, not sustained bracing. Fresh 42-window
+  development is 33/42: four fast-forward stop falls, four later windows not
+  run after terminal falls, one repeated right-turn startup braces. Full
+  simulation regressions and 120 expanded-reader workspace tests passed.
+  See `experiments/walking/STANDING-v15.md`; no physical or pursuit acceptance.
+- [x] Retain V16 command-ramp diagnostic: 5/6, tested fast-forward handoffs
+  fixed but repeated right-turn startup still braces for 245 ms.
+- [x] **Reject gentler turn acceleration at actor handoff (V17).** One fixed
+  change: yaw slew .75 rather than 2.5 rad/s^2; translation .75 m/s^2, both
+  actors and all physics/gates unchanged. Run the same six diagnostic windows;
+  result is 4/6: both right-turn startups brace, 240 and 420 ms continuous.
+- [x] **Complete and reject internal-load-aware walking refinement (V18).** Same V15 load
+  objective on all V13 walking commands; no reset/command/model/action change.
+  Freeze seed26090618, LR2e-4, 64x5 smoke then 1024x250, FINAL249 only. Three
+  focused tests pass; schema-only preflight rejection retained, r2 smoke
+  completed 7,680 transitions in 83.06 s, all 140 sources match. Full bounded
+  run completed 6,144,000 transitions in 1,398.282 s; declared FINAL249 only.
+  Native original result is 18/21: no falls and all heading/geometry/internal
+  load/standing gates pass; three long-delay yaw-rate MAEs are .20701–.21839
+  against .20. Expanded repeated bank is 41/42, no falls or sustained internal
+  load. One arc-left startup has 1.04004-mm battery/leg penetration in one
+  frame at 1.44 s versus 1 mm. Preserve all four residual failures. User-requested
+  54-second actual progress video includes two passes and a labeled failure.
+  Fixed V15 stander and V16 ramp; require all 21+42 exposed cases and
+  separately new development before any pass. See `UNBRACED-WALKING-v18.md`.
+- [x] Isolate V18 residuals from retained traces and startup witnesses. Mean
+  yaw bias is small; dominant yaw motion is 3–6 Hz, corroborated by IMU heading
+  derivative. Correction is unsaturated; closed-loop correlation is not cause.
+  Receipt: `20260906-v18-residual-analysis` (no new physics).
+- [x] **Retain partial improvement and reject V19 filtered course correction.**
+  Frozen seven-window diagnostic with exact V18/V15 actors, V16 slew, unchanged
+  physics and gates: 5/7 versus selected V18 baseline 3/7. Only outer heading
+  correction is low-passed at tau=.12 s; motor actions remain unfiltered.
+  Forward12 and the failed startup now pass; long forward20 yaw .21639 and
+  arc-right .20257 still exceed .20. All seven heading/geometry/load gates pass,
+  no falls. Six controller tests pass. Full 21+42 V19 regression was not opened.
+- [x] Correct the V18 recipe record without rewriting frozen evidence: the
+  effective V2 sampler and recorded run config use 25% stop, not the frozen
+  prose's 5%. Three deterministic bucket/bounds/metadata tests pass; both new
+  test modules are registered. All 122 workspace tests also pass. V19 integrity
+  audit verifies 165 files, 147 source bindings and 6,300 complete trajectory rows.
+- [x] **Localize the remaining high-frequency yaw failure across engines.**
+  Freeze a bounded Genesis diagnostic for the exact paired V18/V15 policies
+  and controller, with long-delay forward20/arc-right and a nominal control.
+  Verify effective command/sensor/motor timing, reset and observation history
+  before comparing closed-loop traces. Keep this distinct from fixed-action
+  causal isolation. Select one evidenced intervention, not an open-ended PPO
+  extension or softened gate. Require all original 21 and exposed 42 before
+  a separately frozen new development bank.
+- [x] V20 exact V18/V15/V16/V19 pair in Genesis CPU: both long-delay yaw failures
+  reproduce (.23446 forward20, .20235 arc-right), nominal control .17279.
+  All 2,700 actor inputs and 10,800 motor-delay targets verified; three complete
+  cases, heading passes. Corrected scalar-adapter r2 receipt retained alongside
+  pre-physics failed first attempt. Engine agreement is diagnostic, not calibration.
+- [x] **V21 bounded instantaneous-yaw refinement.** Smoke and full run completed;
+  6,144,000 transitions in 1,100.319 s, FINAL249 only, all 149 sources matching,
+  finite actor/telemetry and learning curves. Original 21/21 and exposed repeated
+  42/42 pass every unchanged gate. All 63 videos retained; no falls or bracing.
+  Long forward20 yaw .16366 and arc-right .14331, below .20. Fixed V15 standing,
+  V16 ramp and V19 heading. No protected bank or physical acceptance.
+- [x] Verify imported physical parameters: 15 bodies' mass, COM and inertia
+  match the authored MJCF within float32 tolerances; .737243-kg total mass.
+  This is import consistency, not measurement calibration.
+- [x] **V22 new physical-combination development**, frozen after all 63 passed:
+  24 windows across nominal, .6x traction, 1.1x mass+inertia and combined profiles,
+  new commands/poses and two continuous repeats. Three factor application,
+  reapplication and model-isolation tests pass. All 24/24 windows pass every gate;
+  measured contact friction .6/1.0, runtime mass .737243/.810967 kg, all videos
+  retained. This is new parameter-combination development on flat terrain, not
+  broad unseen-environment or physical acceptance. No automatic retraining.
+- [x] Close verification: 131 workspace tests and the full 61-group simulation
+  runner complete without failures using pinned BAM. The legacy default-checkpoint
+  ONNX check is not applicable; exact V21 parity is verified on 78,300 actual
+  observations. Separate standing posture passes all 87 windows. No compute remains.
+- [x] **V23 terrain/endurance executed and reviewed.** New terrain 2/12 sessions
+  pass, plus 2/2 flat controls; 9/28 windows, five falls, four explicit unrun
+  windows. Four sustained 180-second walks pass complete audits. Both long
+  compositions fail whole-session heading (64.04/86.44-degree endpoint errors),
+  although original short-window scores remain 24/24. Retain every original
+  score and the additive audit; no broad terrain/composition acceptance.
+- [x] Implement passive measurement intake, split/uncertainty/residual checks and
+  missing-input rejection. Six synthetic tests pass; no measurements invented.
+- [x] **V24 heading persistence diagnostic:** both 180-second compositions pass
+  all windows and whole-session heading (6.15/9.74-degree endpoints). The
+  maximum in one case is 19.937/20 degrees. Both downhill sessions still fall;
+  standing transition repair and broader regression remain open.
+- [x] **Public-data development V25–V30 executed and reviewed.** Three full
+  refinements completed 18,432,000 transitions. V25 walker/stander/both and V27
+  fail the surface admission rule; no trained actor is promoted. Final V30
+  controller passes all 63 flat gates and both 180-second compositions, with
+  6.24/8.95-degree endpoint error, but surface results remain 5/14 and downhill
+  remains 0/2. Preserve all prior negatives and the source-identical disk-error
+  retry. Research, numerical audits and commands: `experiments/walking/PUBLIC-SURFACES-RESULTS.md`.
+- [ ] Isolate the 2/5 robot-level cross-engine comparison using matched support
+  representations and fixed actions before more broad surface training. Public
+  static means and unrelated sensor features do not close Ducky calibration.
+  Then repair slope/soft-surface standing and continuous transition failures;
+  keep V30's improvement limited to its passed flat/endurance scope.
+- [x] V31–V40 bounded contact diagnosis: match native support boxes, audit actual
+  collider hulls and test detector, pruning, integration and compatibility
+  properties separately. Original controls reproduce. V34 closes the sampled
+  collider support mismatch (22 nm maximum); softer robot-level numerical
+  disagreement remains open. Preserve original and changed-lane results.
+- [x] Reject V38 slower STOP deceleration: downhill no longer falls, but all
+  four sessions fail required gates and long compositions acquire falls.
+- [x] V41/V42 focused native standing refinements completed and rejected:
+  384,000 transitions each, exact template/reset checks and finite telemetry.
+  V42 preserves 63/63 flat but passes only 1/4 diagnostic sessions and 3/14
+  exposed surface sessions. Preserve V30, all failures and the unopened fresh
+  bank. Report: `experiments/walking/SEQUENCE-RESULTS-v41.md`; full verification
+  and permanent training evidence: `receipts/walking/20260906-v42-sequence-verification`.
+- [x] V43 full-state handoff diagnosis: 36,622 replay controls, 65 captured/reset
+  states, 130 paired branches and 9,987 exactly reproduced source-branch controls.
+  V42 fails known uphill training starts; both standers fail the late composition
+  state. Reset diversity/horizon alone is not a sufficient evidence-based next
+  intervention. All failures and original gates remain. Full snapshot storage
+  is lossless, deduplicated and covered by the 138-test workspace suite.
+  See `experiments/walking/HANDOFF-RESULTS-v43.md`.
+- [x] V44 native joint full-sequence experiment completed: one 768,000-transition
+  run from V21/V15, full observation/action and switch-history coverage, original
+  physics/controllers and frozen fresh sequence bank. FINAL499 rejected at 0/63
+  flat, 0/4 diagnostic sessions and 0/14 exposed surface sessions. Keep V30;
+  fresh/protected banks remain unrun. All seven freezes, five evaluation/conformance
+  manifests, exact component exports and 5,888 finite learning scalars verify.
+  Report: `experiments/walking/SEQUENCE-RESULTS-v44.md`.
+- [x] V45 component isolation completed on the frozen small exposed bank. All
+  27,703 original/joint action rows and poses reproduce. Walker replacement
+  reproduces knee occupancy; stander replacement causes long-composition falls.
+  Both mixed pairs survive the selected zero-delay case, unlike joint V44.
+  Neither mixed pair passes all gates. See `experiments/walking/COMPONENT-RESULTS-v45.md`.
+- [x] V46 retention correction completed: one 360,000-transition walker-only
+  run with original standing frozen, three timing profiles and normalized margin
+  cost. FINAL249 restores 63/63 flat and both 180-s compositions, retaining the
+  same five passing surfaces (5/14 sessions, 12/28 windows). Downhill remains
+  0/2 with falls and internal bracing; reject promotion and retain V30. All
+  56,398 conformance controls, recorded learning data and source bindings verify.
+  See `experiments/walking/RETENTION-RESULTS-v46.md`; fresh banks remain unrun.
+- [x] V47 diagnosis and V48 standing correction complete. V47 reproduces
+  2,763 downhill controls and 400 continuations from sixteen complete states.
+  V48 completes one 576,000-transition run with the original walker frozen,
+  flat/long-composition replay and complete pre-brake resets. FINAL499 retains
+  63/63 flat gates, but downhill remains 0/2, long compositions regress to 1/2
+  (fall at 86.28 s), and surfaces regress to 4/14 (one lost heading gate).
+  Reject V48; retain V30. All 79,984 paired conformance controls, recorded
+  learning rows and source bindings verify. Storage headroom is restored by
+  authorized snapshot removal and verified archival offload. See
+  `experiments/walking/STANDING-RETENTION-RESULTS-v48.md`.
+- [x] V49 recovery diagnostic complete. Twelve full states reproduce exactly.
+  Original V15 standing recovers both V48 late-failure states through 180 s.
+  A bounded 1,536-candidate search produces four surviving first downhill stops;
+  three pass stopping/posture/contact checks, but all first windows retain
+  pre-stop yaw error above .20 rad/s and all second stops fall at 31.78–31.90 s.
+  One candidate additionally fails final face pitch. No full downhill admission;
+  retain V30. All 245,794 search action/observation rows and full continuations
+  verify. See `experiments/walking/RECOVERY-RESULTS-v49.md`.
+- [x] V50 bounded walking-only yaw correction complete. One 864,000-transition
+  run reduces downhill absolute yaw by 16–17% to .202639/.202257 rad/s, still
+  above the .20 gate. Both first stops fall at 13.98/13.84 s. All 63 flat cases,
+  both 180-second compositions and the original five passing surfaces remain.
+  All 341,008 paired controls, 56,655 replay labels and recorded learning rows
+  verify. Reject promotion; keep V30. The experiment is complete, not walking
+  acceptance. See `experiments/walking/RETENTION-RESULTS-v50.md`.
+- [x] V51/V52 bounded braking activity complete. Three first-stop demonstrations
+  admitted after 384 retargeting candidates; one 2,000-update supervised run
+  survives both successive stops in both downhill sessions. All still fail yaw.
+  Flat retention is 38/63, endurance 0/2 and surface sessions 3/14. Reject V52;
+  keep V30. Every action, source, label and load trace verifies. See
+  `experiments/walking/BRAKING-RESULTS-v52.md`.
+- [x] V53 bounded retention experiment complete; rejected. Nine original-actor
+  continuations supply 930 verified recovery labels. One 8,000-update fit
+  restores 63/63 flat and the original five surface passes. Both 180-second
+  sessions survive, but one fails heading (1/2 accepted). Downhill start 1 falls
+  at 14.24 s; start 2 fails yaw/posture/heading. Keep V30; do not extend V53.
+  See `experiments/walking/BRAKING-RESULTS-v53.md`.
+- [x] Review capability feasibility against primary robotics research and the
+  pinned official MicroDuck recipe. The evidence supports staged locomotion
+  development; it does not prove arbitrary-terrain feasibility. Record upstream
+  model/command/curriculum differences, local V44/V50/V52/V53 limitations and
+  the proposed next comparison in
+  `docs/workspace/CAPABILITY_FEASIBILITY_RESEARCH.md`. Research only; no new
+  training, policy promotion, physical work or protected-bank inspection.
+- [x] **V54 locomotion-recipe comparison frozen, September 9.** Audit pinned
+  upstream command, actuator and collision compatibility; compare the existing
+  routed walking/standing design with a shared command-conditioned actor under
+  declared transition curricula and retention constraints. Freeze initialization,
+  actual experience-coverage requirements, budget, seeds and decision rules before
+  launch. Preserve native physics and every existing gate. Critic/history changes
+  are separate ablations; a preferred recipe is not yet established. Require all
+  old flat/endurance/surface retention plus both complete downhill sessions before
+  broadening terrain evaluation. Protocol: `experiments/walking/RECIPE-COMPARISON-v54.md`.
+  Static upstream audit, 83,700 retained examples, 140 workspace tests and three
+  focused tests pass. The design item is complete; execution/acceptance is below.
+- [x] **Complete and review both V54 recipes.** Both bounded main runs, smokes,
+  initialization, all 72 conformance reports and all eight evaluation banks
+  complete. Routed: 63/63 flat, 1/2 full compositions, 0/2 downhill, original
+  5/14 surfaces. Shared: 63/63, 2/2, 0/2 and original 5/14 respectively; both
+  downhill sessions now survive repeated stops, but yaw and one final face-pitch
+  gate fail. Both arms have long completion in 18/24 training cells. Combined
+  artifact/action/physics-load verification passes; advancement is false.
+  Research/results reassessment: `experiments/walking/RECIPE-RESULTS-v54.md`.
+  Broader terrain and adaptation stages remain unexecuted, not implicitly passed.
+- [x] **V55 yaw-focused shared-policy refinement frozen, September 12.** Use V54 shared
+  as the development starting point and a matched control, with one changed
+  objective group, exact budget/selection rules and unchanged physics. Reduce
+  downhill walking yaw oscillation while retaining all flat, full-composition,
+  surface and newly observed stop behavior. Require yaw <=0.20 rad/s, face pitch
+  <=30 degrees, every other original gate and all 24 long training cells before
+  replication across two further training seeds and terrain expansion. Keep V30
+  retained until prerequisites pass; critic/history interventions remain separate.
+- [x] **Execute and review V55; neither final accepted.** Two final-only 2,592,000-transition arms,
+  control yaw weight 3 and intervention 6, identical V54 shared actor/critic.
+  Read every old regression and both new heading-interpolation sessions; verify
+  all stored action/reward/coverage evidence before selecting the next step.
+  Protocol: `experiments/walking/YAW-REFINEMENT-v55.md`.
+  Both full runs and all 11 banks complete; 63/63 flat and 5/14 surfaces retained
+  by both. Full compositions control 2/2, yaw6 1/2. Yaw6 survives four downhill
+  sessions but all eight windows fail yaw/final face pitch; both arms have
+  long completion in 22/24 training conditions. 201,838 ONNX actions and
+  807,352 load samples verify. See `experiments/walking/YAW-RESULTS-v55.md`.
+- [x] **September 15 community and X research complete.** Trace current posts to
+  pinned primary sources; distinguish simulation results from physical trials.
+  Current upstream VelStand selects its full-collision model, unlike the pinned
+  September 8 audit, and the runtime documents a real-daemon simulator.
+  Findings and capability priorities: `docs/workspace/COMMUNITY_RESEARCH_20260915.md`.
+  No candidate, training run or physical capability was admitted.
+- [x] **September 15–16: upstream comparison and standing feasibility complete.**
+  Audit the new VelStand contact/impact configuration against complete-contact-v11;
+  floor-impact sensors do not replace internal-load rejection. Check local
+  compatibility of the official real-daemon simulator and specify an exact-actor
+  walk/turn/stop rehearsal. Check standing target feasibility under the active
+  downhill physics. Keep source freezes, gates and runtime contract unchanged.
+  Owner explicitly authorized bounded subagents in this request. All simulator
+  launches are serialized in the current task. V56 feasibility protocol:
+  `experiments/walking/posture-feasibility-v56.json`; planned paired ablation:
+  `experiments/walking/POSTURE-REFINEMENT-v56.md`. Upstream source audit lives
+  in `experiments/walking/upstream-audit-v56/`; runtime work in
+  `experiments/runtime-rehearsal-v1/`. No model or policy is promoted by these audits.
+  Thirty complete standing/assisted diagnostic cases do not supply an all-case
+  25-degree witness; 15,000 action rows and 60,000 load samples verify.
+  See `experiments/walking/POSTURE-FEASIBILITY-RESULTS-v56.md`.
+- [x] **Full-CAD static diagnosis and bounded proxy experiment complete.**
+  V11 has 11 active colliders, current upstream 70. The separately versioned
+  V57 model with jaw/neck enabled overlaps in 201/201 copied poses, while the
+  upstream exclusion hides those contacts. Eight original-surface checks locate
+  false-filled cavity witnesses, without proving global clearance. V58's one
+  frozen decomposition configuration generates all four meshes but all fail the
+  0.25mm sampled excess-material limit; bearing part 52 prevents compilation.
+  Eight posthoc cavity-point checks pass without satisfying the missing compiled
+  gates. No retry, dynamics or model admission occurred. Keep the frozen partial report
+  and missing compilation-dependent gates explicit.
+  Evidence: `experiments/walking/contact-reconciliation-v57/README.md`.
+  Negative proxy result: `experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/README.md`.
+- [x] **V59 compiler prerequisite and independent material regression complete.**
+  One fragment's mesh-inertia attribute resolves compilation, preserving all 62
+  checked physical/actuator arrays, names and contact coverage. All 256 compiled
+  proxy shapes preserve source world vertices within 3.740nm; 201 copied poses
+  show no internal overlap. V58's material rejection remains unchanged. The
+  compiler-independent validator reproduces 44 old metric fields exactly and
+  passes nine synthetic tests. `experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/README.md`.
+- [x] **V60 bearing cap comparison complete; component gates pass.**
+  One cap-only 64-to-256 change reduces sampled excess from .343090 to .217129mm.
+  Material checks pass; separately frozen assembly preserves all 62 checked
+  physical/actuator arrays. The partial robot still contains other unrepaired
+  shapes. `experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/README.md`.
+- [x] **V61 remaining-shape comparison complete; no complete model admitted.**
+  One fixed attempt each produces convex/watertight proxies, but sampled excess
+  remains bracket .286053mm, shell .939718mm and jaw .663937mm against .25mm.
+  All eight cavity-point checks pass; all three excess-material failures remain.
+  No retry, complete assembly or dynamics follows this failed material gate.
+  `experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/README.md`.
+- [x] **V62 remaining collision geometry repaired and verified.**
+  Source-aware bracket/jaw partitioning and a bounded local hybrid shell produce
+  614/1,781/4,875 parts; V60's 256-part bearing remains unchanged. All .25mm
+  material limits, eight cavity checks and 4,664,668 additional samples pass.
+  A separately versioned query-unit correction resolves a demonstrated numerical
+  shell false failure; the raw V59 negative is preserved. Complete assembly:
+  7,592 colliders, all 62 physical/actuator arrays exact against V57, unchanged
+  names/contact settings/required pair coverage, no explicit exclusions, 2.884nm
+  maximum vertex discrepancy, zero internal penetration in all 201 copied poses.
+  All 36 V62 tests and 141 workspace tests pass. No dynamics or physical claim.
+  `experiments/walking/contact-reconciliation-v57/surface-refinement-v62/README.md`.
+- [x] **V63 startup/load/performance probes executed; diagnostic gates fail.**
+  Twelve terminal cases and 11,412 physics samples independently verified; all six
+  repeat pairs have identical arrays/dynamics. Both V11 replays reproduce 900
+  retained intervals and 3,600 torque vectors exactly. Fixed HOME falls on both
+  models (~1.24 s); V62 passive stops at 0.540 s on 10.336 mm floor penetration, and
+  its frozen-action replay falls at 2.505 s. The new 3 mm floor gate also rejects
+  the V11 control at 3.975 mm; historical actor scores stay unchanged. Candidate
+  replay p99 is 2.400–2.612 ms over its prefix, not full-duration acceptance.
+  Seven focused tests and 141 workspace tests pass. No new walking/physical claim.
+  `experiments/walking/startup-load-v63/README.md`.
+- [x] **V64 foot–ground and integration diagnostics executed; gates remain negative.**
+  Verified 28 cases, 33,616 physics samples and 14 exact repeat pairs. Eight
+  controls reproduce V63. Matching 27 physical arrays to V11 falls at 2.505 s;
+  disabling only two shell/floor pairs falls at 2.485 s. Sixteen CAD support
+  checks agree. At 2.5/1.25 ms integration V11 falls at 1.705/1.64125 s; V62 also
+  falls. None of four finest-step agreement screens passes. The original 3 mm
+  floor gate stays unchanged. Seven focused and 141 workspace tests pass.
+  Premature isolation attempts are quarantined; fresh cases followed verified
+  controls. `experiments/walking/contact-isolation-v64/README.md`.
+- [x] **V65 force-feedback timing and matched sole impact investigated.**
+  Verified 56 cases, 56,302 physics samples, 21,744 BAM input records and 28 exact
+  repeat pairs. Sixteen controls reproduce V64. Fixed 5 ms force-input age preserves
+  clocks/action bytes/solver state but does not rescue the finer-step replays;
+  all four robot numerical screens fail. All 32 guided CAD ankle drops pass
+  diagnostic checks and eight cross-asset screens agree, but all four finest-step
+  contact screens fail: 0.159468 mm position and 0.126729 mm penetration-peak
+  differences exceed 0.1 mm. Nine focused tests pass. Prior V62–V64 evidence is
+  unchanged. `experiments/walking/feedback-contact-v65/README.md`.
+- [x] **V66 guided first-impact numerical gate passes across all timing buckets.**
+  All 96 cases, 358,400 physics samples and 48 repeat pairs verified; eight
+  controls reproduce V65. Every diagnostic and analytic audit passes. All sixteen
+  0.3125/0.15625 ms buckets meet the frozen 0.1 mm limits: worst position
+  difference 0.064698 mm, penetration-peak difference 0.061970 mm. All 24
+  cross-asset comparisons pass. The coarser pair still fails P2 for every model
+  (12/16 pass), so do not promote it from nominal-phase agreement. Seven focused
+  tests pass. This admits only the fine guided-bench candidate reference.
+  `experiments/walking/impact-convergence-v66/README.md`.
+- [ ] **Proposed; pending process review: isolate full-robot impact integration from BAM feedback.**
+  Reproduce the nominal prefix; capture complete solver/warm-start, BAM target/
+  previous-torque, applied friction/damping and FIFO state at 0.035 s, before
+  both models' first loaded floor interval at 0.040 s. Freeze 0.035–0.135 s
+  windows with exact 5 ms clone controls against V65 before fine-step cases.
+  First replay the same recorded motor/friction/damping schedule at 200 Hz to
+  isolate plant integration; live BAM feedback follows as a separately frozen
+  stage. Keep the robot's numerical limits and physics-rate internal/floor load
+  telemetry. Do not reconstruct complete solver state from qpos/qvel alone.
+  No retained actor/controller changes or full-robot reference admission from
+  the guided bench alone. Open-loop diagnostics are not closed-loop scores.
+- [ ] **Then runtime integration and a new walk/turn/stop rehearsal.**
+  Connect the tested command adapter to the actual BAM evaluator with exact
+  command/actor routing and delay states. Use an explicitly tested immediate
+  standing-policy handoff; fixed HOME has failed in V63. Resolve HOME_RAMP
+  before treating a rollout as a policy score. The existing 3,300 inference rows
+  and 19,800 adapter intervals prove components, not daemon/body compatibility.
+- [x] **Sensor-driven following baseline evaluated.** V3 in
+  `experiments/visual-follow-v1/RESULTS.md` completes 18 sessions and passes 11/16
+  required cases; two stationary negatives correctly reject. Independent
+  RGB/timestamp replay verifies 27,000 commands and 27,000 exact actor outputs.
+  All fault-stop checks pass; combined conditions lose view and three
+  reacquisition cases fail yaw. Original reflection/visibility failures remain.
+- [ ] **Then isolate the first sensor-following failures.** Restore one active
+  property group at a time at combined-case clipping at 1.6 s; separately inspect
+  camera/face pose during stop→reacquire. Freeze a new candidate before rerunning
+  every exposed case. Fresh layouts remain closed and the unused offset-bay
+  factors need a supported, versioned amendment. Proximity-aware navigation,
+  unfamiliar layouts and broader physical admission remain later stages.
+- [ ] **Prepared; blocked on feasibility: neutral-standing face-posture ablation.**
+  Start from the retained V54 shared development state; test a standing-only
+  objective aligned with the physical world-space face metric, with headroom
+  below the unchanged 30-degree gate. Leave yaw, physics, 61D/14D ABI,
+  curriculum and other objectives unchanged. Require all four original/new
+  downhill sessions, all 63 flat cases, both compositions, retained surfaces
+  and every original component gate. V55 yaw6 is an unaccepted survival
+  comparator, not an imitation source. Diagnose remaining yaw/coverage before
+  replication; keep critic/history/advantage interventions separate.
+- [x] **Recovery readiness assessed; non-actuating handoff preview implemented.**
+  `experiments/recovery-readiness-v1/README.md` records 16 synthetic tests,
+  source-pinned official artifact metadata and six missing admission inputs.
+  Contact availability is unknown; sensor quiescence is not ground-support proof.
+- [ ] **Recovery capability gate:** bind or train a first-party seated-to-stand
+  candidate after the full-CAD surface/load gate. Require an admitted sitting
+  endpoint, continuous state, actual loads, no-op/V15 comparisons and separate
+  support rules before extending to prone/supine/side starts or walking handoffs.
+- [ ] **Deferred diagnostic, if selected by that comparison:** freeze one
+  offline fit-feasibility experiment with separate maximum-error
+  gates for successful-stop retention and downhill recovery, including each
+  stop onset. V53 reduces zero-label errors but leaves .077870–.206272 rad
+  errors on the four downhill onset labels. Require both fitting gates before
+  full rollout evaluation; do not call a dataset fit behavior success. Only
+  consider changing this residual's architecture/inputs after diagnosing an
+  infeasible joint fit; this restriction does not select the separate locomotion
+  recipe above. Missing observability is not established. Preserve V15 standing, all 63 flat,
+  both 180-second and five original surface gates, successive downhill stops
+  and the .20 yaw limit. Fresh/protected banks remain closed.
+- [ ] Expand the shared walking capability through the staged carpet/terrain
+  strategy in `docs/workspace/TERRAIN_GENERALIZATION.md`: measured contact
+  models, verified mixed training, unfamiliar physical specimens/layouts,
+  whole-session surface transitions and separate physical admission. Carpet
+  is a curriculum/test family; no carpet-trained or carpet-validated claim yet.
+- [ ] **Physical calibration:** collect/recover Ducky-specific raw measurements,
+  freeze fit/validation identities, calculate uncertainty and held-out residuals.
+  Empty intake currently returns `blocked_inputs`; actuator, inertia, sensing
+  and contact stages remain missing. Local tooling cannot replace measurements.
+- [ ] Before admitting locomotion to the behavior library, execute the complete
+  `docs/workspace/BEHAVIOR_VALIDATION.md` matrix: effective randomized training
+  and testing, unseen terrain/environment families and combined shifts,
+  repeated transitions, preregistered per-bucket statistical decisions, and
+  physics audits/calibration with explicit unresolved gaps. Existing 21+42
+  flat-floor timing cases do not establish broad environmental generalization.
+- [x] Retain v8 64x5 smoke: 7,680 transitions, 59.3 seconds, all 29 source
+  hashes match. Added balance and admission tests pass; full regression suite
+  also passes. Neither smoke nor tests establish behavior acceptance.
+- [x] Add a separate exposed cumulative-heading diagnostic without changing
+  any old score: `HEADING-v1.md`, six tests, retained v5 baseline 3/21 heading
+  and 2/21 old-plus-heading. A yaw-rate MAE pass alone is not straight walking.
+- [x] V6 contact smoke passed: 7,680 transitions, 58.4 seconds, 25 source
+  hashes unchanged. Retained with contact and process-inventory tests in
+  `receipts/walking/20260905-v6-smoke-complete/`. Bounded 36,864,000-transition
+  consolidation run completed; the exact final is retained and all three
+  complete evaluations are retained as 0/21. Preserve source/final-only selection.
+- [x] Isolate native IMU sampling phase on copied state: old IMU was one 5-ms
+  tick stale beyond its declared FIFO. `ConsistentSensorWalkingWorld` refreshes
+  only a separate data copy; fixed motor commands retain byte-identical physics.
+  V3 nominal turn stop improves from 0.095 to 0.0016 m/s, but current-sensor
+  baseline is still 0/21 (head posture 21/21). Preserve old results/protocols.
+- [ ] Reconcile training/evaluator foot clearance and contact semantics with
+  closed-loop traces in both engines; separately audit inertia/contact handling
+  and missing body-floor contacts. Change models only from measured evidence,
+  in a versioned lane, preserving the frozen reference model and action ABI.
+- [x] Add a bounded full-collision native fixed-action check. V5 slow forward
+  and left turn have byte-identical 900-frame poses between reduced and full
+  collision models, with no new sampled contact pairs or falls. Raw and BAM-
+  configured model checks are separate. This does not prove all-case/physical
+  contact fidelity. Evidence: `20260905-v5-full-collision-replay-r2`.
+- [x] Audit compiled HOME link frames, COMs, full inertia tensors and sole
+  geometry; identify Genesis floor masks 65535/65535 versus native 1/1. Add
+  the separately versioned `MicroduckGroundAlignedWalkingEnv`: AST test proves
+  the masks are the only scene-builder change, runtime masks match, and paired
+  100-step replay keeps action/state bytes identical in the tested prefix.
+  Extra body-floor geoms stayed clear in 3,600 retained v2 probe frames; do not
+  misattribute those failed walks to this inactive discrepancy. The already
+  running v3 is not hot-patched; use aligned floor for a future training version.
+- [x] Expose the reduced native model's non-foot-floor rejection blind spot:
+  only feet can contact the floor. Cross-check 3,600 nominal v2/v3 poses against
+  the identical-inertia full-collision CAD variant; no hidden body penetration,
+  minimum clearance 14.95 mm. Keep this copied-state geometry result separate
+  from full-collision dynamics and physical proof.
+- [x] Check v3 final full-body clearance: 18,900 frames, zero penetrations,
+  minimum non-foot mesh clearance 14.27 mm. This is copied-state geometry.
+- [ ] Before any transfer claim, independently evaluate full-collision dynamics,
+  not only foot-contact physics; repeat clearance checks for later candidates.
+- [ ] Before a physical handoff, reconcile the exact installed hardware/runtime
+  with this unfiltered actor and explicit IMU heading controller. The current
+  upstream runtime has different default filtering/action scaling and its
+  relative IMU yaw can drift; do not silently change either side. See
+  `experiments/walking/DEPLOYMENT-GAPS.md` for pinned sources and required
+  measured frame/timing/geometry checks. No hardware has been operated.
+- [x] Localize cross-engine divergence with original byte-identical action
+  arrays at 200 Hz. Identify a 10-ms Genesis versus 20-ms native default
+  constraint-timing mismatch; implement a separately versioned 20-ms model.
+  First-impact root mismatch drops from 0.95 to 0.049 mm and load from 59.96
+  to 31.66 N (native 32.28 N), without changing action bytes. Five-second
+  drift remains about 19 cm: this does not close dynamic/physical fidelity.
+- [ ] Reconcile remaining solver configuration/contact-response differences
+  with source-backed fixed-action diagnostics before another model intervention.
+- [ ] Train and pass that bounded basic-locomotion lane before reintroducing
+  laser pursuit/DR. Keep the v4 reserved bank unopened; do not weaken failed
+  thresholds or promote the no-step candidate.
+
+- [x] Freeze waypoint jumps, circles, figure eights, target loss/reappearance,
+  development seeds, reserved development seeds, and fixed thresholds.
+- [x] Build a local interactive simulation with drag/keyboard target control,
+  real robot/target trails, explicit pause/reset, and fresh-domain trials.
+- [x] Add a separate robust curriculum without changing frozen L1 training:
+  full-direction retargeting, curved motion, dropouts, grip/mass/COM/motor
+  randomization, sensor noise/delays, and gradually introduced small pushes.
+- [x] Pass a 64-environment × 5-iteration smoke.
+- [x] Finish bounded 1024 × 400 PPO, retain checkpoint/export/config/learning log.
+- [x] Diagnose persistent turn-in-place stagnation (first DR pass remains 1/6);
+  retain the negative and run one frozen 1024 × 250 turn-reward correction.
+- [x] Compare fixed candidate against L1 on dynamic development and old
+  regression cases; freeze choice before reserved development evaluation.
+- [x] Preserve all negatives and report randomized comparison, export parity,
+  complete trajectories, actual videos, browser QA, and checksums.
+- [ ] Isolate the early startup fall on development seed 75003 with property
+  ablations and a bounded new intervention; reserve a fresh test bank before
+  further tuning. Do not train against consumed reserved seed 75109.
+- [ ] Extend perception robustness only after the camera loop is connected;
+  do not call floor-color changes visual generalization.
+- [ ] Separately specify obstacle/uneven-terrain tasks and physical validation.
+
+Build record: `experiments/laser/DYNAMIC_BUILD.md`. Current trials are flat-ground,
+privileged-target development, not canonical held-out or physical acceptance.
+Historical target-only result: nominal dynamic 3/3; randomized development 5/6;
+reserved development 11/12 versus the old policy's 2/12; original regression
+6/6. One development and one reserved case fall early. That previously selected
+policy is now explicitly rejected for gait; walking and robustness exit gates
+remain open. Repeated development
+replay matches all 12,078 semantic rows exactly, excluding inference timing.
+
+### L1 — Laser-following RL (target-only simulation result; gait and camera open, 2026-09-04)
 
 This explicit local-development request takes priority over waiting for
 official upstream provenance. It does not close M2/M5/M6 or authorize hardware.
@@ -68,6 +750,40 @@ Receipts: `receipts/laser-follow/`; completed run: `logs/laser-follow-20260904-v
 result: 20.9–21.4 cm stand-off on distant stationary dots, settled near/lost
 targets, and 100% moving-target tracking within 28 cm after the 4 s warmup.
 No falls occurred. This is not camera-loop, blind held-out, or physical proof.
+
+### B1 — Capable behavior library (future owner direction; blocked on L2 foundation)
+
+This is the ordered library backlog, not a second active milestone. Architecture
+and claim boundaries: `docs/workspace/BEHAVIOR_LIBRARY.md`.
+
+- [x] Define behavior contracts, perception/decision/execution boundaries,
+  staged capability families and continuous-state transition acceptance.
+- [x] Make per-behavior testing, domain randomization, generalization and
+  physics validation mandatory in AGENTS/workflow/validation standard. Add
+  v2 draft quality-plan completeness checks; these do not admit capabilities.
+  Seven new lint regressions and all 129 workspace tests pass, without physics.
+- [ ] For each behavior, freeze and execute its applicable six-part validation
+  plan, retain materialized parameter coverage and disjoint environment splits,
+  and show per-bucket/repeat outcomes plus actual success/failure footage.
+  Deterministic controllers and compositions receive randomized tests too.
+  No "fully tested" or "accurate physics" claim beyond the verified envelope.
+- [ ] After walking passes its development gates, implement a small catalog
+  and validator: unavailable by default, exact model/controller/policy IDs,
+  actual inputs, bounded parameters, lifecycle, evidence and failure reasons.
+- [ ] Implement one tested stand/walk/turn/stop composition with one actuator
+  owner, interruption/cancel/timeout handling, and no hidden simulation or
+  action-history resets between behaviors. Test invalid and stale inputs.
+- [ ] Establish safe head attention and the verified camera/sensor contract;
+  the current neutral-head actor is not proof of arbitrary head-motion control.
+- [ ] Restore laser/visual-target following through actual rendered pixels,
+  with target loss, persistence and reacquisition; require pursuit AND gait.
+- [ ] Expand to approach/park, waypoints and obstacle avoidance within measured
+  sensing and physical envelopes; evaluate complete transitions and sequences.
+- [ ] Add recovery and expressive/dynamic behaviors only after reachable states
+  and mechanics are established. Never equate zero actions with safe stopping.
+- [ ] Grow timing/sensor/physics/terrain/visual variation in declared stages;
+  retain worst-bucket outcomes and actual success/failure videos. Keep physical
+  validation separately authorized and calibrated.
 
 ### M0 — Freeze and reproduce the Apple baseline (P0)
 

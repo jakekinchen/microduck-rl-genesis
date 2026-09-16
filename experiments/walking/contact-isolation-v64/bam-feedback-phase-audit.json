@@ -1,0 +1,28 @@
+{
+  "source": ".workspace/bam/bam/mujoco.py",
+  "source_sha256": "62256992ef0d7a4d07e61aff19ff1b930b7e17deb522519f21687764ca02894d",
+  "controller_source_lines": [
+    110,
+    169
+  ],
+  "solver_options": {
+    "integrator": 0,
+    "solver": 2,
+    "cone": 0,
+    "iterations": 100,
+    "tolerance": 1e-08,
+    "ls_iterations": 50,
+    "ls_tolerance": 0.01,
+    "disableflags": 0,
+    "enableflags": 0,
+    "ccd_iterations": 35,
+    "ccd_tolerance": 1e-06
+  },
+  "finding": "Pinned BAM reads current qpos/qvel and retained qfrc_bias, qfrc_constraint, efc_force and qfrc_actuator to update motor torque/friction. The latter are outputs of the preceding solver step. No extra mj_forward is inserted in V64.",
+  "nominal_previous_solver_state_age_s_by_integration_step": {
+    "0.005": 0.005,
+    "0.0025": 0.0025,
+    "0.00125": 0.00125
+  },
+  "boundary": "Source/pipeline inference: command and BAM update periods remain fixed, but integration subdivision also changes the age of retained solver fields read by BAM. V64 does not separately record controller-input generalized-force vectors, so their contribution is unisolated. The experiment measures coupled integration/BAM response, not solver error alone."
+}

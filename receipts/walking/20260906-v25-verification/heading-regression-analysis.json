@@ -1,0 +1,13 @@
+{
+  "case_id": "motor-25ms-sensor-20ms--turn-left-738--repeat-2",
+  "scored_samples": 550,
+  "saturated_at_075_fraction": 1.0,
+  "mean_course_error_rad": 0.48613414495874807,
+  "mean_measured_yaw_rad_s": 0.7175358598314249,
+  "all_21_first_window_action_files_byte_identical_to_original": true,
+  "input_manifests": {
+    "receipts/walking/20260906-v21-exposed-repeated": "9d5680da95437a8b6cceb45bc30e9995ddec072f7e621bb91739759438d2250f",
+    "receipts/walking/20260906-v28-repeated-regression": "064fc25f60657a2e739bb990534cb05b5ef21f2268d41196484c391bd90ce2b8"
+  },
+  "boundary": "Exposed diagnostic. Matching first-window actions does not pass the second-window heading gate."
+}

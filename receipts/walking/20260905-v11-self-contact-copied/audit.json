@@ -1,0 +1,640 @@
+{
+  "schema": "microduck.copied-pose-self-contact-diagnostic/v1",
+  "input_manifest_sha256": "81a42c494f16e5b0131eb3294d4ba721f328e86ffa8000f8ba55708f18c03178",
+  "input_trace_sha256": "c056a6b04ff84970500ed51065b7536d5459c8b1ebd28e6e7f04219b759c532c",
+  "genesis_decimation": true,
+  "genesis_model": "complete",
+  "geometry": [
+    {
+      "native": {
+        "id": 7,
+        "name": "",
+        "body": "trunk_base",
+        "mesh": "power_support",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 1,
+      "genesis_vertices": 287,
+      "native_vertices": 6384,
+      "max_sampled_support_difference_m": 0.00030896973319169234
+    },
+    {
+      "native": {
+        "id": 9,
+        "name": "",
+        "body": "trunk_base",
+        "mesh": "np_f970",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 2,
+      "genesis_vertices": 802,
+      "native_vertices": 10487,
+      "max_sampled_support_difference_m": 0.00011955336309553422
+    },
+    {
+      "native": {
+        "id": 19,
+        "name": "",
+        "body": "hip_l",
+        "mesh": "hip_l",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 3,
+      "genesis_vertices": 310,
+      "native_vertices": 10471,
+      "max_sampled_support_difference_m": 0.00047966285497774144
+    },
+    {
+      "native": {
+        "id": 26,
+        "name": "",
+        "body": "leg",
+        "mesh": "leg",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 4,
+      "genesis_vertices": 252,
+      "native_vertices": 7374,
+      "max_sampled_support_difference_m": 0.00022397533466961272
+    },
+    {
+      "native": {
+        "id": 29,
+        "name": "left_foot_collision",
+        "body": "ankle_left",
+        "mesh": "sole_left",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 5,
+      "genesis_vertices": 282,
+      "native_vertices": 7896,
+      "max_sampled_support_difference_m": 0.00033766339362610327
+    },
+    {
+      "native": {
+        "id": 49,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "top_head_shell",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 6,
+      "genesis_vertices": 759,
+      "native_vertices": 8062,
+      "max_sampled_support_difference_m": 0.0004830328799324546
+    },
+    {
+      "native": {
+        "id": 56,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "jaw",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 7,
+      "genesis_vertices": 542,
+      "native_vertices": 4949,
+      "max_sampled_support_difference_m": 0.00024247313295835266
+    },
+    {
+      "native": {
+        "id": 58,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "bottom_head_shell",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 8,
+      "genesis_vertices": 500,
+      "native_vertices": 10477,
+      "max_sampled_support_difference_m": 0.0005802086786889787
+    },
+    {
+      "native": {
+        "id": 67,
+        "name": "",
+        "body": "hip_l_2",
+        "mesh": "hip_l",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 9,
+      "genesis_vertices": 310,
+      "native_vertices": 10471,
+      "max_sampled_support_difference_m": 0.00039327148576224005
+    },
+    {
+      "native": {
+        "id": 76,
+        "name": "",
+        "body": "leg_2",
+        "mesh": "leg",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 10,
+      "genesis_vertices": 252,
+      "native_vertices": 7374,
+      "max_sampled_support_difference_m": 0.00025015291570582715
+    },
+    {
+      "native": {
+        "id": 79,
+        "name": "right_foot_collision",
+        "body": "ankle_right",
+        "mesh": "sole_right",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      "genesis_id": 11,
+      "genesis_vertices": 252,
+      "native_vertices": 7946,
+      "max_sampled_support_difference_m": 0.0003055432620040696
+    }
+  ],
+  "model_geometry": {
+    "reduced": [
+      {
+        "id": 0,
+        "name": "floor",
+        "body": "world",
+        "mesh": null,
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 7,
+        "name": "",
+        "body": "trunk_base",
+        "mesh": "power_support",
+        "contype": 2,
+        "conaffinity": 2
+      },
+      {
+        "id": 24,
+        "name": "",
+        "body": "leg",
+        "mesh": "leg",
+        "contype": 2,
+        "conaffinity": 2
+      },
+      {
+        "id": 27,
+        "name": "left_foot_collision",
+        "body": "ankle_left",
+        "mesh": "sole_left",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 70,
+        "name": "",
+        "body": "leg_2",
+        "mesh": "leg",
+        "contype": 2,
+        "conaffinity": 2
+      },
+      {
+        "id": 73,
+        "name": "right_foot_collision",
+        "body": "ankle_right",
+        "mesh": "sole_right",
+        "contype": 1,
+        "conaffinity": 1
+      }
+    ],
+    "full": [
+      {
+        "id": 0,
+        "name": "floor",
+        "body": "world",
+        "mesh": null,
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 7,
+        "name": "",
+        "body": "trunk_base",
+        "mesh": "power_support",
+        "contype": 2,
+        "conaffinity": 2
+      },
+      {
+        "id": 9,
+        "name": "",
+        "body": "trunk_base",
+        "mesh": "np_f970",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 19,
+        "name": "",
+        "body": "hip_l",
+        "mesh": "hip_l",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 26,
+        "name": "",
+        "body": "leg",
+        "mesh": "leg",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 29,
+        "name": "left_foot_collision",
+        "body": "ankle_left",
+        "mesh": "sole_left",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 49,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "top_head_shell",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 56,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "jaw",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 58,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "bottom_head_shell",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 67,
+        "name": "",
+        "body": "hip_l_2",
+        "mesh": "hip_l",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 76,
+        "name": "",
+        "body": "leg_2",
+        "mesh": "leg",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 79,
+        "name": "right_foot_collision",
+        "body": "ankle_right",
+        "mesh": "sole_right",
+        "contype": 1,
+        "conaffinity": 1
+      }
+    ],
+    "complete": [
+      {
+        "id": 0,
+        "name": "floor",
+        "body": "world",
+        "mesh": null,
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 7,
+        "name": "",
+        "body": "trunk_base",
+        "mesh": "power_support",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 9,
+        "name": "",
+        "body": "trunk_base",
+        "mesh": "np_f970",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 19,
+        "name": "",
+        "body": "hip_l",
+        "mesh": "hip_l",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 26,
+        "name": "",
+        "body": "leg",
+        "mesh": "leg",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 29,
+        "name": "left_foot_collision",
+        "body": "ankle_left",
+        "mesh": "sole_left",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 49,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "top_head_shell",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 56,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "jaw",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 58,
+        "name": "",
+        "body": "jaw_soft",
+        "mesh": "bottom_head_shell",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 67,
+        "name": "",
+        "body": "hip_l_2",
+        "mesh": "hip_l",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 76,
+        "name": "",
+        "body": "leg_2",
+        "mesh": "leg",
+        "contype": 1,
+        "conaffinity": 1
+      },
+      {
+        "id": 79,
+        "name": "right_foot_collision",
+        "body": "ankle_right",
+        "mesh": "sole_right",
+        "contype": 1,
+        "conaffinity": 1
+      }
+    ]
+  },
+  "cases": {
+    "nominal-20-20ms--forward-08:reduced": {
+      "frames": 900,
+      "pairs": {
+        "leg:leg / trunk_base:power_support": {
+          "samples": 837,
+          "maximum_penetration_m": 0.00029344368090184777,
+          "first_time_s": 0.56
+        }
+      }
+    },
+    "nominal-20-20ms--forward-08:full": {
+      "frames": 900,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 938,
+          "maximum_penetration_m": 0.0012047883961378983,
+          "first_time_s": 0.5
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 12,
+          "maximum_penetration_m": 0.0024979264231383314,
+          "first_time_s": 1.1
+        }
+      }
+    },
+    "nominal-20-20ms--forward-08:complete": {
+      "frames": 900,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 938,
+          "maximum_penetration_m": 0.0012047883961378983,
+          "first_time_s": 0.5
+        },
+        "leg:leg / trunk_base:power_support": {
+          "samples": 837,
+          "maximum_penetration_m": 0.00029344368090184777,
+          "first_time_s": 0.56
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 12,
+          "maximum_penetration_m": 0.0024979264231383314,
+          "first_time_s": 1.1
+        }
+      }
+    },
+    "nominal-20-20ms--forward-08:genesis": {
+      "frames": 900,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 321,
+          "maximum_penetration_m": 0.0012035260442644358,
+          "first_time_s": 0.5
+        },
+        "leg:leg / trunk_base:power_support": {
+          "samples": 228,
+          "maximum_penetration_m": 0.0002904728171415627,
+          "first_time_s": 0.56
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 5,
+          "maximum_penetration_m": 0.002496335655450821,
+          "first_time_s": 1.1
+        }
+      }
+    },
+    "nominal-20-20ms--forward-12:reduced": {
+      "frames": 897,
+      "pairs": {
+        "leg:leg / trunk_base:power_support": {
+          "samples": 225,
+          "maximum_penetration_m": 0.007520057904049614,
+          "first_time_s": 0.58
+        },
+        "leg_2:leg / trunk_base:power_support": {
+          "samples": 22,
+          "maximum_penetration_m": 0.0002859240009280573,
+          "first_time_s": 1.1400000000000001
+        }
+      }
+    },
+    "nominal-20-20ms--forward-12:full": {
+      "frames": 897,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 926,
+          "maximum_penetration_m": 0.009349898434651692,
+          "first_time_s": 0.52
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 96,
+          "maximum_penetration_m": 0.004184382214836872,
+          "first_time_s": 1.1
+        }
+      }
+    },
+    "nominal-20-20ms--forward-12:complete": {
+      "frames": 897,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 926,
+          "maximum_penetration_m": 0.009349898434651692,
+          "first_time_s": 0.52
+        },
+        "leg:leg / trunk_base:power_support": {
+          "samples": 225,
+          "maximum_penetration_m": 0.007520057904049614,
+          "first_time_s": 0.58
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 96,
+          "maximum_penetration_m": 0.004184382214836872,
+          "first_time_s": 1.1
+        },
+        "leg_2:leg / trunk_base:power_support": {
+          "samples": 22,
+          "maximum_penetration_m": 0.0002859240009280573,
+          "first_time_s": 1.1400000000000001
+        }
+      }
+    },
+    "nominal-20-20ms--forward-12:genesis": {
+      "frames": 897,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 302,
+          "maximum_penetration_m": 0.009333916939795017,
+          "first_time_s": 0.52
+        },
+        "leg:leg / trunk_base:power_support": {
+          "samples": 222,
+          "maximum_penetration_m": 0.007493637967854738,
+          "first_time_s": 0.58
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 36,
+          "maximum_penetration_m": 0.004123541992157698,
+          "first_time_s": 1.1
+        },
+        "leg_2:leg / trunk_base:power_support": {
+          "samples": 7,
+          "maximum_penetration_m": 0.00028965994715690613,
+          "first_time_s": 1.1400000000000001
+        }
+      }
+    },
+    "nominal-20-20ms--turn-left:reduced": {
+      "frames": 857,
+      "pairs": {
+        "leg:leg / trunk_base:power_support": {
+          "samples": 187,
+          "maximum_penetration_m": 0.007023332113434296,
+          "first_time_s": 0.58
+        },
+        "leg_2:leg / trunk_base:power_support": {
+          "samples": 26,
+          "maximum_penetration_m": 0.00036363444286781945,
+          "first_time_s": 1.16
+        }
+      }
+    },
+    "nominal-20-20ms--turn-left:full": {
+      "frames": 857,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 788,
+          "maximum_penetration_m": 0.009029099966994534,
+          "first_time_s": 0.52
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 158,
+          "maximum_penetration_m": 0.004715685564428308,
+          "first_time_s": 1.1
+        }
+      }
+    },
+    "nominal-20-20ms--turn-left:complete": {
+      "frames": 857,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 788,
+          "maximum_penetration_m": 0.009029099966994534,
+          "first_time_s": 0.52
+        },
+        "leg:leg / trunk_base:power_support": {
+          "samples": 187,
+          "maximum_penetration_m": 0.007023332113434296,
+          "first_time_s": 0.58
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 158,
+          "maximum_penetration_m": 0.004715685564428308,
+          "first_time_s": 1.1
+        },
+        "leg_2:leg / trunk_base:power_support": {
+          "samples": 26,
+          "maximum_penetration_m": 0.00036363444286781945,
+          "first_time_s": 1.16
+        }
+      }
+    },
+    "nominal-20-20ms--turn-left:genesis": {
+      "frames": 857,
+      "pairs": {
+        "leg:leg / trunk_base:np_f970": {
+          "samples": 242,
+          "maximum_penetration_m": 0.00902879610657692,
+          "first_time_s": 0.52
+        },
+        "leg:leg / trunk_base:power_support": {
+          "samples": 187,
+          "maximum_penetration_m": 0.0070137022994458675,
+          "first_time_s": 0.58
+        },
+        "leg_2:leg / trunk_base:np_f970": {
+          "samples": 45,
+          "maximum_penetration_m": 0.0047096312046051025,
+          "first_time_s": 1.1
+        },
+        "leg_2:leg / trunk_base:power_support": {
+          "samples": 14,
+          "maximum_penetration_m": 0.0003546103835105896,
+          "first_time_s": 1.16
+        }
+      }
+    }
+  },
+  "acceptance_eligible": false,
+  "boundary": "Identical recorded poses copied into explicitly identified native and Genesis models for collision detection. No dynamics, forces or physical truth claim. Contact sample counts are manifold POINTS, not distinct frame counts. Sampled convex support difference is not an exhaustive Hausdorff bound. All original actions and evaluators are unchanged."
+}

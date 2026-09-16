@@ -1,0 +1,127 @@
+{
+  "cases": [
+    {
+      "case_id": "long-30-20ms--forward-20",
+      "Genesis_CPU": {
+        "control_rows": 900,
+        "moving_rows": 551,
+        "yaw_error": {
+          "mean": 0.0025575648792115074,
+          "mean_abs": 0.23446368109248916,
+          "std": 0.28842868851224235,
+          "peak_hz": 2.9945553539019962,
+          "power_over_1hz_fraction": 0.9819343161131796
+        },
+        "heading_correction": {
+          "mean": -0.04374516620239439,
+          "mean_abs": 0.04420402384426076,
+          "std": 0.02836581802200589,
+          "peak_hz": 0.5444646098003629,
+          "power_over_1hz_fraction": 0.172915560290293
+        }
+      },
+      "native_MuJoCo": {
+        "control_rows": 900,
+        "moving_rows": 551,
+        "yaw_error": {
+          "mean": -0.004652737388489574,
+          "mean_abs": 0.21639083995573116,
+          "std": 0.2679859405047996,
+          "peak_hz": 5.9891107078039925,
+          "power_over_1hz_fraction": 0.9892635153657503
+        },
+        "heading_correction": {
+          "mean": -0.09709193804001304,
+          "mean_abs": 0.09709580565575415,
+          "std": 0.02286880622415314,
+          "peak_hz": 0.27223230490018147,
+          "power_over_1hz_fraction": 0.17978584500887318
+        }
+      }
+    },
+    {
+      "case_id": "long-30-20ms--arc-right",
+      "Genesis_CPU": {
+        "control_rows": 900,
+        "moving_rows": 551,
+        "yaw_error": {
+          "mean": -0.0008246214678358901,
+          "mean_abs": 0.2023483517253518,
+          "std": 0.23606029593969152,
+          "peak_hz": 3.176043557168784,
+          "power_over_1hz_fraction": 0.9956346210083779
+        },
+        "heading_correction": {
+          "mean": 0.04195865053014184,
+          "mean_abs": 0.041959629084799985,
+          "std": 0.021060615918462873,
+          "peak_hz": 0.09074410163339383,
+          "power_over_1hz_fraction": 0.19162263109712588
+        }
+      },
+      "native_MuJoCo": {
+        "control_rows": 900,
+        "moving_rows": 551,
+        "yaw_error": {
+          "mean": -0.0030373542372558347,
+          "mean_abs": 0.20256913973929339,
+          "std": 0.2449859063645455,
+          "peak_hz": 3.176043557168784,
+          "power_over_1hz_fraction": 0.993944676803676
+        },
+        "heading_correction": {
+          "mean": 0.031428855635942436,
+          "mean_abs": 0.03249110192222734,
+          "std": 0.020228662801389092,
+          "peak_hz": 0.27223230490018147,
+          "power_over_1hz_fraction": 0.25420384295563947
+        }
+      }
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-20",
+      "Genesis_CPU": {
+        "control_rows": 900,
+        "moving_rows": 551,
+        "yaw_error": {
+          "mean": 0.004313352302700525,
+          "mean_abs": 0.17279273975841675,
+          "std": 0.2222195905779501,
+          "peak_hz": 6.261343012704175,
+          "power_over_1hz_fraction": 0.9968996898052234
+        },
+        "heading_correction": {
+          "mean": -0.05375539711228624,
+          "mean_abs": 0.05375539711228624,
+          "std": 0.013582793443672365,
+          "peak_hz": 0.3629764065335753,
+          "power_over_1hz_fraction": 0.15333772591101066
+        }
+      },
+      "native_MuJoCo": {
+        "control_rows": 900,
+        "moving_rows": 551,
+        "yaw_error": {
+          "mean": 0.00930596520783439,
+          "mean_abs": 0.1534980330021955,
+          "std": 0.19811311404073945,
+          "peak_hz": 6.352087114337568,
+          "power_over_1hz_fraction": 0.9770722959788615
+        },
+        "heading_correction": {
+          "mean": -0.07681158448091138,
+          "mean_abs": 0.07839344464539941,
+          "std": 0.026259893701136,
+          "peak_hz": 0.09074410163339383,
+          "power_over_1hz_fraction": 0.12918555617024768
+        }
+      }
+    }
+  ],
+  "physics_executed": false,
+  "input_manifest_sha256": {
+    "receipts/walking/20260906-v20-paired-genesis-r2": "6ae82e43fe59061471852e1fc9b896d31e0daaa414b0e325d98c17d0c5297e8f",
+    "receipts/walking/20260906-v19-filtered-heading-diagnostic": "0c0a83c5ea9dab64cf77fd0cef1f7131a8148af85d3e5b1b41653dc61d374d5f"
+  },
+  "boundary": "Same paired actors and controller; independent closed loops produce different actions. Spectral association is not fixed-action causality or calibrated physics."
+}

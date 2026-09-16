@@ -1,0 +1,64 @@
+{
+  "schema": "microduck.full-body-clearance-diagnostic/v1",
+  "cases": [
+    {
+      "trace": "receipts/walking/20260905-v3-final/trajectory.jsonl",
+      "sha256": "4db90e51aef25ff599696bfcb65af84eac522355d741f6711c3d0982fbe71292",
+      "frames": 18900,
+      "minimum_nonfoot_floor_clearance_m": 0.01426926599088348,
+      "frames_below_floor_by_1mm": 0,
+      "geometries": [
+        {
+          "name": "",
+          "body": "trunk_base",
+          "minimum_clearance_m": 0.040823553213032,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l",
+          "minimum_clearance_m": 0.054502135561895274,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg",
+          "minimum_clearance_m": 0.01456241289461192,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.14964558561264144,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.14156172757358015,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.14690946229904894,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l_2",
+          "minimum_clearance_m": 0.046087632111351265,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg_2",
+          "minimum_clearance_m": 0.01426926599088348,
+          "penetrating_frames": 0
+        }
+      ]
+    }
+  ],
+  "boundary": "Static full-collision CAD clearance on copied states, not full-collision dynamics or contact force. Reduced native walk model has only two floor-capable robot geoms, so its non-foot-floor-force rejection alone is vacuous.",
+  "physical_transfer_validated": false
+}

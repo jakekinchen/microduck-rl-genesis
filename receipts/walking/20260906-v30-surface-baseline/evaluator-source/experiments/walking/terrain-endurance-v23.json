@@ -1,0 +1,881 @@
+{
+  "schema": "microduck.terrain-endurance-suite/v1",
+  "proof_class": "preregistered_visible_development",
+  "held_out": false,
+  "motor_ticks": 6,
+  "sensor_ticks": 1,
+  "thresholds": {
+    "motor_torque_limit_nm": 0.6405236195572268,
+    "torque_saturation_fraction_max": 0.02,
+    "actual_joint_margin_rad_min": 0.02,
+    "mean_abs_forward_error_m_s": 0.05,
+    "mean_abs_yaw_error_rad_s": 0.2,
+    "mean_abs_lateral_velocity_m_s": 0.05,
+    "stop_max_speed_m_s": 0.04,
+    "stop_max_yaw_rate_rad_s": 0.15,
+    "stop_max_tilt_deg": 15,
+    "simultaneous_flight_fraction": 0.05,
+    "turn_max_xy_excursion_m": 0.2,
+    "minimum_bilateral_step_coverage": 0.6
+  },
+  "sessions": [
+    {
+      "id": "flat-control-start-1",
+      "bank": "terrain",
+      "bucket": "flat-control",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.0,
+      "seed": 26090623,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "flat-control-start-2",
+      "bank": "terrain",
+      "bucket": "flat-control",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.12,
+      "seed": 26090624,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "uphill-3deg-start-1",
+      "bank": "terrain",
+      "bucket": "uphill-3deg",
+      "terrain": {
+        "kind": "slope",
+        "axis": "y",
+        "degrees": -3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.0,
+      "seed": 26090623,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "uphill-3deg-start-2",
+      "bank": "terrain",
+      "bucket": "uphill-3deg",
+      "terrain": {
+        "kind": "slope",
+        "axis": "y",
+        "degrees": -3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.12,
+      "seed": 26090624,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "downhill-3deg-start-1",
+      "bank": "terrain",
+      "bucket": "downhill-3deg",
+      "terrain": {
+        "kind": "slope",
+        "axis": "y",
+        "degrees": 3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.0,
+      "seed": 26090623,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "downhill-3deg-start-2",
+      "bank": "terrain",
+      "bucket": "downhill-3deg",
+      "terrain": {
+        "kind": "slope",
+        "axis": "y",
+        "degrees": 3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.12,
+      "seed": 26090624,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "cross-slope-3deg-start-1",
+      "bank": "terrain",
+      "bucket": "cross-slope-3deg",
+      "terrain": {
+        "kind": "slope",
+        "axis": "x",
+        "degrees": 3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.0,
+      "seed": 26090623,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "cross-slope-3deg-start-2",
+      "bank": "terrain",
+      "bucket": "cross-slope-3deg",
+      "terrain": {
+        "kind": "slope",
+        "axis": "x",
+        "degrees": 3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.12,
+      "seed": 26090624,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "seams-3mm-start-1",
+      "bank": "terrain",
+      "bucket": "seams-3mm",
+      "terrain": {
+        "kind": "seams"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.0,
+      "seed": 26090623,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "seams-3mm-start-2",
+      "bank": "terrain",
+      "bucket": "seams-3mm",
+      "terrain": {
+        "kind": "seams"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.12,
+      "seed": 26090624,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "uneven-2to6mm-start-1",
+      "bank": "terrain",
+      "bucket": "uneven-2to6mm",
+      "terrain": {
+        "kind": "tiles",
+        "layout_seed": 2609062301
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.0,
+      "seed": 26090623,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "uneven-2to6mm-start-2",
+      "bank": "terrain",
+      "bucket": "uneven-2to6mm",
+      "terrain": {
+        "kind": "tiles",
+        "layout_seed": 2609062301
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.12,
+      "seed": 26090624,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "uneven-combined-start-1",
+      "bank": "terrain",
+      "bucket": "uneven-combined",
+      "terrain": {
+        "kind": "tiles",
+        "layout_seed": 2609062302
+      },
+      "domain": {
+        "mass_inertia_scale": 1.1,
+        "sliding_friction_scale": 0.6
+      },
+      "yaw": 0.0,
+      "seed": 26090623,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "uneven-combined-start-2",
+      "bank": "terrain",
+      "bucket": "uneven-combined",
+      "terrain": {
+        "kind": "tiles",
+        "layout_seed": 2609062302
+      },
+      "domain": {
+        "mass_inertia_scale": 1.1,
+        "sliding_friction_scale": 0.6
+      },
+      "yaw": 0.12,
+      "seed": 26090624,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "sustained-nominal-start-1",
+      "bank": "endurance",
+      "bucket": "sustained-nominal",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": -0.4,
+      "seed": 260906230,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 180,
+          "move_start_s": 1,
+          "stop_start_s": 175
+        }
+      ]
+    },
+    {
+      "id": "sustained-nominal-start-2",
+      "bank": "endurance",
+      "bucket": "sustained-nominal",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.4,
+      "seed": 260906231,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 180,
+          "move_start_s": 1,
+          "stop_start_s": 175
+        }
+      ]
+    },
+    {
+      "id": "sustained-combined-start-1",
+      "bank": "endurance",
+      "bucket": "sustained-combined",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.1,
+        "sliding_friction_scale": 0.6
+      },
+      "yaw": -0.4,
+      "seed": 260906230,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 180,
+          "move_start_s": 1,
+          "stop_start_s": 175
+        }
+      ]
+    },
+    {
+      "id": "sustained-combined-start-2",
+      "bank": "endurance",
+      "bucket": "sustained-combined",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.1,
+        "sliding_friction_scale": 0.6
+      },
+      "yaw": 0.4,
+      "seed": 260906231,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 180,
+          "move_start_s": 1,
+          "stop_start_s": 175
+        }
+      ]
+    },
+    {
+      "id": "continuous-composition-start-1",
+      "bank": "endurance",
+      "bucket": "continuous-composition",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": -0.4,
+      "seed": 260906230,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0,
+            0,
+            0.35
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            0.3
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.17,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0,
+            0,
+            -0.35
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            -0.3
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0,
+            0,
+            0.35
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            0.3
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.17,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    },
+    {
+      "id": "continuous-composition-start-2",
+      "bank": "endurance",
+      "bucket": "continuous-composition",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.4,
+      "seed": 260906231,
+      "windows": [
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0,
+            0,
+            0.35
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            0.3
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.17,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0,
+            0,
+            -0.35
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            -0.3
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0,
+            0,
+            0.35
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            0.3
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        },
+        {
+          "command": [
+            0.17,
+            0,
+            0
+          ],
+          "duration_s": 18,
+          "move_start_s": 1,
+          "stop_start_s": 13
+        }
+      ]
+    }
+  ],
+  "decision": "Every required window, every 30-second sustained tracking bucket, final standing posture, geometry, internal-load, heading and terrain exposure gate must pass. A session fails on any failed window. No reset within a session. Missing windows fail. Independent sessions, not their windows, are trial units. Two specified initial headings per bucket are a bounded deterministic probe, not a population reliability estimate.",
+  "claim_boundary": "Previously unseen terrain families for fixed V21/V15; results become exposed. No protected final bank. Provisional physics; no measured hardware accuracy or physical endurance, thermal or battery-depletion claim."
+}

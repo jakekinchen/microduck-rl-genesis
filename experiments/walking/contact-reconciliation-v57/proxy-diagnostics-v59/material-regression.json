@@ -1,0 +1,2574 @@
+{
+  "scope": "sampled source/proxy material diagnostic; not a global error bound or model admission",
+  "physics_steps": 0,
+  "model_compiled": false,
+  "model_admitted": false,
+  "physical_acceptance": false,
+  "settings": {
+    "sampled_tolerance_m": 0.00025,
+    "source_vertex_samples": 4096,
+    "source_face_centroid_samples": 4096,
+    "proxy_vertices": "all",
+    "proxy_face_centroid_samples": 4096,
+    "maximum_parts_per_mesh": 64,
+    "selection": "evenly spaced unique deterministic indices including endpoints",
+    "convex_half_space_epsilon_m": 1e-09
+  },
+  "validator_sha256": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "trimesh": "5.1.0"
+  },
+  "meshes": {
+    "bottom_head_shell": {
+      "status": "verified_sampled_geometry",
+      "passed": false,
+      "inputs": {
+        "source_stl": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl",
+          "sha256": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2"
+        },
+        "parts_npz": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/bottom_head_shell/parts.npz",
+          "sha256": "82b0d4474a4715eb941a730e90e0997d1fd6707b69e6f4d9e006df14a3a13640"
+        },
+        "complete_json": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/bottom_head_shell/complete.json",
+          "sha256": "cb48b01388df8f7c9603de4988ab86d57ec3c32f7921223f8879e3627962c481"
+        }
+      },
+      "failures": [
+        "sampled_excess_material"
+      ],
+      "errors": [],
+      "parts": 64,
+      "source_watertight": true,
+      "source_winding_consistent": true,
+      "all_parts_watertight": true,
+      "all_parts_convex": true,
+      "vertices": 7003,
+      "faces": 13750,
+      "part_geometry": [
+        {
+          "part": 0,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.4657161512194435e-06,
+          "convex_hull_volume_m3": 4.465716151219442e-06,
+          "minimum_centered_singular_value_m": 0.008266233160121908
+        },
+        {
+          "part": 1,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.600033920671998e-07,
+          "convex_hull_volume_m3": 7.600033920671995e-07,
+          "minimum_centered_singular_value_m": 0.011988410553265367
+        },
+        {
+          "part": 2,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.3400634636775063e-06,
+          "convex_hull_volume_m3": 1.3400634636775063e-06,
+          "minimum_centered_singular_value_m": 0.011686758808713844
+        },
+        {
+          "part": 3,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.628121201069548e-07,
+          "convex_hull_volume_m3": 4.628121201069543e-07,
+          "minimum_centered_singular_value_m": 0.007860571263051482
+        },
+        {
+          "part": 4,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0742553609418177e-06,
+          "convex_hull_volume_m3": 1.0742553609418169e-06,
+          "minimum_centered_singular_value_m": 0.01569674016944306
+        },
+        {
+          "part": 5,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.8557344672844403e-06,
+          "convex_hull_volume_m3": 1.8557344672844416e-06,
+          "minimum_centered_singular_value_m": 0.01119835273718288
+        },
+        {
+          "part": 6,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.786636955567952e-06,
+          "convex_hull_volume_m3": 1.786636955567952e-06,
+          "minimum_centered_singular_value_m": 0.012932060016602024
+        },
+        {
+          "part": 7,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.718816965769737e-07,
+          "convex_hull_volume_m3": 6.718816965769736e-07,
+          "minimum_centered_singular_value_m": 0.024830214629357673
+        },
+        {
+          "part": 8,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0696216289903676e-06,
+          "convex_hull_volume_m3": 1.0696216289903676e-06,
+          "minimum_centered_singular_value_m": 0.012855560181938676
+        },
+        {
+          "part": 9,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.942822617025647e-07,
+          "convex_hull_volume_m3": 1.942822617025646e-07,
+          "minimum_centered_singular_value_m": 0.00636665188818177
+        },
+        {
+          "part": 10,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.048864203030969e-07,
+          "convex_hull_volume_m3": 6.048864203030975e-07,
+          "minimum_centered_singular_value_m": 0.0127138975983209
+        },
+        {
+          "part": 11,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.58900278446102e-07,
+          "convex_hull_volume_m3": 5.589002784461041e-07,
+          "minimum_centered_singular_value_m": 0.009285701542395325
+        },
+        {
+          "part": 12,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.6903852761173516e-07,
+          "convex_hull_volume_m3": 4.6903852761173585e-07,
+          "minimum_centered_singular_value_m": 0.011057846995982985
+        },
+        {
+          "part": 13,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.8588768252215207e-06,
+          "convex_hull_volume_m3": 1.8588768252215197e-06,
+          "minimum_centered_singular_value_m": 0.018758784508271634
+        },
+        {
+          "part": 14,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.911510226970436e-07,
+          "convex_hull_volume_m3": 5.911510226970437e-07,
+          "minimum_centered_singular_value_m": 0.009537182062507688
+        },
+        {
+          "part": 15,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.935181843973431e-07,
+          "convex_hull_volume_m3": 7.935181844695092e-07,
+          "minimum_centered_singular_value_m": 0.03850196623099093
+        },
+        {
+          "part": 16,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.2178327572080115e-06,
+          "convex_hull_volume_m3": 1.217832757208009e-06,
+          "minimum_centered_singular_value_m": 0.011298656841667448
+        },
+        {
+          "part": 17,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.019820739905969e-07,
+          "convex_hull_volume_m3": 3.019820739905971e-07,
+          "minimum_centered_singular_value_m": 0.012882361220425395
+        },
+        {
+          "part": 18,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.955045314179038e-07,
+          "convex_hull_volume_m3": 5.955045314179054e-07,
+          "minimum_centered_singular_value_m": 0.011616235280186661
+        },
+        {
+          "part": 19,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4471465544860993e-07,
+          "convex_hull_volume_m3": 1.4471465544860996e-07,
+          "minimum_centered_singular_value_m": 0.011977298082179559
+        },
+        {
+          "part": 20,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.510458599615342e-07,
+          "convex_hull_volume_m3": 4.5104585996153414e-07,
+          "minimum_centered_singular_value_m": 0.01316766347745888
+        },
+        {
+          "part": 21,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.343238611058338e-07,
+          "convex_hull_volume_m3": 2.343238611058338e-07,
+          "minimum_centered_singular_value_m": 0.007561485035436308
+        },
+        {
+          "part": 22,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0369703025994266e-06,
+          "convex_hull_volume_m3": 1.0369703025994264e-06,
+          "minimum_centered_singular_value_m": 0.00959431252190948
+        },
+        {
+          "part": 23,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.6545839754190607e-07,
+          "convex_hull_volume_m3": 1.654583975419062e-07,
+          "minimum_centered_singular_value_m": 0.008598690421008737
+        },
+        {
+          "part": 24,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.444856443362132e-07,
+          "convex_hull_volume_m3": 3.444856443362133e-07,
+          "minimum_centered_singular_value_m": 0.00821923416653158
+        },
+        {
+          "part": 25,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.865023117219684e-07,
+          "convex_hull_volume_m3": 4.86502311721968e-07,
+          "minimum_centered_singular_value_m": 0.006454521950264639
+        },
+        {
+          "part": 26,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.0323295413386387e-07,
+          "convex_hull_volume_m3": 2.0323295413386394e-07,
+          "minimum_centered_singular_value_m": 0.009427583125638718
+        },
+        {
+          "part": 27,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.572192474464792e-08,
+          "convex_hull_volume_m3": 6.572192474464792e-08,
+          "minimum_centered_singular_value_m": 0.012690706597591361
+        },
+        {
+          "part": 28,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.086112042208025e-07,
+          "convex_hull_volume_m3": 6.086112042208024e-07,
+          "minimum_centered_singular_value_m": 0.01229059339225213
+        },
+        {
+          "part": 29,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.93424018445609e-07,
+          "convex_hull_volume_m3": 6.934240184456093e-07,
+          "minimum_centered_singular_value_m": 0.018934120268838738
+        },
+        {
+          "part": 30,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.815291139668522e-08,
+          "convex_hull_volume_m3": 9.815291139823806e-08,
+          "minimum_centered_singular_value_m": 0.004909503963342868
+        },
+        {
+          "part": 31,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.775649955213893e-07,
+          "convex_hull_volume_m3": 1.775649955213892e-07,
+          "minimum_centered_singular_value_m": 0.008188623523419897
+        },
+        {
+          "part": 32,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1448503838397097e-06,
+          "convex_hull_volume_m3": 1.1448503838777592e-06,
+          "minimum_centered_singular_value_m": 0.016045415789819526
+        },
+        {
+          "part": 33,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.5511380194148963e-07,
+          "convex_hull_volume_m3": 1.5511380194148934e-07,
+          "minimum_centered_singular_value_m": 0.005250249665227435
+        },
+        {
+          "part": 34,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.103285033166693e-07,
+          "convex_hull_volume_m3": 1.103285033166693e-07,
+          "minimum_centered_singular_value_m": 0.004774965112173926
+        },
+        {
+          "part": 35,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.0163570382999404e-06,
+          "convex_hull_volume_m3": 2.0163570382999417e-06,
+          "minimum_centered_singular_value_m": 0.012925579404103039
+        },
+        {
+          "part": 36,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.079847628122785e-07,
+          "convex_hull_volume_m3": 2.079847628122778e-07,
+          "minimum_centered_singular_value_m": 0.005327363135308696
+        },
+        {
+          "part": 37,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.3378789454128543e-07,
+          "convex_hull_volume_m3": 2.3378789454128538e-07,
+          "minimum_centered_singular_value_m": 0.011521697254249006
+        },
+        {
+          "part": 38,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.9137008400649464e-07,
+          "convex_hull_volume_m3": 1.9137008400649466e-07,
+          "minimum_centered_singular_value_m": 0.0073839874249600704
+        },
+        {
+          "part": 39,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.394906008464293e-07,
+          "convex_hull_volume_m3": 5.39490600846429e-07,
+          "minimum_centered_singular_value_m": 0.009963023397768505
+        },
+        {
+          "part": 40,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.914204313702272e-07,
+          "convex_hull_volume_m3": 6.914204313702274e-07,
+          "minimum_centered_singular_value_m": 0.01161340767947777
+        },
+        {
+          "part": 41,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.764613761289182e-07,
+          "convex_hull_volume_m3": 6.764613761289182e-07,
+          "minimum_centered_singular_value_m": 0.009662790671167097
+        },
+        {
+          "part": 42,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.855839003094408e-07,
+          "convex_hull_volume_m3": 9.855839003094404e-07,
+          "minimum_centered_singular_value_m": 0.009899644596000989
+        },
+        {
+          "part": 43,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.228671746196523e-07,
+          "convex_hull_volume_m3": 3.2286717461965256e-07,
+          "minimum_centered_singular_value_m": 0.012113345705396055
+        },
+        {
+          "part": 44,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.73176113993448e-07,
+          "convex_hull_volume_m3": 8.73176114168485e-07,
+          "minimum_centered_singular_value_m": 0.01135267780506969
+        },
+        {
+          "part": 45,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.498238587239182e-07,
+          "convex_hull_volume_m3": 5.498238587239188e-07,
+          "minimum_centered_singular_value_m": 0.008972172972612066
+        },
+        {
+          "part": 46,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.6687281392034073e-07,
+          "convex_hull_volume_m3": 2.668728139203404e-07,
+          "minimum_centered_singular_value_m": 0.011228895320946772
+        },
+        {
+          "part": 47,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.7194369445228347e-08,
+          "convex_hull_volume_m3": 2.719436944522834e-08,
+          "minimum_centered_singular_value_m": 0.002753132565173278
+        },
+        {
+          "part": 48,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.597188844457822e-07,
+          "convex_hull_volume_m3": 9.597188848692913e-07,
+          "minimum_centered_singular_value_m": 0.017253215256931895
+        },
+        {
+          "part": 49,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.001190906647787e-08,
+          "convex_hull_volume_m3": 4.0011909308820095e-08,
+          "minimum_centered_singular_value_m": 0.0028878802971409813
+        },
+        {
+          "part": 50,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.720046582770796e-07,
+          "convex_hull_volume_m3": 4.720046582770799e-07,
+          "minimum_centered_singular_value_m": 0.017069422817446975
+        },
+        {
+          "part": 51,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.098680615405385e-07,
+          "convex_hull_volume_m3": 3.098680617165595e-07,
+          "minimum_centered_singular_value_m": 0.00821515934602837
+        },
+        {
+          "part": 52,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.518298626246218e-08,
+          "convex_hull_volume_m3": 8.51829862624622e-08,
+          "minimum_centered_singular_value_m": 0.005117447444758654
+        },
+        {
+          "part": 53,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.5453749773626324e-07,
+          "convex_hull_volume_m3": 4.545374977362632e-07,
+          "minimum_centered_singular_value_m": 0.008979834604821232
+        },
+        {
+          "part": 54,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.502309791245614e-07,
+          "convex_hull_volume_m3": 5.502309791245614e-07,
+          "minimum_centered_singular_value_m": 0.011546281943458423
+        },
+        {
+          "part": 55,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.77351486518235e-07,
+          "convex_hull_volume_m3": 9.773514865182359e-07,
+          "minimum_centered_singular_value_m": 0.010968392930905123
+        },
+        {
+          "part": 56,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.3375456517030773e-07,
+          "convex_hull_volume_m3": 2.3375456517030847e-07,
+          "minimum_centered_singular_value_m": 0.006196787196839064
+        },
+        {
+          "part": 57,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.5099929087132777e-07,
+          "convex_hull_volume_m3": 1.509992908713278e-07,
+          "minimum_centered_singular_value_m": 0.006637727733364846
+        },
+        {
+          "part": 58,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.783978834879197e-07,
+          "convex_hull_volume_m3": 3.7839788348791924e-07,
+          "minimum_centered_singular_value_m": 0.004780874441685325
+        },
+        {
+          "part": 59,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4251457442307098e-07,
+          "convex_hull_volume_m3": 1.4251457442307098e-07,
+          "minimum_centered_singular_value_m": 0.005531156507309468
+        },
+        {
+          "part": 60,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.4411227059552907e-07,
+          "convex_hull_volume_m3": 4.4411227059552864e-07,
+          "minimum_centered_singular_value_m": 0.017562603713134242
+        },
+        {
+          "part": 61,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.147742964518143e-07,
+          "convex_hull_volume_m3": 5.147742964518142e-07,
+          "minimum_centered_singular_value_m": 0.009948967552778267
+        },
+        {
+          "part": 62,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.311469779933125e-07,
+          "convex_hull_volume_m3": 6.311469779933124e-07,
+          "minimum_centered_singular_value_m": 0.010688868707939853
+        },
+        {
+          "part": 63,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.353231117713746e-07,
+          "convex_hull_volume_m3": 2.3532311177137464e-07,
+          "minimum_centered_singular_value_m": 0.015621382323250726
+        }
+      ],
+      "source_samples": 8192,
+      "proxy_samples": 11099,
+      "source_samples_outside_union": 1767,
+      "max_sampled_missing_material_m": 0.00014543085572378339,
+      "max_sampled_excess_material_m": 0.002468068334369743,
+      "sampled_tolerance_m": 0.00025
+    },
+    "jaw": {
+      "status": "verified_sampled_geometry",
+      "passed": false,
+      "inputs": {
+        "source_stl": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl",
+          "sha256": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf"
+        },
+        "parts_npz": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/jaw/parts.npz",
+          "sha256": "9f4ac4b5106a1ede7efd0238e118ab21545ca12280a898e355de55411f34806a"
+        },
+        "complete_json": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/jaw/complete.json",
+          "sha256": "f8490901a8405f97c54155aae9594c074fda676ac2a2ba2338f392bf9e947cc1"
+        }
+      },
+      "failures": [
+        "sampled_excess_material"
+      ],
+      "errors": [],
+      "parts": 64,
+      "source_watertight": true,
+      "source_winding_consistent": true,
+      "all_parts_watertight": true,
+      "all_parts_convex": true,
+      "vertices": 5417,
+      "faces": 10578,
+      "part_geometry": [
+        {
+          "part": 0,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.76850793445088e-07,
+          "convex_hull_volume_m3": 4.76850793445085e-07,
+          "minimum_centered_singular_value_m": 0.004660922459497617
+        },
+        {
+          "part": 1,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.337947430470735e-07,
+          "convex_hull_volume_m3": 5.337947430470725e-07,
+          "minimum_centered_singular_value_m": 0.004964176551939337
+        },
+        {
+          "part": 2,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.4939730496137314e-07,
+          "convex_hull_volume_m3": 2.493973049613733e-07,
+          "minimum_centered_singular_value_m": 0.004587091633533093
+        },
+        {
+          "part": 3,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.953234327903777e-07,
+          "convex_hull_volume_m3": 2.953234466638845e-07,
+          "minimum_centered_singular_value_m": 0.0068916517624690145
+        },
+        {
+          "part": 4,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.964369451265267e-07,
+          "convex_hull_volume_m3": 6.964369451265265e-07,
+          "minimum_centered_singular_value_m": 0.0056889019066766215
+        },
+        {
+          "part": 5,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.314513612405281e-08,
+          "convex_hull_volume_m3": 4.314513612513651e-08,
+          "minimum_centered_singular_value_m": 0.009980738421105183
+        },
+        {
+          "part": 6,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.6036706130354434e-07,
+          "convex_hull_volume_m3": 2.6036706130354445e-07,
+          "minimum_centered_singular_value_m": 0.012094027643609881
+        },
+        {
+          "part": 7,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.4773464850620184e-07,
+          "convex_hull_volume_m3": 4.4773464850620174e-07,
+          "minimum_centered_singular_value_m": 0.008233675457658015
+        },
+        {
+          "part": 8,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.1995132502793065e-08,
+          "convex_hull_volume_m3": 3.199513250279297e-08,
+          "minimum_centered_singular_value_m": 0.0050527989975524355
+        },
+        {
+          "part": 9,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.0068316458496205e-07,
+          "convex_hull_volume_m3": 2.0068316458496152e-07,
+          "minimum_centered_singular_value_m": 0.004175379164508413
+        },
+        {
+          "part": 10,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.807044985229059e-08,
+          "convex_hull_volume_m3": 4.807044985229073e-08,
+          "minimum_centered_singular_value_m": 0.008129241550987699
+        },
+        {
+          "part": 11,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.415158651692521e-07,
+          "convex_hull_volume_m3": 1.4151586516962327e-07,
+          "minimum_centered_singular_value_m": 0.007866924600606597
+        },
+        {
+          "part": 12,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.09229105332452e-07,
+          "convex_hull_volume_m3": 3.092291053324522e-07,
+          "minimum_centered_singular_value_m": 0.0034149333374024486
+        },
+        {
+          "part": 13,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.0299162923982044e-07,
+          "convex_hull_volume_m3": 2.0299162923982e-07,
+          "minimum_centered_singular_value_m": 0.004505449445619729
+        },
+        {
+          "part": 14,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.568218082511511e-08,
+          "convex_hull_volume_m3": 8.568218082511509e-08,
+          "minimum_centered_singular_value_m": 0.006558416536141242
+        },
+        {
+          "part": 15,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.62493555272482e-08,
+          "convex_hull_volume_m3": 1.6249355527248155e-08,
+          "minimum_centered_singular_value_m": 0.004176076489546418
+        },
+        {
+          "part": 16,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.33822441993927e-08,
+          "convex_hull_volume_m3": 8.338224419939258e-08,
+          "minimum_centered_singular_value_m": 0.0057169209718880044
+        },
+        {
+          "part": 17,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.6756034452243475e-07,
+          "convex_hull_volume_m3": 3.675603445229189e-07,
+          "minimum_centered_singular_value_m": 0.0064790250040986175
+        },
+        {
+          "part": 18,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.2401824959727723e-07,
+          "convex_hull_volume_m3": 1.2401824959727713e-07,
+          "minimum_centered_singular_value_m": 0.006003971088264163
+        },
+        {
+          "part": 19,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.7620220373143704e-08,
+          "convex_hull_volume_m3": 1.7620220373143695e-08,
+          "minimum_centered_singular_value_m": 0.005354818908557758
+        },
+        {
+          "part": 20,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.228518966413783e-08,
+          "convex_hull_volume_m3": 3.228518966413788e-08,
+          "minimum_centered_singular_value_m": 0.005690486205917066
+        },
+        {
+          "part": 21,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1780098895167964e-07,
+          "convex_hull_volume_m3": 1.1780098895167977e-07,
+          "minimum_centered_singular_value_m": 0.008158002813512161
+        },
+        {
+          "part": 22,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.244768233832351e-08,
+          "convex_hull_volume_m3": 9.244768233832316e-08,
+          "minimum_centered_singular_value_m": 0.009611414008477058
+        },
+        {
+          "part": 23,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1306474650171496e-07,
+          "convex_hull_volume_m3": 1.1306474650171488e-07,
+          "minimum_centered_singular_value_m": 0.0032629886560821466
+        },
+        {
+          "part": 24,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.7209487506744826e-07,
+          "convex_hull_volume_m3": 1.7209487506744826e-07,
+          "minimum_centered_singular_value_m": 0.003714637409809713
+        },
+        {
+          "part": 25,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.194589767490321e-09,
+          "convex_hull_volume_m3": 8.19458976749033e-09,
+          "minimum_centered_singular_value_m": 0.0016854342892312394
+        },
+        {
+          "part": 26,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.1995058873952707e-07,
+          "convex_hull_volume_m3": 3.1995058873952744e-07,
+          "minimum_centered_singular_value_m": 0.00699341305278693
+        },
+        {
+          "part": 27,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.5626905367698294e-07,
+          "convex_hull_volume_m3": 2.5626905367698294e-07,
+          "minimum_centered_singular_value_m": 0.00568320211882119
+        },
+        {
+          "part": 28,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.1106662492043325e-08,
+          "convex_hull_volume_m3": 5.110666249204366e-08,
+          "minimum_centered_singular_value_m": 0.0023322426713348905
+        },
+        {
+          "part": 29,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.641960626921965e-08,
+          "convex_hull_volume_m3": 3.641960626921966e-08,
+          "minimum_centered_singular_value_m": 0.0032867447471205797
+        },
+        {
+          "part": 30,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.203436297296539e-08,
+          "convex_hull_volume_m3": 3.2034363446108716e-08,
+          "minimum_centered_singular_value_m": 0.004956804155476422
+        },
+        {
+          "part": 31,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.859470893113751e-08,
+          "convex_hull_volume_m3": 1.8594708931137497e-08,
+          "minimum_centered_singular_value_m": 0.0037475996178263048
+        },
+        {
+          "part": 32,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.7737846770846303e-07,
+          "convex_hull_volume_m3": 1.7737846770846292e-07,
+          "minimum_centered_singular_value_m": 0.004799662949623459
+        },
+        {
+          "part": 33,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.8795615623699693e-07,
+          "convex_hull_volume_m3": 3.879561562369966e-07,
+          "minimum_centered_singular_value_m": 0.0063660146781554395
+        },
+        {
+          "part": 34,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.243293457884245e-08,
+          "convex_hull_volume_m3": 7.243293457884251e-08,
+          "minimum_centered_singular_value_m": 0.0073517300984553445
+        },
+        {
+          "part": 35,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.814739642354733e-08,
+          "convex_hull_volume_m3": 9.814739642354816e-08,
+          "minimum_centered_singular_value_m": 0.003355879590289372
+        },
+        {
+          "part": 36,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.3291286242612466e-08,
+          "convex_hull_volume_m3": 5.3291286242612414e-08,
+          "minimum_centered_singular_value_m": 0.0029669320639650605
+        },
+        {
+          "part": 37,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.020408467487923e-08,
+          "convex_hull_volume_m3": 3.020408467487863e-08,
+          "minimum_centered_singular_value_m": 0.0026578319525031265
+        },
+        {
+          "part": 38,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.5266713179298517e-08,
+          "convex_hull_volume_m3": 2.5266713179298467e-08,
+          "minimum_centered_singular_value_m": 0.005124314688257685
+        },
+        {
+          "part": 39,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.72533360368916e-08,
+          "convex_hull_volume_m3": 6.725333603689144e-08,
+          "minimum_centered_singular_value_m": 0.00730131702197567
+        },
+        {
+          "part": 40,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.66587810564648e-08,
+          "convex_hull_volume_m3": 8.665878105646497e-08,
+          "minimum_centered_singular_value_m": 0.004570310910621488
+        },
+        {
+          "part": 41,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.425402211476886e-07,
+          "convex_hull_volume_m3": 5.425402211476883e-07,
+          "minimum_centered_singular_value_m": 0.003862302412741315
+        },
+        {
+          "part": 42,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.2567417387136074e-07,
+          "convex_hull_volume_m3": 2.2567417387136024e-07,
+          "minimum_centered_singular_value_m": 0.004369428646950164
+        },
+        {
+          "part": 43,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.062901478224607e-09,
+          "convex_hull_volume_m3": 7.062901478224616e-09,
+          "minimum_centered_singular_value_m": 0.0025243791777861775
+        },
+        {
+          "part": 44,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.8879586571729602e-08,
+          "convex_hull_volume_m3": 1.8879586571729645e-08,
+          "minimum_centered_singular_value_m": 0.001961707477758777
+        },
+        {
+          "part": 45,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.1356343891638137e-07,
+          "convex_hull_volume_m3": 4.1356344131778034e-07,
+          "minimum_centered_singular_value_m": 0.01116686834816376
+        },
+        {
+          "part": 46,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.291227888379757e-08,
+          "convex_hull_volume_m3": 4.291227892784695e-08,
+          "minimum_centered_singular_value_m": 0.007917621318333127
+        },
+        {
+          "part": 47,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.888518925926997e-07,
+          "convex_hull_volume_m3": 6.888518925926997e-07,
+          "minimum_centered_singular_value_m": 0.0032293823892631194
+        },
+        {
+          "part": 48,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.160118857101718e-08,
+          "convex_hull_volume_m3": 5.160118862209195e-08,
+          "minimum_centered_singular_value_m": 0.007797018127215081
+        },
+        {
+          "part": 49,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.456486745278068e-07,
+          "convex_hull_volume_m3": 7.456486745278066e-07,
+          "minimum_centered_singular_value_m": 0.0035093402786937206
+        },
+        {
+          "part": 50,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.672815681108361e-08,
+          "convex_hull_volume_m3": 4.6728156811083595e-08,
+          "minimum_centered_singular_value_m": 0.005989962406735977
+        },
+        {
+          "part": 51,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.606236646084745e-08,
+          "convex_hull_volume_m3": 5.606236646084745e-08,
+          "minimum_centered_singular_value_m": 0.005718368969913724
+        },
+        {
+          "part": 52,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.3731036445263926e-08,
+          "convex_hull_volume_m3": 2.3731036445263943e-08,
+          "minimum_centered_singular_value_m": 0.0033678858806009183
+        },
+        {
+          "part": 53,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.8643376531881426e-08,
+          "convex_hull_volume_m3": 2.8643376531881483e-08,
+          "minimum_centered_singular_value_m": 0.003793061615550193
+        },
+        {
+          "part": 54,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.3312767958149844e-08,
+          "convex_hull_volume_m3": 5.3312767958149883e-08,
+          "minimum_centered_singular_value_m": 0.0038949752663874153
+        },
+        {
+          "part": 55,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.4331826300291315e-08,
+          "convex_hull_volume_m3": 2.4331826300291305e-08,
+          "minimum_centered_singular_value_m": 0.005276727580884122
+        },
+        {
+          "part": 56,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4244445817418854e-08,
+          "convex_hull_volume_m3": 1.4244445817418892e-08,
+          "minimum_centered_singular_value_m": 0.002426014991191071
+        },
+        {
+          "part": 57,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.8860681321942004e-08,
+          "convex_hull_volume_m3": 2.8860681321942004e-08,
+          "minimum_centered_singular_value_m": 0.00351465753423234
+        },
+        {
+          "part": 58,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.8489248033816587e-07,
+          "convex_hull_volume_m3": 1.8489248033816581e-07,
+          "minimum_centered_singular_value_m": 0.003760203184899158
+        },
+        {
+          "part": 59,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.619985689243551e-08,
+          "convex_hull_volume_m3": 8.619985689243558e-08,
+          "minimum_centered_singular_value_m": 0.003489388021017104
+        },
+        {
+          "part": 60,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.230319520697539e-08,
+          "convex_hull_volume_m3": 2.2303195206975476e-08,
+          "minimum_centered_singular_value_m": 0.003917200044750025
+        },
+        {
+          "part": 61,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4146680802907446e-07,
+          "convex_hull_volume_m3": 1.4146680802907438e-07,
+          "minimum_centered_singular_value_m": 0.005118558878938761
+        },
+        {
+          "part": 62,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.646922606025386e-08,
+          "convex_hull_volume_m3": 6.646922606025391e-08,
+          "minimum_centered_singular_value_m": 0.0058031765624212625
+        },
+        {
+          "part": 63,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.300953379328004e-08,
+          "convex_hull_volume_m3": 4.300953401809324e-08,
+          "minimum_centered_singular_value_m": 0.007967419253324764
+        }
+      ],
+      "source_samples": 8192,
+      "proxy_samples": 9513,
+      "source_samples_outside_union": 4156,
+      "max_sampled_missing_material_m": 0.00022555027777453662,
+      "max_sampled_excess_material_m": 0.0010656211364409923,
+      "sampled_tolerance_m": 0.00025
+    },
+    "neck_pitch": {
+      "status": "verified_sampled_geometry",
+      "passed": false,
+      "inputs": {
+        "source_stl": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl",
+          "sha256": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae"
+        },
+        "parts_npz": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/neck_pitch/parts.npz",
+          "sha256": "b7f6b85c5d4446eff90c338b26ac20a4a0b554050dcd0b006276540d205fad8c"
+        },
+        "complete_json": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/neck_pitch/complete.json",
+          "sha256": "2243d33a76f4bd32285cf745679e8cc5340277928c68e18c970a0bddd38fec2c"
+        }
+      },
+      "failures": [
+        "sampled_excess_material"
+      ],
+      "errors": [],
+      "parts": 64,
+      "source_watertight": true,
+      "source_winding_consistent": true,
+      "all_parts_watertight": true,
+      "all_parts_convex": true,
+      "vertices": 1500,
+      "faces": 2744,
+      "part_geometry": [
+        {
+          "part": 0,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.0005780758295546e-08,
+          "convex_hull_volume_m3": 5.000578075829563e-08,
+          "minimum_centered_singular_value_m": 0.0021576707401552726
+        },
+        {
+          "part": 1,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.0506046665243343e-07,
+          "convex_hull_volume_m3": 3.050604666524335e-07,
+          "minimum_centered_singular_value_m": 0.0071291040654461995
+        },
+        {
+          "part": 2,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.2322620359217586e-07,
+          "convex_hull_volume_m3": 2.2322620359217597e-07,
+          "minimum_centered_singular_value_m": 0.006108895973162845
+        },
+        {
+          "part": 3,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0105375916616943e-07,
+          "convex_hull_volume_m3": 1.0105375916616949e-07,
+          "minimum_centered_singular_value_m": 0.005999415542395691
+        },
+        {
+          "part": 4,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0324454665798124e-08,
+          "convex_hull_volume_m3": 1.0324454665798126e-08,
+          "minimum_centered_singular_value_m": 0.0021085022855790543
+        },
+        {
+          "part": 5,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.8332540194042058e-08,
+          "convex_hull_volume_m3": 2.8332540194042048e-08,
+          "minimum_centered_singular_value_m": 0.002822102104700973
+        },
+        {
+          "part": 6,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.34190853672936e-08,
+          "convex_hull_volume_m3": 4.341908536729358e-08,
+          "minimum_centered_singular_value_m": 0.004217943206326626
+        },
+        {
+          "part": 7,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.0705948821675173e-07,
+          "convex_hull_volume_m3": 2.0705948821675173e-07,
+          "minimum_centered_singular_value_m": 0.006086374430908452
+        },
+        {
+          "part": 8,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.6106605235070966e-08,
+          "convex_hull_volume_m3": 4.6106605235071e-08,
+          "minimum_centered_singular_value_m": 0.00392991925767807
+        },
+        {
+          "part": 9,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4742758065121383e-07,
+          "convex_hull_volume_m3": 1.474275806512137e-07,
+          "minimum_centered_singular_value_m": 0.005081224047383373
+        },
+        {
+          "part": 10,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.1250781759183824e-08,
+          "convex_hull_volume_m3": 3.125078175918385e-08,
+          "minimum_centered_singular_value_m": 0.0032898385406658873
+        },
+        {
+          "part": 11,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.3450894992410996e-07,
+          "convex_hull_volume_m3": 1.3450894992410998e-07,
+          "minimum_centered_singular_value_m": 0.004325924822439318
+        },
+        {
+          "part": 12,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.2231629660780994e-08,
+          "convex_hull_volume_m3": 1.2231629660780999e-08,
+          "minimum_centered_singular_value_m": 0.0026462041099688297
+        },
+        {
+          "part": 13,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.420529569643098e-08,
+          "convex_hull_volume_m3": 6.420529569643101e-08,
+          "minimum_centered_singular_value_m": 0.005195646267573867
+        },
+        {
+          "part": 14,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.075651840850509e-08,
+          "convex_hull_volume_m3": 3.0756518408505125e-08,
+          "minimum_centered_singular_value_m": 0.003948211385441162
+        },
+        {
+          "part": 15,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.014236829705194e-08,
+          "convex_hull_volume_m3": 8.014236829705193e-08,
+          "minimum_centered_singular_value_m": 0.004552265906651601
+        },
+        {
+          "part": 16,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4104846250033e-07,
+          "convex_hull_volume_m3": 1.4104846250033e-07,
+          "minimum_centered_singular_value_m": 0.009473904093668242
+        },
+        {
+          "part": 17,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.004602802383636e-08,
+          "convex_hull_volume_m3": 8.004602802383636e-08,
+          "minimum_centered_singular_value_m": 0.007302264324112717
+        },
+        {
+          "part": 18,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0231964468475544e-07,
+          "convex_hull_volume_m3": 1.0231964468475542e-07,
+          "minimum_centered_singular_value_m": 0.006095765168393996
+        },
+        {
+          "part": 19,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.5685506434069902e-08,
+          "convex_hull_volume_m3": 2.5685506434069886e-08,
+          "minimum_centered_singular_value_m": 0.0032874455001797916
+        },
+        {
+          "part": 20,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.481763764126712e-08,
+          "convex_hull_volume_m3": 2.4817637641267142e-08,
+          "minimum_centered_singular_value_m": 0.003472477475353002
+        },
+        {
+          "part": 21,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.604345843791056e-08,
+          "convex_hull_volume_m3": 5.604345843791058e-08,
+          "minimum_centered_singular_value_m": 0.007129645496891408
+        },
+        {
+          "part": 22,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.004297979212554e-08,
+          "convex_hull_volume_m3": 4.004297979212558e-08,
+          "minimum_centered_singular_value_m": 0.0033480667065932646
+        },
+        {
+          "part": 23,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.300668173889583e-08,
+          "convex_hull_volume_m3": 2.300668173889583e-08,
+          "minimum_centered_singular_value_m": 0.0013410658840692492
+        },
+        {
+          "part": 24,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0428676922831022e-07,
+          "convex_hull_volume_m3": 1.0428676922831026e-07,
+          "minimum_centered_singular_value_m": 0.005262894233681439
+        },
+        {
+          "part": 25,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.216277872915034e-08,
+          "convex_hull_volume_m3": 3.216277872915034e-08,
+          "minimum_centered_singular_value_m": 0.0024091743468955982
+        },
+        {
+          "part": 26,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.30509726174753e-08,
+          "convex_hull_volume_m3": 3.3050972617475266e-08,
+          "minimum_centered_singular_value_m": 0.00311613939971067
+        },
+        {
+          "part": 27,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.361372918179326e-08,
+          "convex_hull_volume_m3": 9.361372918179322e-08,
+          "minimum_centered_singular_value_m": 0.008012104908010171
+        },
+        {
+          "part": 28,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.5195918110071458e-08,
+          "convex_hull_volume_m3": 2.519591811007143e-08,
+          "minimum_centered_singular_value_m": 0.0029713772605278565
+        },
+        {
+          "part": 29,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.859569986247164e-08,
+          "convex_hull_volume_m3": 3.8595699862471655e-08,
+          "minimum_centered_singular_value_m": 0.0027599368605811477
+        },
+        {
+          "part": 30,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.093710145334095e-08,
+          "convex_hull_volume_m3": 5.093710145334096e-08,
+          "minimum_centered_singular_value_m": 0.004742954435946214
+        },
+        {
+          "part": 31,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.447156597262783e-08,
+          "convex_hull_volume_m3": 8.447156597262782e-08,
+          "minimum_centered_singular_value_m": 0.0040033069853120575
+        },
+        {
+          "part": 32,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0854893018969681e-07,
+          "convex_hull_volume_m3": 1.0854893018969683e-07,
+          "minimum_centered_singular_value_m": 0.00650390253417944
+        },
+        {
+          "part": 33,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.658297461600988e-08,
+          "convex_hull_volume_m3": 3.658297461600989e-08,
+          "minimum_centered_singular_value_m": 0.005538645120598563
+        },
+        {
+          "part": 34,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1412196268762754e-07,
+          "convex_hull_volume_m3": 1.1412196268762756e-07,
+          "minimum_centered_singular_value_m": 0.005334644688717846
+        },
+        {
+          "part": 35,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.608059922463318e-08,
+          "convex_hull_volume_m3": 9.608059922463318e-08,
+          "minimum_centered_singular_value_m": 0.004613190337525859
+        },
+        {
+          "part": 36,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.2195636963488444e-07,
+          "convex_hull_volume_m3": 1.2195636963488447e-07,
+          "minimum_centered_singular_value_m": 0.005607741404555972
+        },
+        {
+          "part": 37,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.9714665858409616e-08,
+          "convex_hull_volume_m3": 2.971466585840961e-08,
+          "minimum_centered_singular_value_m": 0.0035513704609641573
+        },
+        {
+          "part": 38,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.167116676878812e-08,
+          "convex_hull_volume_m3": 4.167116676878812e-08,
+          "minimum_centered_singular_value_m": 0.002244820346631598
+        },
+        {
+          "part": 39,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.009379861608454e-08,
+          "convex_hull_volume_m3": 4.009379861608456e-08,
+          "minimum_centered_singular_value_m": 0.004607121156019674
+        },
+        {
+          "part": 40,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.36362169455167e-08,
+          "convex_hull_volume_m3": 8.363621694551663e-08,
+          "minimum_centered_singular_value_m": 0.007682900597676702
+        },
+        {
+          "part": 41,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.327876144589645e-08,
+          "convex_hull_volume_m3": 6.327876144589641e-08,
+          "minimum_centered_singular_value_m": 0.0022201872091874453
+        },
+        {
+          "part": 42,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.9560375495130755e-08,
+          "convex_hull_volume_m3": 2.9560375495130745e-08,
+          "minimum_centered_singular_value_m": 0.004545581310218709
+        },
+        {
+          "part": 43,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1909348028162046e-07,
+          "convex_hull_volume_m3": 1.1909348028162046e-07,
+          "minimum_centered_singular_value_m": 0.006399395013181914
+        },
+        {
+          "part": 44,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.05748040490422e-08,
+          "convex_hull_volume_m3": 4.057480404904221e-08,
+          "minimum_centered_singular_value_m": 0.004180925632218566
+        },
+        {
+          "part": 45,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.0822820152589865e-08,
+          "convex_hull_volume_m3": 4.082282015258987e-08,
+          "minimum_centered_singular_value_m": 0.004077128611823709
+        },
+        {
+          "part": 46,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.8042195034003227e-07,
+          "convex_hull_volume_m3": 1.8042195034003225e-07,
+          "minimum_centered_singular_value_m": 0.004234058328557505
+        },
+        {
+          "part": 47,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.667746331704394e-08,
+          "convex_hull_volume_m3": 8.667746331704392e-08,
+          "minimum_centered_singular_value_m": 0.005824392210589119
+        },
+        {
+          "part": 48,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.9415444446318864e-08,
+          "convex_hull_volume_m3": 4.9415444446318884e-08,
+          "minimum_centered_singular_value_m": 0.004870749178943245
+        },
+        {
+          "part": 49,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.0791790427870114e-07,
+          "convex_hull_volume_m3": 1.0791790427870111e-07,
+          "minimum_centered_singular_value_m": 0.0020285331115364206
+        },
+        {
+          "part": 50,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.7762103489132127e-07,
+          "convex_hull_volume_m3": 1.7762103489132093e-07,
+          "minimum_centered_singular_value_m": 0.00856422979691995
+        },
+        {
+          "part": 51,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.222928844312845e-08,
+          "convex_hull_volume_m3": 4.222928844312843e-08,
+          "minimum_centered_singular_value_m": 0.004644599285534206
+        },
+        {
+          "part": 52,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.005492294694226e-07,
+          "convex_hull_volume_m3": 1.0054922946942265e-07,
+          "minimum_centered_singular_value_m": 0.006183338412541369
+        },
+        {
+          "part": 53,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.693516949912127e-08,
+          "convex_hull_volume_m3": 7.69351694991213e-08,
+          "minimum_centered_singular_value_m": 0.0039963447809169324
+        },
+        {
+          "part": 54,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.6341355438721286e-08,
+          "convex_hull_volume_m3": 4.6341355438721306e-08,
+          "minimum_centered_singular_value_m": 0.0042961243187477904
+        },
+        {
+          "part": 55,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.307079894536288e-08,
+          "convex_hull_volume_m3": 5.30707989453629e-08,
+          "minimum_centered_singular_value_m": 0.004991727730901522
+        },
+        {
+          "part": 56,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.937205232040553e-08,
+          "convex_hull_volume_m3": 3.937205232040554e-08,
+          "minimum_centered_singular_value_m": 0.003569617088505158
+        },
+        {
+          "part": 57,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.774815069167205e-08,
+          "convex_hull_volume_m3": 2.7748150691672036e-08,
+          "minimum_centered_singular_value_m": 0.004201867857897789
+        },
+        {
+          "part": 58,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.680272223165673e-08,
+          "convex_hull_volume_m3": 4.6802722231656744e-08,
+          "minimum_centered_singular_value_m": 0.0045008066982442484
+        },
+        {
+          "part": 59,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.910156362123562e-08,
+          "convex_hull_volume_m3": 6.910156362123564e-08,
+          "minimum_centered_singular_value_m": 0.006036498404500114
+        },
+        {
+          "part": 60,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.170420521111353e-08,
+          "convex_hull_volume_m3": 8.170420521111356e-08,
+          "minimum_centered_singular_value_m": 0.005058406653824926
+        },
+        {
+          "part": 61,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.9801196077605833e-08,
+          "convex_hull_volume_m3": 1.9801196077605823e-08,
+          "minimum_centered_singular_value_m": 0.004471739730789281
+        },
+        {
+          "part": 62,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.1378489697254006e-08,
+          "convex_hull_volume_m3": 4.1378489697254e-08,
+          "minimum_centered_singular_value_m": 0.004618320256992773
+        },
+        {
+          "part": 63,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.336789900331951e-08,
+          "convex_hull_volume_m3": 8.336789900331954e-08,
+          "minimum_centered_singular_value_m": 0.0073477534168961125
+        }
+      ],
+      "source_samples": 7628,
+      "proxy_samples": 4244,
+      "source_samples_outside_union": 2061,
+      "max_sampled_missing_material_m": 0.00013316469678618977,
+      "max_sampled_excess_material_m": 0.0011504623220860467,
+      "sampled_tolerance_m": 0.00025
+    },
+    "seeed_bearing__configuration__22x16x4": {
+      "status": "verified_sampled_geometry",
+      "passed": false,
+      "inputs": {
+        "source_stl": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl",
+          "sha256": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e"
+        },
+        "parts_npz": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/seeed_bearing__configuration__22x16x4/parts.npz",
+          "sha256": "6201d6cb132027cf297fc7cebe678b9c1c0c0c49d04710e044c6358700ccd355"
+        },
+        "complete_json": {
+          "path": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/seeed_bearing__configuration__22x16x4/complete.json",
+          "sha256": "e4f0d2f4cd281bff536998e97cd5357b8d73f9a15ce430404b3633b8b2df8094"
+        }
+      },
+      "failures": [
+        "non_convex_proxy",
+        "sampled_excess_material"
+      ],
+      "errors": [],
+      "parts": 64,
+      "source_watertight": true,
+      "source_winding_consistent": true,
+      "all_parts_watertight": true,
+      "all_parts_convex": false,
+      "vertices": 2646,
+      "faces": 5036,
+      "part_geometry": [
+        {
+          "part": 0,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.8652204045637407e-08,
+          "convex_hull_volume_m3": 1.865220404563741e-08,
+          "minimum_centered_singular_value_m": 0.002512616622888863
+        },
+        {
+          "part": 1,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.1819725134129865e-08,
+          "convex_hull_volume_m3": 2.1819725134129875e-08,
+          "minimum_centered_singular_value_m": 0.0026339647642150688
+        },
+        {
+          "part": 2,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.2029617034296124e-08,
+          "convex_hull_volume_m3": 1.2029617034296115e-08,
+          "minimum_centered_singular_value_m": 0.002629731320562266
+        },
+        {
+          "part": 3,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.590224261327692e-08,
+          "convex_hull_volume_m3": 1.590224261327693e-08,
+          "minimum_centered_singular_value_m": 0.0025753259944464248
+        },
+        {
+          "part": 4,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.515471969318908e-08,
+          "convex_hull_volume_m3": 1.5154719693189085e-08,
+          "minimum_centered_singular_value_m": 0.0026383398409816797
+        },
+        {
+          "part": 5,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.421156214457807e-09,
+          "convex_hull_volume_m3": 4.42115621445781e-09,
+          "minimum_centered_singular_value_m": 0.0020351487309115124
+        },
+        {
+          "part": 6,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.90043287060886e-09,
+          "convex_hull_volume_m3": 2.90043287060886e-09,
+          "minimum_centered_singular_value_m": 0.0016913353517968757
+        },
+        {
+          "part": 7,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.450460476787983e-09,
+          "convex_hull_volume_m3": 2.4504604767879844e-09,
+          "minimum_centered_singular_value_m": 0.0023110105414393583
+        },
+        {
+          "part": 8,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.692091622313689e-08,
+          "convex_hull_volume_m3": 1.692091622313689e-08,
+          "minimum_centered_singular_value_m": 0.002548369214359045
+        },
+        {
+          "part": 9,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1806090351844884e-08,
+          "convex_hull_volume_m3": 1.1806090351844889e-08,
+          "minimum_centered_singular_value_m": 0.0022025550751015484
+        },
+        {
+          "part": 10,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.445093236397563e-09,
+          "convex_hull_volume_m3": 6.4450932363975566e-09,
+          "minimum_centered_singular_value_m": 0.002776808136771999
+        },
+        {
+          "part": 11,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4600145490838078e-08,
+          "convex_hull_volume_m3": 1.4600145490838072e-08,
+          "minimum_centered_singular_value_m": 0.003022871013030604
+        },
+        {
+          "part": 12,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.610836971304838e-09,
+          "convex_hull_volume_m3": 4.610836971304838e-09,
+          "minimum_centered_singular_value_m": 0.0025380314362582895
+        },
+        {
+          "part": 13,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1019212784505824e-08,
+          "convex_hull_volume_m3": 1.1019212784505836e-08,
+          "minimum_centered_singular_value_m": 0.002219372781703543
+        },
+        {
+          "part": 14,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.801264073803466e-09,
+          "convex_hull_volume_m3": 7.801264073803463e-09,
+          "minimum_centered_singular_value_m": 0.0025542712696200918
+        },
+        {
+          "part": 15,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.761774214418344e-09,
+          "convex_hull_volume_m3": 4.761774214418347e-09,
+          "minimum_centered_singular_value_m": 0.00209224160884944
+        },
+        {
+          "part": 16,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.11550929423822e-09,
+          "convex_hull_volume_m3": 7.115509294238222e-09,
+          "minimum_centered_singular_value_m": 0.0031907862416095615
+        },
+        {
+          "part": 17,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.0985257644568146e-08,
+          "convex_hull_volume_m3": 2.098525764456813e-08,
+          "minimum_centered_singular_value_m": 0.0025837005213857948
+        },
+        {
+          "part": 18,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.575640297655735e-08,
+          "convex_hull_volume_m3": 1.575640297655735e-08,
+          "minimum_centered_singular_value_m": 0.002465306688087056
+        },
+        {
+          "part": 19,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.64439019934955e-08,
+          "convex_hull_volume_m3": 1.64439019934955e-08,
+          "minimum_centered_singular_value_m": 0.002369917472353986
+        },
+        {
+          "part": 20,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.3275865247360243e-08,
+          "convex_hull_volume_m3": 1.3275865247360243e-08,
+          "minimum_centered_singular_value_m": 0.0023808809745400426
+        },
+        {
+          "part": 21,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.5859532451715634e-08,
+          "convex_hull_volume_m3": 1.585953245171563e-08,
+          "minimum_centered_singular_value_m": 0.002857408578022723
+        },
+        {
+          "part": 22,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.3373788101658593e-08,
+          "convex_hull_volume_m3": 1.33737881016586e-08,
+          "minimum_centered_singular_value_m": 0.0019851977205636437
+        },
+        {
+          "part": 23,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.261775700988286e-09,
+          "convex_hull_volume_m3": 5.261775700988286e-09,
+          "minimum_centered_singular_value_m": 0.002267139931840854
+        },
+        {
+          "part": 24,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.3612626490213955e-08,
+          "convex_hull_volume_m3": 1.3612626490213963e-08,
+          "minimum_centered_singular_value_m": 0.0022725130969088784
+        },
+        {
+          "part": 25,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.211472410981171e-09,
+          "convex_hull_volume_m3": 6.211472410981175e-09,
+          "minimum_centered_singular_value_m": 0.0017598855324819321
+        },
+        {
+          "part": 26,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.3675798138963402e-09,
+          "convex_hull_volume_m3": 3.3675798138963423e-09,
+          "minimum_centered_singular_value_m": 0.001963236057826935
+        },
+        {
+          "part": 27,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.1797125254961324e-08,
+          "convex_hull_volume_m3": 1.1797125254961318e-08,
+          "minimum_centered_singular_value_m": 0.002774440341055246
+        },
+        {
+          "part": 28,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.472220803982171e-08,
+          "convex_hull_volume_m3": 2.4722208039821723e-08,
+          "minimum_centered_singular_value_m": 0.002797526414234699
+        },
+        {
+          "part": 29,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.844367190892797e-09,
+          "convex_hull_volume_m3": 3.844367191514167e-09,
+          "minimum_centered_singular_value_m": 0.002230324140363011
+        },
+        {
+          "part": 30,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.506174492876003e-09,
+          "convex_hull_volume_m3": 6.5061744928759945e-09,
+          "minimum_centered_singular_value_m": 0.0018991355465227784
+        },
+        {
+          "part": 31,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.975046370942163e-09,
+          "convex_hull_volume_m3": 7.97504637094216e-09,
+          "minimum_centered_singular_value_m": 0.0016969534877662323
+        },
+        {
+          "part": 32,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.006748469799937e-09,
+          "convex_hull_volume_m3": 5.006748469799937e-09,
+          "minimum_centered_singular_value_m": 0.002339906471359956
+        },
+        {
+          "part": 33,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.135372290047323e-09,
+          "convex_hull_volume_m3": 5.135372290047322e-09,
+          "minimum_centered_singular_value_m": 0.0028106653513624126
+        },
+        {
+          "part": 34,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.618193076745888e-08,
+          "convex_hull_volume_m3": 1.6181930767458887e-08,
+          "minimum_centered_singular_value_m": 0.002207911190141945
+        },
+        {
+          "part": 35,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.2852209521288911e-08,
+          "convex_hull_volume_m3": 1.2852209521288911e-08,
+          "minimum_centered_singular_value_m": 0.0021330275781071993
+        },
+        {
+          "part": 36,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.928956528640462e-09,
+          "convex_hull_volume_m3": 7.92895652864046e-09,
+          "minimum_centered_singular_value_m": 0.0023871476899654893
+        },
+        {
+          "part": 37,
+          "watertight": true,
+          "convex": false,
+          "triangle_signed_volume_m3": 3.991597337782351e-09,
+          "convex_hull_volume_m3": 3.9915973473230576e-09,
+          "minimum_centered_singular_value_m": 0.0024622696900621
+        },
+        {
+          "part": 38,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4619398502320713e-08,
+          "convex_hull_volume_m3": 1.4619398502320705e-08,
+          "minimum_centered_singular_value_m": 0.0024500149938993026
+        },
+        {
+          "part": 39,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.640174142395875e-08,
+          "convex_hull_volume_m3": 1.6401741423958774e-08,
+          "minimum_centered_singular_value_m": 0.0024155528654077876
+        },
+        {
+          "part": 40,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.360515327186341e-09,
+          "convex_hull_volume_m3": 4.360515327186346e-09,
+          "minimum_centered_singular_value_m": 0.0017348469999054466
+        },
+        {
+          "part": 41,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4447990821465132e-08,
+          "convex_hull_volume_m3": 1.4447990821465132e-08,
+          "minimum_centered_singular_value_m": 0.0025704174341039878
+        },
+        {
+          "part": 42,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.5384948264969017e-08,
+          "convex_hull_volume_m3": 1.5384948264969027e-08,
+          "minimum_centered_singular_value_m": 0.00275058883799888
+        },
+        {
+          "part": 43,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 9.479253503407132e-10,
+          "convex_hull_volume_m3": 9.479253503407134e-10,
+          "minimum_centered_singular_value_m": 0.0011727029233177528
+        },
+        {
+          "part": 44,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.5678900375045395e-09,
+          "convex_hull_volume_m3": 3.567890037504538e-09,
+          "minimum_centered_singular_value_m": 0.002409509933137163
+        },
+        {
+          "part": 45,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.0807658420043042e-09,
+          "convex_hull_volume_m3": 2.080765842004301e-09,
+          "minimum_centered_singular_value_m": 0.001679066099414228
+        },
+        {
+          "part": 46,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.8994250329280843e-09,
+          "convex_hull_volume_m3": 2.8994250329280835e-09,
+          "minimum_centered_singular_value_m": 0.0017202820684566265
+        },
+        {
+          "part": 47,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.053734034267708e-08,
+          "convex_hull_volume_m3": 1.0537340342677083e-08,
+          "minimum_centered_singular_value_m": 0.0023157182189843515
+        },
+        {
+          "part": 48,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.7277240854912255e-09,
+          "convex_hull_volume_m3": 4.727724085491224e-09,
+          "minimum_centered_singular_value_m": 0.0020134154194845506
+        },
+        {
+          "part": 49,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 8.774576263853881e-09,
+          "convex_hull_volume_m3": 8.77457626385388e-09,
+          "minimum_centered_singular_value_m": 0.002763466690664955
+        },
+        {
+          "part": 50,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.3726676039186413e-08,
+          "convex_hull_volume_m3": 1.3726676039186406e-08,
+          "minimum_centered_singular_value_m": 0.002455023674050959
+        },
+        {
+          "part": 51,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.7018022249620852e-08,
+          "convex_hull_volume_m3": 1.7018022249620852e-08,
+          "minimum_centered_singular_value_m": 0.0029045268272597843
+        },
+        {
+          "part": 52,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.4309156403481602e-16,
+          "convex_hull_volume_m3": 1.4309156403491685e-16,
+          "minimum_centered_singular_value_m": 4.3730289772087876e-06
+        },
+        {
+          "part": 53,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.810112334954264e-09,
+          "convex_hull_volume_m3": 3.810112334954265e-09,
+          "minimum_centered_singular_value_m": 0.002464875391569543
+        },
+        {
+          "part": 54,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 4.8922543900152196e-09,
+          "convex_hull_volume_m3": 4.892254390015219e-09,
+          "minimum_centered_singular_value_m": 0.0017440850919687285
+        },
+        {
+          "part": 55,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 1.6484866326441153e-08,
+          "convex_hull_volume_m3": 1.6484866326441146e-08,
+          "minimum_centered_singular_value_m": 0.002500986211692117
+        },
+        {
+          "part": 56,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.3571865882667807e-09,
+          "convex_hull_volume_m3": 3.357186588266784e-09,
+          "minimum_centered_singular_value_m": 0.0022504599710556857
+        },
+        {
+          "part": 57,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 3.184561861511267e-09,
+          "convex_hull_volume_m3": 3.1845618615112656e-09,
+          "minimum_centered_singular_value_m": 0.0026090588288319497
+        },
+        {
+          "part": 58,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 7.058584982441109e-09,
+          "convex_hull_volume_m3": 7.0585849824411135e-09,
+          "minimum_centered_singular_value_m": 0.002088295509524871
+        },
+        {
+          "part": 59,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.864621296982984e-09,
+          "convex_hull_volume_m3": 2.864621296982985e-09,
+          "minimum_centered_singular_value_m": 0.0021491580427571363
+        },
+        {
+          "part": 60,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.23127473563044e-09,
+          "convex_hull_volume_m3": 6.231274735630442e-09,
+          "minimum_centered_singular_value_m": 0.0018534006854900784
+        },
+        {
+          "part": 61,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 6.669472835842402e-09,
+          "convex_hull_volume_m3": 6.669472835842402e-09,
+          "minimum_centered_singular_value_m": 0.002596196278909963
+        },
+        {
+          "part": 62,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 5.659681317969123e-09,
+          "convex_hull_volume_m3": 5.659681317969124e-09,
+          "minimum_centered_singular_value_m": 0.0031461041165943837
+        },
+        {
+          "part": 63,
+          "watertight": true,
+          "convex": true,
+          "triangle_signed_volume_m3": 2.791819716958713e-09,
+          "convex_hull_volume_m3": 2.7918197169587133e-09,
+          "minimum_centered_singular_value_m": 0.0022734557056387863
+        }
+      ],
+      "source_samples": 8192,
+      "proxy_samples": 6742,
+      "source_samples_outside_union": 355,
+      "max_sampled_missing_material_m": 0.0001415483134605021,
+      "max_sampled_excess_material_m": 0.00034309013382534344,
+      "sampled_tolerance_m": 0.00025
+    }
+  },
+  "sampled_material_gates_passed": false,
+  "cavity_witness_input_sha256": "6f429836cdbdd3c480e2cb5bf5940c08ab50fb1381b685ccbda98a33ce298280",
+  "cavity_checks": [
+    {
+      "id": "0-home",
+      "sides": [
+        {
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "local_point_m": [
+            -0.009824235948260289,
+            -0.0042620203324954965,
+            0.002227639356833815
+          ],
+          "source_inside_three_rays": [
+            true,
+            true,
+            true
+          ],
+          "source_distance_m": 0.00028211519034922536,
+          "must_remain_empty": false,
+          "inside_convex_part_union": true,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "bottom_head_shell",
+          "local_point_m": [
+            -0.0042620203324954965,
+            -0.009724235948260291,
+            -0.010327639356833779
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.004275764483873373,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    },
+    {
+      "id": "1-home",
+      "sides": [
+        {
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "local_point_m": [
+            -0.01059405826787736,
+            0.0018580354737062306,
+            0.0021431806592152316
+          ],
+          "source_inside_three_rays": [
+            true,
+            true,
+            true
+          ],
+          "source_distance_m": 0.00024444257457376204,
+          "must_remain_empty": false,
+          "inside_convex_part_union": true,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "jaw",
+          "local_point_m": [
+            0.0018580354737062306,
+            -0.010494058267877361,
+            -0.01004318065921519
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.02152358140774417,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    },
+    {
+      "id": "2-home",
+      "sides": [
+        {
+          "mesh": "neck_pitch",
+          "local_point_m": [
+            1.1647804510153678e-16,
+            -0.008010004499617444,
+            -0.011269881350333326
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 1.0004119637835318e-05,
+          "must_remain_empty": false,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "bottom_head_shell",
+          "local_point_m": [
+            1.1642570193517454e-16,
+            -0.007910004499617443,
+            -0.011369881350333311
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.006089995932516221,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    },
+    {
+      "id": "3-home",
+      "sides": [
+        {
+          "mesh": "neck_pitch",
+          "local_point_m": [
+            -0.0006972459430389179,
+            -0.007997528929834545,
+            -0.01115886054636389
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 2.7971622173967254e-05,
+          "must_remain_empty": false,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "jaw",
+          "local_point_m": [
+            -0.0006972459430389178,
+            -0.007897528929834544,
+            -0.01105886054636387
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.02410013697719391,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    },
+    {
+      "id": "4-worst_sample",
+      "sides": [
+        {
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "local_point_m": [
+            -0.0009075219024686286,
+            0.010361734732611117,
+            0.0027945236249880628
+          ],
+          "source_inside_three_rays": [
+            true,
+            true,
+            true
+          ],
+          "source_distance_m": 0.0004014022657027878,
+          "must_remain_empty": false,
+          "inside_convex_part_union": true,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "bottom_head_shell",
+          "local_point_m": [
+            0.011999741422807846,
+            -0.0007891448810920229,
+            -0.009638375731374035
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.01321085555104125,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    },
+    {
+      "id": "5-worst_sample",
+      "sides": [
+        {
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "local_point_m": [
+            -0.004868193235094733,
+            0.009175869885591026,
+            0.0026185824374912524
+          ],
+          "source_inside_three_rays": [
+            true,
+            true,
+            true
+          ],
+          "source_distance_m": 0.00040251441421267114,
+          "must_remain_empty": false,
+          "inside_convex_part_union": true,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "jaw",
+          "local_point_m": [
+            0.01080861444948438,
+            -0.004751913009067677,
+            -0.009395557052456613
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.02536327100218636,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    },
+    {
+      "id": "6-worst_sample",
+      "sides": [
+        {
+          "mesh": "neck_pitch",
+          "local_point_m": [
+            0.007795309958595284,
+            -0.0006827884482384899,
+            -0.011712415093172831
+          ],
+          "source_inside_three_rays": [
+            true,
+            true,
+            true
+          ],
+          "source_distance_m": 0.00017484609706787735,
+          "must_remain_empty": false,
+          "inside_convex_part_union": true,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "bottom_head_shell",
+          "local_point_m": [
+            0.00955186132307219,
+            -0.0005689631012126636,
+            -0.01083794606888069
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.01343103733092083,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    },
+    {
+      "id": "7-worst_sample",
+      "sides": [
+        {
+          "mesh": "neck_pitch",
+          "local_point_m": [
+            0.006393233644729492,
+            -0.004482292422258465,
+            -0.011503960413584313
+          ],
+          "source_inside_three_rays": [
+            true,
+            true,
+            true
+          ],
+          "source_distance_m": 0.00019208904978940125,
+          "must_remain_empty": false,
+          "inside_convex_part_union": true,
+          "cavity_preserved": true
+        },
+        {
+          "mesh": "jaw",
+          "local_point_m": [
+            0.008141958147989901,
+            -0.00437094755539174,
+            -0.010587063468578371
+          ],
+          "source_inside_three_rays": [
+            false,
+            false,
+            false
+          ],
+          "source_distance_m": 0.027569636380071174,
+          "must_remain_empty": true,
+          "inside_convex_part_union": false,
+          "cavity_preserved": true
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "source_cavities_preserved": true,
+      "no_false_pair_contact_at_witness": true
+    }
+  ],
+  "cavity_bank_evaluated": true,
+  "cavity_gates_passed": true,
+  "all_requested_checks_passed": false,
+  "result_sha256": "3114cbc8f8d69c1ba2c729c6b60cb98dfa16c6b89735c0903bafbe59e6e112b9"
+}

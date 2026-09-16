@@ -1,0 +1,40 @@
+{
+  "schema": "microduck.walking-suite/v1",
+  "proof_class": "visible_development",
+  "held_out": false,
+  "seed": 26090651,
+  "duration_s": 18,
+  "move_start_s": 1,
+  "stop_start_s": 13,
+  "repeated_windows": 2,
+  "sampling": "NumPy default_rng(26090651), seven task types in original order; nonzero forward uniform(.08,.22), nonzero yaw magnitude uniform(.35,.75), original yaw sign, initial yaw uniform(-pi,pi); round to six decimals. Fixed after V15 current 21/21 and before any fresh rollout.",
+  "boundary": "42 fresh visible-development windows. Two stand/walk/stop cycles without resetting the physical state, action history, delays or controller between cycles. Same frozen V15 pair and acceptance limits; no hardware or held-out claim.",
+  "timing_profiles": [
+    {"id": "motor-10ms-sensor-20ms", "motor_ticks": 2, "sensor_ticks": 1},
+    {"id": "motor-15ms-sensor-0ms", "motor_ticks": 3, "sensor_ticks": 0},
+    {"id": "motor-25ms-sensor-20ms", "motor_ticks": 5, "sensor_ticks": 1}
+  ],
+  "cases": [
+    {"id": "forward-211", "command": [0.211291, 0, 0], "yaw": -0.756653},
+    {"id": "forward-201", "command": [0.201267, 0, 0], "yaw": 0.461891},
+    {"id": "forward-158", "command": [0.158003, 0, 0], "yaw": -2.183618},
+    {"id": "turn-left-738", "command": [0, 0, 0.738401], "yaw": -2.039892},
+    {"id": "turn-right-380", "command": [0, 0, -0.380155], "yaw": 1.064823},
+    {"id": "arc-left-117-448", "command": [0.117128, 0, 0.448044], "yaw": 1.445337},
+    {"id": "arc-right-184-383", "command": [0.183758, 0, -0.383113], "yaw": 2.566426}
+  ],
+  "thresholds": {
+    "motor_torque_limit_nm": 0.6405236195572268,
+    "torque_saturation_fraction_max": 0.02,
+    "actual_joint_margin_rad_min": 0.02,
+    "mean_abs_forward_error_m_s": 0.05,
+    "mean_abs_yaw_error_rad_s": 0.2,
+    "mean_abs_lateral_velocity_m_s": 0.05,
+    "stop_max_speed_m_s": 0.04,
+    "stop_max_yaw_rate_rad_s": 0.15,
+    "stop_max_tilt_deg": 15,
+    "simultaneous_flight_fraction": 0.05,
+    "turn_max_xy_excursion_m": 0.2,
+    "minimum_bilateral_step_coverage": 0.6
+  }
+}

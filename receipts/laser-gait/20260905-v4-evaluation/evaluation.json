@@ -1,0 +1,325 @@
+{
+  "schema": "microduck.laser-gait-evaluation/v4",
+  "proof_class": "visible_development",
+  "policy_sha256": "6190f954425c2b31c3b301faa5dcfed613d5c9c867b9d00ce71abc722b3df308",
+  "spec_sha256": "82677ba2c077089f389d212001800c0d2c8fb9b8790cd7a9c9c7599e6e465bbd",
+  "evaluator_freeze_sha256": "477e4f0563d937098ea7c56448771d30a786fd7dfa1bda600bc1cab3fb82b462",
+  "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+  "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+  "camera_revision": {
+    "revision": "microduck.head-camera-site-aligned.v2",
+    "old_local_quaternion_wxyz": [
+      0.0,
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "new_local_quaternion_wxyz": [
+      0.7071067811865475,
+      0.0,
+      0.0,
+      -0.7071067811865475
+    ],
+    "physics_changed": false,
+    "physical_calibration": false
+  },
+  "target_only_passed_cases": 1,
+  "gait_rejection_passed_cases": 0,
+  "passed_cases": 0,
+  "case_reports": [
+    {
+      "case_id": "76341-front-circle",
+      "target": {
+        "passed": true,
+        "fell": false,
+        "duration_s": 16.0,
+        "tracking_fraction": 1.0,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 2.22
+        },
+        "mean_visible_distance_m": 0.23564190178251784,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 16.0,
+        "active_s": 15.02,
+        "translation_s": 13.26,
+        "path_length_m": 1.2710397535531692,
+        "qualified_swings_left_right": [
+          0,
+          0
+        ],
+        "swing_events": [],
+        "alternating_landing_fraction": null,
+        "both_feet_loaded_active_fraction": 0.15712383488681758,
+        "loaded_slip_over_3cm_s_fraction": 0.16915995397008055,
+        "loaded_slip_p95_m_s": 0.09135663392525105,
+        "backward_translation_fraction": 0.0,
+        "bilateral_step_coverage_during_translation": 0.0,
+        "target_outside_joint_limits_fraction": 0.08625,
+        "joint_hard_stop_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 0.29764890311679926,
+        "max_actual_limit_violation_rad": 0.0,
+        "max_abs_servo_velocity_rad_s": 6.0180347887476096,
+        "max_abs_actuator_torque_nm": 0.6405236195572268,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 2.640623605075627,
+        "fell": false,
+        "rejection_reasons": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "physical_transfer_validated": false
+    },
+    {
+      "case_id": "76342-front-retarget",
+      "target": {
+        "passed": false,
+        "fell": false,
+        "duration_s": 48.0,
+        "tracking_fraction": 0.24427108727450025,
+        "waypoints_acquired": 2,
+        "first_acquisition_times_s": {
+          "0": 1.96,
+          "4": 30.02
+        },
+        "mean_visible_distance_m": 0.5221909381309023,
+        "max_lost_target_speed_m_s": 0.012676985842508044,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 48.0,
+        "active_s": 45.02,
+        "translation_s": 2.92,
+        "path_length_m": 0.6307486332109076,
+        "qualified_swings_left_right": [
+          0,
+          0
+        ],
+        "swing_events": [],
+        "alternating_landing_fraction": null,
+        "both_feet_loaded_active_fraction": 0.941803642825411,
+        "loaded_slip_over_3cm_s_fraction": 0.008464882177991306,
+        "loaded_slip_p95_m_s": 0.0034496544029739675,
+        "backward_translation_fraction": 0.04794520547945205,
+        "bilateral_step_coverage_during_translation": 0.0,
+        "target_outside_joint_limits_fraction": 0.019583333333333335,
+        "joint_hard_stop_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 0.44126486419162836,
+        "max_actual_limit_violation_rad": 0.0,
+        "max_abs_servo_velocity_rad_s": 6.136546252071209,
+        "max_abs_actuator_torque_nm": 0.6405236195572268,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 2.818833161740111,
+        "fell": false,
+        "rejection_reasons": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "target_pursuit_failed",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "physical_transfer_validated": false
+    },
+    {
+      "case_id": "76343-front-eight",
+      "target": {
+        "passed": false,
+        "fell": false,
+        "duration_s": 16.0,
+        "tracking_fraction": 0.4192377495462795,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 2.3000000000000003
+        },
+        "mean_visible_distance_m": 0.37355269839730454,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 16.0,
+        "active_s": 11.6,
+        "translation_s": 2.18,
+        "path_length_m": 0.513763141697158,
+        "qualified_swings_left_right": [
+          0,
+          0
+        ],
+        "swing_events": [],
+        "alternating_landing_fraction": null,
+        "both_feet_loaded_active_fraction": 0.8293103448275863,
+        "loaded_slip_over_3cm_s_fraction": 0.024505183788878417,
+        "loaded_slip_p95_m_s": 0.0104413097560221,
+        "backward_translation_fraction": 0.009174311926605505,
+        "bilateral_step_coverage_during_translation": 0.0,
+        "target_outside_joint_limits_fraction": 0.05,
+        "joint_hard_stop_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 0.33585357306919184,
+        "max_actual_limit_violation_rad": 0.0,
+        "max_abs_servo_velocity_rad_s": 5.973465008227574,
+        "max_abs_actuator_torque_nm": 0.6405236195572268,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 2.625889084983057,
+        "fell": false,
+        "rejection_reasons": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "target_pursuit_failed",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "physical_transfer_validated": false
+    },
+    {
+      "case_id": "76344-turn-around",
+      "target": {
+        "passed": false,
+        "fell": false,
+        "duration_s": 16.0,
+        "tracking_fraction": 0.39201451905626133,
+        "waypoints_acquired": 1,
+        "first_acquisition_times_s": {
+          "0": 11.700000000000001
+        },
+        "mean_visible_distance_m": 0.3552053893748309,
+        "max_lost_target_speed_m_s": null,
+        "deadline_misses": 0
+      },
+      "gait": {
+        "duration_s": 16.0,
+        "active_s": 13.96,
+        "translation_s": 0.0,
+        "path_length_m": 0.056542829655507915,
+        "qualified_swings_left_right": [
+          0,
+          0
+        ],
+        "swing_events": [],
+        "alternating_landing_fraction": null,
+        "both_feet_loaded_active_fraction": 1.0,
+        "loaded_slip_over_3cm_s_fraction": 0.0,
+        "loaded_slip_p95_m_s": 0.0012441999866730684,
+        "backward_translation_fraction": null,
+        "bilateral_step_coverage_during_translation": null,
+        "target_outside_joint_limits_fraction": 0.0025,
+        "joint_hard_stop_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 0.37178251368064735,
+        "max_actual_limit_violation_rad": 0.0,
+        "max_abs_servo_velocity_rad_s": 3.3783886698833947,
+        "max_abs_actuator_torque_nm": 0.40182425752001055,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 2.4974126426221828,
+        "fell": false,
+        "rejection_reasons": [
+          "no_useful_translation",
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "rejection_gate_passed": false,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "development_passed": false,
+      "failures": [
+        "target_pursuit_failed",
+        "no_useful_translation",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "physical_transfer_validated": false
+    }
+  ],
+  "export_parity": {
+    "random_observations": 65,
+    "max_abs_action_error_rad": 3.337860107421875e-06
+  },
+  "max_real_observation_action_error_rad": 1.3113021850585938e-06,
+  "reserved_opened": false,
+  "physical_transfer_validated": false,
+  "boundary": "Composite development rejection gate. No candidate promotion or hardware operation; flat oracle task, uncalibrated gait envelope."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "v62-bracket-source-partition",
+  "frozen_utc": "2026-09-16T02:52:01.458572+00:00",
+  "seed": 26091662,
+  "config": {
+    "selection_threshold_m": 0.00018,
+    "refinement_target_m": 0.00012,
+    "maximum_depth": 16,
+    "maximum_leaves_per_parent": 128,
+    "maximum_total_parts": 4096
+  },
+  "acceptance": {
+    "independent_tolerance_m": 0.00025,
+    "original_validator": "V59 unchanged",
+    "no_geometry_or_physical_admission_from_generator": true
+  },
+  "hypothesis": "Intersect excessive V61 convex regions with original source solid and partition locally, preserving all nonempty components",
+  "dependency": {
+    "manifold3d": "3.5.3",
+    "install": "isolated ignored target, no existing runtime changes",
+    "sources": [
+      "https://github.com/elalish/manifold/wiki/Manifold-Library",
+      "https://pypi.org/project/manifold3d/"
+    ]
+  },
+  "meshes": {
+    "neck_pitch": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/complete.json",
+      "output_directory": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs/neck_pitch",
+      "seed_parent_indices": [
+        152,
+        192
+      ]
+    }
+  },
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/parts.npz": "31a26d24719c6934b21f030d437fa129cdfa552616e1aa67a5755a7c6f81698a",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/complete.json": "5f6cab68f86c00049fcc446710089ee91c3ff382bc8002d07537f69f6f0f037e",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62.py": "5240e7365ead494a3b21a5610422f64a08bf1e0ec20dd9bbbf7eac4b1e1c7be8",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62.py": "f0f8eb8f67161ec5efc82a2344bbaa340c9927133a36d0502193eec38078134f",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".workspace/geometry-deps-v62/site/manifold3d.cpython-312-darwin.so": "d405628ac45f7d5037117c5b06fe596061b524471d2708b1572b973b887f45a9",
+    ".workspace/geometry-deps-v62/site/manifold3d-3.5.3.dist-info/METADATA": "639bd96e419d61a0fd2d0739cef4e7495710435e7b9937d8f978da1ad2a07c1b"
+  }
+}

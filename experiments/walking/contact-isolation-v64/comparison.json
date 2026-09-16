@@ -1,0 +1,939 @@
+{
+  "status": "completed_diagnostics",
+  "cases": {
+    "v11-replay-base-r1": {
+      "passed": false,
+      "failures": [
+        "ground_penetration"
+      ],
+      "completed": true,
+      "observed_physics_steps": 3600,
+      "first_fall_s": null,
+      "maximum_ground_penetration_m": 0.003974844464207147,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.08069269637424797,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.018834,
+        "physics_step_p99_ms": 0.05400041999999999,
+        "measured_control_intervals": 900,
+        "control_p99_ms": 1.12929,
+        "control_deadline_miss_fraction": 0.0011111111111111111,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    },
+    "v11-passive-base-r1": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ],
+      "completed": true,
+      "observed_physics_steps": 1000,
+      "first_fall_s": 0.41000000000000025,
+      "maximum_ground_penetration_m": 0.007187324114267854,
+      "maximum_internal_penetration_m": 0.00015806697645193794,
+      "maximum_internal_load_n": 3.6623794361715154,
+      "maximum_nonsole_ground_load_n": 50.82214515283923,
+      "minimum_joint_margin_rad": -0.044857471984377284,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.0415,
+        "physics_step_p99_ms": 0.1030075,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 1.5614200799999993,
+        "control_deadline_miss_fraction": 0.004,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    },
+    "v62-replay-base-r1": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 501,
+      "first_fall_s": 2.504999999999969,
+      "maximum_ground_penetration_m": 0.0042503330450556764,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 5.245101044821729,
+      "minimum_joint_margin_rad": 0.09079048850267768,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.301292,
+        "physics_step_p99_ms": 0.398,
+        "measured_control_intervals": 125,
+        "control_p99_ms": 2.2236070800000007,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-passive-base-r1": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ],
+      "completed": false,
+      "observed_physics_steps": 108,
+      "first_fall_s": 0.41000000000000025,
+      "maximum_ground_penetration_m": 0.010336332067689136,
+      "maximum_internal_penetration_m": 0.0017154255007804692,
+      "maximum_internal_load_n": 45.03612637267539,
+      "maximum_nonsole_ground_load_n": 52.405125575079666,
+      "minimum_joint_margin_rad": -0.022424537886401863,
+      "stop_reason": "numerical_or_geometry_hard_stop",
+      "performance": {
+        "physics_step_median_ms": 0.3459165,
+        "physics_step_p99_ms": 1.781718619999997,
+        "measured_control_intervals": 27,
+        "control_p99_ms": 16.68474373999997,
+        "control_deadline_miss_fraction": 0.037037037037037035,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-replay-base-r2": {
+      "passed": false,
+      "failures": [
+        "ground_penetration"
+      ],
+      "completed": true,
+      "observed_physics_steps": 3600,
+      "first_fall_s": null,
+      "maximum_ground_penetration_m": 0.003974844464207147,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.08069269637424797,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.018792,
+        "physics_step_p99_ms": 0.05287666999999996,
+        "measured_control_intervals": 900,
+        "control_p99_ms": 1.0553596699999999,
+        "control_deadline_miss_fraction": 0.0011111111111111111,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    },
+    "v11-passive-base-r2": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ],
+      "completed": true,
+      "observed_physics_steps": 1000,
+      "first_fall_s": 0.41000000000000025,
+      "maximum_ground_penetration_m": 0.007187324114267854,
+      "maximum_internal_penetration_m": 0.00015806697645193794,
+      "maximum_internal_load_n": 3.6623794361715154,
+      "maximum_nonsole_ground_load_n": 50.82214515283923,
+      "minimum_joint_margin_rad": -0.044857471984377284,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.040084,
+        "physics_step_p99_ms": 0.10792083999999995,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 1.3545323299999998,
+        "control_deadline_miss_fraction": 0.004,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    },
+    "v62-replay-base-r2": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 501,
+      "first_fall_s": 2.504999999999969,
+      "maximum_ground_penetration_m": 0.0042503330450556764,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 5.245101044821729,
+      "minimum_joint_margin_rad": 0.09079048850267768,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.306666,
+        "physics_step_p99_ms": 0.430834,
+        "measured_control_intervals": 125,
+        "control_p99_ms": 2.5360312400000007,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-passive-base-r2": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ],
+      "completed": false,
+      "observed_physics_steps": 108,
+      "first_fall_s": 0.41000000000000025,
+      "maximum_ground_penetration_m": 0.010336332067689136,
+      "maximum_internal_penetration_m": 0.0017154255007804692,
+      "maximum_internal_load_n": 45.03612637267539,
+      "maximum_nonsole_ground_load_n": 52.405125575079666,
+      "minimum_joint_margin_rad": -0.022424537886401863,
+      "stop_reason": "numerical_or_geometry_hard_stop",
+      "performance": {
+        "physics_step_median_ms": 0.3387705,
+        "physics_step_p99_ms": 1.798214559999999,
+        "measured_control_intervals": 27,
+        "control_p99_ms": 17.324413739999976,
+        "control_deadline_miss_fraction": 0.037037037037037035,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-retry-replay-match_v11_export-retry-r1": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 501,
+      "first_fall_s": 2.504999999999969,
+      "maximum_ground_penetration_m": 0.0036301207383957097,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 2.1057012437273093,
+      "minimum_joint_margin_rad": 0.09098419196137175,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.302167,
+        "physics_step_p99_ms": 0.424416,
+        "measured_control_intervals": 125,
+        "control_p99_ms": 2.6459950000000005,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-retry-replay-match_v11_export-retry-r2": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 501,
+      "first_fall_s": 2.504999999999969,
+      "maximum_ground_penetration_m": 0.0036301207383957097,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 2.1057012437273093,
+      "minimum_joint_margin_rad": 0.09098419196137175,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.3025,
+        "physics_step_p99_ms": 0.434042,
+        "measured_control_intervals": 125,
+        "control_p99_ms": 2.3748170000000006,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-retry-replay-mask_shell_floor-retry-r1": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "completed": false,
+      "observed_physics_steps": 497,
+      "first_fall_s": 2.4849999999999692,
+      "maximum_ground_penetration_m": 0.0036744422436813693,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.0907864334124664,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.30275,
+        "physics_step_p99_ms": 0.42644868,
+        "measured_control_intervals": 124,
+        "control_p99_ms": 2.6409828399999995,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-retry-replay-mask_shell_floor-retry-r2": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "completed": false,
+      "observed_physics_steps": 497,
+      "first_fall_s": 2.4849999999999692,
+      "maximum_ground_penetration_m": 0.0036744422436813693,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.0907864334124664,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.29775,
+        "physics_step_p99_ms": 0.4109666800000001,
+        "measured_control_intervals": 124,
+        "control_p99_ms": 2.889278589999998,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-replay-dt2500us-r1": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "completed": false,
+      "observed_physics_steps": 682,
+      "first_fall_s": 1.7049999999999748,
+      "maximum_ground_penetration_m": 0.004382728435647281,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.13951209564121264,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.01875,
+        "physics_step_p99_ms": 0.05521547999999989,
+        "measured_control_intervals": 85,
+        "control_p99_ms": 1.7072194399999974,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-replay-dt2500us-r2": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "completed": false,
+      "observed_physics_steps": 682,
+      "first_fall_s": 1.7049999999999748,
+      "maximum_ground_penetration_m": 0.004382728435647281,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.13951209564121264,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.018417,
+        "physics_step_p99_ms": 0.04794791999999999,
+        "measured_control_intervals": 85,
+        "control_p99_ms": 1.776773279999999,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-passive-dt2500us-r1": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ],
+      "completed": true,
+      "observed_physics_steps": 2000,
+      "first_fall_s": 0.4100000000000003,
+      "maximum_ground_penetration_m": 0.009276068275711973,
+      "maximum_internal_penetration_m": 0.00032959267197534144,
+      "maximum_internal_load_n": 4.359792841069823,
+      "maximum_nonsole_ground_load_n": 42.96744743147245,
+      "minimum_joint_margin_rad": -0.05383488916407342,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.0376045,
+        "physics_step_p99_ms": 0.11012666,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 2.44981151,
+        "control_deadline_miss_fraction": 0.004,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    },
+    "v11-passive-dt2500us-r2": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ],
+      "completed": true,
+      "observed_physics_steps": 2000,
+      "first_fall_s": 0.4100000000000003,
+      "maximum_ground_penetration_m": 0.009276068275711973,
+      "maximum_internal_penetration_m": 0.00032959267197534144,
+      "maximum_internal_load_n": 4.359792841069823,
+      "maximum_nonsole_ground_load_n": 42.96744743147245,
+      "minimum_joint_margin_rad": -0.05383488916407342,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.0375,
+        "physics_step_p99_ms": 0.09783691,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 2.11328966,
+        "control_deadline_miss_fraction": 0.004,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    },
+    "v62-replay-dt2500us-r1": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 657,
+      "first_fall_s": 1.642499999999976,
+      "maximum_ground_penetration_m": 0.0030567475750024886,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 5.597795103338117,
+      "minimum_joint_margin_rad": 0.1415308564388908,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.295,
+        "physics_step_p99_ms": 0.40781651999999985,
+        "measured_control_intervals": 82,
+        "control_p99_ms": 4.766189039999995,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-replay-dt2500us-r2": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 657,
+      "first_fall_s": 1.642499999999976,
+      "maximum_ground_penetration_m": 0.0030567475750024886,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 5.597795103338117,
+      "minimum_joint_margin_rad": 0.1415308564388908,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.292167,
+        "physics_step_p99_ms": 0.4113800399999998,
+        "measured_control_intervals": 82,
+        "control_p99_ms": 4.684232019999994,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-passive-dt2500us-r1": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ],
+      "completed": false,
+      "observed_physics_steps": 217,
+      "first_fall_s": 0.4100000000000003,
+      "maximum_ground_penetration_m": 0.01013606382732938,
+      "maximum_internal_penetration_m": 0.0020336869456974377,
+      "maximum_internal_load_n": 42.86020926276805,
+      "maximum_nonsole_ground_load_n": 47.37282006147073,
+      "minimum_joint_margin_rad": -0.024147668092202812,
+      "stop_reason": "numerical_or_geometry_hard_stop",
+      "performance": {
+        "physics_step_median_ms": 0.327875,
+        "physics_step_p99_ms": 1.3158134400000001,
+        "measured_control_intervals": 27,
+        "control_p99_ms": 22.603968419999966,
+        "control_deadline_miss_fraction": 0.037037037037037035,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-passive-dt2500us-r2": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ],
+      "completed": false,
+      "observed_physics_steps": 217,
+      "first_fall_s": 0.4100000000000003,
+      "maximum_ground_penetration_m": 0.01013606382732938,
+      "maximum_internal_penetration_m": 0.0020336869456974377,
+      "maximum_internal_load_n": 42.86020926276805,
+      "maximum_nonsole_ground_load_n": 47.37282006147073,
+      "minimum_joint_margin_rad": -0.024147668092202812,
+      "stop_reason": "numerical_or_geometry_hard_stop",
+      "performance": {
+        "physics_step_median_ms": 0.321584,
+        "physics_step_p99_ms": 1.190382,
+        "measured_control_intervals": 27,
+        "control_p99_ms": 22.068798759999968,
+        "control_deadline_miss_fraction": 0.037037037037037035,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-replay-dt1250us-r1": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "completed": false,
+      "observed_physics_steps": 1313,
+      "first_fall_s": 1.6412499999999706,
+      "maximum_ground_penetration_m": 0.003083610449999958,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.14048206547032693,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.017375,
+        "physics_step_p99_ms": 0.05155307999999985,
+        "measured_control_intervals": 82,
+        "control_p99_ms": 2.6599859799999996,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-replay-dt1250us-r2": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "completed": false,
+      "observed_physics_steps": 1313,
+      "first_fall_s": 1.6412499999999706,
+      "maximum_ground_penetration_m": 0.003083610449999958,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.0,
+      "minimum_joint_margin_rad": 0.14048206547032693,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.017917,
+        "physics_step_p99_ms": 0.05636995999999999,
+        "measured_control_intervals": 82,
+        "control_p99_ms": 2.846172,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-passive-dt1250us-r1": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ],
+      "completed": false,
+      "observed_physics_steps": 423,
+      "first_fall_s": 0.40999999999999676,
+      "maximum_ground_penetration_m": 0.010133511321523576,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 47.922534354941995,
+      "minimum_joint_margin_rad": -0.05245207326971224,
+      "stop_reason": "numerical_or_geometry_hard_stop",
+      "performance": {
+        "physics_step_median_ms": 0.018666,
+        "physics_step_p99_ms": 0.05904295999999992,
+        "measured_control_intervals": 26,
+        "control_p99_ms": 2.46261475,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v11-passive-dt1250us-r2": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ],
+      "completed": false,
+      "observed_physics_steps": 423,
+      "first_fall_s": 0.40999999999999676,
+      "maximum_ground_penetration_m": 0.010133511321523576,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 47.922534354941995,
+      "minimum_joint_margin_rad": -0.05245207326971224,
+      "stop_reason": "numerical_or_geometry_hard_stop",
+      "performance": {
+        "physics_step_median_ms": 0.019875,
+        "physics_step_p99_ms": 0.07131076,
+        "measured_control_intervals": 26,
+        "control_p99_ms": 2.68448925,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-replay-dt1250us-r1": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 1309,
+      "first_fall_s": 1.6362499999999707,
+      "maximum_ground_penetration_m": 0.003117160213637119,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.7757490589188042,
+      "minimum_joint_margin_rad": 0.14394069322926928,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.290917,
+        "physics_step_p99_ms": 0.38776164000000013,
+        "measured_control_intervals": 81,
+        "control_p99_ms": 7.718950200000006,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-replay-dt1250us-r2": {
+      "passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "completed": false,
+      "observed_physics_steps": 1309,
+      "first_fall_s": 1.6362499999999707,
+      "maximum_ground_penetration_m": 0.003117160213637119,
+      "maximum_internal_penetration_m": 0.0,
+      "maximum_internal_load_n": 0,
+      "maximum_nonsole_ground_load_n": 0.7757490589188042,
+      "minimum_joint_margin_rad": 0.14394069322926928,
+      "stop_reason": "fall",
+      "performance": {
+        "physics_step_median_ms": 0.288375,
+        "physics_step_p99_ms": 0.40742228,
+        "measured_control_intervals": 81,
+        "control_p99_ms": 7.922408600000005,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-passive-dt1250us-r1": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "internal_penetration",
+        "joint_stop_overshoot"
+      ],
+      "completed": true,
+      "observed_physics_steps": 4000,
+      "first_fall_s": 0.41124999999999673,
+      "maximum_ground_penetration_m": 0.009356263451742466,
+      "maximum_internal_penetration_m": 0.0020638041611295535,
+      "maximum_internal_load_n": 40.937500438215125,
+      "maximum_nonsole_ground_load_n": 46.554775860841765,
+      "minimum_joint_margin_rad": -0.02634465525705787,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.402083,
+        "physics_step_p99_ms": 0.6517030899999992,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 130.02528648999981,
+        "control_deadline_miss_fraction": 0.024,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "v62-passive-dt1250us-r2": {
+      "passed": false,
+      "failures": [
+        "ground_penetration",
+        "internal_penetration",
+        "joint_stop_overshoot"
+      ],
+      "completed": true,
+      "observed_physics_steps": 4000,
+      "first_fall_s": 0.41124999999999673,
+      "maximum_ground_penetration_m": 0.009356263451742466,
+      "maximum_internal_penetration_m": 0.0020638041611295535,
+      "maximum_internal_load_n": 40.937500438215125,
+      "maximum_nonsole_ground_load_n": 46.554775860841765,
+      "minimum_joint_margin_rad": -0.02634465525705787,
+      "stop_reason": null,
+      "performance": {
+        "physics_step_median_ms": 0.397854,
+        "physics_step_p99_ms": 0.6866424999999995,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 128.53999023999984,
+        "control_deadline_miss_fraction": 0.024,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    }
+  },
+  "diagnostic_passes": 0,
+  "counterfactuals": {
+    "match_v11_export": {
+      "common_steps": 501,
+      "common_duration_s": 2.505,
+      "root_max_m": 0.00502405970249051,
+      "joint_max_rad": 0.017141571979040204,
+      "root_rms_m": 0.000968752048311773,
+      "first_root_over_1mm_s": 2.255,
+      "ground_peak_delta_m": 0.0006202123066599667,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.0,
+      "same_terminal_category": true,
+      "both_full_duration": false,
+      "materially_visible_effect": true
+    },
+    "mask_shell_floor": {
+      "common_steps": 497,
+      "common_duration_s": 2.485,
+      "root_max_m": 0.00646193884268076,
+      "joint_max_rad": 0.03255086945065733,
+      "root_rms_m": 0.0010413603306559242,
+      "first_root_over_1mm_s": 2.165,
+      "ground_peak_delta_m": 0.0005758908013743071,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.020000000000000018,
+      "same_terminal_category": true,
+      "both_full_duration": false,
+      "materially_visible_effect": true,
+      "before_first_original_shell_contact_max_errors": {
+        "qpos": 0.0,
+        "qvel": 0.0,
+        "ctrl": 0.0,
+        "target": 0.0
+      },
+      "unaffected_prefix_verified": true
+    }
+  },
+  "convergence": {
+    "v11-replay": {
+      "coarse_to_middle": {
+        "common_steps": 341,
+        "common_duration_s": 1.705,
+        "root_max_m": 0.05875197244918681,
+        "joint_max_rad": 0.17791790169616284,
+        "root_rms_m": 0.013444731540479048,
+        "first_root_over_1mm_s": 0.685,
+        "ground_peak_delta_m": 0.00040788397144013444,
+        "internal_peak_delta_m": 0.0,
+        "terminal_time_delta_s": 16.295,
+        "same_terminal_category": false,
+        "both_full_duration": false
+      },
+      "middle_to_fine": {
+        "common_steps": 656,
+        "common_duration_s": 1.6400000000000001,
+        "root_max_m": 0.007689377217642322,
+        "joint_max_rad": 0.01859084831181801,
+        "root_rms_m": 0.001627816300995299,
+        "first_root_over_1mm_s": 1.3275000000000001,
+        "ground_peak_delta_m": 0.0012991179856473231,
+        "internal_peak_delta_m": 0.0,
+        "terminal_time_delta_s": 0.06374999999999997,
+        "same_terminal_category": true,
+        "both_full_duration": false
+      },
+      "finest_agreement_screen_passed": false,
+      "failed_components": [
+        "root_max_m",
+        "joint_max_rad",
+        "ground_peak_delta_m",
+        "terminal_time_delta_s"
+      ]
+    },
+    "v11-passive": {
+      "coarse_to_middle": {
+        "common_steps": 1000,
+        "common_duration_s": 5.0,
+        "root_max_m": 0.0014745482735376639,
+        "joint_max_rad": 0.02086609478402346,
+        "root_rms_m": 0.0012093942221657124,
+        "first_root_over_1mm_s": 0.6,
+        "ground_peak_delta_m": 0.0020887441614441185,
+        "internal_peak_delta_m": 0.0001715256955234035,
+        "terminal_time_delta_s": 0.0,
+        "same_terminal_category": true,
+        "both_full_duration": true
+      },
+      "middle_to_fine": {
+        "common_steps": 211,
+        "common_duration_s": 0.5275,
+        "root_max_m": 0.0007786786875657436,
+        "joint_max_rad": 0.02222603672197232,
+        "root_rms_m": 0.0002693479945948972,
+        "first_root_over_1mm_s": null,
+        "ground_peak_delta_m": 0.0008574430458116039,
+        "internal_peak_delta_m": 0.00032959267197534144,
+        "terminal_time_delta_s": 4.4712499999999995,
+        "same_terminal_category": false,
+        "both_full_duration": false
+      },
+      "finest_agreement_screen_passed": false,
+      "failed_components": [
+        "joint_max_rad",
+        "ground_peak_delta_m",
+        "internal_peak_delta_m",
+        "terminal_time_delta_s",
+        "terminal_category"
+      ]
+    },
+    "v62-replay": {
+      "coarse_to_middle": {
+        "common_steps": 328,
+        "common_duration_s": 1.6400000000000001,
+        "root_max_m": 0.046909825704017416,
+        "joint_max_rad": 0.17898328186968704,
+        "root_rms_m": 0.010557957947554064,
+        "first_root_over_1mm_s": 0.7000000000000001,
+        "ground_peak_delta_m": 0.0011935854700531878,
+        "internal_peak_delta_m": 0.0,
+        "terminal_time_delta_s": 0.8624999999999998,
+        "same_terminal_category": true,
+        "both_full_duration": false
+      },
+      "middle_to_fine": {
+        "common_steps": 654,
+        "common_duration_s": 1.635,
+        "root_max_m": 0.011007321850198924,
+        "joint_max_rad": 0.027203772804162973,
+        "root_rms_m": 0.00233567977030029,
+        "first_root_over_1mm_s": 1.245,
+        "ground_peak_delta_m": 6.041263863463056e-05,
+        "internal_peak_delta_m": 0.0,
+        "terminal_time_delta_s": 0.006250000000000089,
+        "same_terminal_category": true,
+        "both_full_duration": false
+      },
+      "finest_agreement_screen_passed": false,
+      "failed_components": [
+        "root_max_m",
+        "joint_max_rad"
+      ]
+    },
+    "v62-passive": {
+      "coarse_to_middle": {
+        "common_steps": 108,
+        "common_duration_s": 0.54,
+        "root_max_m": 0.001724695766834586,
+        "joint_max_rad": 0.025363956308864122,
+        "root_rms_m": 0.0005673683724334471,
+        "first_root_over_1mm_s": 0.47000000000000003,
+        "ground_peak_delta_m": 0.00020026824035975638,
+        "internal_peak_delta_m": 0.0003182614449169685,
+        "terminal_time_delta_s": 0.0024999999999999467,
+        "same_terminal_category": true,
+        "both_full_duration": false
+      },
+      "middle_to_fine": {
+        "common_steps": 217,
+        "common_duration_s": 0.5425,
+        "root_max_m": 0.0002980603641075423,
+        "joint_max_rad": 0.010263163283072085,
+        "root_rms_m": 0.00013414392527550897,
+        "first_root_over_1mm_s": null,
+        "ground_peak_delta_m": 0.0007798003755869129,
+        "internal_peak_delta_m": 3.01172154321158e-05,
+        "terminal_time_delta_s": 4.4575,
+        "same_terminal_category": false,
+        "both_full_duration": false
+      },
+      "finest_agreement_screen_passed": false,
+      "failed_components": [
+        "ground_peak_delta_m",
+        "terminal_time_delta_s",
+        "terminal_category"
+      ]
+    }
+  },
+  "matched_export_physical_arrays": {
+    "v62-retry-replay-match_v11_export-retry-r1": {
+      "arrays_exact": 27
+    },
+    "v62-retry-replay-match_v11_export-retry-r2": {
+      "arrays_exact": 27
+    }
+  },
+  "model_admitted": false,
+  "walking_accepted": false,
+  "physical_acceptance": false,
+  "boundary": "Exposed deterministic model diagnostics, with quarantined premature isolation attempts excluded. No closed-loop policy score, measured calibration or terrain acceptance."
+}

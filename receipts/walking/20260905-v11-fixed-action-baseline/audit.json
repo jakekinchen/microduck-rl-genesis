@@ -1,0 +1,30 @@
+{
+  "schema": "microduck.complete-contact-fixed-action-diagnostic/v1",
+  "cases": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "source_action_sha256": "85da0dcf8b1753a3517c6464936f3690738e934c962477190c55dfdb3f0c9477",
+      "identical_input_action_bytes": true,
+      "requested_prefix_steps": 250,
+      "replayed_steps": 76,
+      "genesis_fell": true,
+      "native_fell": false,
+      "final_root_gap_m": 0.09430778067540016,
+      "first_root_gap_over_1mm_s": 0.12
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "source_action_sha256": "cb3dd7e77c8752ef7b5ecabe6f13acce44c6143f4813981a04e4f7df71c47df3",
+      "identical_input_action_bytes": true,
+      "requested_prefix_steps": 250,
+      "replayed_steps": 78,
+      "genesis_fell": true,
+      "native_fell": false,
+      "final_root_gap_m": 0.08451303024123594,
+      "first_root_gap_over_1mm_s": 0.12
+    }
+  ],
+  "input_manifest_sha256": "81a42c494f16e5b0131eb3294d4ba721f328e86ffa8000f8ba55708f18c03178",
+  "acceptance_eligible": false,
+  "boundary": "Original float32 action prefix in both complete-contact-v11 engines with identical 20-ms BAM latency and HOME history. Stops when either engine falls; no continuation after terminal fall. Copied generalized qpos, no derived-state phase ambiguity. Not closed-loop performance, calibrated fidelity or candidate acceptance."
+}

@@ -1,0 +1,371 @@
+{
+  "schema": "microduck.unpruned-patch/v36",
+  "status": "completed",
+  "cases": [
+    {
+      "session_id": "rigid-control-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "debd57782269c50bdd177eeefb2f10f39daddd043af26d1dfba7247bf135a703",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "unpruned-exact-hull-gjk-patch",
+      "genesis_original_max_qpos_delta": 0.082829799503088,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.01126215548835841,
+          "max_joint_error_deg": 6.400427719157818,
+          "max_physics_base_error_m": 0.01126215548835841,
+          "max_physics_joint_error_deg": 6.400427719157818,
+          "first_threshold_divergence_s": 0.46,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.004842589460275981,
+          "max_joint_error_deg": 2.8084000893857137,
+          "max_physics_base_error_m": 0.004842589460275981,
+          "max_physics_joint_error_deg": 2.8084000893857137,
+          "first_threshold_divergence_s": 0.68,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.006486369211915023,
+          "max_joint_error_deg": 3.697545123872057,
+          "max_physics_base_error_m": 0.006486369211915023,
+          "max_physics_joint_error_deg": 3.697545123872057,
+          "first_threshold_divergence_s": 0.62,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-low-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "058f9fa881e945806230836e8b293c85ec32b8b32ab722843c8b3bffaf9e02e5",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "unpruned-exact-hull-gjk-patch",
+      "genesis_original_max_qpos_delta": 0.09756720811128616,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.011619434233869776,
+          "max_joint_error_deg": 6.217546683233551,
+          "max_physics_base_error_m": 0.011619434233869776,
+          "max_physics_joint_error_deg": 6.217546683233551,
+          "first_threshold_divergence_s": 0.46,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.005384197711746265,
+          "max_joint_error_deg": 2.961952245054758,
+          "max_physics_base_error_m": 0.005384197711746265,
+          "max_physics_joint_error_deg": 2.961952245054758,
+          "first_threshold_divergence_s": 0.66,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.00642712360878172,
+          "max_joint_error_deg": 3.47725288186349,
+          "max_physics_base_error_m": 0.00642712360878172,
+          "max_physics_joint_error_deg": 3.47725288186349,
+          "first_threshold_divergence_s": 0.58,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-middle-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "991da8a5fc649f0c8e9d1e66d0de197f263bb2e22d7874c34b60d1b08fe1ae33",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "unpruned-exact-hull-gjk-patch",
+      "genesis_original_max_qpos_delta": 0.0689193606376648,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.00795279547110213,
+          "max_joint_error_deg": 4.413361152257407,
+          "max_physics_base_error_m": 0.00795279547110213,
+          "max_physics_joint_error_deg": 4.413361152257407,
+          "first_threshold_divergence_s": 0.38,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.00870263235711891,
+          "max_joint_error_deg": 4.472684127843716,
+          "max_physics_base_error_m": 0.00870263235711891,
+          "max_physics_joint_error_deg": 4.472684127843716,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.002886578817716836,
+          "max_joint_error_deg": 1.81927261810684,
+          "max_physics_base_error_m": 0.0029232750922801596,
+          "max_physics_joint_error_deg": 1.8209630005340505,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-high-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 11,
+      "physics_steps": 44,
+      "action_bytes_sha256": "ebcd9d2956ec84132a3da263da00f11172dcf6251965a5655ab6ae7472bbc9f9",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "unpruned-exact-hull-gjk-patch",
+      "genesis_original_max_qpos_delta": 0.01129549315373879,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.0060853659113105285,
+          "max_joint_error_deg": 0.5589346023394245,
+          "max_physics_base_error_m": 0.0060853659113105285,
+          "max_physics_joint_error_deg": 0.5589346023394245,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.014862406528553189,
+          "max_joint_error_deg": 1.6338645169174926,
+          "max_physics_base_error_m": 0.014862406528553189,
+          "max_physics_joint_error_deg": 1.6338645169174926,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.010567718392199076,
+          "max_joint_error_deg": 1.099026851435354,
+          "max_physics_base_error_m": 0.010567718392199076,
+          "max_physics_joint_error_deg": 1.099026851435354,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-high-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v26-surface-standing",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "2612c453c10b9e03021e7da4a2dfad736e3a0323c924b5d1e9c8082f60a5ff49",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "unpruned-exact-hull-gjk-patch",
+      "genesis_original_max_qpos_delta": 0.039430856704711914,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.01434452383988282,
+          "max_joint_error_deg": 2.5222835716324226,
+          "max_physics_base_error_m": 0.014346591107291529,
+          "max_physics_joint_error_deg": 2.5266446426693783,
+          "first_threshold_divergence_s": 0.16,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.016474676095048244,
+          "max_joint_error_deg": 1.9857543360860088,
+          "max_physics_base_error_m": 0.016474676095048244,
+          "max_physics_joint_error_deg": 1.9857543360860088,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.00966410845299946,
+          "max_joint_error_deg": 1.1192652157790022,
+          "max_physics_base_error_m": 0.00966410845299946,
+          "max_physics_joint_error_deg": 1.1299683175050799,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      }
+    }
+  ],
+  "physical_calibration": false,
+  "geometry_audit": [
+    {
+      "body": "trunk_base",
+      "mesh": "power_support",
+      "native_vertices": 6384,
+      "genesis_vertices": 380,
+      "max_support_difference_m": 1.0228945884760421e-08,
+      "axis_difference_m": [
+        2.495308074751401e-10,
+        2.7815599823455273e-10,
+        6.314753053793254e-09,
+        9.925245451902764e-10,
+        9.548426181671399e-10,
+        2.797135481569235e-09
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "trunk_base",
+      "mesh": "np_f970",
+      "native_vertices": 10487,
+      "genesis_vertices": 954,
+      "max_support_difference_m": 1.3288673716971289e-08,
+      "axis_difference_m": [
+        1.3468372944691609e-09,
+        1.1210211370293877e-09,
+        2.692242206947526e-09,
+        2.2044711334157086e-09,
+        6.710335134774148e-10,
+        4.878037904165744e-09
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "hip_l",
+      "mesh": "hip_l",
+      "native_vertices": 10471,
+      "genesis_vertices": 1360,
+      "max_support_difference_m": 6.547505454479463e-09,
+      "axis_difference_m": [
+        1.094409285418152e-11,
+        1.4180346619152573e-09,
+        6.850601613761498e-10,
+        3.915089995254473e-09,
+        6.659679960274723e-10,
+        1.0290471669227585e-09
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "leg",
+      "mesh": "leg",
+      "native_vertices": 7374,
+      "genesis_vertices": 1062,
+      "max_support_difference_m": 9.422920430046666e-09,
+      "axis_difference_m": [
+        9.650461159360635e-11,
+        1.6261883228896323e-09,
+        6.607705049788137e-09,
+        7.867966833607909e-10,
+        8.759105631778175e-09,
+        3.726607286647088e-10
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "ankle_left",
+      "mesh": "sole_left",
+      "native_vertices": 7896,
+      "genesis_vertices": 4967,
+      "max_support_difference_m": 6.853308906484834e-09,
+      "axis_difference_m": [
+        8.356578345969368e-10,
+        2.894098419248259e-09,
+        3.988518720160483e-09,
+        1.7754555742266476e-09,
+        1.630947089187318e-09,
+        1.2029968340931951e-10
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "jaw_soft",
+      "mesh": "top_head_shell",
+      "native_vertices": 8062,
+      "genesis_vertices": 3808,
+      "max_support_difference_m": 1.9716176469231073e-08,
+      "axis_difference_m": [
+        4.122609642553954e-09,
+        1.0520853771511796e-09,
+        1.885850753335916e-09,
+        3.3087471859594153e-09,
+        8.363472900341229e-10,
+        8.457158251484742e-09
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "jaw_soft",
+      "mesh": "jaw",
+      "native_vertices": 4949,
+      "genesis_vertices": 1704,
+      "max_support_difference_m": 2.193981538112233e-08,
+      "axis_difference_m": [
+        7.289721271064309e-09,
+        5.040928389987709e-09,
+        1.97023986847622e-08,
+        5.928043611547196e-10,
+        4.008409354439024e-09,
+        5.0535795270700845e-09
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "jaw_soft",
+      "mesh": "bottom_head_shell",
+      "native_vertices": 10477,
+      "genesis_vertices": 1619,
+      "max_support_difference_m": 2.0682157431117787e-08,
+      "axis_difference_m": [
+        1.7253714151843624e-09,
+        9.872322473403194e-10,
+        4.788858809501306e-09,
+        1.086212966794342e-09,
+        2.9168505041865522e-09,
+        1.0030063474220086e-08
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "hip_l_2",
+      "mesh": "hip_l",
+      "native_vertices": 10471,
+      "genesis_vertices": 1360,
+      "max_support_difference_m": 5.526796298394032e-09,
+      "axis_difference_m": [
+        1.094409285418152e-11,
+        1.1959437051789479e-09,
+        1.6044559292271998e-09,
+        2.0524448494929626e-09,
+        1.4985024332503372e-09,
+        1.9484429347738086e-09
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "leg_2",
+      "mesh": "leg",
+      "native_vertices": 7374,
+      "genesis_vertices": 1062,
+      "max_support_difference_m": 1.5387496481861218e-08,
+      "axis_difference_m": [
+        4.943536597440401e-09,
+        1.0638023587028478e-08,
+        6.421778053766758e-09,
+        4.058127642952991e-09,
+        2.115374771183287e-09,
+        7.63731432609771e-09
+      ],
+      "runtime_mass_matches": true
+    },
+    {
+      "body": "ankle_right",
+      "mesh": "sole_right",
+      "native_vertices": 7946,
+      "genesis_vertices": 5036,
+      "max_support_difference_m": 1.2421228101633375e-08,
+      "axis_difference_m": [
+        6.005509617379445e-09,
+        6.088369718104669e-09,
+        5.658236379435522e-11,
+        5.54766814431229e-09,
+        5.7280286486216525e-09,
+        1.3938835190241416e-09
+      ],
+      "runtime_mass_matches": true
+    }
+  ],
+  "elapsed_s": 11.542157124989899
+}

@@ -1,0 +1,150 @@
+main @ 85c5233dc7de
+Verify full-CAD startup, applied contact loads and simulation cost before walking replay
+121 development evaluations; 70 training records; 24 inspection errors
+Worktree: changes present
+  20260904-v1-baseline: 2/6; first_party_development; manifest_verified
+  20260904-v1-baseline-repeat: 2/6; first_party_development; manifest_verified
+  20260904-v1-genesis: see report; first_party_development; manifest_verified
+  20260904-v1-trained: 2/6; first_party_development; manifest_verified
+  20260904-v2-baseline: 2/6; first_party_development; manifest_verified
+  20260904-v2-genesis: see report; first_party_development; manifest_verified
+  20260904-v2-repeat: 6/6; first_party_development; manifest_verified
+  20260904-v2-steering: 6/6; first_party_development; manifest_verified
+  evaluation-1: see report; first_party_development; manifest_verified
+  evaluation-2: see report; first_party_development; manifest_verified
+  20260905-baseline-dev-r2: 1/6; visible_development; manifest_verified
+  20260905-baseline-nominal: 0/3; visible_development; manifest_verified
+  20260905-robust-dev: 1/6; visible_development; manifest_verified
+  20260905-robust-legacy: 6/6; first_party_development; manifest_verified
+  20260905-robust-nominal: 0/3; visible_development; manifest_verified
+  20260905-turn-dev: 5/6; visible_development; manifest_verified
+  20260905-turn-legacy: 6/6; first_party_development; manifest_verified
+  20260905-turn-nominal: 3/3; visible_development; manifest_verified
+  20260905-turn-repeat: 5/6; visible_development; manifest_verified
+  20260905-smoke-evaluation: 0/4; visible_development; manifest_verified
+  20260905-turn-composite-baseline: 0/4; visible_development; manifest_verified
+  20260905-v4-evaluation: 0/4; visible_development; manifest_verified
+  20260905-v11-native-baseline: 6/21; visible_development; manifest_verified
+  20260905-v11-native-baseline-video: 6/21; visible_development; manifest_verified
+  20260905-v12-current-sensor: 17/21; visible_development; manifest_verified
+  20260905-v13-current-sensor: 20/21; visible_development; manifest_verified
+  20260905-v13-legacy-sensor: 1/21; visible_development; manifest_verified
+  20260905-v13-old-regression: 2/21; visible_development; manifest_verified
+  20260905-v13-raw-complete: 4/21; visible_development; manifest_verified
+  20260905-v13-reduced-current-sensor: 1/21; visible_development; manifest_verified
+  20260905-v3-current-sensor-baseline: 0/21; visible_development; manifest_verified
+  20260905-v3-final: 0/21; visible_development; manifest_verified
+  20260905-v4-baseline: 0/21; visible_development; manifest_verified
+  20260905-v5-complete-stance-baseline: 2/21; visible_development; manifest_verified
+  20260905-v5-current-sensor: 6/21; visible_development; manifest_verified
+  20260905-v5-current-sensor-heading: see report; unspecified; manifest_verified
+  20260905-v5-current-sensor-heading-r2: see report; unspecified; manifest_verified
+  20260905-v5-final: 5/21; visible_development; manifest_verified
+  20260905-v5-old-regression: 6/21; visible_development; manifest_verified
+  20260905-v5-suite-v3-baseline: 0/21; visible_development; manifest_verified
+  20260905-v6-current-sensor: 0/21; visible_development; manifest_verified
+  20260905-v6-current-sensor-heading: see report; unspecified; manifest_verified
+  20260905-v6-final: 0/21; visible_development; manifest_verified
+  20260905-v6-final-heading: see report; unspecified; manifest_verified
+  20260905-v6-old-regression: 0/21; visible_development; manifest_verified
+  20260905-v6-old-regression-heading: see report; unspecified; manifest_verified
+  20260905-v8-current-sensor: 0/21; visible_development; manifest_verified
+  20260905-v8-current-sensor-heading: see report; unspecified; manifest_verified
+  20260905-v8-final: 0/21; visible_development; manifest_verified
+  20260905-v8-final-heading: see report; unspecified; manifest_verified
+  20260905-v8-old-regression: 0/21; visible_development; manifest_verified
+  20260905-v8-old-regression-heading: see report; unspecified; manifest_verified
+  20260905-v9-current-sensor: 12/21; visible_development; manifest_verified
+  20260905-v9-current-sensor-heading: see report; unspecified; manifest_verified
+  20260905-v9-current-sensor-self-contact: see report; unspecified; manifest_verified
+  20260905-v9-final: 15/21; visible_development; manifest_verified
+  20260905-v9-final-heading: see report; unspecified; manifest_verified
+  20260905-v9-old-regression: 12/21; visible_development; manifest_verified
+  20260905-v9-old-regression-heading: see report; unspecified; manifest_verified
+  20260906-v14-load-baseline: 0/21; visible_development; manifest_verified
+  20260906-v14-standing-pair: 13/21; visible_development; manifest_verified
+  20260906-v15-standing-fresh: 33/42; visible_development; manifest_verified
+  20260906-v15-standing-pair: 21/21; visible_development; manifest_verified
+  20260906-v18-current: 18/21; visible_development; manifest_verified
+  20260906-v18-exposed-repeated: 41/42; visible_development; manifest_verified
+  20260906-v21-current: 21/21; visible_development; manifest_verified
+  20260906-v21-exposed-repeated: 42/42; visible_development; manifest_verified
+  20260906-v24-flat-regression: 21/21; visible_development; manifest_verified
+  20260906-v24-repeated-regression: 41/42; visible_development; manifest_verified
+  20260906-v28-flat-regression: 21/21; visible_development; manifest_verified
+  20260906-v28-repeated-regression: 41/42; visible_development; manifest_verified
+  20260906-v29-flat-regression: 21/21; visible_development; manifest_verified
+  20260906-v29-repeated-regression: 42/42; visible_development; manifest_verified
+  20260906-v30-flat-regression: 21/21; visible_development; manifest_verified
+  20260906-v30-repeated-regression-r2: 42/42; visible_development; manifest_verified
+  20260906-v42-native-standing-flat: 21/21; visible_development; manifest_verified
+  20260906-v42-native-standing-repeated: 42/42; visible_development; manifest_verified
+  20260907-v44-sequence-flat: 0/21; visible_development; manifest_verified
+  20260907-v44-sequence-repeated: 0/42; visible_development; manifest_verified
+  20260907-v45-joint-v44-flat: 0/2; visible_development; manifest_verified
+  20260907-v45-new-stander-flat: 2/2; visible_development; manifest_verified
+  20260907-v45-new-walker-flat: 0/2; visible_development; manifest_verified
+  20260907-v45-original-flat: 2/2; visible_development; manifest_verified
+  20260907-v46-retention-flat: 21/21; visible_development; manifest_verified
+  20260907-v46-retention-repeated: 42/42; visible_development; manifest_verified
+  20260908-v48-standing-retention-flat: 21/21; visible_development; manifest_verified
+  20260908-v48-standing-retention-repeated: 42/42; visible_development; manifest_verified
+  matched--downhill-3deg-start-1-650--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-1-650--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-1-657--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-1-657--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-2-650--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-2-650--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-2-657--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-2-657--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-1-650--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-1-650--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-1-657--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-1-657--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-2-650--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-2-650--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-2-657--original: see report; counterfactual_diagnostic; manifest_verified
+  matched--matched-flat-start-2-657--v48: see report; counterfactual_diagnostic; manifest_verified
+  original--continuous-composition-start-1-4250--original: see report; counterfactual_diagnostic; manifest_verified
+  original--continuous-composition-start-1-4250--v48: see report; counterfactual_diagnostic; manifest_verified
+  original--continuous-composition-start-1-4256--original: see report; counterfactual_diagnostic; manifest_verified
+  original--continuous-composition-start-1-4256--v48: see report; counterfactual_diagnostic; manifest_verified
+  v48--continuous-composition-start-1-4250--original: see report; counterfactual_diagnostic; manifest_verified
+  v48--continuous-composition-start-1-4250--v48: see report; counterfactual_diagnostic; manifest_verified
+  v48--continuous-composition-start-1-4256--original: see report; counterfactual_diagnostic; manifest_verified
+  v48--continuous-composition-start-1-4256--v48: see report; counterfactual_diagnostic; manifest_verified
+  matched--downhill-3deg-start-1-650: see report; privileged_diagnostic; manifest_verified
+  matched--downhill-3deg-start-1-657: see report; privileged_diagnostic; manifest_verified
+  matched--downhill-3deg-start-2-650: see report; privileged_diagnostic; manifest_verified
+  matched--downhill-3deg-start-2-657: see report; privileged_diagnostic; manifest_verified
+  20260908-v50-retention-flat: 21/21; visible_development; manifest_verified
+  20260908-v50-retention-repeated: 42/42; visible_development; manifest_verified
+  20260908-v52-braking-flat: 13/21; visible_development; manifest_verified
+  20260908-v52-braking-repeated: 25/42; visible_development; manifest_verified
+  20260908-v53-braking-flat: 21/21; visible_development; manifest_verified
+  20260908-v53-braking-repeated: 42/42; visible_development; manifest_verified
+  Cannot inspect logs/recipe-native-20260909-v54-routed/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-routed-smoke/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-routed-smoke-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-routed-smoke-walking/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-routed-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-routed-walking/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-shared/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-shared-smoke/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-shared-smoke-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-shared-smoke-walking/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-shared-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/recipe-native-20260909-v54-shared-walking/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-control/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-control-smoke/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-control-smoke-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-control-smoke-walking/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-control-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-control-walking/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-yaw6/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-yaw6-smoke/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-yaw6-smoke-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-yaw6-smoke-walking/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-yaw6-standing/run.json: symlinked evidence is not served
+  Cannot inspect logs/yaw-native-20260912-v55-yaw6-walking/run.json: symlinked evidence is not served
+Open viewer: ./scripts/duck studio

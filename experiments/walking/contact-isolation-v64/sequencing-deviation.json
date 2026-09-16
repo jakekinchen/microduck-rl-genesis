@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-09-16T14:10:41.134832+00:00",
+  "deviation": "Initial isolation coordinator launched before the read-only controls review finished. Two export-match cases completed and first mask case was interrupted before dynamics. These original isolation attempts are quarantined; fresh case IDs and plan will run only after completed control conformance.",
+  "original_plan": "isolation-plan.json",
+  "original_process_report": "isolation-processes.json",
+  "original_review_sha256": "cf5fcc3002eda278d80846de1ee632ffa1cdcf9205f0df57c06b669adb5bbc74",
+  "review_performance_issue": "npz members were decompressed repeatedly per row; revised reader materializes each member once without changing any evidence or check.",
+  "review_reader_pids_stopped": [],
+  "original_isolation_admitted": false
+}

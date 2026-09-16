@@ -1,0 +1,34 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v49-recovery-complete-downhill-yaw-next",
+  "phase": "downhill_walking_yaw_correction_next",
+  "question": "V49 is complete. Original V15 standing recovers V48 late states through 180 s; three searched downhill first stops satisfy stopping/posture/contact checks, but all whole downhill cases still fail. Pre-stop absolute yaw error is .244/.241 rad/s versus .20, and every second stop falls. This packet binds a passing flat reference only. Keep V30 and target the pre-stop walking failure next.",
+  "primary": "receipts/walking/20260908-v48-standing-retention-flat",
+  "primary_policy_sha256": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "nominal-20-20ms--forward-08",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_native_standing_retention_flat_v48.py",
+    "microduck/native_sequence_env_v48.py",
+    "microduck/retained_stander_v48.py",
+    "scripts/train_native_standing_retention_v48.py",
+    "experiments/walking/native_candidate_v48.py",
+    "microduck/heading_headroom_v30.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/laser/gait.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json"
+  ],
+  "before_training": [
+    "Read experiments/walking/RECOVERY-RESULTS-v49.md and the V49 comparison/search receipts. The bounded capture, paired controls and 1,536-candidate search are complete; do not extend them.",
+    "The flat reference passes. The remaining earliest scored failure is original downhill absolute yaw error during 2\u201313 s, before the searched braking actions. Signed average yaw is nearly zero and cannot replace the absolute-error gate.",
+    "Original V15 standing recovers both V48 late-failure states through 180 s. Keep V21/V15 with V30 retained; do not promote V48 or the time-indexed search controller.",
+    "Freeze a walking-only correction targeting downhill yaw oscillation with V15 standing and V30 command control fixed. Require full flat, 180-second and passing-surface retention and all original physics-quality gates. Prefix improvement alone is not full downhill acceptance.",
+    "Keep three clean V49 stop witnesses as future braking demonstrations; later validate repeatable state-conditioned braking through successive stops and gait phases. Fresh/protected banks stay closed. Check disk space and guard immediately before compute; no paid compute, activation or hardware authority is implied."
+  ],
+  "boundary": "V49 establishes limited same-state stopping feasibility and a retained-stander recovery, not full downhill acceptance. The flat reference is not calibrated physics or carpet-transfer evidence."
+}

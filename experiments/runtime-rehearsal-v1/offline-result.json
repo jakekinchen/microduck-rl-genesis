@@ -1,0 +1,54 @@
+{
+  "schema": "microduck.runtime-offline-rehearsal.v1",
+  "runtime_revision": "fead66bb21195971fcbb2858a19b1e290a9f2031",
+  "runtime_binary_sha256": "3c762fe4e87349e8113f78d4eadeab233fa0560aa1fdba652a48ca1fc6c64e21",
+  "ort_dylib_sha256": "92500010659b052368797e30c1841956b0efd699a8061ef8b3b25f27449c86e7",
+  "trace_hashes": {
+    "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-course/20260913-v2-development-r2/nominal/motion.npz": "65068106b91954f4cccec1b8596af62c2874080c55a98c45920f1c82c8d794fa",
+    "/Users/kelly/Developer/microduck-rl-genesis/receipts/laser-course/20260913-v2-development-r2/nominal/trajectory.jsonl.gz": "f7fdd408fbf424c2ec54eae80e2e14d4ffaebe7e15a8950e53f4d789eb032ed8"
+  },
+  "actors": {
+    "walking": {
+      "latency_ms": {
+        "max": 0.1365,
+        "p50": 0.01825,
+        "p95": 0.021041999999999998,
+        "p99": 0.028583
+      },
+      "over_20_ms": 0,
+      "scope": "actor inference only; excludes sensor and motor I/O",
+      "steps": 3005,
+      "policy_sha256": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+      "rows": 3005,
+      "bit_identical_rows": 3005,
+      "all_actions_bit_identical": true,
+      "max_absolute_error": 0.0,
+      "trace_sha256": "ce6d10f8f1b8caaaeb9f798289c37d416be2be54615594e0c192d47f04afa9b9",
+      "rust_output_sha256": "f0b9bea3019a61f057d0f7835516f4645f8abda9d5e050b9490fa40c67796909"
+    },
+    "standing": {
+      "latency_ms": {
+        "max": 0.055083,
+        "p50": 0.018333,
+        "p95": 0.022875,
+        "p99": 0.034458
+      },
+      "over_20_ms": 0,
+      "scope": "actor inference only; excludes sensor and motor I/O",
+      "steps": 295,
+      "policy_sha256": "2fddc9a9bc4ff9a17a34af51215a31c43503cbe68a1b815a97b3042abf248db8",
+      "rows": 295,
+      "bit_identical_rows": 295,
+      "all_actions_bit_identical": true,
+      "max_absolute_error": 0.0,
+      "trace_sha256": "936ac2f43ee259a3b3fd26d9f12daeadc92ceb059a38fc56931763d37113ce48",
+      "rust_output_sha256": "41323e396e71744f086d04684889e18cdfbec88383df8fd691da03416c98f987"
+    }
+  },
+  "scope": "recorded-observation actor inference",
+  "observation_builder_evaluated": false,
+  "daemon_evaluated": false,
+  "physics_evaluated": false,
+  "hardware_authority": false,
+  "passed": true
+}

@@ -9,9 +9,44 @@ un même processus — d'où les sous-processus.
 import os
 import subprocess
 import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from experiment_ops.activity import require_idle
+
+# Refuse before any child imports Genesis, MuJoCo or a GUI toolkit.
+require_idle(ROOT)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TESTS = [
+    ("workspace tooling (no simulator)", "../scripts/verify_workspace.py"),
+    ("complete contact geometry, body-interference rejection, heading servo and persistent delays", "test_walking_contact_corrections.py"),
+    ("command-only standing switch and sustained internal load rejection", "test_walking_standing_runner.py"),
+    ("standing-only commands and posture-gated internal-force objective", "test_standing_reward.py"),
+    ("command ramp preserves raw user scoring and exact zero", "test_command_ramp.py"),
+    ("load-aware walking objective preserves command/action contract", "test_walking_unbraced.py"),
+    ("effective inherited command distribution and metadata", "test_walking_effective_contract.py"),
+    ("filtered course correction preserves feedforward, caps and exact stop", "test_filtered_heading.py"),
+    ("instantaneous yaw refinement preserves turns, stopping and inherited physics", "test_walking_yaw_refinement.py"),
+    ("physical development factors apply without accumulation or cross-model leakage", "test_walking_physical_domain.py"),
+    ("compiled terrain geometry, conservative sole clearance and isolated layouts", "test_walking_terrain_v23.py"),
+    ("full-horizon endurance rejects drift, missing data and local tracking failures", "test_walking_endurance_v23.py"),
+    ("passive calibration intake rejects missing measurements and split leakage", "test_walking_calibration.py"),
+    ("whole-session heading drift cannot reset away between windows", "test_v23_session_heading.py"),
+    ("posture-conditioned positive return and persistent yaw cost", "test_walking_viability.py"),
+    ("additive cumulative heading fidelity", "test_walking_heading.py"),
+    ("isolated non-saturating trunk balance reward", "test_walking_balance.py"),
+    ("current IMU sampling without changing physical integration", "test_walking_sensor_phase.py"),
+    ("native contact timing default and isolated model change", "test_walking_contact.py"),
+    ("non-saturating walking command response", "test_walking_tracking.py"),
+    ("full-body clearance and command diagnostic boundaries", "test_walking_diagnostics.py"),
+    ("native floor masks and unchanged scene structure", "test_walking_ground.py"),
+    ("neutral head command is additive walking acceptance", "test_walking_posture.py"),
+    ("controlled walking effort and landing incentives", "test_walking_controlled.py"),
+    ("walking sole, timing and command/stop acceptance", "test_walking.py"),
+    ("physical gait rejection and camera alignment", "test_laser_gait.py"),
+    ("dynamic laser and live controls", "test_laser_dynamic.py"),
     ("laser steering and perception", "test_laser_task.py"),
     ("inventaire provenance fichiers M6", "test_file_provenance.py"),
     ("contrats artefact et attestations M6", "test_artifact_contract.py"),
@@ -68,7 +103,8 @@ fails = []
 for label, cmd in TESTS + EXTRA:
     print(f"\n{'=' * 70}\n{label}\n{'=' * 70}", flush=True)
     argv = cmd.split()
-    r = subprocess.run([sys.executable, os.path.join(HERE, argv[0]), *argv[1:]])
+    r = subprocess.run([sys.executable, os.path.join(HERE, argv[0]), *argv[1:]],
+                       cwd=os.path.dirname(HERE))
     if r.returncode != 0:
         fails.append(label)
 

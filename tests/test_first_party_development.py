@@ -42,7 +42,8 @@ with tempfile.TemporaryDirectory(prefix="admission-test-", dir=RECEIPT_ROOT) as 
     checkpoint = root / "source-checkpoint.pt"
     frozen.write_bytes(stable_json_bytes({
         "source_revision": git("rev-parse", "HEAD^{commit}"),
-        "source_files": {"AGENTS.md": sha256(ROOT / "AGENTS.md")},
+        # Bind actual invariant source, not concurrently edited workspace guidance.
+        "source_files": {"microduck/constants.py": sha256(ROOT / "microduck/constants.py")},
     }))
     config.write_bytes(b"config")
     checkpoint.write_bytes(b"checkpoint")
@@ -57,6 +58,20 @@ with tempfile.TemporaryDirectory(prefix="admission-test-", dir=RECEIPT_ROOT) as 
     admission = root / "ARTIFACT_ADMISSION.json"
     admission.write_bytes(stable_json_bytes(record))
     validate_artifact_admission(admission)
+    # The fixture change must not weaken committed-source verification.
+    import subprocess
+    real_output = subprocess.check_output
+    def drifted_commit(args, **kwargs):
+        if args[:2] == ["git", "show"]:
+            return b"different committed source"
+        return real_output(args, **kwargs)
+    with mock.patch("experiments.first_party.development.subprocess.check_output", side_effect=drifted_commit):
+        try:
+            validate_artifact_admission(admission)
+        except AdmissionError as exc:
+            assert "committed source differs" in str(exc)
+        else:
+            raise AssertionError("committed-source drift accepted")
     record["origin"] = "official_download"
     admission.write_bytes(stable_json_bytes(record))
     try:

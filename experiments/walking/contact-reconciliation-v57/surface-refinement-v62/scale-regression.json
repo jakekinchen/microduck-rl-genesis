@@ -1,0 +1,31 @@
+{
+  "points_m": [
+    [
+      5e-05,
+      0.0,
+      0.0005
+    ],
+    [
+      5e-05,
+      0.0,
+      0.0008
+    ]
+  ],
+  "expected_distances_m": [
+    0,
+    0.0003
+  ],
+  "original_trimesh_distances_m": [
+    3.535533905932738e-05,
+    0.00030207614933986434
+  ],
+  "normalized_distances_m": [
+    1.3877787807814457e-20,
+    0.00030000000000000003
+  ],
+  "analytic_distances_m": [
+    0.0,
+    0.00030000000000000003
+  ],
+  "purpose": "reproduce the absolute-tolerance issue on analytic geometry, without changing the frozen V59 evaluator"
+}

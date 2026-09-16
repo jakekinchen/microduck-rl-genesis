@@ -1,0 +1,67 @@
+[
+  {
+    "case": "rigid-control-start-1",
+    "native": "receipts/walking/20260906-v25-surface-baseline",
+    "max_base_error_mm": 2.374426224483436,
+    "axis_errors_mm": [
+      2.3652171663598436,
+      0.9861947347719051,
+      0.3300779736297721
+    ],
+    "max_joint_error_deg": 1.8199158853187383,
+    "comparison_passed": false,
+    "first_divergence_s": 0.88
+  },
+  {
+    "case": "soft-low-traction-start-1",
+    "native": "receipts/walking/20260906-v25-surface-baseline",
+    "max_base_error_mm": 1.081785969274406,
+    "axis_errors_mm": [
+      1.0248340068256776,
+      0.7702387724787555,
+      0.3897472692802467
+    ],
+    "max_joint_error_deg": 0.9131487761548944,
+    "comparison_passed": true,
+    "first_divergence_s": null
+  },
+  {
+    "case": "soft-middle-start-1",
+    "native": "receipts/walking/20260906-v25-surface-baseline",
+    "max_base_error_mm": 1.1286873600872231,
+    "axis_errors_mm": [
+      0.6875365924486048,
+      1.0145162834324941,
+      0.4394791533363085
+    ],
+    "max_joint_error_deg": 1.0637335045375595,
+    "comparison_passed": true,
+    "first_divergence_s": null
+  },
+  {
+    "case": "soft-high-traction-start-1",
+    "native": "receipts/walking/20260906-v25-surface-baseline",
+    "max_base_error_mm": 4.073041455906654,
+    "axis_errors_mm": [
+      0.46459611911649473,
+      2.087986020524374,
+      3.6063930149413252
+    ],
+    "max_joint_error_deg": 0.5862182275065482,
+    "comparison_passed": false,
+    "first_divergence_s": 0.12
+  },
+  {
+    "case": "soft-high-traction-start-1",
+    "native": "receipts/walking/20260906-v26-surface-standing",
+    "max_base_error_mm": 4.086701363262811,
+    "axis_errors_mm": [
+      1.0804652477731536,
+      1.804072287490392,
+      4.057666894478674
+    ],
+    "max_joint_error_deg": 1.3163713989009975,
+    "comparison_passed": false,
+    "first_divergence_s": 0.1
+  }
+]

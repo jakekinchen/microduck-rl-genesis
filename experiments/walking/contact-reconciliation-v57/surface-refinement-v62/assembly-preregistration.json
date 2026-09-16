@@ -1,0 +1,38 @@
+{
+  "id": "v62-complete-assembly-preregistration",
+  "frozen_utc": "2026-09-16T04:19:28.480837+00:00",
+  "launch_prerequisites": [
+    "unit-stable full material and eight cavity checks pass",
+    "bearing/bracket/jaw/shell additive dense and analytic checks pass",
+    "bracket/jaw and shell lineage checks pass"
+  ],
+  "reference": "experiments/walking/contact-reconciliation-v57/jaw-contact-enabled/robot.xml",
+  "replacements": {
+    "neck_pitch/seeed_bearing__configuration__22x16x4": 256,
+    "neck_pitch/neck_pitch": 614,
+    "jaw_soft/bottom_head_shell": 4875,
+    "jaw_soft/jaw": 1781
+  },
+  "candidate_parts": 7526,
+  "expected_active_robot_colliders": 7592,
+  "acceptance": {
+    "compile_success": true,
+    "inspection_complete": true,
+    "compiler_compatibility_passed": true,
+    "physical_and_actuator_arrays_exact": 62,
+    "body_joint_actuator_orders_exact": true,
+    "contact_properties_equal": true,
+    "all_geoms_unique_named": true,
+    "power_support_leg_coverage": true,
+    "explicit_excludes": 0,
+    "maximum_world_vertex_error_m": 1e-07,
+    "copied_pose_count": 201,
+    "poses_over_1mm": 0,
+    "complete_pair_matrix": true
+  },
+  "wall_deadline_seconds": 1200,
+  "physics_steps": 0,
+  "model_admitted": false,
+  "physical_acceptance": false,
+  "boundary": "sampled geometry and compiler/kinematic conformance only; no dynamic/load/runtime admission; physical equality is to V57 full-CAD reference, not retained V11 policy-training model"
+}

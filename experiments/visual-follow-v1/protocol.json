@@ -1,0 +1,51 @@
+{
+  "schema": "microduck.visual-marker-following/v3-low-marker-matte-floor",
+  "detector_revision": "visual-marker-low-light-v2",
+  "revision_boundary": "V3 changes target center height from0.20m to0.04m and visual floor reflectance from0.08 to0. Same V2 detector, 70mm marker diameter, camera, actors, controller, dynamics and acceptance thresholds. V1/V2 full source snapshots remain in their smoke receipts. Reflective floors are outside V3 envelope.",
+  "status": "preregistered_exposed_development",
+  "duration_s": 30.0,
+  "target_active_s": [1.0, 24.0],
+  "fault_window_s": [10.0, 13.0],
+  "repeats": [26091501, 26091502],
+  "control_hz": 50,
+  "physics_hz": 200,
+  "camera_hz": 10,
+  "camera": {"width": 320, "height": 240, "vertical_fov_deg": 45.0, "marker_radius_m": 0.035},
+  "target_height_m": 0.04,
+  "floor_reflectance": 0.0,
+  "target_start_x_m": 0.90,
+  "target_speed_m_s": 0.07,
+  "cases": [
+    {"id": "straight", "layout": "wide-straight", "path": "straight", "yaw": 0.0, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "none"},
+    {"id": "curved", "layout": "wide-straight", "path": "sine", "yaw": 0.04, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "none"},
+    {"id": "combined", "layout": "wide-straight", "path": "mirror-sine", "yaw": -0.04, "mass": 1.1, "friction": 0.6, "motor_ticks": 6, "gain": 0.7, "noise": 2.0, "fault": "none"},
+    {"id": "target-loss", "layout": "wide-straight", "path": "straight", "yaw": 0.0, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "target-loss"},
+    {"id": "camera-drop", "layout": "wide-straight", "path": "straight", "yaw": 0.0, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "camera-drop"},
+    {"id": "camera-stale", "layout": "wide-straight", "path": "straight", "yaw": 0.0, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "camera-stale"},
+    {"id": "occlusion", "layout": "wide-straight", "path": "straight", "yaw": 0.0, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "occlusion"},
+    {"id": "distractor", "layout": "wide-straight", "path": "straight", "yaw": 0.0, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "distractor"},
+    {"id": "stationary-negative", "layout": "wide-straight", "path": "straight", "yaw": 0.0, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 1.0, "noise": 0.0, "fault": "negative-control"}
+  ],
+  "fresh_layout_development_cases": [
+    {"id": "narrow-dogleg", "layout": "narrow-corridor", "path": "dogleg", "yaw": 0.02, "mass": 1.0, "friction": 1.0, "motor_ticks": 4, "gain": 0.9, "noise": 1.0, "fault": "none"},
+    {"id": "offset-bay", "layout": "offset-bay", "path": "half-cosine", "yaw": -0.02, "mass": 1.05, "friction": 0.8, "motor_ticks": 6, "gain": 0.8, "noise": 2.0, "fault": "none"}
+  ],
+  "thresholds": {
+    "minimum_target_tracking_fraction": 0.90,
+    "target_range_band_m": [0.35, 1.30],
+    "maximum_route_cross_track_m": 0.30,
+    "minimum_forward_progress_m": 0.80,
+    "maximum_obstacle_load_n": 0.1,
+    "maximum_obstacle_penetration_m": 0.0001,
+    "maximum_command_stop_latency_s": 0.14,
+    "maximum_stop_speed_m_s": 0.04,
+    "maximum_stop_yaw_rad_s": 0.15,
+    "maximum_stop_tilt_deg": 15.0,
+    "maximum_torque_saturation_fraction": 0.02,
+    "minimum_actual_joint_margin_rad": 0.02,
+    "maximum_forward_error_m_s": 0.05,
+    "maximum_yaw_error_rad_s": 0.20
+  },
+  "decision_rule": "All required cases and both starts must pass task, gait, contact, internal-load, posture, final-stop and fault-stop gates. Stationary negative must fail task/gait while retaining complete evidence. Any failed or missing bucket blocks advancement. Fresh layout development may be executed only after all ordinary development gates pass; it never opens existing protected acceptance banks.",
+  "claims": {"calibrated_physics": false, "physical_transfer": false, "general_obstacle_avoidance": false, "real_laser_tracking": false, "library_admission": false}
+}

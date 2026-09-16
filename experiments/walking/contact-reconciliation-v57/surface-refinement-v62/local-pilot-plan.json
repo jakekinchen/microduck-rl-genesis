@@ -1,0 +1,25 @@
+{
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/pilot_local_coacd_v62.py": "e06f204986d8401507bb8095f8d0c5345258bba1c373300da34b30c83e313abf",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r2.py": "0ee90a5b131399b7fa242124638da739bcec3c2a5500e1924a5ebb566d5162b0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-pilot-bank.json": "a9fd46f5ba2d43bcdd50893b5e84ca5663827531e4344c94cef9c1d6c7cd1bbc"
+  },
+  "attempt_marker": "local-pilot-attempt.json",
+  "process_report": "local-pilot-processes.json",
+  "steps": [
+    {
+      "id": "source-clipped-local-coacd-pilot",
+      "script": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/pilot_local_coacd_v62.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/local-pilot-bank.json"
+      ],
+      "wall_seconds": 180,
+      "log": "local-pilot.log"
+    }
+  ]
+}

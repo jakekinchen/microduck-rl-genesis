@@ -1,0 +1,32 @@
+{
+  "components": {
+    "neck_pitch": {
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/complete.json",
+      "progress": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/progress.json",
+      "parent_parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/parts.npz",
+      "parent_complete_json": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/complete.json"
+    },
+    "jaw": {
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/jaw/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/jaw/complete.json",
+      "progress": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/jaw/progress.json",
+      "parent_parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/parts.npz",
+      "parent_complete_json": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/complete.json"
+    }
+  },
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/parts.npz": "3fd1f2114b8048e338b2a907e20702ba7851b9419a22d065eaac3def3a8432a0",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/complete.json": "ca56fa93474325da03dc145c7494c686e0e132cb46a4a86dd30f03c88b3c4ccd",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/progress.json": "9b46f88e854d633306335af48996b4cf0f9bb131630d10bc07cb7bde9667777d",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/parts.npz": "31a26d24719c6934b21f030d437fa129cdfa552616e1aa67a5755a7c6f81698a",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/complete.json": "5f6cab68f86c00049fcc446710089ee91c3ff382bc8002d07537f69f6f0f037e",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/jaw/parts.npz": "0b4ca4e42cbdffca051001c02afc2e5afb3458b8947fbb67e66bfb371023d45a",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/jaw/complete.json": "99a09c2dd88d73c875d69d1fc0f0b6a8f52190e9a31c8edc7b07e53e8da46067",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/jaw/progress.json": "ee864123fbb7bfaf5d80fd79f78923e28daef0d0eb2bd10f05d1e9001ce444a3",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/parts.npz": "8b8dead0e0c09d5726d8a230b82d224a9f33bee29b3bfd9cb42d07f54d7c2c8a",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/complete.json": "e955d577eb5b23a49a5e44ee3ff2c72053fcebb59db9091afea01abac77afa83",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/review_refinement_v62.py": "42e8a2e7e90cf4dc6f238f434fd09729c5ee419cfa8e60791539d398f23852c7"
+  },
+  "output": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/bracket-jaw-lineage-result.json"
+}

@@ -1,0 +1,305 @@
+{
+  "schema": "microduck.terrain-endurance-suite/v1",
+  "proof_class": "preregistered_visible_development",
+  "held_out": false,
+  "motor_ticks": 6,
+  "sensor_ticks": 1,
+  "thresholds": {
+    "motor_torque_limit_nm": 0.6405236195572268,
+    "torque_saturation_fraction_max": 0.02,
+    "actual_joint_margin_rad_min": 0.02,
+    "mean_abs_forward_error_m_s": 0.05,
+    "mean_abs_yaw_error_rad_s": 0.2,
+    "mean_abs_lateral_velocity_m_s": 0.05,
+    "stop_max_speed_m_s": 0.04,
+    "stop_max_yaw_rate_rad_s": 0.15,
+    "stop_max_tilt_deg": 15,
+    "simultaneous_flight_fraction": 0.05,
+    "turn_max_xy_excursion_m": 0.2,
+    "minimum_bilateral_step_coverage": 0.6
+  },
+  "sessions": [
+    {
+      "id": "fresh-order-1",
+      "bank": "fresh-sequence",
+      "bucket": "fresh-flat-order",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": -0.23,
+      "seed": 260907440,
+      "windows": [
+        {
+          "command": [
+            0,
+            0,
+            -0.35
+          ],
+          "duration_s": 19,
+          "move_start_s": 1,
+          "stop_start_s": 14
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 21,
+          "move_start_s": 1,
+          "stop_start_s": 16
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            0.3
+          ],
+          "duration_s": 20,
+          "move_start_s": 1,
+          "stop_start_s": 15
+        }
+      ]
+    },
+    {
+      "id": "fresh-order-2",
+      "bank": "fresh-sequence",
+      "bucket": "fresh-flat-order",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.23,
+      "seed": 260907441,
+      "windows": [
+        {
+          "command": [
+            0,
+            0,
+            0.35
+          ],
+          "duration_s": 19,
+          "move_start_s": 1,
+          "stop_start_s": 14
+        },
+        {
+          "command": [
+            0.17,
+            0,
+            0
+          ],
+          "duration_s": 21,
+          "move_start_s": 1,
+          "stop_start_s": 16
+        },
+        {
+          "command": [
+            0.08,
+            0,
+            -0.3
+          ],
+          "duration_s": 20,
+          "move_start_s": 1,
+          "stop_start_s": 15
+        }
+      ]
+    },
+    {
+      "id": "fresh-order-3",
+      "bank": "fresh-sequence",
+      "bucket": "fresh-flat-order",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": -0.55,
+      "seed": 260907442,
+      "windows": [
+        {
+          "command": [
+            0.08,
+            0,
+            -0.3
+          ],
+          "duration_s": 19,
+          "move_start_s": 1,
+          "stop_start_s": 14
+        },
+        {
+          "command": [
+            0,
+            0,
+            0.35
+          ],
+          "duration_s": 21,
+          "move_start_s": 1,
+          "stop_start_s": 16
+        },
+        {
+          "command": [
+            0.12,
+            0,
+            0
+          ],
+          "duration_s": 20,
+          "move_start_s": 1,
+          "stop_start_s": 15
+        }
+      ]
+    },
+    {
+      "id": "fresh-order-4",
+      "bank": "fresh-sequence",
+      "bucket": "fresh-flat-order",
+      "terrain": {
+        "kind": "flat"
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": 0.55,
+      "seed": 260907443,
+      "windows": [
+        {
+          "command": [
+            0.08,
+            0,
+            0.3
+          ],
+          "duration_s": 19,
+          "move_start_s": 1,
+          "stop_start_s": 14
+        },
+        {
+          "command": [
+            0,
+            0,
+            -0.35
+          ],
+          "duration_s": 21,
+          "move_start_s": 1,
+          "stop_start_s": 16
+        },
+        {
+          "command": [
+            0.17,
+            0,
+            0
+          ],
+          "duration_s": 20,
+          "move_start_s": 1,
+          "stop_start_s": 15
+        }
+      ]
+    },
+    {
+      "id": "fresh-slope-1",
+      "bank": "fresh-sequence",
+      "bucket": "fresh-downhill",
+      "terrain": {
+        "kind": "slope",
+        "axis": "y",
+        "degrees": 3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": -0.08,
+      "seed": 260907444,
+      "windows": [
+        {
+          "command": [
+            0.11,
+            0,
+            0
+          ],
+          "duration_s": 20,
+          "move_start_s": 1,
+          "stop_start_s": 15
+        },
+        {
+          "command": [
+            0.13,
+            0,
+            0
+          ],
+          "duration_s": 19,
+          "move_start_s": 1,
+          "stop_start_s": 14
+        },
+        {
+          "command": [
+            0.1,
+            0,
+            0
+          ],
+          "duration_s": 21,
+          "move_start_s": 1,
+          "stop_start_s": 16
+        }
+      ]
+    },
+    {
+      "id": "fresh-slope-2",
+      "bank": "fresh-sequence",
+      "bucket": "fresh-uphill",
+      "terrain": {
+        "kind": "slope",
+        "axis": "y",
+        "degrees": -3
+      },
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      },
+      "yaw": -0.08,
+      "seed": 260907445,
+      "windows": [
+        {
+          "command": [
+            0.11,
+            0,
+            0
+          ],
+          "duration_s": 20,
+          "move_start_s": 1,
+          "stop_start_s": 15
+        },
+        {
+          "command": [
+            0.13,
+            0,
+            0
+          ],
+          "duration_s": 19,
+          "move_start_s": 1,
+          "stop_start_s": 14
+        },
+        {
+          "command": [
+            0.1,
+            0,
+            0
+          ],
+          "duration_s": 21,
+          "move_start_s": 1,
+          "stop_start_s": 16
+        }
+      ]
+    }
+  ],
+  "decision": "Every required window, every 30-second sustained tracking bucket, final standing posture, geometry, internal-load, heading and terrain exposure gate must pass. A session fails on any failed window. No reset within a session. Missing windows fail. Independent sessions, not their windows, are trial units. Two specified initial headings per bucket are a bounded deterministic probe, not a population reliability estimate.",
+  "claim_boundary": "V44 preregistered new sequence combinations on already exposed terrain families. No unseen terrain, physical calibration or transfer claim."
+}

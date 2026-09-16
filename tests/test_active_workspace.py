@@ -1,5 +1,6 @@
 """The working focus must bind visible evidence before steering inspection."""
 import hashlib
+import gzip
 import json
 from pathlib import Path
 import sys
@@ -9,7 +10,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from duck_workspace.active import focus, prepare
-from duck_workspace.core import Inspector
+from duck_workspace.core import Inspector, read_json
 
 
 class ActiveWorkspaceTests(unittest.TestCase):
@@ -67,9 +68,36 @@ class ActiveWorkspaceTests(unittest.TestCase):
         self.assertFalse(result["training_started"])
         self.assertFalse(result["execution_authorized_by_report"])
 
+    def test_compressed_focus_retains_manifest_and_fall_bindings(self):
+        directory = self.root / self.config["primary"]
+        plain = directory / "trajectory.jsonl"
+        compressed = directory / "trajectory.jsonl.gz"
+        compressed.write_bytes(gzip.compress(plain.read_bytes()))
+        plain.unlink()
+        self.manifest(directory)
+        result = self.prepare()
+        self.assertTrue(result["ready_for_diagnosis"], result)
+        self.assertEqual(result["cases"]["primary"]["first_fall"]["time_s"], 1.56)
+        identity = result["cases"]["primary"]["trajectory"]
+        self.assertEqual(identity["sha256"], hashlib.sha256(compressed.read_bytes()).hexdigest())
+        detail = Inspector(self.root).detail(self.config["primary"])
+        self.assertEqual(len(detail["trajectories"][self.config["case_id"]]), 2)
+        self.manifest(directory, exclude=("trajectory.jsonl.gz",))
+        with self.assertRaisesRegex(ValueError, "trajectory.*manifest"):
+            self.prepare()
+
     def test_tampered_policy_cannot_select_focus(self):
         (self.root / self.config["primary"] / "policy.onnx").write_bytes(b"changed")
         self.assertFalse(self.prepare()["ready_for_diagnosis"])
+
+    def test_single_baseline_is_not_an_invented_comparison(self):
+        self.config.pop("comparison")
+        self.config.pop("comparison_policy_sha256")
+        self.write_config()
+        result=self.prepare()
+        self.assertTrue(result["ready_for_diagnosis"],result)
+        self.assertNotIn("comparison",result["cases"])
+        self.assertTrue(any("baseline only" in s for s in result["observations"]))
 
     def test_source_drift_is_reported_before_reproduction(self):
         (self.root / "world.py").write_text("changed")
@@ -119,6 +147,24 @@ class ActiveWorkspaceTests(unittest.TestCase):
         self.assertEqual(running["exact_process_to_run_binding"], "not_checked")
         (self.root / "world.py").write_text("drift")
         self.assertFalse(self.prepare()["active_training_records"][0]["current_sources_match_record"])
+
+    def test_unreadable_training_evidence_reports_incomplete_inspection(self):
+        logs = self.root / "logs"
+        logs.mkdir()
+        with tempfile.TemporaryDirectory() as external:
+            target = Path(external)
+            (target / "run.json").write_text('{"status":"running"}')
+            (logs / "external-run").symlink_to(target, target_is_directory=True)
+            with patch("duck_workspace.active.read_json", wraps=read_json) as reader:
+                result = self.prepare()
+            self.assertTrue(all(call.args[0].resolve() != target / "run.json"
+                                for call in reader.call_args_list))
+        self.assertEqual(result["focus"]["status"], "verified")
+        self.assertFalse(result["ready_for_diagnosis"])
+        self.assertEqual(result["active_training_records"], [])
+        self.assertEqual(result["active_training_record_errors"], [{
+            "path": "logs/external-run/run.json", "error": "symlinked evidence is not served"}])
+        self.assertTrue(any("training record unavailable" in error for error in result["errors"]))
 
 
 if __name__ == "__main__":

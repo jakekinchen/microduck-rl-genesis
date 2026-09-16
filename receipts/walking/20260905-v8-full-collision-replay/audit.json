@@ -1,0 +1,49 @@
+{
+  "schema": "microduck.full-collision-fixed-action-diagnostic/v1",
+  "cases": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "action_sha256": "e0f92924e8c54713d079d8f52cbde16e27562d7df3cc132ba778a03021796fd6",
+      "identical_input_action_bytes": true,
+      "compared_frames": 900,
+      "max_qpos_difference": 0.0,
+      "qpos_byte_identical": true,
+      "reference_fell": false,
+      "full_collision_fell": false,
+      "reference_additional_contact_pairs": {},
+      "full_additional_contact_pairs": {}
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "action_sha256": "f6437d5064ab709dd92d41589b3bd12b6a2da066c064a40db16a601dd03aaf3e",
+      "identical_input_action_bytes": true,
+      "compared_frames": 900,
+      "max_qpos_difference": 0.0,
+      "qpos_byte_identical": true,
+      "reference_fell": false,
+      "full_collision_fell": false,
+      "reference_additional_contact_pairs": {},
+      "full_additional_contact_pairs": {}
+    }
+  ],
+  "matched_physical_fields": [
+    "jnt_qposadr",
+    "jnt_range",
+    "jnt_axis",
+    "jnt_pos",
+    "body_mass",
+    "body_inertia",
+    "body_ipos",
+    "body_iquat",
+    "body_pos",
+    "body_quat",
+    "dof_damping",
+    "dof_armature"
+  ],
+  "acceptance_eligible": false,
+  "matched_after_bam_configuration": [
+    "dof_armature",
+    "dof_damping"
+  ],
+  "boundary": "Original float32 policy actions replayed unchanged through identical native BAM and timing, swapping only bundled collision model. Alternate-model diagnostic, not the frozen reduced-model acceptance contract or hardware calibration. Contacts sampled at control boundaries; copied pose clearance is a separate all-frame audit."
+}

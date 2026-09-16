@@ -1,0 +1,214 @@
+{
+  "policy_sha256": "6190f954425c2b31c3b301faa5dcfed613d5c9c867b9d00ce71abc722b3df308",
+  "source_sha256": {
+    "scripts/audit_walk_mujoco.py": "80111f5c484a90cecde163ca4c9a2d8a24b03d05f9403775dd544e201aeb128a",
+    "scripts/audit_walk_foundation.py": "aada4d0069ec2742d6152b439d6b80b7271631d9bcc9efcad062ce54c440e190",
+    "scripts/retain_walking_diagnosis.py": "c7cccef007c046aa3f300784dc7dfb574e3f3b01e5ef39913884f2b75449cdab",
+    "experiments/laser/gait.py": "ec851550c320415fe6ef930329d3ec16da10f6fba7e5eb6e3dc063eb808b7a8a",
+    "experiments/laser/world.py": "22a0bc9b5405c757db88729ab5d3bfe8b9027d9e549acd12f5bd874cef95134d",
+    "experiments/laser/face_world.py": "54120b2893affaa222c347f1f5792e9e3af0ecea877d51fef67346c444cb6f27",
+    "evaluator/core.py": "a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9"
+  },
+  "cases": [
+    {
+      "case": "forward-slow",
+      "motor_delay_physics_steps": 0,
+      "sensor_delay_control_steps": 0,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "no_useful_translation",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 0.044633213490008046
+    },
+    {
+      "case": "forward-fast",
+      "motor_delay_physics_steps": 0,
+      "sensor_delay_control_steps": 0,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping",
+        "persistent_loaded_foot_slip"
+      ],
+      "path_length_m": 1.6804705140846354
+    },
+    {
+      "case": "turn",
+      "motor_delay_physics_steps": 0,
+      "sensor_delay_control_steps": 0,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "no_useful_translation",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 0.02666767350534838
+    },
+    {
+      "case": "forward-slow",
+      "motor_delay_physics_steps": 0,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 0.8613633014199193
+    },
+    {
+      "case": "forward-fast",
+      "motor_delay_physics_steps": 0,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        13,
+        37
+      ],
+      "rejection_reasons": [],
+      "path_length_m": 2.3959492141268406
+    },
+    {
+      "case": "turn",
+      "motor_delay_physics_steps": 0,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "no_useful_translation",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 0.029813799371472178
+    },
+    {
+      "case": "forward-slow",
+      "motor_delay_physics_steps": 4,
+      "sensor_delay_control_steps": 0,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 1.0454032695996016
+    },
+    {
+      "case": "forward-fast",
+      "motor_delay_physics_steps": 4,
+      "sensor_delay_control_steps": 0,
+      "qualified_swings_left_right": [
+        34,
+        35
+      ],
+      "rejection_reasons": [],
+      "path_length_m": 2.7017012166379244
+    },
+    {
+      "case": "turn",
+      "motor_delay_physics_steps": 4,
+      "sensor_delay_control_steps": 0,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "no_useful_translation",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 0.029208753632633918
+    },
+    {
+      "case": "forward-slow",
+      "motor_delay_physics_steps": 4,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        33,
+        33
+      ],
+      "rejection_reasons": [],
+      "path_length_m": 1.2735106619675634
+    },
+    {
+      "case": "forward-fast",
+      "motor_delay_physics_steps": 4,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        31,
+        31
+      ],
+      "rejection_reasons": [],
+      "path_length_m": 2.899194121449688
+    },
+    {
+      "case": "turn",
+      "motor_delay_physics_steps": 4,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "no_useful_translation",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 0.0301561645787739
+    },
+    {
+      "case": "forward-slow",
+      "motor_delay_physics_steps": 6,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        29,
+        29
+      ],
+      "rejection_reasons": [],
+      "path_length_m": 1.390813342630308
+    },
+    {
+      "case": "forward-fast",
+      "motor_delay_physics_steps": 6,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        29,
+        28
+      ],
+      "rejection_reasons": [],
+      "path_length_m": 3.007951163241269
+    },
+    {
+      "case": "turn",
+      "motor_delay_physics_steps": 6,
+      "sensor_delay_control_steps": 1,
+      "qualified_swings_left_right": [
+        0,
+        0
+      ],
+      "rejection_reasons": [
+        "no_useful_translation",
+        "missing_bilateral_steps",
+        "unsustained_bilateral_stepping"
+      ],
+      "path_length_m": 0.03814765591407186
+    }
+  ],
+  "boundary": "Native timing factorial, fresh feedback at each condition. Not identical-action isolation or physical timing calibration. Genesis mass/site diagnostic is retained from the preceding run."
+}

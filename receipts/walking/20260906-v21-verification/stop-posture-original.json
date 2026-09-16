@@ -1,0 +1,346 @@
+{
+  "scope": "Additional exposed audit of final 16..18-second standing posture with existing posture limits; original frozen scores retained.",
+  "limits": {
+    "maximum_mean_joint_error_rad": 0.35,
+    "p95_worst_joint_error_rad": 0.7853981633974483,
+    "mean_absolute_face_pitch_deg": 30.0
+  },
+  "cases": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.19979176768428675,
+        "p95_worst_joint_error_rad": 0.21059849239969355,
+        "mean_absolute_face_pitch_deg": 27.08134325074203,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19979176768428675,
+          0.1685973955170851,
+          0.13963343916575388,
+          0.0354947916650716
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-12",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.1815136959466504,
+        "p95_worst_joint_error_rad": 0.18748375620695604,
+        "mean_absolute_face_pitch_deg": 26.37885245923948,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1815136959466504,
+          0.16453240542569983,
+          0.13933407146781504,
+          0.02707042713989402
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-20",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.19235721220229726,
+        "p95_worst_joint_error_rad": 0.20126258406618378,
+        "mean_absolute_face_pitch_deg": 26.69621283595182,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19235721220229726,
+          0.16054575566459847,
+          0.1499331456213765,
+          0.03082513113686211
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.1796965955323292,
+        "p95_worst_joint_error_rad": 0.18622312980409542,
+        "mean_absolute_face_pitch_deg": 25.736313572087248,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1796965955323292,
+          0.16910020827072894,
+          0.15110986777404603,
+          0.03187350089822263
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-right",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.17780675028763565,
+        "p95_worst_joint_error_rad": 0.18433487661412903,
+        "mean_absolute_face_pitch_deg": 25.39767731932062,
+        "per_head_joint_mean_abs_error_rad": [
+          0.17780675028763565,
+          0.16606707476000124,
+          0.14269368488824583,
+          0.03160433412206084
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-left",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.1987463568637735,
+        "p95_worst_joint_error_rad": 0.20887808451810114,
+        "mean_absolute_face_pitch_deg": 27.12817352738761,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1987463568637735,
+          0.1710321973107436,
+          0.15396582768041195,
+          0.03406709719159114
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-right",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.19079420999008814,
+        "p95_worst_joint_error_rad": 0.1998835030497274,
+        "mean_absolute_face_pitch_deg": 26.161915869564034,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19079420999008814,
+          0.1692397601936194,
+          0.14752523013975988,
+          0.04589911601389183
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "zero-lag--forward-08",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.1802096082456699,
+        "p95_worst_joint_error_rad": 0.1877552936402258,
+        "mean_absolute_face_pitch_deg": 25.4558657757295,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1802096082456699,
+          0.15927370591827109,
+          0.13692230878045397,
+          0.022680030239891864
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "zero-lag--forward-12",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.18329088957076445,
+        "p95_worst_joint_error_rad": 0.19094916198122833,
+        "mean_absolute_face_pitch_deg": 25.24002803904029,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18329088957076445,
+          0.15681651814858044,
+          0.13274190355191026,
+          0.028575452730748813
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "zero-lag--forward-20",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.19210478217878288,
+        "p95_worst_joint_error_rad": 0.2033613817727111,
+        "mean_absolute_face_pitch_deg": 25.660545382142416,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19210478217878288,
+          0.15279304090149862,
+          0.12921356450095625,
+          0.027766364138889187
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "zero-lag--turn-left",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.18388899234335154,
+        "p95_worst_joint_error_rad": 0.19152280949357145,
+        "mean_absolute_face_pitch_deg": 25.956049003171415,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18388899234335154,
+          0.1617489166583555,
+          0.13972286842386947,
+          0.029993598857412176
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "zero-lag--turn-right",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.18387667241984657,
+        "p95_worst_joint_error_rad": 0.19163075131806967,
+        "mean_absolute_face_pitch_deg": 25.457951214115713,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18387667241984657,
+          0.15917251228332902,
+          0.13624211781149057,
+          0.026171394428289065
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "zero-lag--arc-left",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.1942307253636523,
+        "p95_worst_joint_error_rad": 0.20488979090289278,
+        "mean_absolute_face_pitch_deg": 25.91354439553941,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1942307253636523,
+          0.15846155877790477,
+          0.13703098748005635,
+          0.027337207412002237
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "zero-lag--arc-right",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.18615201927788919,
+        "p95_worst_joint_error_rad": 0.19587080253482508,
+        "mean_absolute_face_pitch_deg": 25.288675938558125,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18615201927788919,
+          0.15452937890125262,
+          0.13054382657586913,
+          0.019893784927676517
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "long-30-20ms--forward-08",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.18561596066170089,
+        "p95_worst_joint_error_rad": 0.19315312916183808,
+        "mean_absolute_face_pitch_deg": 26.149070119588796,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18561596066170089,
+          0.16832942154171135,
+          0.15058764036947664,
+          0.04719861908168029
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "long-30-20ms--forward-12",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.19260722570603087,
+        "p95_worst_joint_error_rad": 0.2017307430099107,
+        "mean_absolute_face_pitch_deg": 26.71519631936501,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19260722570603087,
+          0.15854218516557228,
+          0.14972613350586347,
+          0.028874369114598935
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "long-30-20ms--forward-20",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.19008280243099468,
+        "p95_worst_joint_error_rad": 0.19871677463308574,
+        "mean_absolute_face_pitch_deg": 26.44118571642112,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19008280243099468,
+          0.1630567938458443,
+          0.15214285923687598,
+          0.039582151674037676
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "long-30-20ms--turn-left",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.19808673189987255,
+        "p95_worst_joint_error_rad": 0.20937406700943953,
+        "mean_absolute_face_pitch_deg": 26.9605950593098,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19808673189987255,
+          0.1639858589329112,
+          0.15129789110419237,
+          0.02109959824188988
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "long-30-20ms--turn-right",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.1931349318726516,
+        "p95_worst_joint_error_rad": 0.20268619816305725,
+        "mean_absolute_face_pitch_deg": 26.233724099321993,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1931349318726516,
+          0.17483595365700763,
+          0.1408435755016994,
+          0.054543864285395705
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "long-30-20ms--arc-left",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.20136558949030167,
+        "p95_worst_joint_error_rad": 0.21251522183152588,
+        "mean_absolute_face_pitch_deg": 27.430691332228314,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20136558949030167,
+          0.16884312536545534,
+          0.15439227067273545,
+          0.02770862164305563
+        ]
+      },
+      "failures": []
+    },
+    {
+      "case_id": "long-30-20ms--arc-right",
+      "stop_rows": 101,
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.18016269138047367,
+        "p95_worst_joint_error_rad": 0.1866326876432689,
+        "mean_absolute_face_pitch_deg": 25.895144313944336,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18016269138047367,
+          0.16745738256429246,
+          0.14981211617744183,
+          0.036780357102184386
+        ]
+      },
+      "failures": []
+    }
+  ]
+}

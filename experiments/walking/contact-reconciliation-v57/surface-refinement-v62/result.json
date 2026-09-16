@@ -1,0 +1,74 @@
+{
+  "id": "v62-complete-collision-geometry",
+  "completed_utc": "2026-09-16T04:29:06.426645+00:00",
+  "status": "sampled_geometry_and_compiler_kinematic_gates_passed",
+  "scoped_geometry_prerequisite_passed": true,
+  "sampled_tolerance_m": 0.00025,
+  "components": {
+    "bottom_head_shell": {
+      "parts": 4875,
+      "material_passed": true,
+      "max_sampled_excess_m": 8.516588638457842e-05,
+      "max_sampled_missing_m": 4.684318970760787e-06,
+      "additional_samples": 3489105,
+      "max_additional_excess_m": 0.00021740613849181823,
+      "analytic_witnesses_agree": true
+    },
+    "jaw": {
+      "parts": 1781,
+      "material_passed": true,
+      "max_sampled_excess_m": 0.00014782739873943782,
+      "max_sampled_missing_m": 7.6450348901771e-06,
+      "additional_samples": 830572,
+      "max_additional_excess_m": 0.00019069562821408782,
+      "analytic_witnesses_agree": true
+    },
+    "neck_pitch": {
+      "parts": 614,
+      "material_passed": true,
+      "max_sampled_excess_m": 0.00015801014355162663,
+      "max_sampled_missing_m": 1.3107190219641408e-06,
+      "additional_samples": 177268,
+      "max_additional_excess_m": 0.00019773651553554216,
+      "analytic_witnesses_agree": true
+    },
+    "seeed_bearing__configuration__22x16x4": {
+      "parts": 256,
+      "material_passed": true,
+      "max_sampled_excess_m": 0.00017718090700055648,
+      "max_sampled_missing_m": 4.392439312650007e-07,
+      "additional_samples": 167723,
+      "max_additional_excess_m": 0.00020935429581389305,
+      "analytic_witnesses_agree": true
+    }
+  },
+  "cavity_witnesses_passed": 8,
+  "additional_samples": 4664668,
+  "independent_analytic_witnesses": 80,
+  "active_robot_colliders": 7592,
+  "physical_actuator_arrays_exact": 62,
+  "pair_matrix_rows": 28815436,
+  "eligible_pairs": 6162369,
+  "copied_poses": 201,
+  "poses_with_internal_penetration": 0,
+  "maximum_compiled_world_vertex_error_m": 2.8843085709692067e-09,
+  "tests": {
+    "v62": 36,
+    "workspace": 141
+  },
+  "legacy_material_result": "combined-material-result.json; shell false failure preserved",
+  "corrected_material_result": "unit-stable-material-result.json; same samples and limits, normalized query units",
+  "physics_steps": 0,
+  "model_admitted": false,
+  "walking_accepted": false,
+  "physical_acceptance": false,
+  "next_activity": "freeze controlled HOME, passive zero-motor-torque and action-frozen BAM probes with physics-rate applied body loads and CPU step-time measurement",
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/unit-stable-material-result.json": "e95791f23ae8cf2457815f575d00a7ab15f17bdf00dee5986cdf047c46c6c7a1",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/assembly/result.json": "f4a693754e5b9c3ad1ef5ed919f6c924767d3e68eba3c54d19d3dbf5ea8dff8f",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/assembly-review.json": "4c811d9bfe6dea3d4f43e537aac0f0413f1afbc70ef972413b882211e7d195e4",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/input-closure-review.json": "2149889d4b96af64a84ce4e7a5b890b6c4220e66f0a161217c0f55811822db1b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/geometry-tests-closure.log": "50359d73c67accafa58d91466818bb77bf17d0882877459d09491d0b6d6cd095",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/tooling-unit-normalization.log": "5d0a81688fdf8f42197fa68f88376bd069c2a04be0f7f1944aece48c4407af0e"
+  }
+}

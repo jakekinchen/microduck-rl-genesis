@@ -1,0 +1,94 @@
+{
+  "scope": "posthoc read-only localization for the next freeze; no new robot dynamics",
+  "models": [
+    {
+      "model": "v11",
+      "source_trace": "experiments/walking/feedback-contact-v65/runs/v11-native-dt5000us-r1/physics.jsonl.gz",
+      "source_sha256": "b2a18a5e825e8d2d76fb558a9aad713982a7d7832e74cb17372ea3d9f330d4af",
+      "configuration_sha256": "72501bd43dd04586413d0cea073e740d4f38a0d0a21fe63360615fa02ef9c300",
+      "interval_start_s": 0.04,
+      "interval_end_s": 0.045,
+      "bam_tick": 8,
+      "qpos_before": [
+        -0.00033792734692581465,
+        0.0002597154569764307,
+        0.11596836724615248,
+        0.9211677333273248,
+        -0.0004116124535087443,
+        0.0005085187916275494,
+        -0.38916523362246225,
+        -3.687475357656745e-06,
+        -0.0866911498035485,
+        -0.44747536360815865,
+        0.05671213460515311,
+        0.4633332225778226,
+        0.33946594152401793,
+        0.3446013813354904,
+        -7.553270988902988e-05,
+        -0.005904969593246783,
+        0.0053544693606970345,
+        0.09160110573131817,
+        0.4516280131363073,
+        -0.04370543613254854,
+        -0.45313465227115307
+      ],
+      "normal_load_n": 28.178255731508727,
+      "pairs": [
+        [
+          "floor",
+          "left_foot_collision"
+        ],
+        [
+          "floor",
+          "right_foot_collision"
+        ]
+      ]
+    },
+    {
+      "model": "v62",
+      "source_trace": "experiments/walking/feedback-contact-v65/runs/v62-native-dt5000us-r1/physics.jsonl.gz",
+      "source_sha256": "27f0d4f560a6c6dc4f68e625b6a14cb8097862dc9e2a517b36e567ee63578296",
+      "configuration_sha256": "fc6907fdbfb2f36d13fa3ce6aac4145ccac317d1c05609f1d28ba8634c806145",
+      "interval_start_s": 0.04,
+      "interval_end_s": 0.045,
+      "bam_tick": 8,
+      "qpos_before": [
+        -0.0003379273456754179,
+        0.000259715441919148,
+        0.11596836719459416,
+        0.9211677339836488,
+        -0.00041161272182039496,
+        0.0005085190957477846,
+        -0.38916523206823844,
+        -3.6875819566344864e-06,
+        -0.08669115220678965,
+        -0.44747536316676834,
+        0.056712133513798696,
+        0.46333322350646666,
+        0.33946594170023137,
+        0.34460138113016664,
+        -7.553274905313788e-05,
+        -0.005904969684227074,
+        0.005354469672720297,
+        0.09160110582200577,
+        0.4516280130675487,
+        -0.043705436260897,
+        -0.4531346522119733
+      ],
+      "normal_load_n": 28.178256309961675,
+      "pairs": [
+        [
+          "floor",
+          "ankle_left_1_sole_left_collision"
+        ],
+        [
+          "floor",
+          "ankle_right_3_sole_right_collision"
+        ]
+      ]
+    }
+  ],
+  "proposed_checkpoint_s": 0.035,
+  "proposed_window_end_s": 0.135,
+  "complete_dynamic_checkpoint_available_in_these_traces": false
+}

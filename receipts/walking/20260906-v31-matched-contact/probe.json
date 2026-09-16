@@ -1,0 +1,188 @@
+{
+  "schema": "microduck.matched-contact/v31",
+  "status": "completed",
+  "cases": [
+    {
+      "session_id": "rigid-control-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "debd57782269c50bdd177eeefb2f10f39daddd043af26d1dfba7247bf135a703",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_observer_reproduced": true,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.002374426224483436,
+          "max_joint_error_deg": 1.8199158853187383,
+          "max_physics_base_error_m": 0.002374426224483436,
+          "max_physics_joint_error_deg": 1.8199158853187383,
+          "first_threshold_divergence_s": 0.88,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.004112074343780069,
+          "max_joint_error_deg": 2.2386373912269457,
+          "max_physics_base_error_m": 0.004112074343780069,
+          "max_physics_joint_error_deg": 2.2414141112282913,
+          "first_threshold_divergence_s": 0.72,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.006486369211915023,
+          "max_joint_error_deg": 3.697545123872057,
+          "max_physics_base_error_m": 0.006486369211915023,
+          "max_physics_joint_error_deg": 3.697545123872057,
+          "first_threshold_divergence_s": 0.62,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-low-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "058f9fa881e945806230836e8b293c85ec32b8b32ab722843c8b3bffaf9e02e5",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_observer_reproduced": true,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.001081785969274406,
+          "max_joint_error_deg": 0.9131487761548944,
+          "max_physics_base_error_m": 0.001081785969274406,
+          "max_physics_joint_error_deg": 0.9131487761548944,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.005391037686167742,
+          "max_joint_error_deg": 2.8916901058398157,
+          "max_physics_base_error_m": 0.005391037686167742,
+          "max_physics_joint_error_deg": 2.892197022194759,
+          "first_threshold_divergence_s": 0.66,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.00642712360878172,
+          "max_joint_error_deg": 3.47725288186349,
+          "max_physics_base_error_m": 0.00642712360878172,
+          "max_physics_joint_error_deg": 3.47725288186349,
+          "first_threshold_divergence_s": 0.58,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-middle-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "991da8a5fc649f0c8e9d1e66d0de197f263bb2e22d7874c34b60d1b08fe1ae33",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_observer_reproduced": true,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.0011286873600872232,
+          "max_joint_error_deg": 1.0637335045375595,
+          "max_physics_base_error_m": 0.0011289496370117701,
+          "max_physics_joint_error_deg": 1.0640666907132679,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.0029023294408207726,
+          "max_joint_error_deg": 2.079548196465572,
+          "max_physics_base_error_m": 0.0029256306033830447,
+          "max_physics_joint_error_deg": 2.0810103270220632,
+          "first_threshold_divergence_s": 0.24,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.002886578817716836,
+          "max_joint_error_deg": 1.81927261810684,
+          "max_physics_base_error_m": 0.0029232750922801596,
+          "max_physics_joint_error_deg": 1.8209630005340505,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-high-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 11,
+      "physics_steps": 44,
+      "action_bytes_sha256": "ebcd9d2956ec84132a3da263da00f11172dcf6251965a5655ab6ae7472bbc9f9",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_observer_reproduced": true,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.004073041455906654,
+          "max_joint_error_deg": 0.5862182275065482,
+          "max_physics_base_error_m": 0.004073041455906654,
+          "max_physics_joint_error_deg": 0.5862182275065482,
+          "first_threshold_divergence_s": 0.12,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.012435457677821084,
+          "max_joint_error_deg": 1.3069626741848144,
+          "max_physics_base_error_m": 0.012435982395511224,
+          "max_physics_joint_error_deg": 1.3069626741848144,
+          "first_threshold_divergence_s": 0.1,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.010567718392199076,
+          "max_joint_error_deg": 1.099026851435354,
+          "max_physics_base_error_m": 0.010567718392199076,
+          "max_physics_joint_error_deg": 1.099026851435354,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-high-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v26-surface-standing",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "2612c453c10b9e03021e7da4a2dfad736e3a0323c924b5d1e9c8082f60a5ff49",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_observer_reproduced": true,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.00408670136326281,
+          "max_joint_error_deg": 1.3163713989009975,
+          "max_physics_base_error_m": 0.004120724930376021,
+          "max_physics_joint_error_deg": 1.3163713989009975,
+          "first_threshold_divergence_s": 0.1,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.010680283779911932,
+          "max_joint_error_deg": 1.3960361233498195,
+          "max_physics_base_error_m": 0.010763941142273095,
+          "max_physics_joint_error_deg": 1.4018928109221689,
+          "first_threshold_divergence_s": 0.1,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.00966410845299946,
+          "max_joint_error_deg": 1.1192652157790022,
+          "max_physics_base_error_m": 0.00966410845299946,
+          "max_physics_joint_error_deg": 1.1299683175050799,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      }
+    }
+  ],
+  "physical_calibration": false,
+  "elapsed_s": 10.468210999999428
+}

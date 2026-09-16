@@ -1,0 +1,99 @@
+{
+  "schema": "microduck.walking-support/v1",
+  "smokes": [
+    {
+      "run": "walking-20260905-v1-smoke",
+      "status": "completed",
+      "new_transitions": 7680,
+      "boundary": "Five-iteration software smoke only; no gait acceptance."
+    },
+    {
+      "run": "walking-20260905-v2-smoke",
+      "status": "completed",
+      "new_transitions": 7680,
+      "boundary": "Five-iteration software smoke only; no gait acceptance."
+    }
+  ],
+  "inertia_source_sha256": "e843c31b6980b40e38f23404695afec578f9447de45b4e89ffe15f14d9eeda3e",
+  "per_link_mass_and_principal_inertia_comparison": [
+    {
+      "body": "trunk_base",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 2.869009039672618e-12
+    },
+    {
+      "body": "yaw2roll",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 9.47281638607946e-14
+    },
+    {
+      "body": "hip_l",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 5.0474920119955385e-14
+    },
+    {
+      "body": "upper_leg_left",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 6.139020193617669e-13
+    },
+    {
+      "body": "leg",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 2.0705960698878508e-13
+    },
+    {
+      "body": "ankle_left",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 3.0986964296569885e-13
+    },
+    {
+      "body": "neck",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 9.050995121841297e-13
+    },
+    {
+      "body": "neck_pitch",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 5.468485640340939e-14
+    },
+    {
+      "body": "yaw_roll_motion",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 3.728502780093535e-13
+    },
+    {
+      "body": "jaw_soft",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 1.0034597935568157e-11
+    },
+    {
+      "body": "bearing_roll",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 9.47281638607946e-14
+    },
+    {
+      "body": "hip_l_2",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 5.0474920119955385e-14
+    },
+    {
+      "body": "upper_leg_right",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 6.139020193617669e-13
+    },
+    {
+      "body": "leg_2",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 2.0705960698878508e-13
+    },
+    {
+      "body": "ankle_right",
+      "mass_delta_kg": 0.0,
+      "max_sorted_principal_inertia_delta_kg_m2": 2.057401829198141e-13
+    }
+  ],
+  "inertia_boundary": "Numerical principal values and masses agree; not a full COM/frame/contact or hardware calibration.",
+  "training_domain_clarification": "V1/v2 have nominal rigid model and explicit timing variation. Inherited BAM initialization also retains 6.5\u20138.2 V supply and 0\u20130.2 ohm voltage-drop draws. The original timing-only cfg label is incomplete; sources and historical run records remain unchanged. Native evaluator is 7.35 V, zero drop, within that envelope.",
+  "candidate_accepted": false,
+  "physical_transfer_validated": false
+}

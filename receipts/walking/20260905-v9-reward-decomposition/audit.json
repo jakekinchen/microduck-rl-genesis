@@ -1,0 +1,17 @@
+{
+  "schema": "microduck.walking-viability-reward-audit/v1",
+  "checkpoint_sha256": "348030128f56145a5172fe8ad8469394cb5afab3fd5a6911ac124373493e818f",
+  "samples": 2000,
+  "landing_events": 183,
+  "maximum_positive_decomposition_error": 5.036592483520508e-06,
+  "maximum_reward_decomposition_error": 5.3942203521728516e-06,
+  "posture_viability_range": [
+    3.81794862391871e-09,
+    1.0
+  ],
+  "inference": "unchanged normalized Torch CPU v8 FINAL mean",
+  "physics": "Genesis CPU, four training environments, inherited reset/commands/timing",
+  "training_performed": false,
+  "passed": true,
+  "boundary": "Numerical reward-accounting test across actual stepping states, not controller or physical acceptance."
+}

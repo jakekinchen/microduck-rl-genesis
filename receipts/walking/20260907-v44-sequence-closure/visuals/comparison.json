@@ -1,0 +1,417 @@
+{
+  "flat": {
+    "baseline_passes": 21,
+    "candidate_passes": 0,
+    "lost_previously_passing": [
+      "long-30-20ms--arc-left",
+      "long-30-20ms--arc-right",
+      "long-30-20ms--forward-08",
+      "long-30-20ms--forward-12",
+      "long-30-20ms--forward-20",
+      "long-30-20ms--turn-left",
+      "long-30-20ms--turn-right",
+      "nominal-20-20ms--arc-left",
+      "nominal-20-20ms--arc-right",
+      "nominal-20-20ms--forward-08",
+      "nominal-20-20ms--forward-12",
+      "nominal-20-20ms--forward-20",
+      "nominal-20-20ms--turn-left",
+      "nominal-20-20ms--turn-right",
+      "zero-lag--arc-left",
+      "zero-lag--arc-right",
+      "zero-lag--forward-08",
+      "zero-lag--forward-12",
+      "zero-lag--forward-20",
+      "zero-lag--turn-left",
+      "zero-lag--turn-right"
+    ],
+    "new_passes": [],
+    "explicit_fall_windows": 9,
+    "unrun_windows": 0,
+    "failure_counts": {
+      "persistent_joint_hard_stop": 17,
+      "actual_joint_margin_below_minimum": 11,
+      "mean_abs_yaw_error_rad_s": 4,
+      "fall": 9,
+      "incomplete_duration": 9,
+      "insufficient_active_evidence": 7,
+      "missing_tracking_or_stop_evidence": 9,
+      "heading:missing_or_invalid_heading_evidence": 7,
+      "self_contact:incomplete_duration": 9,
+      "self_load:incomplete_duration": 9,
+      "no_useful_translation": 3,
+      "unsustained_bilateral_stepping": 3,
+      "backward_pursuit": 2,
+      "missing_bilateral_steps": 1,
+      "nonfoot_support": 2,
+      "mean_abs_lateral_velocity_m_s": 1
+    },
+    "candidate_report_sha256": "1ac1cf0d31dffaa8d2e91685e8cc9241802694ebfab0d230ac1dc518da8379b1",
+    "baseline_report_sha256": "e29430680891dd3c2ea30c0e98da6814301b8d76fae4ee5147c598a3a118f6e1"
+  },
+  "repeated": {
+    "baseline_passes": 42,
+    "candidate_passes": 0,
+    "lost_previously_passing": [
+      "motor-10ms-sensor-20ms--arc-left-117-448--repeat-1",
+      "motor-10ms-sensor-20ms--arc-left-117-448--repeat-2",
+      "motor-10ms-sensor-20ms--arc-right-184-383--repeat-1",
+      "motor-10ms-sensor-20ms--arc-right-184-383--repeat-2",
+      "motor-10ms-sensor-20ms--forward-158--repeat-1",
+      "motor-10ms-sensor-20ms--forward-158--repeat-2",
+      "motor-10ms-sensor-20ms--forward-201--repeat-1",
+      "motor-10ms-sensor-20ms--forward-201--repeat-2",
+      "motor-10ms-sensor-20ms--forward-211--repeat-1",
+      "motor-10ms-sensor-20ms--forward-211--repeat-2",
+      "motor-10ms-sensor-20ms--turn-left-738--repeat-1",
+      "motor-10ms-sensor-20ms--turn-left-738--repeat-2",
+      "motor-10ms-sensor-20ms--turn-right-380--repeat-1",
+      "motor-10ms-sensor-20ms--turn-right-380--repeat-2",
+      "motor-15ms-sensor-0ms--arc-left-117-448--repeat-1",
+      "motor-15ms-sensor-0ms--arc-left-117-448--repeat-2",
+      "motor-15ms-sensor-0ms--arc-right-184-383--repeat-1",
+      "motor-15ms-sensor-0ms--arc-right-184-383--repeat-2",
+      "motor-15ms-sensor-0ms--forward-158--repeat-1",
+      "motor-15ms-sensor-0ms--forward-158--repeat-2",
+      "motor-15ms-sensor-0ms--forward-201--repeat-1",
+      "motor-15ms-sensor-0ms--forward-201--repeat-2",
+      "motor-15ms-sensor-0ms--forward-211--repeat-1",
+      "motor-15ms-sensor-0ms--forward-211--repeat-2",
+      "motor-15ms-sensor-0ms--turn-left-738--repeat-1",
+      "motor-15ms-sensor-0ms--turn-left-738--repeat-2",
+      "motor-15ms-sensor-0ms--turn-right-380--repeat-1",
+      "motor-15ms-sensor-0ms--turn-right-380--repeat-2",
+      "motor-25ms-sensor-20ms--arc-left-117-448--repeat-1",
+      "motor-25ms-sensor-20ms--arc-left-117-448--repeat-2",
+      "motor-25ms-sensor-20ms--arc-right-184-383--repeat-1",
+      "motor-25ms-sensor-20ms--arc-right-184-383--repeat-2",
+      "motor-25ms-sensor-20ms--forward-158--repeat-1",
+      "motor-25ms-sensor-20ms--forward-158--repeat-2",
+      "motor-25ms-sensor-20ms--forward-201--repeat-1",
+      "motor-25ms-sensor-20ms--forward-201--repeat-2",
+      "motor-25ms-sensor-20ms--forward-211--repeat-1",
+      "motor-25ms-sensor-20ms--forward-211--repeat-2",
+      "motor-25ms-sensor-20ms--turn-left-738--repeat-1",
+      "motor-25ms-sensor-20ms--turn-left-738--repeat-2",
+      "motor-25ms-sensor-20ms--turn-right-380--repeat-1",
+      "motor-25ms-sensor-20ms--turn-right-380--repeat-2"
+    ],
+    "new_passes": [],
+    "explicit_fall_windows": 10,
+    "unrun_windows": 10,
+    "failure_counts": {
+      "actual_joint_margin_below_minimum": 21,
+      "fall": 10,
+      "incomplete_duration": 10,
+      "insufficient_active_evidence": 5,
+      "missing_tracking_or_stop_evidence": 10,
+      "persistent_joint_hard_stop": 28,
+      "unsustained_bilateral_stepping": 5,
+      "heading:missing_or_invalid_heading_evidence": 8,
+      "self_contact:incomplete_duration": 10,
+      "self_load:incomplete_duration": 10,
+      "not_run_after_terminal_fall": 10,
+      "no_useful_translation": 4,
+      "heading:endpoint_heading_error_deg": 4,
+      "heading:maximum_heading_error_deg": 4,
+      "mean_abs_yaw_error_rad_s": 9,
+      "missing_bilateral_steps": 2,
+      "backward_pursuit": 1,
+      "nonfoot_support": 2
+    },
+    "candidate_report_sha256": "128b272f141d191c8279a2ecc21ac47eddd83af318761af53ea7139f243f09f1",
+    "baseline_report_sha256": "de68a162124229d669831902251694b41342f83ba4e9722bbbe6f884fcaccf6f"
+  },
+  "endurance": {
+    "baseline_passes": 2,
+    "candidate_passes": 0,
+    "lost_previously_passing": [
+      "continuous-composition-start-1",
+      "continuous-composition-start-2"
+    ],
+    "new_passes": [],
+    "explicit_fall_windows": 4,
+    "unrun_windows": 17,
+    "failure_counts": {
+      "actual_joint_margin_below_minimum": 6,
+      "fall": 4,
+      "incomplete_duration": 4,
+      "missing_tracking_or_stop_evidence": 4,
+      "nonfoot_support": 4,
+      "persistent_joint_hard_stop": 6,
+      "self_contact:incomplete_duration": 4,
+      "self_load:incomplete_duration": 4,
+      "endurance:incomplete_endurance_evidence": 4,
+      "endurance:missing_final_standing_posture": 4,
+      "not_run_after_terminal_fall": 17,
+      "mean_abs_yaw_error_rad_s": 2,
+      "endurance:tracking_bucket_2:mean_abs_yaw_error_rad_s": 2
+    },
+    "candidate_report_sha256": "2a57d5a3c506bfe80317935f96acb25052d84714cf158905e6b76f41c9dbd7ec",
+    "baseline_report_sha256": "1113a6721bef87d657c0f606d89a363dadf013323d875ebc57f001c99c8eb968",
+    "sessions": [
+      {
+        "session_id": "downhill-3deg-start-1",
+        "passed": false,
+        "simulated_duration_s": 13.960000000000782,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "downhill-3deg-start-2",
+        "passed": false,
+        "simulated_duration_s": 13.760000000000751,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "continuous-composition-start-1",
+        "passed": false,
+        "simulated_duration_s": 67.98000000001066,
+        "required_duration_s": 180,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "continuous-composition-start-2",
+        "passed": false,
+        "simulated_duration_s": 14.060000000000798,
+        "required_duration_s": 180,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      }
+    ]
+  },
+  "surfaces": {
+    "baseline_passes": 5,
+    "candidate_passes": 0,
+    "lost_previously_passing": [
+      "rigid-control-start-1",
+      "rigid-control-start-2",
+      "soft-low-traction-start-1",
+      "soft-low-traction-start-2",
+      "unseen-low-medium-start-1"
+    ],
+    "new_passes": [],
+    "explicit_fall_windows": 11,
+    "unrun_windows": 10,
+    "failure_counts": {
+      "actual_joint_margin_below_minimum": 16,
+      "mean_abs_yaw_error_rad_s": 5,
+      "persistent_joint_hard_stop": 10,
+      "endurance:tracking_bucket_2:mean_abs_yaw_error_rad_s": 5,
+      "fall": 11,
+      "incomplete_duration": 11,
+      "missing_tracking_or_stop_evidence": 11,
+      "nonfoot_support": 3,
+      "self_contact:incomplete_duration": 13,
+      "self_load:incomplete_duration": 13,
+      "endurance:incomplete_endurance_evidence": 13,
+      "endurance:missing_final_standing_posture": 13,
+      "not_run_after_terminal_fall": 10,
+      "insufficient_active_evidence": 7,
+      "missing_bilateral_steps": 7,
+      "no_useful_translation": 7,
+      "unsustained_bilateral_stepping": 7,
+      "missing_or_invalid_case_evidence:no posture evidence": 2
+    },
+    "candidate_report_sha256": "cef9f7418601893409b236fa6ce63645ea2579fbf38af3290f9ae8301754e0a1",
+    "baseline_report_sha256": "6a94476c09b3f74c73e879271643aedb85f3f7289a1ca5de2bd614640b2867b8",
+    "sessions": [
+      {
+        "session_id": "rigid-control-start-1",
+        "passed": false,
+        "simulated_duration_s": 31.859999999997946,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "rigid-control-start-2",
+        "passed": false,
+        "simulated_duration_s": 32.07999999999796,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "soft-low-traction-start-1",
+        "passed": false,
+        "simulated_duration_s": 14.52000000000087,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "soft-low-traction-start-2",
+        "passed": false,
+        "simulated_duration_s": 14.120000000000807,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "soft-middle-start-1",
+        "passed": false,
+        "simulated_duration_s": 1.639999999999987,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "soft-middle-start-2",
+        "passed": false,
+        "simulated_duration_s": 1.4599999999999909,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "soft-high-traction-start-1",
+        "passed": false,
+        "simulated_duration_s": 0.2200000000000001,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "soft-high-traction-start-2",
+        "passed": false,
+        "simulated_duration_s": 0.2200000000000001,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "unseen-low-medium-start-1",
+        "passed": false,
+        "simulated_duration_s": 35.999999999999964,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure"
+        ]
+      },
+      {
+        "session_id": "unseen-low-medium-start-2",
+        "passed": false,
+        "simulated_duration_s": 19.72000000000036,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "unseen-high-mild-start-1",
+        "passed": false,
+        "simulated_duration_s": 1.6799999999999862,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "unseen-high-mild-start-2",
+        "passed": false,
+        "simulated_duration_s": 1.6599999999999866,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "unseen-low-soft-start-1",
+        "passed": false,
+        "simulated_duration_s": 1.639999999999987,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      },
+      {
+        "session_id": "unseen-low-soft-start-2",
+        "passed": false,
+        "simulated_duration_s": 1.6599999999999866,
+        "required_duration_s": 36,
+        "failures": [
+          "session_heading_failure",
+          "window_failure",
+          "incomplete_duration"
+        ]
+      }
+    ]
+  },
+  "candidate_rejected": true,
+  "fresh_sequence_bank_opened": false,
+  "physical_calibration": false,
+  "diagnostic_case": "nominal-20-20ms--forward-08",
+  "phase_occupancy": {
+    "V30 retained": {
+      "walking": {
+        "controls": 605,
+        "fraction_below_5_percent": 0.0
+      },
+      "standing": {
+        "controls": 246,
+        "fraction_below_5_percent": 0.0
+      }
+    },
+    "V44 candidate": {
+      "walking": {
+        "controls": 605,
+        "fraction_below_5_percent": 0.31735537190082647
+      },
+      "standing": {
+        "controls": 246,
+        "fraction_below_5_percent": 0.0
+      }
+    }
+  },
+  "interpretation": "The first case has excessive right-knee near-limit occupancy during walking. This phase association does not by itself isolate the learned walker from incoming state supplied by the stander."
+}

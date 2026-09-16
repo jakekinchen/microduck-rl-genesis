@@ -1,0 +1,41 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v53-retention-complete-joint-fit-next",
+  "phase": "joint_braking_fit_feasibility_next",
+  "question": "V53 is complete and rejected. All 63 flat and five original surface passes return; both 180-second sessions survive, but one fails whole-session heading. Downhill start 1 falls at 14.24 s; start 2 fails yaw/posture/heading. This packet binds a passing flat retention reference only; read the V53 endurance receipt for failures. Next establish joint fitting feasibility with separate retention and recovery error gates. Keep V30.",
+  "primary": "receipts/walking/20260908-v53-braking-flat",
+  "primary_policy_sha256": "1f8e87d7370a1aeb7b57f272c96abb6df49e3039b8d1332bfce24c1a81de5b4f",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "nominal-20-20ms--forward-08",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_braking_flat_v53.py",
+    "microduck/braking_v53.py",
+    "scripts/train_braking_v53.py",
+    "scripts/build_braking_replay_v53.py",
+    "experiments/walking/BRAKING-RETENTION-v53.md",
+    "experiments/walking/braking-replay-v53/replay.npz",
+    "experiments/walking/braking-replay-v53/provenance.json",
+    "scripts/evaluate_native_retention_flat_v50.py",
+    "microduck/native_sequence_env_v50.py",
+    "microduck/retained_walker_v50.py",
+    "scripts/train_native_retention_v50.py",
+    "experiments/walking/native_candidate_v50.py",
+    "microduck/heading_headroom_v30.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/laser/gait.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json"
+  ],
+  "before_training": [
+    "Read experiments/walking/BRAKING-RESULTS-v53.md. The nine-state collection, single 8,000-update learner and all four exposed evaluation banks are complete. No extension or checkpoint reselection.",
+    "The selected flat reference passes. Actual failures are in 20260908-v53-braking-endurance: downhill start 1 falls at 14.24 s; start 2 fails yaw, final posture and endpoint heading. Composition start 1 finishes 180 s but maximum heading error 21.4145 degrees exceeds 20.",
+    "The primary manifest binds braking/policy.onnx SHA-256 d0c2e4accc07364cd588a93713ef7f65acc92f7bf39283fb2889b058e45d98fa in addition to the frozen V50/V15 base actors. Do not identify the composite by the base walker digest alone.",
+    "Next freeze one offline joint fit-feasibility experiment: independent maximum-error limits for successful-stop and downhill-recovery labels, with every stop onset explicitly checked. Onset errors .077870-.206272 rad remain despite better zero-label fitting. Require both fitting gates before full rollout evaluation, then preserve all original behavioral gates. Do not infer missing observability or physical accuracy.",
+    "V30 remains retained. Fresh/protected banks stay closed; measured calibration, terrain generalization and carpet transfer remain unmet. Check storage and guard immediately before any newly authorized compute. No paid compute, activation or hardware authority is implied."
+  ],
+  "boundary": "Exposed retention improvement with remaining downhill and full-session heading failures. Not accepted walking, calibrated physical accuracy or carpet transfer."
+}

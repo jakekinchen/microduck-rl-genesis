@@ -1,0 +1,92 @@
+{
+  "schema": "microduck.walking-visible-suite/v1",
+  "held_out": false,
+  "seed": 26090622,
+  "duration_s": 18,
+  "move_start_s": 1,
+  "stop_start_s": 13,
+  "timing_profiles": [
+    {
+      "id": "nominal-control",
+      "motor_ticks": 6,
+      "sensor_ticks": 1,
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 1.0
+      }
+    },
+    {
+      "id": "reduced-traction",
+      "motor_ticks": 6,
+      "sensor_ticks": 1,
+      "domain": {
+        "mass_inertia_scale": 1.0,
+        "sliding_friction_scale": 0.6
+      }
+    },
+    {
+      "id": "increased-inertia",
+      "motor_ticks": 6,
+      "sensor_ticks": 1,
+      "domain": {
+        "mass_inertia_scale": 1.1,
+        "sliding_friction_scale": 1.0
+      }
+    },
+    {
+      "id": "combined-traction-inertia",
+      "motor_ticks": 6,
+      "sensor_ticks": 1,
+      "domain": {
+        "mass_inertia_scale": 1.1,
+        "sliding_friction_scale": 0.6
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "forward-17-new-pose",
+      "command": [
+        0.17,
+        0,
+        0
+      ],
+      "yaw": -1.2
+    },
+    {
+      "id": "turn-right-45-new-pose",
+      "command": [
+        0,
+        0,
+        -0.45
+      ],
+      "yaw": 0.3
+    },
+    {
+      "id": "arc-left-10-35-new-pose",
+      "command": [
+        0.1,
+        0,
+        0.35
+      ],
+      "yaw": -1.7
+    }
+  ],
+  "thresholds": {
+    "motor_torque_limit_nm": 0.6405236195572268,
+    "torque_saturation_fraction_max": 0.02,
+    "actual_joint_margin_rad_min": 0.02,
+    "mean_abs_forward_error_m_s": 0.05,
+    "mean_abs_yaw_error_rad_s": 0.2,
+    "mean_abs_lateral_velocity_m_s": 0.05,
+    "stop_max_speed_m_s": 0.04,
+    "stop_max_yaw_rate_rad_s": 0.15,
+    "stop_max_tilt_deg": 15,
+    "simultaneous_flight_fraction": 0.05,
+    "turn_max_xy_excursion_m": 0.2,
+    "minimum_bilateral_step_coverage": 0.6
+  },
+  "boundary": "New exposed physical parameter combinations on flat terrain; exploratory bounds, not calibration or unseen terrain families.",
+  "repeated_windows": 2,
+  "proof_class": "visible_development"
+}

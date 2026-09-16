@@ -1,0 +1,49 @@
+{
+  "schema": "microduck.recovery-readiness.v1",
+  "status": "blocked_recovery_artifact_and_full_cad_admission",
+  "default_preview_blockers": [
+    "missing_verified_actor",
+    "missing_verified_training_source_freeze",
+    "missing_verified_reconciled_full_cad",
+    "missing_verified_actual_surface_audit",
+    "missing_verified_internal_load_audit",
+    "missing_verified_task_safety_transition_endurance_receipt"
+  ],
+  "published_candidates": [
+    {
+      "file": "velstand.onnx",
+      "weights_available_locally": false,
+      "missing_training_fields": [
+        "commit",
+        "run",
+        "checkpoint"
+      ],
+      "training_branch": "protective_fall",
+      "source_bound_actor_admitted": false
+    },
+    {
+      "file": "alpha_sitstand.onnx",
+      "weights_available_locally": false,
+      "missing_training_fields": [
+        "commit",
+        "run",
+        "checkpoint"
+      ],
+      "training_branch": null,
+      "source_bound_actor_admitted": false
+    }
+  ],
+  "deployable_contact_sources": [],
+  "physical_authority": false,
+  "actuator_commands_issued": 0,
+  "recovery_physics_runs": 0,
+  "synthetic_protocol_tests": 16,
+  "synthetic_protocol_tests_passed": true,
+  "receipt_verifier_implemented": false,
+  "unimplemented": [
+    "source-bound recovery artifact/evaluator verifier",
+    "reconciled full-CAD admission",
+    "deployable contact sensing",
+    "physical and continuous-state recovery evaluation"
+  ]
+}

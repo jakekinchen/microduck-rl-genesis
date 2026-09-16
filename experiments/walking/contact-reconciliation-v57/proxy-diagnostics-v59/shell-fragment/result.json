@@ -1,0 +1,634 @@
+{
+  "case": "shell-fragment",
+  "physics_steps": 0,
+  "model_admitted": false,
+  "physical_acceptance": false,
+  "compile_success": true,
+  "inspection_complete": true,
+  "model_sha256": "4aededf5b5065e855eaca167952a653c35c58a5fee694d898db820e91410bed4",
+  "physical_arrays": {
+    "body_mass": {
+      "exact": true,
+      "reference_shape": [
+        16
+      ],
+      "candidate_shape": [
+        16
+      ]
+    },
+    "body_inertia": {
+      "exact": true,
+      "reference_shape": [
+        16,
+        3
+      ],
+      "candidate_shape": [
+        16,
+        3
+      ]
+    },
+    "body_ipos": {
+      "exact": true,
+      "reference_shape": [
+        16,
+        3
+      ],
+      "candidate_shape": [
+        16,
+        3
+      ]
+    },
+    "body_iquat": {
+      "exact": true,
+      "reference_shape": [
+        16,
+        4
+      ],
+      "candidate_shape": [
+        16,
+        4
+      ]
+    },
+    "body_pos": {
+      "exact": true,
+      "reference_shape": [
+        16,
+        3
+      ],
+      "candidate_shape": [
+        16,
+        3
+      ]
+    },
+    "body_quat": {
+      "exact": true,
+      "reference_shape": [
+        16,
+        4
+      ],
+      "candidate_shape": [
+        16,
+        4
+      ]
+    },
+    "body_parentid": {
+      "exact": true,
+      "reference_shape": [
+        16
+      ],
+      "candidate_shape": [
+        16
+      ]
+    },
+    "body_rootid": {
+      "exact": true,
+      "reference_shape": [
+        16
+      ],
+      "candidate_shape": [
+        16
+      ]
+    },
+    "body_weldid": {
+      "exact": true,
+      "reference_shape": [
+        16
+      ],
+      "candidate_shape": [
+        16
+      ]
+    },
+    "qpos0": {
+      "exact": true,
+      "reference_shape": [
+        21
+      ],
+      "candidate_shape": [
+        21
+      ]
+    },
+    "jnt_qposadr": {
+      "exact": true,
+      "reference_shape": [
+        15
+      ],
+      "candidate_shape": [
+        15
+      ]
+    },
+    "jnt_dofadr": {
+      "exact": true,
+      "reference_shape": [
+        15
+      ],
+      "candidate_shape": [
+        15
+      ]
+    },
+    "jnt_type": {
+      "exact": true,
+      "reference_shape": [
+        15
+      ],
+      "candidate_shape": [
+        15
+      ]
+    },
+    "jnt_limited": {
+      "exact": true,
+      "reference_shape": [
+        15
+      ],
+      "candidate_shape": [
+        15
+      ]
+    },
+    "jnt_range": {
+      "exact": true,
+      "reference_shape": [
+        15,
+        2
+      ],
+      "candidate_shape": [
+        15,
+        2
+      ]
+    },
+    "jnt_axis": {
+      "exact": true,
+      "reference_shape": [
+        15,
+        3
+      ],
+      "candidate_shape": [
+        15,
+        3
+      ]
+    },
+    "jnt_pos": {
+      "exact": true,
+      "reference_shape": [
+        15,
+        3
+      ],
+      "candidate_shape": [
+        15,
+        3
+      ]
+    },
+    "jnt_stiffness": {
+      "exact": true,
+      "reference_shape": [
+        15
+      ],
+      "candidate_shape": [
+        15
+      ]
+    },
+    "jnt_margin": {
+      "exact": true,
+      "reference_shape": [
+        15
+      ],
+      "candidate_shape": [
+        15
+      ]
+    },
+    "jnt_solref": {
+      "exact": true,
+      "reference_shape": [
+        15,
+        2
+      ],
+      "candidate_shape": [
+        15,
+        2
+      ]
+    },
+    "jnt_solimp": {
+      "exact": true,
+      "reference_shape": [
+        15,
+        5
+      ],
+      "candidate_shape": [
+        15,
+        5
+      ]
+    },
+    "dof_damping": {
+      "exact": true,
+      "reference_shape": [
+        20
+      ],
+      "candidate_shape": [
+        20
+      ]
+    },
+    "dof_armature": {
+      "exact": true,
+      "reference_shape": [
+        20
+      ],
+      "candidate_shape": [
+        20
+      ]
+    },
+    "dof_frictionloss": {
+      "exact": true,
+      "reference_shape": [
+        20
+      ],
+      "candidate_shape": [
+        20
+      ]
+    },
+    "dof_solref": {
+      "exact": true,
+      "reference_shape": [
+        20,
+        2
+      ],
+      "candidate_shape": [
+        20,
+        2
+      ]
+    },
+    "dof_solimp": {
+      "exact": true,
+      "reference_shape": [
+        20,
+        5
+      ],
+      "candidate_shape": [
+        20,
+        5
+      ]
+    },
+    "actuator_acc0": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_actadr": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_actearly": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_actlimited": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_actnum": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_actrange": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        2
+      ],
+      "candidate_shape": [
+        14,
+        2
+      ]
+    },
+    "actuator_armature": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_biasprm": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        10
+      ],
+      "candidate_shape": [
+        14,
+        10
+      ]
+    },
+    "actuator_biastype": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_cranklength": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_ctrladr": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_ctrllimited": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_ctrlnum": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_ctrlrange": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        2
+      ],
+      "candidate_shape": [
+        14,
+        2
+      ]
+    },
+    "actuator_ctrlspec": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_damping": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_dampingpoly": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        2
+      ],
+      "candidate_shape": [
+        14,
+        2
+      ]
+    },
+    "actuator_delay": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_dynprm": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        10
+      ],
+      "candidate_shape": [
+        14,
+        10
+      ]
+    },
+    "actuator_dyntype": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_forcelimited": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_forcerange": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        2
+      ],
+      "candidate_shape": [
+        14,
+        2
+      ]
+    },
+    "actuator_gainprm": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        10
+      ],
+      "candidate_shape": [
+        14,
+        10
+      ]
+    },
+    "actuator_gaintype": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_gear": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        6
+      ],
+      "candidate_shape": [
+        14,
+        6
+      ]
+    },
+    "actuator_group": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_history": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        2
+      ],
+      "candidate_shape": [
+        14,
+        2
+      ]
+    },
+    "actuator_historyadr": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_length0": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_lengthrange": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        2
+      ],
+      "candidate_shape": [
+        14,
+        2
+      ]
+    },
+    "actuator_outadr": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_outnum": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_plugin": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_trnid": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        2
+      ],
+      "candidate_shape": [
+        14,
+        2
+      ]
+    },
+    "actuator_trntype": {
+      "exact": true,
+      "reference_shape": [
+        14
+      ],
+      "candidate_shape": [
+        14
+      ]
+    },
+    "actuator_user": {
+      "exact": true,
+      "reference_shape": [
+        14,
+        0
+      ],
+      "candidate_shape": [
+        14,
+        0
+      ]
+    }
+  },
+  "orders_equal": {
+    "body": true,
+    "joint": true,
+    "actuator": true
+  },
+  "active_robot_colliders": 322,
+  "explicit_excludes": 0,
+  "contact_properties_equal": true,
+  "all_geoms_unique_named": true,
+  "power_support_leg_coverage": true,
+  "compiled_proxy_geoms": 256,
+  "maximum_world_vertex_error_m": 3.739259719311803e-09,
+  "sampled_poses": 201,
+  "poses_over_1mm": 0,
+  "maximum_penetration_m": 0.0,
+  "compiler_compatibility_passed": true,
+  "material_gates_passed": false
+}

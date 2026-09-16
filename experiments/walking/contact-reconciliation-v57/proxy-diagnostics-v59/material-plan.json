@@ -1,0 +1,35 @@
+{
+  "id": "v59-v58-material-regression",
+  "attempt_marker": "material-attempt-started.json",
+  "process_report": "material-process.json",
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material-bank.json": "bcaf74ee46c3833fb90d3f94375e2d0d64554c2651216bb7cd151634a6e88150",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/run_geometry_v59.py": "2820ea84df3ce3b981043e0d0c2fd439bb8db5195cdb8768aa982f5edc8eb9d8",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/seeed_bearing__configuration__22x16x4/parts.npz": "6201d6cb132027cf297fc7cebe678b9c1c0c0c49d04710e044c6358700ccd355",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/seeed_bearing__configuration__22x16x4/complete.json": "e4f0d2f4cd281bff536998e97cd5357b8d73f9a15ce430404b3633b8b2df8094",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/neck_pitch/parts.npz": "b7f6b85c5d4446eff90c338b26ac20a4a0b554050dcd0b006276540d205fad8c",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/neck_pitch/complete.json": "2243d33a76f4bd32285cf745679e8cc5340277928c68e18c970a0bddd38fec2c",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/bottom_head_shell/parts.npz": "82b0d4474a4715eb941a730e90e0997d1fd6707b69e6f4d9e006df14a3a13640",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/bottom_head_shell/complete.json": "cb48b01388df8f7c9603de4988ab86d57ec3c32f7921223f8879e3627962c481",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/jaw/parts.npz": "9f4ac4b5106a1ede7efd0238e118ab21545ca12280a898e355de55411f34806a",
+    "experiments/walking/contact-reconciliation-v57/proxy-experiment-v58/outputs/jaw/complete.json": "f8490901a8405f97c54155aae9594c074fda676ac2a2ba2338f392bf9e947cc1",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py": "0a597e950e9a86472369b1d0bc2559117cbb2422d1feb88bc96d20f2e979f05e",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/shell-fragment/local-cavity-witnesses.json": "6cc87434412b370a8a1a9e4c2dd153165e39899cbb1c4c4d97eff6f48ab20ddd"
+  },
+  "steps": [
+    {
+      "id": "material-regression",
+      "script": "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material-bank.json"
+      ],
+      "wall_seconds": 360,
+      "log": "material-regression.log"
+    }
+  ]
+}

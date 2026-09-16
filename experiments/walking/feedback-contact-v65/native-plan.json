@@ -1,0 +1,90 @@
+{
+  "input_sha256": {
+    "experiments/walking/feedback-contact-v65/feedback-bank.json": "c3a4af263929345987883ee57e6acbffc8d3030034372e3777995e7964f01ce4",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/run_geometry_v59.py": "2820ea84df3ce3b981043e0d0c2fd439bb8db5195cdb8768aa982f5edc8eb9d8"
+  },
+  "attempt_marker": "native-attempt.json",
+  "process_report": "native-processes.json",
+  "steps": [
+    {
+      "id": "v11-native-dt2500us-r1",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v11-native-dt2500us-r1"
+      ],
+      "wall_seconds": 240,
+      "log": "v11-native-dt2500us-r1.log"
+    },
+    {
+      "id": "v11-native-dt2500us-r2",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v11-native-dt2500us-r2"
+      ],
+      "wall_seconds": 240,
+      "log": "v11-native-dt2500us-r2.log"
+    },
+    {
+      "id": "v62-native-dt2500us-r1",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v62-native-dt2500us-r1"
+      ],
+      "wall_seconds": 240,
+      "log": "v62-native-dt2500us-r1.log"
+    },
+    {
+      "id": "v62-native-dt2500us-r2",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v62-native-dt2500us-r2"
+      ],
+      "wall_seconds": 240,
+      "log": "v62-native-dt2500us-r2.log"
+    },
+    {
+      "id": "v11-native-dt1250us-r1",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v11-native-dt1250us-r1"
+      ],
+      "wall_seconds": 240,
+      "log": "v11-native-dt1250us-r1.log"
+    },
+    {
+      "id": "v11-native-dt1250us-r2",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v11-native-dt1250us-r2"
+      ],
+      "wall_seconds": 240,
+      "log": "v11-native-dt1250us-r2.log"
+    },
+    {
+      "id": "v62-native-dt1250us-r1",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v62-native-dt1250us-r1"
+      ],
+      "wall_seconds": 240,
+      "log": "v62-native-dt1250us-r1.log"
+    },
+    {
+      "id": "v62-native-dt1250us-r2",
+      "script": "experiments/walking/feedback-contact-v65/probe_feedback_v65.py",
+      "args": [
+        "experiments/walking/feedback-contact-v65/feedback-bank.json",
+        "v62-native-dt1250us-r2"
+      ],
+      "wall_seconds": 240,
+      "log": "v62-native-dt1250us-r2.log"
+    }
+  ]
+}

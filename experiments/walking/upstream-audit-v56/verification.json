@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "both_runs_no_physics_steps": true,
+    "both_source_manifests_verified": true,
+    "collision_editor_reproduces_across_versions": true,
+    "same_actuator_and_joint_order": true,
+    "same_bam_parameters": true,
+    "local_support_leg_pairs_preserved": true,
+    "upstream_support_leg_gap_detected": true,
+    "unnamed_editor_masks_unchanged": true,
+    "physical_transfer_not_claimed": true,
+    "q_and_negative_q_aligned": true,
+    "mesh_order_distinguished_from_vertex_set": true
+  },
+  "checks_passed": 11,
+  "audit_scope": "static compiled-model and selected source-editor execution; no physics or policy",
+  "files": {
+    "audit.py": "0c0480e7ce69d59c9728d6da819d9319aca84ae4e0a02eabe0041d7e24cb40b7",
+    "fetch_assets.py": "1c4eaabd8f0aa6bdaa4627f1f49fbd354e3580521aad938253683de896faf5c8",
+    "audit.json": "f304aff9a980849728544c300af6eb4ec1826f2dc4360085d7a04647d48b5f3d",
+    "audit-mujoco-3.10.json": "75294806592fa211ed3dc6c77eacb0b3f191f3f0d7f6cdb276b74efc64ba7211",
+    "sources.lock.json": "98329bd619818583b3a7adbdf7eee5c83f94171965be24fb591f9b365ad1edc8",
+    "runtime-mujoco-3.10.source.json": "67398941d1d7be0fd89122352d07ad00c39c7d83f78cad7324aad5ba383edbb5"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "integrity_passed": true,
+  "reports": [
+    {
+      "receipt": "receipts/walking/20260916-v56-posture-feasibility",
+      "cases": 12,
+      "verified_actions": 6000,
+      "physics_load_samples": 24000,
+      "manifest_sha256": "fcfc8b15787394a62215654bea35d4087abdb116eeae526c02da6857ffa96a13"
+    },
+    {
+      "receipt": "receipts/walking/20260916-v56-head-diagnostic",
+      "cases": 18,
+      "verified_actions": 9000,
+      "physics_load_samples": 36000,
+      "manifest_sha256": "ab1fc1bf9019dcd304a220ed50305d325e6cf03f4422fcb0a0eb52a1f8f963db"
+    }
+  ],
+  "zero_offset_exact_controls": 3000,
+  "script_sha256": "ee993b978064c53b4fa9d661c548c4b6c1a44e285e4af122489c2879e6a53e49",
+  "training_allowed": false,
+  "decision": "No unchanged or fixed-offset recipe passed every declared25-degree case. Paired training remains unlaunched; this bounded negative does not prove physical or learning infeasibility."
+}

@@ -1,0 +1,832 @@
+{
+  "schema": "v57-original-cad-cavity-audit",
+  "physics_steps": 0,
+  "mesh_repairs_performed": false,
+  "trimesh_version": "5.1.0",
+  "mujoco_version": "3.12.0",
+  "quality": {
+    "seeed_bearing__configuration__22x16x4": {
+      "vertices": 10441,
+      "triangles": 20970,
+      "watertight": true,
+      "winding_consistent": true,
+      "signed_volume_m3": 4.929757080156966e-07,
+      "euler_number": -44,
+      "degenerate_faces": 0
+    },
+    "bottom_head_shell": {
+      "vertices": 10477,
+      "triangles": 20970,
+      "watertight": true,
+      "winding_consistent": true,
+      "signed_volume_m3": 2.3796293442813455e-05,
+      "euler_number": -8,
+      "degenerate_faces": 0
+    },
+    "jaw": {
+      "vertices": 4949,
+      "triangles": 9918,
+      "watertight": true,
+      "winding_consistent": true,
+      "signed_volume_m3": 9.360108180658784e-06,
+      "euler_number": -10,
+      "degenerate_faces": 0
+    },
+    "neck_pitch": {
+      "vertices": 3532,
+      "triangles": 7120,
+      "watertight": true,
+      "winding_consistent": true,
+      "signed_volume_m3": 4.106693078007937e-06,
+      "euler_number": -28,
+      "degenerate_faces": 0
+    }
+  },
+  "results": [
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 3.938542610945692e-09,
+      "convex_hull_penetration_m": 0.004455115575843892,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 0,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        0.018721624285539303,
+        -0.004262020332495495,
+        0.22297100766249137
+      ],
+      "convex_contact_distance_to_cad_a_m": 0.00028211519034922536,
+      "nearest_cad_a_point_world_m": [
+        0.018982264697356054,
+        -0.004369981234463635,
+        0.22297100766249137
+      ],
+      "nearest_cad_a_triangle": 19502,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.0002821151903492254,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        true,
+        true,
+        true
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.004275764483873373,
+      "nearest_cad_b_point_world_m": [
+        0.022997388769412676,
+        -0.0042620203324955225,
+        0.22297100766249137
+      ],
+      "nearest_cad_b_triangle": 4155,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.0022275580474088452,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            6774
+          ],
+          "representative_points_world_m": [
+            [
+              0.0008828933184093744,
+              0.005966468248516322,
+              0.2238653136226619
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            5113
+          ],
+          "representative_points_world_m": [
+            [
+              0.0415167623800284,
+              -0.012351818382740016,
+              0.2316428341008062
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "jaw"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 2.619811771539512e-09,
+      "convex_hull_penetration_m": 0.004284864704228018,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 0,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        0.019491446605156375,
+        0.001858035473706235,
+        0.22305546636010995
+      ],
+      "convex_contact_distance_to_cad_a_m": 0.00024444257457376204,
+      "nearest_cad_a_point_world_m": [
+        0.019730273617530505,
+        0.00191012991126627,
+        0.22305546636010995
+      ],
+      "nearest_cad_a_triangle": 19372,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.00024358350228026113,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        true,
+        true,
+        true
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.02152358140774417,
+      "nearest_cad_b_point_world_m": [
+        0.040991267912454825,
+        0.0019278693674022111,
+        0.22204682192458405
+      ],
+      "nearest_cad_b_triangle": 9537,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.0021424324411563334,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            6774
+          ],
+          "representative_points_world_m": [
+            [
+              0.0008828933184093744,
+              0.005966468248516322,
+              0.2238653136226619
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            9912
+          ],
+          "representative_points_world_m": [
+            [
+              0.05561519181154632,
+              -0.016546424788733312,
+              0.22030970710869477
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 3.938542610945692e-09,
+      "convex_hull_penetration_m": 0.0023396783239922887,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 0,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        0.016907392836896455,
+        1.1994749205349042e-16,
+        0.22192876566899183
+      ],
+      "convex_contact_distance_to_cad_a_m": 1.0004119637835318e-05,
+      "nearest_cad_a_point_world_m": [
+        0.01689738871725862,
+        1.2044450340750914e-17,
+        0.22192876566899183
+      ],
+      "nearest_cad_a_triangle": 3539,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.0005357386846819717,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.006089995932516221,
+      "nearest_cad_b_point_world_m": [
+        0.022997388769412676,
+        1.1741909528018013e-16,
+        0.22192876566899183
+      ],
+      "nearest_cad_b_triangle": 4154,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.0011698394533891932,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            4543
+          ],
+          "representative_points_world_m": [
+            [
+              -0.00010261127529079782,
+              -0.0048333331942558245,
+              0.21663808630611348
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            5113
+          ],
+          "representative_points_world_m": [
+            [
+              0.0415167623800284,
+              -0.012351818382740016,
+              0.2316428341008062
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "jaw"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 2.619811771539512e-09,
+      "convex_hull_penetration_m": 0.002116982965279151,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 0,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        0.016894917267113556,
+        -0.0006972459430389145,
+        0.22203978647296127
+      ],
+      "convex_contact_distance_to_cad_a_m": 2.7971622173967254e-05,
+      "nearest_cad_a_point_world_m": [
+        0.01686694564493959,
+        -0.0006972459377720916,
+        0.22203978647296127
+      ],
+      "nearest_cad_a_triangle": 3540,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.00047270771598613426,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.02410013697719391,
+      "nearest_cad_b_point_world_m": [
+        0.04099493273491878,
+        -0.0007737754867333882,
+        0.22203978647296127
+      ],
+      "nearest_cad_b_triangle": 1374,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.0010584915937725536,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            4543
+          ],
+          "representative_points_world_m": [
+            [
+              -0.00010261127529079782,
+              -0.0048333331942558245,
+              0.21663808630611348
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            9912
+          ],
+          "representative_points_world_m": [
+            [
+              0.05561519181154632,
+              -0.016546424788733312,
+              0.22030970710869477
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 3.938542421702272e-09,
+      "convex_hull_penetration_m": 0.005620862598028088,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 472732,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        2.28544289284323,
+        -0.03334307949933699,
+        0.17735568563962034
+      ],
+      "convex_contact_distance_to_cad_a_m": 0.0004014022657027878,
+      "nearest_cad_a_point_world_m": [
+        2.28561843135934,
+        -0.03370192150650346,
+        0.17739495932248794
+      ],
+      "nearest_cad_a_triangle": 6752,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.0005979863738510005,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        true,
+        true,
+        true
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.01321085555104125,
+      "nearest_cad_b_point_world_m": [
+        2.296701071068524,
+        -0.026772936924773016,
+        0.17520781367232371
+      ],
+      "nearest_cad_b_triangle": 4177,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.0028104314223382776,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            6839
+          ],
+          "representative_points_world_m": [
+            [
+              2.2992377452602812,
+              -0.04646915387664286,
+              0.17819432955333805
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            5113
+          ],
+          "representative_points_world_m": [
+            [
+              2.3254996794502234,
+              -0.03580206697941442,
+              0.18463129172916828
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "jaw"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 2.61981179095438e-09,
+      "convex_hull_penetration_m": 0.0052733046173270275,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 0,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        2.289443105592322,
+        -0.03235123913399601,
+        0.17698326277025456
+      ],
+      "convex_contact_distance_to_cad_a_m": 0.00040251441421267114,
+      "nearest_cad_a_point_world_m": [
+        2.2895327434116295,
+        -0.032742942201272836,
+        0.1770067494065543
+      ],
+      "nearest_cad_a_triangle": 6743,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.0006025530190964246,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        true,
+        true,
+        true
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.02536327100218636,
+      "nearest_cad_b_point_world_m": [
+        2.283115157044099,
+        -0.008791134977119785,
+        0.17004250811254365
+      ],
+      "nearest_cad_b_triangle": 9480,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.0026342106503505214,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            6839
+          ],
+          "representative_points_world_m": [
+            [
+              2.2992377452602812,
+              -0.04646915387664286,
+              0.17819432955333805
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            9912
+          ],
+          "representative_points_world_m": [
+            [
+              2.339262377365456,
+              -0.035105433295253195,
+              0.1721852863314449
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 3.938542421702272e-09,
+      "convex_hull_penetration_m": 0.0032437358885236928,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 54631,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        2.2864858910135646,
+        -0.035785936789985644,
+        0.17670440300688522
+      ],
+      "convex_contact_distance_to_cad_a_m": 0.00017484609706787735,
+      "nearest_cad_a_point_world_m": [
+        2.286408346119788,
+        -0.03563014306318625,
+        0.1766874837338799
+      ],
+      "nearest_cad_a_triangle": 3504,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.0015538307195517992,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        true,
+        true,
+        true
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.01343103733092083,
+      "nearest_cad_b_point_world_m": [
+        2.2979317062704094,
+        -0.029106291414445165,
+        0.17452073303461668
+      ],
+      "nearest_cad_b_triangle": 4154,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.0016218675287125173,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            4543
+          ],
+          "representative_points_world_m": [
+            [
+              2.2842846526377456,
+              -0.052136480544557155,
+              0.17456950324147466
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            5113
+          ],
+          "representative_points_world_m": [
+            [
+              2.3254996794502234,
+              -0.03580206697941442,
+              0.18463129172916828
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "jaw"
+      ],
+      "cad_transform_max_compiled_vertex_error_m": 2.61981179095438e-09,
+      "convex_hull_penetration_m": 0.0028340298316457133,
+      "proper_crossing_witnesses": [],
+      "aabb_triangle_pairs_tested": 0,
+      "edge_pairs_near_coplanar_count": 0,
+      "all_aabb_pairs_tested": true,
+      "classification": "no_proper_crossing_found_tangency_coplanarity_or_containment_unknown",
+      "convex_contact_world_m": [
+        2.2904635527022474,
+        -0.03505381609594933,
+        0.176408246677073
+      ],
+      "convex_contact_distance_to_cad_a_m": 0.00019208904978940125,
+      "nearest_cad_a_point_world_m": [
+        2.2904715632052337,
+        -0.03486436150939017,
+        0.17637757104305185
+      ],
+      "nearest_cad_a_triangle": 3517,
+      "convex_contact_hull_a_maximum_halfspace_value_m": -0.0013949980816744256,
+      "convex_contact_inside_original_cad_a_three_rays": [
+        true,
+        true,
+        true
+      ],
+      "convex_contact_distance_to_cad_b_m": 0.027569636380071174,
+      "nearest_cad_b_point_world_m": [
+        2.3135557581542456,
+        -0.02086532597688914,
+        0.17135635142544908
+      ],
+      "nearest_cad_b_triangle": 9539,
+      "convex_contact_hull_b_maximum_halfspace_value_m": -0.001415845280760386,
+      "convex_contact_inside_original_cad_b_three_rays": [
+        false,
+        false,
+        false
+      ],
+      "local_cavity_witness": true,
+      "surface_component_containment_checks": {
+        "a_in_b": {
+          "components": 1,
+          "representative_triangles": [
+            4543
+          ],
+          "representative_points_world_m": [
+            [
+              2.2842846526377456,
+              -0.052136480544557155,
+              0.17456950324147466
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        },
+        "b_in_a": {
+          "components": 1,
+          "representative_triangles": [
+            9912
+          ],
+          "representative_points_world_m": [
+            [
+              2.339262377365456,
+              -0.035105433295253195,
+              0.1721852863314449
+            ]
+          ],
+          "inside_other_three_rays": [
+            [
+              false
+            ],
+            [
+              false
+            ],
+            [
+              false
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "boundary": "A robust proper-crossing witness proves original triangle intersection. Absence of these conservative witnesses is not proof of clearance, containment absence, manifold Boolean intersection, or physical accuracy."
+}

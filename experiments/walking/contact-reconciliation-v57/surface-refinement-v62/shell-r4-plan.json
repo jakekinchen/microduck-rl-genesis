@@ -1,0 +1,34 @@
+{
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".workspace/geometry-deps-v62/site/manifold3d.cpython-312-darwin.so": "d405628ac45f7d5037117c5b06fe596061b524471d2708b1572b973b887f45a9",
+    ".workspace/geometry-deps-v62/site/manifold3d-3.5.3.dist-info/METADATA": "639bd96e419d61a0fd2d0739cef4e7495710435e7b9937d8f978da1ad2a07c1b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/numerical-scale-diagnosis.json": "a46750e88d3b749f67f7773bf60a77432669d64fda0b0bc4a84d15337195045c",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/complete.json": "748ac96c4737f143ee55edb3ffd18883b1a5214de91a661ab0345762e58a6ae8",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-partition-diagnosis.json": "4af0a5bb35cebc0c31f13e4b6b66c3bef77e93b5339439b96b578f0451383298",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-structure-diagnosis.json": "308b62df1f8ad0a5f29d8a7f1355cbca2c36c86eec4d2e16381cbe54e82aa60e",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-occupancy-diagnosis.json": "3200cbe50710d8e6a0e2b51cbba8ac14474f5949e0565e471b6a1714873dca3d",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r4.py": "f6b4539f1b199055b13c0610aeb312e0b0483a04ebc384f3a0c375e1607fce1b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r4.py": "4324fe88c0185bdcb5e8baa075d65f6017387b64e616ab809fd715c58e1c81e7",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/test_cad_refinement_v62r4.py": "6980cc121212943ce747ab6045c8181d354fcc802348e3b6a41cd5f7445e28e9",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r3-processes.json": "7e452317469edd05f9bbe23daea458c16c21b6afc638f0ba34c3892a67c2b940",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r3-refinement.log": "5380657ea31b593259196782012b150e03ba2ec39b07cd3875e4f29647fa1304",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r4-protocol.json": "d7e419e66b2355de3414b2846fde0f8cfcb031121562d1a408512eb0b8d9384b"
+  },
+  "attempt_marker": "shell-r4-attempt.json",
+  "process_report": "shell-r4-processes.json",
+  "steps": [
+    {
+      "id": "shell-complete-half-partition",
+      "script": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r4.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r4-protocol.json",
+        "bottom_head_shell"
+      ],
+      "wall_seconds": 900,
+      "log": "shell-r4-refinement.log"
+    }
+  ]
+}

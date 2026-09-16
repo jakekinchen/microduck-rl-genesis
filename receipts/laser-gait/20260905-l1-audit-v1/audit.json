@@ -1,0 +1,109 @@
+{
+  "schema": "microduck.laser-gait-audit/v1",
+  "policy_sha256": "8c5fd28e4f65125d469f6946c51fdd9561a3c35b5bbabb71e6af2515270208ad",
+  "policy_path": "receipts/laser-follow/20260904-v2-steering/policy.onnx",
+  "program": "circle",
+  "domain": {
+    "seed": 76031,
+    "randomized": false,
+    "friction_ratio": 1.0,
+    "trunk_mass_ratio": 1.0,
+    "motor_kp_ratio": 1.0,
+    "trunk_com_shift_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sensor_delay_steps": 0,
+    "encoder_bias_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sensor_noise": false,
+    "push_at_s": 23.0,
+    "push_delta_v_m_s": [
+      0.0,
+      0.0
+    ],
+    "route_rotation_rad": 0.0,
+    "visual_palette": 0,
+    "ground": "flat; no obstacles"
+  },
+  "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+  "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+  "diagnostic_data": "50Hz copied-state forward dynamics; never modifies rollout",
+  "gait": {
+    "duration_s": 16.0,
+    "active_s": 15.02,
+    "translation_s": 3.58,
+    "path_length_m": 0.6066177139372145,
+    "qualified_swings_left_right": [
+      3,
+      2
+    ],
+    "swing_events": [
+      {
+        "foot": 1,
+        "land_s": 1.56,
+        "air_s": 0.14,
+        "clearance_m": 0.005108521552793127
+      },
+      {
+        "foot": 0,
+        "land_s": 1.68,
+        "air_s": 0.12,
+        "clearance_m": 0.005719103912183714
+      },
+      {
+        "foot": 1,
+        "land_s": 1.8,
+        "air_s": 0.12,
+        "clearance_m": 0.006507700525551413
+      },
+      {
+        "foot": 0,
+        "land_s": 1.92,
+        "air_s": 0.1,
+        "clearance_m": 0.0067865796178812315
+      },
+      {
+        "foot": 0,
+        "land_s": 2.14,
+        "air_s": 0.12,
+        "clearance_m": 0.00527294753482601
+      }
+    ],
+    "alternating_landing_fraction": 0.75,
+    "both_feet_loaded_active_fraction": 0.7856191744340879,
+    "loaded_slip_over_3cm_s_fraction": 0.037285607755406416,
+    "loaded_slip_p95_m_s": 0.018421502658656844,
+    "backward_translation_fraction": 0.9888268156424581,
+    "target_outside_joint_limits_fraction": 1.0,
+    "max_target_limit_violation_rad": 2.2470287404682145,
+    "max_actual_limit_violation_rad": 0.044849937092694414,
+    "max_abs_servo_velocity_rad_s": 8.495098524678072,
+    "max_abs_actuator_torque_nm": 0.6405236195572269,
+    "nonfoot_contact_frames": 0,
+    "max_tilt_deg": 3.8822727412468523,
+    "fell": false,
+    "rejection_reasons": [
+      "backward_pursuit",
+      "persistent_unreachable_servo_targets"
+    ],
+    "rejection_gate_passed": false,
+    "physical_transfer_validated": false,
+    "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+  }
+}

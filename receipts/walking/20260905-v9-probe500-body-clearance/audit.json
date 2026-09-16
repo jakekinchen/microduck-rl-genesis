@@ -1,0 +1,64 @@
+{
+  "schema": "microduck.full-body-clearance-diagnostic/v1",
+  "cases": [
+    {
+      "trace": "receipts/walking/20260905-v9-probe500-full-bank/trajectory.jsonl",
+      "sha256": "9ae192fffe14e57d11fc3cbc68cda1b3294a482decf2e8de15cbbf58d9cf3445",
+      "frames": 18694,
+      "minimum_nonfoot_floor_clearance_m": 0.012712205271804462,
+      "frames_below_floor_by_1mm": 0,
+      "geometries": [
+        {
+          "name": "",
+          "body": "trunk_base",
+          "minimum_clearance_m": 0.036303131866950195,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l",
+          "minimum_clearance_m": 0.03934289559292266,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg",
+          "minimum_clearance_m": 0.015161677684622607,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.032488955425337945,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.031513101788639274,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.03209456993317908,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l_2",
+          "minimum_clearance_m": 0.012712205271804462,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg_2",
+          "minimum_clearance_m": 0.014169652795112703,
+          "penetrating_frames": 0
+        }
+      ]
+    }
+  ],
+  "boundary": "Static full-collision CAD clearance on copied states, not full-collision dynamics or contact force. Reduced native walk model has only two floor-capable robot geoms, so its non-foot-floor-force rejection alone is vacuous.",
+  "physical_transfer_validated": false
+}

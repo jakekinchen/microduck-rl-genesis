@@ -1,0 +1,48 @@
+{
+  "schema": "microduck.workspace-doctor/v1",
+  "checks": [
+    {
+      "name": "Apple runtime",
+      "passed": true,
+      "observed": "/Users/kelly/Developer/microduck-rl-genesis/.venv-apple/bin/python",
+      "next_step": "./scripts/setup_apple.sh"
+    },
+    {
+      "name": "Pinned packages and MPS availability",
+      "passed": true,
+      "observed": {
+        "python": "3.12.12",
+        "machine": "arm64",
+        "mps": true,
+        "packages": {
+          "genesis-world": "1.3.3",
+          "torch": "2.9.1",
+          "rsl-rl-lib": "5.4.2",
+          "mujoco": "3.12.0",
+          "onnxruntime": "1.23.2"
+        }
+      },
+      "next_step": "./scripts/setup_apple.sh; inspect environment drift"
+    },
+    {
+      "name": "Frozen contract",
+      "passed": true,
+      "observed": "Contract snapshots verified.\n",
+      "next_step": "Resolve drift in the affected versioned lane before training"
+    },
+    {
+      "name": "BAM authority checkout",
+      "passed": true,
+      "observed": {
+        "head": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+        "dirty": "",
+        "path": "/Users/kelly/Developer/microduck-rl-genesis/.workspace/bam"
+      },
+      "next_step": "Use scripts/materialize_bam_authority.py and export BAM_REPO"
+    }
+  ],
+  "ready_for_evaluator_setup": true,
+  "physics_executed": false,
+  "training_executed": false,
+  "boundary": "Availability and contract checks only; no simulator smoke, task acceptance or compute authorization."
+}

@@ -1,0 +1,193 @@
+{
+  "complete": true,
+  "gate_review": {
+    "flat": {
+      "physical_stepping_and_scoring_ast_identical": true,
+      "permitted_difference": "V44/V46 display label only within execution block",
+      "reference_sha256": "0c39984d56b0fc0d34ffe5d4920f990edf83b720d6bf1baddd345568711905e5",
+      "candidate_sha256": "85b9c5697510d87e63dd2ff68f024732c2ede92b492c56b6ec62d77a8b34856f"
+    },
+    "endurance": {
+      "physical_stepping_and_scoring_ast_identical": true,
+      "permitted_difference": "V44/V46 display label only within execution block",
+      "reference_sha256": "88fdeca178a8139d674372829a27e8d2320e249d2df3c67ce174b3d816a097b4",
+      "candidate_sha256": "27e1c73d52e760c02149191a4b078d1b4cd157082a02700af6a54213fd0e9bd4"
+    },
+    "surfaces": {
+      "physical_stepping_and_scoring_ast_identical": true,
+      "permitted_difference": "V44/V46 display label only within execution block",
+      "reference_sha256": "8a5568c83b78b7cd1514f70a9c0372fbbc2a8498578676600b4c4ce162a5f328",
+      "candidate_sha256": "ff828e5066947fd6d07d61076326937fa311747260a7b6dc74f5db6cebc508f1"
+    },
+    "fresh": {
+      "physical_stepping_and_scoring_ast_identical": true,
+      "permitted_difference": "V44/V46 display label only within execution block",
+      "reference_sha256": "e979dd88000aaaaf31b9d433aa74f8464ddd57e8ec37e216af437b90b35928ef",
+      "candidate_sha256": "168909cb170ce734ace7a845f15b05330d9d1bf65c247eb79f1d291f40bddd8d"
+    }
+  },
+  "source_freezes": {
+    "native-retention-endurance-freeze-v46.json": {
+      "files": 111,
+      "sha256": "c72ba33661bfb9df9eeb5d0a05c798e9280d9494d30363113bc712642f8876d2"
+    },
+    "native-retention-flat-freeze-v46.json": {
+      "files": 100,
+      "sha256": "0c5576fb5cfa67b216c9ccc82d93c4059dd65b45aa05f4c9f2f9ad1d2084a331"
+    },
+    "native-retention-freeze-v46.json": {
+      "files": 197,
+      "sha256": "5a26792a3c2b8069d5987af96f0c5d7de8f3276cb7ddf86a5f219403e4fe187c"
+    },
+    "native-retention-fresh-freeze-v46.json": {
+      "files": 112,
+      "sha256": "348a1e8ca8f244685a56b37d4f558b6cc8b75e2455eeac77ea4f8ff8900c1a5f"
+    },
+    "native-retention-surfaces-freeze-v46.json": {
+      "files": 116,
+      "sha256": "cf3bbd49865537ea1393f16a3b4403f3f57ea08e1d62fb6bf2fb5866de7b856a"
+    },
+    "component-endurance-freeze-v45.json": {
+      "files": 107,
+      "sha256": "362239cb424347183d1dc9b5e28cf9757cd518d88b13183db6165032f400bf86"
+    },
+    "component-flat-freeze-v45.json": {
+      "files": 96,
+      "sha256": "6af8903efd0cdb23d0cd357ea49878c334a8dc209becf5d8e649ccd10d7d206a"
+    }
+  },
+  "manifests": {
+    "experiments/walking/retention-replay-v46": {
+      "files": 2,
+      "manifest_sha256": "e15cd4c38cf9c11a571446f36fed24feb44dcf77026038a6020537d81333bf53"
+    },
+    "outputs/walking-retention-v46": {
+      "files": 4,
+      "manifest_sha256": "3ff99aa73306ed007d4f5b474110b8e440d2d5e5ffea3aaa20a362170311b455"
+    },
+    "receipts/walking/20260907-v45-analysis": {
+      "files": 2,
+      "manifest_sha256": "44bd33cd6e6a0e1c28e30a574e26cc9487ca55959d8baed7023c9a17617d7782"
+    },
+    "receipts/walking/20260907-v45-gate-review": {
+      "files": 1,
+      "manifest_sha256": "53a055f6bb7cff13abb51add4ed631a3e29fbd775c2ac4c3a90408891b6088a6"
+    },
+    "receipts/walking/20260907-v45-joint-v44-endurance": {
+      "files": 516,
+      "manifest_sha256": "480845a6a7c2dd974040ddf5afedf59bf63d3ecd9b2b4f7f13acb40b2b213e2e"
+    },
+    "receipts/walking/20260907-v45-joint-v44-flat": {
+      "files": 474,
+      "manifest_sha256": "451dcf23c0178a5e456bcec94a4756be13d332f38f22643888c3ad9e6d3ba6d1"
+    },
+    "receipts/walking/20260907-v45-new-stander-endurance": {
+      "files": 483,
+      "manifest_sha256": "21b17ab27de9560de536aa2c1e9849385738878ac94191f1472fdeace82aee43"
+    },
+    "receipts/walking/20260907-v45-new-stander-flat": {
+      "files": 441,
+      "manifest_sha256": "05ec15f4a56d3524e99e0346367cf38b3d01f709e70001e5d50de1d391fa35db"
+    },
+    "receipts/walking/20260907-v45-new-walker-endurance": {
+      "files": 452,
+      "manifest_sha256": "d4789e70392de6838f0aad75d6ee1b119e8b13f2c617f7d7527a36e7838dfce3"
+    },
+    "receipts/walking/20260907-v45-new-walker-flat": {
+      "files": 410,
+      "manifest_sha256": "fbd5266b68aaf595f219554160343e35c004a00afd44356201443a2f9b8a13de"
+    },
+    "receipts/walking/20260907-v45-original-endurance": {
+      "files": 419,
+      "manifest_sha256": "6fed25cbbfefcbdefb80f1513b2aa95d7efac7c9bbd5906b1b5f8871768a1643"
+    },
+    "receipts/walking/20260907-v45-original-flat": {
+      "files": 377,
+      "manifest_sha256": "d2e1217d1d1f2622ecdf6af80d8dc0db5eb0954ba57be7c3c743fd729df7210e"
+    },
+    "receipts/walking/20260907-v46-replay-parity": {
+      "files": 1,
+      "manifest_sha256": "8e82d04ec6d752376370a985476c19b1ddc40675a513a5e9a7a0fa8b72711562"
+    },
+    "receipts/walking/20260907-v46-retention-conformance": {
+      "files": 25,
+      "manifest_sha256": "30921ddff379414b8bb28aa999d82b067b28559f0a339aa41dcc2d7041486d64"
+    },
+    "receipts/walking/20260907-v46-retention-endurance": {
+      "files": 471,
+      "manifest_sha256": "5b61297f486c7c5ac70fa3207640308592613d0d968abd58ef323d66965e88d4"
+    },
+    "receipts/walking/20260907-v46-retention-flat": {
+      "files": 448,
+      "manifest_sha256": "c81c223b4dbb98f34ef52c89b5fac71250d872146330e9c86e0a1d9ff9f69198"
+    },
+    "receipts/walking/20260907-v46-retention-repeated": {
+      "files": 469,
+      "manifest_sha256": "2c763f82081f5879dc9eb182c8b948a2c23acf2511f1f78c2af2a34bade61a09"
+    },
+    "receipts/walking/20260907-v46-retention-surfaces": {
+      "files": 500,
+      "manifest_sha256": "ab34022fbbc5c8bb913e314d184d9a4ce3e112d11d3e5e69a352c91fe5d0b82a"
+    },
+    "receipts/walking/20260907-v46-retention-verification": {
+      "files": 8,
+      "manifest_sha256": "2cc64a8f3c1deffe9a1a5081044a66cceaddca29e48da39fa17af1ac3a091cc4"
+    }
+  },
+  "decision": "V46 not promoted: retains old passing cases but both required downhill sessions fail. Keep V30.",
+  "fresh_bank_receipts_found": [],
+  "downhill_phase_observations": {
+    "downhill-3deg-start-1": {
+      "phase_changes": [
+        {
+          "time_s": 0.02,
+          "actor": "standing"
+        },
+        {
+          "time_s": 1.02,
+          "actor": "walking"
+        },
+        {
+          "time_s": 13.16,
+          "actor": "standing"
+        }
+      ],
+      "first_load_above_1n_s": 13.745000000000001,
+      "last_row": {
+        "session_time_s": 13.84,
+        "actor_mode": "standing",
+        "fell": true,
+        "tilt_deg": 71.66937481950987
+      }
+    },
+    "downhill-3deg-start-2": {
+      "phase_changes": [
+        {
+          "time_s": 0.02,
+          "actor": "standing"
+        },
+        {
+          "time_s": 1.02,
+          "actor": "walking"
+        },
+        {
+          "time_s": 13.16,
+          "actor": "standing"
+        }
+      ],
+      "first_load_above_1n_s": 13.715000000000002,
+      "last_row": {
+        "session_time_s": 13.780000000000001,
+        "actor_mode": "standing",
+        "fell": true,
+        "tilt_deg": 68.45632486310964
+      }
+    }
+  },
+  "physical_calibration": false,
+  "policy_activated": false,
+  "paid_compute_used": false,
+  "hardware_used": false,
+  "disk_free_bytes": 760741888,
+  "boundary": "Post-evaluation integrity and simulation acceptance review; no new policy execution or physical authority."
+}

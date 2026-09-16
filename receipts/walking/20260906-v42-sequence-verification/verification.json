@@ -1,0 +1,1345 @@
+{
+  "schema": "microduck.sequence-verification/v42",
+  "freezes": {
+    "compatible-patch-freeze-v37.json": {
+      "sha256": "48532545bfe0738e4b44cd6466dc9dcd94961126e6fc12510fff788d3a79b2af",
+      "sources": 168
+    },
+    "contact-patch-freeze-v32.json": {
+      "sha256": "7765f54943e2eacf8c7d4e6fad806d8488985b098b54c349ed36f071e3ebbe07",
+      "sources": 167
+    },
+    "euler-hull-freeze-v39.json": {
+      "sha256": "f32e5f563b81fc9829cbbb22a3486abfac9fe69176769148d00cd9fab65937a1",
+      "sources": 168
+    },
+    "exact-hull-freeze-v34.json": {
+      "sha256": "9e2e54ceea06e25f44072e1930154ad56ebee80f88bf40f1050ee5f8d353067f",
+      "sources": 168
+    },
+    "exact-patch-freeze-v35.json": {
+      "sha256": "5e5cc4300990467b01c4203f178733ff876155e06fcffcea61d284d34ab8db93",
+      "sources": 168
+    },
+    "legacy-collider-freeze-v40.json": {
+      "sha256": "949a02bef89dcd031e5d8d81d76abbd567127550e1efe6009a66dd1fe49a10c1",
+      "sources": 168
+    },
+    "matched-contact-freeze-v31.json": {
+      "sha256": "867093b5c55df03f6eb69d5d5a384ecf0412f3008dd51136e8d487a1a9191754",
+      "sources": 164
+    },
+    "native-standing-endurance-freeze-v41.json": {
+      "sha256": "be9ef01d035f85f7c003db06a868f873757145e02693a735d016b9f2068cada9",
+      "sources": 96
+    },
+    "native-standing-endurance-freeze-v42.json": {
+      "sha256": "2576470b54e0f6514a2e1c741cd53cbd0d5282546a4780a40a928f6bc28a83c5",
+      "sources": 96
+    },
+    "native-standing-flat-freeze-v41.json": {
+      "sha256": "cac497ca4ec192874b05d7c4e49148faee2b32d06b9b2e21fe5ddcb4e7fce60a",
+      "sources": 84
+    },
+    "native-standing-flat-freeze-v42.json": {
+      "sha256": "68a4a3119357eada5f3bb6334ea6fc136caaddcdb84f1395b7a848c836f725e5",
+      "sources": 84
+    },
+    "native-standing-freeze-v41.json": {
+      "sha256": "bc6e3abeee28017ee52aeaec6283fbed354293ab61e6ca7708817f0832ede892",
+      "sources": 170
+    },
+    "native-standing-freeze-v42.json": {
+      "sha256": "5f23583590b3c160941bdb8afdab87c1f67d7d7329f03ca1b5a7625d10a0680e",
+      "sources": 170
+    },
+    "native-standing-surfaces-freeze-v41.json": {
+      "sha256": "ef13f475900b57790ce9d6d8bd787c3a5be77e0cfeae4e263fcfda56439dada2",
+      "sources": 100
+    },
+    "native-standing-surfaces-freeze-v42.json": {
+      "sha256": "8091cccdb26edf5033127ded6428687d4fde9d873d72ea5862ecadbde03c8f5a",
+      "sources": 100
+    },
+    "stopping-endurance-freeze-v38.json": {
+      "sha256": "d125c5d7274767b535ad2d08156e6a80acd1d5276cd5601da27de0670829226a",
+      "sources": 95
+    },
+    "stopping-flat-freeze-v38.json": {
+      "sha256": "03aeefcb061e47681ebf0bdf1a201809e01c2bbefab455c486a947a7ff3d7d48",
+      "sources": 83
+    },
+    "stopping-surfaces-freeze-v38.json": {
+      "sha256": "8464303289fc7069258499686cf8ccf660206ea326742ac3e6f94c24be22fa0b",
+      "sources": 99
+    },
+    "unpruned-patch-freeze-v36.json": {
+      "sha256": "109a69acd8cf94fcd10e289ebeaf3605ec2239493d42b532c3187dfc977c0d16",
+      "sources": 168
+    }
+  },
+  "receipts": {
+    "v31-matched-contact": {
+      "files": 207,
+      "manifest_sha256": "d6fe8d07fbfc901f696f60e4bad51f6fa17eb540f8bec5c13406712884a233e6"
+    },
+    "v32-contact-patch": {
+      "files": 210,
+      "manifest_sha256": "f37d527de100fac24c5d1314bf4c14f032e03efeba6d61a08081e11f54d5a962"
+    },
+    "v34-exact-hull": {
+      "files": 211,
+      "manifest_sha256": "3e1b714337e787bc95821fcf0352aac0cd8abde055165fbd2c7586d04ea85854"
+    },
+    "v35-exact-patch": {
+      "files": 211,
+      "manifest_sha256": "35ad13301c96d536b3dba080faab66e72dbec68de006549b3a9f555375825d25"
+    },
+    "v36-unpruned-patch": {
+      "files": 211,
+      "manifest_sha256": "8143f46234f94952eb21c89e92b1a90567f26b1b90c0532428455a1152a05027"
+    },
+    "v37-compatible-patch": {
+      "files": 211,
+      "manifest_sha256": "e3135c3fa2e12aa7252de9b7473278bda2b61941e423c1bc44b0dc8e148b6161"
+    },
+    "v39-euler-hull": {
+      "files": 211,
+      "manifest_sha256": "48ee95a4f57c9b3bc87ceee1c2f6767d5d2cc612801e07532c330e5a67873ccb"
+    },
+    "v40-legacy-collider": {
+      "files": 211,
+      "manifest_sha256": "6479171c7d7763754e182faab1c5ce4f25bf3da21a7463d4cc57657a3c8d05c3"
+    },
+    "v33-geometry-audit": {
+      "files": 15,
+      "manifest_sha256": "a82dc9326cb2f0047c015207451f8ae7459c67388a64bf5471e118d4d1b6427e"
+    },
+    "v38-stopping-endurance": {
+      "files": 407,
+      "manifest_sha256": "bcff82c3b80b01425729c27bbeba955148890ccbb98b6e11d894fb88ccd2ed5e"
+    },
+    "v41-native-standing-endurance": {
+      "files": 460,
+      "manifest_sha256": "59588d953cc4629d130e596cbf0b47159a9732b818f41629fd4c83cfe7b67aba"
+    },
+    "v42-native-standing-endurance": {
+      "files": 460,
+      "manifest_sha256": "4f8b570a5ab6dd73ed84031db43e11d9323227dd5788d8130b1ca59e8a1ee63e"
+    },
+    "v42-native-standing-flat": {
+      "files": 436,
+      "manifest_sha256": "57983cc1d9749310f8348d648b8564347c8306c81a5dee1803502164a67296da"
+    },
+    "v42-native-standing-repeated": {
+      "files": 457,
+      "manifest_sha256": "f91d2473e1a0a58ccdfa2de19442907a64bfaaee675cf16c8bacd64ca091238c"
+    },
+    "v42-native-standing-surfaces": {
+      "files": 488,
+      "manifest_sha256": "f445edf669b742bb830ecaf4bd9d80d98cbea4e394dad7263fee3e48df6f21ae"
+    }
+  },
+  "probes": {
+    "v31-matched-contact": {
+      "passed_cases": 0,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.004112074343780069,
+          "max_joint_error_deg": 2.2386373912269457,
+          "max_physics_base_error_m": 0.004112074343780069,
+          "max_physics_joint_error_deg": 2.2414141112282913,
+          "first_threshold_divergence_s": 0.72,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.005391037686167742,
+          "max_joint_error_deg": 2.8916901058398157,
+          "max_physics_base_error_m": 0.005391037686167742,
+          "max_physics_joint_error_deg": 2.892197022194759,
+          "first_threshold_divergence_s": 0.66,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.0029023294408207726,
+          "max_joint_error_deg": 2.079548196465572,
+          "max_physics_base_error_m": 0.0029256306033830447,
+          "max_physics_joint_error_deg": 2.0810103270220632,
+          "first_threshold_divergence_s": 0.24,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.012435457677821084,
+          "max_joint_error_deg": 1.3069626741848144,
+          "max_physics_base_error_m": 0.012435982395511224,
+          "max_physics_joint_error_deg": 1.3069626741848144,
+          "first_threshold_divergence_s": 0.1,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.010680283779911932,
+          "max_joint_error_deg": 1.3960361233498195,
+          "max_physics_base_error_m": 0.010763941142273095,
+          "max_physics_joint_error_deg": 1.4018928109221689,
+          "first_threshold_divergence_s": 0.1,
+          "passed": false
+        }
+      ]
+    },
+    "v32-contact-patch": {
+      "passed_cases": 2,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.0014312256967047067,
+          "max_joint_error_deg": 1.0416252112794602,
+          "max_physics_base_error_m": 0.0014312256967047067,
+          "max_physics_joint_error_deg": 1.0416252112794602,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        {
+          "max_base_error_m": 0.0016437831397356694,
+          "max_joint_error_deg": 0.9338065450817498,
+          "max_physics_base_error_m": 0.0016437831397356694,
+          "max_physics_joint_error_deg": 0.9347268409467955,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        {
+          "max_base_error_m": 0.007407497357893627,
+          "max_joint_error_deg": 3.5806238561996158,
+          "max_physics_base_error_m": 0.007407497357893627,
+          "max_physics_joint_error_deg": 3.5806238561996158,
+          "first_threshold_divergence_s": 0.2,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.014595758739321984,
+          "max_joint_error_deg": 1.4350684460296863,
+          "max_physics_base_error_m": 0.014595758739321984,
+          "max_physics_joint_error_deg": 1.4350684460296863,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.015750668876634358,
+          "max_joint_error_deg": 1.9447712976487375,
+          "max_physics_base_error_m": 0.015750668876634358,
+          "max_physics_joint_error_deg": 1.9479194769562242,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      ]
+    },
+    "v34-exact-hull": {
+      "passed_cases": 2,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.0008015218003399875,
+          "max_joint_error_deg": 1.3807859403387288,
+          "max_physics_base_error_m": 0.0008015218003399875,
+          "max_physics_joint_error_deg": 1.390793222772468,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        {
+          "max_base_error_m": 0.0009985537837332414,
+          "max_joint_error_deg": 1.490910168248634,
+          "max_physics_base_error_m": 0.001035544013555771,
+          "max_physics_joint_error_deg": 1.4963912278131093,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        {
+          "max_base_error_m": 0.005317449615696229,
+          "max_joint_error_deg": 2.7210735774574837,
+          "max_physics_base_error_m": 0.005317449615696229,
+          "max_physics_joint_error_deg": 2.7210735774574837,
+          "first_threshold_divergence_s": 0.64,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.008098689232314882,
+          "max_joint_error_deg": 1.1526117114433392,
+          "max_physics_base_error_m": 0.008110342323166009,
+          "max_physics_joint_error_deg": 1.1587824502199435,
+          "first_threshold_divergence_s": 0.12,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.007988909592138774,
+          "max_joint_error_deg": 3.424045326223539,
+          "max_physics_base_error_m": 0.008002874859083717,
+          "max_physics_joint_error_deg": 3.4305944418270506,
+          "first_threshold_divergence_s": 0.48,
+          "passed": false
+        }
+      ]
+    },
+    "v35-exact-patch": {
+      "passed_cases": 0,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.004842589460275981,
+          "max_joint_error_deg": 2.8084000893857137,
+          "max_physics_base_error_m": 0.004842589460275981,
+          "max_physics_joint_error_deg": 2.8084000893857137,
+          "first_threshold_divergence_s": 0.68,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.005384197711746265,
+          "max_joint_error_deg": 2.961952245054758,
+          "max_physics_base_error_m": 0.005384197711746265,
+          "max_physics_joint_error_deg": 2.961952245054758,
+          "first_threshold_divergence_s": 0.66,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.00870263235711891,
+          "max_joint_error_deg": 4.472684127843716,
+          "max_physics_base_error_m": 0.00870263235711891,
+          "max_physics_joint_error_deg": 4.472684127843716,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.014862406528553189,
+          "max_joint_error_deg": 1.6338645169174926,
+          "max_physics_base_error_m": 0.014862406528553189,
+          "max_physics_joint_error_deg": 1.6338645169174926,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.016474676095048244,
+          "max_joint_error_deg": 1.9857543360860088,
+          "max_physics_base_error_m": 0.016474676095048244,
+          "max_physics_joint_error_deg": 1.9857543360860088,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      ]
+    },
+    "v36-unpruned-patch": {
+      "passed_cases": 0,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.004842589460275981,
+          "max_joint_error_deg": 2.8084000893857137,
+          "max_physics_base_error_m": 0.004842589460275981,
+          "max_physics_joint_error_deg": 2.8084000893857137,
+          "first_threshold_divergence_s": 0.68,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.005384197711746265,
+          "max_joint_error_deg": 2.961952245054758,
+          "max_physics_base_error_m": 0.005384197711746265,
+          "max_physics_joint_error_deg": 2.961952245054758,
+          "first_threshold_divergence_s": 0.66,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.00870263235711891,
+          "max_joint_error_deg": 4.472684127843716,
+          "max_physics_base_error_m": 0.00870263235711891,
+          "max_physics_joint_error_deg": 4.472684127843716,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.014862406528553189,
+          "max_joint_error_deg": 1.6338645169174926,
+          "max_physics_base_error_m": 0.014862406528553189,
+          "max_physics_joint_error_deg": 1.6338645169174926,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.016474676095048244,
+          "max_joint_error_deg": 1.9857543360860088,
+          "max_physics_base_error_m": 0.016474676095048244,
+          "max_physics_joint_error_deg": 1.9857543360860088,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      ]
+    },
+    "v37-compatible-patch": {
+      "passed_cases": 0,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.0020081777941544907,
+          "max_joint_error_deg": 1.837035518243918,
+          "max_physics_base_error_m": 0.0020081777941544907,
+          "max_physics_joint_error_deg": 1.837035518243918,
+          "first_threshold_divergence_s": 0.04,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.002008177241528334,
+          "max_joint_error_deg": 1.8586324807527608,
+          "max_physics_base_error_m": 0.002008177241528334,
+          "max_physics_joint_error_deg": 1.860160521165256,
+          "first_threshold_divergence_s": 0.04,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.00427640144712462,
+          "max_joint_error_deg": 2.2216736090935854,
+          "max_physics_base_error_m": 0.00427640144712462,
+          "max_physics_joint_error_deg": 2.2216736090935854,
+          "first_threshold_divergence_s": 0.04,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.012564830625252649,
+          "max_joint_error_deg": 2.212578036691819,
+          "max_physics_base_error_m": 0.012564830625252649,
+          "max_physics_joint_error_deg": 2.3518332225451566,
+          "first_threshold_divergence_s": 0.04,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.009666119058993354,
+          "max_joint_error_deg": 2.037912624148445,
+          "max_physics_base_error_m": 0.009675484045930724,
+          "max_physics_joint_error_deg": 2.05528844571418,
+          "first_threshold_divergence_s": 0.12,
+          "passed": false
+        }
+      ]
+    },
+    "v39-euler-hull": {
+      "passed_cases": 2,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.0007976812691478655,
+          "max_joint_error_deg": 1.3590170845716363,
+          "max_physics_base_error_m": 0.0007976812691478655,
+          "max_physics_joint_error_deg": 1.3621728091594105,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        {
+          "max_base_error_m": 0.0010479061541425856,
+          "max_joint_error_deg": 1.545177728751678,
+          "max_physics_base_error_m": 0.0010479061541425856,
+          "max_physics_joint_error_deg": 1.5536948074022237,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        {
+          "max_base_error_m": 0.005511773585805057,
+          "max_joint_error_deg": 2.829654802240469,
+          "max_physics_base_error_m": 0.005511773585805057,
+          "max_physics_joint_error_deg": 2.829654802240469,
+          "first_threshold_divergence_s": 0.62,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.008757564121754309,
+          "max_joint_error_deg": 1.2231910862238375,
+          "max_physics_base_error_m": 0.008774937132251274,
+          "max_physics_joint_error_deg": 1.227407830771612,
+          "first_threshold_divergence_s": 0.12,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.008061365866166612,
+          "max_joint_error_deg": 3.593023956423157,
+          "max_physics_base_error_m": 0.008072185931009694,
+          "max_physics_joint_error_deg": 3.593931061254251,
+          "first_threshold_divergence_s": 0.5,
+          "passed": false
+        }
+      ]
+    },
+    "v40-legacy-collider": {
+      "passed_cases": 0,
+      "total_cases": 5,
+      "controls": 211,
+      "physics_steps_per_lane": 844,
+      "comparisons": [
+        {
+          "max_base_error_m": 0.0028362760320933414,
+          "max_joint_error_deg": 1.8322376985265316,
+          "max_physics_base_error_m": 0.0028362760320933414,
+          "max_physics_joint_error_deg": 1.8322376985265316,
+          "first_threshold_divergence_s": 0.84,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.0035460213344584795,
+          "max_joint_error_deg": 2.413639803498696,
+          "max_physics_base_error_m": 0.0035460213344584795,
+          "max_physics_joint_error_deg": 2.413639803498696,
+          "first_threshold_divergence_s": 0.78,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.003871109247350557,
+          "max_joint_error_deg": 2.049719819748769,
+          "max_physics_base_error_m": 0.003871109247350557,
+          "max_physics_joint_error_deg": 2.049719819748769,
+          "first_threshold_divergence_s": 0.72,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.005817992254154437,
+          "max_joint_error_deg": 2.244414069573971,
+          "max_physics_base_error_m": 0.005831882389847378,
+          "max_physics_joint_error_deg": 2.2494988353420515,
+          "first_threshold_divergence_s": 0.12,
+          "passed": false
+        },
+        {
+          "max_base_error_m": 0.06446520901796222,
+          "max_joint_error_deg": 4.617169674958788,
+          "max_physics_base_error_m": 0.06446520901796222,
+          "max_physics_joint_error_deg": 4.61948530970306,
+          "first_threshold_divergence_s": 0.12,
+          "passed": false
+        }
+      ]
+    }
+  },
+  "training": {
+    "standing-native-20260906-v41-smoke": {
+      "checkpoint_sha256": "3d161e058d37ce759266d45e6db61c8a520c739bdcd516223795819822495c41",
+      "transitions": 960,
+      "elapsed_s": 9.564520375002758,
+      "finite_scalar_samples": 56,
+      "coverage": {
+        "reset_counts_home_handoff": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "ground_contact_samples": [
+          536,
+          566,
+          355,
+          550,
+          545,
+          582,
+          200,
+          547
+        ],
+        "falls": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "control_steps": 120,
+        "templates": [
+          {
+            "id": "flat-forward10",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.1,
+              0,
+              0
+            ],
+            "steps": 656,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2a8a77ccb34a887738a1d9df4236ba8dfa625c71ebcd8f93f0fd5b04188116c",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-forward20",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.2,
+              0,
+              0
+            ],
+            "steps": 663,
+            "handoff_available": true,
+            "action_bytes_sha256": "f000ce39a31bb7e6f783a507f10f2b2021f3bac85fc7f8a4492c1eb5c8be6163",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "4a4d16d40f81c5e3dcc3af97349b10651094d4b18266f30accadd5e8ba820341",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              -0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2cd565bdfbfcfacea25a184afba3a4b211ee9a27111e4765b73e9de6f0f6301",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "edbbfdde4b5a3d08693deb18a9615441af1fa7922d69e176ffe2adeea4be833a",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              -0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "292f63f35b647b93ebeb48440a4cc0b42426893448d239e48a354ed0517e7ddf",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "downhill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": 3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "0129e128af68e425c67a4fdb77e3e8a4bb51997292e525557d925a0d775cd128",
+            "v30_prefix_action_bytes_identical": true,
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "uphill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": -3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "cba1726fad7808f56d98c12ce5b30a6cea2da62714f42b2a055ef013848e9881",
+            "exact_reset_continuation": true
+          }
+        ]
+      }
+    },
+    "standing-native-20260906-v41": {
+      "checkpoint_sha256": "caf6340620976d54b8a7be98930a25099cf6940292dee735039a6affa36c28f8",
+      "transitions": 384000,
+      "elapsed_s": 333.1614918330015,
+      "finite_scalar_samples": 2996,
+      "coverage": {
+        "reset_counts_home_handoff": [
+          [
+            167,
+            161
+          ],
+          [
+            159,
+            169
+          ],
+          [
+            197,
+            162
+          ],
+          [
+            153,
+            175
+          ],
+          [
+            175,
+            153
+          ],
+          [
+            170,
+            158
+          ],
+          [
+            275,
+            251
+          ],
+          [
+            257,
+            241
+          ]
+        ],
+        "ground_contact_samples": [
+          209308,
+          204604,
+          201654,
+          203034,
+          206319,
+          202856,
+          179880,
+          152227
+        ],
+        "falls": [
+          0,
+          1,
+          48,
+          0,
+          1,
+          0,
+          270,
+          266
+        ],
+        "control_steps": 6000,
+        "templates": [
+          {
+            "id": "flat-forward10",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.1,
+              0,
+              0
+            ],
+            "steps": 656,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2a8a77ccb34a887738a1d9df4236ba8dfa625c71ebcd8f93f0fd5b04188116c",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-forward20",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.2,
+              0,
+              0
+            ],
+            "steps": 663,
+            "handoff_available": true,
+            "action_bytes_sha256": "f000ce39a31bb7e6f783a507f10f2b2021f3bac85fc7f8a4492c1eb5c8be6163",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "4a4d16d40f81c5e3dcc3af97349b10651094d4b18266f30accadd5e8ba820341",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              -0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2cd565bdfbfcfacea25a184afba3a4b211ee9a27111e4765b73e9de6f0f6301",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "edbbfdde4b5a3d08693deb18a9615441af1fa7922d69e176ffe2adeea4be833a",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              -0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "292f63f35b647b93ebeb48440a4cc0b42426893448d239e48a354ed0517e7ddf",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "downhill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": 3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "0129e128af68e425c67a4fdb77e3e8a4bb51997292e525557d925a0d775cd128",
+            "v30_prefix_action_bytes_identical": true,
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "uphill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": -3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "cba1726fad7808f56d98c12ce5b30a6cea2da62714f42b2a055ef013848e9881",
+            "exact_reset_continuation": true
+          }
+        ]
+      }
+    },
+    "standing-native-20260906-v42-smoke": {
+      "checkpoint_sha256": "e299e4a91667094dd047e63fb905ead700e7cc242f1f1be6255d37eb53ffbd48",
+      "transitions": 960,
+      "elapsed_s": 8.295826333007426,
+      "finite_scalar_samples": 56,
+      "coverage": {
+        "reset_counts_home_handoff": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "ground_contact_samples": [
+          555,
+          566,
+          365,
+          557,
+          564,
+          578,
+          195,
+          560
+        ],
+        "falls": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "control_steps": 120,
+        "templates": [
+          {
+            "id": "flat-forward10",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.1,
+              0,
+              0
+            ],
+            "steps": 656,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2a8a77ccb34a887738a1d9df4236ba8dfa625c71ebcd8f93f0fd5b04188116c",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-forward20",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.2,
+              0,
+              0
+            ],
+            "steps": 663,
+            "handoff_available": true,
+            "action_bytes_sha256": "f000ce39a31bb7e6f783a507f10f2b2021f3bac85fc7f8a4492c1eb5c8be6163",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "4a4d16d40f81c5e3dcc3af97349b10651094d4b18266f30accadd5e8ba820341",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              -0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2cd565bdfbfcfacea25a184afba3a4b211ee9a27111e4765b73e9de6f0f6301",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "edbbfdde4b5a3d08693deb18a9615441af1fa7922d69e176ffe2adeea4be833a",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              -0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "292f63f35b647b93ebeb48440a4cc0b42426893448d239e48a354ed0517e7ddf",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "downhill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": 3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "0129e128af68e425c67a4fdb77e3e8a4bb51997292e525557d925a0d775cd128",
+            "v30_prefix_action_bytes_identical": true,
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "uphill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": -3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "cba1726fad7808f56d98c12ce5b30a6cea2da62714f42b2a055ef013848e9881",
+            "exact_reset_continuation": true
+          }
+        ]
+      }
+    },
+    "standing-native-20260906-v42": {
+      "checkpoint_sha256": "f9390d939d0a8e96bb6cfa5ef9c5e2455ab135e1139337828d3e700072c7589e",
+      "transitions": 384000,
+      "elapsed_s": 301.5746277500002,
+      "finite_scalar_samples": 2996,
+      "coverage": {
+        "reset_counts_home_handoff": [
+          [
+            161,
+            167
+          ],
+          [
+            161,
+            167
+          ],
+          [
+            193,
+            202
+          ],
+          [
+            169,
+            159
+          ],
+          [
+            165,
+            163
+          ],
+          [
+            155,
+            173
+          ],
+          [
+            248,
+            208
+          ],
+          [
+            370,
+            321
+          ]
+        ],
+        "ground_contact_samples": [
+          177248,
+          171502,
+          167421,
+          172358,
+          174597,
+          172198,
+          158360,
+          131919
+        ],
+        "falls": [
+          0,
+          0,
+          97,
+          0,
+          0,
+          0,
+          191,
+          539
+        ],
+        "control_steps": 6000,
+        "templates": [
+          {
+            "id": "flat-forward10",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.1,
+              0,
+              0
+            ],
+            "steps": 656,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2a8a77ccb34a887738a1d9df4236ba8dfa625c71ebcd8f93f0fd5b04188116c",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-forward20",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.2,
+              0,
+              0
+            ],
+            "steps": 663,
+            "handoff_available": true,
+            "action_bytes_sha256": "f000ce39a31bb7e6f783a507f10f2b2021f3bac85fc7f8a4492c1eb5c8be6163",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "4a4d16d40f81c5e3dcc3af97349b10651094d4b18266f30accadd5e8ba820341",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0,
+              0,
+              -0.6
+            ],
+            "steps": 662,
+            "handoff_available": true,
+            "action_bytes_sha256": "e2cd565bdfbfcfacea25a184afba3a4b211ee9a27111e4765b73e9de6f0f6301",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-left",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "edbbfdde4b5a3d08693deb18a9615441af1fa7922d69e176ffe2adeea4be833a",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "flat-arc-right",
+            "terrain": {
+              "kind": "flat"
+            },
+            "command": [
+              0.12,
+              0,
+              -0.35
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "292f63f35b647b93ebeb48440a4cc0b42426893448d239e48a354ed0517e7ddf",
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "downhill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": 3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "0129e128af68e425c67a4fdb77e3e8a4bb51997292e525557d925a0d775cd128",
+            "v30_prefix_action_bytes_identical": true,
+            "exact_reset_continuation": true
+          },
+          {
+            "id": "uphill",
+            "terrain": {
+              "kind": "slope",
+              "axis": "y",
+              "degrees": -3.0
+            },
+            "command": [
+              0.12,
+              0,
+              0
+            ],
+            "steps": 657,
+            "handoff_available": true,
+            "action_bytes_sha256": "cba1726fad7808f56d98c12ce5b30a6cea2da62714f42b2a055ef013848e9881",
+            "exact_reset_continuation": true
+          }
+        ]
+      }
+    }
+  },
+  "evaluations": {
+    "v38-stopping-endurance": {
+      "passed_sessions": 0,
+      "total_sessions": 4,
+      "passed_windows": 12,
+      "total_windows": 24
+    },
+    "v41-native-standing-endurance": {
+      "passed_sessions": 0,
+      "total_sessions": 4,
+      "passed_windows": 0,
+      "total_windows": 24
+    },
+    "v42-native-standing-endurance": {
+      "passed_sessions": 1,
+      "total_sessions": 4,
+      "passed_windows": 17,
+      "total_windows": 24
+    },
+    "v42-native-standing-flat": {
+      "passed_cases": 21,
+      "total_cases": 21,
+      "trace_cases": 21,
+      "component_gates": {
+        "original_passed_cases": 21,
+        "heading_passed_cases": 21,
+        "self_contact_passed_cases": 21,
+        "self_load_passed_cases": 21,
+        "combined_passed_cases": 21
+      }
+    },
+    "v42-native-standing-repeated": {
+      "passed_cases": 42,
+      "total_cases": 42,
+      "trace_cases": 42,
+      "component_gates": {
+        "original_passed_cases": 42,
+        "heading_passed_cases": 42,
+        "self_contact_passed_cases": 42,
+        "self_load_passed_cases": 42,
+        "combined_passed_cases": 42
+      }
+    },
+    "v42-native-standing-surfaces": {
+      "passed_sessions": 3,
+      "total_sessions": 14,
+      "passed_windows": 11,
+      "total_windows": 28
+    }
+  },
+  "physical_calibration": false,
+  "fresh_terrain_opened": false,
+  "promotion": "rejected; retain V30",
+  "verification_completed": true
+}

@@ -1,0 +1,439 @@
+{
+  "static_passed": true,
+  "models": {
+    "v11-left": {
+      "static_passed": true,
+      "asset": "/Users/kelly/Developer/microduck-rl-genesis/microduck/assets/microduck/assets/sole_left.stl",
+      "asset_sha256": "db35f3b231c075fe1f9cb5449e7a698fb8ea97362daf8432be3e9700c2067574",
+      "source_geom": "left_foot_collision",
+      "source_compiled_mesh_arrays_exact": true,
+      "vertices": 7896,
+      "faces": 15788,
+      "cad_compiled_vertex_error_m": 1.3056341095500233e-09,
+      "clearance_m": 0.00499999980414889,
+      "mass_kg": 0.0300246,
+      "body_inertia": [
+        1.1162273349969178e-05,
+        7.743185360670359e-06,
+        5.903341289360453e-06
+      ],
+      "body_ipos": [
+        -0.007760023751557261,
+        -0.016120084235854072,
+        -0.012330683311099815
+      ],
+      "body_iquat": [
+        0.6837085452323037,
+        -0.28793628097683027,
+        -0.6288082340801706,
+        -0.23288522500695022
+      ],
+      "reference_body": "ankle_left",
+      "body_pos": [
+        0.0,
+        0.0,
+        0.02755042208021179
+      ],
+      "options": {
+        "integrator": 0,
+        "solver": 2,
+        "cone": 0,
+        "iterations": 100,
+        "tolerance": 1e-08,
+        "ls_iterations": 50,
+        "ls_tolerance": 0.01,
+        "disableflags": 0,
+        "enableflags": 0,
+        "ccd_iterations": 35,
+        "ccd_tolerance": 1e-06
+      },
+      "contact_parameters": {
+        "solref": [
+          [
+            0.02,
+            1.0
+          ],
+          [
+            0.02,
+            1.0
+          ]
+        ],
+        "solimp": [
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ],
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ]
+        ],
+        "friction": [
+          [
+            1.0,
+            0.005,
+            0.0001
+          ],
+          [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        ],
+        "priority": [
+          0,
+          0
+        ],
+        "solmix": [
+          1.0,
+          1.0
+        ],
+        "condim": [
+          3,
+          3
+        ],
+        "margin": [
+          0.0,
+          0.0
+        ],
+        "gap": [
+          0.0,
+          0.0
+        ]
+      },
+      "integration_steps": 0
+    },
+    "v62-left": {
+      "static_passed": true,
+      "asset": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/sole_left.stl",
+      "asset_sha256": "e028c8b09fecd4cb354d042bf7fd95a1a1bc2d524d760d62137fa8d74093fc23",
+      "source_geom": "ankle_left_1_sole_left_collision",
+      "source_compiled_mesh_arrays_exact": true,
+      "vertices": 7896,
+      "faces": 15788,
+      "cad_compiled_vertex_error_m": 1.3056337100243385e-09,
+      "clearance_m": 0.004999999804149065,
+      "mass_kg": 0.0300246,
+      "body_inertia": [
+        1.1162273349969178e-05,
+        7.743185360670359e-06,
+        5.903341289360453e-06
+      ],
+      "body_ipos": [
+        -0.007760023751557261,
+        -0.016120084235854072,
+        -0.012330683311099815
+      ],
+      "body_iquat": [
+        0.6837085452323037,
+        -0.28793628097683027,
+        -0.6288082340801706,
+        -0.23288522500695022
+      ],
+      "reference_body": "ankle_left",
+      "body_pos": [
+        0.0,
+        0.0,
+        0.02755042208021179
+      ],
+      "options": {
+        "integrator": 0,
+        "solver": 2,
+        "cone": 0,
+        "iterations": 100,
+        "tolerance": 1e-08,
+        "ls_iterations": 50,
+        "ls_tolerance": 0.01,
+        "disableflags": 0,
+        "enableflags": 0,
+        "ccd_iterations": 35,
+        "ccd_tolerance": 1e-06
+      },
+      "contact_parameters": {
+        "solref": [
+          [
+            0.02,
+            1.0
+          ],
+          [
+            0.02,
+            1.0
+          ]
+        ],
+        "solimp": [
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ],
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ]
+        ],
+        "friction": [
+          [
+            1.0,
+            0.005,
+            0.0001
+          ],
+          [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        ],
+        "priority": [
+          0,
+          0
+        ],
+        "solmix": [
+          1.0,
+          1.0
+        ],
+        "condim": [
+          3,
+          3
+        ],
+        "margin": [
+          0.0,
+          0.0
+        ],
+        "gap": [
+          0.0,
+          0.0
+        ]
+      },
+      "integration_steps": 0
+    },
+    "v11-right": {
+      "static_passed": true,
+      "asset": "/Users/kelly/Developer/microduck-rl-genesis/microduck/assets/microduck/assets/sole_right.stl",
+      "asset_sha256": "a4f5c114aae7137d559cacfb71d77c981588850335de5a09a14f95a4192a218f",
+      "source_geom": "right_foot_collision",
+      "source_compiled_mesh_arrays_exact": true,
+      "vertices": 7946,
+      "faces": 15888,
+      "cad_compiled_vertex_error_m": 1.3080969457816476e-09,
+      "clearance_m": 0.005000000152610829,
+      "mass_kg": 0.0300251,
+      "body_inertia": [
+        1.1162245904558893e-05,
+        7.743216094205062e-06,
+        5.90343800123603e-06
+      ],
+      "body_ipos": [
+        0.01633697771816443,
+        0.00728604949899615,
+        -0.012330758070227318
+      ],
+      "body_iquat": [
+        0.25051425388192455,
+        0.6433405838346978,
+        -0.3282854601658135,
+        0.6446581717755036
+      ],
+      "reference_body": "ankle_right",
+      "body_pos": [
+        0.0,
+        0.0,
+        0.027550422080211783
+      ],
+      "options": {
+        "integrator": 0,
+        "solver": 2,
+        "cone": 0,
+        "iterations": 100,
+        "tolerance": 1e-08,
+        "ls_iterations": 50,
+        "ls_tolerance": 0.01,
+        "disableflags": 0,
+        "enableflags": 0,
+        "ccd_iterations": 35,
+        "ccd_tolerance": 1e-06
+      },
+      "contact_parameters": {
+        "solref": [
+          [
+            0.02,
+            1.0
+          ],
+          [
+            0.02,
+            1.0
+          ]
+        ],
+        "solimp": [
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ],
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ]
+        ],
+        "friction": [
+          [
+            1.0,
+            0.005,
+            0.0001
+          ],
+          [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        ],
+        "priority": [
+          0,
+          0
+        ],
+        "solmix": [
+          1.0,
+          1.0
+        ],
+        "condim": [
+          3,
+          3
+        ],
+        "margin": [
+          0.0,
+          0.0
+        ],
+        "gap": [
+          0.0,
+          0.0
+        ]
+      },
+      "integration_steps": 0
+    },
+    "v62-right": {
+      "static_passed": true,
+      "asset": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/sole_right.stl",
+      "asset_sha256": "3f5068872f3add10eb967327651445bdfca635f5a8a01befa0ef05e462b72b4c",
+      "source_geom": "ankle_right_3_sole_right_collision",
+      "source_compiled_mesh_arrays_exact": true,
+      "vertices": 7953,
+      "faces": 15902,
+      "cad_compiled_vertex_error_m": 1.2987604908974559e-09,
+      "clearance_m": 0.005000000184255292,
+      "mass_kg": 0.0300251,
+      "body_inertia": [
+        1.1162245904558893e-05,
+        7.743216094205062e-06,
+        5.90343800123603e-06
+      ],
+      "body_ipos": [
+        0.01633697771816443,
+        0.00728604949899615,
+        -0.012330758070227318
+      ],
+      "body_iquat": [
+        0.25051425388192455,
+        0.6433405838346978,
+        -0.3282854601658135,
+        0.6446581717755036
+      ],
+      "reference_body": "ankle_right",
+      "body_pos": [
+        0.0,
+        0.0,
+        0.027550422080211783
+      ],
+      "options": {
+        "integrator": 0,
+        "solver": 2,
+        "cone": 0,
+        "iterations": 100,
+        "tolerance": 1e-08,
+        "ls_iterations": 50,
+        "ls_tolerance": 0.01,
+        "disableflags": 0,
+        "enableflags": 0,
+        "ccd_iterations": 35,
+        "ccd_tolerance": 1e-06
+      },
+      "contact_parameters": {
+        "solref": [
+          [
+            0.02,
+            1.0
+          ],
+          [
+            0.02,
+            1.0
+          ]
+        ],
+        "solimp": [
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ],
+          [
+            0.9,
+            0.95,
+            0.001,
+            0.5,
+            2.0
+          ]
+        ],
+        "friction": [
+          [
+            1.0,
+            0.005,
+            0.0001
+          ],
+          [
+            1.0,
+            0.005,
+            0.0001
+          ]
+        ],
+        "priority": [
+          0,
+          0
+        ],
+        "solmix": [
+          1.0,
+          1.0
+        ],
+        "condim": [
+          3,
+          3
+        ],
+        "margin": [
+          0.0,
+          0.0
+        ],
+        "gap": [
+          0.0,
+          0.0
+        ]
+      },
+      "integration_steps": 0
+    }
+  },
+  "integration_steps": 0,
+  "boundary": "Isolated CAD ankle mass on a vertical guide; no articulated load sharing, BAM or physical calibration."
+}

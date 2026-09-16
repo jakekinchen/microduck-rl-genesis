@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "prior_v57_manifest_unchanged": true,
+    "all_four_meshes_closed_oriented": true,
+    "all_eight_local_cavity_witnesses": true,
+    "all_aabb_candidates_tested": true,
+    "transforms_within_4nm": true,
+    "containment_16_queries_agree_outside": true,
+    "no_dynamics_or_mesh_repairs": true
+  },
+  "passed": 7,
+  "boundary": "local convex-cavity witnesses, not global clearance or calibrated physical acceptance"
+}

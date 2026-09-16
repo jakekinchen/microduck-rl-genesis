@@ -1,0 +1,145 @@
+{
+  "schema": "microduck.public-surface-evidence/v1",
+  "retrieved_at": "2026-09-06",
+  "physical_calibration": false,
+  "sources": [
+    {
+      "id": "isrd",
+      "url": "https://zenodo.org/records/45874",
+      "sha256": "28f9d3136d3e5cfc7ec8a7fa0cb458e1bdd1081fab010f2072cdfd3d482e8aa1",
+      "rows": 30709,
+      "columns": 49,
+      "class_counts": {
+        "1000": 7467,
+        "500": 4786,
+        "0": 4824,
+        "2000": 4918,
+        "2500": 5342,
+        "3000": 3372
+      },
+      "license_scope": "Scientific and non-commercial use with attribution to Kertesz 2016 DOI10.1109/LRA.2016.2519949; no redistribution here.",
+      "admission": "context_only",
+      "reason": "Engineered Sony ERS-7 sensor features; no Ducky foot constitutive law, compatible action trajectory, specimen/session identities or motor identification."
+    },
+    {
+      "id": "yaz_fidan_2025",
+      "url": "https://dergipark.org.tr/tr/download/article-file/5089886",
+      "doi": "10.7216/teksmuh.1750698",
+      "sha256": "bb4457ff039cd6281bbef95eb71b36f7577e4a2fae2cd2e2a957f6b5dfbcb507",
+      "locator": "Table 1, printed p342",
+      "observations": [
+        {
+          "construction": "sisal-look",
+          "pile_height_mm": 5,
+          "carpet_thickness_mm": 7,
+          "pile_yarn": "13500 denier polyester"
+        },
+        {
+          "construction": "loop-pile",
+          "pile_height_mm": 5,
+          "carpet_thickness_mm": 7,
+          "pile_yarn": "13500 denier polyester"
+        },
+        {
+          "construction": "cut-pile",
+          "pile_height_mm": 5,
+          "carpet_thickness_mm": 7,
+          "pile_yarn": "13500 denier polyester"
+        }
+      ],
+      "admission": "geometry_prior_only",
+      "reason": "No published robot-load transient force-indentation curve or actual Ducky sole interface."
+    },
+    {
+      "id": "gupta_2017",
+      "url": "https://nopr.niscpr.res.in/bitstream/123456789/43250/1/IJFTR%2042%284%29%20399-406.pdf",
+      "sha256": "8fbd57e493d4b7926c5705444fdbca7d83fe1568e7b2b993cbf01df278f1ea14",
+      "locator": "Table 4 first four rows, printed p403; methods p401",
+      "pressure_kpa": [
+        2,
+        200
+      ],
+      "dwell_s": 30,
+      "observations": [
+        {
+          "knot_density_per_in": 5,
+          "pile_height_mm": 10,
+          "thickness_at_2kpa_mm": 19.15,
+          "compression_2_to_200kpa_mm": 10.03,
+          "recovery_percent": 62.05
+        },
+        {
+          "knot_density_per_in": 5,
+          "pile_height_mm": 16,
+          "thickness_at_2kpa_mm": 22.34,
+          "compression_2_to_200kpa_mm": 12.93,
+          "recovery_percent": 58.63
+        },
+        {
+          "knot_density_per_in": 7,
+          "pile_height_mm": 10,
+          "thickness_at_2kpa_mm": 19.09,
+          "compression_2_to_200kpa_mm": 11.28,
+          "recovery_percent": 72.26
+        },
+        {
+          "knot_density_per_in": 7,
+          "pile_height_mm": 16,
+          "thickness_at_2kpa_mm": 23.26,
+          "compression_2_to_200kpa_mm": 14.37,
+          "recovery_percent": 71.73
+        }
+      ],
+      "admission": "quasistatic_prior_only",
+      "reason": "Sparse 30-second endpoint means do not identify low-load dynamic stiffness or damping. Figure 2 is a schematic, not digitizable experimental samples."
+    },
+    {
+      "id": "kim_lockhart_2000",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2895255/",
+      "locator": "Methods 2.2 Apparatus",
+      "observations": {
+        "surface": "Beau Lieu quarter-inch olefin outdoor carpet",
+        "pile_height_m": 0.00635,
+        "slipmeter_mass_kg": 4.54,
+        "counterface": "rubber sole",
+        "dynamic_cof": 1.8
+      },
+      "admission": "contact_pair_prior_only"
+    },
+    {
+      "id": "bertocci_2003",
+      "url": "https://jamanetwork.com/journals/jamapediatrics/fullarticle/481328",
+      "locator": "Table 1",
+      "observations": {
+        "carpet_shoe_static_cof": 0.58,
+        "carpet_shoe_dynamic_cof": 0.51,
+        "carpet_dummy_static_cof": 1.23,
+        "carpet_dummy_dynamic_cof": 1.14
+      },
+      "admission": "contact_pair_prior_only"
+    }
+  ],
+  "mapping": {
+    "sliding_friction_training": [
+      0.51,
+      1.0,
+      1.8
+    ],
+    "friction_boundary": "Published endpoints are different contact pairs, not a measured population range for Ducky. 1.0 is existing nominal. Static/kinetic differences and anisotropy are not represented by a single Coulomb coefficient.",
+    "contact_time_constant_s": [
+      0.02,
+      0.035,
+      0.05,
+      0.07
+    ],
+    "compliance_boundary": "Explicit exploratory soft-contact hypotheses, NOT fitted material parameters. No inference from static carpet endpoints to damping; no fabricated measurement samples.",
+    "excluded": [
+      "loose rug motion",
+      "fiber snagging",
+      "hysteresis",
+      "underlay-specific dynamics",
+      "physical endurance",
+      "hardware acceptance"
+    ]
+  }
+}

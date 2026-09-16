@@ -1,0 +1,40 @@
+{
+  "parent_part": 124,
+  "original_dense_excess_m": 0.0002953092953426335,
+  "original_volume_m3": 2.3764820094119965e-08,
+  "output_start": 3037,
+  "intersected_source_volume_m3": 1.958699423929015e-08,
+  "decision": "local_coacd_source_partition",
+  "output_count": 3,
+  "coarse_parts": 3,
+  "region_directory": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r7/bottom_head_shell/regions/124",
+  "coarse_sha256": "a5912f4db9e1c00854da40cb17fc9d5b20e1dcfad1bde14c9bc5a96a5831e69c",
+  "refined_sha256": "a5912f4db9e1c00854da40cb17fc9d5b20e1dcfad1bde14c9bc5a96a5831e69c",
+  "local_refinement": [
+    {
+      "parent_part": 0,
+      "original_dense_excess_m": 4.652653906590344e-11,
+      "original_volume_m3": 2.0718686341423506e-09,
+      "output_start": 0,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 1,
+      "original_dense_excess_m": 4.463913567071619e-05,
+      "original_volume_m3": 8.862860821998898e-09,
+      "output_start": 1,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 2,
+      "original_dense_excess_m": 3.614070421182016e-05,
+      "original_volume_m3": 8.721260347193173e-09,
+      "output_start": 2,
+      "decision": "unchanged",
+      "output_count": 1
+    }
+  ],
+  "source_coverage": "approximate local decomposition; independent missing-material gate required"
+}

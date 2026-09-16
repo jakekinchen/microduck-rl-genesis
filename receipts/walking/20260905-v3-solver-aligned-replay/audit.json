@@ -1,0 +1,95 @@
+{
+  "schema": "microduck.cross-engine-fixed-action-diagnostic/v1",
+  "source_action_file": "receipts/walking/20260905-v3-final/nominal-20-20ms--turn-left-actions-float32.npy",
+  "source_sha256": "63bfaf8ea35d0aff8659900012c39868bd884ad49a80772463ed8a679198e9f2",
+  "control_steps": 250,
+  "action_bytes_equal": true,
+  "initial_max_qpos_difference": 1.2302398655350544e-08,
+  "first_root_difference_over_1mm_s": 0.025,
+  "first_joint_difference_over_001rad_s": 0.045,
+  "first_torque_difference_over_001nm_s": 0.05,
+  "first_genesis_foot_load_over_1n_s": 0.045,
+  "first_native_foot_load_over_1n_s": 0.045,
+  "maximum_root_position_difference_m": 0.20806882877399452,
+  "maximum_joint_difference_rad": 0.4245515105875107,
+  "solver_parameters": {
+    "integrator": "Euler",
+    "iterations": 100,
+    "ls_iterations": 50,
+    "tolerance": 1e-08,
+    "genesis_mujoco_compatibility": true
+  },
+  "constraint_parameters": {
+    "genesis_default_timeconst_s": 0.02,
+    "genesis_floor": [
+      0.019999999552965164,
+      1.0,
+      0.8999999761581421,
+      0.949999988079071,
+      0.0010000000474974513,
+      0.5,
+      2.0
+    ],
+    "genesis_robot_floor_geoms": [
+      [
+        0.019999999552965164,
+        1.0,
+        0.8999999761581421,
+        0.949999988079071,
+        0.0010000000474974513,
+        0.5,
+        2.0
+      ],
+      [
+        0.019999999552965164,
+        1.0,
+        0.8999999761581421,
+        0.949999988079071,
+        0.0010000000474974513,
+        0.5,
+        2.0
+      ]
+    ],
+    "native_floor": [
+      0.02,
+      1.0,
+      0.9,
+      0.95,
+      0.001,
+      0.5,
+      2.0
+    ],
+    "native_feet": [
+      [
+        0.02,
+        1.0,
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      [
+        0.02,
+        1.0,
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ]
+    ]
+  },
+  "physics": {
+    "constraint_timeconst_s": 0.02,
+    "floor_masks": [
+      1,
+      1
+    ],
+    "voltage_v": 7.35,
+    "drop_ohm": 0.0,
+    "motor_ticks": 4,
+    "startup_history": "HOME in both engines"
+  },
+  "boundary": "Original saved 50-Hz float32 actions held byte-identically through 200-Hz BAM loops. Sensor lag has no effect in fixed-action replay. Genesis CPU/native MuJoCo differences are observations, not a fit, acceptance or hardware calibration. Force channels are each engine's last integrated-step measurements; Genesis reports link vertical resultant and native reports summed contact normal."
+}

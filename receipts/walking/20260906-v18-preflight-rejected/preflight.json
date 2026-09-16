@@ -1,0 +1,10 @@
+{
+  "status": "rejected_before_training",
+  "physics_started": false,
+  "new_transitions": 0,
+  "run_directory_created": false,
+  "reason": "The final-policy manifest verifier rejected the V16 diagnostic because it does not contain training.json, evaluation.json and policy.onnx. All listed file hashes had passed. Use a diagnostic-specific required-file check; do not reclassify the diagnostic as accepted policy evidence.",
+  "superseded_freeze": "experiments/walking/evaluator-freeze-unbraced-v18.json",
+  "replacement_freeze": "experiments/walking/evaluator-freeze-unbraced-v18-r2.json",
+  "training_or_acceptance_design_changed": false
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "microduck.walking-attempt-terminal/v1",
+  "status": "quarantined",
+  "reason": "Intentional early stop: nominal stepping, torque and stop improved at checkpoint250, but zero-lag turning fails and visual/state audit shows neck about 88 degrees off neutral with face pitched down about 83 degrees. Saturating per-joint head reward has a blind spot. No candidate accepted.",
+  "policy_accepted": false,
+  "planned_transitions_not_completed": 18432000,
+  "last_logged_completed_transitions": 7962624,
+  "partial_iteration_transitions": "unknown; not represented by completed count",
+  "original_run_status_is_historical": true
+}

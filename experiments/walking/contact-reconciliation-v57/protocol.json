@@ -1,0 +1,330 @@
+{
+  "id": "full-cad-copied-pose-v57",
+  "created_utc": "2026-09-16T00:14:37.582150+00:00",
+  "intent": "rejection diagnostic, not dynamic behavior acceptance",
+  "selection_rule": "first row, each 50th control row (1-based), final row; no outcome selection",
+  "threshold_penetration_m": 0.001,
+  "internal_contacts_only": true,
+  "home_cases": [
+    {
+      "yaw_rad": 0.0,
+      "root_z_m": 0.125
+    },
+    {
+      "yaw_rad": 0.12,
+      "root_z_m": 0.125
+    }
+  ],
+  "sources": [
+    {
+      "path": "receipts/laser-course/20260913-v2-development/nominal/trajectory.jsonl.gz",
+      "sha256": "f43db70fb1bf703c041678fd9d3f7ec2740397c3ca4b9fa9518d191a5a9a0ba9",
+      "record_count": 3300,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499,
+        549,
+        599,
+        649,
+        699,
+        749,
+        799,
+        849,
+        899,
+        949,
+        999,
+        1049,
+        1099,
+        1149,
+        1199,
+        1249,
+        1299,
+        1349,
+        1399,
+        1449,
+        1499,
+        1549,
+        1599,
+        1649,
+        1699,
+        1749,
+        1799,
+        1849,
+        1899,
+        1949,
+        1999,
+        2049,
+        2099,
+        2149,
+        2199,
+        2249,
+        2299,
+        2349,
+        2399,
+        2449,
+        2499,
+        2549,
+        2599,
+        2649,
+        2699,
+        2749,
+        2799,
+        2849,
+        2899,
+        2949,
+        2999,
+        3049,
+        3099,
+        3149,
+        3199,
+        3249,
+        3299
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/original-motor0-yaw0.0.jsonl.gz",
+      "sha256": "e1a5a679dee683ce3c3c0c339faddaf3483aad2e377738c47c4c9ec08b1fa06f",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/original-motor0-yaw0.12.jsonl.gz",
+      "sha256": "822f84a66f3676ab81935eec8abc1d309de0525f9f21bfd73c3c16d74f25101c",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/original-motor4-yaw0.0.jsonl.gz",
+      "sha256": "1c699a6d5ea8644fb4ee2ad68a7dd0775b958606bc06d0ae9aadf6696b168ea1",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/original-motor4-yaw0.12.jsonl.gz",
+      "sha256": "58d84b5d48381115f179dd384f01ba68a2ed629f565de8f07b2f689b8cd2d52f",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/original-motor6-yaw0.0.jsonl.gz",
+      "sha256": "e7b7178e45f6af420d7fcb40b2a76e4e526edf1d14d3605372907e4cc4137af8",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/original-motor6-yaw0.12.jsonl.gz",
+      "sha256": "bfae75fe4122aa06881c0a1bbd4fb18969c4682f4d390cdb8f896c6c4c8a78cb",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/shared-motor0-yaw0.0.jsonl.gz",
+      "sha256": "f0bfc2a21eda87f279f977c30b7a2f6869be4fd792071a554b20ed57f9dc8e31",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/shared-motor0-yaw0.12.jsonl.gz",
+      "sha256": "3076244f180d82ee8dc8c4bf5597285f150047d228055c7e1d5314bd93119d0a",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/shared-motor4-yaw0.0.jsonl.gz",
+      "sha256": "be7b86f6d345c470609c7e61bc2f1968e5940ce7e7d8d0fc2da68c5c03892eb1",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/shared-motor4-yaw0.12.jsonl.gz",
+      "sha256": "2eeb8bf5d60e64c7dfa2c73b5526dcedd9bde974adde905c099275de06e6c056",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/shared-motor6-yaw0.0.jsonl.gz",
+      "sha256": "c61b5c9781637375cdf3b549e13144e107f3165a0ce7b4e429575e17a1263105",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    },
+    {
+      "path": "receipts/walking/20260916-v56-posture-feasibility/shared-motor6-yaw0.12.jsonl.gz",
+      "sha256": "d4c966dcfda555269091c7202a997f859cf1fc387cf82cde524c13ebbb52b5ed",
+      "record_count": 500,
+      "zero_based_indices": [
+        0,
+        49,
+        99,
+        149,
+        199,
+        249,
+        299,
+        349,
+        399,
+        449,
+        499
+      ]
+    }
+  ],
+  "model_variants": [
+    "retained_v11",
+    "full_cad_support_fixed_original_jaw_exclusion",
+    "full_cad_support_fixed_jaw_contact_enabled"
+  ],
+  "mesh_diagnostics": {
+    "meshes": [
+      "bottom_head_shell.stl",
+      "foot_right.stl",
+      "jaw.stl",
+      "pcb__raspberry_pi_zero_2_w.stl",
+      "right_shell.stl",
+      "sole_right.stl",
+      "top_head_shell.stl"
+    ],
+    "support_directions": "256 deterministic Fibonacci unit directions plus six Cartesian axes",
+    "hausdorff": "symmetric nearest-neighbor Hausdorff of unique vertex sets; separate hull-vertex result, not triangle-surface distance"
+  },
+  "no_dynamic_steps": true,
+  "physical_acceptance": false
+}

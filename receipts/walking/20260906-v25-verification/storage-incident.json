@@ -1,0 +1,33 @@
+{
+  "event": "ENOSPC during V30 repeat trace write",
+  "start_internal": {
+    "exists": true,
+    "free_bytes": 18717839360,
+    "free_gib": 17.43,
+    "mount_point": "/System/Volumes/Data",
+    "mounted": true,
+    "path": "/System/Volumes/Data",
+    "total_bytes": 994662584320,
+    "used_bytes": 975944744960,
+    "used_percent": 98.12,
+    "writable": false
+  },
+  "end_internal": {
+    "exists": true,
+    "free_bytes": 14730743808,
+    "free_gib": 13.72,
+    "mount_point": "/System/Volumes/Data",
+    "mounted": true,
+    "path": "/System/Volumes/Data",
+    "total_bytes": 994662584320,
+    "used_bytes": 979931840512,
+    "used_percent": 98.52,
+    "writable": false
+  },
+  "external_free_gib": 40.24,
+  "maintenance_mutations": false,
+  "files_deleted": 0,
+  "offloads": 0,
+  "audit_directory": "/Users/kelly/.codex/maintenance-receipts/20260906T173200Z",
+  "boundary": "Subsequent storage observations, not proof of what caused the earlier write failure. No other user files or active caches were changed."
+}

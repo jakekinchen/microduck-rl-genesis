@@ -1,0 +1,38 @@
+{
+  "scope": "measurement correction only; legacy negative remains preserved; no geometry alteration",
+  "passed": true,
+  "unchanged_function_AST": [
+    "_digest",
+    "_json_digest",
+    "_sample",
+    "union_inside",
+    "_source_mesh",
+    "_checked_mesh",
+    "_read_inputs",
+    "_cavity_checks"
+  ],
+  "changed_functions": [
+    "normalized queries in _validate_one",
+    "revision and query-unit metadata in validate_meshes"
+  ],
+  "unchanged_criteria": {
+    "tolerance_m": 0.00025,
+    "half_space_epsilon_m": 1e-09,
+    "source_samples": "4096 evenly spaced vertices plus 4096 face centroids",
+    "proxy_samples": "all vertices plus 4096 evenly spaced global face centroids",
+    "cavities": "all original eight paired source-local witnesses"
+  },
+  "original_false_violations_analytically_resolved": 8,
+  "raw_maximum_m": 0.0003137440028253729,
+  "analytic_distance_at_raw_maximum_m": 7.596687142376085e-08,
+  "max_analytic_distance_at_eight_false_violations_m": 2.632563380116392e-07,
+  "contract_tests_passed": 12,
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/material_validation_v62.py": "90b8a464af336de124e3ea41eaf3d75a8ee2b73b57980306a264c05e5e3dd786",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/test_material_validation_v62.py": "e2e6cf79d9cd36818e7868b6276f8e1759c657403ef9b0d1bf3f7818d72a8d6d",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/material-unit-tests.log": "9c1ac5ec0e5de7e9724ae79bb562e9826eefbe8f3ff22733df2db7cf6f7c58eb",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-legacy-localization.json": "d10132c48f006ca59f4978be53e64eda2b1a1daf3eb06174bb6b33e59c4b482e",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/scale-regression.json": "7d7d5f98c7a784ec57626e02e4f749545599a40c884c43da30e6c07f95ed9952"
+  }
+}

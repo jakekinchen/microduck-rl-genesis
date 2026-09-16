@@ -1,0 +1,538 @@
+{
+  "status": "failed_io",
+  "complete": false,
+  "error": "OSError: [Errno 28] No space left on device",
+  "required_windows": 42,
+  "completed_window_reports": [
+    {
+      "case_id": "motor-10ms-sensor-20ms--forward-211--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.013818011809674756,
+        "mean_abs_lateral_velocity_m_s": 0.01866422381893002,
+        "mean_abs_yaw_error_rad_s": 0.1506522532226679,
+        "stop_max_speed_m_s": 0.000560610680316148,
+        "stop_max_yaw_rate_rad_s": 0.004892760342599527,
+        "stop_max_tilt_deg": 6.2540726415382455,
+        "torque_saturation_fraction": 0.0006547619047619047,
+        "minimum_actual_joint_margin_rad": 0.064169938384743,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--forward-211--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.014041064302183628,
+        "mean_abs_lateral_velocity_m_s": 0.019002507387372483,
+        "mean_abs_yaw_error_rad_s": 0.14263222775090048,
+        "stop_max_speed_m_s": 0.0005512213190916552,
+        "stop_max_yaw_rate_rad_s": 0.00830835819356582,
+        "stop_max_tilt_deg": 5.900235427985654,
+        "torque_saturation_fraction": 0.0004563492063492064,
+        "minimum_actual_joint_margin_rad": 0.06649023046937574,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--forward-201--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.012618719638269594,
+        "mean_abs_lateral_velocity_m_s": 0.01810140026541177,
+        "mean_abs_yaw_error_rad_s": 0.1306408386419467,
+        "stop_max_speed_m_s": 0.0035057147992774923,
+        "stop_max_yaw_rate_rad_s": 0.02494212941912582,
+        "stop_max_tilt_deg": 6.41186995152172,
+        "torque_saturation_fraction": 0.0005555555555555556,
+        "minimum_actual_joint_margin_rad": 0.06776468849937789,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--forward-201--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.012668381677121561,
+        "mean_abs_lateral_velocity_m_s": 0.017936610960224204,
+        "mean_abs_yaw_error_rad_s": 0.12931590079208122,
+        "stop_max_speed_m_s": 0.003597373028049074,
+        "stop_max_yaw_rate_rad_s": 0.023280757221289916,
+        "stop_max_tilt_deg": 6.327430835136739,
+        "torque_saturation_fraction": 0.0004761904761904762,
+        "minimum_actual_joint_margin_rad": 0.06977645911790736,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--forward-158--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.013930243281337141,
+        "mean_abs_lateral_velocity_m_s": 0.015186081559299191,
+        "mean_abs_yaw_error_rad_s": 0.09307589589300916,
+        "stop_max_speed_m_s": 0.0005888129799724283,
+        "stop_max_yaw_rate_rad_s": 0.005666829986445842,
+        "stop_max_tilt_deg": 6.630887674960233,
+        "torque_saturation_fraction": 5.9523809523809524e-05,
+        "minimum_actual_joint_margin_rad": 0.07542406834778015,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--forward-158--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01405217104759451,
+        "mean_abs_lateral_velocity_m_s": 0.01592179883380737,
+        "mean_abs_yaw_error_rad_s": 0.09400225745143988,
+        "stop_max_speed_m_s": 0.0005779220260448424,
+        "stop_max_yaw_rate_rad_s": 0.004635544714962366,
+        "stop_max_tilt_deg": 6.771123761990721,
+        "torque_saturation_fraction": 3.968253968253968e-05,
+        "minimum_actual_joint_margin_rad": 0.07635909454861028,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--turn-left-738--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.010680771463850892,
+        "mean_abs_lateral_velocity_m_s": 0.013438617674056205,
+        "mean_abs_yaw_error_rad_s": 0.09986199802132746,
+        "stop_max_speed_m_s": 0.0003252550646972654,
+        "stop_max_yaw_rate_rad_s": 0.0014114138527904858,
+        "stop_max_tilt_deg": 6.492835996284129,
+        "torque_saturation_fraction": 3.968253968253968e-05,
+        "minimum_actual_joint_margin_rad": 0.08014230555670204,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.024712966205736306
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--turn-left-738--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.010620616958848155,
+        "mean_abs_lateral_velocity_m_s": 0.012597881431949141,
+        "mean_abs_yaw_error_rad_s": 0.09919949291873846,
+        "stop_max_speed_m_s": 0.0030829714835929234,
+        "stop_max_yaw_rate_rad_s": 0.008153085479767478,
+        "stop_max_tilt_deg": 6.4256433422225,
+        "torque_saturation_fraction": 1.984126984126984e-05,
+        "minimum_actual_joint_margin_rad": 0.08526223093559504,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.01953093882864553
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--turn-right-380--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.011569116621814741,
+        "mean_abs_lateral_velocity_m_s": 0.008134134871241953,
+        "mean_abs_yaw_error_rad_s": 0.10349227022961818,
+        "stop_max_speed_m_s": 0.00026092846111991076,
+        "stop_max_yaw_rate_rad_s": 0.0019182975361441844,
+        "stop_max_tilt_deg": 5.9490048067688415,
+        "torque_saturation_fraction": 5.9523809523809524e-05,
+        "minimum_actual_joint_margin_rad": 0.09376884410041852,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.027543395309535448
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--turn-right-380--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01147220602778618,
+        "mean_abs_lateral_velocity_m_s": 0.008396620581069582,
+        "mean_abs_yaw_error_rad_s": 0.10401974295122422,
+        "stop_max_speed_m_s": 0.0007757241148373117,
+        "stop_max_yaw_rate_rad_s": 0.011254868781634323,
+        "stop_max_tilt_deg": 5.839415711114111,
+        "torque_saturation_fraction": 3.968253968253968e-05,
+        "minimum_actual_joint_margin_rad": 0.09443102445025597,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.03675935758584925
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--arc-left-117-448--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01677749733558961,
+        "mean_abs_lateral_velocity_m_s": 0.015200560053061642,
+        "mean_abs_yaw_error_rad_s": 0.10397791146606632,
+        "stop_max_speed_m_s": 0.0006711794623438879,
+        "stop_max_yaw_rate_rad_s": 0.005528566349591571,
+        "stop_max_tilt_deg": 6.100199371986163,
+        "torque_saturation_fraction": 0.00011904761904761905,
+        "minimum_actual_joint_margin_rad": 0.07081878079770354,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--arc-left-117-448--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01696139119372116,
+        "mean_abs_lateral_velocity_m_s": 0.01505793750856352,
+        "mean_abs_yaw_error_rad_s": 0.10120437487273597,
+        "stop_max_speed_m_s": 0.0002843925552467194,
+        "stop_max_yaw_rate_rad_s": 0.0014851644503431104,
+        "stop_max_tilt_deg": 5.9987546646030765,
+        "torque_saturation_fraction": 7.936507936507937e-05,
+        "minimum_actual_joint_margin_rad": 0.06965443654544623,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--arc-right-184-383--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.012298371936499589,
+        "mean_abs_lateral_velocity_m_s": 0.018057396298162644,
+        "mean_abs_yaw_error_rad_s": 0.12973313003581385,
+        "stop_max_speed_m_s": 0.003275662068682111,
+        "stop_max_yaw_rate_rad_s": 0.02576454036420841,
+        "stop_max_tilt_deg": 6.147048431609357,
+        "torque_saturation_fraction": 0.00029761904761904765,
+        "minimum_actual_joint_margin_rad": 0.1024560067855872,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-10ms-sensor-20ms--arc-right-184-383--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.012382930045372095,
+        "mean_abs_lateral_velocity_m_s": 0.017519697691680162,
+        "mean_abs_yaw_error_rad_s": 0.1256909913958713,
+        "stop_max_speed_m_s": 0.0011261677037975482,
+        "stop_max_yaw_rate_rad_s": 0.006473119258182837,
+        "stop_max_tilt_deg": 6.265926687311244,
+        "torque_saturation_fraction": 0.00025793650793650796,
+        "minimum_actual_joint_margin_rad": 0.10347322038268253,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--forward-211--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01369844336471892,
+        "mean_abs_lateral_velocity_m_s": 0.014282002184235103,
+        "mean_abs_yaw_error_rad_s": 0.09753802720192346,
+        "stop_max_speed_m_s": 0.000351116613788389,
+        "stop_max_yaw_rate_rad_s": 0.0018387562751330804,
+        "stop_max_tilt_deg": 6.134249858325209,
+        "torque_saturation_fraction": 0.0004761904761904762,
+        "minimum_actual_joint_margin_rad": 0.07377741811200872,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--forward-211--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01372360125773933,
+        "mean_abs_lateral_velocity_m_s": 0.014434267328607274,
+        "mean_abs_yaw_error_rad_s": 0.10100144643637457,
+        "stop_max_speed_m_s": 0.00035405197356251444,
+        "stop_max_yaw_rate_rad_s": 0.001329928706342493,
+        "stop_max_tilt_deg": 6.0332271973825184,
+        "torque_saturation_fraction": 0.0004365079365079365,
+        "minimum_actual_joint_margin_rad": 0.07760764842219026,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--forward-201--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01355798099633443,
+        "mean_abs_lateral_velocity_m_s": 0.014075448191554521,
+        "mean_abs_yaw_error_rad_s": 0.10700626987578264,
+        "stop_max_speed_m_s": 0.000397655347347562,
+        "stop_max_yaw_rate_rad_s": 0.0014994592972589907,
+        "stop_max_tilt_deg": 6.0350209633739045,
+        "torque_saturation_fraction": 0.000496031746031746,
+        "minimum_actual_joint_margin_rad": 0.0726750323009398,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--forward-201--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.013071241785173207,
+        "mean_abs_lateral_velocity_m_s": 0.013944473617156386,
+        "mean_abs_yaw_error_rad_s": 0.09882955345849316,
+        "stop_max_speed_m_s": 0.0003443226117125973,
+        "stop_max_yaw_rate_rad_s": 0.001984586706212764,
+        "stop_max_tilt_deg": 6.08176105533698,
+        "torque_saturation_fraction": 0.0004166666666666667,
+        "minimum_actual_joint_margin_rad": 0.07473712214476003,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--forward-158--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.010841519852460032,
+        "mean_abs_lateral_velocity_m_s": 0.013880234073425507,
+        "mean_abs_yaw_error_rad_s": 0.10062513868558316,
+        "stop_max_speed_m_s": 0.000708854044903492,
+        "stop_max_yaw_rate_rad_s": 0.006542254533844022,
+        "stop_max_tilt_deg": 6.2597510903614655,
+        "torque_saturation_fraction": 5.9523809523809524e-05,
+        "minimum_actual_joint_margin_rad": 0.07473979641980594,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--forward-158--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.010985281921302544,
+        "mean_abs_lateral_velocity_m_s": 0.013733995755829906,
+        "mean_abs_yaw_error_rad_s": 0.10257245014600137,
+        "stop_max_speed_m_s": 0.000675967086809452,
+        "stop_max_yaw_rate_rad_s": 0.006280910016352564,
+        "stop_max_tilt_deg": 6.377899933073248,
+        "torque_saturation_fraction": 3.968253968253968e-05,
+        "minimum_actual_joint_margin_rad": 0.07718796175077641,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--turn-left-738--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.010119014542358338,
+        "mean_abs_lateral_velocity_m_s": 0.013090912170240722,
+        "mean_abs_yaw_error_rad_s": 0.09626366645698475,
+        "stop_max_speed_m_s": 0.00036412445632495543,
+        "stop_max_yaw_rate_rad_s": 0.0016517226754020338,
+        "stop_max_tilt_deg": 6.41029174809287,
+        "torque_saturation_fraction": 9.92063492063492e-05,
+        "minimum_actual_joint_margin_rad": 0.09027604529173894,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.013231135502238804
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--turn-left-738--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.010090424831874107,
+        "mean_abs_lateral_velocity_m_s": 0.012431376321580957,
+        "mean_abs_yaw_error_rad_s": 0.09329177622029464,
+        "stop_max_speed_m_s": 0.0005858836713188699,
+        "stop_max_yaw_rate_rad_s": 0.005514691864371846,
+        "stop_max_tilt_deg": 6.359745464691845,
+        "torque_saturation_fraction": 9.92063492063492e-05,
+        "minimum_actual_joint_margin_rad": 0.08850116378667339,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.014168986539702891
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--turn-right-380--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.00817895295884688,
+        "mean_abs_lateral_velocity_m_s": 0.00648657434767821,
+        "mean_abs_yaw_error_rad_s": 0.05915658978411496,
+        "stop_max_speed_m_s": 0.00032055468467867245,
+        "stop_max_yaw_rate_rad_s": 0.0020863666951670763,
+        "stop_max_tilt_deg": 5.989676196003307,
+        "torque_saturation_fraction": 7.936507936507937e-05,
+        "minimum_actual_joint_margin_rad": 0.1073740365055586,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.015724691808728392
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--turn-right-380--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.008231563546112385,
+        "mean_abs_lateral_velocity_m_s": 0.006985043267518259,
+        "mean_abs_yaw_error_rad_s": 0.059969063381272246,
+        "stop_max_speed_m_s": 0.00020986339784882696,
+        "stop_max_yaw_rate_rad_s": 0.0019447614437926252,
+        "stop_max_tilt_deg": 6.069694400863822,
+        "torque_saturation_fraction": 0.0001388888888888889,
+        "minimum_actual_joint_margin_rad": 0.10978993761593708,
+        "simultaneous_flight_fraction": 0.0,
+        "turn_bilateral_step_coverage": 1.0,
+        "turn_max_xy_excursion_m": 0.02552151659360258
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--arc-left-117-448--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.012129988884674495,
+        "mean_abs_lateral_velocity_m_s": 0.014091401595909674,
+        "mean_abs_yaw_error_rad_s": 0.12395013782369077,
+        "stop_max_speed_m_s": 0.00029566174707216364,
+        "stop_max_yaw_rate_rad_s": 0.002007620745895954,
+        "stop_max_tilt_deg": 6.072687959082294,
+        "torque_saturation_fraction": 5.9523809523809524e-05,
+        "minimum_actual_joint_margin_rad": 0.061503831044708634,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--arc-left-117-448--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.0121619601407508,
+        "mean_abs_lateral_velocity_m_s": 0.01426216465531671,
+        "mean_abs_yaw_error_rad_s": 0.1190770786993255,
+        "stop_max_speed_m_s": 0.00036025186829798464,
+        "stop_max_yaw_rate_rad_s": 0.0018287304290837924,
+        "stop_max_tilt_deg": 6.20885746315922,
+        "torque_saturation_fraction": 1.984126984126984e-05,
+        "minimum_actual_joint_margin_rad": 0.05900579502491193,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--arc-right-184-383--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.010898275018232586,
+        "mean_abs_lateral_velocity_m_s": 0.01374898456706724,
+        "mean_abs_yaw_error_rad_s": 0.10306705071933822,
+        "stop_max_speed_m_s": 0.0006734458965106681,
+        "stop_max_yaw_rate_rad_s": 0.0033342026840623416,
+        "stop_max_tilt_deg": 6.35334908074483,
+        "torque_saturation_fraction": 0.00021825396825396825,
+        "minimum_actual_joint_margin_rad": 0.08556710213759627,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-15ms-sensor-0ms--arc-right-184-383--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01077290350459056,
+        "mean_abs_lateral_velocity_m_s": 0.01413213614801899,
+        "mean_abs_yaw_error_rad_s": 0.10639651099115616,
+        "stop_max_speed_m_s": 0.0002825227375017981,
+        "stop_max_yaw_rate_rad_s": 0.0022146585690953793,
+        "stop_max_tilt_deg": 6.02381765521187,
+        "torque_saturation_fraction": 0.00017857142857142857,
+        "minimum_actual_joint_margin_rad": 0.10017818713596927,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-25ms-sensor-20ms--forward-211--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.01408409653619493,
+        "mean_abs_lateral_velocity_m_s": 0.017689855905574543,
+        "mean_abs_yaw_error_rad_s": 0.14056746528565886,
+        "stop_max_speed_m_s": 0.00355079523596757,
+        "stop_max_yaw_rate_rad_s": 0.008627243455296406,
+        "stop_max_tilt_deg": 6.602645438926808,
+        "torque_saturation_fraction": 0.00015873015873015873,
+        "minimum_actual_joint_margin_rad": 0.0487214503194327,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-25ms-sensor-20ms--forward-211--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.014730346934678857,
+        "mean_abs_lateral_velocity_m_s": 0.017483766738797066,
+        "mean_abs_yaw_error_rad_s": 0.145781024138128,
+        "stop_max_speed_m_s": 0.0020577138136388964,
+        "stop_max_yaw_rate_rad_s": 0.02136136983553854,
+        "stop_max_tilt_deg": 5.921884293172754,
+        "torque_saturation_fraction": 9.92063492063492e-05,
+        "minimum_actual_joint_margin_rad": 0.05712836655467307,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-25ms-sensor-20ms--forward-201--repeat-1",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.014251568796011752,
+        "mean_abs_lateral_velocity_m_s": 0.017386530045377362,
+        "mean_abs_yaw_error_rad_s": 0.14304518994964813,
+        "stop_max_speed_m_s": 0.0034431704696604587,
+        "stop_max_yaw_rate_rad_s": 0.020631271797992026,
+        "stop_max_tilt_deg": 6.601100764826375,
+        "torque_saturation_fraction": 7.936507936507937e-05,
+        "minimum_actual_joint_margin_rad": 0.06678426894469025,
+        "simultaneous_flight_fraction": 0.0
+      }
+    },
+    {
+      "case_id": "motor-25ms-sensor-20ms--forward-201--repeat-2",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.014540923209007921,
+        "mean_abs_lateral_velocity_m_s": 0.017153406731153176,
+        "mean_abs_yaw_error_rad_s": 0.14197477468553546,
+        "stop_max_speed_m_s": 0.003421161341831449,
+        "stop_max_yaw_rate_rad_s": 0.02012340000321204,
+        "stop_max_tilt_deg": 6.1774518647430785,
+        "torque_saturation_fraction": 5.9523809523809524e-05,
+        "minimum_actual_joint_margin_rad": 0.06685639746517447,
+        "simultaneous_flight_fraction": 0.0
+      }
+    }
+  ],
+  "completed_window_count": 32,
+  "boundary": "Partial raw trace and printed window results retained. Not a completed evaluation; retry keeps the identical frozen source, candidate, seeds and thresholds."
+}

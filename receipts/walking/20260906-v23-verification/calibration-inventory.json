@@ -1,0 +1,20 @@
+{
+  "schema": "microduck.calibration-provenance-inventory/v1",
+  "inspected_roots": [
+    "/Users/kelly/Developer/microduck-rl-genesis",
+    "/Users/kelly/Developer/MicroDuck",
+    "/Users/kelly/Developer/microduck-rl",
+    "/Users/kelly/Developer/microduck-rl-genesis/.workspace/bam"
+  ],
+  "targeted_search": "measurement/calibration/data_raw/data_processed/recording paths; csv/h5/npz in peer and BAM repositories; source acquisition/fitting docs",
+  "ducky_identified_physical_records_found": 0,
+  "inherited_actuator": "microduck/assets/xl330_m6.json",
+  "parameter_sha256": "61c699362fb3fabdde93eeba5e1ad3bf4ef9ca2f71d03e316b1924ff005b20d3",
+  "runtime_uses_xl330": "/Users/kelly/Developer/MicroDuck/duck-control/src/bus.rs",
+  "runtime_cli_in_PATH": false,
+  "serial_interface_present_but_hardware_identity_unverified": true,
+  "hardware_contacted": false,
+  "actuation": false,
+  "physical_calibration_complete": false,
+  "boundary": "Bounded local file inspection, not a claim that no measurements exist elsewhere. A USB serial device name is not robot identity."
+}

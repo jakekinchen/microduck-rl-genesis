@@ -1,0 +1,36 @@
+{
+  "schema": "microduck.gait-evaluator-freeze/v4",
+  "created_utc": "2026-09-05 11:05:44 UTC",
+  "candidate": "final checkpoint of laser-gait-20260905-v4; not yet evaluated",
+  "source_sha256": {
+    "scripts/evaluate_laser_gait.py": "192ef56edf04c136b4cf123d9947bbb14b7f2b75a7d72bcfef2f63aa82c26165",
+    "scripts/evaluate_laser_dynamic.py": "7b0a393c526aca38634fccef07597406e9948eb50f612974687153544a0b6909",
+    "scripts/evaluate_laser.py": "97f73faeaf35341a71d34fcdb254eb03dc7a498b5a48818ec62564e4745f7c8a",
+    "experiments/laser/gait.py": "ec851550c320415fe6ef930329d3ec16da10f6fba7e5eb6e3dc063eb808b7a8a",
+    "experiments/laser/world.py": "22a0bc9b5405c757db88729ab5d3bfe8b9027d9e549acd12f5bd874cef95134d",
+    "experiments/laser/face_world.py": "54120b2893affaa222c347f1f5792e9e3af0ecea877d51fef67346c444cb6f27",
+    "experiments/laser/camera_alignment.py": "2d6b4c2223da3bdfe9dd375879ffbdd7e5c97dd339a38c9ad146e8d7acfae15b",
+    "microduck/laser_face_command.py": "6f034cb39d0d4b865e0dc2268dad148466bafc26f60cec47a48273422db6857c",
+    "microduck/laser_dynamics.py": "d378c4385dbd15a654b5bfa863d4e3f2fa564e56d277c698c43357b9e29eb342",
+    "experiments/laser/gait-correction-v4.json": "82677ba2c077089f389d212001800c0d2c8fb9b8790cd7a9c9c7599e6e465bbd",
+    "experiments/laser/dynamic-suite-v1.json": "a07148a02afee79f99d4b1d573416bdca75cd1be49668483c3133405d888bb48",
+    "evaluator/core.py": "a48a418267163047de060de2f91ba5683c151353821215990d19d8b2e4191cc9",
+    "evaluator/config-v1.json": "2a673ae2446679036c2a7e78e47583ffecce892bb06ee97c792a4d1607e3ef2c"
+  },
+  "physical_face": "CAD head_camera site +X corroborated by mouth/head-COM geometry",
+  "thresholds": {
+    "minimum_sole_clearance_m": 0.005,
+    "minimum_air_s": 0.06,
+    "loaded_normal_n": 1,
+    "loaded_slip_threshold_m_s": 0.03,
+    "maximum_slip_sample_fraction": 0.2,
+    "minimum_swings_each_foot": 2,
+    "step_recency_s": 1.5,
+    "minimum_bilateral_coverage_during_translation": 0.6,
+    "maximum_backward_translation_fraction": 0.1,
+    "hard_stop_outer_range_fraction": 0.05,
+    "maximum_per_joint_hard_stop_fraction": 0.2,
+    "maximum_joint_limit_excursion_rad": 0.05
+  },
+  "boundary": "Visible-development rejection, not calibrated gait acceptance. Original target criteria remain required. Reserved data stays closed on any visible failure."
+}

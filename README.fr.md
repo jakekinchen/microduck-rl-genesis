@@ -13,6 +13,23 @@ une carte NVIDIA**. Ce dépôt refait l'environnement sur Genesis, qui
 tourne sur ROCm, **en conservant la recette sim2real amont**, parce que c'est
 elle qui a de la valeur, pas le code.
 
+**État au 16 septembre :** les nouvelles expériences sont suspendues pendant
+la préparation d'une revue de la démarche. Voir le
+[dossier de revue](docs/workspace/PROCESS_REVIEW_20260916.md),
+[GOAL.md](GOAL.md) et la [liste ordonnée](TRAINING_ACTUALIZATION.md).
+Les acteurs conservés V21/V15 avec le correcteur V30 ont des résultats utiles
+sur sol plat dans les conditions exposées. V54/V55 ne valident que 5/14 sessions
+de surfaces. V62 valide la géométrie statique ; V63–V65 échouent aux diagnostics
+du robot complet. V66 valide seulement un banc numérique de chute guidée de
+cheville. Aucun transfert physique ni marche générale sur moquette n'est validé.
+
+L'entrée historique `train.py` utilise un modèle réduit autorisant des
+intersections batterie/jambes. Le nom `complete-contact-v11` ne garantit pas
+une couverture complète du CAD. Les
+[anciens résultats](experiments/walking/RESULTS.md) sont conservés avec leurs
+limites. Le [guide des archives](docs/workspace/publication-20260916/README.md)
+explique l'accès aux traces, modèles, journaux et vidéos volumineux.
+
 ---
 
 ## Démarrage rapide

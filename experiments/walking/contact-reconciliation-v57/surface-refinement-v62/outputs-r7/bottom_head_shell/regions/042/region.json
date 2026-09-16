@@ -1,0 +1,900 @@
+{
+  "parent_part": 42,
+  "original_dense_excess_m": 0.0007328245368022322,
+  "original_volume_m3": 5.138911172394983e-07,
+  "output_start": 1452,
+  "intersected_source_volume_m3": 4.201838192175445e-07,
+  "decision": "local_coacd_source_partition",
+  "output_count": 86,
+  "coarse_parts": 64,
+  "region_directory": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r7/bottom_head_shell/regions/042",
+  "coarse_sha256": "7d05fe0af4b150c4d990c74f507b0c3c1da7d3b2a9aba3e1a8c1c6457143197b",
+  "refined_sha256": "93eca48cfebc4143fb14d7e3dded7891f28e570611591611a0fba9df73ee6658",
+  "local_refinement": [
+    {
+      "parent_part": 0,
+      "original_dense_excess_m": 1.0052494256598266e-06,
+      "original_volume_m3": 2.49387509251151e-09,
+      "output_start": 0,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 1,
+      "original_dense_excess_m": 6.4066409233856195e-06,
+      "original_volume_m3": 5.284523686916898e-09,
+      "output_start": 1,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 2,
+      "original_dense_excess_m": 5.530670896157009e-05,
+      "original_volume_m3": 2.8512192636981202e-09,
+      "output_start": 2,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 3,
+      "original_dense_excess_m": 9.137605997701951e-05,
+      "original_volume_m3": 3.0983613589476868e-09,
+      "output_start": 3,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 4,
+      "original_dense_excess_m": 8.647984487175534e-05,
+      "original_volume_m3": 4.9262242866155445e-09,
+      "output_start": 4,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 5,
+      "original_dense_excess_m": 0.00013155372810256123,
+      "original_volume_m3": 2.8979487289999356e-09,
+      "output_start": 5,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 6,
+      "original_dense_excess_m": 1.2662072668421436e-05,
+      "original_volume_m3": 2.0182757547105388e-08,
+      "output_start": 6,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 7,
+      "original_dense_excess_m": 1.50852152593647e-06,
+      "original_volume_m3": 2.2486508963237392e-09,
+      "output_start": 7,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 8,
+      "original_dense_excess_m": 7.881907442141556e-07,
+      "original_volume_m3": 1.4258063388960328e-08,
+      "output_start": 8,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 9,
+      "original_dense_excess_m": 6.242624645493608e-05,
+      "original_volume_m3": 2.1805913369750543e-08,
+      "output_start": 9,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 10,
+      "original_dense_excess_m": 0.00031695165296751957,
+      "original_volume_m3": 4.730126314031402e-09,
+      "output_start": 10,
+      "intersected_source_volume_m3": 4.368221176544162e-09,
+      "decision": "source_partition",
+      "output_count": 14,
+      "partition_events": [
+        {
+          "depth": 0,
+          "source_volume_m3": 4.368221176544162e-09,
+          "convex_volume_m3": 4.730013931044464e-09,
+          "dense_excess_m": 0.0003167640574315946,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.008015141216812583
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 2.2549862650291024e-09,
+          "convex_volume_m3": 2.6028588584503174e-09,
+          "dense_excess_m": 0.0003167640574315946,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.005139857755229614
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 2.1132349115150635e-09,
+          "convex_volume_m3": 2.1232001452347017e-09,
+          "dense_excess_m": 5.409030050040209e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 8.525808926409662e-10,
+          "convex_volume_m3": 1.1149760234685342e-09,
+          "dense_excess_m": 0.00028127652875528674,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.0037022160244381285
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 1.4024053723881337e-09,
+          "convex_volume_m3": 1.434272620504473e-09,
+          "dense_excess_m": 0.00013631073942763775,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.006577499486021099
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 3.64459259417596e-10,
+          "convex_volume_m3": 4.341613551581863e-10,
+          "dense_excess_m": 0.000160197842262928,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.002983395159042387
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 4.881216332233693e-10,
+          "convex_volume_m3": 6.105530795420568e-10,
+          "dense_excess_m": 0.00024262691471876592,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.004421036889833871
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 6.990494332741053e-10,
+          "convex_volume_m3": 7.299673035476471e-10,
+          "dense_excess_m": 0.00013631073942763775,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.005858678620625356
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 7.033559391140276e-10,
+          "convex_volume_m3": 7.040546295879292e-10,
+          "dense_excess_m": 2.5058421527810074e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 1.745587895483989e-10,
+          "convex_volume_m3": 1.937482782077257e-10,
+          "dense_excess_m": 8.427823109728472e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 1.899004698691971e-10,
+          "convex_volume_m3": 2.2868950168142004e-10,
+          "dense_excess_m": 0.000160197842262928,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": -0.019564736490936742
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 2.1996992377892742e-10,
+          "convex_volume_m3": 2.718922515344789e-10,
+          "dense_excess_m": 0.0001948739866359439,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": -0.01955172915093214
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 2.6815170944444153e-10,
+          "convex_volume_m3": 3.2194346030061763e-10,
+          "dense_excess_m": 0.0001824141798028668,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.012120133113254827
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 3.3193462839827244e-10,
+          "convex_volume_m3": 3.626324705328729e-10,
+          "dense_excess_m": 0.00013890348714741663,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.01216342096075472
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 3.6711480487583454e-10,
+          "convex_volume_m3": 3.67251267343428e-10,
+          "dense_excess_m": 9.991696807624665e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 8.768483103385764e-11,
+          "convex_volume_m3": 8.768483103385742e-11,
+          "dense_excess_m": 3.580361673049448e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 1.0221563883533913e-10,
+          "convex_volume_m3": 1.1367272528419264e-10,
+          "dense_excess_m": 0.0001034872234939052,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 9.19102810997842e-11,
+          "convex_volume_m3": 1.3216672046499184e-10,
+          "dense_excess_m": 0.0001948739866359439,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": -0.004061626457136
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 1.280596426791435e-10,
+          "convex_volume_m3": 1.3227513552661735e-10,
+          "dense_excess_m": 6.655229676227056e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 2.2043728646589362e-10,
+          "convex_volume_m3": 2.33119979865618e-10,
+          "dense_excess_m": 8.008867263113296e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.7714422978547565e-11,
+          "convex_volume_m3": 4.8916014881766084e-11,
+          "dense_excess_m": 1.102205664702881e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 2.4164037404347767e-10,
+          "convex_volume_m3": 2.5070027804834766e-10,
+          "dense_excess_m": 8.17104282232961e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 9.029425435479462e-11,
+          "convex_volume_m3": 9.219151986308776e-11,
+          "dense_excess_m": 1.1804523170905324e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 4.400286664992926e-11,
+          "convex_volume_m3": 4.400286664992904e-11,
+          "dense_excess_m": 3.580361673049448e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 4.7907414449854905e-11,
+          "convex_volume_m3": 7.025087574773905e-11,
+          "dense_excess_m": 0.0001948739866359439,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.01203371778499203
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 4.527910188852577e-11,
+          "convex_volume_m3": 4.745346592522944e-11,
+          "dense_excess_m": 2.8098067236586034e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 2.628312561329337e-12,
+          "convex_volume_m3": 2.6283125613293334e-12,
+          "dense_excess_m": 3.66205343881779e-18,
+          "decision": "retain"
+        }
+      ]
+    },
+    {
+      "parent_part": 11,
+      "original_dense_excess_m": 3.5992018533968704e-08,
+      "original_volume_m3": 1.513355186718046e-09,
+      "output_start": 24,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 12,
+      "original_dense_excess_m": 7.591849101885062e-06,
+      "original_volume_m3": 2.1842389480169216e-08,
+      "output_start": 25,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 13,
+      "original_dense_excess_m": 6.566004730515236e-06,
+      "original_volume_m3": 1.3278789154749293e-08,
+      "output_start": 26,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 14,
+      "original_dense_excess_m": 7.952441577018765e-06,
+      "original_volume_m3": 2.0417224996914003e-08,
+      "output_start": 27,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 15,
+      "original_dense_excess_m": 0.00020326917646663501,
+      "original_volume_m3": 2.270672951638168e-09,
+      "output_start": 28,
+      "intersected_source_volume_m3": 2.020699354057668e-09,
+      "decision": "source_partition",
+      "output_count": 10,
+      "partition_events": [
+        {
+          "depth": 0,
+          "source_volume_m3": 2.020699354057668e-09,
+          "convex_volume_m3": 2.270667238200591e-09,
+          "dense_excess_m": 0.00020326917646663501,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.010106192251794512
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 1.2241081784694044e-09,
+          "convex_volume_m3": 1.3230920406167198e-09,
+          "dense_excess_m": 0.00016495906016068622,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.009176531196646338
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 7.965911755882606e-10,
+          "convex_volume_m3": 9.475751975838622e-10,
+          "dense_excess_m": 0.00020326917646663501,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.011035853306942688
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 3.8181766967842743e-10,
+          "convex_volume_m3": 4.80796933389582e-10,
+          "dense_excess_m": 0.00016495906016068622,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": -0.0200141318255406
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 8.422905087909764e-10,
+          "convex_volume_m3": 8.422905087909746e-10,
+          "dense_excess_m": 3.972054645195637e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 6.57764194585918e-10,
+          "convex_volume_m3": 7.007797541812267e-10,
+          "dense_excess_m": 0.00014521299581134298,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": -0.020002691493092528
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 1.3882698100233972e-10,
+          "convex_volume_m3": 1.478091810272441e-10,
+          "dense_excess_m": 3.6931588487801034e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.1015033650575018e-10,
+          "convex_volume_m3": 1.1644921473194756e-10,
+          "dense_excess_m": 4.127048604924648e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 2.716673331726774e-10,
+          "convex_volume_m3": 3.2422797672410703e-10,
+          "dense_excess_m": 0.00014124611589302303,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.008711700669072252
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 3.6541625979808144e-10,
+          "convex_volume_m3": 3.659949409721156e-10,
+          "dense_excess_m": 2.356795961857021e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 2.9234793478783643e-10,
+          "convex_volume_m3": 3.3158700426495644e-10,
+          "dense_excess_m": 0.00014521299581134298,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0105710227793686
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 4.578187904426488e-11,
+          "convex_volume_m3": 8.63676062565278e-11,
+          "dense_excess_m": 0.00014124611589302303,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": -0.020404421614771434
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 2.2588545412841235e-10,
+          "convex_volume_m3": 2.280333254805863e-10,
+          "dense_excess_m": 2.3281272686216085e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 2.3387652883274907e-10,
+          "convex_volume_m3": 2.3387652883274933e-10,
+          "dense_excess_m": 7.32410687763558e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 5.847140595508766e-11,
+          "convex_volume_m3": 9.672199448479733e-11,
+          "dense_excess_m": 0.0001534286190214163,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": -0.0203987014485474
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.932677002556869e-12,
+          "convex_volume_m3": 4.494795580111404e-12,
+          "dense_excess_m": 1.5122760757672155e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.184920204170766e-11,
+          "convex_volume_m3": 5.808563775960847e-11,
+          "dense_excess_m": 8.673978059503137e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.9906835131726297e-11,
+          "convex_volume_m3": 6.716797654175719e-11,
+          "dense_excess_m": 8.741347264593867e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 8.564570823361457e-12,
+          "convex_volume_m3": 9.235095522723947e-12,
+          "dense_excess_m": 1.7988046819859104e-05,
+          "decision": "retain"
+        }
+      ]
+    },
+    {
+      "parent_part": 16,
+      "original_dense_excess_m": 0.0001512735461220351,
+      "original_volume_m3": 5.414121263850287e-09,
+      "output_start": 38,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 17,
+      "original_dense_excess_m": 1.5193856149736374e-06,
+      "original_volume_m3": 1.237873633397168e-08,
+      "output_start": 39,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 18,
+      "original_dense_excess_m": 1.2268080655107749e-05,
+      "original_volume_m3": 1.4625795790383791e-08,
+      "output_start": 40,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 19,
+      "original_dense_excess_m": 3.458255421550046e-06,
+      "original_volume_m3": 5.846522864775084e-09,
+      "output_start": 41,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 20,
+      "original_dense_excess_m": 4.170735342043181e-06,
+      "original_volume_m3": 1.9363243582472347e-09,
+      "output_start": 42,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 21,
+      "original_dense_excess_m": 1.1687925148396374e-06,
+      "original_volume_m3": 1.0097312102038412e-08,
+      "output_start": 43,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 22,
+      "original_dense_excess_m": 6.413912006983451e-06,
+      "original_volume_m3": 2.716556893273276e-09,
+      "output_start": 44,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 23,
+      "original_dense_excess_m": 7.692661443376015e-06,
+      "original_volume_m3": 1.7861856336764359e-09,
+      "output_start": 45,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 24,
+      "original_dense_excess_m": 2.5044698315329393e-05,
+      "original_volume_m3": 1.003165841424663e-08,
+      "output_start": 46,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 25,
+      "original_dense_excess_m": 3.9226060151082346e-06,
+      "original_volume_m3": 6.07304841181774e-09,
+      "output_start": 47,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 26,
+      "original_dense_excess_m": 0.0,
+      "original_volume_m3": 5.7447201319472294e-09,
+      "output_start": 48,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 27,
+      "original_dense_excess_m": 8.262196584700376e-07,
+      "original_volume_m3": 4.9296475233180455e-09,
+      "output_start": 49,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 28,
+      "original_dense_excess_m": 1.1681989948897054e-05,
+      "original_volume_m3": 1.126143170838372e-08,
+      "output_start": 50,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 29,
+      "original_dense_excess_m": 5.929704544423251e-06,
+      "original_volume_m3": 6.163499299973086e-09,
+      "output_start": 51,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 30,
+      "original_dense_excess_m": 1.2287903905071225e-06,
+      "original_volume_m3": 9.093518235257889e-10,
+      "output_start": 52,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 31,
+      "original_dense_excess_m": 3.594433331887299e-06,
+      "original_volume_m3": 5.302083948432486e-09,
+      "output_start": 53,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 32,
+      "original_dense_excess_m": 9.173031831274128e-07,
+      "original_volume_m3": 8.422161390430299e-09,
+      "output_start": 54,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 33,
+      "original_dense_excess_m": 2.6610540761111694e-06,
+      "original_volume_m3": 2.926730394648182e-09,
+      "output_start": 55,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 34,
+      "original_dense_excess_m": 1.2812978150970038e-06,
+      "original_volume_m3": 1.0249349498389848e-08,
+      "output_start": 56,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 35,
+      "original_dense_excess_m": 3.5517536622558894e-06,
+      "original_volume_m3": 5.218983736779572e-09,
+      "output_start": 57,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 36,
+      "original_dense_excess_m": 0.0,
+      "original_volume_m3": 3.2198519081154165e-09,
+      "output_start": 58,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 37,
+      "original_dense_excess_m": 3.224767614701747e-06,
+      "original_volume_m3": 1.7088496619870427e-08,
+      "output_start": 59,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 38,
+      "original_dense_excess_m": 1.1024104636086638e-05,
+      "original_volume_m3": 1.1497550450617947e-08,
+      "output_start": 60,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 39,
+      "original_dense_excess_m": 3.4599836727618053e-06,
+      "original_volume_m3": 3.946453798934903e-09,
+      "output_start": 61,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 40,
+      "original_dense_excess_m": 2.864671156055541e-06,
+      "original_volume_m3": 7.215341662484973e-09,
+      "output_start": 62,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 41,
+      "original_dense_excess_m": 1.0664626144259364e-06,
+      "original_volume_m3": 2.9400823683172384e-09,
+      "output_start": 63,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 42,
+      "original_dense_excess_m": 3.5655882239955733e-06,
+      "original_volume_m3": 3.525616886972466e-09,
+      "output_start": 64,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 43,
+      "original_dense_excess_m": 1.7113202331101916e-06,
+      "original_volume_m3": 5.95753981268831e-09,
+      "output_start": 65,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 44,
+      "original_dense_excess_m": 7.011184929316342e-08,
+      "original_volume_m3": 4.812767957770298e-09,
+      "output_start": 66,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 45,
+      "original_dense_excess_m": 0.0,
+      "original_volume_m3": 2.1684658032246147e-09,
+      "output_start": 67,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 46,
+      "original_dense_excess_m": 1.1839355352706435e-08,
+      "original_volume_m3": 1.3900173506591744e-08,
+      "output_start": 68,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 47,
+      "original_dense_excess_m": 5.424544827981582e-06,
+      "original_volume_m3": 1.2857135417407234e-08,
+      "output_start": 69,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 48,
+      "original_dense_excess_m": 1.2797601127841881e-06,
+      "original_volume_m3": 1.3821461194371906e-09,
+      "output_start": 70,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 49,
+      "original_dense_excess_m": 6.145413010467799e-07,
+      "original_volume_m3": 3.273192246925963e-09,
+      "output_start": 71,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 50,
+      "original_dense_excess_m": 4.120449977765028e-06,
+      "original_volume_m3": 4.125520284126153e-09,
+      "output_start": 72,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 51,
+      "original_dense_excess_m": 3.3028292789283583e-06,
+      "original_volume_m3": 4.600341511238365e-09,
+      "output_start": 73,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 52,
+      "original_dense_excess_m": 7.25453014039059e-08,
+      "original_volume_m3": 7.986611089912325e-09,
+      "output_start": 74,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 53,
+      "original_dense_excess_m": 1.967185758047888e-06,
+      "original_volume_m3": 9.79502329260637e-09,
+      "output_start": 75,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 54,
+      "original_dense_excess_m": 4.0189256732222225e-06,
+      "original_volume_m3": 2.409157630024358e-09,
+      "output_start": 76,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 55,
+      "original_dense_excess_m": 1.9128115986744742e-07,
+      "original_volume_m3": 7.164089879872473e-10,
+      "output_start": 77,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 56,
+      "original_dense_excess_m": 6.962240388628804e-07,
+      "original_volume_m3": 3.415229436163355e-09,
+      "output_start": 78,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 57,
+      "original_dense_excess_m": 0.0,
+      "original_volume_m3": 1.4906583819842503e-09,
+      "output_start": 79,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 58,
+      "original_dense_excess_m": 2.522118153450801e-06,
+      "original_volume_m3": 1.7672158544490002e-09,
+      "output_start": 80,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 59,
+      "original_dense_excess_m": 1.0104935840537662e-06,
+      "original_volume_m3": 3.925386003319798e-09,
+      "output_start": 81,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 60,
+      "original_dense_excess_m": 4.28289518291825e-06,
+      "original_volume_m3": 1.5395144551078214e-09,
+      "output_start": 82,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 61,
+      "original_dense_excess_m": 2.2787364032184997e-06,
+      "original_volume_m3": 4.830828768702521e-09,
+      "output_start": 83,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 62,
+      "original_dense_excess_m": 1.0000664932675212e-06,
+      "original_volume_m3": 6.143026901304971e-09,
+      "output_start": 84,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 63,
+      "original_dense_excess_m": 5.107636945045528e-06,
+      "original_volume_m3": 1.1182596672941101e-08,
+      "output_start": 85,
+      "decision": "unchanged",
+      "output_count": 1
+    }
+  ],
+  "source_coverage": "approximate local decomposition; independent missing-material gate required"
+}

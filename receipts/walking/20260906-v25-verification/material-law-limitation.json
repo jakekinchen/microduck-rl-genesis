@@ -1,0 +1,66 @@
+{
+  "schema": "microduck.surface-material-law-limitation/v1",
+  "input_sha256": "e961bc1f62ad684c8f393ff2ef07d15f9becef1434b66823b579a516429110ff",
+  "observations": [
+    {
+      "profile": "rigid-control",
+      "masses_kg": [
+        0.2,
+        0.4,
+        0.737243
+      ],
+      "indentation_m": [
+        0.00010775542021485754,
+        0.00010775542021485751,
+        0.00010775542021485751
+      ],
+      "indentation_span_m": 2.710505431213761e-20
+    },
+    {
+      "profile": "soft-low-traction",
+      "masses_kg": [
+        0.2,
+        0.4,
+        0.737243
+      ],
+      "indentation_m": [
+        5.465565838585514e-05,
+        5.465565838585514e-05,
+        5.465565838585514e-05
+      ],
+      "indentation_span_m": 0.0
+    },
+    {
+      "profile": "soft-middle",
+      "masses_kg": [
+        0.2,
+        0.4,
+        0.737243
+      ],
+      "indentation_m": [
+        0.0004914318998904927,
+        0.0004914318998904925,
+        0.0004914318998904929
+      ],
+      "indentation_span_m": 4.336808689942018e-19
+    },
+    {
+      "profile": "soft-high-traction",
+      "masses_kg": [
+        0.2,
+        0.4,
+        0.737243
+      ],
+      "indentation_m": [
+        0.004127204851602756,
+        0.004127204851602757,
+        0.004127204851602756
+      ],
+      "indentation_span_m": 8.673617379884035e-19
+    }
+  ],
+  "conclusion": "These fixed solver coefficients do not identify a force-dependent carpet material law: the gravity-loaded primitive indentation is essentially invariant to mass in this probe. Training uses numerical contact stress conditions only.",
+  "material_calibration_passed": false,
+  "physical_generalization_passed": false,
+  "source": "https://mujoco.readthedocs.io/en/stable/modeling.html#reference"
+}

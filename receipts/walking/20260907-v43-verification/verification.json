@@ -1,0 +1,73 @@
+{
+  "schema": "microduck.handoff-activity-review/v43",
+  "complete": true,
+  "receipt_checks": {
+    "20260907-v43-handoff-coverage": {
+      "files": 1481,
+      "manifest_sha256": "30030383043b115fc847c94e97c35ed7f82028a48a584aef443ca3cf11502543"
+    },
+    "20260907-v43-handoff-coverage-r2": {
+      "files": 1634,
+      "manifest_sha256": "1717e3c3f03bf390bec17699164d3a51b5db9d2a8f5c62e9a02a0483c06faf16"
+    },
+    "20260907-v43-handoff-coverage-r3": {
+      "files": 1706,
+      "manifest_sha256": "7b2add3d64bb619b40c2facccba58cc015b43dade06bc541ccc55c2c77035696"
+    },
+    "20260907-v43-handoff-analysis": {
+      "files": 2,
+      "manifest_sha256": "1c85f117011af03ebaab7394dd00f2b104ecdd5fa54706ec1b0b3aa9c23adbba"
+    },
+    "20260907-v43-byte-verification": {
+      "files": 2,
+      "manifest_sha256": "5e8c9443568f311649cc4ac3d3132949674456952272da9efa673f8acc47a584"
+    }
+  },
+  "source_freezes": [
+    {
+      "path": "experiments/walking/handoff-coverage-freeze-v43.json",
+      "sources": 173,
+      "sha256": "5fba2ff081dbb560e8d7a91ee5add0c65b24843c3d1db22f81325efdb05e1397"
+    },
+    {
+      "path": "experiments/walking/handoff-analysis-freeze-v43.json",
+      "sources": 4,
+      "sha256": "6f25a526bcb89aaab9692f74c72c196c205b263b61b36e35bf8ec22f742b4ef2"
+    },
+    {
+      "path": "experiments/walking/handoff-coverage-freeze-v43-r2.json",
+      "sources": 174,
+      "sha256": "a28527454dfa74e99435e09a12a1d5a4809bd8e7b1904707e28e25ea9558bdda"
+    },
+    {
+      "path": "experiments/walking/handoff-coverage-freeze-v43-r3.json",
+      "sources": 176,
+      "sha256": "866b3fe16ee79e7673d8743340d4eaed609c851996fe7da3af397e0a1055dd9c"
+    }
+  ],
+  "replayed_controls": 36622,
+  "actual_action_and_observation_bytes_identical": true,
+  "generalized_coordinates_exactly_equal": true,
+  "captured_reset_states": 65,
+  "paired_branch_trials": 130,
+  "source_branches": 49,
+  "source_branch_matched_controls": 9987,
+  "additive_original_torque_gate_changed_outcomes": 0,
+  "workspace_tests": {
+    "tests": 138,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "visual_review": "Paired clearance plot inspected; complete curves stop at measured fall, with original surface-relative fall threshold.",
+  "preservation": "Only redundant serializations created during this activity were replaced after byte verification. Earlier failed attempts, empty partial snapshot, manifests and conversion maps remain retained. Existing user files and historical policy results preserved.",
+  "next_step": "One bounded native experiment learning full walk-brake-stand-restart sequences, preserving V30 regression and physical-quality gates; collect actual training state/history coverage.",
+  "new_training_executed": false,
+  "policy_promoted": false,
+  "retained_baseline": "V21/V15 motor pair with V30 command controller",
+  "fresh_terrain_opened": false,
+  "physical_calibration": false,
+  "paid_compute_used": false,
+  "hardware_used": false,
+  "local_activity": "no_known_training_process"
+}

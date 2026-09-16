@@ -1,0 +1,1972 @@
+{
+  "schema": "microduck.walking-self-contact-rejection/v1",
+  "case_reports": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0024979264231383314,
+      "violating_frames": 27,
+      "first_violation": {
+        "time_s": 0.56,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 5.3327833474248385e-05
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010066096199343752
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010042052709607816
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010208221494795787
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010231790809717798
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-12",
+      "passed": false,
+      "failures": [
+        "incomplete_duration",
+        "self_penetration_over_1mm"
+      ],
+      "frames": 897,
+      "maximum_self_penetration_m": 0.009349898434651692,
+      "violating_frames": 225,
+      "first_violation": {
+        "time_s": 0.58,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00015539547573733547
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001128802014393005
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011264019004059397
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001141124617183923
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011434771918272335
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-20",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0012033387679564042,
+      "violating_frames": 23,
+      "first_violation": {
+        "time_s": 0.58,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00011481806106018086
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010777449778718894
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010754718971672024
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001090376969241576
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010926050991926857
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "passed": false,
+      "failures": [
+        "incomplete_duration",
+        "self_penetration_over_1mm"
+      ],
+      "frames": 857,
+      "maximum_self_penetration_m": 0.009029099966994534,
+      "violating_frames": 193,
+      "first_violation": {
+        "time_s": 0.58,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00012251915612064806
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010863184482113796
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010839967313871666
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010990294922984284
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011013052456304274
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-right",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.00322528429803108,
+      "violating_frames": 37,
+      "first_violation": {
+        "time_s": 0.58,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00011496154324421181
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010786586474402981
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001076403793745844
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010912061508699636
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010934164266126227
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-left",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.002549795855792191,
+      "violating_frames": 28,
+      "first_violation": {
+        "time_s": 0.58,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00013880294735659304
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011193596202582923
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011170416810992302
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011315384470505466
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001133810622388229
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-right",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0013170007270289922,
+      "violating_frames": 25,
+      "first_violation": {
+        "time_s": 0.56,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 4.9913354970169335e-05
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010022475547392965
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0009998544032773502
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010164879418197044
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010188339004970305
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "zero-lag--forward-08",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0011852898451912258,
+      "violating_frames": 20,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00013030984720044733
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010743799996922644
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010746476811957762
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010783586359299603
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010780963077166386
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "zero-lag--forward-12",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0011823118337478838,
+      "violating_frames": 20,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00010822966843708148
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010467043062973927
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010469654051996535
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010511406852308377
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010508848045766206
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "zero-lag--forward-20",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0011889465131115595,
+      "violating_frames": 20,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00013173717752376299
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010783562979831468
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010738037269797216
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010771228437363167
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010816793677781659
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "zero-lag--turn-left",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.002439225409631278,
+      "violating_frames": 22,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00012421209000468213
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010648916009376758
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001060304179955667
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010640458371352982
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010686372247343413
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "zero-lag--turn-right",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.001184750662659748,
+      "violating_frames": 21,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00012122437683110093
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010655824592288258
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010610353354294157
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010645202411254649
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010690713154737888
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "zero-lag--arc-left",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0011858249157106777,
+      "violating_frames": 21,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00012167565503967223
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010653894813776388
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010608675280076327
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010642030847727215
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001068728981119903
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "zero-lag--arc-right",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.0011852024285058569,
+      "violating_frames": 20,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0001297788475124927
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010737434965779292
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010740122271920092
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001077728006101293
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001077464649586141
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": true
+    },
+    {
+      "case_id": "long-30-20ms--forward-08",
+      "passed": false,
+      "failures": [
+        "incomplete_duration",
+        "self_penetration_over_1mm"
+      ],
+      "frames": 866,
+      "maximum_self_penetration_m": 0.009428049882792342,
+      "violating_frames": 197,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 9.163784714984797e-05
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011118693470999015
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011111425465853704
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011181031430785417
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011188159266410948
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--forward-12",
+      "passed": false,
+      "failures": [
+        "incomplete_duration",
+        "self_penetration_over_1mm"
+      ],
+      "frames": 868,
+      "maximum_self_penetration_m": 0.009361580560027557,
+      "violating_frames": 218,
+      "first_violation": {
+        "time_s": 0.6,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 6.7091402715863585e-06
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.000996433530374377
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.000995519222973782
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010051905343061334
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001006087182946399
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--forward-20",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.007493839334180504,
+      "violating_frames": 217,
+      "first_violation": {
+        "time_s": 0.6,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 6.942669550315958e-05
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011043565191997864
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011037523995834364
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011033297631211632
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011092185583473349
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--turn-left",
+      "passed": false,
+      "failures": [
+        "incomplete_duration",
+        "self_penetration_over_1mm"
+      ],
+      "frames": 889,
+      "maximum_self_penetration_m": 0.009318406125633163,
+      "violating_frames": 207,
+      "first_violation": {
+        "time_s": 0.64,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0001065301981937158
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011258027714198678
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011253919496160057
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001130665014201376
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011310679106596667
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--turn-right",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.008353443119035665,
+      "violating_frames": 234,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 6.497804563590521e-05
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010738413458391838
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010732878680175873
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010800571720127623
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0010805999746329323
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--arc-left",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.00860007174468081,
+      "violating_frames": 221,
+      "first_violation": {
+        "time_s": 0.64,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00011023849884879269
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011328431823995227
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011325163735471995
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011373368944944807
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001137657399530039
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--arc-right",
+      "passed": false,
+      "failures": [
+        "self_penetration_over_1mm"
+      ],
+      "frames": 900,
+      "maximum_self_penetration_m": 0.008483163309726765,
+      "violating_frames": 227,
+      "first_violation": {
+        "time_s": 0.62,
+        "contacts": [
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "power_support",
+                "geom_id": 7
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.00010842505840559226
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001128439527258596
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001127616627856367
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.001134778202570689
+          },
+          {
+            "geometries": [
+              {
+                "body": "trunk_base",
+                "mesh": "np_f970",
+                "geom_id": 9
+              },
+              {
+                "body": "leg",
+                "mesh": "leg",
+                "geom_id": 26
+              }
+            ],
+            "penetration_m": 0.0011355851966367162
+          }
+        ]
+      },
+      "threshold_m": 0.001,
+      "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance.",
+      "original_reported_passed": false
+    }
+  ],
+  "passed_cases": 0,
+  "total_cases": 21,
+  "policy_sha256": "dc27ad221d2519b40e1c06979d254fdc308a17cc7a8d3ec9592668d6d39e7ab1",
+  "input_manifest_sha256": "81a42c494f16e5b0131eb3294d4ba721f328e86ffa8000f8ba55708f18c03178",
+  "input_trace_sha256": "c056a6b04ff84970500ed51065b7536d5459c8b1ebd28e6e7f04219b759c532c",
+  "model_sha256": "13ebc1cf3fe8111c1374d6afb7c15dde82ea85f540076ce98346757ac121cf8c",
+  "held_out": false,
+  "acceptance_eligible": false,
+  "boundary": "Additive visible-development copied-state self-contact rejection only. Original scores and files remain unchanged; passing does not imply dynamics, whole-task or physical acceptance."
+}

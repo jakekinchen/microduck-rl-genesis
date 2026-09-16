@@ -1,0 +1,523 @@
+{
+  "schema": "microduck.walking-heading-evaluation/v1",
+  "held_out": false,
+  "policy_sha256": "948f6e601098845bf394c60de61cb38aa435d61934b86fc46dd39e4c9908c8cb",
+  "checkpoint_sha256": "0f0cad5839cf22c492e69dfd1d1e41c26ce430a0363018bf5fa13faf6333afba",
+  "total_cases": 21,
+  "original_passed_cases": 0,
+  "heading_passed_cases": 0,
+  "combined_passed_cases": 0,
+  "case_reports": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 28.1019638946532,
+          "maximum_heading_error_deg": 28.585344825697398,
+          "signed_endpoint_heading_error_deg": -28.1019638946532,
+          "measured_heading_change_deg": -28.1019638946532,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-12",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 37.58823277851609,
+          "maximum_heading_error_deg": 37.89049997112581,
+          "signed_endpoint_heading_error_deg": -37.58823277851609,
+          "measured_heading_change_deg": -37.58823277851609,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-20",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 68.42384371447146,
+          "maximum_heading_error_deg": 68.50976481962546,
+          "signed_endpoint_heading_error_deg": -68.42384371447146,
+          "measured_heading_change_deg": -68.42384371447146,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 34.06982784477804,
+          "maximum_heading_error_deg": 34.24142936428051,
+          "signed_endpoint_heading_error_deg": -34.06982784477804,
+          "measured_heading_change_deg": 281.05695947717476,
+          "requested_heading_change_deg": 315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-right",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 38.76134770958591,
+          "maximum_heading_error_deg": 38.821501636911606,
+          "signed_endpoint_heading_error_deg": 38.76134770958591,
+          "measured_heading_change_deg": -276.36543961236686,
+          "requested_heading_change_deg": -315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-left",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 46.229004167745515,
+          "maximum_heading_error_deg": 46.87897465753149,
+          "signed_endpoint_heading_error_deg": -46.229004167745515,
+          "measured_heading_change_deg": 205.87242944642188,
+          "requested_heading_change_deg": 252.10143361416738
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-right",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 48.91762413714845,
+          "maximum_heading_error_deg": 48.91762413714845,
+          "signed_endpoint_heading_error_deg": -48.91762413714845,
+          "measured_heading_change_deg": -301.0190577513158,
+          "requested_heading_change_deg": -252.10143361416738
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "zero-lag--forward-08",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 46.0753904064434,
+          "maximum_heading_error_deg": 46.0753904064434,
+          "signed_endpoint_heading_error_deg": -46.0753904064434,
+          "measured_heading_change_deg": -46.0753904064434,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "zero-lag--forward-12",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 71.73192006097368,
+          "maximum_heading_error_deg": 71.73192006097368,
+          "signed_endpoint_heading_error_deg": -71.73192006097368,
+          "measured_heading_change_deg": -71.73192006097368,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "zero-lag--forward-20",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 17.55891924891055,
+          "maximum_heading_error_deg": 18.963730631162775,
+          "signed_endpoint_heading_error_deg": -17.55891924891055,
+          "measured_heading_change_deg": -17.55891924891055,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "zero-lag--turn-left",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 21.626026180926885,
+          "maximum_heading_error_deg": 22.295678222299344,
+          "signed_endpoint_heading_error_deg": -21.626026180926885,
+          "measured_heading_change_deg": 293.5007611410259,
+          "requested_heading_change_deg": 315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "zero-lag--turn-right",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 67.5873385069205,
+          "maximum_heading_error_deg": 67.79321549286982,
+          "signed_endpoint_heading_error_deg": -67.5873385069205,
+          "measured_heading_change_deg": -382.71412582887325,
+          "requested_heading_change_deg": -315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "zero-lag--arc-left",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 54.94407756215419,
+          "maximum_heading_error_deg": 54.94407756215419,
+          "signed_endpoint_heading_error_deg": -54.94407756215419,
+          "measured_heading_change_deg": 197.1573560520132,
+          "requested_heading_change_deg": 252.10143361416738
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "zero-lag--arc-right",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 73.73762244025305,
+          "maximum_heading_error_deg": 73.73762244025305,
+          "signed_endpoint_heading_error_deg": -73.73762244025305,
+          "measured_heading_change_deg": -325.83905605442044,
+          "requested_heading_change_deg": -252.10143361416738
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--forward-08",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 44.58317774127698,
+          "maximum_heading_error_deg": 44.834290110869915,
+          "signed_endpoint_heading_error_deg": -44.58317774127698,
+          "measured_heading_change_deg": -44.58317774127698,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--forward-12",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 54.56897036625691,
+          "maximum_heading_error_deg": 54.56897036625691,
+          "signed_endpoint_heading_error_deg": -54.56897036625691,
+          "measured_heading_change_deg": -54.56897036625691,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--forward-20",
+      "heading": {
+        "passed": false,
+        "metrics": {},
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "missing_or_invalid_heading_evidence"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--turn-left",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 58.71475527330517,
+          "maximum_heading_error_deg": 59.04067166420025,
+          "signed_endpoint_heading_error_deg": -58.71475527330517,
+          "measured_heading_change_deg": 256.4120320486476,
+          "requested_heading_change_deg": 315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--turn-right",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 85.30049741300036,
+          "maximum_heading_error_deg": 86.13865739558604,
+          "signed_endpoint_heading_error_deg": 85.30049741300036,
+          "measured_heading_change_deg": -229.82628990895242,
+          "requested_heading_change_deg": -315.12678732195275
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--arc-left",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 70.7534256219251,
+          "maximum_heading_error_deg": 74.14752146024068,
+          "signed_endpoint_heading_error_deg": -70.7534256219251,
+          "measured_heading_change_deg": 181.3480079922423,
+          "requested_heading_change_deg": 252.10143361416738
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    },
+    {
+      "case_id": "long-30-20ms--arc-right",
+      "heading": {
+        "passed": false,
+        "metrics": {
+          "endpoint_heading_error_deg": 36.56742479796947,
+          "maximum_heading_error_deg": 39.67022683344604,
+          "signed_endpoint_heading_error_deg": -36.56742479796947,
+          "measured_heading_change_deg": -288.66885841213684,
+          "requested_heading_change_deg": -252.10143361416738
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [
+          "endpoint_heading_error_deg",
+          "maximum_heading_error_deg"
+        ],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "original_passed": false,
+      "combined_passed": false
+    }
+  ],
+  "source_sha256": {
+    "scripts/evaluate_walking_heading.py": "1b9da6c5fe7b827c336de74443a930647b03d34414b23510f19097d7943dd125",
+    "experiments/walking/heading.py": "404a1b860c012e3274f09faad45d62aefa003c6a3104661e8cf29dfc5e1559e8",
+    "experiments/walking/HEADING-v1.md": "be04e6614110116f9797bd2853cd362cbe7a7c92c291230d66db2eab47224e41",
+    "tests/test_walking_heading.py": "4b85070f857ab5e51b7cdaf8fe0a453578d1328a3ce879a2b2e40a493635102a"
+  },
+  "input_receipt": "/Users/kelly/Developer/microduck-rl-genesis/receipts/walking/20260905-v6-old-regression",
+  "input_sha256": {
+    "SHA256SUMS": "27d3d3de0ac8fc5bfb97cde8d699d12c4c221d4d8832cedbab47eb1725b9dac8",
+    "evaluation.json": "15588d22819d2dcc4d3dcc27d7afb0dfc7ba72a56eb8e302e2e48bfcc0938129",
+    "trajectory.jsonl": "ac8ddf5655656df0d8d0264f4434eed93288d1e0e573a690ca42c724532bda03",
+    "training.json": "7780da80efbeef87051911f493e0370e665cd6a94b5ad653a0416a95964381eb"
+  },
+  "physical_transfer_validated": false,
+  "boundary": "Additive exposed heading diagnostic on immutable final traces; preserves original scores. Neither hidden generalization nor physical calibration."
+}

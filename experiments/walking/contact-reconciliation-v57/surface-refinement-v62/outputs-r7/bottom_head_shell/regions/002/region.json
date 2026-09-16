@@ -1,0 +1,1768 @@
+{
+  "parent_part": 2,
+  "original_dense_excess_m": 0.0010835727010125567,
+  "original_volume_m3": 8.071999861160209e-07,
+  "output_start": 2,
+  "intersected_source_volume_m3": 6.293951106087832e-07,
+  "decision": "local_coacd_source_partition",
+  "output_count": 139,
+  "coarse_parts": 64,
+  "region_directory": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r7/bottom_head_shell/regions/002",
+  "coarse_sha256": "13490092ce6501d571391a84d212790f9b184796f2ec2dd99cab6f0afd8810ad",
+  "refined_sha256": "14bee0ba271db1267443d0f84a61e954049c2e76a9be0adb8ac22cfabf2da97a",
+  "local_refinement": [
+    {
+      "parent_part": 0,
+      "original_dense_excess_m": 0.00011336305709084231,
+      "original_volume_m3": 1.5537611339730643e-08,
+      "output_start": 0,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 1,
+      "original_dense_excess_m": 3.6836925477921605e-07,
+      "original_volume_m3": 1.6511523065466015e-08,
+      "output_start": 1,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 2,
+      "original_dense_excess_m": 6.213487062869437e-07,
+      "original_volume_m3": 6.1996135645702126e-09,
+      "output_start": 2,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 3,
+      "original_dense_excess_m": 1.0331434375514325e-08,
+      "original_volume_m3": 1.5839565873937994e-08,
+      "output_start": 3,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 4,
+      "original_dense_excess_m": 3.515788216155101e-05,
+      "original_volume_m3": 1.2404731447596134e-08,
+      "output_start": 4,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 5,
+      "original_dense_excess_m": 5.001723850099956e-05,
+      "original_volume_m3": 4.4177641722264815e-09,
+      "output_start": 5,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 6,
+      "original_dense_excess_m": 0.0001967337434626095,
+      "original_volume_m3": 1.1980767586233592e-09,
+      "output_start": 6,
+      "intersected_source_volume_m3": 1.0608032747194134e-09,
+      "decision": "source_partition",
+      "output_count": 12,
+      "partition_events": [
+        {
+          "depth": 0,
+          "source_volume_m3": 1.0608032747194134e-09,
+          "convex_volume_m3": 1.1980639170069303e-09,
+          "dense_excess_m": 0.00021558157021081954,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012451149623417555
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 7.267005874108713e-10,
+          "convex_volume_m3": 7.913820110876062e-10,
+          "dense_excess_m": 0.00013133292881363384,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": 0.0007618173645636632
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 3.3410268730853917e-10,
+          "convex_volume_m3": 3.829429811914645e-10,
+          "dense_excess_m": 0.0001931011601212513,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.05400115454003798
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 2.358050516116374e-10,
+          "convex_volume_m3": 2.3580505161163513e-10,
+          "dense_excess_m": 1.467511591522657e-17,
+          "decision": "retain"
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 4.908955357992354e-10,
+          "convex_volume_m3": 5.268213531787674e-10,
+          "dense_excess_m": 0.00013133620599422595,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.05390247326444997
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 1.836387842852084e-10,
+          "convex_volume_m3": 1.8363878428520897e-10,
+          "dense_excess_m": 1.4324700707755517e-17,
+          "decision": "retain"
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 1.5046390302333182e-10,
+          "convex_volume_m3": 1.9930419690625612e-10,
+          "dense_excess_m": 0.0001931011601212513,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": 0.0004733546552425205
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 2.4133230839016677e-10,
+          "convex_volume_m3": 2.413323083901675e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 2.4956322740906764e-10,
+          "convex_volume_m3": 2.8548904478859807e-10,
+          "dense_excess_m": 0.00013133620599422595,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012884991478115487
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 3.6328636660721106e-11,
+          "convex_volume_m3": 3.640005953141623e-11,
+          "dense_excess_m": 1.3002120287169762e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.1413526636261095e-10,
+          "convex_volume_m3": 1.45104394828444e-10,
+          "dense_excess_m": 0.00014712425933484412,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012017307768719624
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 1.34712093910414e-10,
+          "convex_volume_m3": 1.4645677537552098e-10,
+          "dense_excess_m": 8.625381548704968e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 1.1485113349865293e-10,
+          "convex_volume_m3": 1.3488179411864894e-10,
+          "dense_excess_m": 0.00012557660242586973,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": 0.0003932927878154904
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 8.150963747554015e-11,
+          "convex_volume_m3": 9.685087557059339e-11,
+          "dense_excess_m": 0.00013667733014747357,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.05371736211049236
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 3.2625628887071227e-11,
+          "convex_volume_m3": 4.801432755036739e-11,
+          "dense_excess_m": 0.00014705390095254989,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.05371927979309791
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 5.264665040851383e-11,
+          "convex_volume_m3": 5.26466504085143e-11,
+          "dense_excess_m": 1.4339616689940683e-17,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 6.220448309013818e-11,
+          "convex_volume_m3": 6.938554427285318e-11,
+          "dense_excess_m": 9.664639643395745e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 5.518818586096429e-11,
+          "convex_volume_m3": 5.5214517557232965e-11,
+          "dense_excess_m": 5.084262280274065e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 2.632145161457591e-11,
+          "convex_volume_m3": 4.1148009573485206e-11,
+          "dense_excess_m": 0.00013667733014747357,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": 0.00024906143315492053
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.0231967876346645e-11,
+          "convex_volume_m3": 3.110570944939402e-11,
+          "dense_excess_m": 1.4727076897805167e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 2.3936610107245423e-12,
+          "convex_volume_m3": 2.3936650076631856e-12,
+          "dense_excess_m": 1.1162618838376214e-08,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 4.130444234944779e-12,
+          "convex_volume_m3": 4.1304442349448726e-12,
+          "dense_excess_m": 7.329364143826141e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 2.2191007379630777e-11,
+          "convex_volume_m3": 2.4878912987128234e-11,
+          "dense_excess_m": 4.088453183945703e-05,
+          "decision": "retain"
+        }
+      ]
+    },
+    {
+      "parent_part": 7,
+      "original_dense_excess_m": 6.333483800381943e-05,
+      "original_volume_m3": 6.395266822440713e-09,
+      "output_start": 18,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 8,
+      "original_dense_excess_m": 2.5763488474617598e-08,
+      "original_volume_m3": 5.517055771147646e-09,
+      "output_start": 19,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 9,
+      "original_dense_excess_m": 5.69535909071767e-05,
+      "original_volume_m3": 3.683905955373996e-09,
+      "output_start": 20,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 10,
+      "original_dense_excess_m": 4.1932493612254564e-05,
+      "original_volume_m3": 3.1019407516919367e-09,
+      "output_start": 21,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 11,
+      "original_dense_excess_m": 0.00016296305514902664,
+      "original_volume_m3": 1.03681796658572e-09,
+      "output_start": 22,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 12,
+      "original_dense_excess_m": 3.8135777873428154e-07,
+      "original_volume_m3": 5.114034139735466e-08,
+      "output_start": 23,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 13,
+      "original_dense_excess_m": 1.9827676295509594e-09,
+      "original_volume_m3": 1.7527945088897096e-08,
+      "output_start": 24,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 14,
+      "original_dense_excess_m": 1.64250345999053e-07,
+      "original_volume_m3": 1.0709158732529014e-08,
+      "output_start": 25,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 15,
+      "original_dense_excess_m": 1.3938572745318689e-08,
+      "original_volume_m3": 2.9451264124368307e-09,
+      "output_start": 26,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 16,
+      "original_dense_excess_m": 2.2234680841719643e-05,
+      "original_volume_m3": 7.156595332002878e-09,
+      "output_start": 27,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 17,
+      "original_dense_excess_m": 4.2349888570146963e-05,
+      "original_volume_m3": 2.345593062607028e-09,
+      "output_start": 28,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 18,
+      "original_dense_excess_m": 0.00028371283492427483,
+      "original_volume_m3": 1.5201204440999515e-08,
+      "output_start": 29,
+      "intersected_source_volume_m3": 1.3911375340673852e-08,
+      "decision": "source_partition",
+      "output_count": 21,
+      "partition_events": [
+        {
+          "depth": 0,
+          "source_volume_m3": 1.3911375340673852e-08,
+          "convex_volume_m3": 1.5201034608526614e-08,
+          "dense_excess_m": 0.0002837635327180301,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.04647646472708468
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 7.002470125056912e-09,
+          "convex_volume_m3": 7.655222078693104e-09,
+          "dense_excess_m": 0.0002838920893166884,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.049139781513555594
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 6.908905215616954e-09,
+          "convex_volume_m3": 6.9089052156169446e-09,
+          "dense_excess_m": 7.53644380168212e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 3.5480160000278548e-09,
+          "convex_volume_m3": 3.8868578340033375e-09,
+          "dense_excess_m": 0.0002606756577805537,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.05047143990679105
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 3.4544541250290575e-09,
+          "convex_volume_m3": 3.454454490825391e-09,
+          "dense_excess_m": 3.966299126954238e-10,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.8196493981004263e-09,
+          "convex_volume_m3": 1.9814981059513693e-09,
+          "dense_excess_m": 0.00022906910577051505,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012324996226407843
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.7283666019274266e-09,
+          "convex_volume_m3": 1.856457822960185e-09,
+          "dense_excess_m": 0.00021910795003416789,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012327585065329005
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 1.0297323429982487e-09,
+          "convex_volume_m3": 1.039895035775293e-09,
+          "dense_excess_m": 3.189217770909967e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 7.89917055102175e-10,
+          "convex_volume_m3": 9.416030701760753e-10,
+          "dense_excess_m": 0.00022906910577051505,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.05113726910340878
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 1.0183614611705256e-09,
+          "convex_volume_m3": 1.0279519925460898e-09,
+          "dense_excess_m": 1.9037221642909285e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 7.100051407569023e-10,
+          "convex_volume_m3": 8.285058304140976e-10,
+          "dense_excess_m": 0.00021910795003416789,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.049805610710173316
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.1920812544953034e-10,
+          "convex_volume_m3": 4.762583335909012e-10,
+          "dense_excess_m": 0.0001941324929273227,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011800825017825381
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.707089296526461e-10,
+          "convex_volume_m3": 4.480362521509919e-10,
+          "dense_excess_m": 0.00022244658450594454,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011800825017825381
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.5531550088194517e-10,
+          "convex_volume_m3": 4.185567430521839e-10,
+          "dense_excess_m": 0.00021910764105106275,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011802119437285964
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.5468963987495934e-10,
+          "convex_volume_m3": 3.546896406238419e-10,
+          "dense_excess_m": 2.8155514819394295e-12,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 2.620574915922469e-10,
+          "convex_volume_m3": 2.620574915922456e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 1.5715063385728336e-10,
+          "convex_volume_m3": 2.1420084199865555e-10,
+          "dense_excess_m": 0.0001941324929273227,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.00992882030207267
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 2.6205749159224845e-10,
+          "convex_volume_m3": 2.620574915922489e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 1.0865143806039737e-10,
+          "convex_volume_m3": 1.859787605587427e-10,
+          "dense_excess_m": 0.00022244658450594454,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.00992882030207267
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 2.627046318993693e-10,
+          "convex_volume_m3": 2.627046318993689e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 9.26108689825766e-11,
+          "convex_volume_m3": 1.558521111528157e-10,
+          "dense_excess_m": 0.00021910764105106275,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.00992882030207267
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 4.6241360503826467e-11,
+          "convex_volume_m3": 7.828617483462692e-11,
+          "dense_excess_m": 0.0001845070863355125,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.051470183701717645
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.1090927335345656e-10,
+          "convex_volume_m3": 1.242053662465121e-10,
+          "dense_excess_m": 0.00011246252875731131,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 4.400098086973029e-11,
+          "convex_volume_m3": 4.4030386361193796e-11,
+          "dense_excess_m": 3.0994372385310304e-07,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 6.465045719066738e-11,
+          "convex_volume_m3": 1.0048575347604698e-10,
+          "dense_excess_m": 0.00016708429046754844,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.050804354505099916
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 4.4353864717935646e-11,
+          "convex_volume_m3": 4.4353903277677835e-11,
+          "dense_excess_m": 3.2721531362900764e-10,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 4.82570042646403e-11,
+          "convex_volume_m3": 7.991927157860385e-11,
+          "dense_excess_m": 0.00016433096162373352,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.05013852530848219
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 2.4226229901129058e-11,
+          "convex_volume_m3": 4.0744633565646645e-11,
+          "dense_excess_m": 0.00017194901796703939,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011538739413534147
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 2.2015130602697302e-11,
+          "convex_volume_m3": 2.201516085017144e-11,
+          "dense_excess_m": 4.769057455450797e-10,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 3.61836163709472e-11,
+          "convex_volume_m3": 5.122751457254253e-11,
+          "dense_excess_m": 0.00014708636417243417,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011538739413534147
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 2.8466840819720052e-11,
+          "convex_volume_m3": 4.6964453633203396e-11,
+          "dense_excess_m": 0.00016548068973299112,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011538739413534147
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 2.4441434100606675e-11,
+          "convex_volume_m3": 4.215373574475213e-11,
+          "dense_excess_m": 0.00016433072063297947,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011539386623264439
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 2.381557016403357e-11,
+          "convex_volume_m3": 2.3815572759231132e-11,
+          "dense_excess_m": 4.2601068239043387e-11,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 2.2679196472493118e-11,
+          "convex_volume_m3": 2.6879270133268203e-11,
+          "dense_excess_m": 6.730599666655909e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 1.5470334286362022e-12,
+          "convex_volume_m3": 1.566001424293803e-12,
+          "dense_excess_m": 8.810228027618653e-07,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 2.638574087719275e-11,
+          "convex_volume_m3": 2.960791620356149e-11,
+          "dense_excess_m": 5.2371846487533975e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 9.797875493754408e-12,
+          "convex_volume_m3": 1.0171344855506838e-11,
+          "dense_excess_m": 7.40124911545186e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 2.4713030547554206e-11,
+          "convex_volume_m3": 2.856121491608834e-11,
+          "dense_excess_m": 5.741021999954045e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 3.75381027216599e-12,
+          "convex_volume_m3": 3.923324558185014e-12,
+          "dense_excess_m": 3.281919801221594e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 2.3974756627849812e-11,
+          "convex_volume_m3": 2.7794658885631006e-11,
+          "dense_excess_m": 5.513922092251345e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 4.666774727569436e-13,
+          "convex_volume_m3": 5.528097192552619e-13,
+          "dense_excess_m": 3.017355966263428e-06,
+          "decision": "retain"
+        }
+      ]
+    },
+    {
+      "parent_part": 19,
+      "original_dense_excess_m": 2.1470760042660986e-05,
+      "original_volume_m3": 8.668722867046578e-09,
+      "output_start": 50,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 20,
+      "original_dense_excess_m": 1.1719776694837856e-05,
+      "original_volume_m3": 1.1689042800245886e-08,
+      "output_start": 51,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 21,
+      "original_dense_excess_m": 1.917972451391905e-05,
+      "original_volume_m3": 2.769846250223641e-09,
+      "output_start": 52,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 22,
+      "original_dense_excess_m": 1.3528738471288475e-05,
+      "original_volume_m3": 4.8759709377119036e-09,
+      "output_start": 53,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 23,
+      "original_dense_excess_m": 6.832707188801607e-05,
+      "original_volume_m3": 1.0156091633074265e-08,
+      "output_start": 54,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 24,
+      "original_dense_excess_m": 1.3853437986615024e-05,
+      "original_volume_m3": 5.963809467898017e-09,
+      "output_start": 55,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 25,
+      "original_dense_excess_m": 0.00016832929257454594,
+      "original_volume_m3": 6.5184008043226684e-09,
+      "output_start": 56,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 26,
+      "original_dense_excess_m": 4.4601879786285475e-09,
+      "original_volume_m3": 1.6815781114341394e-08,
+      "output_start": 57,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 27,
+      "original_dense_excess_m": 3.505351862481319e-05,
+      "original_volume_m3": 6.174453695619285e-09,
+      "output_start": 58,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 28,
+      "original_dense_excess_m": 4.365876327310876e-05,
+      "original_volume_m3": 5.057745546830933e-09,
+      "output_start": 59,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 29,
+      "original_dense_excess_m": 4.934961449731376e-05,
+      "original_volume_m3": 4.924001083631853e-09,
+      "output_start": 60,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 30,
+      "original_dense_excess_m": 4.18130331870673e-11,
+      "original_volume_m3": 5.071242272045725e-09,
+      "output_start": 61,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 31,
+      "original_dense_excess_m": 3.488430942783672e-05,
+      "original_volume_m3": 6.606383540674947e-09,
+      "output_start": 62,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 32,
+      "original_dense_excess_m": 3.822546185502477e-05,
+      "original_volume_m3": 6.918940222240817e-09,
+      "output_start": 63,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 33,
+      "original_dense_excess_m": 3.8039274613934544e-05,
+      "original_volume_m3": 5.775442518189266e-09,
+      "output_start": 64,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 34,
+      "original_dense_excess_m": 1.3449571096157064e-05,
+      "original_volume_m3": 5.769126477563718e-09,
+      "output_start": 65,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 35,
+      "original_dense_excess_m": 2.44240207336599e-10,
+      "original_volume_m3": 1.4464072359169016e-08,
+      "output_start": 66,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 36,
+      "original_dense_excess_m": 7.783501342637776e-09,
+      "original_volume_m3": 5.010348455578615e-09,
+      "output_start": 67,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 37,
+      "original_dense_excess_m": 2.67347467662252e-07,
+      "original_volume_m3": 4.615126173051229e-08,
+      "output_start": 68,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 38,
+      "original_dense_excess_m": 0.0,
+      "original_volume_m3": 4.161847688441667e-09,
+      "output_start": 69,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 39,
+      "original_dense_excess_m": 0.00014322609867885853,
+      "original_volume_m3": 4.519800039356703e-09,
+      "output_start": 70,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 40,
+      "original_dense_excess_m": 2.1090415956757346e-05,
+      "original_volume_m3": 6.6454123443262516e-09,
+      "output_start": 71,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 41,
+      "original_dense_excess_m": 0.00020299574648328017,
+      "original_volume_m3": 5.346089736021969e-09,
+      "output_start": 72,
+      "intersected_source_volume_m3": 5.100103686391749e-09,
+      "decision": "source_partition",
+      "output_count": 4,
+      "partition_events": [
+        {
+          "depth": 0,
+          "source_volume_m3": 5.100103686391749e-09,
+          "convex_volume_m3": 5.346043660479448e-09,
+          "dense_excess_m": 0.0002028602947076721,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0065445966672399505
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 2.6627192874476482e-09,
+          "convex_volume_m3": 2.7218425373301984e-09,
+          "dense_excess_m": 7.366135555906392e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 2.437384398944111e-09,
+          "convex_volume_m3": 2.510903729453792e-09,
+          "dense_excess_m": 0.0001671528663720237,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.008782912548075903
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 1.5139547420324973e-09,
+          "convex_volume_m3": 1.5874740725421742e-09,
+          "dense_excess_m": 0.0001671528663720237,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.007663754607657926
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 9.234296569116146e-10,
+          "convex_volume_m3": 9.234296569116139e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 7.33997900604503e-10,
+          "convex_volume_m3": 7.656350787329042e-10,
+          "dense_excess_m": 0.00010797081164594494,
+          "decision": "retain"
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 7.799568414279925e-10,
+          "convex_volume_m3": 7.965559004846976e-10,
+          "dense_excess_m": 9.936165567834949e-05,
+          "decision": "retain"
+        }
+      ]
+    },
+    {
+      "parent_part": 42,
+      "original_dense_excess_m": 0.0,
+      "original_volume_m3": 1.5652223088882468e-08,
+      "output_start": 76,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 43,
+      "original_dense_excess_m": 0.00018412537835521282,
+      "original_volume_m3": 1.363129670262518e-08,
+      "output_start": 77,
+      "intersected_source_volume_m3": 1.3311084532055067e-08,
+      "decision": "source_partition",
+      "output_count": 42,
+      "partition_events": [
+        {
+          "depth": 0,
+          "source_volume_m3": 1.3311084532055067e-08,
+          "convex_volume_m3": 1.3631285963968395e-08,
+          "dense_excess_m": 0.00018412537835521282,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.004237764232632482
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 6.438952145038659e-09,
+          "convex_volume_m3": 6.6939661029113236e-09,
+          "dense_excess_m": 0.00018412537835521282,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.002018882118842453
+        },
+        {
+          "depth": 1,
+          "source_volume_m3": 6.872132387016405e-09,
+          "convex_volume_m3": 6.93443380246292e-09,
+          "dense_excess_m": 0.0001153587409943518,
+          "decision": "retain"
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 3.1174938491735867e-09,
+          "convex_volume_m3": 3.2778755794634096e-09,
+          "dense_excess_m": 0.00018412537835521282,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0009094410619474389
+        },
+        {
+          "depth": 2,
+          "source_volume_m3": 3.3214582958650723e-09,
+          "convex_volume_m3": 3.415340281170512e-09,
+          "dense_excess_m": 0.00015416280783976495,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.003128323175737467
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.5254890535701039e-09,
+          "convex_volume_m3": 1.6140232915695028e-09,
+          "dense_excess_m": 0.00018412537835521282,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.02313700966599708
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.5920047956034819e-09,
+          "convex_volume_m3": 1.6636625892414108e-09,
+          "dense_excess_m": 0.00017279063132141128,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023121750707356663
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.6414207959161687e-09,
+          "convex_volume_m3": 1.6964541206733641e-09,
+          "dense_excess_m": 0.00015416280783976495,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.0231204482616822
+        },
+        {
+          "depth": 3,
+          "source_volume_m3": 1.6800374999489058e-09,
+          "convex_volume_m3": 1.7176438617743127e-09,
+          "dense_excess_m": 0.00013473848290420552,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.0231204482616822
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 8.140726436464202e-10,
+          "convex_volume_m3": 8.877095914701855e-10,
+          "dense_excess_m": 0.00018412537835521282,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012160507868057401
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 7.114164099236845e-10,
+          "convex_volume_m3": 7.263137000993172e-10,
+          "dense_excess_m": 5.891825595885845e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 8.65125159345492e-10,
+          "convex_volume_m3": 9.248531921194101e-10,
+          "dense_excess_m": 0.0001726343584980646,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012158991270673936
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 7.268796362579893e-10,
+          "convex_volume_m3": 7.388093971220034e-10,
+          "dense_excess_m": 4.8794788157042514e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 8.946742921893711e-10,
+          "convex_volume_m3": 9.416353759241184e-10,
+          "dense_excess_m": 0.00015416280783976495,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012157474673290466
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 7.467465037267971e-10,
+          "convex_volume_m3": 7.548187447492462e-10,
+          "dense_excess_m": 4.3315011604790704e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 9.194777462524151e-10,
+          "convex_volume_m3": 9.552029320075738e-10,
+          "dense_excess_m": 0.00013480333900711694,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.012155958075907
+        },
+        {
+          "depth": 4,
+          "source_volume_m3": 7.605597536964906e-10,
+          "convex_volume_m3": 7.624409297667379e-10,
+          "dense_excess_m": 1.9438677507193677e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.826108860715086e-10,
+          "convex_volume_m3": 4.8261088607151e-10,
+          "dense_excess_m": 3.552713678800501e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.314617575749116e-10,
+          "convex_volume_m3": 4.0509870539867386e-10,
+          "dense_excess_m": 0.00018412537835521282,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0003547205334999328
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.936173274032744e-10,
+          "convex_volume_m3": 4.9361732740328e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.715078319422175e-10,
+          "convex_volume_m3": 4.3123586471612876e-10,
+          "dense_excess_m": 0.0001726343584980646,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0014641615903949468
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.957526586900641e-10,
+          "convex_volume_m3": 4.95752658690065e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 3.9892163349930753e-10,
+          "convex_volume_m3": 4.4588271723405515e-10,
+          "dense_excess_m": 0.0001541024024487826,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0025736026472899607
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.970575234995994e-10,
+          "convex_volume_m3": 4.97057523499601e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 5,
+          "source_volume_m3": 4.224202227528146e-10,
+          "convex_volume_m3": 4.5814540850797244e-10,
+          "dense_excess_m": 0.00013473848290420552,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0036830437041849746
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 1.612834981537992e-10,
+          "convex_volume_m3": 1.9976880118042194e-10,
+          "dense_excess_m": 0.00018412537835521282,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.0235165040171506
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 1.7017825942111187e-10,
+          "convex_volume_m3": 2.0528461866046482e-10,
+          "dense_excess_m": 0.00018154850161761517,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.0235165040171506
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 1.8207380299124238e-10,
+          "convex_volume_m3": 2.1360591044754437e-10,
+          "dense_excess_m": 0.0001726343584980646,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.02350887453783039
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 1.8943402895097513e-10,
+          "convex_volume_m3": 2.175836220446741e-10,
+          "dense_excess_m": 0.0001637202005424692,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.02350887453783039
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 1.9616668210281135e-10,
+          "convex_volume_m3": 2.2112463610894397e-10,
+          "dense_excess_m": 0.0001541024024487826,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023508223314993158
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 2.0275495139649659e-10,
+          "convex_volume_m3": 2.2471232823942548e-10,
+          "dense_excess_m": 0.00014442044267649765,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023508223314993158
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 2.0830359693003357e-10,
+          "convex_volume_m3": 2.2745198156114384e-10,
+          "dense_excess_m": 0.00013473848290420552,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023508223314993158
+        },
+        {
+          "depth": 6,
+          "source_volume_m3": 2.1411662582278088e-10,
+          "convex_volume_m3": 2.3064728035751116e-10,
+          "dense_excess_m": 0.00012510865985431054,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023508215813726877
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 4.262347860308091e-11,
+          "convex_volume_m3": 7.664471536908691e-11,
+          "dense_excess_m": 0.0001840556697136881,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011874662997714763
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.1866001955071834e-10,
+          "convex_volume_m3": 1.1880826102780162e-10,
+          "dense_excess_m": 5.344530846392524e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 5.0252952095004264e-11,
+          "convex_volume_m3": 8.535931133435713e-11,
+          "dense_excess_m": 0.00018171252898382918,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.01187390469902303
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.1992530732610774e-10,
+          "convex_volume_m3": 1.199253073261085e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 5.982384018482e-11,
+          "convex_volume_m3": 9.135594764112209e-11,
+          "dense_excess_m": 0.00017279063132141128,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011872388101639564
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.2224996280642224e-10,
+          "convex_volume_m3": 1.222499628064223e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 6.691265558270739e-11,
+          "convex_volume_m3": 9.506224867640725e-11,
+          "dense_excess_m": 0.0001637202005424692,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011871629802947831
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.2252137336826762e-10,
+          "convex_volume_m3": 1.2252137336826685e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 7.349630926671451e-11,
+          "convex_volume_m3": 9.845426327284579e-11,
+          "dense_excess_m": 0.00015416280783976495,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011870113205564366
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.2267037283609703e-10,
+          "convex_volume_m3": 1.2267037283609807e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 7.981271142951408e-11,
+          "convex_volume_m3": 1.0177008827244187e-10,
+          "dense_excess_m": 0.00014442044267649765,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011869354906872631
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.2294223996698225e-10,
+          "convex_volume_m3": 1.229422399669819e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 8.541572021565744e-11,
+          "convex_volume_m3": 1.0456410484676737e-10,
+          "dense_excess_m": 0.00013473848290420552,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011867838309489166
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.2288787671437604e-10,
+          "convex_volume_m3": 1.228878767143767e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 9.095927496040746e-11,
+          "convex_volume_m3": 1.0748992949513766e-10,
+          "dense_excess_m": 0.00012510865985431054,
+          "decision": "split",
+          "axis": 0,
+          "offset_m": 0.011867080010797433
+        },
+        {
+          "depth": 7,
+          "source_volume_m3": 1.2315735086237317e-10,
+          "convex_volume_m3": 1.231573508623735e-10,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 4.194963475385559e-11,
+          "convex_volume_m3": 4.998892300941595e-11,
+          "dense_excess_m": 6.104942787462415e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 6.738438492254034e-13,
+          "convex_volume_m3": 6.738451142630648e-13,
+          "dense_excess_m": 2.671472165698755e-11,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 4.6677497050836036e-11,
+          "convex_volume_m3": 5.376058205049374e-11,
+          "dense_excess_m": 5.8756982166159564e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 3.575455044167711e-12,
+          "convex_volume_m3": 3.5754565256518767e-12,
+          "dense_excess_m": 2.0025743749597103e-11,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 5.19740121733993e-11,
+          "convex_volume_m3": 5.701446113735115e-11,
+          "dense_excess_m": 4.733038689826989e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 7.849828011420493e-12,
+          "convex_volume_m3": 7.849828011420656e-12,
+          "dense_excess_m": 4.189529226675416e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 5.597049817675463e-11,
+          "convex_volume_m3": 5.90939949833413e-11,
+          "dense_excess_m": 3.1829026830184785e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 1.0942157405952839e-11,
+          "convex_volume_m3": 1.0942157405952815e-11,
+          "dense_excess_m": 7.108895957933346e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 5.938226313507071e-11,
+          "convex_volume_m3": 6.085100704161115e-11,
+          "dense_excess_m": 1.6959197392598267e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 1.411404613164366e-11,
+          "convex_volume_m3": 1.4114046131643563e-11,
+          "dense_excess_m": 7.32410687763558e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 6.18448354654355e-11,
+          "convex_volume_m3": 6.193126713831886e-11,
+          "dense_excess_m": 4.657979624007985e-06,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 1.7967875964079154e-11,
+          "convex_volume_m3": 3.760406565101186e-11,
+          "dense_excess_m": 0.00014160914954812782,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0028509629115137155
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 6.197438421326302e-11,
+          "convex_volume_m3": 6.19743842132635e-11,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 2.344133600239389e-11,
+          "convex_volume_m3": 4.2589720633503386e-11,
+          "dense_excess_m": 0.00013480333900711694,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.0034056834399612216
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 6.213700849664307e-11,
+          "convex_volume_m3": 6.213700849664236e-11,
+          "dense_excess_m": 0.0,
+          "decision": "retain"
+        },
+        {
+          "depth": 8,
+          "source_volume_m3": 2.882226646376471e-11,
+          "convex_volume_m3": 4.5352920998495336e-11,
+          "dense_excess_m": 0.00012510865985431054,
+          "decision": "split",
+          "axis": 2,
+          "offset_m": -0.003960403968408728
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 8.283605197301543e-12,
+          "convex_volume_m3": 1.7305106663299905e-11,
+          "dense_excess_m": 0.00014160914954812782,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023702110841648638
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 9.684270766777308e-12,
+          "convex_volume_m3": 2.029416326306504e-11,
+          "dense_excess_m": 0.00013957946279034625,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023702110841648638
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 1.1003623883791983e-11,
+          "convex_volume_m3": 2.0911271330910398e-11,
+          "dense_excess_m": 0.00013480333900711694,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023702110841648638
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 1.2437712118602043e-11,
+          "convex_volume_m3": 2.166691596980814e-11,
+          "dense_excess_m": 0.00012995611831887846,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023702107150689468
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 1.3742463700846028e-11,
+          "convex_volume_m3": 2.2317231605200208e-11,
+          "dense_excess_m": 0.00012510865985431054,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.023702099155671317
+        },
+        {
+          "depth": 9,
+          "source_volume_m3": 1.50798027629186e-11,
+          "convex_volume_m3": 2.3024149431419967e-11,
+          "dense_excess_m": 0.00012026120138974266,
+          "decision": "split",
+          "axis": 1,
+          "offset_m": 0.02370209377603826
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 4.577963385581098e-14,
+          "convex_volume_m3": 4.577963385578155e-14,
+          "dense_excess_m": 3.552713678800501e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 8.23782556344575e-12,
+          "convex_volume_m3": 1.107589020027391e-11,
+          "dense_excess_m": 5.9716956184151106e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 4.788102946006276e-13,
+          "convex_volume_m3": 4.788102946006394e-13,
+          "dense_excess_m": 2.8435583831733383e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 9.205460472176709e-12,
+          "convex_volume_m3": 1.2370558368684521e-11,
+          "dense_excess_m": 5.701133130183306e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 9.180901180308012e-13,
+          "convex_volume_m3": 9.180901180308883e-13,
+          "dense_excess_m": 3.580361673049448e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 1.008553376576115e-11,
+          "convex_volume_m3": 1.278850588104876e-11,
+          "dense_excess_m": 5.055817502483709e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 1.438879016210527e-12,
+          "convex_volume_m3": 1.4388790162104865e-12,
+          "dense_excess_m": 3.580361673049448e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 1.0998833102391569e-11,
+          "convex_volume_m3": 1.3263536025743553e-11,
+          "dense_excess_m": 4.4102559607335174e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 1.918880290476046e-12,
+          "convex_volume_m3": 1.91888029047605e-12,
+          "dense_excess_m": 3.996802888650563e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 1.1823583410370077e-11,
+          "convex_volume_m3": 1.3673866164351558e-11,
+          "dense_excess_m": 4.1190765208647915e-05,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 2.4395987188222318e-12,
+          "convex_volume_m3": 2.439598718822217e-12,
+          "dense_excess_m": 1.9860273225978186e-18,
+          "decision": "retain"
+        },
+        {
+          "depth": 10,
+          "source_volume_m3": 1.264020404409634e-11,
+          "convex_volume_m3": 1.4100163230863058e-11,
+          "dense_excess_m": 3.737088099429879e-05,
+          "decision": "retain"
+        }
+      ]
+    },
+    {
+      "parent_part": 44,
+      "original_dense_excess_m": 1.967258697614827e-08,
+      "original_volume_m3": 1.0422216162793295e-09,
+      "output_start": 119,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 45,
+      "original_dense_excess_m": 1.7960385067781478e-05,
+      "original_volume_m3": 8.040536760402075e-09,
+      "output_start": 120,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 46,
+      "original_dense_excess_m": 2.494536612865073e-05,
+      "original_volume_m3": 4.751775144198683e-09,
+      "output_start": 121,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 47,
+      "original_dense_excess_m": 1.7967055171614458e-07,
+      "original_volume_m3": 5.20597577722863e-08,
+      "output_start": 122,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 48,
+      "original_dense_excess_m": 3.166468483388247e-08,
+      "original_volume_m3": 4.3976098603286195e-08,
+      "output_start": 123,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 49,
+      "original_dense_excess_m": 1.3607205029443305e-08,
+      "original_volume_m3": 2.104751147573076e-08,
+      "output_start": 124,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 50,
+      "original_dense_excess_m": 2.029066748548375e-05,
+      "original_volume_m3": 6.032497714647941e-09,
+      "output_start": 125,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 51,
+      "original_dense_excess_m": 2.9412205392723692e-05,
+      "original_volume_m3": 3.819897185006916e-09,
+      "output_start": 126,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 52,
+      "original_dense_excess_m": 1.84019641433555e-08,
+      "original_volume_m3": 7.808079562083854e-09,
+      "output_start": 127,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 53,
+      "original_dense_excess_m": 0.0001245590193972729,
+      "original_volume_m3": 9.363224986832252e-09,
+      "output_start": 128,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 54,
+      "original_dense_excess_m": 3.268020143905384e-08,
+      "original_volume_m3": 3.7365090786708175e-09,
+      "output_start": 129,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 55,
+      "original_dense_excess_m": 4.957634554028479e-08,
+      "original_volume_m3": 1.5923710738814983e-08,
+      "output_start": 130,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 56,
+      "original_dense_excess_m": 2.6058902720176674e-07,
+      "original_volume_m3": 9.965478077516455e-10,
+      "output_start": 131,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 57,
+      "original_dense_excess_m": 6.896646826778653e-08,
+      "original_volume_m3": 3.093338583982998e-09,
+      "output_start": 132,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 58,
+      "original_dense_excess_m": 5.617258782489029e-05,
+      "original_volume_m3": 3.1923463907639703e-09,
+      "output_start": 133,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 59,
+      "original_dense_excess_m": 4.5240935855372066e-05,
+      "original_volume_m3": 2.706798245754803e-09,
+      "output_start": 134,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 60,
+      "original_dense_excess_m": 6.428823192303688e-09,
+      "original_volume_m3": 9.108826511853081e-09,
+      "output_start": 135,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 61,
+      "original_dense_excess_m": 4.605050016051898e-05,
+      "original_volume_m3": 7.000042140341765e-09,
+      "output_start": 136,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 62,
+      "original_dense_excess_m": 4.1887832046022045e-09,
+      "original_volume_m3": 7.2614294378053635e-09,
+      "output_start": 137,
+      "decision": "unchanged",
+      "output_count": 1
+    },
+    {
+      "parent_part": 63,
+      "original_dense_excess_m": 4.6621350916408516e-08,
+      "original_volume_m3": 8.373056712559037e-09,
+      "output_start": 138,
+      "decision": "unchanged",
+      "output_count": 1
+    }
+  ],
+  "source_coverage": "approximate local decomposition; independent missing-material gate required"
+}

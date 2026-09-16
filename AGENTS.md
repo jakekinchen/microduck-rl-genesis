@@ -19,10 +19,52 @@ Work directly in the current Codex task as a single agent.
 - Do not start paid compute, publish artifacts, contact third parties, activate
   a policy, or operate hardware without the required user authority.
 
+## Physical behavior acceptance
+
+- Every behavior and composition must satisfy
+  `docs/workspace/BEHAVIOR_VALIDATION.md` before the corresponding library
+  capability claim: reward-independent tests, effective domain randomization,
+  unseen-environment evaluation, continuous-state transitions and evidence-bound
+  physics validation. This includes deterministic controllers and perception.
+- Define the operating envelope and preregister per-bucket thresholds, repeats,
+  splits and decision rules. Missing/failed cases are not passes; randomization
+  configuration alone is not coverage. Test actual parameter application and
+  non-accumulating resets. Preserve exposed and protected final banks separately.
+- Cross-engine agreement does not establish calibrated physical accuracy.
+  Missing measurement-based calibration remains an explicit claim blocker;
+  continue scoped local development without asserting generalization or transfer.
+- For locomotion, target/velocity success is necessary but not sufficient:
+  independently inspect sustained bilateral stepping, loaded contact slip,
+  actual joint-stop occupancy, falls and non-foot support. Missing telemetry
+  is unknown, not a pass. Keep calibrated physical acceptance separate.
+- Audit body-to-body collision coverage as well as floor contact. Visual meshes
+  and a "full" model name do not prove active contact pairs: verify mesh
+  identities, masks and engine filters. Reject recorded body interference;
+  floor clearance cannot substitute for this check. Preserve original scores
+  and label changed-model/controller results separately.
+- Reject sustained internal body loading as well as penetration. A policy can
+  brace its legs against the battery while keeping overlap below a geometric
+  tolerance. Read actual applied contact loads at physics rate without changing
+  dynamics; missing or partial stop evidence cannot pass. Do not equate force
+  sums across different engines' contact-manifold representations.
+- Check visual/camera frames against physical feature geometry and CAD sites.
+  A named camera can point inward; do not reverse a task from its optical axis
+  alone. The laser diagnosis and rejected v3 attempt are documented in
+  `experiments/laser/GAIT_DIAGNOSIS.md`.
+- Freeze the composite evaluator before inspecting a candidate. Preserve
+  historical target-only scores, but do not present them as walking quality.
+  No new reviewer/executor cycles are required for these checks.
+- Evaluator exit code zero means the evaluation completed, not that the
+  behavior passed. Read every required component/case result and its failures;
+  a successful export, manifest check or test process cannot replace that.
+
 ## Workspace entry points
 
 - Use `./scripts/duck status` for a small current-state projection and
   `./scripts/duck doctor` when checking local runtime/evaluator readiness.
+- Use `./scripts/duck verify` after workspace tooling changes. It runs the
+  same fast suite as workspace CI without starting a simulator; see
+  `docs/workspace/VERIFICATION.md` for worktree use and proof boundaries.
 - Use `./scripts/duck studio` to compare retained development videos and
   trajectories. It reads receipts; it cannot start training or operate hardware.
 - For a new behavior, consult `.agents/skills/microduck-experiments/SKILL.md`
@@ -35,3 +77,20 @@ Work directly in the current Codex task as a single agent.
   `docs/workspace/ACTIVE_EXPERIMENT.md` before another intervention. Inspect
   the first failure, test one active property group at a time, freeze a fresh
   test bank, and rerun the advisory `./scripts/duck-ops guard` before launch.
+
+## Local compute and macOS Dock behavior
+
+- Treat training and the full simulation suite as competing compute jobs.
+  `./scripts/duck-ops guard` recognizes both, including known standalone
+  simulator tests. Recheck immediately before launch and honor its exit code:
+  use `./scripts/duck-ops guard && <training command>`, or an equivalent
+  conditional. Do not run guard and launch as independent tool calls or ignore
+  a nonzero result. It is an advisory snapshot, not a reservation or lock.
+- `tests/run_all.py` now refuses launch when another recognized compute job is
+  present or process inspection fails. Use `./scripts/duck verify` for tooling
+  changes; do not start a full simulation regression during active training.
+- Two Python Dock entries can be a trainer and a simulation test, not two
+  agents. Genesis imports hidden Tk/Pyglet GUI infrastructure on macOS even
+  with `show_viewer=False`; shadow-window settings alone do not suppress it.
+  Do not patch global Python, AppKit or rendering backends just to hide icons.
+  See `docs/workspace/MACOS_COMPUTE.md` for the verified diagnosis and limits.

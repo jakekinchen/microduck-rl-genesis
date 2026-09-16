@@ -1,0 +1,66 @@
+{
+  "id": "v58-one-config-convex-proxy-diagnostic",
+  "created_utc": "2026-09-16T00:30:45.312477+00:00",
+  "params": {
+    "threshold": 0.00025,
+    "real_metric": true,
+    "max_convex_hull": 64,
+    "preprocess_mode": "off",
+    "preprocess_resolution": 50,
+    "resolution": 1000,
+    "mcts_nodes": 20,
+    "mcts_iterations": 30,
+    "mcts_max_depth": 3,
+    "pca": false,
+    "merge": true,
+    "decimate": false,
+    "max_ch_vertex": 256,
+    "extrude": false,
+    "extrude_margin": 0.01,
+    "apx_mode": "ch",
+    "seed": 26091657
+  },
+  "meshes": [
+    "seeed_bearing__configuration__22x16x4",
+    "neck_pitch",
+    "bottom_head_shell",
+    "jaw"
+  ],
+  "tool_version": "1.0.14",
+  "native_thread_policy": "OMP_NUM_THREADS=2 requested but not enforced by installed std::thread backend; isolated default hardware concurrency authorized",
+  "budget": {
+    "per_mesh_wall_seconds": 120,
+    "generation_total_wall_seconds": 480,
+    "validation_wall_seconds": 360,
+    "maximum_parts_per_mesh": 64,
+    "maximum_total_parts": 256,
+    "attempts_per_mesh": 1
+  },
+  "validation": {
+    "sampled_geometry_tolerance_m": 0.00025,
+    "source_vertex_samples_per_mesh": 4096,
+    "source_face_centroid_samples_per_mesh": 4096,
+    "proxy_vertices": "all",
+    "proxy_face_centroid_samples_per_mesh": 4096,
+    "selection": "evenly spaced deterministic indices including endpoints",
+    "cavity_witnesses": "all 8 prior cavity-audit contact points; points outside original source CAD by >.25mm must remain outside proxy union",
+    "pose_bank": "exact frozen V57 201 poses; both original scores and negative comparisons retained",
+    "collision_penetration_threshold_m": 0.001,
+    "no_blanket_exclusion": true,
+    "mass_inertia_joint_arrays": "exact same compiled arrays",
+    "no_dynamic_admission": true
+  },
+  "source_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+    "experiments/walking/contact-reconciliation-v57/jaw-contact-enabled/robot.xml": "cf8d7ee90bcc327a44570044c8b059be7a0db2cccddd6d7b16676d1c018b4c83",
+    "experiments/walking/contact-reconciliation-v57/protocol.json": "92b76d5667120a920f56c1c232ce37fbb062db927a9b2ff1bcb4786efb0cfb24",
+    "experiments/walking/contact-reconciliation-v57/pose-results.json": "e3d52a7b0bb903284c9885866b416dccab473fb830cd31585cb478eec3fb78dd",
+    "experiments/walking/contact-reconciliation-v57/cavity-audit/results.json": "e93c330e868623873b6830c5607357f99600e258bc76c99ec4c99ba6c4016975",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a"
+  },
+  "claim": "sampled proxy diagnostic only; missing mesh, timeout, overlimit or failed gate rejects complete model; no retry/tuning"
+}

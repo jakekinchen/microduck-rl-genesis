@@ -1,0 +1,1365 @@
+{
+  "schema": "microduck.walking-evaluation/v1",
+  "acceptance_variant": "component-isolation-v45-flat",
+  "pair": "new-stander",
+  "proof_class": "visible_development",
+  "held_out": false,
+  "fresh_development": false,
+  "exposed_repeated_bank": false,
+  "policy_sha256": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+  "standing_policy_sha256": "f48ab82719bef4c427b9c183e0a7220a64d5ba3410ef7590df2e718327b380ce",
+  "standing_policy_used": true,
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "evaluator_freeze_sha256": "6af8903efd0cdb23d0cd357ea49878c334a8dc209becf5d8e649ccd10d7d206a",
+  "passed_cases": 2,
+  "total_cases": 2,
+  "case_reports": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.014322649102005956,
+        "mean_abs_lateral_velocity_m_s": 0.011354915335216374,
+        "mean_abs_yaw_error_rad_s": 0.10009062516821546,
+        "stop_max_speed_m_s": 0.0025824484497364163,
+        "stop_max_yaw_rate_rad_s": 0.016865666083828095,
+        "stop_max_tilt_deg": 4.112741099237178,
+        "torque_saturation_fraction": 0.00011904761904761905,
+        "minimum_actual_joint_margin_rad": 0.08119625955659499,
+        "simultaneous_flight_fraction": 0.0
+      },
+      "gait": {
+        "duration_s": 18.0,
+        "active_s": 12.0,
+        "translation_s": 11.98,
+        "path_length_m": 1.0456596927018706,
+        "qualified_swings_left_right": [
+          40,
+          39
+        ],
+        "swing_events": [
+          {
+            "foot": 0,
+            "land_s": 1.3800000000000001,
+            "air_s": 0.12,
+            "clearance_m": 0.009541089659743547
+          },
+          {
+            "foot": 1,
+            "land_s": 1.54,
+            "air_s": 0.14,
+            "clearance_m": 0.011930482490241952
+          },
+          {
+            "foot": 0,
+            "land_s": 1.72,
+            "air_s": 0.18,
+            "clearance_m": 0.0159080092484582
+          },
+          {
+            "foot": 1,
+            "land_s": 1.8800000000000001,
+            "air_s": 0.16,
+            "clearance_m": 0.01196101418519041
+          },
+          {
+            "foot": 0,
+            "land_s": 2.04,
+            "air_s": 0.16,
+            "clearance_m": 0.014502671769889161
+          },
+          {
+            "foot": 1,
+            "land_s": 2.18,
+            "air_s": 0.14,
+            "clearance_m": 0.010052791362672293
+          },
+          {
+            "foot": 0,
+            "land_s": 2.34,
+            "air_s": 0.16,
+            "clearance_m": 0.014274641709724006
+          },
+          {
+            "foot": 1,
+            "land_s": 2.48,
+            "air_s": 0.14,
+            "clearance_m": 0.010319349185153127
+          },
+          {
+            "foot": 0,
+            "land_s": 2.64,
+            "air_s": 0.16,
+            "clearance_m": 0.014285639397418974
+          },
+          {
+            "foot": 1,
+            "land_s": 2.7800000000000002,
+            "air_s": 0.14,
+            "clearance_m": 0.010268471699025084
+          },
+          {
+            "foot": 0,
+            "land_s": 2.94,
+            "air_s": 0.16,
+            "clearance_m": 0.013698444318633957
+          },
+          {
+            "foot": 1,
+            "land_s": 3.08,
+            "air_s": 0.14,
+            "clearance_m": 0.010577160952662767
+          },
+          {
+            "foot": 0,
+            "land_s": 3.24,
+            "air_s": 0.16,
+            "clearance_m": 0.01403619327499479
+          },
+          {
+            "foot": 1,
+            "land_s": 3.38,
+            "air_s": 0.14,
+            "clearance_m": 0.01078207323367423
+          },
+          {
+            "foot": 0,
+            "land_s": 3.54,
+            "air_s": 0.16,
+            "clearance_m": 0.013336532930374288
+          },
+          {
+            "foot": 1,
+            "land_s": 3.68,
+            "air_s": 0.14,
+            "clearance_m": 0.010222154922750666
+          },
+          {
+            "foot": 0,
+            "land_s": 3.84,
+            "air_s": 0.16,
+            "clearance_m": 0.014040976938257746
+          },
+          {
+            "foot": 1,
+            "land_s": 4.0,
+            "air_s": 0.16,
+            "clearance_m": 0.010782025154874723
+          },
+          {
+            "foot": 0,
+            "land_s": 4.14,
+            "air_s": 0.14,
+            "clearance_m": 0.013677023642129972
+          },
+          {
+            "foot": 1,
+            "land_s": 4.3,
+            "air_s": 0.14,
+            "clearance_m": 0.01091538072503705
+          },
+          {
+            "foot": 0,
+            "land_s": 4.44,
+            "air_s": 0.14,
+            "clearance_m": 0.013260998823286275
+          },
+          {
+            "foot": 1,
+            "land_s": 4.6000000000000005,
+            "air_s": 0.14,
+            "clearance_m": 0.010320335109702088
+          },
+          {
+            "foot": 0,
+            "land_s": 4.74,
+            "air_s": 0.14,
+            "clearance_m": 0.013097284928957051
+          },
+          {
+            "foot": 1,
+            "land_s": 4.9,
+            "air_s": 0.14,
+            "clearance_m": 0.011208198109148918
+          },
+          {
+            "foot": 0,
+            "land_s": 5.04,
+            "air_s": 0.14,
+            "clearance_m": 0.013781847581423558
+          },
+          {
+            "foot": 1,
+            "land_s": 5.2,
+            "air_s": 0.14,
+            "clearance_m": 0.010522375971828493
+          },
+          {
+            "foot": 0,
+            "land_s": 5.34,
+            "air_s": 0.14,
+            "clearance_m": 0.013542121436828043
+          },
+          {
+            "foot": 1,
+            "land_s": 5.5,
+            "air_s": 0.14,
+            "clearance_m": 0.009902972128847318
+          },
+          {
+            "foot": 0,
+            "land_s": 5.64,
+            "air_s": 0.14,
+            "clearance_m": 0.013817341065661043
+          },
+          {
+            "foot": 1,
+            "land_s": 5.8,
+            "air_s": 0.14,
+            "clearance_m": 0.010598911844553895
+          },
+          {
+            "foot": 0,
+            "land_s": 5.94,
+            "air_s": 0.14,
+            "clearance_m": 0.013867434728031371
+          },
+          {
+            "foot": 1,
+            "land_s": 6.1000000000000005,
+            "air_s": 0.14,
+            "clearance_m": 0.010456512738475563
+          },
+          {
+            "foot": 0,
+            "land_s": 6.24,
+            "air_s": 0.14,
+            "clearance_m": 0.013469177025381324
+          },
+          {
+            "foot": 1,
+            "land_s": 6.4,
+            "air_s": 0.14,
+            "clearance_m": 0.010400968354710372
+          },
+          {
+            "foot": 0,
+            "land_s": 6.54,
+            "air_s": 0.14,
+            "clearance_m": 0.013723636954077311
+          },
+          {
+            "foot": 1,
+            "land_s": 6.7,
+            "air_s": 0.16,
+            "clearance_m": 0.01049344123686062
+          },
+          {
+            "foot": 0,
+            "land_s": 6.84,
+            "air_s": 0.14,
+            "clearance_m": 0.013596192106149315
+          },
+          {
+            "foot": 1,
+            "land_s": 6.98,
+            "air_s": 0.12,
+            "clearance_m": 0.009952306527529643
+          },
+          {
+            "foot": 0,
+            "land_s": 7.140000000000001,
+            "air_s": 0.16,
+            "clearance_m": 0.013258735069453766
+          },
+          {
+            "foot": 1,
+            "land_s": 7.28,
+            "air_s": 0.14,
+            "clearance_m": 0.01087711089218766
+          },
+          {
+            "foot": 0,
+            "land_s": 7.44,
+            "air_s": 0.16,
+            "clearance_m": 0.013661240805514676
+          },
+          {
+            "foot": 1,
+            "land_s": 7.58,
+            "air_s": 0.14,
+            "clearance_m": 0.010675127405533585
+          },
+          {
+            "foot": 0,
+            "land_s": 7.74,
+            "air_s": 0.16,
+            "clearance_m": 0.013356010075039771
+          },
+          {
+            "foot": 1,
+            "land_s": 7.88,
+            "air_s": 0.14,
+            "clearance_m": 0.010439270931055926
+          },
+          {
+            "foot": 0,
+            "land_s": 8.040000000000001,
+            "air_s": 0.16,
+            "clearance_m": 0.013790654196743123
+          },
+          {
+            "foot": 1,
+            "land_s": 8.18,
+            "air_s": 0.14,
+            "clearance_m": 0.010751169678819887
+          },
+          {
+            "foot": 0,
+            "land_s": 8.34,
+            "air_s": 0.16,
+            "clearance_m": 0.013320087413930697
+          },
+          {
+            "foot": 1,
+            "land_s": 8.48,
+            "air_s": 0.14,
+            "clearance_m": 0.010625131223117904
+          },
+          {
+            "foot": 0,
+            "land_s": 8.64,
+            "air_s": 0.16,
+            "clearance_m": 0.013825953845674751
+          },
+          {
+            "foot": 1,
+            "land_s": 8.8,
+            "air_s": 0.16,
+            "clearance_m": 0.010910485965245457
+          },
+          {
+            "foot": 0,
+            "land_s": 8.94,
+            "air_s": 0.14,
+            "clearance_m": 0.013718617112023778
+          },
+          {
+            "foot": 1,
+            "land_s": 9.1,
+            "air_s": 0.14,
+            "clearance_m": 0.011100323323742875
+          },
+          {
+            "foot": 0,
+            "land_s": 9.24,
+            "air_s": 0.14,
+            "clearance_m": 0.012973498908954734
+          },
+          {
+            "foot": 1,
+            "land_s": 9.4,
+            "air_s": 0.14,
+            "clearance_m": 0.010439433319762229
+          },
+          {
+            "foot": 0,
+            "land_s": 9.540000000000001,
+            "air_s": 0.14,
+            "clearance_m": 0.013674791843599248
+          },
+          {
+            "foot": 1,
+            "land_s": 9.700000000000001,
+            "air_s": 0.14,
+            "clearance_m": 0.010658536387544392
+          },
+          {
+            "foot": 0,
+            "land_s": 9.84,
+            "air_s": 0.14,
+            "clearance_m": 0.012933883942736757
+          },
+          {
+            "foot": 1,
+            "land_s": 9.98,
+            "air_s": 0.12,
+            "clearance_m": 0.010183913486964265
+          },
+          {
+            "foot": 0,
+            "land_s": 10.14,
+            "air_s": 0.16,
+            "clearance_m": 0.014019111312784261
+          },
+          {
+            "foot": 1,
+            "land_s": 10.3,
+            "air_s": 0.14,
+            "clearance_m": 0.010751367540180046
+          },
+          {
+            "foot": 0,
+            "land_s": 10.44,
+            "air_s": 0.14,
+            "clearance_m": 0.013594348614818355
+          },
+          {
+            "foot": 1,
+            "land_s": 10.6,
+            "air_s": 0.16,
+            "clearance_m": 0.010523058212964917
+          },
+          {
+            "foot": 0,
+            "land_s": 10.74,
+            "air_s": 0.14,
+            "clearance_m": 0.013706452612020243
+          },
+          {
+            "foot": 1,
+            "land_s": 10.9,
+            "air_s": 0.16,
+            "clearance_m": 0.010515936338697685
+          },
+          {
+            "foot": 0,
+            "land_s": 11.040000000000001,
+            "air_s": 0.14,
+            "clearance_m": 0.013591334353352663
+          },
+          {
+            "foot": 1,
+            "land_s": 11.200000000000001,
+            "air_s": 0.14,
+            "clearance_m": 0.010168669887807034
+          },
+          {
+            "foot": 0,
+            "land_s": 11.34,
+            "air_s": 0.14,
+            "clearance_m": 0.013887260821126485
+          },
+          {
+            "foot": 1,
+            "land_s": 11.5,
+            "air_s": 0.16,
+            "clearance_m": 0.010479732543131306
+          },
+          {
+            "foot": 0,
+            "land_s": 11.64,
+            "air_s": 0.14,
+            "clearance_m": 0.013564370413621896
+          },
+          {
+            "foot": 1,
+            "land_s": 11.8,
+            "air_s": 0.14,
+            "clearance_m": 0.010312159943893479
+          },
+          {
+            "foot": 0,
+            "land_s": 11.94,
+            "air_s": 0.14,
+            "clearance_m": 0.013583528546948498
+          },
+          {
+            "foot": 1,
+            "land_s": 12.1,
+            "air_s": 0.16,
+            "clearance_m": 0.010470709217771188
+          },
+          {
+            "foot": 0,
+            "land_s": 12.24,
+            "air_s": 0.14,
+            "clearance_m": 0.013661357574982593
+          },
+          {
+            "foot": 1,
+            "land_s": 12.4,
+            "air_s": 0.16,
+            "clearance_m": 0.010423830079832708
+          },
+          {
+            "foot": 0,
+            "land_s": 12.540000000000001,
+            "air_s": 0.14,
+            "clearance_m": 0.013723911000533677
+          },
+          {
+            "foot": 1,
+            "land_s": 12.700000000000001,
+            "air_s": 0.16,
+            "clearance_m": 0.01055214750851085
+          },
+          {
+            "foot": 0,
+            "land_s": 12.84,
+            "air_s": 0.14,
+            "clearance_m": 0.013394994161817931
+          },
+          {
+            "foot": 1,
+            "land_s": 12.98,
+            "air_s": 0.12,
+            "clearance_m": 0.010092383042734398
+          },
+          {
+            "foot": 0,
+            "land_s": 13.14,
+            "air_s": 0.16,
+            "clearance_m": 0.01350973146585532
+          }
+        ],
+        "alternating_landing_fraction": 1.0,
+        "both_feet_loaded_active_fraction": 0.043333333333333335,
+        "loaded_slip_over_3cm_s_fraction": 0.09424920127795527,
+        "loaded_slip_p95_m_s": 0.06644974802670238,
+        "backward_translation_fraction": 0.0,
+        "bilateral_step_coverage_during_translation": 0.9582637729549248,
+        "target_outside_joint_limits_fraction": 0.4811111111111111,
+        "joint_hard_stop_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 0.45987656530129883,
+        "max_actual_limit_violation_rad": 0.0,
+        "max_abs_servo_velocity_rad_s": 7.887728477274875,
+        "max_abs_actuator_torque_nm": 0.6238200748195022,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 7.262169316497239,
+        "fell": false,
+        "rejection_reasons": [],
+        "rejection_gate_passed": true,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "motor_battery_passed": true,
+      "posture": {
+        "metrics": {
+          "maximum_mean_joint_error_rad": 0.16098513482183696,
+          "p95_worst_joint_error_rad": 0.21640366573221975,
+          "mean_absolute_face_pitch_deg": 15.029907385666704,
+          "per_head_joint_mean_abs_error_rad": [
+            0.16098513482183696,
+            0.09884925989131495,
+            0.12488159500547871,
+            0.0652790725011128
+          ]
+        },
+        "thresholds": {
+          "maximum_mean_joint_error_rad": 0.35,
+          "p95_worst_joint_error_rad": 0.7853981633974483,
+          "mean_absolute_face_pitch_deg": 30.0
+        },
+        "passed": true,
+        "boundary": "Neutral-head visible-development requirement, not calibrated hardware limits."
+      },
+      "original_motor_posture_passed": true,
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 3.3527763950100304,
+          "maximum_heading_error_deg": 4.382496622654204,
+          "signed_endpoint_heading_error_deg": 3.3527763950100304,
+          "measured_heading_change_deg": 3.3527763950100304,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "self_contact": {
+        "passed": true,
+        "failures": [],
+        "frames": 900,
+        "maximum_self_penetration_m": 0.0,
+        "violating_frames": 0,
+        "first_violation": null,
+        "threshold_m": 0.001,
+        "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance."
+      },
+      "self_load": {
+        "passed": true,
+        "failures": [],
+        "observed_samples": 3600,
+        "expected_samples": 3600,
+        "total_over_1n_fraction": 0.0,
+        "longest_over_1n_s": 0.0,
+        "thresholds": {
+          "total_load_n": 1.0,
+          "max_fraction": 0.01,
+          "max_continuous_s": 0.05
+        },
+        "boundary": "Applied 200-Hz native internal loads, not floor support or calibrated hardware forces."
+      },
+      "timing_profile": "nominal-20-20ms",
+      "repeated_window": 1,
+      "session_window_start_s": 0
+    },
+    {
+      "case_id": "zero-lag--forward-08",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "mean_abs_forward_error_m_s": 0.008104864648223617,
+        "mean_abs_lateral_velocity_m_s": 0.015516975622206653,
+        "mean_abs_yaw_error_rad_s": 0.10362287810694223,
+        "stop_max_speed_m_s": 0.0023000917720917996,
+        "stop_max_yaw_rate_rad_s": 0.01020945057312421,
+        "stop_max_tilt_deg": 4.197449122791671,
+        "torque_saturation_fraction": 0.00011904761904761905,
+        "minimum_actual_joint_margin_rad": 0.08120885293090868,
+        "simultaneous_flight_fraction": 0.0
+      },
+      "gait": {
+        "duration_s": 18.0,
+        "active_s": 12.0,
+        "translation_s": 12.0,
+        "path_length_m": 0.9651810611561986,
+        "qualified_swings_left_right": [
+          50,
+          49
+        ],
+        "swing_events": [
+          {
+            "foot": 0,
+            "land_s": 1.36,
+            "air_s": 0.12,
+            "clearance_m": 0.007121311299599475
+          },
+          {
+            "foot": 1,
+            "land_s": 1.48,
+            "air_s": 0.12,
+            "clearance_m": 0.008582047917458271
+          },
+          {
+            "foot": 0,
+            "land_s": 1.62,
+            "air_s": 0.14,
+            "clearance_m": 0.01028927828488659
+          },
+          {
+            "foot": 1,
+            "land_s": 1.74,
+            "air_s": 0.12,
+            "clearance_m": 0.007342223415688041
+          },
+          {
+            "foot": 0,
+            "land_s": 1.86,
+            "air_s": 0.12,
+            "clearance_m": 0.009281937124985632
+          },
+          {
+            "foot": 1,
+            "land_s": 1.98,
+            "air_s": 0.12,
+            "clearance_m": 0.007753491998443081
+          },
+          {
+            "foot": 0,
+            "land_s": 2.1,
+            "air_s": 0.12,
+            "clearance_m": 0.009015903849231167
+          },
+          {
+            "foot": 1,
+            "land_s": 2.22,
+            "air_s": 0.12,
+            "clearance_m": 0.007917243644811651
+          },
+          {
+            "foot": 0,
+            "land_s": 2.34,
+            "air_s": 0.12,
+            "clearance_m": 0.00756831642867301
+          },
+          {
+            "foot": 1,
+            "land_s": 2.46,
+            "air_s": 0.12,
+            "clearance_m": 0.008225085408853087
+          },
+          {
+            "foot": 0,
+            "land_s": 2.58,
+            "air_s": 0.12,
+            "clearance_m": 0.007927605196139
+          },
+          {
+            "foot": 1,
+            "land_s": 2.7,
+            "air_s": 0.12,
+            "clearance_m": 0.007926301006781888
+          },
+          {
+            "foot": 0,
+            "land_s": 2.82,
+            "air_s": 0.12,
+            "clearance_m": 0.007967409653873912
+          },
+          {
+            "foot": 1,
+            "land_s": 2.94,
+            "air_s": 0.12,
+            "clearance_m": 0.007866159789960726
+          },
+          {
+            "foot": 0,
+            "land_s": 3.06,
+            "air_s": 0.12,
+            "clearance_m": 0.00788768075606074
+          },
+          {
+            "foot": 1,
+            "land_s": 3.18,
+            "air_s": 0.12,
+            "clearance_m": 0.007913275354568977
+          },
+          {
+            "foot": 0,
+            "land_s": 3.3000000000000003,
+            "air_s": 0.12,
+            "clearance_m": 0.007932426180616849
+          },
+          {
+            "foot": 1,
+            "land_s": 3.42,
+            "air_s": 0.12,
+            "clearance_m": 0.007849916589818325
+          },
+          {
+            "foot": 0,
+            "land_s": 3.54,
+            "air_s": 0.12,
+            "clearance_m": 0.008036037885240746
+          },
+          {
+            "foot": 1,
+            "land_s": 3.66,
+            "air_s": 0.12,
+            "clearance_m": 0.0076921441293641415
+          },
+          {
+            "foot": 0,
+            "land_s": 3.7800000000000002,
+            "air_s": 0.12,
+            "clearance_m": 0.008267230831912109
+          },
+          {
+            "foot": 1,
+            "land_s": 3.92,
+            "air_s": 0.14,
+            "clearance_m": 0.00794384532192526
+          },
+          {
+            "foot": 0,
+            "land_s": 4.0200000000000005,
+            "air_s": 0.1,
+            "clearance_m": 0.007814454480617714
+          },
+          {
+            "foot": 1,
+            "land_s": 4.14,
+            "air_s": 0.12,
+            "clearance_m": 0.007155982686144233
+          },
+          {
+            "foot": 0,
+            "land_s": 4.26,
+            "air_s": 0.12,
+            "clearance_m": 0.008081132860804884
+          },
+          {
+            "foot": 1,
+            "land_s": 4.38,
+            "air_s": 0.12,
+            "clearance_m": 0.007654560926005418
+          },
+          {
+            "foot": 0,
+            "land_s": 4.5,
+            "air_s": 0.12,
+            "clearance_m": 0.008220159555469488
+          },
+          {
+            "foot": 1,
+            "land_s": 4.62,
+            "air_s": 0.12,
+            "clearance_m": 0.007559394144045143
+          },
+          {
+            "foot": 0,
+            "land_s": 4.74,
+            "air_s": 0.12,
+            "clearance_m": 0.008585965604682808
+          },
+          {
+            "foot": 1,
+            "land_s": 4.86,
+            "air_s": 0.12,
+            "clearance_m": 0.007572567832345406
+          },
+          {
+            "foot": 0,
+            "land_s": 4.98,
+            "air_s": 0.12,
+            "clearance_m": 0.00819397211643133
+          },
+          {
+            "foot": 1,
+            "land_s": 5.1000000000000005,
+            "air_s": 0.12,
+            "clearance_m": 0.007867678136376342
+          },
+          {
+            "foot": 0,
+            "land_s": 5.22,
+            "air_s": 0.12,
+            "clearance_m": 0.0077113370851400265
+          },
+          {
+            "foot": 1,
+            "land_s": 5.34,
+            "air_s": 0.12,
+            "clearance_m": 0.00801385395115041
+          },
+          {
+            "foot": 0,
+            "land_s": 5.46,
+            "air_s": 0.12,
+            "clearance_m": 0.007832365634390718
+          },
+          {
+            "foot": 1,
+            "land_s": 5.58,
+            "air_s": 0.12,
+            "clearance_m": 0.008021309844095385
+          },
+          {
+            "foot": 0,
+            "land_s": 5.7,
+            "air_s": 0.12,
+            "clearance_m": 0.007731880062936387
+          },
+          {
+            "foot": 1,
+            "land_s": 5.82,
+            "air_s": 0.12,
+            "clearance_m": 0.008054167310898879
+          },
+          {
+            "foot": 0,
+            "land_s": 5.94,
+            "air_s": 0.12,
+            "clearance_m": 0.007714734489084121
+          },
+          {
+            "foot": 1,
+            "land_s": 6.0600000000000005,
+            "air_s": 0.12,
+            "clearance_m": 0.008113585974816083
+          },
+          {
+            "foot": 0,
+            "land_s": 6.18,
+            "air_s": 0.12,
+            "clearance_m": 0.007722011636525233
+          },
+          {
+            "foot": 1,
+            "land_s": 6.3,
+            "air_s": 0.12,
+            "clearance_m": 0.008037813017610999
+          },
+          {
+            "foot": 0,
+            "land_s": 6.42,
+            "air_s": 0.12,
+            "clearance_m": 0.00778413607749763
+          },
+          {
+            "foot": 1,
+            "land_s": 6.54,
+            "air_s": 0.12,
+            "clearance_m": 0.00807487611287595
+          },
+          {
+            "foot": 0,
+            "land_s": 6.66,
+            "air_s": 0.12,
+            "clearance_m": 0.007787392407258993
+          },
+          {
+            "foot": 1,
+            "land_s": 6.78,
+            "air_s": 0.12,
+            "clearance_m": 0.008003370654146389
+          },
+          {
+            "foot": 0,
+            "land_s": 6.9,
+            "air_s": 0.12,
+            "clearance_m": 0.00785717671421752
+          },
+          {
+            "foot": 1,
+            "land_s": 7.0200000000000005,
+            "air_s": 0.12,
+            "clearance_m": 0.00794104822094168
+          },
+          {
+            "foot": 0,
+            "land_s": 7.140000000000001,
+            "air_s": 0.12,
+            "clearance_m": 0.007946359375950902
+          },
+          {
+            "foot": 1,
+            "land_s": 7.26,
+            "air_s": 0.12,
+            "clearance_m": 0.007854208303483459
+          },
+          {
+            "foot": 0,
+            "land_s": 7.38,
+            "air_s": 0.12,
+            "clearance_m": 0.008056683154690145
+          },
+          {
+            "foot": 1,
+            "land_s": 7.5,
+            "air_s": 0.12,
+            "clearance_m": 0.007799388645181114
+          },
+          {
+            "foot": 0,
+            "land_s": 7.62,
+            "air_s": 0.12,
+            "clearance_m": 0.008148800504006591
+          },
+          {
+            "foot": 1,
+            "land_s": 7.74,
+            "air_s": 0.12,
+            "clearance_m": 0.00769342561272914
+          },
+          {
+            "foot": 0,
+            "land_s": 7.86,
+            "air_s": 0.12,
+            "clearance_m": 0.008282567697017202
+          },
+          {
+            "foot": 1,
+            "land_s": 8.0,
+            "air_s": 0.14,
+            "clearance_m": 0.007847257808566656
+          },
+          {
+            "foot": 0,
+            "land_s": 8.1,
+            "air_s": 0.1,
+            "clearance_m": 0.007869487552584828
+          },
+          {
+            "foot": 1,
+            "land_s": 8.22,
+            "air_s": 0.12,
+            "clearance_m": 0.0072577061528352835
+          },
+          {
+            "foot": 0,
+            "land_s": 8.34,
+            "air_s": 0.12,
+            "clearance_m": 0.007931052414235685
+          },
+          {
+            "foot": 1,
+            "land_s": 8.46,
+            "air_s": 0.12,
+            "clearance_m": 0.007872534378766245
+          },
+          {
+            "foot": 0,
+            "land_s": 8.58,
+            "air_s": 0.12,
+            "clearance_m": 0.00804987810362031
+          },
+          {
+            "foot": 1,
+            "land_s": 8.700000000000001,
+            "air_s": 0.12,
+            "clearance_m": 0.007710541879685732
+          },
+          {
+            "foot": 0,
+            "land_s": 8.82,
+            "air_s": 0.12,
+            "clearance_m": 0.008308867255085343
+          },
+          {
+            "foot": 1,
+            "land_s": 8.94,
+            "air_s": 0.12,
+            "clearance_m": 0.007579352063701115
+          },
+          {
+            "foot": 0,
+            "land_s": 9.06,
+            "air_s": 0.12,
+            "clearance_m": 0.0086805566994585
+          },
+          {
+            "foot": 1,
+            "land_s": 9.18,
+            "air_s": 0.12,
+            "clearance_m": 0.007366661498454963
+          },
+          {
+            "foot": 0,
+            "land_s": 9.3,
+            "air_s": 0.12,
+            "clearance_m": 0.008162957928692656
+          },
+          {
+            "foot": 1,
+            "land_s": 9.44,
+            "air_s": 0.14,
+            "clearance_m": 0.00800777363598307
+          },
+          {
+            "foot": 0,
+            "land_s": 9.540000000000001,
+            "air_s": 0.1,
+            "clearance_m": 0.007862996534554356
+          },
+          {
+            "foot": 1,
+            "land_s": 9.66,
+            "air_s": 0.12,
+            "clearance_m": 0.007135415837975093
+          },
+          {
+            "foot": 0,
+            "land_s": 9.78,
+            "air_s": 0.12,
+            "clearance_m": 0.008071516335664143
+          },
+          {
+            "foot": 1,
+            "land_s": 9.9,
+            "air_s": 0.12,
+            "clearance_m": 0.0076779524213077795
+          },
+          {
+            "foot": 0,
+            "land_s": 10.02,
+            "air_s": 0.12,
+            "clearance_m": 0.008125734900105309
+          },
+          {
+            "foot": 1,
+            "land_s": 10.14,
+            "air_s": 0.12,
+            "clearance_m": 0.007543538423873561
+          },
+          {
+            "foot": 0,
+            "land_s": 10.26,
+            "air_s": 0.12,
+            "clearance_m": 0.008447324054431018
+          },
+          {
+            "foot": 1,
+            "land_s": 10.38,
+            "air_s": 0.12,
+            "clearance_m": 0.0075116994650096715
+          },
+          {
+            "foot": 0,
+            "land_s": 10.5,
+            "air_s": 0.12,
+            "clearance_m": 0.00792224677157643
+          },
+          {
+            "foot": 1,
+            "land_s": 10.620000000000001,
+            "air_s": 0.12,
+            "clearance_m": 0.00792047144821721
+          },
+          {
+            "foot": 0,
+            "land_s": 10.74,
+            "air_s": 0.12,
+            "clearance_m": 0.0081847472950548
+          },
+          {
+            "foot": 1,
+            "land_s": 10.86,
+            "air_s": 0.12,
+            "clearance_m": 0.007716390718825039
+          },
+          {
+            "foot": 0,
+            "land_s": 10.98,
+            "air_s": 0.12,
+            "clearance_m": 0.008254553148288865
+          },
+          {
+            "foot": 1,
+            "land_s": 11.1,
+            "air_s": 0.12,
+            "clearance_m": 0.007481312884965574
+          },
+          {
+            "foot": 0,
+            "land_s": 11.22,
+            "air_s": 0.12,
+            "clearance_m": 0.00863777363854943
+          },
+          {
+            "foot": 1,
+            "land_s": 11.34,
+            "air_s": 0.12,
+            "clearance_m": 0.00733433099246082
+          },
+          {
+            "foot": 0,
+            "land_s": 11.46,
+            "air_s": 0.12,
+            "clearance_m": 0.008231294544971329
+          },
+          {
+            "foot": 1,
+            "land_s": 11.58,
+            "air_s": 0.12,
+            "clearance_m": 0.007812515505779667
+          },
+          {
+            "foot": 0,
+            "land_s": 11.700000000000001,
+            "air_s": 0.12,
+            "clearance_m": 0.007626778222223648
+          },
+          {
+            "foot": 1,
+            "land_s": 11.82,
+            "air_s": 0.12,
+            "clearance_m": 0.008121295708542742
+          },
+          {
+            "foot": 0,
+            "land_s": 11.94,
+            "air_s": 0.12,
+            "clearance_m": 0.007818026103676604
+          },
+          {
+            "foot": 1,
+            "land_s": 12.06,
+            "air_s": 0.12,
+            "clearance_m": 0.008029028934214153
+          },
+          {
+            "foot": 0,
+            "land_s": 12.18,
+            "air_s": 0.12,
+            "clearance_m": 0.00761920144205487
+          },
+          {
+            "foot": 1,
+            "land_s": 12.3,
+            "air_s": 0.12,
+            "clearance_m": 0.008138629735930221
+          },
+          {
+            "foot": 0,
+            "land_s": 12.42,
+            "air_s": 0.12,
+            "clearance_m": 0.007705559540962244
+          },
+          {
+            "foot": 1,
+            "land_s": 12.540000000000001,
+            "air_s": 0.12,
+            "clearance_m": 0.008094854868714405
+          },
+          {
+            "foot": 0,
+            "land_s": 12.66,
+            "air_s": 0.12,
+            "clearance_m": 0.007736420001437995
+          },
+          {
+            "foot": 1,
+            "land_s": 12.780000000000001,
+            "air_s": 0.12,
+            "clearance_m": 0.008139987107633553
+          },
+          {
+            "foot": 0,
+            "land_s": 12.9,
+            "air_s": 0.12,
+            "clearance_m": 0.00776894422540111
+          },
+          {
+            "foot": 1,
+            "land_s": 13.02,
+            "air_s": 0.12,
+            "clearance_m": 0.00807063550041405
+          },
+          {
+            "foot": 0,
+            "land_s": 13.14,
+            "air_s": 0.12,
+            "clearance_m": 0.007728329115999114
+          }
+        ],
+        "alternating_landing_fraction": 1.0,
+        "both_feet_loaded_active_fraction": 0.011666666666666667,
+        "loaded_slip_over_3cm_s_fraction": 0.09719934102141681,
+        "loaded_slip_p95_m_s": 0.10688840079907284,
+        "backward_translation_fraction": 0.0,
+        "bilateral_step_coverage_during_translation": 0.9616666666666667,
+        "target_outside_joint_limits_fraction": 0.5311111111111111,
+        "joint_hard_stop_fraction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.03055229142185664,
+          0.0
+        ],
+        "max_target_limit_violation_rad": 0.46085449870812867,
+        "max_actual_limit_violation_rad": 0.0,
+        "max_abs_servo_velocity_rad_s": 7.633828480654648,
+        "max_abs_actuator_torque_nm": 0.6405236195572268,
+        "nonfoot_contact_frames": 0,
+        "max_tilt_deg": 6.60478428217165,
+        "fell": false,
+        "rejection_reasons": [],
+        "rejection_gate_passed": true,
+        "physical_transfer_validated": false,
+        "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+      },
+      "motor_battery_passed": true,
+      "posture": {
+        "metrics": {
+          "maximum_mean_joint_error_rad": 0.15295996750503596,
+          "p95_worst_joint_error_rad": 0.1938841825757663,
+          "mean_absolute_face_pitch_deg": 14.049620193457505,
+          "per_head_joint_mean_abs_error_rad": [
+            0.15295996750503596,
+            0.09539997459515447,
+            0.11705930410019282,
+            0.06134805611601073
+          ]
+        },
+        "thresholds": {
+          "maximum_mean_joint_error_rad": 0.35,
+          "p95_worst_joint_error_rad": 0.7853981633974483,
+          "mean_absolute_face_pitch_deg": 30.0
+        },
+        "passed": true,
+        "boundary": "Neutral-head visible-development requirement, not calibrated hardware limits."
+      },
+      "original_motor_posture_passed": true,
+      "heading": {
+        "passed": true,
+        "metrics": {
+          "endpoint_heading_error_deg": 0.5205942046504255,
+          "maximum_heading_error_deg": 1.5785261947513447,
+          "signed_endpoint_heading_error_deg": 0.5205942046504255,
+          "measured_heading_change_deg": 0.5205942046504255,
+          "requested_heading_change_deg": 0.0
+        },
+        "thresholds": {
+          "endpoint_heading_error_deg": 15.0,
+          "maximum_heading_error_deg": 20.0
+        },
+        "failures": [],
+        "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+      },
+      "self_contact": {
+        "passed": true,
+        "failures": [],
+        "frames": 900,
+        "maximum_self_penetration_m": 0.0,
+        "violating_frames": 0,
+        "first_violation": null,
+        "threshold_m": 0.001,
+        "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance."
+      },
+      "self_load": {
+        "passed": true,
+        "failures": [],
+        "observed_samples": 3600,
+        "expected_samples": 3600,
+        "total_over_1n_fraction": 0.0,
+        "longest_over_1n_s": 0.0,
+        "thresholds": {
+          "total_load_n": 1.0,
+          "max_fraction": 0.01,
+          "max_continuous_s": 0.05
+        },
+        "boundary": "Applied 200-Hz native internal loads, not floor support or calibrated hardware forces."
+      },
+      "timing_profile": "zero-lag",
+      "repeated_window": 1,
+      "session_window_start_s": 0
+    }
+  ],
+  "export_parity": {
+    "walking": {
+      "random_observations": 65,
+      "max_abs_action_error_rad": 1.1444091796875e-05
+    },
+    "standing": {
+      "random_observations": 65,
+      "max_abs_action_error_rad": 9.5367431640625e-06
+    }
+  },
+  "max_real_observation_action_error_rad": 1.1920928955078125e-06,
+  "component_real_observation_error_rad": {
+    "walking": 1.1920928955078125e-06,
+    "standing": 9.5367431640625e-07
+  },
+  "physical_transfer_validated": false,
+  "reserved_opened": false,
+  "controller": "Fixed V16 command slew and V30 float32 correction-headroom persistent-reference filtered IMU feedback; V45 declared component pair; exact-zero ramped-command routing",
+  "model_scope": {
+    "variant": "complete-contact-v11",
+    "scene_sha256": "13ebc1cf3fe8111c1374d6afb7c15dde82ea85f540076ce98346757ac121cf8c",
+    "robot_sha256": "2862b9b5380f8641eca2b14e323f6af2c645cf54d5859bf5cb8502861c177b5b",
+    "old_reduced_model_acceptance": false
+  },
+  "boundary": "Unchanged motor/head/heading/geometry/internal-load gates. Explicit command-selected pair, unfiltered actions; repeated windows preserve full physical/action/controller history. Visible simulation development, not physical acceptance."
+}

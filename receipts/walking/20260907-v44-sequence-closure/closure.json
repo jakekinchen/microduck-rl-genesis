@@ -1,0 +1,60 @@
+{
+  "complete": true,
+  "candidate_rejected": true,
+  "retained_pair": "V21 walking / V15 standing / V30 controller",
+  "required_banks": {
+    "flat": "0/63",
+    "diagnostic": "0/4",
+    "surfaces": "0/14"
+  },
+  "fresh_sequence_bank_evaluated": false,
+  "physical_calibration": false,
+  "local_compute_finished": true,
+  "workspace_tests": 139,
+  "focused_tests": 2,
+  "receipt_manifests": {
+    "receipts/walking/20260907-v44-sequence-conformance": {
+      "files": 9,
+      "sha256": "33a097eef613bb15b05652dc2f10efac585dba64851f62dfa55abd436ee4f05f"
+    },
+    "receipts/walking/20260907-v44-sequence-flat": {
+      "files": 489,
+      "sha256": "e3bc8f3c0ee707682e6a67e280e4d0c49a9576f81f5ac19b5cf1af0664ffb6dd"
+    },
+    "receipts/walking/20260907-v44-sequence-repeated": {
+      "files": 510,
+      "sha256": "eed6f8697602611bd2262f79e92684549fa739868af6c01c71a50603f2adbed8"
+    },
+    "receipts/walking/20260907-v44-sequence-endurance": {
+      "files": 512,
+      "sha256": "477f29a967bd6f31d297931b0d8bee89c1387f3dd5db7ed3237ce02d6e722936"
+    },
+    "receipts/walking/20260907-v44-sequence-surfaces": {
+      "files": 541,
+      "sha256": "3b89c3e6f83c67d82bc17489a82ff7ab60e4c03ba1a9e492d812770ed5b772b7"
+    },
+    "receipts/walking/20260907-v44-sequence-verification": {
+      "files": 8,
+      "sha256": "779d57094d8a4b1a5e5e1bd69ee3c77b4e69e447fd55dadf56220d019dc9d11f"
+    },
+    "receipts/walking/20260907-v44-gate-review": {
+      "files": 2,
+      "sha256": "36a7df54a4b7d626eca01074c36dc15264e2209d34d6ded79c4bf7b2385d22a8"
+    },
+    "outputs/walking-sequence-v44": {
+      "files": 4,
+      "sha256": "f84277e4ced8fbf3588094d2956208d2c1832cebf5400a0173cc4752820cf2f0"
+    }
+  },
+  "source_freezes": {
+    "native-sequence-endurance-freeze-v44.json": "76dc6414457a6e5dc8bb12406e00643f838a0d2e2776deb14fc289ec849c9242",
+    "native-sequence-flat-freeze-v44-r2.json": "d4d35bc986b7c72201f6f2c51fe9feb7982ec5b36c98c95641abb258390373cc",
+    "native-sequence-flat-freeze-v44.json": "090a4264f09a0f709891582e14f56247bcf64a70d401de9cfa97951668d8dc16",
+    "native-sequence-freeze-v44.json": "38245f1eddf543773fa15c5aa2da752686153a88064d40d8363cba7d985fb82f",
+    "native-sequence-fresh-freeze-v44.json": "04dba25594f3c9cabea358d01cad5bc5f2e590311fd7925a7b97e3baa3083b86",
+    "native-sequence-surfaces-freeze-v44-r2.json": "ccb4a9c5c36a02586e448c4241544808211c97805ca4e9d4084c26bc25f491c5",
+    "native-sequence-surfaces-freeze-v44.json": "94e58402c0bef43783c116498144a6acb248df43fa335b558af1d27af7cd61bd"
+  },
+  "active_case_verified": true,
+  "next_step": "Freeze an exposed component-isolation bank before another retention-constrained correction."
+}

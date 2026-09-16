@@ -1,0 +1,78 @@
+{
+  "schema": "microduck.intermediate-posture-audit/v1",
+  "candidate_selection_eligible": false,
+  "checkpoint_sha256": "9900453a7cd256ef5e94060e98c443a1d443bd4a7fe7c8b6e6bcc668283c4260",
+  "thresholds": {
+    "maximum_mean_joint_error_rad": 0.35,
+    "p95_worst_joint_error_rad": 0.7853981633974483,
+    "mean_absolute_face_pitch_deg": 30.0
+  },
+  "cases": [
+    {
+      "case": "m0s0-forward-12",
+      "source_sha256": "e14519d9fc4d5415b479759267e40e1ff9b7304babf92f2417181082d3cfb3e9",
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.4077190082006299,
+        "p95_worst_joint_error_rad": 0.8488540294241521,
+        "mean_absolute_face_pitch_deg": 26.68631785439569,
+        "per_head_joint_mean_abs_error_rad": [
+          0.4077190082006299,
+          0.0633059390268963,
+          0.05180767462709396,
+          0.04965783878643585
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case": "m0s0-turn-left",
+      "source_sha256": "f7cd85ce86b896d85dc438f663b01a04413184c7bf2b140646774396f360666c",
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.3957785576327666,
+        "p95_worst_joint_error_rad": 0.8525052190872163,
+        "mean_absolute_face_pitch_deg": 28.56427292520522,
+        "per_head_joint_mean_abs_error_rad": [
+          0.3957785576327666,
+          0.10637513255594067,
+          0.10651002002465758,
+          0.038578425058477736
+        ]
+      },
+      "passed": false
+    },
+    {
+      "case": "m4s1-forward-12",
+      "source_sha256": "b1eed70d11d1347c4df3a0e6be7f21ddee4767f6ae5d8afdc6f449f7812e336d",
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.18250257225361669,
+        "p95_worst_joint_error_rad": 0.424582736919702,
+        "mean_absolute_face_pitch_deg": 12.728622121736416,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18250257225361669,
+          0.02706685088544345,
+          0.07799930056049424,
+          0.05742049800565337
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "m4s1-turn-left",
+      "source_sha256": "10f3804109335cb186c9ab3cb8386f144ebe4304d9235d0ed49a0eff7d44de26",
+      "metrics": {
+        "maximum_mean_joint_error_rad": 0.17092675440835498,
+        "p95_worst_joint_error_rad": 0.3671109448610951,
+        "mean_absolute_face_pitch_deg": 14.69319638760811,
+        "per_head_joint_mean_abs_error_rad": [
+          0.17092675440835498,
+          0.07650892895214226,
+          0.14485884330833537,
+          0.04172589286586271
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "physical_transfer_validated": false,
+  "boundary": "Posture rejection applied to retained intermediate feedback traces; not a final candidate evaluation."
+}

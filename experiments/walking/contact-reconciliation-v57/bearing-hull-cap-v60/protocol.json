@@ -1,0 +1,52 @@
+{
+  "id": "v60-bearing-only-hull-cap-comparison",
+  "frozen_utc": "2026-09-16T01:04:08.878203+00:00",
+  "hypothesis": "64-hull forced merging contributes to bearing excess material; change only cap to 256",
+  "params": {
+    "threshold": 0.00025,
+    "real_metric": true,
+    "max_convex_hull": 256,
+    "preprocess_mode": "off",
+    "preprocess_resolution": 50,
+    "resolution": 1000,
+    "mcts_nodes": 20,
+    "mcts_iterations": 30,
+    "mcts_max_depth": 3,
+    "pca": false,
+    "merge": true,
+    "decimate": false,
+    "max_ch_vertex": 256,
+    "extrude": false,
+    "extrude_margin": 0.01,
+    "apx_mode": "ch",
+    "seed": 26091657
+  },
+  "meshes": [
+    "seeed_bearing__configuration__22x16x4"
+  ],
+  "source_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a"
+  },
+  "parent_protocol_sha256": "0c372e45f2d52688f42b1b65e325c2a92215491273ab86bb28fbfa685dc1a09f",
+  "source_worker_byte_identical": true,
+  "prerequisites": {
+    "v59_compiler_compatibility": true,
+    "v58_material_regression_exact_checks": 44
+  },
+  "budget": {
+    "attempts": 1,
+    "generation_seconds": 120,
+    "validation_seconds": 180,
+    "parts_maximum": 256,
+    "native_thread_policy": "isolated std::thread hardware concurrency; no OMP cap claim"
+  },
+  "gates": {
+    "sampled_material_tolerance_m": 0.00025,
+    "source_and_part_watertight": true,
+    "parts_convex": true,
+    "preserve_source_geometry": true
+  },
+  "decision": "If any bearing gate fails, no other mesh generation in this comparison. If all pass, separately freeze compiler/assembly checks before extending other shapes. No dynamics or behavior/model admission."
+}

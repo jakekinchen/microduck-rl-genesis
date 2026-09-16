@@ -1,0 +1,48 @@
+{
+  "verified": true,
+  "banks": [
+    {
+      "bank": "feedback-bank.json",
+      "sha256": "c3a4af263929345987883ee57e6acbffc8d3030034372e3777995e7964f01ce4",
+      "inputs_verified": 425
+    },
+    {
+      "bank": "bench-bank.json",
+      "sha256": "61378abcdeb98f098ff279a9e34ed00ef89998341824ff3680eb5d5bc7137068",
+      "inputs_verified": 437
+    }
+  ],
+  "processes": [
+    {
+      "phase": "controls",
+      "children_completed": 8,
+      "all_exit_zero": true,
+      "timeout_count": 0
+    },
+    {
+      "phase": "native",
+      "children_completed": 8,
+      "all_exit_zero": true,
+      "timeout_count": 0
+    },
+    {
+      "phase": "fixed",
+      "children_completed": 8,
+      "all_exit_zero": true,
+      "timeout_count": 0
+    },
+    {
+      "phase": "bench-static",
+      "children_completed": 1,
+      "all_exit_zero": true,
+      "timeout_count": 0
+    },
+    {
+      "phase": "bench",
+      "children_completed": 32,
+      "all_exit_zero": true,
+      "timeout_count": 0
+    }
+  ],
+  "prior_closures_verified": true
+}

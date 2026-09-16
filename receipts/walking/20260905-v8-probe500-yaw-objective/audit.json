@@ -1,0 +1,197 @@
+{
+  "schema": "microduck.walking-yaw-objective-audit/v1",
+  "trajectory_sha256": "5e57b0de3369f12bb758217b56b0edc409d9ede067b82e1427942856556c6474",
+  "input_manifest_sha256": "735136b5bd4ee4de10b2cc23003375f43d07b5dcea645a66a99cd9b688ce6e9f",
+  "cases": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "mean_yaw_error_rad_s": 0.05318805230940135,
+      "zero_mean_wobble_std_rad_s": 0.23104283498467598,
+      "integrated_body_gyro_bias_deg": 33.521960096347236,
+      "observed_yaw_reward_per_s": 2.156349505184976,
+      "counterfactual_centered_yaw_reward_per_s": 2.2393277700402225,
+      "reward_improvement_if_only_bias_removed_per_s": 0.0829782648552464
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-12",
+      "mean_yaw_error_rad_s": 0.04868385860983693,
+      "zero_mean_wobble_std_rad_s": 0.2368926360373198,
+      "integrated_body_gyro_bias_deg": 30.6831759163082,
+      "observed_yaw_reward_per_s": 2.099511612236988,
+      "counterfactual_centered_yaw_reward_per_s": 2.2123446497429233,
+      "reward_improvement_if_only_bias_removed_per_s": 0.11283303750593543
+    },
+    {
+      "case_id": "nominal-20-20ms--forward-20",
+      "mean_yaw_error_rad_s": 0.017516247979579014,
+      "zero_mean_wobble_std_rad_s": 0.3080513205263218,
+      "integrated_body_gyro_bias_deg": 11.039677903478761,
+      "observed_yaw_reward_per_s": 1.7239617258001918,
+      "counterfactual_centered_yaw_reward_per_s": 1.717719156780028,
+      "reward_improvement_if_only_bias_removed_per_s": -0.006242569020163735
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-left",
+      "mean_yaw_error_rad_s": 0.0008375027813018831,
+      "zero_mean_wobble_std_rad_s": 0.1714199527265515,
+      "integrated_body_gyro_bias_deg": 0.5278391216897249,
+      "observed_yaw_reward_per_s": 3.237234341120787,
+      "counterfactual_centered_yaw_reward_per_s": 3.235373061239787,
+      "reward_improvement_if_only_bias_removed_per_s": -0.0018612798810000442
+    },
+    {
+      "case_id": "nominal-20-20ms--turn-right",
+      "mean_yaw_error_rad_s": -0.059626793728534216,
+      "zero_mean_wobble_std_rad_s": 0.17772395274399558,
+      "integrated_body_gyro_bias_deg": -37.5799998919635,
+      "observed_yaw_reward_per_s": 2.798339669368706,
+      "counterfactual_centered_yaw_reward_per_s": 3.1149829174952015,
+      "reward_improvement_if_only_bias_removed_per_s": 0.31664324812649536
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-left",
+      "mean_yaw_error_rad_s": 0.07788171086757664,
+      "zero_mean_wobble_std_rad_s": 0.2734648786335169,
+      "integrated_body_gyro_bias_deg": 49.08522667367328,
+      "observed_yaw_reward_per_s": 1.273441601453394,
+      "counterfactual_centered_yaw_reward_per_s": 1.7808131024676288,
+      "reward_improvement_if_only_bias_removed_per_s": 0.5073715010142348
+    },
+    {
+      "case_id": "nominal-20-20ms--arc-right",
+      "mean_yaw_error_rad_s": 0.013736444070823138,
+      "zero_mean_wobble_std_rad_s": 0.29947761545684976,
+      "integrated_body_gyro_bias_deg": 8.657442978532364,
+      "observed_yaw_reward_per_s": 1.6027964723842831,
+      "counterfactual_centered_yaw_reward_per_s": 1.6139639240001458,
+      "reward_improvement_if_only_bias_removed_per_s": 0.011167451615862634
+    },
+    {
+      "case_id": "zero-lag--forward-08",
+      "mean_yaw_error_rad_s": 0.05796165833120718,
+      "zero_mean_wobble_std_rad_s": 0.175535936069802,
+      "integrated_body_gyro_bias_deg": 36.530542355532035,
+      "observed_yaw_reward_per_s": 3.10585038372844,
+      "counterfactual_centered_yaw_reward_per_s": 3.2238251485314686,
+      "reward_improvement_if_only_bias_removed_per_s": 0.11797476480302871
+    },
+    {
+      "case_id": "zero-lag--forward-12",
+      "mean_yaw_error_rad_s": 0.06162098016128983,
+      "zero_mean_wobble_std_rad_s": 0.1832053400269068,
+      "integrated_body_gyro_bias_deg": 38.8368430197141,
+      "observed_yaw_reward_per_s": 3.0443558086878237,
+      "counterfactual_centered_yaw_reward_per_s": 3.160214569106322,
+      "reward_improvement_if_only_bias_removed_per_s": 0.11585876041849819
+    },
+    {
+      "case_id": "zero-lag--forward-20",
+      "mean_yaw_error_rad_s": -0.009790387173316355,
+      "zero_mean_wobble_std_rad_s": 0.20284415432151373,
+      "integrated_body_gyro_bias_deg": -6.170426513130475,
+      "observed_yaw_reward_per_s": 2.780870072203802,
+      "counterfactual_centered_yaw_reward_per_s": 2.7926541186017575,
+      "reward_improvement_if_only_bias_removed_per_s": 0.011784046397955716
+    },
+    {
+      "case_id": "zero-lag--turn-left",
+      "mean_yaw_error_rad_s": 0.10542354965982649,
+      "zero_mean_wobble_std_rad_s": 0.16657072989189953,
+      "integrated_body_gyro_bias_deg": 66.44356902475494,
+      "observed_yaw_reward_per_s": 3.13272386421425,
+      "counterfactual_centered_yaw_reward_per_s": 3.5406589550473266,
+      "reward_improvement_if_only_bias_removed_per_s": 0.4079350908330768
+    },
+    {
+      "case_id": "zero-lag--turn-right",
+      "mean_yaw_error_rad_s": -0.035691022519640625,
+      "zero_mean_wobble_std_rad_s": 0.15629632160778206,
+      "integrated_body_gyro_bias_deg": -22.494394525699636,
+      "observed_yaw_reward_per_s": 3.5844161161157113,
+      "counterfactual_centered_yaw_reward_per_s": 3.644770254250719,
+      "reward_improvement_if_only_bias_removed_per_s": 0.06035413813500767
+    },
+    {
+      "case_id": "zero-lag--arc-left",
+      "mean_yaw_error_rad_s": 0.05533675410760958,
+      "zero_mean_wobble_std_rad_s": 0.20914489069815237,
+      "integrated_body_gyro_bias_deg": 34.87618708551176,
+      "observed_yaw_reward_per_s": 2.698191180425967,
+      "counterfactual_centered_yaw_reward_per_s": 2.741229718006137,
+      "reward_improvement_if_only_bias_removed_per_s": 0.043038537580169844
+    },
+    {
+      "case_id": "zero-lag--arc-right",
+      "mean_yaw_error_rad_s": 0.03724751674113283,
+      "zero_mean_wobble_std_rad_s": 0.20715841117525904,
+      "integrated_body_gyro_bias_deg": 23.47538057270768,
+      "observed_yaw_reward_per_s": 2.6365752322360176,
+      "counterfactual_centered_yaw_reward_per_s": 2.658961069212694,
+      "reward_improvement_if_only_bias_removed_per_s": 0.022385836976676288
+    },
+    {
+      "case_id": "long-30-20ms--forward-08",
+      "mean_yaw_error_rad_s": 0.1543255614356088,
+      "zero_mean_wobble_std_rad_s": 0.3393029319147499,
+      "integrated_body_gyro_bias_deg": 97.2642367537201,
+      "observed_yaw_reward_per_s": 0.8078346385087793,
+      "counterfactual_centered_yaw_reward_per_s": 1.1501465097484715,
+      "reward_improvement_if_only_bias_removed_per_s": 0.3423118712396922
+    },
+    {
+      "case_id": "long-30-20ms--forward-12",
+      "mean_yaw_error_rad_s": 0.13115630581049953,
+      "zero_mean_wobble_std_rad_s": 0.3433414563556315,
+      "integrated_body_gyro_bias_deg": 82.66173057415658,
+      "observed_yaw_reward_per_s": 0.7976903115606427,
+      "counterfactual_centered_yaw_reward_per_s": 1.0552029091796755,
+      "reward_improvement_if_only_bias_removed_per_s": 0.2575125976190328
+    },
+    {
+      "case_id": "long-30-20ms--forward-20",
+      "mean_yaw_error_rad_s": 0.05877618530806035,
+      "zero_mean_wobble_std_rad_s": 0.4642934663766581,
+      "integrated_body_gyro_bias_deg": 37.04390089433764,
+      "observed_yaw_reward_per_s": 0.13222900170183632,
+      "counterfactual_centered_yaw_reward_per_s": 0.09846928359231424,
+      "reward_improvement_if_only_bias_removed_per_s": -0.03375971810952208
+    },
+    {
+      "case_id": "long-30-20ms--turn-left",
+      "mean_yaw_error_rad_s": 0.08909007485753521,
+      "zero_mean_wobble_std_rad_s": 0.22862832648833437,
+      "integrated_body_gyro_bias_deg": 56.149338144254706,
+      "observed_yaw_reward_per_s": 2.4971794704668846,
+      "counterfactual_centered_yaw_reward_per_s": 2.5107537149308192,
+      "reward_improvement_if_only_bias_removed_per_s": 0.013574244463934626
+    },
+    {
+      "case_id": "long-30-20ms--turn-right",
+      "mean_yaw_error_rad_s": 0.014959411181858498,
+      "zero_mean_wobble_std_rad_s": 0.24185471110794318,
+      "integrated_body_gyro_bias_deg": 9.42822237193433,
+      "observed_yaw_reward_per_s": 2.1889900726278233,
+      "counterfactual_centered_yaw_reward_per_s": 2.177061851157974,
+      "reward_improvement_if_only_bias_removed_per_s": -0.011928221469849287
+    },
+    {
+      "case_id": "long-30-20ms--arc-left",
+      "mean_yaw_error_rad_s": 0.16458288313549857,
+      "zero_mean_wobble_std_rad_s": 0.2971809287563882,
+      "integrated_body_gyro_bias_deg": 103.72895042134813,
+      "observed_yaw_reward_per_s": 0.9994188228279017,
+      "counterfactual_centered_yaw_reward_per_s": 1.6711674574078892,
+      "reward_improvement_if_only_bias_removed_per_s": 0.6717486345799875
+    },
+    {
+      "case_id": "long-30-20ms--arc-right",
+      "mean_yaw_error_rad_s": 0.04104745698841978,
+      "zero_mean_wobble_std_rad_s": 0.4192003795611231,
+      "integrated_body_gyro_bias_deg": 25.87030649699353,
+      "observed_yaw_reward_per_s": 0.16172328553354678,
+      "counterfactual_centered_yaw_reward_per_s": 0.148188302579236,
+      "reward_improvement_if_only_bias_removed_per_s": -0.013534982954310798
+    }
+  ],
+  "boundary": "Offline algebra on exposed recorded traces. Subtracting the episode mean is NOT a realizable action, policy, causal learning result or acceptance score. Body gyro integral is not planar quaternion heading. Physics/actions/checkpoint are untouched."
+}

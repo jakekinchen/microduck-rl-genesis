@@ -1,0 +1,52 @@
+{
+  "id": "v61-three-remaining-hulls",
+  "frozen_utc": "2026-09-16T01:07:22.873310+00:00",
+  "hypothesis": "Apply exactly the V60 passing bearing recipe to remaining three V58 shapes; only cap changes from V58 64 to 256",
+  "params": {
+    "threshold": 0.00025,
+    "real_metric": true,
+    "max_convex_hull": 256,
+    "preprocess_mode": "off",
+    "preprocess_resolution": 50,
+    "resolution": 1000,
+    "mcts_nodes": 20,
+    "mcts_iterations": 30,
+    "mcts_max_depth": 3,
+    "pca": false,
+    "merge": true,
+    "decimate": false,
+    "max_ch_vertex": 256,
+    "extrude": false,
+    "extrude_margin": 0.01,
+    "apx_mode": "ch",
+    "seed": 26091657
+  },
+  "meshes": [
+    "neck_pitch",
+    "bottom_head_shell",
+    "jaw"
+  ],
+  "source_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a"
+  },
+  "budget": {
+    "attempts_per_mesh": 1,
+    "generation_seconds_each": 120,
+    "generation_seconds_total": 360,
+    "material_validation_seconds": 360,
+    "maximum_parts_per_mesh": 256,
+    "maximum_total_parts_including_retained_bearing": 1024,
+    "native_thread_policy": "exclusive hardware-concurrency backend; no effective OMP cap"
+  },
+  "decisions": {
+    "all_four_material_gates_pass": "permit separately frozen complete-model assembly/cavity/201-pose checks",
+    "any_material_gate_fail": "retain failed cases; no retries, dynamics, or training in this comparison"
+  },
+  "sampled_tolerance_m": 0.00025,
+  "new_training": false,
+  "physical_acceptance": false
+}

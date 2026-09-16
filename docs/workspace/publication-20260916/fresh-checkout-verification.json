@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "discovered": [
+    {
+      "module": "test_duck_workspace.py",
+      "tests": 53
+    },
+    {
+      "module": "test_behavior_quality_plan.py",
+      "tests": 7
+    },
+    {
+      "module": "test_active_workspace.py",
+      "tests": 11
+    },
+    {
+      "module": "test_workspace_exchange.py",
+      "tests": 18
+    },
+    {
+      "module": "test_experiment_ops.py",
+      "tests": 29
+    },
+    {
+      "module": "test_handoff_snapshots_v43.py",
+      "tests": 3
+    },
+    {
+      "module": "test_compute_preflight.py",
+      "tests": 7
+    },
+    {
+      "module": "test_workspace_performance.py",
+      "tests": 7
+    },
+    {
+      "module": "test_verification_runner.py",
+      "tests": 6
+    }
+  ],
+  "discovery_errors": [],
+  "tests_run": 141,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [],
+  "expected_failures": 0,
+  "unexpected_successes": 0,
+  "root": "/Users/kelly/Developer/microduck-rl-genesis/.workspace/publication-20260916/fresh-checkout",
+  "python": "/Users/kelly/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/bin/python3.12",
+  "elapsed_seconds": 4.193,
+  "scope": "workspace tooling only; no simulator, task acceptance or physical validation"
+}

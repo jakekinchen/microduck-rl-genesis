@@ -2,70 +2,82 @@
 
 ## Work Mode
 
-Work directly in one Codex task. Do not create Executor/Reviewer/Manager
-cycles, spawn review tasks, or run an autonomous goal loop. Historical role
-records are evidence only.
+Work directly in one Codex task. No delegated roles or autonomous goal loops.
+Use `TRAINING_ACTUALIZATION.md` as the only ordered queue. Preserve original
+scores, negative receipts and physical-authority boundaries.
 
 ## Active Mission
 
-Turn the working Genesis Metal/MPS pipeline into a reproducible,
-backend-conformant, independently evaluated policy-production system by
-advancing `TRAINING_ACTUALIZATION.md` in order. Preserve the 61D observation,
-14D action order, 50 Hz unfiltered control loop, normalized ONNX export, exact
-model variants, and BAM behavior boundaries. Promote only evidence-backed proof
-classes; reward movement or a plausible rollout is never task success.
+Build useful, composable MicroDuck behaviors with independently evaluated
+locomotion and an explicit operating envelope. Preserve the versioned 61D/14D
+policy contract and distinguish simulation development from physical acceptance.
 
 ## Current Milestone
 
-Laser-following camera integration next; simulated pursuit validated on visible cases
+Document and publish the complete project state, then review the approach
 
 ## Current Status
 
-`LASER_SIM_TARGET_FOLLOWING_VALIDATED_DEVELOPMENT` — the 1024×500 local PPO
-fine-tune completed 12,288,000 new transitions in 21.4 minutes including startup.
-With a versioned approach-gain refinement and byte-identical learned policy,
-all six frozen visible C MuJoCo/BAM laser cases pass, without falls. V1's
-2/6 result remains retained; thresholds were not relaxed. See
-`experiments/laser/README.md` and `receipts/laser-follow/20260904-v2-steering/`.
-Target input is still simulated ground truth. Onboard camera control is next:
-the locked HOME head-camera frame faces opposite positive walking X and its
-forward-dot image has no detection. No physical or held-out result is claimed.
+The owner requested repository and evidence synchronization before assessing
+whether progress has stagnated and whether tools, frameworks or methodology
+should change. New training and simulation are paused for that review.
+The review entry point is [PROCESS_REVIEW_20260916.md](docs/workspace/PROCESS_REVIEW_20260916.md).
 
-- M5 is blocked after four distinct Brev provider/type provisioning failures.
-- M6 has an accepted deterministic 65-file bundle, but the official candidate
-  is missing 8 of 10 roles and the community candidate is missing 4 of 10.
-- Five legacy files remain quarantined.
-- The official request was posted as Pollen Robotics GitHub issue 40; its
-  checksummed contact receipt records the exact body, identity, destination,
-  and timestamp. No role is closed and a response is pending.
-- A new first-party walking policy was trained from scratch at public seed
-  `26090401` for 2,457,600 transitions, exported with a separately recorded
-  normalizer, and evaluated twice on frozen visible-development cases. The two
-  semantic trajectories match exactly; this is pipeline evidence, not gait
-  success or held-out acceptance.
-- The community request remains unsent. Brev is empty, and no third-party
-  policy action, paid compute, publication, activation, or physical action is
-  authorized or in progress. The completed local first-party run was explicitly
-  authorized development work.
-- Third-party artifact resolution still waits for immutable upstream inputs.
-  Local first-party development may continue under the versioned development
-  amendment; held-out, publication, activation, and hardware gates remain shut.
+Latest experiment: **V66 guided first-impact numerical gate passes in all
+16 model/phase buckets.** All 96 cases, 358,400 physics samples and 48 exact
+repeat pairs verify; eight controls reproduce V65. The finest comparison
+(0.3125/0.15625 ms) stays within 0.1 mm: maximum position difference 0.064698 mm,
+penetration-peak difference 0.061970 mm. The coarser pair passes only 12/16.
+This establishes only a guided ankle-bench numerical reference.
+[Result](experiments/walking/impact-convergence-v66/README.md).
 
-## Task List
+**Full-robot dynamics remain unresolved.** V62 passes static collision-geometry
+checks with 7,592 colliders. V63–V65 full-robot diagnostic gates fail; fixing
+BAM force-input age does not rescue fine-step replay. Fixed HOME falls on both
+reference models. No full-robot numerical reference or calibrated model is
+admitted by these results.
 
-`TRAINING_ACTUALIZATION.md` is the source of truth for ordered work,
-acceptance gates, and durable receipts.
+**Retained behavior:** original V21 walking/V15 standing with V30 heading.
+V54 shared remains a development starting point, not a promoted replacement.
+V54/V55 retain 5/14 exposed surface passes; V55 improves downhill survival but
+still fails complete acceptance and regresses one 180-second composition.
+The coordinate-target course passes six exposed conditions. Camera-driven
+following passes 11/16 required development cases. Official runtime inference
+and command replay pass component checks, but its body rehearsal falls during
+HOME_RAMP. There is no general carpet, recovery or physical capability admission.
+
+## Next Decision
+
+Complete publication and review the process before selecting another experiment.
+The prior proposal is a short 0.035–0.135 s full-robot impact window, capturing
+complete solver/BAM/FIFO state at 0.035 s and reproducing exact 5 ms controls
+before finer comparisons. Fixed-input plant integration and live BAM feedback
+would be separate stages. This is a review candidate, not an automatic launch.
+Runtime startup, perception failure isolation and broader terrain remain queued.
+
+## Verification and Evidence
+
+- Publication tooling check: 141 tests pass, with no failures or skips.
+  Publication verification and archive checks are recorded in
+  [the evidence guide](docs/workspace/publication-20260916/README.md).
+- V66 has seven focused tests; V65 has nine. Their closed results remain scoped
+  to those diagnostics; passing tooling tests is not walking acceptance.
+- [Process-review packet](docs/workspace/PROCESS_REVIEW_20260916.md) links the
+  dated experiment reports, research and limitations.
+- [Prior status history](docs/workspace/STATUS_HISTORY_20260916.md) preserves
+  the complete status document before this consolidation. Its historical
+  next-step language does not override the current milestone.
 
 ## Current Boundaries
 
-- Do not reuse consumed compute authorizations or retry the failed Brev pilot
-  types.
-- Do not create an eighth Brev pilot without new user direction and fresh,
-  exact authority.
-- Do not begin the full CUDA seed matrix from historical smoke authority.
-- Do not import, evaluate, publish, approve, or activate either incomplete M6
-  candidate as a policy manifest.
-- Stop when an authoritative upstream input is unavailable and no honest
-  repo-local fixture can close the gate.
-- Publication, policy activation, and physical operation require explicit user
-  authority.
+Publication to `jakekinchen/microduck-rl-genesis` is explicitly authorized by the
+owner's September 16 request. This authority does not activate a policy, operate
+hardware, launch paid compute, or admit incomplete third-party artifacts.
+Do not reuse prior Brev pilot authorizations or start a CUDA matrix. No new
+compute is required for the publication task.
+
+Behavior/library acceptance still requires `docs/workspace/BEHAVIOR_VALIDATION.md`:
+independent behavior/contact/load gates, actual parameter coverage, unseen
+families, continuous transitions, endurance and evidence-bound physics checks.
+Public datasets and simulator agreement do not provide Ducky-specific physical
+calibration. Missing or failed cases remain missing or failed.

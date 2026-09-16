@@ -1,0 +1,172 @@
+{
+  "schema": "microduck.gait-correction-comparison/v4",
+  "baseline": {
+    "policy_sha256": "7d634c6f64178f1bbb8cbe3a4129418ad8661dad6abfbaae3ac533244c3d0fed",
+    "target_passes": 4,
+    "gait_passes": 0,
+    "composite_passes": 0,
+    "cases": [
+      {
+        "case_id": "76341-front-circle",
+        "failures": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping",
+          "persistent_loaded_foot_slip",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "target_pass": true,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          1,
+          0
+        ],
+        "bilateral_step_coverage": 0.0,
+        "worst_joint_stop_fraction": 1.0,
+        "loaded_slip_p95_m_s": 0.10046632990821643
+      },
+      {
+        "case_id": "76342-front-retarget",
+        "failures": [
+          "unsustained_bilateral_stepping",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "target_pass": true,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          22,
+          20
+        ],
+        "bilateral_step_coverage": 0.2037797863599014,
+        "worst_joint_stop_fraction": 1.0,
+        "loaded_slip_p95_m_s": 0.04719098100903717
+      },
+      {
+        "case_id": "76343-front-eight",
+        "failures": [
+          "unsustained_bilateral_stepping",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "target_pass": true,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          3,
+          3
+        ],
+        "bilateral_step_coverage": 0.1011764705882353,
+        "worst_joint_stop_fraction": 1.0,
+        "loaded_slip_p95_m_s": 0.08588908685161
+      },
+      {
+        "case_id": "76344-turn-around",
+        "failures": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping",
+          "persistent_joint_hard_stop",
+          "joint_limit_excursion"
+        ],
+        "target_pass": true,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          6,
+          1
+        ],
+        "bilateral_step_coverage": 0.0959119496855346,
+        "worst_joint_stop_fraction": 1.0,
+        "loaded_slip_p95_m_s": 0.0961975428697231
+      }
+    ]
+  },
+  "candidate": {
+    "policy_sha256": "6190f954425c2b31c3b301faa5dcfed613d5c9c867b9d00ce71abc722b3df308",
+    "target_passes": 1,
+    "gait_passes": 0,
+    "composite_passes": 0,
+    "cases": [
+      {
+        "case_id": "76341-front-circle",
+        "failures": [
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "target_pass": true,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          0,
+          0
+        ],
+        "bilateral_step_coverage": 0.0,
+        "worst_joint_stop_fraction": 0.0,
+        "loaded_slip_p95_m_s": 0.09135663392525105
+      },
+      {
+        "case_id": "76342-front-retarget",
+        "failures": [
+          "target_pursuit_failed",
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "target_pass": false,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          0,
+          0
+        ],
+        "bilateral_step_coverage": 0.0,
+        "worst_joint_stop_fraction": 0.0,
+        "loaded_slip_p95_m_s": 0.0034496544029739675
+      },
+      {
+        "case_id": "76343-front-eight",
+        "failures": [
+          "target_pursuit_failed",
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "target_pass": false,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          0,
+          0
+        ],
+        "bilateral_step_coverage": 0.0,
+        "worst_joint_stop_fraction": 0.0,
+        "loaded_slip_p95_m_s": 0.0104413097560221
+      },
+      {
+        "case_id": "76344-turn-around",
+        "failures": [
+          "target_pursuit_failed",
+          "no_useful_translation",
+          "missing_bilateral_steps",
+          "unsustained_bilateral_stepping"
+        ],
+        "target_pass": false,
+        "gait_pass": false,
+        "fell": false,
+        "swings_left_right": [
+          0,
+          0
+        ],
+        "bilateral_step_coverage": null,
+        "worst_joint_stop_fraction": 0.0,
+        "loaded_slip_p95_m_s": 0.0012441999866730684
+      }
+    ]
+  },
+  "new_v4_transitions": 14745600,
+  "elapsed_s": 1940.5475847506896,
+  "all_visible_composite_gates_passed": false,
+  "physical_transfer_validated": false,
+  "reserved_opened": false,
+  "boundary": "Independent visible-development diagnostics. Camera correction is physics-neutral; no physical or canonical walking acceptance."
+}

@@ -1,0 +1,15 @@
+{
+  "version": "laser-turn-correction-v2",
+  "reason": "robust-v1 retained 6/6 legacy cases but only 1/6 harder dynamic development cases; commanded in-place yaw of -1 rad/s yielded nearly no actual yaw for the first 10 seconds of seed 75001",
+  "diagnosis_boundary": "measured yaw stagnation; reward imbalance is a hypothesis tested by this intervention, not a proven exclusive cause",
+  "candidate_before": "b5046aab0e48b3a1c741fe5277341982357a1f43df9f17d14789d4db267ed561",
+  "run": "laser-turn-20260905-v2",
+  "seed": 26090502,
+  "environments": 1024,
+  "iterations": 250,
+  "new_transitions": 6144000,
+  "correction": "increase angular tracking weight from 3 to 12, gate linear reward by yaw correctness, add bounded actual-yaw progress reward, reduce pose/action-rate penalties; preserve the DR curriculum",
+  "selection": "compare final checkpoint only on the same development and legacy tests; do not relax thresholds or select intermediate checkpoints",
+  "reserved_seeds_status_at_freeze": "not realized",
+  "stop": "one additional bounded correction; if insufficient, retain measured limitation and queue the next hypothesis, no unbounded training loop"
+}

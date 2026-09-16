@@ -15,6 +15,8 @@ def main():
     status = sub.add_parser("status", help="current queue and discovered development receipts")
     status.add_argument("--json", action="store_true")
     sub.add_parser("doctor", help="read-only runtime, contract and BAM checks")
+    from scripts.verify_workspace import add_arguments
+    add_arguments(sub.add_parser("verify", help="run dependency-free workspace tooling tests"))
     studio = sub.add_parser("studio", help="serve the local read-only Duck Lab viewer")
     studio.add_argument("--port", type=int, default=8766)
     new = sub.add_parser("new", help="create a behavior draft; does not start training")
@@ -49,6 +51,9 @@ def main():
             data = doctor()
             print(json.dumps(data, indent=2))
             return 0 if data["ready_for_evaluator_setup"] else 1
+        elif args.command == "verify":
+            from scripts.verify_workspace import verify
+            return verify(args)
         elif args.command == "new":
             print(new_behavior(ROOT, args.slug, args.request))
         elif args.command == "check-spec":

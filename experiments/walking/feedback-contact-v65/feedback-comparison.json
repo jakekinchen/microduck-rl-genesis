@@ -1,0 +1,507 @@
+{
+  "cases": [
+    {
+      "case": "v11-native-dt5000us-r1",
+      "time_s": 18.0,
+      "completed": true,
+      "stop": null,
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration"
+      ],
+      "ground_peak_m": 0.003974844464207147,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v11-fixed_5ms-dt5000us-r1",
+      "time_s": 18.0,
+      "completed": true,
+      "stop": null,
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration"
+      ],
+      "ground_peak_m": 0.003974844464207147,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v62-native-dt5000us-r1",
+      "time_s": 2.505,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "ground_peak_m": 0.0042503330450556764,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v62-fixed_5ms-dt5000us-r1",
+      "time_s": 2.505,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "ground_peak_m": 0.0042503330450556764,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v11-native-dt2500us-r1",
+      "time_s": 1.705,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "ground_peak_m": 0.004382728435647281,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v11-fixed_5ms-dt2500us-r1",
+      "time_s": 1.7325,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "ground_peak_m": 0.0049782500614588485,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v62-native-dt2500us-r1",
+      "time_s": 1.6425,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "ground_peak_m": 0.0030567475750024886,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v62-fixed_5ms-dt2500us-r1",
+      "time_s": 1.71,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "ground_peak_m": 0.004413653873022718,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v11-native-dt1250us-r1",
+      "time_s": 1.64125,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration"
+      ],
+      "ground_peak_m": 0.003083610449999958,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v11-fixed_5ms-dt1250us-r1",
+      "time_s": 1.6375,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "incomplete_duration"
+      ],
+      "ground_peak_m": 0.0029193465298855484,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v62-native-dt1250us-r1",
+      "time_s": 1.63625,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "ground_peak_m": 0.003117160213637119,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    },
+    {
+      "case": "v62-fixed_5ms-dt1250us-r1",
+      "time_s": 1.62625,
+      "completed": false,
+      "stop": "fall",
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ],
+      "ground_peak_m": 0.00304753061505645,
+      "internal_peak_m": 0.0,
+      "internal_load_peak_n": 0
+    }
+  ],
+  "numerical_screens": [
+    {
+      "a": "v11-native-dt2500us-r1",
+      "b": "v11-native-dt1250us-r1",
+      "common_duration_s": 1.6400000000000001,
+      "root_max_m": 0.007689377217642322,
+      "joint_max_rad": 0.01859084831181801,
+      "common_prefix_ground_peaks_m": [
+        0.002889838115183752,
+        0.003083610449999958
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.00019377233481620605,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.06374999999999997,
+      "terminal_times_s": [
+        1.705,
+        1.64125
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.004382728435647281,
+        0.003083610449999958
+      ],
+      "model": "v11",
+      "feedback": "native",
+      "failures": [
+        "root_max_m",
+        "joint_max_rad",
+        "terminal_time_delta_s"
+      ],
+      "numerical_screen_passed": false
+    },
+    {
+      "a": "v11-fixed_5ms-dt2500us-r1",
+      "b": "v11-fixed_5ms-dt1250us-r1",
+      "common_duration_s": 1.6375,
+      "root_max_m": 0.01713727870456211,
+      "joint_max_rad": 0.040192572974971474,
+      "common_prefix_ground_peaks_m": [
+        0.0027590433578959586,
+        0.0029193465298855484
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.00016030317198958977,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.09499999999999997,
+      "terminal_times_s": [
+        1.7325,
+        1.6375
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.0049782500614588485,
+        0.0029193465298855484
+      ],
+      "model": "v11",
+      "feedback": "fixed_5ms",
+      "failures": [
+        "root_max_m",
+        "joint_max_rad",
+        "terminal_time_delta_s"
+      ],
+      "numerical_screen_passed": false
+    },
+    {
+      "a": "v62-native-dt2500us-r1",
+      "b": "v62-native-dt1250us-r1",
+      "common_duration_s": 1.635,
+      "root_max_m": 0.011007321850198924,
+      "joint_max_rad": 0.027203772804162973,
+      "common_prefix_ground_peaks_m": [
+        0.0030567475750024886,
+        0.003117160213637119
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 6.041263863463056e-05,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.006250000000000089,
+      "terminal_times_s": [
+        1.6425,
+        1.63625
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.0030567475750024886,
+        0.003117160213637119
+      ],
+      "model": "v62",
+      "feedback": "native",
+      "failures": [
+        "root_max_m",
+        "joint_max_rad"
+      ],
+      "numerical_screen_passed": false
+    },
+    {
+      "a": "v62-fixed_5ms-dt2500us-r1",
+      "b": "v62-fixed_5ms-dt1250us-r1",
+      "common_duration_s": 1.625,
+      "root_max_m": 0.02963720932087214,
+      "joint_max_rad": 0.07925678175624218,
+      "common_prefix_ground_peaks_m": [
+        0.0027869763822291373,
+        0.00304753061505645
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.00026055423282731263,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.08374999999999999,
+      "terminal_times_s": [
+        1.71,
+        1.62625
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.004413653873022718,
+        0.00304753061505645
+      ],
+      "model": "v62",
+      "feedback": "fixed_5ms",
+      "failures": [
+        "root_max_m",
+        "joint_max_rad",
+        "terminal_time_delta_s"
+      ],
+      "numerical_screen_passed": false
+    }
+  ],
+  "intervention_effects": [
+    {
+      "a": "v11-native-dt5000us-r1",
+      "b": "v11-fixed_5ms-dt5000us-r1",
+      "common_duration_s": 18.0,
+      "root_max_m": 0.0,
+      "joint_max_rad": 0.0,
+      "common_prefix_ground_peaks_m": [
+        0.003974844464207147,
+        0.003974844464207147
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.0,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.0,
+      "terminal_times_s": [
+        18.0,
+        18.0
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.003974844464207147,
+        0.003974844464207147
+      ],
+      "model": "v11",
+      "dt_s": 0.005
+    },
+    {
+      "a": "v11-native-dt2500us-r1",
+      "b": "v11-fixed_5ms-dt2500us-r1",
+      "common_duration_s": 1.705,
+      "root_max_m": 0.006900530106381732,
+      "joint_max_rad": 0.0130289833351529,
+      "common_prefix_ground_peaks_m": [
+        0.004382728435647281,
+        0.0049782500614588485
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.0005955216258115674,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.027499999999999858,
+      "terminal_times_s": [
+        1.705,
+        1.7325
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.004382728435647281,
+        0.0049782500614588485
+      ],
+      "model": "v11",
+      "dt_s": 0.0025
+    },
+    {
+      "a": "v11-native-dt1250us-r1",
+      "b": "v11-fixed_5ms-dt1250us-r1",
+      "common_duration_s": 1.6375,
+      "root_max_m": 0.005295262870224681,
+      "joint_max_rad": 0.009924217296353732,
+      "common_prefix_ground_peaks_m": [
+        0.003083610449999958,
+        0.0029193465298855484
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.00016426392011440957,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.003750000000000142,
+      "terminal_times_s": [
+        1.64125,
+        1.6375
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.003083610449999958,
+        0.0029193465298855484
+      ],
+      "model": "v11",
+      "dt_s": 0.00125
+    },
+    {
+      "a": "v62-native-dt5000us-r1",
+      "b": "v62-fixed_5ms-dt5000us-r1",
+      "common_duration_s": 2.505,
+      "root_max_m": 0.0,
+      "joint_max_rad": 0.0,
+      "common_prefix_ground_peaks_m": [
+        0.0042503330450556764,
+        0.0042503330450556764
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.0,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.0,
+      "terminal_times_s": [
+        2.505,
+        2.505
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.0042503330450556764,
+        0.0042503330450556764
+      ],
+      "model": "v62",
+      "dt_s": 0.005
+    },
+    {
+      "a": "v62-native-dt2500us-r1",
+      "b": "v62-fixed_5ms-dt2500us-r1",
+      "common_duration_s": 1.6425,
+      "root_max_m": 0.0074430194847234475,
+      "joint_max_rad": 0.013943807575427902,
+      "common_prefix_ground_peaks_m": [
+        0.0030567475750024886,
+        0.003404810504644777
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 0.0003480629296422882,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.0674999999999999,
+      "terminal_times_s": [
+        1.6425,
+        1.71
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.0030567475750024886,
+        0.004413653873022718
+      ],
+      "model": "v62",
+      "dt_s": 0.0025
+    },
+    {
+      "a": "v62-native-dt1250us-r1",
+      "b": "v62-fixed_5ms-dt1250us-r1",
+      "common_duration_s": 1.62625,
+      "root_max_m": 0.012899437136809829,
+      "joint_max_rad": 0.038904287015946504,
+      "common_prefix_ground_peaks_m": [
+        0.003117160213637119,
+        0.00304753061505645
+      ],
+      "common_prefix_internal_peaks_m": [
+        0.0,
+        0.0
+      ],
+      "ground_peak_delta_m": 6.962959858066928e-05,
+      "internal_peak_delta_m": 0.0,
+      "terminal_time_delta_s": 0.010000000000000009,
+      "terminal_times_s": [
+        1.63625,
+        1.62625
+      ],
+      "same_terminal_category": true,
+      "full_prefix_ground_peaks_m": [
+        0.003117160213637119,
+        0.00304753061505645
+      ],
+      "model": "v62",
+      "dt_s": 0.00125
+    }
+  ],
+  "numerical_screen_pass_count": 0,
+  "all_case_diagnostic_pass_count": 0,
+  "walking_accepted": false,
+  "physical_acceptance": false,
+  "boundary": "Only force-input age is intervened on within each integration rate. Common-prefix screens do not establish calibrated physics or closed-loop policy success."
+}

@@ -1,0 +1,19 @@
+{
+  "rows": 38451,
+  "sources": [
+    {
+      "receipt": "20260906-v30-flat-regression",
+      "rows": 12783,
+      "manifest_sha256": "423da5a9d46db27126c287d42b95a15aca1107b380fd06bc004d367f31ef77fa",
+      "trace_sha256": "b685e518dd2387c5a2ab86046be47d2e77761a82220cecefa5593e8273553032"
+    },
+    {
+      "receipt": "20260906-v30-repeated-regression-r2",
+      "rows": 25668,
+      "manifest_sha256": "3401e2c8b006090f3cd3173ccad924c4cabbeef3246099c5055eea5279828421",
+      "trace_sha256": "4854fb8f4c04a1cc61e37371bf6e8c522ba5846205b5975d5f4dcc39e09d53cb"
+    }
+  ],
+  "split": "exposed baseline rehearsal; not held out",
+  "action_labels": "original stored float32 policy outputs"
+}

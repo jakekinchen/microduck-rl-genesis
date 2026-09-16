@@ -5,6 +5,14 @@ The goal is a short, reproducible route from a request to a measured behavior.
 This guide does not imply every requested behavior is physically achievable,
 observable with the available sensors, or learnable within a particular budget.
 
+For the owner's longer-term smart behavior library, use the
+[capability roadmap](BEHAVIOR_LIBRARY.md) and B1 in `TRAINING_ACTUALIZATION.md`.
+Walking remains the active foundation; a catalog entry is not an accepted
+behavior, and compositions need continuous-state transition evidence.
+Apply the [mandatory validation standard](BEHAVIOR_VALIDATION.md) to every
+behavior: independent testing, effective randomization, unseen-environment
+evaluation and physics validation are required gates, not optional polish.
+
 ## Start and inspect
 
 ```sh
@@ -81,6 +89,13 @@ training commands and acceptance gates remain separately defined.
 The generator creates a draft and notes file and refuses overwrites. It does
 not invent a reward, implement an environment or start training. `check-spec`
 checks completeness only; its output cannot authorize execution.
+New drafts use schema `microduck.behavior-draft/v2` and require a `quality_plan`
+covering the operating envelope, independent tests, domain randomization,
+generalization, physics validation and retained evidence. Empty fields, malformed
+sections and legacy v1 drafts cannot silently pass the new planning check.
+A completed plan is not tested behavior or calibrated physics; runtime evidence
+must independently satisfy the validation standard. Keep old drafts and frozen
+experiments unchanged and version new work explicitly.
 
 Before implementation, answer these questions in the behavior spec:
 
@@ -121,6 +136,24 @@ into the existing contract.
 At the physics boundary, validate mass/inertia, joint limits, reset populations,
 contact geometry/masks, timestep/decimation, friction and servo current/torque
 limits. BAM's friction/constraint coupling matters as much as its motor formula.
+In particular, the walking-v9 audit found real battery/leg CAD intersections
+that a reduced collision model allowed despite normal-looking visual meshes.
+Check exact mesh pairs and active engine filters, not body names, mesh counts
+or "allcollisions" filenames. The bundled full model also changed existing
+leg masks, so changing models was not merely adding contacts. The versioned
+complete-contact-v11 correction preserves geometry, joints, mass and visuals
+while restoring both intended contact sets. Its raw-actor and command-servo
+evaluations preserve every original motor/head gate and additionally require
+cumulative heading and body-interference rejection. See walking `RESULTS.md`.
+Copied-pose collision witnesses, exact-action replay and closed-loop policy
+evaluation answer different questions; none may stand in for the others.
+Geometric penetration tolerance also cannot reject all unnatural behavior:
+V13 braces its legs against the battery at stop with small penetration. Read
+applied body-to-body normal loads at every physics tick, preserving physical
+integration. The additive V14 gate rejects sustained bracing, with explicit
+coverage and missing-stop rejection. Its observer reproduces all18,749 V13
+poses and all21 original action files byte-identically. The UI must show
+older receipts as internal-bracing-not-assessed, not silently certify them.
 Do not tune rendering, contact stiffness, gravity, clipping or assistance to
 make a video look successful. Record every intentional training-only aid and
 remove it from the acceptance start population.
@@ -148,6 +181,9 @@ remove it from the acceptance start population.
 6. Export with normalization and check Torch/ONNX on random and real
    observations. Evaluate the exact ONNX in the independent C MuJoCo/BAM lane.
    Inspect case videos and task metrics in Duck Lab.
+   Evaluation processes also exit successfully when they finish recording a
+   negative result. Check the required case/component flags, not just the
+   command exit code or export/manifest integrity.
 7. If it fails, classify the first problem: sensing/frame convention, command
    response, policy, observation/action contract, actuator, reset or contact.
    Compare identical case/seed/model variants. For a physics-isolation replay,

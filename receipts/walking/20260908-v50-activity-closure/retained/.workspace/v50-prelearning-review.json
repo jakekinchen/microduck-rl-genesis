@@ -1,0 +1,22 @@
+{
+  "activity": "V50 pre-learning local source review",
+  "reviewed_files": [
+    "microduck/native_sequence_env_v50.py",
+    "microduck/retained_walker_v50.py",
+    "scripts/train_native_retention_v50.py",
+    "scripts/probe_native_sequence_v50.py",
+    "experiments/walking/native_candidate_v50.py"
+  ],
+  "protocol": "experiments/walking/RETENTION-CORRECTION-v50.md",
+  "checks": [
+    "Only walking branch has actor gradients; standing and original teacher frozen; normalization updates disabled by inherited SequenceActor",
+    "Flat retention mask is optimizer metadata, excluded from actor/critic obs_groups",
+    "Downhill yaw cost uses absolute instantaneous actual-minus-requested error; old evaluator thresholds untouched",
+    "24 cells use compiled floor quaternion/masks and actual delays; all HOME reset histories copied; 180-second timeout only",
+    "Original raw action insertion checks observation bytes and applied action bytes every step; exactly four self-load samples required",
+    "FINAL749 identity and 864000-transition budget checked before evaluation; all source-bound old versions retained",
+    "Fresh evaluator checks 63 flat, 4 full endurance and original five whole-surface passes before creating an output"
+  ],
+  "outcome": "ready_for_conformance_and_bounded_smoke",
+  "boundary": "Source review and offline tests, not completed runtime verification or behavior acceptance"
+}

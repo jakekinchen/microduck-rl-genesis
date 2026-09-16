@@ -1,0 +1,64 @@
+{
+  "schema": "microduck.full-body-clearance-diagnostic/v1",
+  "cases": [
+    {
+      "trace": "receipts/walking/20260905-v8-probe150-full-bank/trajectory.jsonl",
+      "sha256": "3f1a5bd8df6015560aaf814fa17398074d2039b53753f40ac1137df6abdb5fc5",
+      "frames": 18900,
+      "minimum_nonfoot_floor_clearance_m": 0.014631691242001227,
+      "frames_below_floor_by_1mm": 0,
+      "geometries": [
+        {
+          "name": "",
+          "body": "trunk_base",
+          "minimum_clearance_m": 0.036652148585775104,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l",
+          "minimum_clearance_m": 0.04591838230743143,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg",
+          "minimum_clearance_m": 0.015121684508566647,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.1243134089455556,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.11893261751165055,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.12226910948215082,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l_2",
+          "minimum_clearance_m": 0.0459483825003633,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg_2",
+          "minimum_clearance_m": 0.014631691242001227,
+          "penetrating_frames": 0
+        }
+      ]
+    }
+  ],
+  "boundary": "Static full-collision CAD clearance on copied states, not full-collision dynamics or contact force. Reduced native walk model has only two floor-capable robot geoms, so its non-foot-floor-force rejection alone is vacuous.",
+  "physical_transfer_validated": false
+}

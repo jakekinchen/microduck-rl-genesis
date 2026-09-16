@@ -14,6 +14,9 @@ videos/
 !tests/fixtures/evaluator/zero-policy.onnx
 !policies/README.md
 
+# Retained local walking experiments, including failed policies and videos.
+!receipts/walking/**
+
 # Exception : le dossier `demo/` est la vitrine du dépôt. Il contient un extrait
 # de 30 s (5 Mo) et un aperçu animé (4 Mo) — GitHub n'affiche pas un .mp4 en
 # ligne depuis un chemin relatif, mais il affiche un .gif, d'où les deux.
@@ -121,5 +124,44 @@ requirements-local.txt
 !receipts/laser-follow/
 !receipts/laser-follow/**/
 !receipts/laser-follow/**/*
+!receipts/laser-dynamic/
+!receipts/laser-dynamic/**/
+!receipts/laser-dynamic/**/*
+!receipts/laser-gait/
+!receipts/laser-gait/**/
+!receipts/laser-gait/**/*
+!receipts/walking/
+!receipts/walking/**/
+!receipts/walking/**/*
 !artifact_contract/fixtures/**/*.onnx
 !artifact_contract/fixtures/**/*.pt
+
+# Local workspace dependency checkouts, private history indexes and UI QA.
+/.workspace/
+
+# The narrow repository skill is shared project guidance, not local state.
+!/.agents/
+!/.agents/skills/
+!/.agents/skills/microduck-experiments/
+!/.agents/skills/microduck-experiments/SKILL.md
+
+# September 16 publication: readable results/source stay in Git; immutable bulk
+# evidence (including copied source trees) is in the checksummed evidence release.
+# See docs/workspace/publication-20260916/README.md. Local payloads are preserved.
+/outputs/
+/receipts/**/source/
+/receipts/**/delivery-source/
+/receipts/**/*.jsonl
+/receipts/**/*.gz
+/receipts/**/*.pt
+/receipts/**/*.onnx
+/receipts/**/*.npz
+/receipts/**/*.npy
+/receipts/**/*.stl
+/receipts/**/*.mp4
+/receipts/**/*.gif
+/receipts/**/*.log
+/receipts/**/events.out.tfevents.*
+/experiments/**/*.npz
+/experiments/walking/upstream-audit-v56/runtime-mujoco-3.10/
+/experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/assembly/pose-results.json

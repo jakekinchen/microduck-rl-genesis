@@ -1,0 +1,65 @@
+{
+  "completed_utc": "2026-09-08T14:06:20.487742+00:00",
+  "activity_complete": true,
+  "full_downhill_acceptance": false,
+  "retained": "V30 with original V21 walking / V15 standing",
+  "findings": {
+    "original_stander_recovers_v48_late_states": 2,
+    "searched_downhill_states": 4,
+    "first_stop_survivals": 4,
+    "first_stop_complete_stopping_posture_contact_passes": 3,
+    "full_downhill_session_passes": 0,
+    "second_stop_fall_times_s": [
+      31.9,
+      31.84,
+      31.78,
+      31.78
+    ],
+    "original_pre_stop_abs_yaw_error_rad_s": [
+      0.24418568229531917,
+      0.2409990180967661
+    ],
+    "yaw_threshold_rad_s": 0.2
+  },
+  "verified_search_trials": 1536,
+  "verified_search_action_observation_rows": 245794,
+  "source_bindings": {
+    "receipts/walking/20260908-v49-recovery-capture": {
+      "verified_files": 1469,
+      "manifest_sha256": "70c4c24cc482fc28f96fcd33e663497bfb4a7f28ec46f04f08e6c0a8a8f865f0"
+    },
+    "receipts/walking/20260908-v49-recovery-comparisons": {
+      "verified_files": 317,
+      "manifest_sha256": "64cdf387e33b77a44eaa48edf71d413b9dbdaac249385d1bdd9e7a1d3f039924"
+    },
+    "receipts/walking/20260908-v49-recovery-search": {
+      "verified_files": 245,
+      "manifest_sha256": "adcd94f6471caecee147e3552694482c43a78cef35a95546554dab76750e0776"
+    },
+    "receipts/walking/20260908-v49-recovery-analysis": {
+      "verified_files": 3,
+      "manifest_sha256": "4e5f96d70fabc21a928099588a1158dba78fc503154b76bae6fa5f0254781d35"
+    },
+    "outputs/walking-recovery-v49": {
+      "verified_files": 4,
+      "manifest_sha256": "6192de853c29c1079440932b241de8cbe29cb2db4202dc6abd895efde2fa8e80"
+    },
+    "outputs/walking-recovery-v49-r2": {
+      "verified_files": 4,
+      "manifest_sha256": "8f1d3f0ccd30fbe525637eaf2fa0aeb8f7b0a5a6a81f520a05e3698eca5beb34"
+    }
+  },
+  "workspace_tests": 140,
+  "focused_tests": 2,
+  "inspection_errors": 0,
+  "internal_free_bytes": 5684232192,
+  "fresh_sequence_opened": false,
+  "protected_terrain_opened": false,
+  "policy_trained": false,
+  "policy_activated": false,
+  "paid_compute_used": false,
+  "hardware_operated": false,
+  "physical_calibration": false,
+  "next_activity": "Freeze a walking-only correction targeting downhill yaw oscillation with V15 standing and V30 control fixed, preserving all flat, 180-second, passing-surface and physics-quality gates. Preserve the three clean V49 stopping witnesses for subsequent repeatable braking.",
+  "boundary": "Complete bounded exposed diagnostic. Same-state stopping feasibility is not full walking acceptance, population reliability or carpet transfer."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "microduck.ops.activity.v1",
+  "root": "/Users/kelly/Developer/microduck-rl-genesis",
+  "generated_at": "2026-09-16T03:04:07.436398+00:00",
+  "read_only": true,
+  "status": "busy",
+  "processes": [
+    {
+      "pid": 52462,
+      "ppid": 25469,
+      "elapsed": "04:15",
+      "entrypoint": "run_geometry_v59.py",
+      "workload": "simulation_diagnostic",
+      "ownership": "cwd_matches_repository"
+    },
+    {
+      "pid": 52494,
+      "ppid": 52462,
+      "elapsed": "03:54",
+      "entrypoint": "refine_cad_v62r2.py",
+      "workload": "simulation_diagnostic",
+      "ownership": "cwd_matches_repository"
+    }
+  ],
+  "boundary": "Instantaneous advisory inventory of known Python training and simulation-test entrypoints. The legacy no_known_training_process status means no recognized compute candidate; absence is not proof of idleness; unrecognized launchers and remote jobs are outside coverage. No lock, admission, process control or training status mutation."
+}

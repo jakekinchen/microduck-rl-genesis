@@ -1,0 +1,32 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v30-heading-verified-surfaces-unmet",
+  "phase": "v30_local_heading_passed_surface_and_physics_gaps_open",
+  "question": "V30 passes all 63 flat gates and both 180-second compositions. Surface admission remains 5/14, downhill 0/2 and robot-level fixed-action numerical agreement 2/5. Match contact representations and diagnose standing transitions before more broad surface training; public sources have not established Ducky physical calibration.",
+  "primary": "receipts/walking/20260906-v30-flat-regression",
+  "primary_policy_sha256": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "long-30-20ms--forward-20",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_heading_headroom_flat_v30.py",
+    "microduck/heading_headroom_v30.py",
+    "microduck/motion_heading_servo_v28.py",
+    "microduck/persistent_heading_servo_v24.py",
+    "experiments/walking/filtered_heading_world.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json"
+  ],
+  "before_training": [
+    "Read experiments/walking/PUBLIC-SURFACES-RESULTS.md and the V30 surface/endurance probes. The selected flat case is a passing reference, not a surface failure or physical claim.",
+    "All local jobs from this pass are complete. V25/V27 motor policies are rejected; original V21/V15 actors with V30 heading pass the limited flat/endurance scope only.",
+    "Keep the 2/5 robot action-replay result and failed downhill/surface sessions. Match support representations and inspect first divergence before attributing a simulator cause or expanding randomization.",
+    "Freeze any next intervention, retain every required per-bucket gate and keep public-data priors separate from matched physical calibration. Do not request owner measurements merely to continue scoped local development.",
+    "Use duck-ops guard immediately before any separately authorized compute launch. Preparation is a read-only evidence check, not hardware, activation or paid-compute authority."
+  ],
+  "boundary": "V30 is a tested flat/endurance controller improvement with explicit command extrapolation, not a newly trained actor or broad surface/physical acceptance. All original scores, unsuccessful candidates and the disk-error partial run remain retained. No protected bank, policy activation or library admission."
+}

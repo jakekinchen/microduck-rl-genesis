@@ -1,0 +1,535 @@
+{
+  "schema": "microduck.public-surface-action-replay/v1",
+  "status": "completed",
+  "cases": [
+    {
+      "native_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "session_id": "rigid-control-start-1",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "debd57782269c50bdd177eeefb2f10f39daddd043af26d1dfba7247bf135a703",
+      "action_bytes_identical": true,
+      "all_final_substep_targets_match": true,
+      "surface_snapshot": {
+        "ground_sol_params": [
+          [
+            0.019999999552965164,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.05000000074505806,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.07999999821186066,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.11999999731779099,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ]
+        ],
+        "ground_geometry_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "actual_sole_contact_pairs": [
+          {
+            "profile": "rigid-control",
+            "contacts": 5,
+            "friction": 1.0,
+            "timeconst_s": 0.019999999552965164
+          }
+        ],
+        "geometry_friction": [
+          1.0,
+          0.5099999904632568,
+          1.0,
+          1.7999999523162842,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612
+        ],
+        "foot_geometry_ids": [
+          8,
+          14
+        ],
+        "loaded_contact_samples_by_profile": [
+          162,
+          0,
+          0,
+          0
+        ],
+        "resets_by_profile": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "observed_control_steps": 50,
+        "geometry_changes_during_episode": false,
+        "physical_calibration": false
+      },
+      "max_base_error_m": 0.002374426224483436,
+      "max_joint_error_deg": 1.8199158853187383,
+      "first_threshold_divergence_s": 0.88,
+      "passed_numerical_comparison": false,
+      "native_final_z_m": 0.08311638710479488,
+      "genesis_final_z_m": 0.08301206678152084
+    },
+    {
+      "native_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "session_id": "soft-low-traction-start-1",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "058f9fa881e945806230836e8b293c85ec32b8b32ab722843c8b3bffaf9e02e5",
+      "action_bytes_identical": true,
+      "all_final_substep_targets_match": true,
+      "surface_snapshot": {
+        "ground_sol_params": [
+          [
+            0.019999999552965164,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.05000000074505806,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.07999999821186066,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.11999999731779099,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ]
+        ],
+        "ground_geometry_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "actual_sole_contact_pairs": [
+          {
+            "profile": "soft-low-traction",
+            "contacts": 5,
+            "friction": 0.5099999904632568,
+            "timeconst_s": 0.03500000014901161
+          }
+        ],
+        "geometry_friction": [
+          1.0,
+          0.5099999904632568,
+          1.0,
+          1.7999999523162842,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612
+        ],
+        "foot_geometry_ids": [
+          8,
+          14
+        ],
+        "loaded_contact_samples_by_profile": [
+          170,
+          158,
+          0,
+          0
+        ],
+        "resets_by_profile": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "observed_control_steps": 100,
+        "geometry_changes_during_episode": false,
+        "physical_calibration": false
+      },
+      "max_base_error_m": 0.001081785969274406,
+      "max_joint_error_deg": 0.9131487761548944,
+      "first_threshold_divergence_s": null,
+      "passed_numerical_comparison": true,
+      "native_final_z_m": 0.08313631722829358,
+      "genesis_final_z_m": 0.0832182914018631
+    },
+    {
+      "native_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "session_id": "soft-middle-start-1",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "991da8a5fc649f0c8e9d1e66d0de197f263bb2e22d7874c34b60d1b08fe1ae33",
+      "action_bytes_identical": true,
+      "all_final_substep_targets_match": true,
+      "surface_snapshot": {
+        "ground_sol_params": [
+          [
+            0.019999999552965164,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.05000000074505806,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.07999999821186066,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.11999999731779099,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ]
+        ],
+        "ground_geometry_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "actual_sole_contact_pairs": [
+          {
+            "profile": "soft-middle",
+            "contacts": 6,
+            "friction": 1.0,
+            "timeconst_s": 0.04999999701976776
+          }
+        ],
+        "geometry_friction": [
+          1.0,
+          0.5099999904632568,
+          1.0,
+          1.7999999523162842,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612
+        ],
+        "foot_geometry_ids": [
+          8,
+          14
+        ],
+        "loaded_contact_samples_by_profile": [
+          170,
+          164,
+          179,
+          0
+        ],
+        "resets_by_profile": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "observed_control_steps": 150,
+        "geometry_changes_during_episode": false,
+        "physical_calibration": false
+      },
+      "max_base_error_m": 0.0011286873600872232,
+      "max_joint_error_deg": 1.0637335045375595,
+      "first_threshold_divergence_s": null,
+      "passed_numerical_comparison": true,
+      "native_final_z_m": 0.08188680313403031,
+      "genesis_final_z_m": 0.08196987956762314
+    },
+    {
+      "native_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "session_id": "soft-high-traction-start-1",
+      "steps": 11,
+      "physics_steps": 44,
+      "action_bytes_sha256": "ebcd9d2956ec84132a3da263da00f11172dcf6251965a5655ab6ae7472bbc9f9",
+      "action_bytes_identical": true,
+      "all_final_substep_targets_match": true,
+      "surface_snapshot": {
+        "ground_sol_params": [
+          [
+            0.019999999552965164,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.05000000074505806,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.07999999821186066,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.11999999731779099,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ]
+        ],
+        "ground_geometry_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "actual_sole_contact_pairs": [
+          {
+            "profile": "soft-high-traction",
+            "contacts": 3,
+            "friction": 1.7999999523162842,
+            "timeconst_s": 0.07000000029802322
+          }
+        ],
+        "geometry_friction": [
+          1.0,
+          0.5099999904632568,
+          1.0,
+          1.7999999523162842,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612
+        ],
+        "foot_geometry_ids": [
+          8,
+          14
+        ],
+        "loaded_contact_samples_by_profile": [
+          170,
+          164,
+          187,
+          32
+        ],
+        "resets_by_profile": [
+          4,
+          1,
+          0,
+          0
+        ],
+        "observed_control_steps": 161,
+        "geometry_changes_during_episode": false,
+        "physical_calibration": false
+      },
+      "max_base_error_m": 0.004073041455906654,
+      "max_joint_error_deg": 0.5862182275065482,
+      "first_threshold_divergence_s": 0.12,
+      "passed_numerical_comparison": false,
+      "native_final_z_m": 0.06968071219876777,
+      "genesis_final_z_m": 0.06607431918382645
+    },
+    {
+      "native_receipt": "receipts/walking/20260906-v26-surface-standing",
+      "session_id": "soft-high-traction-start-1",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "2612c453c10b9e03021e7da4a2dfad736e3a0323c924b5d1e9c8082f60a5ff49",
+      "action_bytes_identical": true,
+      "all_final_substep_targets_match": true,
+      "surface_snapshot": {
+        "ground_sol_params": [
+          [
+            0.019999999552965164,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.05000000074505806,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.07999999821186066,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ],
+          [
+            0.11999999731779099,
+            1.0,
+            0.8999999761581421,
+            0.949999988079071,
+            0.0010000000474974513,
+            0.5,
+            2.0
+          ]
+        ],
+        "ground_geometry_ids": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "actual_sole_contact_pairs": [
+          {
+            "profile": "soft-high-traction",
+            "contacts": 5,
+            "friction": 1.7999999523162842,
+            "timeconst_s": 0.07000000029802322
+          }
+        ],
+        "geometry_friction": [
+          1.0,
+          0.5099999904632568,
+          1.0,
+          1.7999999523162842,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.10000000149011612
+        ],
+        "foot_geometry_ids": [
+          8,
+          14
+        ],
+        "loaded_contact_samples_by_profile": [
+          170,
+          164,
+          187,
+          259
+        ],
+        "resets_by_profile": [
+          4,
+          2,
+          0,
+          0
+        ],
+        "observed_control_steps": 211,
+        "geometry_changes_during_episode": false,
+        "physical_calibration": false
+      },
+      "max_base_error_m": 0.00408670136326281,
+      "max_joint_error_deg": 1.3163713989009975,
+      "first_threshold_divergence_s": 0.1,
+      "passed_numerical_comparison": false,
+      "native_final_z_m": 0.0818611416862204,
+      "genesis_final_z_m": 0.08106738328933716
+    }
+  ],
+  "physical_calibration": false,
+  "candidate_selection_eligible": false,
+  "boundary": "Recorded action replay with native initialization; numerical dynamics diagnostic, not closed-loop gait or physical acceptance.",
+  "elapsed_s": 27.177554124995368
+}

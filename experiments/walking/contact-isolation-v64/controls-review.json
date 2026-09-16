@@ -1,0 +1,400 @@
+{
+  "verification_passed": true,
+  "cases_verified": 8,
+  "samples_verified": 10418,
+  "checks": {
+    "v11-replay-base-r1": {
+      "verified": true,
+      "samples": 3600,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 9134
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration"
+      ]
+    },
+    "v11-passive-base-r1": {
+      "verified": true,
+      "samples": 1000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 12206
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v62-replay-base-r1": {
+      "verified": true,
+      "samples": 501,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": 1.4749999999999905,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1492
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-passive-base-r1": {
+      "verified": true,
+      "samples": 108,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 3709
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    },
+    "v11-replay-base-r2": {
+      "verified": true,
+      "samples": 3600,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 9134
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration"
+      ]
+    },
+    "v11-passive-base-r2": {
+      "verified": true,
+      "samples": 1000,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": null,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 12206
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ]
+    },
+    "v62-replay-base-r2": {
+      "verified": true,
+      "samples": 501,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": 1.4749999999999905,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 1492
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "ground_penetration",
+        "incomplete_duration",
+        "nonsole_support"
+      ]
+    },
+    "v62-passive-base-r2": {
+      "verified": true,
+      "samples": 108,
+      "source_actions_and_fifo_exact": true,
+      "all_subdivision_holds_verified": true,
+      "first_shell_contact_s": 0.05499999999999999,
+      "first_shell_loaded_s": null,
+      "contact_parameter_sets": [
+        {
+          "values": [
+            [
+              0.02,
+              1.0
+            ],
+            [
+              0.9,
+              0.95,
+              0.001,
+              0.5,
+              2.0
+            ],
+            [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            3,
+            0.0
+          ],
+          "count": 3709
+        }
+      ],
+      "warnings": [],
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "incomplete_duration",
+        "internal_penetration",
+        "joint_stop_overshoot",
+        "passive_not_settled_angular",
+        "passive_not_settled_linear"
+      ]
+    }
+  },
+  "original_v63_controls_exact": {
+    "v11-replay-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-base-r1": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-replay-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-base-r2": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    }
+  },
+  "repeats": {
+    "v11-replay-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v11-passive-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-replay-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    },
+    "v62-passive-base-r": {
+      "initial-state.npz": 21,
+      "dynamics.npz": 8
+    }
+  },
+  "model_admitted": false,
+  "walking_accepted": false,
+  "physical_acceptance": false
+}

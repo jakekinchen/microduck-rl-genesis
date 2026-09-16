@@ -1,0 +1,87 @@
+{
+  "schema": "microduck.camera-alignment-audit/v2",
+  "records": [
+    {
+      "variant": "legacy",
+      "optical_forward_world": [
+        -0.9999999999999996,
+        -0.0,
+        -2.5023402338326227e-34
+      ],
+      "image_up_world": [
+        0.0,
+        0.9999999999999996,
+        4.474228634151475e-17
+      ],
+      "target_camera_m": [
+        0.24709864701932505,
+        9.137779999998674e-05,
+        0.7857026116627207
+      ],
+      "red_pixel": null
+    },
+    {
+      "variant": "site-aligned-v2",
+      "optical_forward_world": [
+        0.9999999999999993,
+        -0.0,
+        -0.0
+      ],
+      "image_up_world": [
+        0.0,
+        0.0,
+        0.9999999999999993
+      ],
+      "target_camera_m": [
+        -9.137779999999778e-05,
+        -0.247098647019325,
+        -0.7857026116627205
+      ],
+      "red_pixel": [
+        319.2888888888889,
+        421.11555555555555
+      ]
+    }
+  ],
+  "correction": {
+    "revision": "microduck.head-camera-site-aligned.v2",
+    "old_local_quaternion_wxyz": [
+      0.0,
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "new_local_quaternion_wxyz": [
+      0.7071067811865475,
+      0.0,
+      0.0,
+      -0.7071067811865475
+    ],
+    "physics_changed": false,
+    "physical_calibration": false
+  },
+  "target_world_m": [
+    0.85,
+    0.0,
+    0.006
+  ],
+  "field_of_view_deg": 45.0,
+  "physical_site_forward_world": [
+    0.9999999999999993,
+    1.0591047415476302e-33,
+    -1.2446570643470742e-18
+  ],
+  "mouth_world_m": [
+    0.06873568833727899,
+    3.1827983357408852e-18,
+    0.22950530701932514
+  ],
+  "head_com_world_m": [
+    0.023473488337279004,
+    0.001200470000000002,
+    0.24220387701932514
+  ],
+  "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+  "policy_executed": false,
+  "boundary": "Render camera convention corrected only; no physical calibration or camera-driven policy."
+}

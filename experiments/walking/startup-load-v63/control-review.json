@@ -1,0 +1,98 @@
+{
+  "candidate_launch_conformance_passed": true,
+  "two_golden_replays_exact": true,
+  "control_diagnostics": {
+    "home": {
+      "initial_arrays_exact_between_repeats": true,
+      "dynamics_exact_between_repeats": true,
+      "diagnostic_passed": false,
+      "failures": [
+        "fall",
+        "home_drift",
+        "home_tilt",
+        "incomplete_duration"
+      ],
+      "first_fall_s": 1.2449999999999954,
+      "maximum_ground_penetration_m": 0.002390030438078153,
+      "minimum_joint_margin_rad": 0.296672435438752,
+      "performance_r1": {
+        "physics_step_median_ms": 0.020375,
+        "physics_step_p99_ms": 0.0725330000000001,
+        "measured_control_intervals": 62,
+        "control_p99_ms": 1.8116736200000003,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      },
+      "performance_r2": {
+        "physics_step_median_ms": 0.019292,
+        "physics_step_p99_ms": 0.06823484000000005,
+        "measured_control_intervals": 62,
+        "control_p99_ms": 1.4373377600000004,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": false
+      }
+    },
+    "passive": {
+      "initial_arrays_exact_between_repeats": true,
+      "dynamics_exact_between_repeats": true,
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration",
+        "joint_stop_overshoot"
+      ],
+      "first_fall_s": 0.41000000000000025,
+      "maximum_ground_penetration_m": 0.007187324114267854,
+      "minimum_joint_margin_rad": -0.044857471984377284,
+      "performance_r1": {
+        "physics_step_median_ms": 0.0463335,
+        "physics_step_p99_ms": 0.13517242,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 1.4903485799999996,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      },
+      "performance_r2": {
+        "physics_step_median_ms": 0.0455415,
+        "physics_step_p99_ms": 0.13751665999999999,
+        "measured_control_intervals": 250,
+        "control_p99_ms": 2.243001079999997,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    },
+    "replay": {
+      "initial_arrays_exact_between_repeats": true,
+      "dynamics_exact_between_repeats": true,
+      "diagnostic_passed": false,
+      "failures": [
+        "ground_penetration"
+      ],
+      "first_fall_s": null,
+      "maximum_ground_penetration_m": 0.003974844464207147,
+      "minimum_joint_margin_rad": 0.08069269637424797,
+      "performance_r1": {
+        "physics_step_median_ms": 0.022125,
+        "physics_step_p99_ms": 0.08396132999999992,
+        "measured_control_intervals": 900,
+        "control_p99_ms": 1.9407110099999991,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      },
+      "performance_r2": {
+        "physics_step_median_ms": 0.0206045,
+        "physics_step_p99_ms": 0.06304241,
+        "measured_control_intervals": 900,
+        "control_p99_ms": 1.12872916,
+        "control_deadline_miss_fraction": 0.0,
+        "scope": "serial local execution; control includes BAM, physics and load observation, excludes file encoding",
+        "provisional_50hz_budget_passed": true
+      }
+    }
+  },
+  "boundary": "conformance allows candidate diagnostic launch; ordinary failures remain failed, including the newly introduced floor check on the retained replay"
+}

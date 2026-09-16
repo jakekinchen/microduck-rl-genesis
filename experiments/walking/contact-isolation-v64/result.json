@@ -1,0 +1,83 @@
+{
+  "status": "execution_complete_with_failed_diagnostic_gates",
+  "closed_utc": "2026-09-16T14:26:04.136010+00:00",
+  "analysis_cases": 28,
+  "verified_physics_samples": 33616,
+  "repeat_pairs_byte_identical": 14,
+  "v63_control_replays_exact": 8,
+  "original_v30_replays_exact": 2,
+  "diagnostic_passes": 0,
+  "finest_agreement_screens_passed": 0,
+  "copied_cad_support_checks": 16,
+  "model_admitted": false,
+  "walking_accepted": false,
+  "physical_acceptance": false,
+  "quarantined_attempts": [
+    {
+      "id": "v62-replay-match_v11_export-r1",
+      "timed_out": false,
+      "exit_code": 0,
+      "elapsed_seconds": 12.10230883397162,
+      "included_in_analysis": false,
+      "case_directory_present": true,
+      "files": [
+        "configuration.json",
+        "dynamics.npz",
+        "initial-state.npz",
+        "intervention.json",
+        "physical-parameters.npz",
+        "physics.jsonl.gz",
+        "requested-actions-float32.npy",
+        "result.json",
+        "robot.xml",
+        "scene.xml",
+        "timing.npz"
+      ]
+    },
+    {
+      "id": "v62-replay-match_v11_export-r2",
+      "timed_out": false,
+      "exit_code": 0,
+      "elapsed_seconds": 12.066342666978016,
+      "included_in_analysis": false,
+      "case_directory_present": true,
+      "files": [
+        "configuration.json",
+        "dynamics.npz",
+        "initial-state.npz",
+        "intervention.json",
+        "physical-parameters.npz",
+        "physics.jsonl.gz",
+        "requested-actions-float32.npy",
+        "result.json",
+        "robot.xml",
+        "scene.xml",
+        "timing.npz"
+      ]
+    },
+    {
+      "id": "v62-replay-mask_shell_floor-r1",
+      "timed_out": false,
+      "interruption": "InterruptedError('signal 15')",
+      "exit_code": -15,
+      "elapsed_seconds": 2.9160402920097113,
+      "included_in_analysis": false,
+      "case_directory_present": false,
+      "files": []
+    }
+  ],
+  "process_deadline_s": 240,
+  "standing_policy_handoff": "not_launched_pending_numerical_model_prerequisites",
+  "next_activity": "Isolate generalized-force input timing in BAM and the first sole contact, with exact original actions and controls before any new numerical reference or training.",
+  "tests": {
+    "focused": 7,
+    "workspace": 141
+  },
+  "artifacts": {
+    "review": "all-review-r2.json",
+    "comparison": "comparison.json",
+    "solver_input_phase": "bam-feedback-phase-audit.json",
+    "input_integrity": "input-closure-review.json"
+  },
+  "boundary": "Repeated open-loop model diagnostics. Frozen contact gates fail; no new closed-loop policy score, calibrated physical accuracy, terrain generalization or transfer claim."
+}

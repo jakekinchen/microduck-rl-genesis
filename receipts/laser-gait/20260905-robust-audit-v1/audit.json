@@ -1,0 +1,80 @@
+{
+  "schema": "microduck.laser-gait-audit/v1",
+  "policy_sha256": "b5046aab0e48b3a1c741fe5277341982357a1f43df9f17d14789d4db267ed561",
+  "policy_path": "receipts/laser-dynamic/20260905-robust-dev/policy.onnx",
+  "program": "circle",
+  "domain": {
+    "seed": 76031,
+    "randomized": false,
+    "friction_ratio": 1.0,
+    "trunk_mass_ratio": 1.0,
+    "motor_kp_ratio": 1.0,
+    "trunk_com_shift_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sensor_delay_steps": 0,
+    "encoder_bias_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sensor_noise": false,
+    "push_at_s": 23.0,
+    "push_delta_v_m_s": [
+      0.0,
+      0.0
+    ],
+    "route_rotation_rad": 0.0,
+    "visual_palette": 0,
+    "ground": "flat; no obstacles"
+  },
+  "model_root_sha256": "sha256:07af5e482200dfd2a7bf80ddde371153c88768a3a5aebc2f58ea42136fc7dadb",
+  "bam_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+  "diagnostic_data": "50Hz copied-state forward dynamics; never modifies rollout",
+  "gait": {
+    "duration_s": 16.0,
+    "active_s": 15.02,
+    "translation_s": 1.4000000000000001,
+    "path_length_m": 0.4854373394946419,
+    "qualified_swings_left_right": [
+      0,
+      0
+    ],
+    "swing_events": [],
+    "alternating_landing_fraction": null,
+    "both_feet_loaded_active_fraction": 0.9054593874833555,
+    "loaded_slip_over_3cm_s_fraction": 0.007686932215234102,
+    "loaded_slip_p95_m_s": 0.0033696842749265225,
+    "backward_translation_fraction": 1.0,
+    "target_outside_joint_limits_fraction": 1.0,
+    "max_target_limit_violation_rad": 3.952971371236037,
+    "max_actual_limit_violation_rad": 0.0848293367405984,
+    "max_abs_servo_velocity_rad_s": 11.065514339697076,
+    "max_abs_actuator_torque_nm": 0.6405236195572269,
+    "nonfoot_contact_frames": 0,
+    "max_tilt_deg": 3.013929181997241,
+    "fell": false,
+    "rejection_reasons": [
+      "missing_bilateral_steps",
+      "backward_pursuit",
+      "persistent_unreachable_servo_targets",
+      "joint_limit_excursion"
+    ],
+    "rejection_gate_passed": false,
+    "physical_transfer_validated": false,
+    "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+  }
+}

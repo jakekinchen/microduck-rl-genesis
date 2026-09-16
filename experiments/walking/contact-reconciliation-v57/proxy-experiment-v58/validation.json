@@ -1,0 +1,68 @@
+{
+  "scope": "sampled geometric proxy diagnostic, not global error bound or dynamic acceptance",
+  "physics_steps": 0,
+  "physical_acceptance": false,
+  "meshes": {
+    "seeed_bearing__configuration__22x16x4": {
+      "status": "verified_sampled_geometry",
+      "parts": 64,
+      "vertices": 2646,
+      "faces": 5036,
+      "all_parts_watertight": true,
+      "all_parts_convex": false,
+      "source_samples": 8192,
+      "proxy_samples": 6742,
+      "source_samples_outside_union": 355,
+      "max_sampled_missing_material_m": 0.0001415483134605021,
+      "max_sampled_excess_material_m": 0.00034309013382534344,
+      "sampled_tolerance_m": 0.00025,
+      "passed": false
+    },
+    "neck_pitch": {
+      "status": "verified_sampled_geometry",
+      "parts": 64,
+      "vertices": 1500,
+      "faces": 2744,
+      "all_parts_watertight": true,
+      "all_parts_convex": true,
+      "source_samples": 7628,
+      "proxy_samples": 4244,
+      "source_samples_outside_union": 2061,
+      "max_sampled_missing_material_m": 0.00013316469678618977,
+      "max_sampled_excess_material_m": 0.0011504623220860467,
+      "sampled_tolerance_m": 0.00025,
+      "passed": false
+    },
+    "bottom_head_shell": {
+      "status": "verified_sampled_geometry",
+      "parts": 64,
+      "vertices": 7003,
+      "faces": 13750,
+      "all_parts_watertight": true,
+      "all_parts_convex": true,
+      "source_samples": 8192,
+      "proxy_samples": 11099,
+      "source_samples_outside_union": 1767,
+      "max_sampled_missing_material_m": 0.00014543085572378339,
+      "max_sampled_excess_material_m": 0.002468068334369743,
+      "sampled_tolerance_m": 0.00025,
+      "passed": false
+    },
+    "jaw": {
+      "status": "verified_sampled_geometry",
+      "parts": 64,
+      "vertices": 5417,
+      "faces": 10578,
+      "all_parts_watertight": true,
+      "all_parts_convex": true,
+      "source_samples": 8192,
+      "proxy_samples": 9513,
+      "source_samples_outside_union": 4156,
+      "max_sampled_missing_material_m": 0.00022555027777453662,
+      "max_sampled_excess_material_m": 0.0010656211364409923,
+      "sampled_tolerance_m": 0.00025,
+      "passed": false
+    }
+  },
+  "complete_model_admitted": false
+}

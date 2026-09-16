@@ -1,0 +1,318 @@
+{
+  "complete": true,
+  "receipt_manifests": {
+    "receipts/walking/20260908-v49-recovery-capture": 1469,
+    "receipts/walking/20260908-v49-recovery-comparisons": 317,
+    "receipts/walking/20260908-v49-recovery-search": 245
+  },
+  "freeze_sha256": "5ca76a040ec9239cd02ffa1fd5f264ed460c053c73e3de1b9fe5e0715b039443",
+  "reproduced_controls": 18296,
+  "exact_reset_controls": 600,
+  "exact_comparison_repeat_controls": 34068,
+  "exact_comparison_source_controls": 14352,
+  "verified_search_trials": 1536,
+  "verified_search_action_observation_rows": 245794,
+  "states": [
+    {
+      "state_id": "matched--downhill-3deg-start-1-650",
+      "search_target": true,
+      "controls": {
+        "original": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 41
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 41
+        }
+      },
+      "search": {
+        "anchor": "v48",
+        "selected_trial": 381,
+        "search_cost": 6.4862285440359155,
+        "passed": false,
+        "current_window_passed": false,
+        "restart_window_passed": false,
+        "observed_duration_s": 31.900000000000002,
+        "suffix_controls": 945
+      }
+    },
+    {
+      "state_id": "matched--downhill-3deg-start-1-657",
+      "search_target": true,
+      "controls": {
+        "original": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 34
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 34
+        }
+      },
+      "search": {
+        "anchor": "v48",
+        "selected_trial": 609,
+        "search_cost": 7.541635103844253,
+        "passed": false,
+        "current_window_passed": false,
+        "restart_window_passed": false,
+        "observed_duration_s": 31.84,
+        "suffix_controls": 935
+      }
+    },
+    {
+      "state_id": "matched--downhill-3deg-start-2-650",
+      "search_target": true,
+      "controls": {
+        "original": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 41
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 41
+        }
+      },
+      "search": {
+        "anchor": "v48",
+        "selected_trial": 1150,
+        "search_cost": 6.503879979550423,
+        "passed": false,
+        "current_window_passed": false,
+        "restart_window_passed": false,
+        "observed_duration_s": 31.78,
+        "suffix_controls": 939
+      }
+    },
+    {
+      "state_id": "matched--downhill-3deg-start-2-657",
+      "search_target": true,
+      "controls": {
+        "original": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 34
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 13.82,
+          "suffix_controls": 34
+        }
+      },
+      "search": {
+        "anchor": "original",
+        "selected_trial": 1357,
+        "search_cost": 9.653799464717636,
+        "passed": false,
+        "current_window_passed": false,
+        "restart_window_passed": false,
+        "observed_duration_s": 31.78,
+        "suffix_controls": 932
+      }
+    },
+    {
+      "state_id": "matched--matched-flat-start-1-650",
+      "search_target": false,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1150
+        },
+        "v48": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1150
+        }
+      }
+    },
+    {
+      "state_id": "matched--matched-flat-start-1-657",
+      "search_target": false,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1143
+        },
+        "v48": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1143
+        }
+      }
+    },
+    {
+      "state_id": "matched--matched-flat-start-2-650",
+      "search_target": false,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1150
+        },
+        "v48": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1150
+        }
+      }
+    },
+    {
+      "state_id": "matched--matched-flat-start-2-657",
+      "search_target": false,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1143
+        },
+        "v48": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 36.0,
+          "suffix_controls": 1143
+        }
+      }
+    },
+    {
+      "state_id": "original--continuous-composition-start-1-4250",
+      "search_target": false,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 180.0,
+          "suffix_controls": 4750
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 139.92000000000002,
+          "suffix_controls": 2746
+        }
+      }
+    },
+    {
+      "state_id": "original--continuous-composition-start-1-4256",
+      "search_target": false,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 180.0,
+          "suffix_controls": 4744
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 139.92000000000002,
+          "suffix_controls": 2740
+        }
+      }
+    },
+    {
+      "state_id": "v48--continuous-composition-start-1-4250",
+      "search_target": true,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 180.0,
+          "suffix_controls": 4750
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 86.28,
+          "suffix_controls": 64
+        }
+      },
+      "search": {
+        "state_id": "v48--continuous-composition-start-1-4250",
+        "search_skipped": "unmodified counterfactual already passes full session",
+        "passing_controls": [
+          "original"
+        ]
+      }
+    },
+    {
+      "state_id": "v48--continuous-composition-start-1-4256",
+      "search_target": true,
+      "controls": {
+        "original": {
+          "passed": true,
+          "current_window_passed": true,
+          "restart_window_passed": true,
+          "observed_duration_s": 180.0,
+          "suffix_controls": 4744
+        },
+        "v48": {
+          "passed": false,
+          "current_window_passed": false,
+          "restart_window_passed": false,
+          "observed_duration_s": 86.28,
+          "suffix_controls": 58
+        }
+      },
+      "search": {
+        "state_id": "v48--continuous-composition-start-1-4256",
+        "search_skipped": "unmodified counterfactual already passes full session",
+        "passing_controls": [
+          "original"
+        ]
+      }
+    }
+  ],
+  "zero_residual_exact_comparison_controls": 600,
+  "selected_search_exact_validation_controls": 986,
+  "retained": "V30 with original V21/V15",
+  "policy_trained": false,
+  "physical_transfer": false,
+  "held_out": false,
+  "boundary": "Evidence integrity and exposed same-state recovery diagnosis. Same-state repeats are not independent trials or generalization."
+}

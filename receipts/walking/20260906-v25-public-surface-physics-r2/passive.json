@@ -1,0 +1,201 @@
+{
+  "schema": "microduck.public-contact-passive-audit/v1",
+  "trials": [
+    {
+      "profile": "rigid-control",
+      "mass_kg": 0.2,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.00010775542021485754,
+      "settled_speed_m_s": 1.1763805186239355e-12,
+      "passed": true
+    },
+    {
+      "profile": "rigid-control",
+      "mass_kg": 0.2,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.00010775542018772157,
+      "settled_speed_m_s": 6.58347534199228e-14,
+      "passed": true
+    },
+    {
+      "profile": "rigid-control",
+      "mass_kg": 0.4,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.00010775542021485751,
+      "settled_speed_m_s": 1.1763665167960639e-12,
+      "passed": true
+    },
+    {
+      "profile": "rigid-control",
+      "mass_kg": 0.4,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.00010775542018772157,
+      "settled_speed_m_s": 6.58350005592418e-14,
+      "passed": true
+    },
+    {
+      "profile": "rigid-control",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.00010775542021485751,
+      "settled_speed_m_s": 1.1763659645439938e-12,
+      "passed": true
+    },
+    {
+      "profile": "rigid-control",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.00010775542018772218,
+      "settled_speed_m_s": 6.583980908453155e-14,
+      "passed": true
+    },
+    {
+      "profile": "soft-low-traction",
+      "mass_kg": 0.2,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 5.465565838585514e-05,
+      "settled_speed_m_s": 4.175386124788511e-13,
+      "passed": true
+    },
+    {
+      "profile": "soft-low-traction",
+      "mass_kg": 0.2,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 5.465565838544756e-05,
+      "settled_speed_m_s": 1.0508098393811143e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-low-traction",
+      "mass_kg": 0.4,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 5.465565838585514e-05,
+      "settled_speed_m_s": 4.175386361096456e-13,
+      "passed": true
+    },
+    {
+      "profile": "soft-low-traction",
+      "mass_kg": 0.4,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 5.465565838544756e-05,
+      "settled_speed_m_s": 1.050810418467235e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-low-traction",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 5.465565838585514e-05,
+      "settled_speed_m_s": 4.1753884700281197e-13,
+      "passed": true
+    },
+    {
+      "profile": "soft-low-traction",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 5.465565838544756e-05,
+      "settled_speed_m_s": 1.0508104519891786e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-middle",
+      "mass_kg": 0.2,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.0004914318998904927,
+      "settled_speed_m_s": 6.602168777146437e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-middle",
+      "mass_kg": 0.2,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.0004914318996338559,
+      "settled_speed_m_s": 5.327447638106905e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-middle",
+      "mass_kg": 0.4,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.0004914318998904925,
+      "settled_speed_m_s": 6.602070930386694e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-middle",
+      "mass_kg": 0.4,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.0004914318996338559,
+      "settled_speed_m_s": 5.327444071689284e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-middle",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.0004914318998904929,
+      "settled_speed_m_s": 6.602204306190844e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-middle",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.0004914318996338535,
+      "settled_speed_m_s": 5.327607333698157e-12,
+      "passed": true
+    },
+    {
+      "profile": "soft-high-traction",
+      "mass_kg": 0.2,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.004127204851602756,
+      "settled_speed_m_s": 1.1941067800465904e-10,
+      "passed": true
+    },
+    {
+      "profile": "soft-high-traction",
+      "mass_kg": 0.2,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.0041272044886732535,
+      "settled_speed_m_s": 5.2357711840608614e-11,
+      "passed": true
+    },
+    {
+      "profile": "soft-high-traction",
+      "mass_kg": 0.4,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.004127204851602757,
+      "settled_speed_m_s": 1.1941066444654223e-10,
+      "passed": true
+    },
+    {
+      "profile": "soft-high-traction",
+      "mass_kg": 0.4,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.004127204488673254,
+      "settled_speed_m_s": 5.235774399373197e-11,
+      "passed": true
+    },
+    {
+      "profile": "soft-high-traction",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.005,
+      "mean_indentation_m": 0.004127204851602756,
+      "settled_speed_m_s": 1.1941064554050758e-10,
+      "passed": true
+    },
+    {
+      "profile": "soft-high-traction",
+      "mass_kg": 0.737243,
+      "timestep_s": 0.0025,
+      "mean_indentation_m": 0.0041272044886732535,
+      "settled_speed_m_s": 5.235774972783803e-11,
+      "passed": true
+    }
+  ],
+  "max_timestep_indentation_difference_m": 3.6292950242322597e-10,
+  "passed": true,
+  "measurement_calibrated": false,
+  "boundary": "Numerical settling, actual contact parameters and timestep sensitivity only. Primitive rigid probe, not measured carpet or actual-foot calibration; no hysteresis identification."
+}

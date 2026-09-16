@@ -1,0 +1,49 @@
+{
+  "id": "v57-targeted-cad-cavity-audit",
+  "created_utc": "2026-09-16T00:20:41.296253+00:00",
+  "selection": "posthoc mechanism diagnosis of preregistered V57 rejection; not an acceptance bank",
+  "poses": [
+    {
+      "id": "home",
+      "yaw_rad": 0.0,
+      "root_z_m": 0.125
+    },
+    {
+      "id": "worst_sample",
+      "source": "receipts/laser-course/20260913-v2-development/nominal/trajectory.jsonl.gz",
+      "row_index": 1399,
+      "time_s": 28.0,
+      "qpos_sha256": "5fff9f586f89decf037bdcca1151d5bd090f5cc660506c0af90861334e2e8930"
+    }
+  ],
+  "pairs": [
+    [
+      "neck_pitch",
+      "seeed_bearing__configuration__22x16x4",
+      "jaw_soft",
+      "bottom_head_shell"
+    ],
+    [
+      "neck_pitch",
+      "seeed_bearing__configuration__22x16x4",
+      "jaw_soft",
+      "jaw"
+    ],
+    [
+      "neck_pitch",
+      "neck_pitch",
+      "jaw_soft",
+      "bottom_head_shell"
+    ],
+    [
+      "neck_pitch",
+      "neck_pitch",
+      "jaw_soft",
+      "jaw"
+    ]
+  ],
+  "geometry": "original unhealed source STL triangle surfaces transformed by XML geom/body frames; compare compiled MuJoCo mesh vertices",
+  "crossing_test": "all AABB-overlapping triangle pairs, all triangle edges versus other triangle interiors, endpoints at least 1e-8 m on opposite plane sides; tangential/coplanar crossings unresolved unless separate witness",
+  "no_physics": true,
+  "prior_manifest_sha256": "9a3c03f08e784cbe40f3f6f327835af707393cd854986d2be53bbf55effd5768"
+}

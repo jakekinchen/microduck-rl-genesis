@@ -1,0 +1,178 @@
+{
+  "schema": "microduck.full-body-clearance-diagnostic/v1",
+  "cases": [
+    {
+      "trace": "receipts/walking/20260905-v9-old-regression/trajectory.jsonl",
+      "sha256": "150c8aec6b3705ad92633da7004e7316d5770b3376bf581cc810195628360939",
+      "frames": 18580,
+      "minimum_nonfoot_floor_clearance_m": 0.013140835640873002,
+      "frames_below_floor_by_1mm": 0,
+      "geometries": [
+        {
+          "name": "",
+          "body": "trunk_base",
+          "minimum_clearance_m": 0.036657725154835896,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l",
+          "minimum_clearance_m": 0.017155878212993282,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg",
+          "minimum_clearance_m": 0.014822262008912554,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.03900935515097932,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.03767352441783918,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.038463175619141726,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l_2",
+          "minimum_clearance_m": 0.03783458574267577,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg_2",
+          "minimum_clearance_m": 0.013140835640873002,
+          "penetrating_frames": 0
+        }
+      ]
+    },
+    {
+      "trace": "receipts/walking/20260905-v9-final/trajectory.jsonl",
+      "sha256": "e9538ff5dc1a372d7d84f62ebd40d27d34c360b90978dd3370ee7c83c0d8a32e",
+      "frames": 18900,
+      "minimum_nonfoot_floor_clearance_m": 0.012994864605848845,
+      "frames_below_floor_by_1mm": 0,
+      "geometries": [
+        {
+          "name": "",
+          "body": "trunk_base",
+          "minimum_clearance_m": 0.03664795213881887,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l",
+          "minimum_clearance_m": 0.03319357428405979,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg",
+          "minimum_clearance_m": 0.014800602924283236,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.0733466884621404,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.07164910370656716,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.07264452237509732,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l_2",
+          "minimum_clearance_m": 0.04443581704738599,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg_2",
+          "minimum_clearance_m": 0.012994864605848845,
+          "penetrating_frames": 0
+        }
+      ]
+    },
+    {
+      "trace": "receipts/walking/20260905-v9-current-sensor/trajectory.jsonl",
+      "sha256": "c056a6b04ff84970500ed51065b7536d5459c8b1ebd28e6e7f04219b759c532c",
+      "frames": 18777,
+      "minimum_nonfoot_floor_clearance_m": 0.013379926044273448,
+      "frames_below_floor_by_1mm": 0,
+      "geometries": [
+        {
+          "name": "",
+          "body": "trunk_base",
+          "minimum_clearance_m": 0.03603844188424303,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l",
+          "minimum_clearance_m": 0.01610494932687416,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg",
+          "minimum_clearance_m": 0.014931460099830367,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.03080014359299639,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.030653876783321085,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "jaw_soft",
+          "minimum_clearance_m": 0.030771538280463043,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "hip_l_2",
+          "minimum_clearance_m": 0.03640910919430157,
+          "penetrating_frames": 0
+        },
+        {
+          "name": "",
+          "body": "leg_2",
+          "minimum_clearance_m": 0.013379926044273448,
+          "penetrating_frames": 0
+        }
+      ]
+    }
+  ],
+  "boundary": "Static full-collision CAD clearance on copied states, not full-collision dynamics or contact force. Reduced native walk model has only two floor-capable robot geoms, so its non-foot-floor-force rejection alone is vacuous.",
+  "physical_transfer_validated": false
+}

@@ -1,0 +1,750 @@
+{
+  "passed": false,
+  "complete": false,
+  "failures": [
+    "diagnostic_or_incomplete_duration",
+    "insufficient_active_evidence",
+    "insufficient_forward_progress",
+    "missing_bilateral_steps",
+    "missing_command_response",
+    "missing_final_stop",
+    "no_useful_translation",
+    "unsustained_bilateral_stepping"
+  ],
+  "gait": {
+    "duration_s": 6.0,
+    "active_s": 0.0,
+    "translation_s": 0.0,
+    "path_length_m": 0.012030225978227288,
+    "qualified_swings_left_right": [
+      0,
+      0
+    ],
+    "swing_events": [],
+    "alternating_landing_fraction": null,
+    "both_feet_loaded_active_fraction": null,
+    "loaded_slip_over_3cm_s_fraction": null,
+    "loaded_slip_p95_m_s": null,
+    "backward_translation_fraction": null,
+    "bilateral_step_coverage_during_translation": null,
+    "target_outside_joint_limits_fraction": 0.0033333333333333335,
+    "joint_hard_stop_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_target_limit_violation_rad": 0.289606665453644,
+    "max_actual_limit_violation_rad": 0.0,
+    "max_abs_servo_velocity_rad_s": 8.082224979770857,
+    "max_abs_actuator_torque_nm": 0.47660500661100025,
+    "nonfoot_contact_frames": 0,
+    "max_tilt_deg": 9.776298861336112,
+    "fell": false,
+    "rejection_reasons": [
+      "insufficient_active_evidence",
+      "no_useful_translation",
+      "missing_bilateral_steps",
+      "unsustained_bilateral_stepping"
+    ],
+    "rejection_gate_passed": false,
+    "physical_transfer_validated": false,
+    "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+  },
+  "self_contact": {
+    "passed": true,
+    "failures": [],
+    "frames": 300,
+    "maximum_self_penetration_m": 0.0,
+    "violating_frames": 0,
+    "first_violation": null,
+    "threshold_m": 0.001,
+    "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance."
+  },
+  "self_load": {
+    "passed": true,
+    "failures": [],
+    "observed_samples": 1200,
+    "expected_samples": 1200,
+    "total_over_1n_fraction": 0.0,
+    "longest_over_1n_s": 0.0,
+    "thresholds": {
+      "total_load_n": 1.0,
+      "max_fraction": 0.01,
+      "max_continuous_s": 0.05
+    },
+    "boundary": "Applied 200-Hz native internal loads, not floor support or calibrated hardware forces."
+  },
+  "posture": {
+    "maximum_mean_joint_error_rad": 0.1608355976229954,
+    "p95_worst_joint_error_rad": 0.16312427646789923,
+    "mean_absolute_face_pitch_deg": 25.310838856191943,
+    "per_head_joint_mean_abs_error_rad": [
+      0.1500586966334056,
+      0.1608355976229954,
+      0.14125929946252577,
+      0.04535202455925684
+    ]
+  },
+  "stop": null,
+  "fault_stop": null,
+  "task": {
+    "tracking_fraction": 1.0,
+    "maximum_cross_track_m": 0.0010754674838143639,
+    "forward_progress_m": -0.008690982693614065
+  },
+  "obstacles": {
+    "maximum_load_n": 0.0,
+    "maximum_penetration_m": 0.0
+  },
+  "motor": {
+    "saturation_fraction": 5.9523809523809524e-05,
+    "minimum_actual_margin_rad": 0.26975276043948515
+  },
+  "command_response": {},
+  "schema": "microduck.visual-marker-following/v1",
+  "case": {
+    "id": "straight",
+    "layout": "wide-straight",
+    "path": "straight",
+    "yaw": 0.0,
+    "mass": 1.0,
+    "friction": 1.0,
+    "motor_ticks": 4,
+    "gain": 1.0,
+    "noise": 0.0,
+    "fault": "none",
+    "repeat": 0,
+    "seed": 26091501,
+    "initial_yaw_rad": 0.0
+  },
+  "requested_duration_s": 6.0,
+  "actual_duration_s": 6.0,
+  "source_freeze_sha256": "d6ebf4c6a2d6f28c22d6d63d1396dd0051f31a23dc286a8b08578b349803403b",
+  "camera": {
+    "revision": "microduck.head-camera-site-aligned.v2",
+    "optical_forward_world": [
+      0.9999999999999993,
+      -0.0,
+      -0.0
+    ],
+    "physical_site_forward_world": [
+      0.9999999999999993,
+      1.0591047415476302e-33,
+      -1.2446570643470742e-18
+    ],
+    "image_up_world": [
+      0.0,
+      0.0,
+      0.9999999999999993
+    ],
+    "local_quaternion_wxyz": [
+      0.7071067811865475,
+      0.0,
+      0.0,
+      -0.7071067811865475
+    ],
+    "vertical_fov_deg": 45.0,
+    "camera_site_position_error_m": 0.0,
+    "calibrated": false,
+    "physics_changed": false
+  },
+  "collision_audit": {
+    "obstacles": [
+      {
+        "name": "course_wall_-1",
+        "position": [
+          2.4,
+          -0.85,
+          0.075
+        ],
+        "size": [
+          3.15,
+          0.035,
+          0.075
+        ],
+        "active_robot_mask_pairs": 11,
+        "witness": {
+          "maximum_load_n": 1788.1760217661194,
+          "maximum_penetration_m": 0.06202201076805202,
+          "obstacles": [
+            "course_wall_-1"
+          ]
+        }
+      },
+      {
+        "name": "course_wall_1",
+        "position": [
+          2.4,
+          0.85,
+          0.075
+        ],
+        "size": [
+          3.15,
+          0.035,
+          0.075
+        ],
+        "active_robot_mask_pairs": 11,
+        "witness": {
+          "maximum_load_n": 1788.17602176613,
+          "maximum_penetration_m": 0.06202201076805202,
+          "obstacles": [
+            "course_wall_1"
+          ]
+        }
+      }
+    ],
+    "copied_state_only": true
+  },
+  "materialized_domain": {
+    "factors": {
+      "mass_inertia_scale": 1.0,
+      "sliding_friction_scale": 1.0
+    },
+    "total_mass_kg": 0.7372431799999999,
+    "body_mass_kg": [
+      0.0,
+      0.199224,
+      0.0230406,
+      0.00618934,
+      0.0482067,
+      0.0215844,
+      0.0300246,
+      0.0368414,
+      0.00572,
+      0.0486,
+      0.188766,
+      0.0230406,
+      0.00618934,
+      0.0482067,
+      0.0215844,
+      0.0300251
+    ],
+    "body_inertia_kg_m2": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.00014593161399370665,
+        0.00014079887191245798,
+        9.852651409383543e-05
+      ],
+      [
+        4.1964e-06,
+        3.4198877566766147e-06,
+        2.3241322433233854e-06
+      ],
+      [
+        1.1597556037198693e-06,
+        1.1575300000024421e-06,
+        3.52458396277689e-07
+      ],
+      [
+        1.984526595605749e-05,
+        1.9108041962471662e-05,
+        8.117992081470831e-06
+      ],
+      [
+        5.25056e-06,
+        4.580536622760802e-06,
+        1.913783377239199e-06
+      ],
+      [
+        1.1162273349969178e-05,
+        7.743185360670359e-06,
+        5.903341289360453e-06
+      ],
+      [
+        1.72925e-05,
+        1.63707e-05,
+        3.12694e-06
+      ],
+      [
+        1.09186e-06,
+        9.66855e-07,
+        5.12111e-07
+      ],
+      [
+        9.655117695766666e-06,
+        8.11787739625905e-06,
+        6.887804907974275e-06
+      ],
+      [
+        0.0003210675976941665,
+        0.00025426573598788586,
+        0.00014946066631794762
+      ],
+      [
+        4.1964e-06,
+        3.4198877566766147e-06,
+        2.3241322433233854e-06
+      ],
+      [
+        1.1597556037198693e-06,
+        1.1575300000024421e-06,
+        3.52458396277689e-07
+      ],
+      [
+        1.984526595605749e-05,
+        1.9108041962471662e-05,
+        8.117992081470831e-06
+      ],
+      [
+        5.25056e-06,
+        4.580536622760802e-06,
+        1.913783377239199e-06
+      ],
+      [
+        1.1162245904558893e-05,
+        7.743216094205062e-06,
+        5.90343800123603e-06
+      ]
+    ],
+    "geometry_friction": [
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      [
+        1.0,
+        0.005,
+        0.0001
+      ]
+    ],
+    "array_sha256": {
+      "body_mass": "7f917ade7ccba722a00b6d0e9e46bbd103c99158e1b3ce4f5c9a499357d1632f",
+      "body_inertia": "d07699812a888aafdad05edce5dafdb1642375f0c5d87bb4a592dc27480e0dec",
+      "geom_friction": "f1bd62b786a084c84cafe82f542fd3e5018b3838bc90ad451144b2a630215e0a"
+    }
+  },
+  "exact_onnx_rows": 300,
+  "physics_samples": 1200,
+  "camera_frames": 60,
+  "resets_within_session": 0,
+  "original_actor_outputs": true,
+  "controller_input": "RGB-derived detection plus capture/receive timestamps; no privileged target/root state",
+  "boundary": "Artificial visual marker, exposed simulation development. No obstacle-perception, protected-final, calibrated-physics or physical-transfer claim."
+}

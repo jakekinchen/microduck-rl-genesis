@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microduck · Follow the dot</title><link rel="stylesheet" href="/playground.css"><script src="/playground.js" defer></script></head>
+<body><main>
+<header><a class="brand" href="/">Microduck <span>Behavior lab</span></a><p>Experimental locomotion / gait not validated</p></header>
+<section class="intro"><h1>Move the dot.<br>Watch the duck.</h1><div><p>A new position. A turn. A little chase.<br> Drag the red dot, or give it a route.</p><div class="transport"><button id="play" disabled>Play</button><button id="reset" class="quiet" disabled>Reset duck</button></div></div></section>
+<section class="workspace" aria-label="Live simulation and target controls">
+<div class="stage"><div class="stage-top"><span id="status" role="status">Loading physics…</span><span id="route-label">Waypoint route</span></div><img id="frame" alt="Live MuJoCo simulation of the duck and red target"><div class="legend"><span><i class="yellow"></i>Duck trail / arrow faces forward</span><span><i class="red"></i>Target trail</span></div><label for="view">Inspection camera</label><select id="view"><option value="inspection">Feet close-up · constant scale</option><option value="fixed">Fixed-world overview</option><option value="activity">Adaptive target overview</option></select></div>
+<aside><div class="pad-heading"><h2>Place the target</h2><output id="coordinates">x +0.60 / y +0.00 m</output></div><canvas id="map" width="600" height="600" tabindex="0" aria-label="Target map. Drag to move the red dot, or use arrow keys in five-centimeter increments."></canvas><p class="hint">Drag anywhere. Arrow keys move it 5 cm.</p>
+<label for="route">Target movement</label><select id="route"><option value="retarget">Jump between waypoints</option><option value="circle">Circle</option><option value="figure-eight">Figure eight</option><option value="manual">You control the dot</option></select>
+<label for="domain">Ground & robot conditions</label><select id="domain"><option value="nominal">Standard flat ground</option><option value="low-grip">Low-grip flat ground</option><option value="randomized">Randomized flat-ground trial</option></select><p class="hint">Changing conditions resets and pauses the duck.</p><button id="visibility" class="quiet">Hide dot</button></aside>
+</section>
+<section class="readout" aria-label="Live measurements"><div><span>Distance to dot</span><output id="gap">—</output></div><div><span>Simulation time</span><output id="time">0.0 s</output></div><div><span>Duck speed</span><output id="speed">—</output></div><p id="domain-detail">Connecting to local simulator…</p></section>
+<p id="error" class="error" role="alert" hidden></p>
+<p id="gait-detail" role="status">Gait evidence loading…</p>
+<footer><p>Gait audit open: reaching the dot does not establish credible walking. The dot’s coordinates come from the simulator, not a camera. Random trials vary grip, mass, motor strength, sensing and a small push—not terrain geometry. This is a diagnostic playground, not real-robot validation.</p><p id="policy">Policy loading…</p></footer>
+</main></body></html>

@@ -1,0 +1,91 @@
+{
+  "schema": "microduck.upstream-runtime-diagnostic.v1",
+  "scope": "changed-controller and changed-physics integration diagnostic",
+  "behavior_acceptance": false,
+  "physics_conformance": false,
+  "hardware_authority": false,
+  "protocol_sha256": "49564334553be1709b1c12983f09ed8bb9edc9993dafa9dd111c874639bd3d92",
+  "script_sha256": "bbd4d7a88220135551e87eeb31e8fc90ef88b1621e0366825dc1db04fa7fd37e",
+  "params_sha256": "c3421fc6a35bf22f46aca8383ae5a103f848fdaa4948712f7d9e5990b9cd9681",
+  "policy_sha256": {
+    "walk": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+    "stand": "2fddc9a9bc4ff9a17a34af51215a31c43503cbe68a1b815a97b3042abf248db8"
+  },
+  "commands": {
+    "body": [
+      "/Users/kelly/Developer/microduck-rl-genesis/.venv-apple/bin/python",
+      "-m",
+      "mjlab_microduck.sim.body_server",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "56420",
+      "--ducks",
+      "1",
+      "--headless",
+      "--keyframe",
+      "HOME"
+    ],
+    "tofd": [
+      "/Users/kelly/Developer/microduck-rl-genesis/.workspace/runtime-rehearsal-v1/runtime/target/debug/tofd",
+      "--sim",
+      "127.0.0.1:56420",
+      "--socket",
+      "/Users/kelly/Developer/microduck-rl-genesis/.workspace/runtime-rehearsal-v1/s/t.sock"
+    ],
+    "robotd": [
+      "/Users/kelly/Developer/microduck-rl-genesis/.workspace/runtime-rehearsal-v1/runtime/target/debug/robotd",
+      "--sim",
+      "127.0.0.1:56420",
+      "--params",
+      "/Users/kelly/Developer/microduck-rl-genesis/.workspace/runtime-rehearsal-v1/s/params.toml",
+      "--socket",
+      "/Users/kelly/Developer/microduck-rl-genesis/.workspace/runtime-rehearsal-v1/s/d.sock"
+    ]
+  },
+  "planned_phases": [
+    [
+      2.0,
+      "stand",
+      0.0,
+      0.0
+    ],
+    [
+      6.0,
+      "walk",
+      0.12,
+      0.0
+    ],
+    [
+      8.0,
+      "turn",
+      0.0,
+      0.4
+    ],
+    [
+      12.0,
+      "stop",
+      0.0,
+      0.0
+    ]
+  ],
+  "completed_phases": [],
+  "failures": [
+    "fall",
+    "incomplete_phase_sequence"
+  ],
+  "startup_held_body": true,
+  "camera": false,
+  "elapsed_s": 0.9039040000643581,
+  "simulated_s": 0.8999999999999808,
+  "real_time_factor": 0.9956809571988847,
+  "child_exit_codes": {
+    "body": -15,
+    "tofd": 0,
+    "robotd": 0
+  },
+  "all_owned_processes_reaped": true,
+  "listener_gone": true,
+  "bounded_sequence_completed_without_fall": false,
+  "status": "terminal_negative"
+}

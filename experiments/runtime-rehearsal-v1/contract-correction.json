@@ -1,0 +1,12 @@
+{
+  "schema": "microduck.runtime-contract-correction.v1",
+  "supersedes": "ADAPTER_CONTRACT.md phase4 ordering and contact-coverage interpretation",
+  "original_closure_sha256": "4d46fd098c7a7a8752894614acf1869225b69caa24ff19299e317630c160ba49",
+  "original_contract_sha256": "2e6d157a167ee62b044874d67d6516480cac3ead26d10ced9eef4c450e7ad074",
+  "corrected_contract_sha256": "a83361d7094960b4968f5a6a9d9afd42d26abd2479f28a23a325780311396687",
+  "reason": [
+    "Contact loads must be observed after each mj_step, not before it.",
+    "V11 is an eleven-collider reference; new recovery needs reconciled full-CAD coverage."
+  ],
+  "new_physics_run": false
+}

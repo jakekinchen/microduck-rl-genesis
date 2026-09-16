@@ -1,0 +1,23 @@
+{
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r2.py": "0ee90a5b131399b7fa242124638da739bcec3c2a5500e1924a5ebb566d5162b0",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/validate_dense_v62.py": "c4961e4c6621e8e52b5ca004064f242149f3d9186b194094698b3242d7d99de9",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/diagnose_partition_v62r2.py": "227ffe63b350b59beac022bd5ab4c62f370a80cb1406b6db1949ddcde90942c3",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-structure-bank.json": "5e6155d51251f262a6e7c11408a3fb2db8abaeb69339e863f4f994d96c923829"
+  },
+  "attempt_marker": "shell-structure-attempt.json",
+  "process_report": "shell-structure-processes.json",
+  "steps": [
+    {
+      "id": "shell-structure",
+      "script": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/diagnose_partition_v62r2.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-structure-bank.json"
+      ],
+      "wall_seconds": 120,
+      "log": "shell-structure.log"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v52-braking-rejected-retention-next",
+  "phase": "braking_retention_diagnosis",
+  "question": "V52 is complete and rejected. It survives both successive downhill stops but loses 25/63 flat passes, both endurance runs and two of five surface passes. This packet binds the failed nominal forward-0.08 stop; the separate offline V50 comparison proves: identical through 13.00 s, residual starts at 13.02 s, fall at 14.42 s. The additional braking ONNX is 2dea5e82c66690ea06d2cf3b56a76968f360de567d3cb6c1ed0491ace389421b. Keep V30; next correct braking retention.",
+  "primary": "receipts/walking/20260908-v52-braking-flat",
+  "primary_policy_sha256": "1f8e87d7370a1aeb7b57f272c96abb6df49e3039b8d1332bfce24c1a81de5b4f",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "nominal-20-20ms--forward-08",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_braking_flat_v52.py",
+    "microduck/braking_v52.py",
+    "scripts/train_braking_v52.py",
+    "scripts/build_braking_replay_v52.py",
+    "experiments/walking/BRAKING-DISTILLATION-v52.md",
+    "experiments/walking/braking-replay-v52/replay.npz",
+    "experiments/walking/braking-replay-v52/provenance.json",
+    "scripts/evaluate_native_retention_flat_v50.py",
+    "microduck/native_sequence_env_v50.py",
+    "microduck/retained_walker_v50.py",
+    "scripts/train_native_retention_v50.py",
+    "experiments/walking/native_candidate_v50.py",
+    "microduck/heading_headroom_v30.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/laser/gait.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json"
+  ],
+  "before_training": [
+    "Read experiments/walking/BRAKING-RESULTS-v52.md and all four failed evaluation banks. The V51 search, single V52 learner and all evaluations are complete; no extension or checkpoint reselection.",
+    "Inspect the V52 nominal forward-0.08 first stop: its 13.02-second observation exactly matches a zero-residual training sample, but the model adds .019819 rad; it later falls at 14.42 seconds. Prefix identity and exact runtime ONNX actions verify.",
+    "The primary manifest binds braking/policy.onnx SHA-256 2dea5e82c66690ea06d2cf3b56a76968f360de567d3cb6c1ed0491ace389421b in addition to the V50 base walker and V15 stander. This is the V52 composite, not V50 alone.",
+    "Next freeze one retention-constrained braking experiment: tighter successful-stop fitting and validated corrective labels on learner-visited states, with unchanged gates. Preserve V15 standing and downhill stop gains; require all 63 flat, both 180-second and five original surface passes. Keep V30 retained.",
+    "Downhill yaw .202257-.207138 still exceeds .20. Fresh/protected banks, measured calibration and carpet transfer remain unmet. Check free storage and run guard immediately before newly authorized compute. No paid compute, activation or hardware authority is implied."
+  ],
+  "boundary": "Measured exposed downhill stopping improvement with flat/endurance/surface regressions. Rejected; not full walking, calibrated physics or carpet transfer."
+}

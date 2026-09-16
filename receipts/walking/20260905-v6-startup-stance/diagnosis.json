@@ -1,0 +1,45 @@
+{
+  "schema": "microduck.walking-startup-stance-diagnostic/v1",
+  "cases": [
+    {
+      "initial_hold_s": 1.0,
+      "tilt_at_motion_onset_deg": 24.00146833608449,
+      "scheduled_duration_s": 18.0,
+      "observed_duration_s": 2.06,
+      "fell": true,
+      "fall_s_after_motion_command": 1.06,
+      "last_base_height_m": 0.06875420168584959,
+      "last_tilt_deg": 29.139640839907347,
+      "minimum_actual_joint_margin_rad": -0.025838159014780926,
+      "trace_sha256": "4619cdb264ffebaf9f6c92efeed2f7b9239b4a5cd67e2529785db7deeb33ddee"
+    },
+    {
+      "initial_hold_s": 0.24,
+      "tilt_at_motion_onset_deg": 15.670810304177317,
+      "scheduled_duration_s": 17.240000000000002,
+      "observed_duration_s": 17.240000000000002,
+      "fell": false,
+      "fall_s_after_motion_command": null,
+      "last_base_height_m": 0.08081768275214167,
+      "last_tilt_deg": 29.139769385131736,
+      "minimum_actual_joint_margin_rad": 0.08009945529702844,
+      "trace_sha256": "deb1655d17c5dc35e8a602ddfa797efe9bee32e229d42f989a6a865784e9967e"
+    },
+    {
+      "initial_hold_s": 0.0,
+      "tilt_at_motion_onset_deg": 0.0,
+      "scheduled_duration_s": 17.0,
+      "observed_duration_s": 17.0,
+      "fell": false,
+      "fall_s_after_motion_command": null,
+      "last_base_height_m": 0.0852096173365233,
+      "last_tilt_deg": 35.31215133315071,
+      "minimum_actual_joint_margin_rad": 0.12028037639816691,
+      "trace_sha256": "5d5abaa6dcc124163ffe8df01f7e89e6c315733d862d306aeb82c4f77fdff95a"
+    }
+  ],
+  "policy_sha256": "948f6e601098845bf394c60de61cb38aa435d61934b86fc46dd39e4c9908c8cb",
+  "input_manifest_sha256": "685e251289dc6223861be3624b9781860b63e21762b9f7a8e019df66fa932295",
+  "acceptance_eligible": false,
+  "boundary": "Same v6 final, native current-state clock, 30/20-ms timing, yaw, servo law and raw inference. Only initial zero-command duration changes. Feedback diagnostic, not fixed-action isolation, shorter-test acceptance, startup assistance or physical transfer."
+}

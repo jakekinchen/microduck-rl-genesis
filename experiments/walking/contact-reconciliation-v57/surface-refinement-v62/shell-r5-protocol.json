@@ -1,0 +1,57 @@
+{
+  "id": "v62r5-shell-source-gap-midplanes",
+  "frozen_utc": "2026-09-16T03:14:45.954821+00:00",
+  "seed": 26091662,
+  "config": {
+    "selection_threshold_m": 0.00018,
+    "refinement_target_m": 0.00012,
+    "maximum_depth": 16,
+    "maximum_leaves_per_parent": 128,
+    "maximum_total_parts": 4096
+  },
+  "acceptance": {
+    "independent_tolerance_m": 0.00025,
+    "original_validator": "V59 unchanged",
+    "no_geometry_or_physical_admission_from_generator": true
+  },
+  "hypothesis": "Intersect excessive V61 convex regions with original source solid and partition locally, preserving all nonempty components",
+  "dependency": {
+    "manifold3d": "3.5.3",
+    "install": "isolated ignored target, no existing runtime changes",
+    "sources": [
+      "https://github.com/elalish/manifold/wiki/Manifold-Library",
+      "https://pypi.org/project/manifold3d/"
+    ]
+  },
+  "meshes": {
+    "bottom_head_shell": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/complete.json",
+      "output_directory": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r5/bottom_head_shell",
+      "seed_parent_indices": []
+    }
+  },
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    ".workspace/geometry-deps-v62/site/manifold3d.cpython-312-darwin.so": "d405628ac45f7d5037117c5b06fe596061b524471d2708b1572b973b887f45a9",
+    ".workspace/geometry-deps-v62/site/manifold3d-3.5.3.dist-info/METADATA": "639bd96e419d61a0fd2d0739cef4e7495710435e7b9937d8f978da1ad2a07c1b",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/numerical-scale-diagnosis.json": "a46750e88d3b749f67f7773bf60a77432669d64fda0b0bc4a84d15337195045c",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/complete.json": "748ac96c4737f143ee55edb3ffd18883b1a5214de91a661ab0345762e58a6ae8",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-partition-diagnosis.json": "4af0a5bb35cebc0c31f13e4b6b66c3bef77e93b5339439b96b578f0451383298",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-structure-diagnosis.json": "308b62df1f8ad0a5f29d8a7f1355cbca2c36c86eec4d2e16381cbe54e82aa60e",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-occupancy-diagnosis.json": "3200cbe50710d8e6a0e2b51cbba8ac14474f5949e0565e471b6a1714873dca3d",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r3-processes.json": "7e452317469edd05f9bbe23daea458c16c21b6afc638f0ba34c3892a67c2b940",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r3-refinement.log": "5380657ea31b593259196782012b150e03ba2ec39b07cd3875e4f29647fa1304",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/cad_refinement_v62r5.py": "9a4137b0ae9f68f84dedb5b2b75d41e6cb86abc4c53fd5a0541b414ec95c9e7f",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/refine_cad_v62r5.py": "b8d6ca0f9c78d5aa16474f2ee201cd1ca438f37dbc3ad256b1000ab24e8fd1ea",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/test_cad_refinement_v62r5.py": "886fbb44c5e38fcacbba47ba301bac652ba3411243e634180e0a8b9d422ebc89",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r4-processes.json": "d50b68db12397e1bc69cbb200bb46812ac00c9003f6b1cecbb28e9b3467908a6",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/shell-r4-refinement.log": "a6bd16ce4cbf0c3ce650add31d1bcea279a1a5d7b21908e04b30276941cf7296"
+  },
+  "change_from_first_attempt": "Source-feature plane partitioning plus decomposition of every child; coordinate midpoint fallback if feature cut is empty or has a child below 1e-6 of parent volume. Same .12mm refinement target and .18mm selection; same 128 local / 4096 total budgets.",
+  "change_from_r3": "Preserve each complete plane half including all islands rather than decompose halves into separate components; avoids zero-volume component without dropping material. Same feature planes, targets, depth and budgets.",
+  "change_from_r4": "Use the source triangle normal but cut halfway between nearest source surface and offending hull witness, avoiding a coincident CAD plane. Validate feature-cut child vertex count before adoption; otherwise preserve material using coordinate fallback. Same source, thresholds, depth and piece budgets."
+}

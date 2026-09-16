@@ -1,0 +1,139 @@
+{
+  "schema": "microduck.walking-self-contact-load-diagnostic/v1",
+  "case_reports": [
+    {
+      "case_id": "nominal-20-20ms--forward-08",
+      "input_frames": 900,
+      "input_complete": true,
+      "terminal_fall": false,
+      "physics_samples": 3600,
+      "phases": {
+        "initial_stand": {
+          "observed_samples": 200,
+          "expected_samples": 200,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "moving": {
+          "observed_samples": 2200,
+          "expected_samples": 2200,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "braking": {
+          "observed_samples": 600,
+          "expected_samples": 600,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "settled_stop": {
+          "observed_samples": 400,
+          "expected_samples": 400,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        }
+      },
+      "original_action_file_sha256": "8d117f817b73fcf57817497781a3a7d5cdba425ab1c4cc1625158b006ab3cc17"
+    },
+    {
+      "case_id": "long-30-20ms--forward-20",
+      "input_frames": 900,
+      "input_complete": true,
+      "terminal_fall": false,
+      "physics_samples": 3600,
+      "phases": {
+        "initial_stand": {
+          "observed_samples": 200,
+          "expected_samples": 200,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "moving": {
+          "observed_samples": 2200,
+          "expected_samples": 2200,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "braking": {
+          "observed_samples": 600,
+          "expected_samples": 600,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "settled_stop": {
+          "observed_samples": 400,
+          "expected_samples": 400,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        }
+      },
+      "original_action_file_sha256": "321aca24cd057adad23fc865edd9756f76f35ad082d04b013549b6482352f25e"
+    },
+    {
+      "case_id": "long-30-20ms--arc-left",
+      "input_frames": 900,
+      "input_complete": true,
+      "terminal_fall": false,
+      "physics_samples": 3600,
+      "phases": {
+        "initial_stand": {
+          "observed_samples": 200,
+          "expected_samples": 200,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "moving": {
+          "observed_samples": 2200,
+          "expected_samples": 2200,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "braking": {
+          "observed_samples": 600,
+          "expected_samples": 600,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        },
+        "settled_stop": {
+          "observed_samples": 400,
+          "expected_samples": 400,
+          "max_pair_normal_n": 0.0,
+          "pair_over_1n_fraction": 0.0,
+          "mean_total_normal_n": 0.0
+        }
+      },
+      "original_action_file_sha256": "d1e265f7f6ef3070ed208abd2614deefdba159e0602759ac05256ec8ab58facf"
+    }
+  ],
+  "input_manifest_sha256": "02483cf156ddc690bc8668260fe04909eadb9cb92642a0bcaaef784eb36eb170",
+  "source_sha256": {
+    "scripts/audit_walking_contact_loads.py": "927f8119ed2b702f0dbbead554d5cc964d4475d7bf837c41d9f36160dbbd43d3",
+    "experiments/walking/collision_world.py": "7c9d1d5ff68bd59d30a486950d121918d6da5d6fefd1a993e59d593a536f7d4f",
+    "experiments/walking/collision_model.py": "acf0974833fac61edc33b3ea2e83e695be1988e7253bad0e0f78f7235980541c",
+    "experiments/walking/sensor_world.py": "9271f5e045bc6428c15f805717e71a800b8bcb120bcfaa4e328a222f234239b1",
+    "experiments/walking/world.py": "11a810841e1f3b22d189422f3a33b3d499d281a00c75113dbdd7426d9ae9c0f7"
+  },
+  "model_scope": {
+    "variant": "complete-contact-v11",
+    "scene_sha256": "13ebc1cf3fe8111c1374d6afb7c15dde82ea85f540076ce98346757ac121cf8c",
+    "robot_sha256": "2862b9b5380f8641eca2b14e323f6af2c645cf54d5859bf5cb8502861c177b5b",
+    "old_reduced_model_acceptance": false
+  },
+  "policy_sha256": "bec30f12672fe5b447d5aaf71b61bd2925719645d18c480591300c43ca7e2345",
+  "motor_action_bytes_identical": true,
+  "recorded_qpos_bytes_identical": true,
+  "acceptance_eligible": false,
+  "physical_transfer_validated": false,
+  "boundary": "Applied native self-contact normal loads at 200 Hz, summed per geometry pair. Terminal inputs remain partial; missing stop data is unknown. Not calibrated hardware load, ground support, new control or walking acceptance."
+}

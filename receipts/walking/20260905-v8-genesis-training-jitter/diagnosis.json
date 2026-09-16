@@ -1,0 +1,259 @@
+{
+  "schema": "microduck.walking-genesis-backend-diagnostic/v4",
+  "cases": [
+    {
+      "case_id": "training-jitter-forward-08",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.011834337901722931,
+        "mean_abs_lateral_velocity_m_s": 0.012630913407349969,
+        "mean_abs_yaw_error_rad_s": 0.12518858462939725,
+        "signed_mean_yaw_error_rad_s": -0.002574124731192747,
+        "stop_max_speed_m_s": 0.0034003679174929857,
+        "stop_max_yaw_rate_rad_s": 0.012867622077465057,
+        "peak_sole_clearance_m": [
+          0.016964275389909744,
+          0.015512693673372269
+        ],
+        "loaded_fraction_left_right": [
+          0.5027223230490018,
+          0.49727767695099817
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.4004677613757174,
+        "p95_worst_joint_error_rad": 1.0755691591262817,
+        "mean_absolute_face_pitch_deg": 29.710637875720828,
+        "per_head_joint_mean_abs_error_rad": [
+          0.4004677613757174,
+          0.0935258820624525,
+          0.06649648394645219,
+          0.03572189334821757
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.11180782318115234,
+      "stop_max_tilt_deg": 6.344399108690195
+    },
+    {
+      "case_id": "training-jitter-forward-12",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.013957025754906087,
+        "mean_abs_lateral_velocity_m_s": 0.012603158286057275,
+        "mean_abs_yaw_error_rad_s": 0.13230960065466835,
+        "signed_mean_yaw_error_rad_s": -0.010195058082972405,
+        "stop_max_speed_m_s": 0.0024547588545829058,
+        "stop_max_yaw_rate_rad_s": 0.014469034969806671,
+        "peak_sole_clearance_m": [
+          0.01823481358587742,
+          0.01715228334069252
+        ],
+        "loaded_fraction_left_right": [
+          0.5063520871143375,
+          0.49364791288566245
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.3849391928379276,
+        "p95_worst_joint_error_rad": 1.0431488517284393,
+        "mean_absolute_face_pitch_deg": 29.14161174185176,
+        "per_head_joint_mean_abs_error_rad": [
+          0.3849391928379276,
+          0.098863875536857,
+          0.06468387038327128,
+          0.03842346410192637
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.11265796422958374,
+      "stop_max_tilt_deg": 6.4585880255895365
+    },
+    {
+      "case_id": "training-jitter-forward-20",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.01427303932864091,
+        "mean_abs_lateral_velocity_m_s": 0.017868509518232756,
+        "mean_abs_yaw_error_rad_s": 0.1438245733604283,
+        "signed_mean_yaw_error_rad_s": 0.00044458617653592934,
+        "stop_max_speed_m_s": 0.0021134631242603064,
+        "stop_max_yaw_rate_rad_s": 0.014921609312295914,
+        "peak_sole_clearance_m": [
+          0.023281872272491455,
+          0.020279306918382645
+        ],
+        "loaded_fraction_left_right": [
+          0.515426497277677,
+          0.484573502722323
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.36431490966861785,
+        "p95_worst_joint_error_rad": 1.0222654405593872,
+        "mean_absolute_face_pitch_deg": 28.864382216345085,
+        "per_head_joint_mean_abs_error_rad": [
+          0.36431490966861785,
+          0.11663807647589652,
+          0.07475173327367048,
+          0.03979126261196491
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.11563900113105774,
+      "stop_max_tilt_deg": 6.43096192074139
+    },
+    {
+      "case_id": "training-jitter-turn-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.013436719561483491,
+        "mean_abs_lateral_velocity_m_s": 0.014136415790733095,
+        "mean_abs_yaw_error_rad_s": 0.13349326047877327,
+        "signed_mean_yaw_error_rad_s": 0.012513645835045028,
+        "stop_max_speed_m_s": 0.002535125007852912,
+        "stop_max_yaw_rate_rad_s": 0.012713337317109108,
+        "peak_sole_clearance_m": [
+          0.017440760508179665,
+          0.015451401472091675
+        ],
+        "loaded_fraction_left_right": [
+          0.515426497277677,
+          0.4882032667876588
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.37762828247849106,
+        "p95_worst_joint_error_rad": 1.0268373552322387,
+        "mean_absolute_face_pitch_deg": 28.84627462344684,
+        "per_head_joint_mean_abs_error_rad": [
+          0.37762828247849106,
+          0.10585421779982214,
+          0.08449926041080326,
+          0.032029464422857
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.11294028162956238,
+      "stop_max_tilt_deg": 6.449625506609725
+    },
+    {
+      "case_id": "training-jitter-turn-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.013859755511711707,
+        "mean_abs_lateral_velocity_m_s": 0.011914660265586194,
+        "mean_abs_yaw_error_rad_s": 0.1337970694942829,
+        "signed_mean_yaw_error_rad_s": -0.08270348020290073,
+        "stop_max_speed_m_s": 0.0021097343415021896,
+        "stop_max_yaw_rate_rad_s": 0.009153218008577824,
+        "peak_sole_clearance_m": [
+          0.015983544290065765,
+          0.01319088228046894
+        ],
+        "loaded_fraction_left_right": [
+          0.4827586206896552,
+          0.5172413793103449
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.3846390130605692,
+        "p95_worst_joint_error_rad": 1.041700667476654,
+        "mean_absolute_face_pitch_deg": 27.875383904388062,
+        "per_head_joint_mean_abs_error_rad": [
+          0.3846390130605692,
+          0.08873398695754108,
+          0.08132336400618906,
+          0.01958306471284845
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.11959198117256165,
+      "stop_max_tilt_deg": 6.455551271740278
+    },
+    {
+      "case_id": "training-jitter-arc-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.014225471412421573,
+        "mean_abs_lateral_velocity_m_s": 0.013165553130303254,
+        "mean_abs_yaw_error_rad_s": 0.1565488450489465,
+        "signed_mean_yaw_error_rad_s": 0.030651503016736113,
+        "stop_max_speed_m_s": 0.0029415832832455635,
+        "stop_max_yaw_rate_rad_s": 0.01187956240028143,
+        "peak_sole_clearance_m": [
+          0.019061654806137085,
+          0.018915750086307526
+        ],
+        "loaded_fraction_left_right": [
+          0.5208711433756806,
+          0.484573502722323
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.37662199351183456,
+        "p95_worst_joint_error_rad": 1.0566761556625366,
+        "mean_absolute_face_pitch_deg": 29.121718354729204,
+        "per_head_joint_mean_abs_error_rad": [
+          0.37662199351183456,
+          0.10653212303633416,
+          0.06743983003996493,
+          0.03996891797916149
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.10671201348304749,
+      "stop_max_tilt_deg": 6.339452456584591
+    },
+    {
+      "case_id": "training-jitter-arc-right",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.013636589084909096,
+        "mean_abs_lateral_velocity_m_s": 0.015350018415723978,
+        "mean_abs_yaw_error_rad_s": 0.16273486843457727,
+        "signed_mean_yaw_error_rad_s": -0.023373235722567644,
+        "stop_max_speed_m_s": 0.00247971061617136,
+        "stop_max_yaw_rate_rad_s": 0.01371915452182293,
+        "peak_sole_clearance_m": [
+          0.020334558561444283,
+          0.016033675521612167
+        ],
+        "loaded_fraction_left_right": [
+          0.5099818511796733,
+          0.4900181488203267
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.3751156912975915,
+        "p95_worst_joint_error_rad": 1.010247505044937,
+        "mean_absolute_face_pitch_deg": 28.830467595866615,
+        "per_head_joint_mean_abs_error_rad": [
+          0.3751156912975915,
+          0.10682508011598285,
+          0.0687067832285935,
+          0.031124321756435654
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.11475223302841187,
+      "stop_max_tilt_deg": 6.47205407767451
+    }
+  ],
+  "full_exposed_bank": false,
+  "all_exposed_commands": true,
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "timing_sampling": "training ranges: motor 0..6 resampled each 64 physics ticks; independent sensor buffers 0..1 each 64 control ticks; randomized phases",
+  "checkpoint_sha256": "348030128f56145a5172fe8ad8469394cb5afab3fd5a6911ac124373493e818f",
+  "checkpoint": "model_999.pt",
+  "acceptance_eligible": false,
+  "inference": "Torch CPU normalized deterministic mean; same inference path for both physics backends",
+  "physics": {
+    "engine": "Genesis",
+    "backend": "cpu",
+    "batch_size": 1,
+    "observed_env": 0,
+    "class": "MicroduckBalancedWalkingEnv",
+    "constraint_timeconst_s": 0.02,
+    "floor_masks": [
+      1,
+      1
+    ],
+    "voltage_v": 7.35,
+    "drop_ohm": 0.0
+  },
+  "boundary": "Deterministic policy response on an explicit backend/batch size and named timing process. Training-jitter mode covers the command bank, NOT the fixed 21-case battery. Not fixed-action isolation, candidate selection, native acceptance or physical transfer."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "v61-posthoc-excess-localization",
+  "frozen_utc": "2026-09-16T01:16:19.450697+00:00",
+  "attempt_marker": "localization-attempt-started.json",
+  "process_report": "localization-process.json",
+  "meshes": [
+    "neck_pitch",
+    "bottom_head_shell",
+    "jaw"
+  ],
+  "material_validator": "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py",
+  "input_sha256": {
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/diagnose_excess_v61.py": "1c5fe8c1b63a0ed201fa68e8cd2d72f9ac2e84353534cc77dfe06166af50118b",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/material-result.json": "ad6f873d5720abff47409f9a13272b70c24d9d377d4f0f33f40f36b78ad365a6",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/material-bank.json": "7a816253c3eea6a67c7fd1bba48d5c1cebaf7f3e30b9b446acef5c7cc06cdbb1",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/protocol.json": "f7109d90e100fe43af3973a6805c2dd892f9f42f778eff2f3ecde5366d8426ec",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/run_geometry_v59.py": "2820ea84df3ce3b981043e0d0c2fd439bb8db5195cdb8768aa982f5edc8eb9d8",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/parts.npz": "31a26d24719c6934b21f030d437fa129cdfa552616e1aa67a5755a7c6f81698a",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/neck_pitch/complete.json": "5f6cab68f86c00049fcc446710089ee91c3ff382bc8002d07537f69f6f0f037e",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/parts.npz": "c27a4d54fe280e6d5e7582a10001b0b1471280c096a38e9add8d6596af2b9707",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/bottom_head_shell/complete.json": "748ac96c4737f143ee55edb3ffd18883b1a5214de91a661ab0345762e58a6ae8",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/parts.npz": "8b8dead0e0c09d5726d8a230b82d224a9f33bee29b3bfd9cb42d07f54d7c2c8a",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/outputs/jaw/complete.json": "e955d577eb5b23a49a5e44ee3ff2c72053fcebb59db9091afea01abac77afa83"
+  },
+  "scope": "One posthoc localization of exact V59 samples on unchanged V61 archives; no new decomposition or model compilation",
+  "steps": [
+    {
+      "id": "excess-localization",
+      "script": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/diagnose_excess_v61.py",
+      "args": [],
+      "wall_seconds": 180,
+      "log": "localization.log"
+    }
+  ]
+}

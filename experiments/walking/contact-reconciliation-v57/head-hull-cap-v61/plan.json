@@ -1,0 +1,62 @@
+{
+  "id": "v61-three-remaining-hulls",
+  "attempt_marker": "attempt-started.json",
+  "process_report": "processes.json",
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/bottom_head_shell.stl": "1820f7cf96646b0fc0c431f07da87b91b13111bfa9857ab1bf2b1fc3388f8da2",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/jaw.stl": "45cdbd319a4583095d8daa0db07dee726522a743d59acb82d27d82ded500a1cf",
+    ".venv-apple/lib/python3.12/site-packages/coacd/__init__.py": "c5730c358f078af8fe2d017fa7cb374f1511c2cca3da8fb15b25171786f01044",
+    ".venv-apple/lib/python3.12/site-packages/coacd/lib_coacd.dylib": "3854adedaca7eb1c7622924cfd3ed8c8f2e914d14d4d9803cd82da33a690000a",
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/protocol.json": "f7109d90e100fe43af3973a6805c2dd892f9f42f778eff2f3ecde5366d8426ec",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py": "0a597e950e9a86472369b1d0bc2559117cbb2422d1feb88bc96d20f2e979f05e",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/shell-fragment/local-cavity-witnesses.json": "6cc87434412b370a8a1a9e4c2dd153165e39899cbb1c4c4d97eff6f48ab20ddd",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/parts.npz": "56cc84c46eac4bfe6c85546563d8afeb80266f21dd1cda43ec632c2e05cdfde7",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/complete.json": "0bc09c1c4968a522b9b2a1f6f83c060f615cb1b74f741a409efc8ac3437e7374",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/coacd_worker_v61.py": "79cc90f368320b818a470b55c2383087519f3e3f568dced43c07df6c3697986f",
+    "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/material-bank.json": "7a816253c3eea6a67c7fd1bba48d5c1cebaf7f3e30b9b446acef5c7cc06cdbb1",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/run_geometry_v59.py": "2820ea84df3ce3b981043e0d0c2fd439bb8db5195cdb8768aa982f5edc8eb9d8",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/assembly/result.json": "44dfff65b378e0feecdc827d614a0657f8f1e58432b50aa5b465bde03eaeb021",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/material-result.json": "33db6f018a7e916b1973858585ab265d64e9df1b282259f45421eadc5df56324"
+  },
+  "steps": [
+    {
+      "id": "neck_pitch",
+      "script": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/coacd_worker_v61.py",
+      "args": [
+        "neck_pitch"
+      ],
+      "wall_seconds": 120,
+      "log": "neck_pitch.log"
+    },
+    {
+      "id": "bottom_head_shell",
+      "script": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/coacd_worker_v61.py",
+      "args": [
+        "bottom_head_shell"
+      ],
+      "wall_seconds": 120,
+      "log": "bottom_head_shell.log"
+    },
+    {
+      "id": "jaw",
+      "script": "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/coacd_worker_v61.py",
+      "args": [
+        "jaw"
+      ],
+      "wall_seconds": 120,
+      "log": "jaw.log"
+    },
+    {
+      "id": "all-four-materials",
+      "script": "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py",
+      "args": [
+        "experiments/walking/contact-reconciliation-v57/head-hull-cap-v61/material-bank.json"
+      ],
+      "wall_seconds": 360,
+      "log": "validation.log"
+    }
+  ]
+}

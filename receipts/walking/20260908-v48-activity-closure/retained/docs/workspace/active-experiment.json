@@ -1,0 +1,34 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v48-standing-rejected-v30-retained",
+  "phase": "recovery_feasibility_diagnostic_next",
+  "question": "V47 and the bounded V48 standing correction are complete. V48 retains 63/63 flat gates but fails both downhill sessions, loses one 180-second composition and one surface session. V30 remains retained. This packet binds the passing flat reference; inspect the separate downhill, late-composition and heading failures before a bounded recovery-feasibility diagnostic.",
+  "primary": "receipts/walking/20260908-v48-standing-retention-flat",
+  "primary_policy_sha256": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "nominal-20-20ms--forward-08",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_native_standing_retention_flat_v48.py",
+    "microduck/native_sequence_env_v48.py",
+    "microduck/retained_stander_v48.py",
+    "scripts/train_native_standing_retention_v48.py",
+    "experiments/walking/native_candidate_v48.py",
+    "microduck/heading_headroom_v30.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/laser/gait.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json"
+  ],
+  "before_training": [
+    "Read experiments/walking/STANDING-RETENTION-RESULTS-v48.md and HANDOFF-RESULTS-v47.md. The one V48 run and all four exposed evaluations are complete; do not extend or repeat it.",
+    "The focused flat case passes. Inspect receipts/walking/20260908-v48-standing-retention-endurance/probe.json and its full trajectory: both downhill sessions fall, and composition start-1 falls at 86.28 s after the 85.14-s standing handoff.",
+    "Read the surface receipt: soft-low-traction-start-1 loses the whole-session heading gate despite passing both individual windows. Keep original V30 with V21/V15.",
+    "Freeze a bounded recovery-feasibility diagnostic with complete state histories and original/new standing comparisons. Constrained action search remains a separate privileged diagnostic. A failed finite search is not impossibility; future learning must retain full 180-second candidate-state continuations.",
+    "Storage recovery is complete; inspect current headroom and run guard immediately before compute. Fresh sequence/protected terrain banks stay closed. No paid compute, policy activation or hardware authority is implied."
+  ],
+  "boundary": "V48 retains exposed flat gates but regresses long-composition and surface acceptance while downhill remains failed. V30 remains the limited baseline. This flat reference is not terrain, calibrated physics or carpet-transfer evidence."
+}

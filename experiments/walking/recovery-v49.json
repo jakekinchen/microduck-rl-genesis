@@ -1,0 +1,26 @@
+{
+  "schema": "microduck.recovery-diagnostic/v49",
+  "seed": 26090849,
+  "scope": "Twelve complete states: original two downhill and matched-flat starts at 13.00/13.14s, original and V48 late-composition states at 85.00/85.12s.",
+  "comparisons": "Original V15 and V48 standing from each state, original V21 walking fixed; two exact complete continuations per arm.",
+  "search": {
+    "seed": 26090849,
+    "generations": 8,
+    "population_per_anchor": 24,
+    "elites_per_anchor": 6,
+    "initial_std_rad": 0.18,
+    "minimum_std_rad": 0.02,
+    "maximum_residual_rad": 1.5,
+    "knots_s": [0.0, 0.2, 0.5, 1.0, 1.75, 2.5],
+    "terminal_knot": "zero; five preceding 14D residual knots are optimized",
+    "anchors": ["original", "v48"],
+    "skip": "Only skip a target state if an unmodified comparison arm already passes its full original session.",
+    "target_states": "Four original downhill states plus two V48 late-composition states.",
+    "budget": "At most 2304 candidate trajectories, each to the current 18-second window end or a fall. No extension or parameter retuning.",
+    "initialization": "Each generation and anchor: mean, best-so-far or zero, three incoming-action bridge seeds releasing over .5/1/1.75s, then nineteen Gaussian candidates. Clip search parameters only; never clip actuator outputs.",
+    "update": "Six lowest-cost candidates per anchor; half previous mean/std and half elite mean/std; std floor .02 rad.",
+    "selection": "Single lowest proxy-cost candidate across both anchors; score it on every original gate through the entire remaining 36s or 180s session, and reproduce twice. No alternate checkpoint or candidate selected from validation outcomes."
+  },
+  "acceptance": "Original window and whole-session evaluators unchanged, including motor/joint/posture/gait/slip/body geometry, 200Hz internal loads, duration and heading. Recovered current window, restart window and complete session are separate outcomes.",
+  "boundary": "Privileged exposed diagnostic only. Optimization is not PPO, a deployed controller, physical calibration or carpet generalization. Unsuccessful bounded search does not prove impossibility. Fresh/protected banks remain closed."
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "source_case": "nominal-20-20ms--forward-12",
+  "intervals": 900,
+  "action_array_bytes_sha256": "5b8d3bee2866bf2ad585159d5bcefdcc7d12faa52fa1c8e239e290b6810b7e4f",
+  "original_manifest_sha256": "423da5a9d46db27126c287d42b95a15aca1107b380fd06bc004d367f31ef77fa",
+  "checked_files": {
+    "trajectory.jsonl": "b685e518dd2387c5a2ab86046be47d2e77761a82220cecefa5593e8273553032",
+    "suite.json": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+    "nominal-20-20ms--forward-12-actions-float32.npy": "2dc9eccee706cee9625ba9b402e89ab2b5c57e036f3fba0ed8b71ba495d370b1",
+    "policy.onnx": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+    "standing/policy.onnx": "2fddc9a9bc4ff9a17a34af51215a31c43503cbe68a1b815a97b3042abf248db8",
+    "evaluation.json": "e29430680891dd3c2ea30c0e98da6814301b8d76fae4ee5147c598a3a118f6e1",
+    "evaluator-freeze.json": "9c7447695d0a82f7704fa3ec97469e25b62a80da4019eb029e269933aed86e6c"
+  },
+  "boundary": "float32 file bytes retained; JSON equality is only a consistency check"
+}

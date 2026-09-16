@@ -1,0 +1,36 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v42-native-standing-rejected-v30-retained",
+  "phase": "native_flat_preserved_endurance_and_surfaces_failed",
+  "question": "V42 native standing preserves all 63 flat gates, but fails one long composition and both downhill sessions; exposed surfaces regress to 3/14. V30 remains the retained baseline. Inspect the passing V42 flat reference here, then inspect the failed endurance/surface receipts in SEQUENCE-RESULTS-v41.md. Next diagnose coverage of candidate-induced handoff states before another bounded learning intervention; broad terrain and physical calibration remain open.",
+  "primary": "receipts/walking/20260906-v42-native-standing-flat",
+  "primary_policy_sha256": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "long-30-20ms--forward-20",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_native_standing_flat_v42.py",
+    "microduck/heading_headroom_v30.py",
+    "microduck/motion_heading_servo_v28.py",
+    "microduck/persistent_heading_servo_v24.py",
+    "experiments/walking/filtered_heading_world.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json",
+    "microduck/native_standing_env_v42.py",
+    "scripts/train_native_standing_v42.py",
+    "experiments/walking/native_candidate_v42.py"
+  ],
+  "before_training": [
+    "Read experiments/walking/SEQUENCE-RESULTS-v41.md. The selected V42 flat case is a passing reference, not slope, surface or endurance success.",
+    "V38, V41 and V42 fail promotion. V42 passes 63/63 flat, 1/4 diagnostic sessions and 3/14 exposed surface sessions. Keep exact V21/V15 actors with V30 as the retained baseline.",
+    "V33/V34 identify and correct sampled collision-hull import disagreement; eight fixed-action probes do not close softer robot-contact agreement. Do not resume broad Genesis surface training from primitive agreement.",
+    "Before another native refinement, measure handoff-state coverage when the candidate itself performs initial standing and preceding windows. Existing templates came from V30 and three-second isolated episodes; full composition remains an independent gate.",
+    "Freeze the next bounded intervention and candidate choice. Preserve all 63 flat gates, both long compositions, slope/soft-contact gates and missing physical calibration. Fresh terrain and protected final banks remain unopened.",
+    "Rerun duck-ops guard immediately before authorized compute. This read-only packet does not authorize paid resources, policy activation or hardware."
+  ],
+  "boundary": "V42 is a completed rejected native standing candidate. V30 remains the retained limited flat/endurance baseline; all old and changed-model scores retain their original scope. Public data and numerical agreement are not Ducky physical calibration."
+}

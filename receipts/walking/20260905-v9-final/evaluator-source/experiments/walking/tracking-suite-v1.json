@@ -1,0 +1,105 @@
+{
+  "schema": "microduck.walking-visible-suite/v1",
+  "held_out": false,
+  "seed": 76541,
+  "duration_s": 18,
+  "move_start_s": 1,
+  "stop_start_s": 13,
+  "timing_profiles": [
+    {
+      "id": "nominal-20-20ms",
+      "motor_ticks": 4,
+      "sensor_ticks": 1
+    },
+    {
+      "id": "zero-lag",
+      "motor_ticks": 0,
+      "sensor_ticks": 0
+    },
+    {
+      "id": "long-30-20ms",
+      "motor_ticks": 6,
+      "sensor_ticks": 1
+    }
+  ],
+  "cases": [
+    {
+      "id": "forward-08",
+      "command": [
+        0.08,
+        0,
+        0
+      ],
+      "yaw": 0.7
+    },
+    {
+      "id": "forward-12",
+      "command": [
+        0.12,
+        0,
+        0
+      ],
+      "yaw": -0.8
+    },
+    {
+      "id": "forward-20",
+      "command": [
+        0.2,
+        0,
+        0
+      ],
+      "yaw": 1
+    },
+    {
+      "id": "turn-left",
+      "command": [
+        0,
+        0,
+        0.5
+      ],
+      "yaw": 0.6
+    },
+    {
+      "id": "turn-right",
+      "command": [
+        0,
+        0,
+        -0.5
+      ],
+      "yaw": -0.6
+    },
+    {
+      "id": "arc-left",
+      "command": [
+        0.12,
+        0,
+        0.4
+      ],
+      "yaw": 0.9
+    },
+    {
+      "id": "arc-right",
+      "command": [
+        0.12,
+        0,
+        -0.4
+      ],
+      "yaw": -0.9
+    }
+  ],
+  "thresholds": {
+    "motor_torque_limit_nm": 0.6405236195572268,
+    "torque_saturation_fraction_max": 0.02,
+    "actual_joint_margin_rad_min": 0.02,
+    "mean_abs_forward_error_m_s": 0.05,
+    "mean_abs_yaw_error_rad_s": 0.2,
+    "mean_abs_lateral_velocity_m_s": 0.05,
+    "stop_max_speed_m_s": 0.04,
+    "stop_max_yaw_rate_rad_s": 0.15,
+    "stop_max_tilt_deg": 15,
+    "simultaneous_flight_fraction": 0.05,
+    "turn_max_xy_excursion_m": 0.2,
+    "minimum_bilateral_step_coverage": 0.6
+  },
+  "boundary": "Fresh visible-development headings for walking-v5. All command/timing and numerical gates identical to suite-v1; v3 is the baseline. Old suite remains a regression gate. No hidden or physical acceptance."
+}

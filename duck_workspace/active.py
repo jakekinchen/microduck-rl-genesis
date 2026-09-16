@@ -16,6 +16,8 @@ def focus(root: Path, runs: list[dict]) -> dict:
             raise ValueError("unsupported active-workspace schema")
         selected = {}
         for key in ("primary", "comparison"):
+            if key == "comparison" and data.get(key) is None:
+                continue  # a single retained baseline is not a fake comparison
             run = next((run for run in runs if run["id"] == data.get(key)), None)
             if run is None or run["integrity"]["status"] != "manifest_verified":
                 raise ValueError(f"{key} is missing or its development manifest is not verified")
@@ -44,9 +46,20 @@ def prepare(root: Path = ROOT) -> dict:
               "training_started": False, "physics_causality": "not_established",
               "activity": inspect(root), "discovery_errors": discovery_errors, "errors": []}
     result["active_training_records"] = []
+    result["active_training_record_errors"] = []
     for path in sorted((root / "logs").glob("*/run.json")):
-        safe_path(root, str(path.relative_to(root)))
-        record = read_json(path)
+        relative = str(path.relative_to(root))
+        try:
+            safe_path(root, relative)
+            record = read_json(path)
+            if not isinstance(record, dict):
+                raise ValueError("training record must be an object")
+        except (OSError, ValueError) as error:
+            # External archives remain outside the viewer's serving boundary.
+            # Report incomplete inspection instead of crashing or hiding it.
+            result["active_training_record_errors"].append({"path": relative, "error": str(error)})
+            result["errors"].append(f"training record unavailable: {relative}: {error}")
+            continue
         if record.get("status") not in {"starting", "running"}:
             continue
         checks = []
@@ -57,7 +70,7 @@ def prepare(root: Path = ROOT) -> dict:
                 checks.append({"path": relative, "matches": False})
         result["active_training_records"].append({"id": path.parent.name, "variant": record.get("variant"),
             "recorded_status": record["status"], "source_commit": record.get("source_commit"),
-            "planned_transitions": record.get("new_transitions"), "source_checks": checks,
+            "planned_transitions": record.get("planned_new_transitions", record.get("new_transitions")), "source_checks": checks,
             "current_sources_match_record": bool(checks) and all(check["matches"] for check in checks),
             "exact_process_to_run_binding": "not_checked"})
     if active["status"] != "verified":
@@ -70,6 +83,8 @@ def prepare(root: Path = ROOT) -> dict:
     cases = {}
     primary_manifest = None
     for key in ("primary", "comparison"):
+        if key not in active:
+            continue
         run = next(run for run in runs if run["id"] == active[key])
         case = next(case for case in run["cases"] if case["case_id"] == active["case_id"])
         directory = safe_path(root, run["id"])
@@ -85,9 +100,13 @@ def prepare(root: Path = ROOT) -> dict:
             raise ValueError("focused policy bytes are not bound by report and manifest")
         if key == "primary":
             primary_manifest = (manifest_root, entries)
-        trace_path = safe_path(root, str((directory / "trajectory.jsonl").relative_to(root)))
+        trace_file = "trajectory.jsonl" if (directory / "trajectory.jsonl").exists() else "trajectory.jsonl.gz"
+        trace_path = safe_path(root, str((directory / trace_file).relative_to(root)))
         trace_name = str(trace_path.relative_to(manifest_root))
-        traces, identity = load_trace(trace_path)
+        walking = run["schema"] == "microduck.walking-evaluation/v1"
+        traces, identity = load_trace(trace_path,
+                                     max_bytes=(512 if walking else 16) * 1024 * 1024,
+                                     max_rows=50000 if walking else 20000)
         if entries.get(trace_name) != identity["sha256"]:
             raise ValueError("focused trajectory is not bound by the verified manifest")
         rows = traces.get(active["case_id"], [])
@@ -100,12 +119,15 @@ def prepare(root: Path = ROOT) -> dict:
                                      ("time_s", "_line", "robot_xyz_m", "tilt_deg", "command", "action_rad")} if fall else None}
     result["cases"] = cases
     domain = cases["primary"]["case"].get("domain", {})
-    if domain != cases["comparison"]["case"].get("domain"):
+    if "comparison" in cases and domain != cases["comparison"]["case"].get("domain"):
         result["errors"].append("comparison case has a different domain draw")
     bindings = []
     for relative in data["source_paths"]:
         current = safe_path(root, relative)
-        retained = safe_path(root, active["primary"] + "/source/" + relative)
+        source_folder = data.get("source_folder", "source")
+        if source_folder not in {"source", "evaluator-source"}:
+            raise ValueError("unsupported retained source folder")
+        retained = safe_path(root, active["primary"] + "/" + source_folder + "/" + relative)
         current_sha, retained_sha = sha256(current), sha256(retained)
         manifest_root, entries = primary_manifest
         if entries.get(str(retained.relative_to(manifest_root))) != retained_sha:
@@ -121,7 +143,8 @@ def prepare(root: Path = ROOT) -> dict:
         result["observations"].append(f"Fall at {fall['time_s']} s precedes the scheduled push at {domain['push_at_s']} s; that scheduled push cannot explain this recorded startup fall.")
     if domain.get("sensor_delay_steps") == 0:
         result["observations"].append("This case has zero sensor-delay steps; added delay is not active in its recorded domain.")
-    result["observations"].append("The two policies differ. Feedback rollout comparison cannot isolate a physics cause.")
+    result["observations"].append("Feedback rollout comparison cannot isolate a physics cause." if "comparison" in cases
+                                  else "Retained baseline only; no candidate comparison or improvement is asserted.")
     result["ready_for_diagnosis"] = not result["errors"]
     if sha256(safe_path(root, CONFIG)) != active["config_sha256"]:
         raise ValueError("active experiment changed during preparation; refresh the working focus")

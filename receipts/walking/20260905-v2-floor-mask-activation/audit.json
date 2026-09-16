@@ -1,0 +1,63 @@
+{
+  "schema": "microduck.floor-mask-activation-diagnostic/v1",
+  "cases": [
+    {
+      "case": "m0s0-forward-12",
+      "source_sha256": "2cce98f82e0d196b275fbe86b4f1c25588f9f32ba5a20cea3241a2ae5cf88a7d",
+      "rows": 900,
+      "extra_floor_geometry_penetration_rows": 0,
+      "minimum_geometry_height_m": {
+        "trunk_base": 0.048985130119461484,
+        "leg": 0.014850705395710262,
+        "leg_2": 0.014674494361371415
+      }
+    },
+    {
+      "case": "m0s0-turn-left",
+      "source_sha256": "71a8fd2b01afbf5e28313fc231fa7c2dbf883df2070ff0498b3fe42079f67596",
+      "rows": 900,
+      "extra_floor_geometry_penetration_rows": 0,
+      "minimum_geometry_height_m": {
+        "trunk_base": 0.04969854308569581,
+        "leg": 0.01796022208465154,
+        "leg_2": 0.017239985694045102
+      }
+    },
+    {
+      "case": "m4s1-forward-12",
+      "source_sha256": "35c863e4a281f9423cd639fb83b5873e522355f0f4fa18267a355e3b031e16c0",
+      "rows": 900,
+      "extra_floor_geometry_penetration_rows": 0,
+      "minimum_geometry_height_m": {
+        "trunk_base": 0.04911596849797875,
+        "leg": 0.015335585828262693,
+        "leg_2": 0.015856560574865942
+      }
+    },
+    {
+      "case": "m4s1-turn-left",
+      "source_sha256": "5d27fef09e033971478be6117e51d9e03cb3f42afd588ea18e0246eda69d265d",
+      "rows": 900,
+      "extra_floor_geometry_penetration_rows": 0,
+      "minimum_geometry_height_m": {
+        "trunk_base": 0.049221013848075736,
+        "leg": 0.015185851224753237,
+        "leg_2": 0.014948651463397262
+      }
+    }
+  ],
+  "genesis_floor_masks": [
+    65535,
+    65535
+  ],
+  "native_floor_masks": [
+    1,
+    1
+  ],
+  "extra_genesis_floor_colliders": [
+    "trunk_base",
+    "leg",
+    "leg_2"
+  ],
+  "boundary": "Copied-state geometry activation check. Does not execute a policy or assert identical-action dynamics, causal attribution, or physical calibration."
+}

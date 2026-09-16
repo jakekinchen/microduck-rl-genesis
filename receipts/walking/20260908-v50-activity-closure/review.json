@@ -1,0 +1,160 @@
+{
+  "activity": "V50 bounded downhill yaw correction",
+  "activity_complete": true,
+  "behavior_accepted": false,
+  "retained_policy": "Original V21 walking + V15 standing, V30 command control",
+  "walking_prefix_improvement": true,
+  "downhill_yaw_gate_passed": false,
+  "downhill_sessions_passed": 0,
+  "retained_flat_cases": 63,
+  "retained_180s_compositions": 2,
+  "retained_surface_sessions": 5,
+  "full_transitions": 864000,
+  "smoke_transitions": 2880,
+  "paired_conformance_controls": 341008,
+  "exact_original_replay_rows": 56655,
+  "verified_switch_histories": 1988,
+  "finite_learning_scalars": 9638,
+  "workspace_tests": 140,
+  "focused_tests": 3,
+  "source_freezes": {
+    "experiments/walking/native-sequence-freeze-v44.json": {
+      "source_files": 182,
+      "sha256": "38245f1eddf543773fa15c5aa2da752686153a88064d40d8363cba7d985fb82f"
+    },
+    "experiments/walking/native-sequence-fresh-freeze-v44.json": {
+      "source_files": 102,
+      "sha256": "04dba25594f3c9cabea358d01cad5bc5f2e590311fd7925a7b97e3baa3083b86"
+    },
+    "experiments/walking/native-sequence-flat-freeze-v44.json": {
+      "source_files": 91,
+      "sha256": "090a4264f09a0f709891582e14f56247bcf64a70d401de9cfa97951668d8dc16"
+    },
+    "experiments/walking/native-sequence-surfaces-freeze-v44.json": {
+      "source_files": 107,
+      "sha256": "94e58402c0bef43783c116498144a6acb248df43fa335b558af1d27af7cd61bd"
+    },
+    "experiments/walking/native-sequence-endurance-freeze-v44.json": {
+      "source_files": 103,
+      "sha256": "76dc6414457a6e5dc8bb12406e00643f838a0d2e2776deb14fc289ec849c9242"
+    },
+    "experiments/walking/native-retention-endurance-freeze-v46.json": {
+      "source_files": 111,
+      "sha256": "c72ba33661bfb9df9eeb5d0a05c798e9280d9494d30363113bc712642f8876d2"
+    },
+    "experiments/walking/native-retention-fresh-freeze-v46.json": {
+      "source_files": 112,
+      "sha256": "348a1e8ca8f244685a56b37d4f558b6cc8b75e2455eeac77ea4f8ff8900c1a5f"
+    },
+    "experiments/walking/native-retention-freeze-v46.json": {
+      "source_files": 197,
+      "sha256": "5a26792a3c2b8069d5987af96f0c5d7de8f3276cb7ddf86a5f219403e4fe187c"
+    },
+    "experiments/walking/native-retention-surfaces-freeze-v46.json": {
+      "source_files": 116,
+      "sha256": "cf3bbd49865537ea1393f16a3b4403f3f57ea08e1d62fb6bf2fb5866de7b856a"
+    },
+    "experiments/walking/native-retention-flat-freeze-v46.json": {
+      "source_files": 100,
+      "sha256": "0c5576fb5cfa67b216c9ccc82d93c4059dd65b45aa05f4c9f2f9ad1d2084a331"
+    },
+    "experiments/walking/native-standing-retention-fresh-freeze-v48.json": {
+      "source_files": 114,
+      "sha256": "5e121a7caa6e94072b97496dd1ab8123eb194bc1783bd499970b7d571abdca9c"
+    },
+    "experiments/walking/native-standing-retention-flat-freeze-v48.json": {
+      "source_files": 102,
+      "sha256": "dc3df0be9184fb6dfa3a61cd16c0ce177c3d446f5794898034133d8354c782f5"
+    },
+    "experiments/walking/native-standing-retention-endurance-freeze-v48.json": {
+      "source_files": 113,
+      "sha256": "266d23fed9b4bbf9cdd322293a1aeb42a365217b9deb34286b220d6d491f3a0e"
+    },
+    "experiments/walking/native-standing-retention-freeze-v48.json": {
+      "source_files": 213,
+      "sha256": "42cf968c494e1d00e4fbcebe79660d6e2078b838a45a2d2c548b95523d391c05"
+    },
+    "experiments/walking/native-standing-retention-surfaces-freeze-v48.json": {
+      "source_files": 118,
+      "sha256": "c60b52b40c6f4787545a334baf01529b0b5350d0eaa99f9253b679414110558b"
+    },
+    "experiments/walking/recovery-freeze-v49.json": {
+      "source_files": 219,
+      "sha256": "5ca76a040ec9239cd02ffa1fd5f264ed460c053c73e3de1b9fe5e0715b039443"
+    },
+    "experiments/walking/native-retention-endurance-freeze-v50.json": {
+      "source_files": 114,
+      "sha256": "5718d3bfd31449f4b579e3a0793a55b35a9cd927321c4e5b44476ba4eefc2fef"
+    },
+    "experiments/walking/native-retention-fresh-freeze-v50.json": {
+      "source_files": 114,
+      "sha256": "8f85feb311d1b6d88f8b673c7f21ba023409dcae0a16025f1e95022d1ca5ceb4"
+    },
+    "experiments/walking/native-retention-freeze-v50.json": {
+      "source_files": 213,
+      "sha256": "1d35c5a2e6a1782f1b2ee634eae4c183a999ca2478d9a34458b1da57fa9f635d"
+    },
+    "experiments/walking/native-retention-surfaces-freeze-v50.json": {
+      "source_files": 119,
+      "sha256": "5ea0441aee6e79e1c60a34aff90a81ccadb29e83140b66aa8077296c9ad77c63"
+    },
+    "experiments/walking/native-retention-flat-freeze-v50.json": {
+      "source_files": 103,
+      "sha256": "68de3391dcef1678a09220a58383369128c6dac7936eb0cfa4649c5ef630913e"
+    }
+  },
+  "verified_receipt_manifests": {
+    "receipts/walking/20260908-v50-retention-conformance": {
+      "files": 49,
+      "manifest_sha256": "25fd6d07051589780042393c3462f3bd3515c968898918e4ab3f6923e69293c1"
+    },
+    "receipts/walking/20260908-v50-replay-parity": {
+      "files": 2,
+      "manifest_sha256": "5894a584ed1ed27940fa63d72cad1cdc65d514616aaf2f55a04598d2b0ac241a"
+    },
+    "receipts/walking/20260908-v50-retention-flat": {
+      "files": 467,
+      "manifest_sha256": "fcc47a8cc30923e48c116937eb99ae7d4fd05c5775783e15060437b18097526a"
+    },
+    "receipts/walking/20260908-v50-retention-repeated": {
+      "files": 488,
+      "manifest_sha256": "8ef63f2f1a804fe1b88bca83d930759de24372034c7773995ee8616da4b92d1c"
+    },
+    "receipts/walking/20260908-v50-retention-endurance": {
+      "files": 490,
+      "manifest_sha256": "93e2c71f6418d6c9b121f3e730163a7ba31b346ef28020f754640d735e4358d1"
+    },
+    "receipts/walking/20260908-v50-retention-surfaces": {
+      "files": 519,
+      "manifest_sha256": "2cedaf41bafa81c45cc37b5e9b98f53e4dede64004ad0a953f1e7f78384151fa"
+    },
+    "receipts/walking/20260908-v50-retention-verification": {
+      "files": 9,
+      "manifest_sha256": "339c43fe2175a8db4034eac88aaf4fd215e1bab8c30edf0a4ccd8768a7cf8feb"
+    },
+    "experiments/walking/retention-replay-v50": {
+      "files": 2,
+      "manifest_sha256": "47edc9a72c5f680db93e9f1738896a0a5320a22343ed28d3791162debf8d49c8"
+    },
+    "outputs/walking-retention-v50": {
+      "files": 5,
+      "manifest_sha256": "574d3d7d4b59c6aee790362da21565ee284a57a7e7f52a6bafdbd7eb72a36b68"
+    },
+    "outputs/walking-retention-v50-video": {
+      "files": 4,
+      "manifest_sha256": "cee80f9576668209c186af21b28ccff0a754114eba2874fa41e97d5553d9d45f"
+    }
+  },
+  "frozen_stander_teacher_normalizers": true,
+  "actual_24_cell_geometry_timing_yaw_and_actor_routing_verified": true,
+  "all_known_activity_compute_finished": true,
+  "fresh_sequence_bank_opened": false,
+  "protected_terrain_opened": false,
+  "calibration": false,
+  "physical_transfer": false,
+  "paid_compute_used": false,
+  "policy_activated": false,
+  "free_internal_gib": 6.721885681152344,
+  "offline_analysis_repair": "Stopped own slow analysis after profiling repeated NPZ decompression; cache each array once. No frozen learner/evaluator change or outcome selection. Failed attempt source and profiling receipt retained.",
+  "next_activity": "Revalidate or retarget three V49 stop witnesses on V50 incoming states, then a bounded state-conditioned braking correction retaining V15 and the remaining .20 yaw gate plus complete retention."
+}

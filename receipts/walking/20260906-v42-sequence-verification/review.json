@@ -1,0 +1,28 @@
+{
+  "review": "Single-agent implementation, tests and receipt review; all new candidates rejected for promotion.",
+  "visual_review": {
+    "composition": "Recorded standing failure near 140.16s; viewed 139.54s and 140.14s frames.",
+    "downhill": "Recorded forward pitch during walking near the 4.12s terminal fall; viewed 4.02s frame."
+  },
+  "video_boundary": "Recorded generalized coordinates, no new dynamics or policy result.",
+  "template_boundary": "In-memory full-state restore continuation is tested. NPZ snapshots are partial diagnostic arrays; frozen prefix code and exact actions reconstruct full state including sensor and BAM histories.",
+  "fresh_bank_decision": "Not opened because targeted stopping, endurance and cross-engine prerequisites fail.",
+  "remaining_task": "Quantify candidate-induced handoff-state coverage before next frozen refinement; soft-contact parity and physical calibration remain open.",
+  "workspace_tests": {
+    "tests": 135,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "focused_tests": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0
+  },
+  "local_jobs": "All owned training, simulator evaluation and rendering sessions exited. Final advisory guard reports no recognized compute process.",
+  "paid_compute_used": false,
+  "hardware_used": false,
+  "policy_promoted": false,
+  "physical_calibration_achieved": false,
+  "preexisting_work": "Large preexisting staged and unstaged tree preserved. No staging, commit, push or publication in this sequence."
+}

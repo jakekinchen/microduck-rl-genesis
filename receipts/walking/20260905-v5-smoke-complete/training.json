@@ -1,0 +1,197 @@
+{
+  "schema": "microduck.walking-training/v1",
+  "variant": "walking-v5",
+  "proof_class": "first_party_development",
+  "held_out": false,
+  "target_source": "velocity-command",
+  "args": {
+    "run_id": "walking-20260905-v5-smoke",
+    "num_envs": 64,
+    "iterations": 5,
+    "seed": 26090515
+  },
+  "status": "completed",
+  "planned_new_transitions": 7680,
+  "new_transitions": 7680,
+  "pid": 93476,
+  "train_cfg": {
+    "algorithm": {
+      "class_name": "PPO",
+      "clip_param": 0.2,
+      "desired_kl": 0.01,
+      "entropy_coef": 0.01,
+      "gamma": 0.99,
+      "lam": 0.95,
+      "learning_rate": 0.0005,
+      "max_grad_norm": 1.0,
+      "num_learning_epochs": 5,
+      "num_mini_batches": 4,
+      "schedule": "adaptive",
+      "use_clipped_value_loss": true,
+      "value_loss_coef": 1.0
+    },
+    "actor": {
+      "class_name": "MLPModel",
+      "hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true,
+      "distribution_cfg": {
+        "class_name": "GaussianDistribution",
+        "init_std": 1.0,
+        "std_type": "scalar"
+      }
+    },
+    "critic": {
+      "class_name": "MLPModel",
+      "hidden_dims": [
+        512,
+        256,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true
+    },
+    "obs_groups": {
+      "actor": [
+        "policy"
+      ],
+      "critic": [
+        "policy",
+        "privileged"
+      ]
+    },
+    "num_steps_per_env": 24,
+    "save_interval": 50,
+    "logger": "tensorboard",
+    "seed": 26090515,
+    "run_name": "walking-20260905-v5-smoke"
+  },
+  "source_commit": "85c5233dc7de71fb4f770c0a33e19d01d386e3b5",
+  "source_sha256": {
+    "scripts/train_walking.py": "1d7a380719aa60d0acd6158e8a9e035c71adfc99c43341eac9df8676968f29cb",
+    "microduck/walking_env.py": "63131d5df50764109cab3c79e4ade0d0d48dd9b6d1c4ba3bd7534fedc00badde",
+    "microduck/velocity_env.py": "e52eec8b2b5fa0df1335d13c14492766ab746a29cfb60795150af83c48f90623",
+    "microduck/velocity_cfg.py": "1a7d58e527cbc4694493739a4efa49b7634906e01036adbc806190c84460c251",
+    "microduck/bam_actuator.py": "840338b249ebfb01a434e76cc49d7c90ebdb734ef5f0b113c63438c77e46bf36",
+    "microduck/constants.py": "913740a765989104f9c04bf60022199ac376014ba58a2eb2dd4067aabf628e1b",
+    "microduck/terrain.py": "43432285dfd4494d57cd6b6ab8dbe0516d6810cbea334cefdb47035dabce10e2",
+    "microduck/laser_gait_env.py": "76006f95bf04472f93c88c08fe777595eaaef5992acfbbb4c370cc086667696b",
+    "microduck/laser_robust_env.py": "c494897e615c47d846f2aed6cd02ffbf9077a20bab4e0905973d60a31b6786d2",
+    "microduck/laser_env.py": "bb5b126017ade32d5bc921edab3c0b7c7a8afd814b7e6959abd243c139e061d5",
+    "microduck/laser_task.py": "a7796a8fd6576e37a80d5de870b06bdf5d137f4f21cdfa9f5e4dc7cedd400a81",
+    "experiments/walking/PLAN.md": "877898ae168d13879cc6f3199ffafa1e216c0facb97f8671f82000c9ba8201f5",
+    "scripts/train_walking_controlled.py": "0fd51ebd19918943bc3544ce9ba996e6f8fecdfe904e457d116ed196caaef586",
+    "microduck/walking_controlled_env.py": "9e832a71588951a4102a9377b10be76ae3427c0e78c11384ca81e6babe16a524",
+    "experiments/walking/CONTROLLED-v2.md": "242137b961a5d212572fdf26b094e5280a9c1aff0927114cf70c266c1a46905c",
+    "scripts/train_walking_posture.py": "405a2f4732b6e4e738aaa8b8c21b223de7e1e717936122bd8e242b866bd24290",
+    "microduck/walking_posture_env.py": "eed3c206a580cfb8de4e49fb6cbb7d2209850f4f14627f5c6a424bb164f6946f",
+    "experiments/walking/POSTURE-v3.md": "0ee910455de80aeac4897f0aafed7204720871774e093887eec88c61ca5e51a4",
+    "scripts/train_walking_tracking.py": "d627f54a2c5bafa9da09218e76faaecc14a4c9b39f05aaec05585ecf269f8cc0",
+    "microduck/walking_tracking_env.py": "113a92847f4d158f01d45e1135de43a8c1f59c052055d0018e1e8979f3065fb1",
+    "microduck/walking_ground_env.py": "664822d21907d04330e1b07c99e9eff2ad75feda936de69d055828cb1b4974b2",
+    "experiments/walking/TRACKING-v5.md": "a0ec77efde9e4d0b3a0caee078f850bc66a6131ad0debd12e318265ec76093bc"
+  },
+  "packages": {
+    "genesis-world": "1.3.3",
+    "torch": "2.9.1",
+    "rsl-rl-lib": "5.4.2",
+    "mujoco": "3.12.0"
+  },
+  "warm_start": {
+    "path": "receipts/walking/20260905-v3-training-complete/model_749.pt",
+    "sha256": "29eb856aa48bfbb2191e77279f9f90fc8ce82772f815727a7b834e8e4bee41c2",
+    "optimizer_loaded": false,
+    "initialization_only": true
+  },
+  "env_cfg": {
+    "task": "Walking-Command-Tracking-v5",
+    "num_envs": 64,
+    "sim_dt": 0.005,
+    "decimation": 4,
+    "control_hz": 50.0,
+    "episode_length_s": 20.0,
+    "action_scale": 1.0,
+    "num_obs": 61,
+    "num_actions": 14,
+    "joint_names": [
+      "left_hip_yaw",
+      "left_hip_roll",
+      "left_hip_pitch",
+      "left_knee",
+      "left_ankle",
+      "neck_pitch",
+      "head_pitch",
+      "head_yaw",
+      "head_roll",
+      "right_hip_yaw",
+      "right_hip_roll",
+      "right_hip_pitch",
+      "right_knee",
+      "right_ankle"
+    ],
+    "reward_weights": {
+      "track_linear_velocity": 6.0,
+      "track_angular_velocity": 5.0,
+      "upright": 2.0,
+      "pose": 0.3,
+      "body_ang_vel": -0.05,
+      "angular_momentum": -0.02,
+      "dof_pos_limits": -4.0,
+      "action_rate_l2": -0.25,
+      "air_time": 2.0,
+      "foot_clearance": -2.0,
+      "foot_swing_height": 0.0,
+      "foot_slip": -2.0,
+      "self_collisions": -1.0,
+      "head_pose_tracking": 2.0,
+      "head_pose_bias": 0.0,
+      "body_pose_tracking": 0.0
+    },
+    "walking_version": "v5",
+    "motor_delay_physics_steps": [
+      0,
+      6
+    ],
+    "sensor_delay_control_steps": [
+      0,
+      1
+    ],
+    "domain": "nominal rigid model; timing plus inherited BAM battery/drop variation",
+    "landing_event_reward": "0.6 * exp(-((air_s-0.16)/0.06)^2)",
+    "near_limit_torque_weight": -4.0,
+    "stop_speed_weight": -3.0,
+    "command_mix": {
+      "forward": 0.4,
+      "turn": 0.25,
+      "arc": 0.1,
+      "stop": 0.25
+    },
+    "head_command_cost_weight": -6.0,
+    "head_command_deadband_rad": 0.2,
+    "floor_contype": 1,
+    "floor_conaffinity": 1,
+    "command_error_cost_weight": -2.0,
+    "command_error_deadbands": [
+      0.01,
+      0.01,
+      0.05
+    ],
+    "command_error_scales": [
+      0.05,
+      0.05,
+      0.2
+    ],
+    "floor_collision_masks": [
+      1,
+      1
+    ]
+  },
+  "checkpoint": "model_4.pt",
+  "checkpoint_sha256": "915bd1e4674340616f6f0d5398bad7a4af90b94a0e1eab2e3400446b4704dba9",
+  "partial_iteration_transitions": 0,
+  "elapsed_s": 62.02901316713542
+}

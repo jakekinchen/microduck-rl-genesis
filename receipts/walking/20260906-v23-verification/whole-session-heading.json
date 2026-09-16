@@ -1,0 +1,96 @@
+{
+  "schema": "microduck.v23-whole-session-heading/v1",
+  "session_reports": {
+    "sustained-nominal-start-1": {
+      "passed": true,
+      "metrics": {
+        "endpoint_heading_error_deg": 5.730934604098755,
+        "maximum_heading_error_deg": 8.424662894562776
+      },
+      "thresholds": {
+        "endpoint_heading_error_deg": 15.0,
+        "maximum_heading_error_deg": 20.0
+      },
+      "samples": 9000,
+      "duration_s": 180,
+      "heading_origin_reset_between_windows": false
+    },
+    "sustained-nominal-start-2": {
+      "passed": true,
+      "metrics": {
+        "endpoint_heading_error_deg": 12.251766872900042,
+        "maximum_heading_error_deg": 14.505848961379698
+      },
+      "thresholds": {
+        "endpoint_heading_error_deg": 15.0,
+        "maximum_heading_error_deg": 20.0
+      },
+      "samples": 9000,
+      "duration_s": 180,
+      "heading_origin_reset_between_windows": false
+    },
+    "sustained-combined-start-1": {
+      "passed": true,
+      "metrics": {
+        "endpoint_heading_error_deg": 8.959955785023896,
+        "maximum_heading_error_deg": 9.577016651029663
+      },
+      "thresholds": {
+        "endpoint_heading_error_deg": 15.0,
+        "maximum_heading_error_deg": 20.0
+      },
+      "samples": 9000,
+      "duration_s": 180,
+      "heading_origin_reset_between_windows": false
+    },
+    "sustained-combined-start-2": {
+      "passed": true,
+      "metrics": {
+        "endpoint_heading_error_deg": 9.196389339008896,
+        "maximum_heading_error_deg": 11.315976218577184
+      },
+      "thresholds": {
+        "endpoint_heading_error_deg": 15.0,
+        "maximum_heading_error_deg": 20.0
+      },
+      "samples": 9000,
+      "duration_s": 180,
+      "heading_origin_reset_between_windows": false
+    },
+    "continuous-composition-start-1": {
+      "passed": false,
+      "metrics": {
+        "endpoint_heading_error_deg": 64.0364149997921,
+        "maximum_heading_error_deg": 66.75901454030264
+      },
+      "thresholds": {
+        "endpoint_heading_error_deg": 15.0,
+        "maximum_heading_error_deg": 20.0
+      },
+      "samples": 9000,
+      "duration_s": 180,
+      "heading_origin_reset_between_windows": false
+    },
+    "continuous-composition-start-2": {
+      "passed": false,
+      "metrics": {
+        "endpoint_heading_error_deg": 86.43537240156023,
+        "maximum_heading_error_deg": 89.6159555290449
+      },
+      "thresholds": {
+        "endpoint_heading_error_deg": 15.0,
+        "maximum_heading_error_deg": 20.0
+      },
+      "samples": 9000,
+      "duration_s": 180,
+      "heading_origin_reset_between_windows": false
+    }
+  },
+  "passed_sessions": 4,
+  "total_sessions": 6,
+  "input_manifest_sha256": "32bb4d7a9c7d4c1e06eee3b0757fd059fcd22b71988c4961f11e8093e6842d4b",
+  "audit_source_sha256": "71168654814bf3f3cea6cd3eee5a5e57957dd89758be9a6c02170ea5d226078c",
+  "proof_class": "additive_exposed_development_audit",
+  "original_scores_changed": false,
+  "boundary": "Additional whole-session check identified during review of the V23 implementation. Original evaluator resets scoring origins per window, although physical/controller histories are continuous. This audit keeps one origin across all stops, with the existing 15/20 degree tolerances. Not an untouched final bank or physical yaw calibration."
+}

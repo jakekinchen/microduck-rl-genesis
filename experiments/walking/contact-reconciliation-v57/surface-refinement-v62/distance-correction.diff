@@ -1,0 +1,51 @@
+--- experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py
++++ experiments/walking/contact-reconciliation-v57/surface-refinement-v62/material_validation_v62.py
+@@ -1,4 +1,9 @@
+-"""Import-safe sampled material validation, independent of model compilation.
++"""V62 unit-stable sampled material validation, independent of compilation.
++
++V59 sampling and acceptance rules are retained. Trimesh proximity and ray
++queries run in millimetres because its absolute tolerances are not scale
++invariant on small CAD triangles. All stored geometry and metrics stay metres.
++The original V59 module and its negative results remain unchanged.
+ 
+ ``validate_meshes`` accepts a mapping from mesh names to ``source_stl``,
+ ``parts_npz`` and ``complete_json`` paths. ``expected_source_sha256`` may also
+@@ -168,18 +173,25 @@
+         if missing.any():
+             distances = np.full(int(missing.sum()), np.inf)
+             for part in parts:
+-                distances = np.minimum(distances, trimesh.proximity.closest_point(part, source_points[missing])[1])
++                query_part = part.copy()
++                query_part.apply_scale(1000.0)
++                distances = np.minimum(distances, trimesh.proximity.closest_point(
++                    query_part, source_points[missing] * 1000.0)[1] / 1000.0)
+             missing_distance[missing] = distances
+         proxy_points = np.vstack([
+             np.vstack([part.vertices for part in parts]),
+             _sample(np.vstack([part.triangles_center for part in parts])),
+         ])
+-        inside = source.contains(proxy_points)
++        query_source = source.copy()
++        query_source.apply_scale(1000.0)
+         excess_distance = np.zeros(len(proxy_points))
+         for start in range(0, len(proxy_points), 512):
+-            ids = np.flatnonzero(~inside[start : start + 512]) + start
++            points_mm = proxy_points[start : start + 512] * 1000.0
++            outside = ~query_source.contains(points_mm)
++            ids = np.flatnonzero(outside) + start
+             if len(ids):
+-                excess_distance[ids] = trimesh.proximity.closest_point(source, proxy_points[ids])[1]
++                excess_distance[ids] = trimesh.proximity.closest_point(
++                    query_source, points_mm[outside])[1] / 1000.0
+         if not np.isfinite(missing_distance).all() or not np.isfinite(excess_distance).all():
+             raise ValueError("material distance calculation produced nonfinite values")
+         record.update({
+@@ -264,6 +276,7 @@
+         "scope": "sampled source/proxy material diagnostic; not a global error bound or model admission",
+         "physics_steps": 0, "model_compiled": False, "model_admitted": False, "physical_acceptance": False,
+         "settings": {
++            "query_units": "millimetres; output metres", "validator_revision": "v62-unit-stable",
+             "sampled_tolerance_m": TOLERANCE_M, "source_vertex_samples": SAMPLE_COUNT,
+             "source_face_centroid_samples": SAMPLE_COUNT, "proxy_vertices": "all",
+             "proxy_face_centroid_samples": SAMPLE_COUNT, "maximum_parts_per_mesh": max_parts,

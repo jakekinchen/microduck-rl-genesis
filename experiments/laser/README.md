@@ -1,5 +1,15 @@
 # Laser-following development experiment
 
+Current priority: [systemic gait diagnosis and correction](GAIT_DIAGNOSIS.md).
+The earlier pursuit scores do not establish credible walking. Actual hip-stop
+parking, low-clearance shuffling and slipping reject the turn-v2 policy.
+
+For the September 5 dynamic extension, live drag/keyboard controls, moving
+routes, domain-randomization training and measured comparisons, see
+[Dynamic pursuit build](DYNAMIC_BUILD.md). The selected experimental policy
+passes 11/12 reserved randomized development trials versus 2/12 previously;
+one trial still falls. These scores are target-only, not gait acceptance.
+
 User-directed work on 2026-09-04. This is a new local first-party task, not a
 workaround for third-party provenance or physical-operation requirements.
 
@@ -27,6 +37,11 @@ this in a versioned camera adapter/model before claiming onboard visibility;
 do not silently rotate a frozen model or feed oracle coordinates as detections.
 Reproducible audit and head-camera image:
 `receipts/laser-follow/20260904-camera-audit/`.
+The later camera-v2 adapter fixes optical forward and image-up using the CAD
+site/mouth frame, without changing physics or actions. The physical robot faces
++X; the inward-looking legacy camera was the bug, not the walking convention.
+See `receipts/laser-gait/20260905-camera-alignment-v2-r2/`. Close ground targets
+can still leave the FOV at HOME; there is no camera-driven policy yet.
 
 ## Research
 

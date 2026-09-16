@@ -1,0 +1,156 @@
+{
+  "schema": "microduck.walking-genesis-backend-diagnostic/v1",
+  "cases": [
+    {
+      "case_id": "m4s1-forward-12",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.015638806439679246,
+        "mean_abs_lateral_velocity_m_s": 0.014421642712738277,
+        "mean_abs_yaw_error_rad_s": 0.2566584806492934,
+        "signed_mean_yaw_error_rad_s": -0.13350397946030754,
+        "stop_max_speed_m_s": 0.00044732875539921224,
+        "stop_max_yaw_rate_rad_s": 0.009596474468708038,
+        "peak_sole_clearance_m": [
+          0.0178483035415411,
+          0.018173567950725555
+        ],
+        "loaded_fraction_left_right": [
+          0.5063520871143375,
+          0.49364791288566245
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.12644254202930963,
+        "p95_worst_joint_error_rad": 0.239523059463501,
+        "mean_absolute_face_pitch_deg": 16.28734521131642,
+        "per_head_joint_mean_abs_error_rad": [
+          0.12644254202930963,
+          0.09871934733556105,
+          0.04736117080137218,
+          0.03909237128035721
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.20112855732440948,
+      "stop_max_tilt_deg": 13.51846687938121
+    },
+    {
+      "case_id": "m4s1-turn-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.018316270626727554,
+        "mean_abs_lateral_velocity_m_s": 0.013458119290787897,
+        "mean_abs_yaw_error_rad_s": 0.20933245803768696,
+        "signed_mean_yaw_error_rad_s": 0.05686058006849404,
+        "stop_max_speed_m_s": 0.0004112469032406807,
+        "stop_max_yaw_rate_rad_s": 0.007953210733830929,
+        "peak_sole_clearance_m": [
+          0.016175527125597,
+          0.01815745420753956
+        ],
+        "loaded_fraction_left_right": [
+          0.5009074410163339,
+          0.49909255898366606
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1923804427944675,
+        "p95_worst_joint_error_rad": 0.2425949077665806,
+        "mean_absolute_face_pitch_deg": 21.307032140759837,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1923804427944675,
+          0.12502931729987984,
+          0.0696137698223976,
+          0.07901753736001885
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.1475001573562622,
+      "stop_max_tilt_deg": 13.45014418758976
+    },
+    {
+      "case_id": "m0s0-forward-12",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.012854721071012655,
+        "mean_abs_lateral_velocity_m_s": 0.0138450899272743,
+        "mean_abs_yaw_error_rad_s": 0.25446542255270266,
+        "signed_mean_yaw_error_rad_s": -0.1180328411181557,
+        "stop_max_speed_m_s": 0.0004130749439354986,
+        "stop_max_yaw_rate_rad_s": 0.0035151042975485325,
+        "peak_sole_clearance_m": [
+          0.01263199932873249,
+          0.011651240289211273
+        ],
+        "loaded_fraction_left_right": [
+          0.4882032667876588,
+          0.5081669691470054
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.1361631801308112,
+        "p95_worst_joint_error_rad": 0.23267894122600558,
+        "mean_absolute_face_pitch_deg": 19.052011899315275,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1361631801308112,
+          0.12958222358924384,
+          0.056015773845575566,
+          0.03257743841451037
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.28753361105918884,
+      "stop_max_tilt_deg": 13.840524457109323
+    },
+    {
+      "case_id": "m0s0-turn-left",
+      "response": {
+        "duration_s": 18.0,
+        "mean_abs_forward_error_m_s": 0.00045127962155422504,
+        "mean_abs_lateral_velocity_m_s": 0.0005160024840935448,
+        "mean_abs_yaw_error_rad_s": 0.48622859806031965,
+        "signed_mean_yaw_error_rad_s": -0.4860509703774174,
+        "stop_max_speed_m_s": 0.002769575919955969,
+        "stop_max_yaw_rate_rad_s": 0.03739837557077408,
+        "peak_sole_clearance_m": [
+          -0.00012677162885665894,
+          2.7611851692199707e-05
+        ],
+        "loaded_fraction_left_right": [
+          1.0,
+          0.9963702359346642
+        ]
+      },
+      "posture": {
+        "maximum_mean_joint_error_rad": 0.13241384582819307,
+        "p95_worst_joint_error_rad": 0.2170795265197754,
+        "mean_absolute_face_pitch_deg": 18.128681602169408,
+        "per_head_joint_mean_abs_error_rad": [
+          0.13241384582819307,
+          0.12573153660485104,
+          0.09616491349510296,
+          0.005997139683095199
+        ]
+      },
+      "minimum_actual_joint_margin_rad": 0.14163243770599365,
+      "stop_max_tilt_deg": 15.864767377391907
+    }
+  ],
+  "checkpoint_sha256": "19fef3b5d443001f817169cecc660a2bef51b34791b5d84dfa59cc4e619a43c1",
+  "checkpoint": "model_749.pt",
+  "acceptance_eligible": false,
+  "inference": "Torch CPU normalized deterministic mean; same inference path for both physics backends",
+  "physics": {
+    "engine": "Genesis",
+    "backend": "metal",
+    "batch_size": 1,
+    "observed_env": 0,
+    "class": "MicroduckTrackingWalkingEnv",
+    "constraint_timeconst_s": 0.01,
+    "floor_masks": [
+      1,
+      1
+    ],
+    "voltage_v": 7.35,
+    "drop_ohm": 0.0
+  },
+  "boundary": "Fixed-profile deterministic response diagnostic on an explicitly selected backend/batch size. Not fixed-action isolation, candidate selection, native acceptance or physical transfer."
+}

@@ -1,0 +1,49 @@
+{
+  "workspace_tests": {
+    "passed": 141,
+    "failed": 0,
+    "skipped": 0
+  },
+  "fresh_checkout_tests": {
+    "passed": 141,
+    "failed": 0,
+    "skipped": 0
+  },
+  "python_source_syntax": {
+    "passed": 451,
+    "failed": 0
+  },
+  "secrets": {
+    "history_commits_scanned": 166,
+    "history_findings": 0,
+    "staged_findings": 0,
+    "directory_file_size_limit_MB": 5,
+    "directory_scopes": [
+      "receipts",
+      "experiments",
+      "logs",
+      "outputs",
+      "docs",
+      "scripts",
+      "tests",
+      "microduck",
+      "eight external experiment roots"
+    ],
+    "withheld_capture": "outputs/laser-course-20260913/compilation-before.json",
+    "withheld_reason": "Editor boot token; original file retained privately, excluded from archive. No secret values recorded in this report.",
+    "limitation": "Large numerical/binary files and ignored dependency installs are not exhaustively secret-scanned."
+  },
+  "closed_artifacts_unchanged": 3420,
+  "git_large_blob_check": {
+    "new_over_50MiB": []
+  },
+  "whitespace": {
+    "original_source_bound_or_generated_files_with_findings": 17,
+    "normalized": false,
+    "reason": "Preserve recorded hashes; original SVG formatting, third-party snapshots and source-bound text retained."
+  },
+  "new_simulation_or_training": false,
+  "paid_compute_used": false,
+  "hardware_used": false,
+  "publication_state": "prepared; remote delivery recorded separately"
+}

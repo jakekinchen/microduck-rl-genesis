@@ -1,0 +1,529 @@
+{
+  "scope": "Repository tooling improvements only; no policy or physical acceptance",
+  "date": "2026-09-05",
+  "base_head": "85c5233dc7de71fb4f770c0a33e19d01d386e3b5",
+  "dirty_at_start": true,
+  "commit_created": false,
+  "source_sha256": {
+    "duck_workspace/core.py": "e9ce16acc439bf4cf6628358fbda7f3bd79dfb06e470009a05a3080fe4fd2d3d",
+    "experiment_ops/compare.py": "215c2c93b89ec8c55a941a81502b8f96002b921bedc604de9147efec436566b7",
+    "experiment_ops/report.js": "a62f0408ab4b30b0be663bc4aa6bc25db3aef2092db24c54a13f53c9dff8f90a",
+    "scripts/duck_workspace.py": "87d4b973c636c6c6bff907f4e6f6d6dd4aed624a74d2f380b0ef14b006ce5851",
+    "scripts/verify_workspace.py": "f32b02a27f772ba64aea56da3bf82259734a2ab4e7aa8d13ab092e798ec252fa",
+    "scripts/benchmark_workspace.py": "470dd82c828f8c060a30f257c66925eac71510d819185428e7c22f4e17eb7808",
+    "tests/run_all.py": "56e2aefcb150882e6abbbfbcd3c0cc7255706571a6610361a89a8e57b67ff42f",
+    "tests/test_workspace_performance.py": "451f9abbbd1937894d767111c76d862abc1228b886f9d7fba2e611b543f1db44",
+    "tests/test_verification_runner.py": "f34d9feec1fa57d57ee50e48f26124d3510df02be702ca65f025341420315235",
+    ".github/workflows/workspace.yml": "c0e1cedc73bf471c8e527808fd9ed3587363bb22598b185e84eb05a8874d3d62",
+    "AGENTS.md": "9e3b7ac4ef4ea66cd367d6c4a71c6deeab901bb0628c5bf1b735c71cbdbba41e",
+    "README.md": "0f99b72f2f0950669b57d195b9b3f556f7cc78b497387df767a0b563cfeea828",
+    "GOAL.md": "f693dde9ad120c6dc99c45136f0030dac2bcb47d87f4f8f9cba7a72f0a6e388d",
+    "TRAINING_ACTUALIZATION.md": "3a37c74255887b8fb12e425c3dabb1c60ab5d4536d3d75285ff4a5ba0fc05e90",
+    "docs/workspace/VERIFICATION.md": "627de68096be939ccef7fa4c7b2b7d4e83099f064aa0cccdf16946192bc7e567"
+  },
+  "benchmark": {
+    "schema": "microduck.workspace-benchmark/v1",
+    "root": "/Users/kelly/Developer/microduck-rl-genesis",
+    "python": "3.12.12 (main, Jan 27 2026, 23:41:44) [Clang 21.1.4 ]",
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "repeats": 7,
+    "core_sha256": {
+      "baseline": "8753ef27dd0b84b70d2cb6fa1ad96e56f0acf3cf857439383cb055bceb9d2b20",
+      "candidate": "e9ce16acc439bf4cf6628358fbda7f3bd79dfb06e470009a05a3080fe4fd2d3d"
+    },
+    "run_id": "receipts/laser-follow/20260904-v1-baseline",
+    "artifact": "receipts/laser-follow/20260904-v1-baseline/forward.mp4",
+    "evaluation_count": 31,
+    "evaluation_error_count": 0,
+    "inventory_sha256": "1d7747a3ab7ed74088aa804e639eb7fa6cec2a97bf9417817380680f761cb7b5",
+    "boundary": "Receipt reader performance only. Cold is a fresh Inspector hash cache; OS caches are not cleared.",
+    "result_equality_verified": true,
+    "measurements": {
+      "evaluations_cold": {
+        "result_sha256": "1d7747a3ab7ed74088aa804e639eb7fa6cec2a97bf9417817380680f761cb7b5",
+        "baseline": {
+          "seconds": [
+            0.892722375690937,
+            0.8863864587619901,
+            0.8861156664788723,
+            0.8845920003950596,
+            0.9267763746902347,
+            0.8859644997864962,
+            0.8943710001185536
+          ],
+          "median_seconds": 0.8863864587619901
+        },
+        "candidate": {
+          "seconds": [
+            0.811614166945219,
+            0.8020868757739663,
+            0.8052215427160263,
+            0.8057980416342616,
+            0.8116836668923497,
+            0.8157252501696348,
+            0.8076187912374735
+          ],
+          "median_seconds": 0.8076187912374735
+        },
+        "speedup": 1.097530751363307
+      },
+      "evaluations_warm": {
+        "result_sha256": "1d7747a3ab7ed74088aa804e639eb7fa6cec2a97bf9417817380680f761cb7b5",
+        "baseline": {
+          "seconds": [
+            0.27247833274304867,
+            0.27623058296740055,
+            0.28011195827275515,
+            0.28665120899677277,
+            0.2844789996743202,
+            0.2745679160580039,
+            0.27527029160410166
+          ],
+          "median_seconds": 0.27623058296740055
+        },
+        "candidate": {
+          "seconds": [
+            0.20111541543155909,
+            0.19896941725164652,
+            0.20394829101860523,
+            0.206152250058949,
+            0.2013954995200038,
+            0.19674924947321415,
+            0.1976795420050621
+          ],
+          "median_seconds": 0.20111541543155909
+        },
+        "speedup": 1.3734928392965662
+      },
+      "detail_cold": {
+        "result_sha256": "56f2dbe33bb3a91c9e5fc5472c0af09443ac751900d8f9eed640f074990e9ca8",
+        "baseline": {
+          "seconds": [
+            0.9122429993003607,
+            0.8944940827786922,
+            0.9175865426659584,
+            0.9102750830352306,
+            0.9052056670188904,
+            0.9009897504001856,
+            0.9248319584876299
+          ],
+          "median_seconds": 0.9102750830352306
+        },
+        "candidate": {
+          "seconds": [
+            0.04393558483570814,
+            0.0414362084120512,
+            0.042830499820411205,
+            0.04192754067480564,
+            0.04372120928019285,
+            0.04573608282953501,
+            0.046482292003929615
+          ],
+          "median_seconds": 0.04372120928019285
+        },
+        "speedup": 20.819988697055898
+      },
+      "detail_warm": {
+        "result_sha256": "56f2dbe33bb3a91c9e5fc5472c0af09443ac751900d8f9eed640f074990e9ca8",
+        "baseline": {
+          "seconds": [
+            0.3164990423247218,
+            0.2950908336788416,
+            0.29252054169774055,
+            0.29950866661965847,
+            0.3000577921047807,
+            0.30663895793259144,
+            0.30535408295691013
+          ],
+          "median_seconds": 0.3000577921047807
+        },
+        "candidate": {
+          "seconds": [
+            0.04000112507492304,
+            0.04518091678619385,
+            0.042096540331840515,
+            0.041794249787926674,
+            0.04063045792281628,
+            0.04325250070542097,
+            0.04533449932932854
+          ],
+          "median_seconds": 0.042096540331840515
+        },
+        "speedup": 7.127849218474286
+      },
+      "artifact_cold": {
+        "result_sha256": "f5ddcc910cf3d610ddefa66552a67b425c0eeaa824715a9e93358647e9e7c8f7",
+        "baseline": {
+          "seconds": [
+            0.9011099999770522,
+            0.8884595828130841,
+            0.885810749605298,
+            0.8766547497361898,
+            0.896136000752449,
+            0.8854506658390164,
+            0.8850381663069129
+          ],
+          "median_seconds": 0.885810749605298
+        },
+        "candidate": {
+          "seconds": [
+            0.024581916630268097,
+            0.022929416969418526,
+            0.022314208559691906,
+            0.02210820931941271,
+            0.024585667066276073,
+            0.02311749942600727,
+            0.02251420821994543
+          ],
+          "median_seconds": 0.022929416969418526
+        },
+        "speedup": 38.63206599569119
+      },
+      "artifact_warm": {
+        "result_sha256": "f5ddcc910cf3d610ddefa66552a67b425c0eeaa824715a9e93358647e9e7c8f7",
+        "baseline": {
+          "seconds": [
+            0.2814796660095453,
+            0.28504829201847315,
+            0.28484312538057566,
+            0.275583665817976,
+            0.27201629150658846,
+            0.2741954168304801,
+            0.2731900420039892
+          ],
+          "median_seconds": 0.275583665817976
+        },
+        "candidate": {
+          "seconds": [
+            0.025643332861363888,
+            0.02558520808815956,
+            0.025465374812483788,
+            0.02780170924961567,
+            0.021682375110685825,
+            0.02133537456393242,
+            0.02179799973964691
+          ],
+          "median_seconds": 0.025465374812483788
+        },
+        "speedup": 10.82189709938523
+      }
+    }
+  },
+  "parser_differential": {
+    "valid_bit_exact": 1008,
+    "invalid_exact_error_matches": 16,
+    "compound_invalid_rejected": 4,
+    "changed_error_precedence": [
+      {
+        "input": "{\"x\":1e999,\"x\":0}",
+        "before": [
+          "error",
+          "ValueError",
+          "duplicate JSON key: x"
+        ],
+        "after": [
+          "error",
+          "ValueError",
+          "nonfinite numeric value"
+        ]
+      },
+      {
+        "input": "[1e999,NaN]",
+        "before": [
+          "error",
+          "ValueError",
+          "nonfinite JSON: NaN"
+        ],
+        "after": [
+          "error",
+          "ValueError",
+          "nonfinite numeric value"
+        ]
+      },
+      {
+        "input": "[1e999,",
+        "before": [
+          "error",
+          "JSONDecodeError",
+          "Expecting value: line 1 column 8 (char 7)"
+        ],
+        "after": [
+          "error",
+          "ValueError",
+          "nonfinite numeric value"
+        ]
+      },
+      {
+        "input": "{\"nested\":1e999,\"later\":{\"x\":0,\"x\":1}}",
+        "before": [
+          "error",
+          "ValueError",
+          "duplicate JSON key: x"
+        ],
+        "after": [
+          "error",
+          "ValueError",
+          "nonfinite numeric value"
+        ]
+      }
+    ],
+    "benchmark": {
+      "rows_per_sample": 5000,
+      "rounds": 7,
+      "seconds": {
+        "baseline": [
+          0.031795416958630085,
+          0.030267625115811825,
+          0.031984624452888966,
+          0.03317208308726549,
+          0.03160891681909561,
+          0.03275000024586916,
+          0.031521416269242764
+        ],
+        "candidate": [
+          0.020907999947667122,
+          0.0204050000756979,
+          0.019846582785248756,
+          0.019898749887943268,
+          0.020998749881982803,
+          0.021790125407278538,
+          0.02072654291987419
+        ]
+      },
+      "median_speedup": 1.534043428349173
+    }
+  },
+  "parent_verification": {
+    "status": "passed",
+    "discovered": [
+      {
+        "module": "test_duck_workspace.py",
+        "tests": 31
+      },
+      {
+        "module": "test_active_workspace.py",
+        "tests": 9
+      },
+      {
+        "module": "test_workspace_exchange.py",
+        "tests": 18
+      },
+      {
+        "module": "test_experiment_ops.py",
+        "tests": 23
+      },
+      {
+        "module": "test_workspace_performance.py",
+        "tests": 7
+      },
+      {
+        "module": "test_verification_runner.py",
+        "tests": 6
+      }
+    ],
+    "discovery_errors": [],
+    "tests_run": 94,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [],
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "root": "/Users/kelly/Developer/microduck-rl-genesis",
+    "python": "/Users/kelly/Developer/microduck-rl-genesis/.venv-apple/bin/python",
+    "elapsed_seconds": 2.902,
+    "scope": "workspace tooling only; no simulator, task acceptance or physical validation"
+  },
+  "isolated_source_mirror": {
+    "checkout_has_spaces": true,
+    "local_venv_present": false,
+    "invoked_from": "/tmp",
+    "files_copied": 204,
+    "result": {
+      "status": "passed",
+      "discovered": [
+        {
+          "module": "test_duck_workspace.py",
+          "tests": 31
+        },
+        {
+          "module": "test_active_workspace.py",
+          "tests": 9
+        },
+        {
+          "module": "test_workspace_exchange.py",
+          "tests": 18
+        },
+        {
+          "module": "test_experiment_ops.py",
+          "tests": 23
+        },
+        {
+          "module": "test_workspace_performance.py",
+          "tests": 7
+        },
+        {
+          "module": "test_verification_runner.py",
+          "tests": 6
+        }
+      ],
+      "discovery_errors": [],
+      "tests_run": 94,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [],
+      "expected_failures": 0,
+      "unexpected_successes": 0,
+      "root": "/private/var/folders/hm/6gd6d81d5wbfmk6j51dx894c0000gn/T/microduck-worktree-review-tkgzihd_/checkout with spaces",
+      "python": "/Users/kelly/.local/bin/python3",
+      "elapsed_seconds": 2.875,
+      "scope": "workspace tooling only; no simulator, task acceptance or physical validation"
+    }
+  },
+  "site_packages_disabled_verification": {
+    "status": "passed",
+    "discovered": [
+      {
+        "module": "test_duck_workspace.py",
+        "tests": 31
+      },
+      {
+        "module": "test_active_workspace.py",
+        "tests": 9
+      },
+      {
+        "module": "test_workspace_exchange.py",
+        "tests": 18
+      },
+      {
+        "module": "test_experiment_ops.py",
+        "tests": 23
+      },
+      {
+        "module": "test_workspace_performance.py",
+        "tests": 7
+      },
+      {
+        "module": "test_verification_runner.py",
+        "tests": 6
+      }
+    ],
+    "discovery_errors": [],
+    "tests_run": 94,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [],
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "root": "/Users/kelly/Developer/microduck-rl-genesis",
+    "python": "/Users/kelly/Developer/microduck-rl-genesis/.venv-apple/bin/python",
+    "elapsed_seconds": 2.895,
+    "scope": "workspace tooling only; no simulator, task acceptance or physical validation"
+  },
+  "optional_node_absent_before_performance_suite_registration": {
+    "status": "passed_with_skips",
+    "discovered": [
+      {
+        "module": "test_duck_workspace.py",
+        "tests": 31
+      },
+      {
+        "module": "test_active_workspace.py",
+        "tests": 9
+      },
+      {
+        "module": "test_workspace_exchange.py",
+        "tests": 18
+      },
+      {
+        "module": "test_experiment_ops.py",
+        "tests": 23
+      },
+      {
+        "module": "test_verification_runner.py",
+        "tests": 6
+      }
+    ],
+    "discovery_errors": [],
+    "tests_run": 87,
+    "failures": 0,
+    "errors": 0,
+    "skipped": [
+      {
+        "test": "test_experiment_ops.TraceTests.test_report_javascript_parses",
+        "reason": "Node is optional; browser QA still required"
+      }
+    ],
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "root": "/Users/kelly/Developer/microduck-rl-genesis",
+    "python": "/Users/kelly/Developer/microduck-rl-genesis/.venv-apple/bin/python",
+    "elapsed_seconds": 2.711,
+    "scope": "workspace tooling only; no simulator, task acceptance or physical validation"
+  },
+  "preservation": {
+    "previous_test_registration_count": 50,
+    "all_previous_test_registrations_preserved": true,
+    "new_first_registration": [
+      "workspace tooling (no simulator)",
+      "../scripts/verify_workspace.py"
+    ],
+    "git_index_unchanged": true,
+    "active_source_binding_count": 25,
+    "active_source_mismatches": [],
+    "v6_recorded_status_at_close": "completed",
+    "v6_source_mismatches_at_close": [],
+    "concurrent_changes_outside_this_task": [
+      "duck_workspace/web/index.html",
+      "scripts/evaluate_walking_heading.py",
+      "scripts/probe_walking_backend.py",
+      "tests/test_walking_heading.py"
+    ]
+  },
+  "browser_qa": {
+    "scope": "synthetic comparison report browser QA",
+    "comparison_report": {
+      "loaded": true,
+      "jump_first_difference_seconds": 0.06,
+      "jump_position_difference_m": 0.005,
+      "end_scrub_seconds": 0.1,
+      "forward_svg_paths": 2,
+      "forward_svg_cursors": 2,
+      "missing_position_reported_unknown": true,
+      "missing_position_jump_disabled": true,
+      "case_switch_restores_paths": true,
+      "browser_errors_or_warnings": []
+    },
+    "behavior_acceptance": false,
+    "duck_lab": {
+      "inspected_run": "receipts/walking/20260905-v5-current-sensor",
+      "reported_result": "6/21 motor + posture development cases",
+      "manifest_entries": 87,
+      "selected_recorded_video_run": "receipts/laser-follow/20260904-v2-steering",
+      "video_duration_seconds": 12,
+      "video_ready_state": 4,
+      "observed_playback_time_seconds": 0.215997,
+      "video_error": null,
+      "cases_checked": [
+        "moving",
+        "forward"
+      ],
+      "comparison_run": "receipts/laser-follow/20260904-v2-baseline",
+      "missing_comparison_video_explicit": true,
+      "browser_errors_or_warnings": [],
+      "temporary_tabs_closed": true
+    }
+  },
+  "parent_review": {
+    "all_three_lanes_reviewed": true,
+    "benchmark_metadata_corrected_after_review": true,
+    "initial_benchmark_superseded": true,
+    "frozen_contract_passed": true,
+    "python_compile_passed": true,
+    "javascript_syntax_passed": true,
+    "whitespace_passed": true,
+    "temporary_qa_servers_stopped": true,
+    "remote_ci_dispatched": false,
+    "new_simulator_or_training_run": false,
+    "paid_compute_used": false
+  }
+}

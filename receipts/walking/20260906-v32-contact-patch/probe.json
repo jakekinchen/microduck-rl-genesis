@@ -1,0 +1,193 @@
+{
+  "schema": "microduck.contact-patch/v32",
+  "status": "completed",
+  "cases": [
+    {
+      "session_id": "rigid-control-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "debd57782269c50bdd177eeefb2f10f39daddd043af26d1dfba7247bf135a703",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "gjk-with-contact-patch",
+      "genesis_original_max_qpos_delta": 0.049362361431121826,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.0075190890884343714,
+          "max_joint_error_deg": 4.626554167171929,
+          "max_physics_base_error_m": 0.0075190890884343714,
+          "max_physics_joint_error_deg": 4.626554167171929,
+          "first_threshold_divergence_s": 0.64,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.0014312256967047067,
+          "max_joint_error_deg": 1.0416252112794602,
+          "max_physics_base_error_m": 0.0014312256967047067,
+          "max_physics_joint_error_deg": 1.0416252112794602,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.006486369211915023,
+          "max_joint_error_deg": 3.697545123872057,
+          "max_physics_base_error_m": 0.006486369211915023,
+          "max_physics_joint_error_deg": 3.697545123872057,
+          "first_threshold_divergence_s": 0.62,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-low-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "058f9fa881e945806230836e8b293c85ec32b8b32ab722843c8b3bffaf9e02e5",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "gjk-with-contact-patch",
+      "genesis_original_max_qpos_delta": 0.058550357818603516,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.007433438193611575,
+          "max_joint_error_deg": 4.189400983260543,
+          "max_physics_base_error_m": 0.007433438193611575,
+          "max_physics_joint_error_deg": 4.189400983260543,
+          "first_threshold_divergence_s": 0.62,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.0016437831397356694,
+          "max_joint_error_deg": 0.9338065450817498,
+          "max_physics_base_error_m": 0.0016437831397356694,
+          "max_physics_joint_error_deg": 0.9347268409467955,
+          "first_threshold_divergence_s": null,
+          "passed": true
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.00642712360878172,
+          "max_joint_error_deg": 3.47725288186349,
+          "max_physics_base_error_m": 0.00642712360878172,
+          "max_physics_joint_error_deg": 3.47725288186349,
+          "first_threshold_divergence_s": 0.58,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-middle-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "991da8a5fc649f0c8e9d1e66d0de197f263bb2e22d7874c34b60d1b08fe1ae33",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "gjk-with-contact-patch",
+      "genesis_original_max_qpos_delta": 0.053349971771240234,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.0065177853113849785,
+          "max_joint_error_deg": 3.4622455112099697,
+          "max_physics_base_error_m": 0.0065177853113849785,
+          "max_physics_joint_error_deg": 3.4622455112099697,
+          "first_threshold_divergence_s": 0.4,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.007407497357893627,
+          "max_joint_error_deg": 3.5806238561996158,
+          "max_physics_base_error_m": 0.007407497357893627,
+          "max_physics_joint_error_deg": 3.5806238561996158,
+          "first_threshold_divergence_s": 0.2,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.002886578817716836,
+          "max_joint_error_deg": 1.81927261810684,
+          "max_physics_base_error_m": 0.0029232750922801596,
+          "max_physics_joint_error_deg": 1.8209630005340505,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-high-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v25-surface-baseline",
+      "steps": 11,
+      "physics_steps": 44,
+      "action_bytes_sha256": "ebcd9d2956ec84132a3da263da00f11172dcf6251965a5655ab6ae7472bbc9f9",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "gjk-with-contact-patch",
+      "genesis_original_max_qpos_delta": 0.00814607902429998,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.00586334259379409,
+          "max_joint_error_deg": 0.4507591603683614,
+          "max_physics_base_error_m": 0.00586334259379409,
+          "max_physics_joint_error_deg": 0.4509466584923501,
+          "first_threshold_divergence_s": 0.18,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.014595758739321984,
+          "max_joint_error_deg": 1.4350684460296863,
+          "max_physics_base_error_m": 0.014595758739321984,
+          "max_physics_joint_error_deg": 1.4350684460296863,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.010567718392199076,
+          "max_joint_error_deg": 1.099026851435354,
+          "max_physics_base_error_m": 0.010567718392199076,
+          "max_physics_joint_error_deg": 1.099026851435354,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      }
+    },
+    {
+      "session_id": "soft-high-traction-start-1",
+      "input_receipt": "receipts/walking/20260906-v26-surface-standing",
+      "steps": 50,
+      "physics_steps": 200,
+      "action_bytes_sha256": "2612c453c10b9e03021e7da4a2dfad736e3a0323c924b5d1e9c8082f60a5ff49",
+      "action_bytes_identical": true,
+      "native_plane_reproduced": true,
+      "genesis_variant": "gjk-with-contact-patch",
+      "genesis_original_max_qpos_delta": 0.033637285232543945,
+      "comparisons": {
+        "plane_genesis": {
+          "max_base_error_m": 0.013692401190685743,
+          "max_joint_error_deg": 1.7692280353040477,
+          "max_physics_base_error_m": 0.013705745663714972,
+          "max_physics_joint_error_deg": 1.7875325799061486,
+          "first_threshold_divergence_s": 0.16,
+          "passed": false
+        },
+        "boxes_genesis": {
+          "max_base_error_m": 0.015750668876634358,
+          "max_joint_error_deg": 1.9447712976487375,
+          "max_physics_base_error_m": 0.015750668876634358,
+          "max_physics_joint_error_deg": 1.9479194769562242,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        },
+        "plane_boxes": {
+          "max_base_error_m": 0.00966410845299946,
+          "max_joint_error_deg": 1.1192652157790022,
+          "max_physics_base_error_m": 0.00966410845299946,
+          "max_physics_joint_error_deg": 1.1299683175050799,
+          "first_threshold_divergence_s": 0.08,
+          "passed": false
+        }
+      }
+    }
+  ],
+  "physical_calibration": false,
+  "elapsed_s": 18.366927540992037
+}

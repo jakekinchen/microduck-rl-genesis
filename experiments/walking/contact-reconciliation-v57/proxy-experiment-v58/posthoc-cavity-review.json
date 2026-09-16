@@ -1,0 +1,228 @@
+{
+  "scope": "posthoc fixed-point material occupancy; original kinematic frames and SciPy convex hulls of generated vertices, no compiled proxy or dynamics",
+  "physics_steps": 0,
+  "all_8_source_cavities_preserved": true,
+  "checks": [
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "inside_convex_part_union": true,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "bottom_head_shell",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    },
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "jaw"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "inside_convex_part_union": true,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "jaw",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    },
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "neck_pitch",
+          "inside_convex_part_union": false,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "bottom_head_shell",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    },
+    {
+      "pose": "home",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "jaw"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "neck_pitch",
+          "inside_convex_part_union": false,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "jaw",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "inside_convex_part_union": true,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "bottom_head_shell",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "seeed_bearing__configuration__22x16x4",
+        "jaw_soft",
+        "jaw"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "seeed_bearing__configuration__22x16x4",
+          "inside_convex_part_union": true,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "jaw",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "bottom_head_shell"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "neck_pitch",
+          "inside_convex_part_union": true,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "bottom_head_shell",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    },
+    {
+      "pose": "worst_sample",
+      "pair": [
+        "neck_pitch",
+        "neck_pitch",
+        "jaw_soft",
+        "jaw"
+      ],
+      "sides": [
+        {
+          "body": "neck_pitch",
+          "mesh": "neck_pitch",
+          "inside_convex_part_union": true,
+          "must_remain_empty": false,
+          "cavity_preserved": true
+        },
+        {
+          "body": "jaw_soft",
+          "mesh": "jaw",
+          "inside_convex_part_union": false,
+          "must_remain_empty": true,
+          "cavity_preserved": true
+        }
+      ],
+      "source_cavities_preserved": true,
+      "both_proxy_sides_filled": false
+    }
+  ],
+  "complete_proxy_model_compiles": false,
+  "full_pose_bank_evaluated": false,
+  "physical_arrays_validated": false,
+  "pair_matrix_validated": false,
+  "proxy_admitted": false
+}

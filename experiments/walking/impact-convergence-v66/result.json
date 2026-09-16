@@ -1,0 +1,22 @@
+{
+  "status": "guided_bench_numerical_gate_passed",
+  "cases_verified": 96,
+  "physics_samples_verified": 358400,
+  "preimpact_samples_verified": 11432,
+  "exact_repeat_pairs": 48,
+  "exact_v65_controls": 8,
+  "finest_buckets_passed": 16,
+  "finest_buckets_required": 16,
+  "coarser_buckets_passed": 12,
+  "case_diagnostic_passes": 96,
+  "case_analytic_passes": 96,
+  "cross_asset_comparisons_passed": 24,
+  "focused_tests_passed": 7,
+  "candidate_bench_reference_dt_s": 0.00015625,
+  "full_robot_reference_accepted": false,
+  "walking_accepted": false,
+  "physical_acceptance": false,
+  "policy_or_controller_promoted": false,
+  "task_compute_stopped": true,
+  "next": "Freeze full-state robot impact windows with exact controls, then isolate plant integration before live BAM feedback and standing-policy handoff."
+}

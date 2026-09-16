@@ -1,0 +1,160 @@
+{
+  "protocol_sha256": "92b76d5667120a920f56c1c232ce37fbb062db927a9b2ff1bcb4786efb0cfb24",
+  "physics_steps": 0,
+  "mujoco_version": "3.12.0",
+  "scipy_version": "1.18.1",
+  "sampled_poses": 201,
+  "recorded_controls": 9300,
+  "stored_pose_samples": 199,
+  "upstream_sources_verified": 108,
+  "models": {
+    "retained_v11": {
+      "active_colliders": 11,
+      "sampled_poses_over_1mm": 0,
+      "maximum_penetration_m": 0.0,
+      "poses_with_uncovered_part_over_1mm": 0,
+      "worst_pairs": []
+    },
+    "full_cad_original_jaw_exclusion": {
+      "active_colliders": 70,
+      "sampled_poses_over_1mm": 0,
+      "maximum_penetration_m": 0.0,
+      "poses_with_uncovered_part_over_1mm": 0,
+      "worst_pairs": []
+    },
+    "full_cad_jaw_contact_enabled": {
+      "active_colliders": 70,
+      "sampled_poses_over_1mm": 201,
+      "maximum_penetration_m": 0.005620862598028088,
+      "poses_with_uncovered_part_over_1mm": 201,
+      "worst_pairs": [
+        [
+          "neck_pitch:seeed_bearing__configuration__22x16x4 / jaw_soft:bottom_head_shell",
+          0.005620862598028088
+        ],
+        [
+          "neck_pitch:seeed_bearing__configuration__22x16x4 / jaw_soft:jaw",
+          0.0052733046173270275
+        ],
+        [
+          "neck_pitch:neck_pitch / jaw_soft:bottom_head_shell",
+          0.0032437358885236928
+        ],
+        [
+          "neck_pitch:neck_pitch / jaw_soft:jaw",
+          0.0028340298316457133
+        ]
+      ]
+    }
+  },
+  "mesh_diagnostics": [
+    {
+      "mesh": "bottom_head_shell.stl",
+      "local_vertices": 10477,
+      "upstream_vertices": 10477,
+      "local_hull_vertices": 1616,
+      "upstream_hull_vertices": 1615,
+      "vertex_set_hausdorff_m": 0.00018200079128334522,
+      "hull_vertex_set_hausdorff_m": 3.468499243492685e-05,
+      "max_sampled_hull_support_difference_m": 8.561501417675421e-07,
+      "support_directions": 262,
+      "local_hull_volume_m3": 0.0001326968597961919,
+      "upstream_hull_volume_m3": 0.00013269685678153422,
+      "max_bounds_difference_m": 0.0,
+      "boundary": "Nearest-vertex Hausdorff is not triangle-surface Hausdorff; finite-direction support is not a global bound."
+    },
+    {
+      "mesh": "foot_right.stl",
+      "local_vertices": 9935,
+      "upstream_vertices": 9954,
+      "local_hull_vertices": 2303,
+      "upstream_hull_vertices": 2310,
+      "vertex_set_hausdorff_m": 0.0005842473935045635,
+      "hull_vertex_set_hausdorff_m": 0.0006076390406000412,
+      "max_sampled_hull_support_difference_m": 1.5490577726998134e-06,
+      "support_directions": 262,
+      "local_hull_volume_m3": 2.9057859239147098e-05,
+      "upstream_hull_volume_m3": 2.9057863745980454e-05,
+      "max_bounds_difference_m": 0.0,
+      "boundary": "Nearest-vertex Hausdorff is not triangle-surface Hausdorff; finite-direction support is not a global bound."
+    },
+    {
+      "mesh": "jaw.stl",
+      "local_vertices": 4949,
+      "upstream_vertices": 4949,
+      "local_hull_vertices": 1673,
+      "upstream_hull_vertices": 1673,
+      "vertex_set_hausdorff_m": 2.625802136488331e-20,
+      "hull_vertex_set_hausdorff_m": 0.0,
+      "max_sampled_hull_support_difference_m": 0.0,
+      "support_directions": 262,
+      "local_hull_volume_m3": 0.00011250339789838867,
+      "upstream_hull_volume_m3": 0.00011250339789838867,
+      "max_bounds_difference_m": 0.0,
+      "boundary": "Nearest-vertex Hausdorff is not triangle-surface Hausdorff; finite-direction support is not a global bound."
+    },
+    {
+      "mesh": "pcb__raspberry_pi_zero_2_w.stl",
+      "local_vertices": 10399,
+      "upstream_vertices": 10399,
+      "local_hull_vertices": 152,
+      "upstream_hull_vertices": 152,
+      "vertex_set_hausdorff_m": 6.0637856973430054e-05,
+      "hull_vertex_set_hausdorff_m": 0.0,
+      "max_sampled_hull_support_difference_m": 0.0,
+      "support_directions": 262,
+      "local_hull_volume_m3": 3.1075812997764854e-06,
+      "upstream_hull_volume_m3": 3.1075812997764854e-06,
+      "max_bounds_difference_m": 0.0,
+      "boundary": "Nearest-vertex Hausdorff is not triangle-surface Hausdorff; finite-direction support is not a global bound."
+    },
+    {
+      "mesh": "right_shell.stl",
+      "local_vertices": 10475,
+      "upstream_vertices": 10475,
+      "local_hull_vertices": 2262,
+      "upstream_hull_vertices": 2262,
+      "vertex_set_hausdorff_m": 6.769888790468218e-08,
+      "hull_vertex_set_hausdorff_m": 0.0,
+      "max_sampled_hull_support_difference_m": 0.0,
+      "support_directions": 262,
+      "local_hull_volume_m3": 7.432613420746394e-05,
+      "upstream_hull_volume_m3": 7.432613420746394e-05,
+      "max_bounds_difference_m": 0.0,
+      "boundary": "Nearest-vertex Hausdorff is not triangle-surface Hausdorff; finite-direction support is not a global bound."
+    },
+    {
+      "mesh": "sole_right.stl",
+      "local_vertices": 7946,
+      "upstream_vertices": 7953,
+      "local_hull_vertices": 5029,
+      "upstream_hull_vertices": 5029,
+      "vertex_set_hausdorff_m": 0.0006955389914359239,
+      "hull_vertex_set_hausdorff_m": 8.847564458847046e-09,
+      "max_sampled_hull_support_difference_m": 5.304508152170762e-10,
+      "support_directions": 262,
+      "local_hull_volume_m3": 2.3072585275868476e-05,
+      "upstream_hull_volume_m3": 2.3072585271910226e-05,
+      "max_bounds_difference_m": 0.0,
+      "boundary": "Nearest-vertex Hausdorff is not triangle-surface Hausdorff; finite-direction support is not a global bound."
+    },
+    {
+      "mesh": "top_head_shell.stl",
+      "local_vertices": 8062,
+      "upstream_vertices": 8062,
+      "local_hull_vertices": 3809,
+      "upstream_hull_vertices": 3809,
+      "vertex_set_hausdorff_m": 1.3006700448347114e-16,
+      "hull_vertex_set_hausdorff_m": 1.3006700448347114e-16,
+      "max_sampled_hull_support_difference_m": 1.249000902703301e-16,
+      "support_directions": 262,
+      "local_hull_volume_m3": 0.0003219676229768743,
+      "upstream_hull_volume_m3": 0.0003219676229768743,
+      "max_bounds_difference_m": 0.0,
+      "boundary": "Nearest-vertex Hausdorff is not triangle-surface Hausdorff; finite-direction support is not a global bound."
+    }
+  ],
+  "physical_acceptance": false,
+  "dynamic_loads_measured": false,
+  "original_behavior_scores_modified": false
+}

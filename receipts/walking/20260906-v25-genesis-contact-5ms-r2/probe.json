@@ -1,0 +1,46 @@
+{
+  "schema": "microduck.public-surface-engine-response/v1",
+  "timestep_s": 0.005,
+  "rows": [
+    {
+      "profile": "rigid-control",
+      "genesis_indentation_m": 0.00010775366798043284,
+      "mujoco_indentation_m": 0.00010775542021485751,
+      "gap_m": 1.7522344246683093e-09,
+      "preregistered_limit_m": 0.0001,
+      "passed": true,
+      "genesis_settled_std_m": 2.303929616531697e-19
+    },
+    {
+      "profile": "soft-low-traction",
+      "genesis_indentation_m": 5.464965477585803e-05,
+      "mujoco_indentation_m": 5.465565838585514e-05,
+      "gap_m": 6.003609997107164e-09,
+      "preregistered_limit_m": 0.0001,
+      "passed": true,
+      "genesis_settled_std_m": 0.0
+    },
+    {
+      "profile": "soft-middle",
+      "genesis_indentation_m": 0.0004914236441254611,
+      "mujoco_indentation_m": 0.0004914318998904925,
+      "gap_m": 8.255765031350316e-09,
+      "preregistered_limit_m": 0.0001,
+      "passed": true,
+      "genesis_settled_std_m": 5.421010862427522e-19
+    },
+    {
+      "profile": "soft-high-traction",
+      "genesis_indentation_m": 0.004127197910142558,
+      "mujoco_indentation_m": 0.004127204851602757,
+      "gap_m": 6.941460199173799e-09,
+      "preregistered_limit_m": 0.0008254409703205514,
+      "passed": true,
+      "genesis_settled_std_m": 6.723185619192515e-10
+    }
+  ],
+  "passed": true,
+  "source_sha256": "4e010903a04626900b5a759d9e041ee3cef0c2c06e666819352904dc58807a0d",
+  "physical_calibration": false,
+  "boundary": "0.4-kg rigid cuboid passive response only; no real carpet force curve, dynamic hysteresis or policy equivalence."
+}

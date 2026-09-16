@@ -25,8 +25,10 @@ def main():
     for src, name in ((args.training_log, "training.stdout.log"), (args.test_log, "tests.stdout.log")):
         dest = args.evaluation/name
         if dest.exists():
-            raise ValueError(f"refusing to replace {dest}")
-        shutil.copy2(src, dest)
+            if digest(dest) != digest(src):
+                raise ValueError(f"refusing to replace differing log {dest}")
+        else:
+            shutil.copy2(src, dest)
     raw = re.sub(r"\x1b\[[0-9;]*m", "", args.training_log.read_text())
     curves = []
     for block in raw.split("Learning iteration ")[1:]:
@@ -47,7 +49,8 @@ def main():
     x = [r["iteration"] for r in curves]
     axes[0].plot(x, [r["mean_reward"] for r in curves], color="#0d9488")
     axes[0].set_ylabel("Training reward (not task success)")
-    axes[1].plot(x, [r["mean_episode_length_steps"]*.02 for r in curves], color="#7c3aed")
+    # No completed episode yet means unknown duration, not zero seconds.
+    axes[1].plot(x, [None if r["mean_episode_length_steps"] is None else r["mean_episode_length_steps"]*.02 for r in curves], color="#7c3aed")
     axes[1].set_ylabel("Mean stochastic episode duration (s)")
     for ax in axes:
         ax.set_xlabel("Laser PPO iteration")

@@ -1,0 +1,779 @@
+{
+  "schema": "microduck.active-preflight/v1",
+  "read_only": true,
+  "focus": {
+    "status": "verified",
+    "primary": "receipts/walking/20260908-v53-braking-flat",
+    "case_id": "nominal-20-20ms--forward-08",
+    "id": "v53-retention-complete-joint-fit-next",
+    "question": "V53 is complete and rejected. All 63 flat and five original surface passes return; both 180-second sessions survive, but one fails whole-session heading. Downhill start 1 falls at 14.24 s; start 2 fails yaw/posture/heading. This packet binds a passing flat retention reference only; read the V53 endurance receipt for failures. Next establish joint fitting feasibility with separate retention and recovery error gates. Keep V30.",
+    "phase": "joint_braking_fit_feasibility_next",
+    "config_sha256": "ea86ba0f55d400700eba36f3ca8528d7ca3a5c86ea83c333a58df5a0e444e9dc",
+    "boundary": "Exposed retention improvement with remaining downhill and full-session heading failures. Not accepted walking, calibrated physical accuracy or carpet transfer."
+  },
+  "ready_for_diagnosis": true,
+  "execution_authorized_by_report": false,
+  "training_started": false,
+  "physics_causality": "not_established",
+  "activity": {
+    "schema_version": "microduck.ops.activity.v1",
+    "root": "/Users/kelly/Developer/microduck-rl-genesis",
+    "generated_at": "2026-09-08T22:09:24.243064+00:00",
+    "read_only": true,
+    "status": "no_known_training_process",
+    "processes": [],
+    "boundary": "Instantaneous advisory inventory of known Python training and simulation-test entrypoints. The legacy no_known_training_process status means no recognized compute candidate; absence is not proof of idleness; unrecognized launchers and remote jobs are outside coverage. No lock, admission, process control or training status mutation."
+  },
+  "discovery_errors": [],
+  "errors": [],
+  "active_training_records": [],
+  "before_training": [
+    "Read experiments/walking/BRAKING-RESULTS-v53.md. The nine-state collection, single 8,000-update learner and all four exposed evaluation banks are complete. No extension or checkpoint reselection.",
+    "The selected flat reference passes. Actual failures are in 20260908-v53-braking-endurance: downhill start 1 falls at 14.24 s; start 2 fails yaw, final posture and endpoint heading. Composition start 1 finishes 180 s but maximum heading error 21.4145 degrees exceeds 20.",
+    "The primary manifest binds braking/policy.onnx SHA-256 d0c2e4accc07364cd588a93713ef7f65acc92f7bf39283fb2889b058e45d98fa in addition to the frozen V50/V15 base actors. Do not identify the composite by the base walker digest alone.",
+    "Next freeze one offline joint fit-feasibility experiment: independent maximum-error limits for successful-stop and downhill-recovery labels, with every stop onset explicitly checked. Onset errors .077870-.206272 rad remain despite better zero-label fitting. Require both fitting gates before full rollout evaluation, then preserve all original behavioral gates. Do not infer missing observability or physical accuracy.",
+    "V30 remains retained. Fresh/protected banks stay closed; measured calibration, terrain generalization and carpet transfer remain unmet. Check storage and guard immediately before any newly authorized compute. No paid compute, activation or hardware authority is implied."
+  ],
+  "cases": {
+    "primary": {
+      "receipt": "receipts/walking/20260908-v53-braking-flat",
+      "policy_sha256": "1f8e87d7370a1aeb7b57f272c96abb6df49e3039b8d1332bfce24c1a81de5b4f",
+      "case": {
+        "case_id": "nominal-20-20ms--forward-08",
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "mean_abs_forward_error_m_s": 0.014716258783442139,
+          "mean_abs_lateral_velocity_m_s": 0.011830025372822486,
+          "mean_abs_yaw_error_rad_s": 0.09621406261911367,
+          "stop_max_speed_m_s": 0.003399175739637203,
+          "stop_max_yaw_rate_rad_s": 0.02208152292959232,
+          "stop_max_tilt_deg": 6.519666354003777,
+          "torque_saturation_fraction": 0.00011904761904761905,
+          "minimum_actual_joint_margin_rad": 0.08101214470323509,
+          "simultaneous_flight_fraction": 0.0
+        },
+        "gait": {
+          "duration_s": 18.0,
+          "active_s": 12.0,
+          "translation_s": 11.98,
+          "path_length_m": 1.045144961814746,
+          "qualified_swings_left_right": [
+            40,
+            39
+          ],
+          "swing_events": [
+            {
+              "foot": 0,
+              "land_s": 1.44,
+              "air_s": 0.16,
+              "clearance_m": 0.015232738466557805
+            },
+            {
+              "foot": 1,
+              "land_s": 1.6,
+              "air_s": 0.16,
+              "clearance_m": 0.010980150400648883
+            },
+            {
+              "foot": 0,
+              "land_s": 1.76,
+              "air_s": 0.16,
+              "clearance_m": 0.014481134914277296
+            },
+            {
+              "foot": 1,
+              "land_s": 1.9000000000000001,
+              "air_s": 0.14,
+              "clearance_m": 0.009945641792667815
+            },
+            {
+              "foot": 0,
+              "land_s": 2.06,
+              "air_s": 0.16,
+              "clearance_m": 0.01459258432322114
+            },
+            {
+              "foot": 1,
+              "land_s": 2.22,
+              "air_s": 0.14,
+              "clearance_m": 0.011439099629808621
+            },
+            {
+              "foot": 0,
+              "land_s": 2.36,
+              "air_s": 0.14,
+              "clearance_m": 0.013377706588788972
+            },
+            {
+              "foot": 1,
+              "land_s": 2.52,
+              "air_s": 0.14,
+              "clearance_m": 0.009737806935622605
+            },
+            {
+              "foot": 0,
+              "land_s": 2.66,
+              "air_s": 0.14,
+              "clearance_m": 0.013626615279849746
+            },
+            {
+              "foot": 1,
+              "land_s": 2.82,
+              "air_s": 0.14,
+              "clearance_m": 0.01099834262894504
+            },
+            {
+              "foot": 0,
+              "land_s": 2.96,
+              "air_s": 0.14,
+              "clearance_m": 0.013291447170505209
+            },
+            {
+              "foot": 1,
+              "land_s": 3.1,
+              "air_s": 0.12,
+              "clearance_m": 0.00973802133814344
+            },
+            {
+              "foot": 0,
+              "land_s": 3.2600000000000002,
+              "air_s": 0.16,
+              "clearance_m": 0.013621654539112179
+            },
+            {
+              "foot": 1,
+              "land_s": 3.42,
+              "air_s": 0.16,
+              "clearance_m": 0.010924960315913878
+            },
+            {
+              "foot": 0,
+              "land_s": 3.56,
+              "air_s": 0.14,
+              "clearance_m": 0.013774972016938503
+            },
+            {
+              "foot": 1,
+              "land_s": 3.7,
+              "air_s": 0.14,
+              "clearance_m": 0.01011566596686584
+            },
+            {
+              "foot": 0,
+              "land_s": 3.86,
+              "air_s": 0.16,
+              "clearance_m": 0.013461622831261004
+            },
+            {
+              "foot": 1,
+              "land_s": 4.0,
+              "air_s": 0.14,
+              "clearance_m": 0.010321365876648992
+            },
+            {
+              "foot": 0,
+              "land_s": 4.16,
+              "air_s": 0.16,
+              "clearance_m": 0.013566213178502439
+            },
+            {
+              "foot": 1,
+              "land_s": 4.32,
+              "air_s": 0.16,
+              "clearance_m": 0.010452733936262518
+            },
+            {
+              "foot": 0,
+              "land_s": 4.46,
+              "air_s": 0.14,
+              "clearance_m": 0.014088539217726376
+            },
+            {
+              "foot": 1,
+              "land_s": 4.62,
+              "air_s": 0.16,
+              "clearance_m": 0.01032481458142622
+            },
+            {
+              "foot": 0,
+              "land_s": 4.76,
+              "air_s": 0.14,
+              "clearance_m": 0.013479481438289271
+            },
+            {
+              "foot": 1,
+              "land_s": 4.9,
+              "air_s": 0.12,
+              "clearance_m": 0.010067666485890723
+            },
+            {
+              "foot": 0,
+              "land_s": 5.0600000000000005,
+              "air_s": 0.16,
+              "clearance_m": 0.01334042790739753
+            },
+            {
+              "foot": 1,
+              "land_s": 5.2,
+              "air_s": 0.12,
+              "clearance_m": 0.01037297147437057
+            },
+            {
+              "foot": 0,
+              "land_s": 5.36,
+              "air_s": 0.16,
+              "clearance_m": 0.013652584357736534
+            },
+            {
+              "foot": 1,
+              "land_s": 5.5,
+              "air_s": 0.14,
+              "clearance_m": 0.010226363105817881
+            },
+            {
+              "foot": 0,
+              "land_s": 5.66,
+              "air_s": 0.16,
+              "clearance_m": 0.013684647586690229
+            },
+            {
+              "foot": 1,
+              "land_s": 5.8,
+              "air_s": 0.14,
+              "clearance_m": 0.010479901602486128
+            },
+            {
+              "foot": 0,
+              "land_s": 5.96,
+              "air_s": 0.16,
+              "clearance_m": 0.01336393715238442
+            },
+            {
+              "foot": 1,
+              "land_s": 6.1000000000000005,
+              "air_s": 0.14,
+              "clearance_m": 0.010227368702988333
+            },
+            {
+              "foot": 0,
+              "land_s": 6.26,
+              "air_s": 0.16,
+              "clearance_m": 0.013820908372993743
+            },
+            {
+              "foot": 1,
+              "land_s": 6.4,
+              "air_s": 0.14,
+              "clearance_m": 0.010703985727481618
+            },
+            {
+              "foot": 0,
+              "land_s": 6.5600000000000005,
+              "air_s": 0.16,
+              "clearance_m": 0.013094083444287946
+            },
+            {
+              "foot": 1,
+              "land_s": 6.7,
+              "air_s": 0.14,
+              "clearance_m": 0.01040470032960749
+            },
+            {
+              "foot": 0,
+              "land_s": 6.86,
+              "air_s": 0.16,
+              "clearance_m": 0.014340274690518863
+            },
+            {
+              "foot": 1,
+              "land_s": 7.0200000000000005,
+              "air_s": 0.16,
+              "clearance_m": 0.010760970131633915
+            },
+            {
+              "foot": 0,
+              "land_s": 7.16,
+              "air_s": 0.14,
+              "clearance_m": 0.013667656518803323
+            },
+            {
+              "foot": 1,
+              "land_s": 7.32,
+              "air_s": 0.14,
+              "clearance_m": 0.010229070560665143
+            },
+            {
+              "foot": 0,
+              "land_s": 7.46,
+              "air_s": 0.14,
+              "clearance_m": 0.013614475434276995
+            },
+            {
+              "foot": 1,
+              "land_s": 7.62,
+              "air_s": 0.14,
+              "clearance_m": 0.011094455571382906
+            },
+            {
+              "foot": 0,
+              "land_s": 7.76,
+              "air_s": 0.14,
+              "clearance_m": 0.013089959996495718
+            },
+            {
+              "foot": 1,
+              "land_s": 7.92,
+              "air_s": 0.16,
+              "clearance_m": 0.010602441209283895
+            },
+            {
+              "foot": 0,
+              "land_s": 8.06,
+              "air_s": 0.14,
+              "clearance_m": 0.013424935064850856
+            },
+            {
+              "foot": 1,
+              "land_s": 8.22,
+              "air_s": 0.14,
+              "clearance_m": 0.010594815774437116
+            },
+            {
+              "foot": 0,
+              "land_s": 8.36,
+              "air_s": 0.14,
+              "clearance_m": 0.013250124432045658
+            },
+            {
+              "foot": 1,
+              "land_s": 8.52,
+              "air_s": 0.14,
+              "clearance_m": 0.01059303536564026
+            },
+            {
+              "foot": 0,
+              "land_s": 8.66,
+              "air_s": 0.14,
+              "clearance_m": 0.013992333627244849
+            },
+            {
+              "foot": 1,
+              "land_s": 8.82,
+              "air_s": 0.14,
+              "clearance_m": 0.01086274382703815
+            },
+            {
+              "foot": 0,
+              "land_s": 8.96,
+              "air_s": 0.14,
+              "clearance_m": 0.012864631069976252
+            },
+            {
+              "foot": 1,
+              "land_s": 9.1,
+              "air_s": 0.12,
+              "clearance_m": 0.00938763639948251
+            },
+            {
+              "foot": 0,
+              "land_s": 9.26,
+              "air_s": 0.16,
+              "clearance_m": 0.014428284231084703
+            },
+            {
+              "foot": 1,
+              "land_s": 9.42,
+              "air_s": 0.16,
+              "clearance_m": 0.01110051015591312
+            },
+            {
+              "foot": 0,
+              "land_s": 9.56,
+              "air_s": 0.14,
+              "clearance_m": 0.013174533476693083
+            },
+            {
+              "foot": 1,
+              "land_s": 9.700000000000001,
+              "air_s": 0.14,
+              "clearance_m": 0.00997154080540482
+            },
+            {
+              "foot": 0,
+              "land_s": 9.86,
+              "air_s": 0.16,
+              "clearance_m": 0.014269754963188665
+            },
+            {
+              "foot": 1,
+              "land_s": 10.02,
+              "air_s": 0.16,
+              "clearance_m": 0.010831899643696588
+            },
+            {
+              "foot": 0,
+              "land_s": 10.16,
+              "air_s": 0.14,
+              "clearance_m": 0.013405826057691316
+            },
+            {
+              "foot": 1,
+              "land_s": 10.3,
+              "air_s": 0.12,
+              "clearance_m": 0.010218692235472785
+            },
+            {
+              "foot": 0,
+              "land_s": 10.46,
+              "air_s": 0.16,
+              "clearance_m": 0.013543616355908498
+            },
+            {
+              "foot": 1,
+              "land_s": 10.620000000000001,
+              "air_s": 0.14,
+              "clearance_m": 0.010457635694889727
+            },
+            {
+              "foot": 0,
+              "land_s": 10.76,
+              "air_s": 0.14,
+              "clearance_m": 0.01406021667159635
+            },
+            {
+              "foot": 1,
+              "land_s": 10.92,
+              "air_s": 0.16,
+              "clearance_m": 0.010821333025495029
+            },
+            {
+              "foot": 0,
+              "land_s": 11.06,
+              "air_s": 0.14,
+              "clearance_m": 0.01317266750198835
+            },
+            {
+              "foot": 1,
+              "land_s": 11.200000000000001,
+              "air_s": 0.14,
+              "clearance_m": 0.01015070398430918
+            },
+            {
+              "foot": 0,
+              "land_s": 11.36,
+              "air_s": 0.16,
+              "clearance_m": 0.013858556874948802
+            },
+            {
+              "foot": 1,
+              "land_s": 11.52,
+              "air_s": 0.14,
+              "clearance_m": 0.011152430644260143
+            },
+            {
+              "foot": 0,
+              "land_s": 11.66,
+              "air_s": 0.14,
+              "clearance_m": 0.013278737820609211
+            },
+            {
+              "foot": 1,
+              "land_s": 11.8,
+              "air_s": 0.14,
+              "clearance_m": 0.0101391781918815
+            },
+            {
+              "foot": 0,
+              "land_s": 11.96,
+              "air_s": 0.16,
+              "clearance_m": 0.013882989170619538
+            },
+            {
+              "foot": 1,
+              "land_s": 12.120000000000001,
+              "air_s": 0.16,
+              "clearance_m": 0.010844782212987892
+            },
+            {
+              "foot": 0,
+              "land_s": 12.26,
+              "air_s": 0.14,
+              "clearance_m": 0.013474038000828983
+            },
+            {
+              "foot": 1,
+              "land_s": 12.4,
+              "air_s": 0.14,
+              "clearance_m": 0.01009539664449819
+            },
+            {
+              "foot": 0,
+              "land_s": 12.56,
+              "air_s": 0.16,
+              "clearance_m": 0.013667356248084482
+            },
+            {
+              "foot": 1,
+              "land_s": 12.72,
+              "air_s": 0.14,
+              "clearance_m": 0.010748499353010414
+            },
+            {
+              "foot": 0,
+              "land_s": 12.86,
+              "air_s": 0.14,
+              "clearance_m": 0.013651575947731268
+            },
+            {
+              "foot": 1,
+              "land_s": 13.02,
+              "air_s": 0.16,
+              "clearance_m": 0.010470797819363498
+            },
+            {
+              "foot": 0,
+              "land_s": 13.16,
+              "air_s": 0.14,
+              "clearance_m": 0.013677060759844413
+            }
+          ],
+          "alternating_landing_fraction": 1.0,
+          "both_feet_loaded_active_fraction": 0.041666666666666664,
+          "loaded_slip_over_3cm_s_fraction": 0.1024,
+          "loaded_slip_p95_m_s": 0.07162166515011308,
+          "backward_translation_fraction": 0.0,
+          "bilateral_step_coverage_during_translation": 0.9532554257095158,
+          "target_outside_joint_limits_fraction": 0.51,
+          "joint_hard_stop_fraction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_target_limit_violation_rad": 0.4475960415242908,
+          "max_actual_limit_violation_rad": 0.0,
+          "max_abs_servo_velocity_rad_s": 9.193134102472882,
+          "max_abs_actuator_torque_nm": 0.5982227076414578,
+          "nonfoot_contact_frames": 0,
+          "max_tilt_deg": 10.223513288513363,
+          "fell": false,
+          "rejection_reasons": [],
+          "rejection_gate_passed": true,
+          "physical_transfer_validated": false,
+          "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+        },
+        "motor_battery_passed": true,
+        "posture": {
+          "metrics": {
+            "maximum_mean_joint_error_rad": 0.1706747701636764,
+            "p95_worst_joint_error_rad": 0.2309381957383227,
+            "mean_absolute_face_pitch_deg": 16.38874208514708,
+            "per_head_joint_mean_abs_error_rad": [
+              0.1706747701636764,
+              0.09760365675056754,
+              0.10782611220047898,
+              0.05056686828967922
+            ]
+          },
+          "thresholds": {
+            "maximum_mean_joint_error_rad": 0.35,
+            "p95_worst_joint_error_rad": 0.7853981633974483,
+            "mean_absolute_face_pitch_deg": 30.0
+          },
+          "passed": true,
+          "boundary": "Neutral-head visible-development requirement, not calibrated hardware limits."
+        },
+        "original_motor_posture_passed": true,
+        "heading": {
+          "passed": true,
+          "metrics": {
+            "endpoint_heading_error_deg": 2.0743272819221494,
+            "maximum_heading_error_deg": 2.5488840132245323,
+            "signed_endpoint_heading_error_deg": 2.0743272819221494,
+            "measured_heading_change_deg": 2.0743272819221494,
+            "requested_heading_change_deg": 0.0
+          },
+          "thresholds": {
+            "endpoint_heading_error_deg": 15.0,
+            "maximum_heading_error_deg": 20.0
+          },
+          "failures": [],
+          "boundary": "Additive exposed-development planar-heading fidelity, not physical yaw calibration. Preserve old motor scores separately."
+        },
+        "self_contact": {
+          "passed": true,
+          "failures": [],
+          "frames": 900,
+          "maximum_self_penetration_m": 0.0,
+          "violating_frames": 0,
+          "first_violation": null,
+          "threshold_m": 0.001,
+          "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance."
+        },
+        "self_load": {
+          "passed": true,
+          "failures": [],
+          "observed_samples": 3600,
+          "expected_samples": 3600,
+          "total_over_1n_fraction": 0.0,
+          "longest_over_1n_s": 0.0,
+          "thresholds": {
+            "total_load_n": 1.0,
+            "max_fraction": 0.01,
+            "max_continuous_s": 0.05
+          },
+          "boundary": "Applied 200-Hz native internal loads, not floor support or calibrated hardware forces."
+        },
+        "timing_profile": "nominal-20-20ms",
+        "repeated_window": 1,
+        "session_window_start_s": 0,
+        "fell": false,
+        "failure_summary": "Passed the reported gates; not physical or full walking acceptance."
+      },
+      "trajectory": {
+        "path": "/Users/kelly/Developer/microduck-rl-genesis/receipts/walking/20260908-v53-braking-flat/trajectory.jsonl.gz",
+        "sha256": "63453436c5474150ac8063c766cad998724a8661b841f4e3d3421cc9d94501b0",
+        "bytes": 36718542,
+        "rows": 18900,
+        "decoded_bytes": 144032400
+      },
+      "first_fall": null
+    }
+  },
+  "source_bindings": [
+    {
+      "path": "scripts/evaluate_braking_flat_v53.py",
+      "current_sha256": "ffad02aef037588afe889ca7428ba34d85a1bb8acb2d3650a7a5f7072eef7dd0",
+      "retained_sha256": "ffad02aef037588afe889ca7428ba34d85a1bb8acb2d3650a7a5f7072eef7dd0",
+      "matches": true
+    },
+    {
+      "path": "microduck/braking_v53.py",
+      "current_sha256": "6b7db7bb21a89d3fbf3fd9dd71f078d8ecd05bc5b894ffb99bd1bb07d6935ab7",
+      "retained_sha256": "6b7db7bb21a89d3fbf3fd9dd71f078d8ecd05bc5b894ffb99bd1bb07d6935ab7",
+      "matches": true
+    },
+    {
+      "path": "scripts/train_braking_v53.py",
+      "current_sha256": "a71ef0e5e0197b377ecf8d2c9d708d1c423ed81287bd5cc8f3fabd9b4c381ba3",
+      "retained_sha256": "a71ef0e5e0197b377ecf8d2c9d708d1c423ed81287bd5cc8f3fabd9b4c381ba3",
+      "matches": true
+    },
+    {
+      "path": "scripts/build_braking_replay_v53.py",
+      "current_sha256": "f91878a3c455ebaea165a62491d16d09db5f991c9c9cf72adbb73f6938a548d7",
+      "retained_sha256": "f91878a3c455ebaea165a62491d16d09db5f991c9c9cf72adbb73f6938a548d7",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/BRAKING-RETENTION-v53.md",
+      "current_sha256": "5d9d9607701442ddf26c069b934a87a421cf6a07d4a64eaad95da5f31d6bae02",
+      "retained_sha256": "5d9d9607701442ddf26c069b934a87a421cf6a07d4a64eaad95da5f31d6bae02",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/braking-replay-v53/replay.npz",
+      "current_sha256": "815cbc35d0741aadc2d7bdd8a2e9560a203d999e9a1ad4d7f6c4261da396bd6a",
+      "retained_sha256": "815cbc35d0741aadc2d7bdd8a2e9560a203d999e9a1ad4d7f6c4261da396bd6a",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/braking-replay-v53/provenance.json",
+      "current_sha256": "1582335af8a7d7fd5460c7d3da19188a1873e1ec8ef069964c6b9207b3d93692",
+      "retained_sha256": "1582335af8a7d7fd5460c7d3da19188a1873e1ec8ef069964c6b9207b3d93692",
+      "matches": true
+    },
+    {
+      "path": "scripts/evaluate_native_retention_flat_v50.py",
+      "current_sha256": "9e8b39216167d88ea1426f817e89cec24bbcdf875b66fd4acb1544ccf845a15e",
+      "retained_sha256": "9e8b39216167d88ea1426f817e89cec24bbcdf875b66fd4acb1544ccf845a15e",
+      "matches": true
+    },
+    {
+      "path": "microduck/native_sequence_env_v50.py",
+      "current_sha256": "022544aa07a58bb4aaa78df2e7282b5f3ce83d2e953af0e19a6d1b9ebcc735c8",
+      "retained_sha256": "022544aa07a58bb4aaa78df2e7282b5f3ce83d2e953af0e19a6d1b9ebcc735c8",
+      "matches": true
+    },
+    {
+      "path": "microduck/retained_walker_v50.py",
+      "current_sha256": "943bf5542e429b57e3075fe8b9f91864ede0bc3f64f4458456e86ae5ce37a8f2",
+      "retained_sha256": "943bf5542e429b57e3075fe8b9f91864ede0bc3f64f4458456e86ae5ce37a8f2",
+      "matches": true
+    },
+    {
+      "path": "scripts/train_native_retention_v50.py",
+      "current_sha256": "1078d8b50c40981f04715f8b167c4329c58b4d780db5b83c5842ae29efaa5d68",
+      "retained_sha256": "1078d8b50c40981f04715f8b167c4329c58b4d780db5b83c5842ae29efaa5d68",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/native_candidate_v50.py",
+      "current_sha256": "15bf83e2514d8c9e35cc0560c534cf8864b127cb6242f5a0e04d0de3408a005e",
+      "retained_sha256": "15bf83e2514d8c9e35cc0560c534cf8864b127cb6242f5a0e04d0de3408a005e",
+      "matches": true
+    },
+    {
+      "path": "microduck/heading_headroom_v30.py",
+      "current_sha256": "8e3602bd808a988de49d1ef2fffb455744410e1c087a6a32ca676e8cc489522e",
+      "retained_sha256": "8e3602bd808a988de49d1ef2fffb455744410e1c087a6a32ca676e8cc489522e",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/command_ramp.py",
+      "current_sha256": "e74e1ed06776262bc0a79198ba33acad8698024caa7b16a65576da853aadef7a",
+      "retained_sha256": "e74e1ed06776262bc0a79198ba33acad8698024caa7b16a65576da853aadef7a",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/standing_world.py",
+      "current_sha256": "921df443a650db6de58f4180bcd9bcdf9d38d9acb1e1bc69c52e437d91417fe5",
+      "retained_sha256": "921df443a650db6de58f4180bcd9bcdf9d38d9acb1e1bc69c52e437d91417fe5",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/self_load.py",
+      "current_sha256": "d0c5e5b9ad4e025f68820bb1ed2d2edf32cd0133de4e8ab32863981e7f779274",
+      "retained_sha256": "d0c5e5b9ad4e025f68820bb1ed2d2edf32cd0133de4e8ab32863981e7f779274",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/posture.py",
+      "current_sha256": "64abf93297d90c8ce3468e0a136c97a6e96b3585488e38a0727d991eb2fddfe3",
+      "retained_sha256": "64abf93297d90c8ce3468e0a136c97a6e96b3585488e38a0727d991eb2fddfe3",
+      "matches": true
+    },
+    {
+      "path": "experiments/laser/gait.py",
+      "current_sha256": "ec851550c320415fe6ef930329d3ec16da10f6fba7e5eb6e3dc063eb808b7a8a",
+      "retained_sha256": "ec851550c320415fe6ef930329d3ec16da10f6fba7e5eb6e3dc063eb808b7a8a",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/collision_model.py",
+      "current_sha256": "acf0974833fac61edc33b3ea2e83e695be1988e7253bad0e0f78f7235980541c",
+      "retained_sha256": "acf0974833fac61edc33b3ea2e83e695be1988e7253bad0e0f78f7235980541c",
+      "matches": true
+    },
+    {
+      "path": "experiments/walking/tracking-suite-v1.json",
+      "current_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+      "retained_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+      "matches": true
+    }
+  ],
+  "observations": [
+    "Retained baseline only; no candidate comparison or improvement is asserted."
+  ]
+}

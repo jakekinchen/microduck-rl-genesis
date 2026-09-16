@@ -1,0 +1,337 @@
+{
+  "schema": "microduck.dynamic-laser-evaluation/v1",
+  "split": "development",
+  "canonical_held_out": false,
+  "policy_sha256": "b5046aab0e48b3a1c741fe5277341982357a1f43df9f17d14789d4db267ed561",
+  "target_source": "simulated-ground-truth",
+  "suite_sha256": "a07148a02afee79f99d4b1d573416bdca75cd1be49668483c3133405d888bb48",
+  "passed_cases": 1,
+  "total_cases": 6,
+  "falls": 0,
+  "case_reports": [
+    {
+      "case_id": "75001-retarget",
+      "program": "retarget",
+      "domain": {
+        "seed": 75001,
+        "randomized": true,
+        "friction_ratio": 0.6856517708204748,
+        "trunk_mass_ratio": 1.0694187374883128,
+        "motor_kp_ratio": 1.0651379612723422,
+        "trunk_com_shift_m": [
+          -0.0030028551598561726,
+          0.0035916894225618713,
+          -0.0016425390158725385
+        ],
+        "sensor_delay_steps": 0,
+        "encoder_bias_rad": [
+          0.010820238287803614,
+          0.005002089543256818,
+          -0.0014619096027346857,
+          0.008859263088528704,
+          0.007505347175419579,
+          0.0066064454412539065,
+          0.007691140217950042,
+          -0.008673142761515228,
+          -0.005650056161146697,
+          -0.007722812412599412,
+          0.0011701502201727587,
+          -0.0010170188559624354,
+          0.0028628410184113706,
+          0.0015876442790952927
+        ],
+        "sensor_noise": true,
+        "push_at_s": 23.0,
+        "push_delta_v_m_s": [
+          0.08202728407495799,
+          -0.04026789006033831
+        ],
+        "route_rotation_rad": -2.768600452075362,
+        "visual_palette": 0,
+        "ground": "flat; no obstacles"
+      },
+      "passed": false,
+      "fell": false,
+      "duration_s": 48.0,
+      "tracking_fraction": 0.16918576304241834,
+      "waypoints_acquired": 1,
+      "first_acquisition_times_s": {
+        "2": 15.08
+      },
+      "mean_visible_distance_m": 0.596524726299442,
+      "max_lost_target_speed_m_s": 0.0032693158367010926,
+      "deadline_misses": 0
+    },
+    {
+      "case_id": "75002-circle",
+      "program": "circle",
+      "domain": {
+        "seed": 75002,
+        "randomized": true,
+        "friction_ratio": 1.1914800289253549,
+        "trunk_mass_ratio": 0.9012300014356734,
+        "motor_kp_ratio": 0.9047965963879319,
+        "trunk_com_shift_m": [
+          0.004769239588765335,
+          0.0007197133113620491,
+          -0.00016829581708744046
+        ],
+        "sensor_delay_steps": 2,
+        "encoder_bias_rad": [
+          -0.011289176842494803,
+          0.0015079881449453466,
+          0.007399709745610238,
+          0.011868643673601761,
+          0.005617041413614714,
+          -0.001109677773764256,
+          -0.0015744321798488975,
+          0.011624919073557501,
+          0.008782795763283545,
+          0.000180638302157611,
+          0.0028954768592601827,
+          -0.008140739039718643,
+          -0.0064436170679186885,
+          0.006586548388456836
+        ],
+        "sensor_noise": true,
+        "push_at_s": 23.0,
+        "push_delta_v_m_s": [
+          -0.08991658572212956,
+          -0.0904542808229071
+        ],
+        "route_rotation_rad": -1.6630953221294964,
+        "visual_palette": 2,
+        "ground": "flat; no obstacles"
+      },
+      "passed": false,
+      "fell": false,
+      "duration_s": 48.0,
+      "tracking_fraction": 0.3565783356578336,
+      "waypoints_acquired": 1,
+      "first_acquisition_times_s": {
+        "0": 6.32
+      },
+      "mean_visible_distance_m": 0.40751901465223433,
+      "max_lost_target_speed_m_s": null,
+      "deadline_misses": 0
+    },
+    {
+      "case_id": "75003-figure-eight",
+      "program": "figure-eight",
+      "domain": {
+        "seed": 75003,
+        "randomized": true,
+        "friction_ratio": 1.341937073121622,
+        "trunk_mass_ratio": 0.9085236835990957,
+        "motor_kp_ratio": 0.9058383891624631,
+        "trunk_com_shift_m": [
+          0.000992346558683286,
+          -0.004931192757047738,
+          -9.524465616363109e-05
+        ],
+        "sensor_delay_steps": 0,
+        "encoder_bias_rad": [
+          0.0014702468737140641,
+          -0.0008186268720864991,
+          0.0012377086044644292,
+          -0.007669507930661509,
+          0.002446888361413527,
+          -0.006864807791059457,
+          -0.003744735888944363,
+          0.006745400191872083,
+          -0.00622551271398287,
+          0.0031524123071738686,
+          -0.007532514869791473,
+          0.0030788078022084653,
+          0.0034364335309861557,
+          -0.007684051214857956
+        ],
+        "sensor_noise": true,
+        "push_at_s": 23.0,
+        "push_delta_v_m_s": [
+          -0.061344368349735584,
+          0.03701414942239572
+        ],
+        "route_rotation_rad": -0.6206794754049265,
+        "visual_palette": 1,
+        "ground": "flat; no obstacles"
+      },
+      "passed": false,
+      "fell": false,
+      "duration_s": 48.0,
+      "tracking_fraction": 0.4495583449558345,
+      "waypoints_acquired": 1,
+      "first_acquisition_times_s": {
+        "0": 2.46
+      },
+      "mean_visible_distance_m": 0.3463120844154829,
+      "max_lost_target_speed_m_s": null,
+      "deadline_misses": 0
+    },
+    {
+      "case_id": "75004-retarget",
+      "program": "retarget",
+      "domain": {
+        "seed": 75004,
+        "randomized": true,
+        "friction_ratio": 1.2819754536195478,
+        "trunk_mass_ratio": 1.0196435753352056,
+        "motor_kp_ratio": 1.0357247252957096,
+        "trunk_com_shift_m": [
+          0.001789643037258939,
+          -0.002878932997359468,
+          0.0030071581826827364
+        ],
+        "sensor_delay_steps": 1,
+        "encoder_bias_rad": [
+          0.006917395234216285,
+          -0.0024573150572335845,
+          -0.009891268482745377,
+          -0.009702504564623245,
+          0.00848800292393364,
+          -0.01057136802487668,
+          0.003838793551292574,
+          -0.00032536473199944014,
+          -0.0019484462335464753,
+          -0.004456826613564104,
+          0.006881089754247613,
+          -0.009288561557902983,
+          0.005262815299340306,
+          0.011310546672334373
+        ],
+        "sensor_noise": true,
+        "push_at_s": 23.0,
+        "push_delta_v_m_s": [
+          0.004350929329337872,
+          -0.034690674039674296
+        ],
+        "route_rotation_rad": -2.242952894744716,
+        "visual_palette": 0,
+        "ground": "flat; no obstacles"
+      },
+      "passed": false,
+      "fell": false,
+      "duration_s": 48.0,
+      "tracking_fraction": 0.17552413456850316,
+      "waypoints_acquired": 1,
+      "first_acquisition_times_s": {
+        "2": 14.82
+      },
+      "mean_visible_distance_m": 0.5852572469843033,
+      "max_lost_target_speed_m_s": 0.0051831360726503324,
+      "deadline_misses": 0
+    },
+    {
+      "case_id": "75005-circle",
+      "program": "circle",
+      "domain": {
+        "seed": 75005,
+        "randomized": true,
+        "friction_ratio": 1.289691574711019,
+        "trunk_mass_ratio": 1.0500585896196564,
+        "motor_kp_ratio": 1.0983419625485338,
+        "trunk_com_shift_m": [
+          0.0032536788697794974,
+          -0.0018205722158107596,
+          0.0013257053261974139
+        ],
+        "sensor_delay_steps": 0,
+        "encoder_bias_rad": [
+          -0.005661684017204554,
+          0.0024396338171320444,
+          0.008452240490867161,
+          -0.008142268809096152,
+          0.006456255685266219,
+          -0.0047484538756908095,
+          -0.005038680115192931,
+          -0.00964147563350868,
+          -0.007407089179030249,
+          0.00456178869742486,
+          -0.008063305590200218,
+          -0.008439334971319157,
+          0.0043022000137335386,
+          0.009671149424402456
+        ],
+        "sensor_noise": true,
+        "push_at_s": 23.0,
+        "push_delta_v_m_s": [
+          0.04706932897427832,
+          -0.01992259792968172
+        ],
+        "route_rotation_rad": -0.9717238149300648,
+        "visual_palette": 2,
+        "ground": "flat; no obstacles"
+      },
+      "passed": true,
+      "fell": false,
+      "duration_s": 48.0,
+      "tracking_fraction": 1.0,
+      "waypoints_acquired": 1,
+      "first_acquisition_times_s": {
+        "0": 2.0
+      },
+      "mean_visible_distance_m": 0.2253875075840017,
+      "max_lost_target_speed_m_s": null,
+      "deadline_misses": 0
+    },
+    {
+      "case_id": "75006-figure-eight",
+      "program": "figure-eight",
+      "domain": {
+        "seed": 75006,
+        "randomized": true,
+        "friction_ratio": 0.9955075881623789,
+        "trunk_mass_ratio": 0.9582923927193439,
+        "motor_kp_ratio": 1.0263197260610104,
+        "trunk_com_shift_m": [
+          -0.0008310765125624519,
+          -0.0035949706352572074,
+          -0.00032121068762542947
+        ],
+        "sensor_delay_steps": 2,
+        "encoder_bias_rad": [
+          0.008856328347279509,
+          0.0012060557518980479,
+          -0.0028005686079002902,
+          -0.0030765488029946245,
+          0.008094105443602053,
+          -0.008133107429287904,
+          0.010152539923154536,
+          -0.0069066531553638065,
+          0.004020955049971867,
+          -0.009981874996503026,
+          0.005702961710600162,
+          0.010834660882016508,
+          -0.0008676826930891313,
+          -0.010820838154460206
+        ],
+        "sensor_noise": true,
+        "push_at_s": 23.0,
+        "push_delta_v_m_s": [
+          0.0681032807781411,
+          -0.030519453617626247
+        ],
+        "route_rotation_rad": -0.6096535836845096,
+        "visual_palette": 0,
+        "ground": "flat; no obstacles"
+      },
+      "passed": false,
+      "fell": false,
+      "duration_s": 48.0,
+      "tracking_fraction": 0.4476987447698745,
+      "waypoints_acquired": 1,
+      "first_acquisition_times_s": {
+        "0": 1.5
+      },
+      "mean_visible_distance_m": 0.367035068130966,
+      "max_lost_target_speed_m_s": null,
+      "deadline_misses": 0
+    }
+  ],
+  "export_random_parity": {
+    "random_observations": 65,
+    "max_abs_action_error_rad": 5.7220458984375e-06
+  },
+  "export_real_observation_max_error_rad": 3.337860107421875e-06,
+  "boundary": "New randomized simulator draws, not blind canonical acceptance, visual robustness, uneven-ground competence or physical authority."
+}

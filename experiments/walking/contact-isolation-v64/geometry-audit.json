@@ -1,0 +1,279 @@
+{
+  "passed": true,
+  "sources": {
+    "ankle_left_1_sole_left_collision": {
+      "file": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/sole_left.stl",
+      "sha256": "e028c8b09fecd4cb354d042bf7fd95a1a1bc2d524d760d62137fa8d74093fc23",
+      "vertex_count": 47364
+    },
+    "ankle_right_3_sole_right_collision": {
+      "file": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/sole_right.stl",
+      "sha256": "3f5068872f3add10eb967327651445bdfca635f5a8a01befa0ef05e462b72b4c",
+      "vertex_count": 47706
+    },
+    "ankle_left_3_foot_left_collision": {
+      "file": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/foot_left.stl",
+      "sha256": "a1f5d43456d0f522bd60870153795f1e8112c1adf9b8b4373b59608d9545c044",
+      "vertex_count": 59766
+    },
+    "ankle_right_7_foot_right_collision": {
+      "file": "/Users/kelly/Developer/microduck-rl-genesis/experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/foot_right.stl",
+      "sha256": "54f97fa1f0e0e611d31329df9f3c3b17ffcca2d695c579d1d32cbe99e8a6c7ef",
+      "vertex_count": 59856
+    }
+  },
+  "copied_states": [
+    {
+      "time_s": 0.045,
+      "pose_time_s": 0.04,
+      "features": {
+        "ankle_left_1_sole_left_collision": {
+          "source_minimum_z_m": -0.00044584772589119706,
+          "compiled_minimum_z_m": -0.000445847706936545,
+          "support_point_m": [
+            0.022514167103094368,
+            0.036734051787161034,
+            -0.00044584772589119706
+          ],
+          "vertices_below_floor": 1161,
+          "source_compiled_support_error_m": 1.8954652084013368e-11
+        },
+        "ankle_right_3_sole_right_collision": {
+          "source_minimum_z_m": -0.0007578028003765239,
+          "compiled_minimum_z_m": -0.0007578028966302996,
+          "support_point_m": [
+            -0.03855238923424636,
+            -0.022854507867176698,
+            -0.0007578028003765239
+          ],
+          "vertices_below_floor": 1992,
+          "source_compiled_support_error_m": 9.625377578315053e-11
+        },
+        "ankle_left_3_foot_left_collision": {
+          "source_minimum_z_m": 0.0015424795157935982,
+          "compiled_minimum_z_m": 0.0015424797169187295,
+          "support_point_m": [
+            0.022687369715927753,
+            0.03680783660974786,
+            0.0015424795157935982
+          ],
+          "vertices_below_floor": 0,
+          "source_compiled_support_error_m": 2.0112513130637888e-10
+        },
+        "ankle_right_7_foot_right_collision": {
+          "source_minimum_z_m": 0.00123204961625821,
+          "compiled_minimum_z_m": 0.0012320494542560232,
+          "support_point_m": [
+            -0.03862657965815907,
+            -0.02239788307780043,
+            0.00123204961625821
+          ],
+          "vertices_below_floor": 0,
+          "source_compiled_support_error_m": 1.6200218683898315e-10
+        }
+      },
+      "recorded_shell_contacts": []
+    },
+    {
+      "time_s": 1.4749999999999905,
+      "pose_time_s": 1.4699999999999906,
+      "features": {
+        "ankle_left_1_sole_left_collision": {
+          "source_minimum_z_m": -0.0021403122163851096,
+          "compiled_minimum_z_m": -0.0021403121912796008,
+          "support_point_m": [
+            0.041723733299444864,
+            0.007975445567324893,
+            -0.0021403122163851096
+          ],
+          "vertices_below_floor": 4611,
+          "source_compiled_support_error_m": 2.5105508817679922e-11
+        },
+        "ankle_right_3_sole_right_collision": {
+          "source_minimum_z_m": -0.00031367155375651434,
+          "compiled_minimum_z_m": -0.0003136713566661486,
+          "support_point_m": [
+            -0.011129554954816254,
+            -0.0832578378084231,
+            -0.00031367155375651434
+          ],
+          "vertices_below_floor": 545,
+          "source_compiled_support_error_m": 1.9709036572918004e-10
+        },
+        "ankle_left_3_foot_left_collision": {
+          "source_minimum_z_m": -0.00014533876726655764,
+          "compiled_minimum_z_m": -0.0001453388526706477,
+          "support_point_m": [
+            0.04117295670415241,
+            0.007476851842509354,
+            -0.00014533876726655764
+          ],
+          "vertices_below_floor": 291,
+          "source_compiled_support_error_m": 8.540409004997862e-11
+        },
+        "ankle_right_7_foot_right_collision": {
+          "source_minimum_z_m": 0.0016726320038335865,
+          "compiled_minimum_z_m": 0.0016726319885489805,
+          "support_point_m": [
+            -0.01229815467422836,
+            -0.08316643199062142,
+            0.0016726320038335865
+          ],
+          "vertices_below_floor": 0,
+          "source_compiled_support_error_m": 1.5284606046106486e-11
+        }
+      },
+      "recorded_shell_contacts": [
+        {
+          "geom_ids": [
+            0,
+            50
+          ],
+          "internal": false,
+          "position_m": [
+            0.041172956735837346,
+            0.00747685248420221,
+            -7.266942633532385e-05
+          ],
+          "distance_m": -0.0001453388526706477,
+          "force_contact_frame": [
+            0.5538295418560298,
+            -0.38686170154867744,
+            0.16696784030735237,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 18
+        }
+      ]
+    },
+    {
+      "time_s": 1.6299999999999872,
+      "pose_time_s": 1.6249999999999873,
+      "features": {
+        "ankle_left_1_sole_left_collision": {
+          "source_minimum_z_m": -0.00014136349317264707,
+          "compiled_minimum_z_m": -0.0001413634186541819,
+          "support_point_m": [
+            0.07407315518684468,
+            -0.014516630709256888,
+            -0.00014136349317264707
+          ],
+          "vertices_below_floor": 216,
+          "source_compiled_support_error_m": 7.451846518319316e-11
+        },
+        "ankle_right_3_sole_right_collision": {
+          "source_minimum_z_m": -0.0020241934636416326,
+          "compiled_minimum_z_m": -0.002024193719340853,
+          "support_point_m": [
+            0.005717816253609259,
+            -0.08208437662888786,
+            -0.0020241934636416326
+          ],
+          "vertices_below_floor": 3382,
+          "source_compiled_support_error_m": 2.556992204777453e-10
+        },
+        "ankle_left_3_foot_left_collision": {
+          "source_minimum_z_m": 0.0018458974083587765,
+          "compiled_minimum_z_m": 0.0018458975878809522,
+          "support_point_m": [
+            0.07436601974296383,
+            -0.0139668988514107,
+            0.0018458974083587765
+          ],
+          "vertices_below_floor": 0,
+          "source_compiled_support_error_m": 1.7952217577082985e-10
+        },
+        "ankle_right_7_foot_right_collision": {
+          "source_minimum_z_m": -2.8577375421948853e-05,
+          "compiled_minimum_z_m": -2.857722253483616e-05,
+          "support_point_m": [
+            0.006020718748850878,
+            -0.08248856116801491,
+            -2.8577375421948853e-05
+          ],
+          "vertices_below_floor": 34,
+          "source_compiled_support_error_m": 1.5288711269212385e-10
+        }
+      },
+      "recorded_shell_contacts": [
+        {
+          "geom_ids": [
+            0,
+            7662
+          ],
+          "internal": false,
+          "position_m": [
+            0.00602071929507067,
+            -0.08248856143512519,
+            -1.428861126741808e-05
+          ],
+          "distance_m": -2.857722253483616e-05,
+          "force_contact_frame": [
+            1.3387050897267918,
+            0.7886047139773372,
+            -0.5501003757494546,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 22
+        }
+      ]
+    },
+    {
+      "time_s": 2.504999999999969,
+      "pose_time_s": 2.499999999999969,
+      "features": {
+        "ankle_left_1_sole_left_collision": {
+          "source_minimum_z_m": -0.00029360083777257157,
+          "compiled_minimum_z_m": -0.0002936013513044171,
+          "support_point_m": [
+            0.09967779016114904,
+            -0.07450356249430587,
+            -0.00029360083777257157
+          ],
+          "vertices_below_floor": 776,
+          "source_compiled_support_error_m": 5.135318455196103e-10
+        },
+        "ankle_right_3_sole_right_collision": {
+          "source_minimum_z_m": 0.02690769158585497,
+          "compiled_minimum_z_m": 0.026907691985936472,
+          "support_point_m": [
+            0.059477232098624266,
+            -0.16162440391263208,
+            0.02690769158585497
+          ],
+          "vertices_below_floor": 0,
+          "source_compiled_support_error_m": 4.000815026494742e-10
+        },
+        "ankle_left_3_foot_left_collision": {
+          "source_minimum_z_m": 0.0011056458502440372,
+          "compiled_minimum_z_m": 0.0011056461844303478,
+          "support_point_m": [
+            0.09885011391315011,
+            -0.07411632276948019,
+            0.0011056458502440372
+          ],
+          "vertices_below_floor": 0,
+          "source_compiled_support_error_m": 3.34186310568807e-10
+        },
+        "ankle_right_7_foot_right_collision": {
+          "source_minimum_z_m": 0.028239495568800167,
+          "compiled_minimum_z_m": 0.028239494969429443,
+          "support_point_m": [
+            0.05970861207052361,
+            -0.16184038467919568,
+            0.028239495568800167
+          ],
+          "vertices_below_floor": 0,
+          "source_compiled_support_error_m": 5.993707231921608e-10
+        }
+      },
+      "recorded_shell_contacts": []
+    }
+  ],
+  "integration_steps": 0,
+  "boundary": "CAD support coordinates at copied pre-integration poses; recorded forces are V63 measurements, not newly inferred forces. Convex hull and source share plane support extrema; no global mesh-fidelity claim."
+}

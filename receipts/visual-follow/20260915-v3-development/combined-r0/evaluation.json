@@ -1,0 +1,772 @@
+{
+  "passed": false,
+  "complete": true,
+  "failures": [
+    "insufficient_active_evidence",
+    "insufficient_forward_progress",
+    "missing_bilateral_steps",
+    "missing_command_response",
+    "no_useful_translation",
+    "target_tracking",
+    "unsustained_bilateral_stepping"
+  ],
+  "gait": {
+    "duration_s": 30.0,
+    "active_s": 0.5,
+    "translation_s": 0.46,
+    "path_length_m": 0.11158193118694333,
+    "qualified_swings_left_right": [
+      2,
+      1
+    ],
+    "swing_events": [
+      {
+        "foot": 0,
+        "land_s": 1.56,
+        "air_s": 0.16,
+        "clearance_m": 0.0175497410564583
+      },
+      {
+        "foot": 1,
+        "land_s": 1.72,
+        "air_s": 0.16,
+        "clearance_m": 0.015908721436752322
+      },
+      {
+        "foot": 0,
+        "land_s": 1.86,
+        "air_s": 0.14,
+        "clearance_m": 0.010489629665112438
+      }
+    ],
+    "alternating_landing_fraction": 1.0,
+    "both_feet_loaded_active_fraction": 0.32,
+    "loaded_slip_over_3cm_s_fraction": 0.09090909090909091,
+    "loaded_slip_p95_m_s": 0.06353506878846542,
+    "backward_translation_fraction": 0.0,
+    "bilateral_step_coverage_during_translation": 0.0,
+    "target_outside_joint_limits_fraction": 0.021333333333333333,
+    "joint_hard_stop_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0006891798759476223,
+      0.0
+    ],
+    "max_target_limit_violation_rad": 0.426594875750385,
+    "max_actual_limit_violation_rad": 0.0,
+    "max_abs_servo_velocity_rad_s": 10.09862916572184,
+    "max_abs_actuator_torque_nm": 0.6405236195572267,
+    "nonfoot_contact_frames": 0,
+    "max_tilt_deg": 11.117640651800814,
+    "fell": false,
+    "rejection_reasons": [
+      "insufficient_active_evidence",
+      "no_useful_translation",
+      "missing_bilateral_steps",
+      "unsustained_bilateral_stepping"
+    ],
+    "rejection_gate_passed": false,
+    "physical_transfer_validated": false,
+    "boundary": "Visible-development rejection only. Passing is not hardware or calibrated gait acceptance; walk model omits body/floor collisions."
+  },
+  "self_contact": {
+    "passed": true,
+    "failures": [],
+    "frames": 1500,
+    "maximum_self_penetration_m": 0.0,
+    "violating_frames": 0,
+    "first_violation": null,
+    "threshold_m": 0.001,
+    "boundary": "Visible-development geometric rejection on a versioned complete CAD model. Not contact-force measurement, calibrated hardware clearance or standalone walking acceptance."
+  },
+  "self_load": {
+    "passed": true,
+    "failures": [],
+    "observed_samples": 6000,
+    "expected_samples": 6000,
+    "total_over_1n_fraction": 0.0,
+    "longest_over_1n_s": 0.0,
+    "thresholds": {
+      "total_load_n": 1.0,
+      "max_fraction": 0.01,
+      "max_continuous_s": 0.05
+    },
+    "boundary": "Applied 200-Hz native internal loads, not floor support or calibrated hardware forces."
+  },
+  "posture": {
+    "maximum_mean_joint_error_rad": 0.1895818051992825,
+    "p95_worst_joint_error_rad": 0.28415704914269335,
+    "mean_absolute_face_pitch_deg": 26.74669055321561,
+    "per_head_joint_mean_abs_error_rad": [
+      0.1895818051992825,
+      0.17494801915026764,
+      0.14821613530003186,
+      0.042894200909299116
+    ]
+  },
+  "stop": {
+    "speed_m_s": 5.065619395531414e-05,
+    "yaw_rad_s": 0.002091287791873826,
+    "tilt_deg": 6.511266914815201
+  },
+  "fault_stop": null,
+  "task": {
+    "tracking_fraction": 0.27058823529411763,
+    "maximum_cross_track_m": 0.00568634905679241,
+    "forward_progress_m": 0.06326840992313713
+  },
+  "obstacles": {
+    "maximum_load_n": 0.0,
+    "maximum_penetration_m": 0.0
+  },
+  "motor": {
+    "saturation_fraction": 9.523809523809524e-05,
+    "minimum_actual_margin_rad": 0.11949922567503779
+  },
+  "command_response": {},
+  "schema": "microduck.visual-marker-following/v3-low-marker-matte-floor",
+  "case": {
+    "id": "combined",
+    "layout": "wide-straight",
+    "path": "mirror-sine",
+    "yaw": -0.04,
+    "mass": 1.1,
+    "friction": 0.6,
+    "motor_ticks": 6,
+    "gain": 0.7,
+    "noise": 2.0,
+    "fault": "none",
+    "repeat": 0,
+    "seed": 26091501,
+    "initial_yaw_rad": -0.04
+  },
+  "requested_duration_s": 30.0,
+  "actual_duration_s": 30.0,
+  "source_freeze_sha256": "cbbfe9eb37e88ea52fa43db6f297edc73e54c3b432b6e2d5bfceaf99d79e42e6",
+  "camera": {
+    "revision": "microduck.head-camera-site-aligned.v2",
+    "optical_forward_world": [
+      0.9992001066609772,
+      -0.039989334186634085,
+      -0.0
+    ],
+    "physical_site_forward_world": [
+      0.9992001066609772,
+      -0.03998933418663417,
+      -1.0457492223384497e-17
+    ],
+    "image_up_world": [
+      0.0,
+      0.0,
+      0.9999999999999992
+    ],
+    "local_quaternion_wxyz": [
+      0.7071067811865475,
+      0.0,
+      0.0,
+      -0.7071067811865475
+    ],
+    "vertical_fov_deg": 45.0,
+    "camera_site_position_error_m": 0.0,
+    "calibrated": false,
+    "physics_changed": false
+  },
+  "collision_audit": {
+    "obstacles": [
+      {
+        "name": "course_wall_-1",
+        "position": [
+          2.4,
+          -0.85,
+          0.075
+        ],
+        "size": [
+          3.15,
+          0.035,
+          0.075
+        ],
+        "active_robot_mask_pairs": 11,
+        "witness": {
+          "maximum_load_n": 320.39322047744764,
+          "maximum_penetration_m": 0.061259314915833994,
+          "obstacles": [
+            "course_wall_-1"
+          ]
+        }
+      },
+      {
+        "name": "course_wall_1",
+        "position": [
+          2.4,
+          0.85,
+          0.075
+        ],
+        "size": [
+          3.15,
+          0.035,
+          0.075
+        ],
+        "active_robot_mask_pairs": 11,
+        "witness": {
+          "maximum_load_n": 320.39322047744776,
+          "maximum_penetration_m": 0.061259314915833994,
+          "obstacles": [
+            "course_wall_1"
+          ]
+        }
+      }
+    ],
+    "copied_state_only": true
+  },
+  "materialized_domain": {
+    "factors": {
+      "mass_inertia_scale": 1.1,
+      "sliding_friction_scale": 0.6
+    },
+    "total_mass_kg": 0.8109674980000001,
+    "body_mass_kg": [
+      0.0,
+      0.21914640000000002,
+      0.025344660000000005,
+      0.0068082740000000004,
+      0.053027370000000004,
+      0.02374284,
+      0.033027060000000004,
+      0.040525540000000006,
+      0.006292000000000001,
+      0.05346,
+      0.2076426,
+      0.025344660000000005,
+      0.0068082740000000004,
+      0.053027370000000004,
+      0.02374284,
+      0.03302761
+    ],
+    "body_inertia_kg_m2": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.00016052477539307732,
+        0.00015487875910370378,
+        0.00010837916550321897
+      ],
+      [
+        4.616040000000001e-06,
+        3.7618765323442765e-06,
+        2.556545467655724e-06
+      ],
+      [
+        1.2757311640918564e-06,
+        1.2732830000026865e-06,
+        3.877042359054579e-07
+      ],
+      [
+        2.182979255166324e-05,
+        2.101884615871883e-05,
+        8.929791289617914e-06
+      ],
+      [
+        5.775616000000001e-06,
+        5.038590285036883e-06,
+        2.1051617149631192e-06
+      ],
+      [
+        1.2278500684966098e-05,
+        8.517503896737395e-06,
+        6.493675418296499e-06
+      ],
+      [
+        1.902175e-05,
+        1.8007770000000002e-05,
+        3.439634e-06
+      ],
+      [
+        1.2010460000000002e-06,
+        1.0635405000000002e-06,
+        5.633221000000001e-07
+      ],
+      [
+        1.0620629465343334e-05,
+        8.929665135884955e-06,
+        7.576585398771703e-06
+      ],
+      [
+        0.00035317435746358314,
+        0.0002796923095866745,
+        0.0001644067329497424
+      ],
+      [
+        4.616040000000001e-06,
+        3.7618765323442765e-06,
+        2.556545467655724e-06
+      ],
+      [
+        1.2757311640918564e-06,
+        1.2732830000026865e-06,
+        3.877042359054579e-07
+      ],
+      [
+        2.182979255166324e-05,
+        2.101884615871883e-05,
+        8.929791289617914e-06
+      ],
+      [
+        5.775616000000001e-06,
+        5.038590285036883e-06,
+        2.1051617149631192e-06
+      ],
+      [
+        1.2278470495014783e-05,
+        8.517537703625569e-06,
+        6.493781801359634e-06
+      ]
+    ],
+    "geometry_friction": [
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ],
+      [
+        0.6,
+        0.005,
+        0.0001
+      ]
+    ],
+    "array_sha256": {
+      "body_mass": "ca8da5be9fdd39c9a9c5c470bb4a79e8cb629038687c2022d9971aefa3470354",
+      "body_inertia": "b10fae9496a49b09f8c2176a9d93f47211d6e7244bedf83109ffccadee7bbf6f",
+      "geom_friction": "e9d707256858ee184c1c241a23e2419faa99187a5a6bb57de04753a6b5595ca7"
+    }
+  },
+  "exact_onnx_rows": 1500,
+  "physics_samples": 6000,
+  "camera_frames": 300,
+  "resets_within_session": 0,
+  "original_actor_outputs": true,
+  "controller_input": "RGB-derived detection plus capture/receive timestamps; no privileged target/root state",
+  "boundary": "Artificial visual marker, exposed simulation development. No obstacle-perception, protected-final, calibrated-physics or physical-transfer claim."
+}

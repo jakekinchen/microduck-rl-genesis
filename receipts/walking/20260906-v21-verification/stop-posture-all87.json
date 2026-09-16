@@ -1,0 +1,1489 @@
+{
+  "boundary": "Additional exposed audit of final 16..18-second standing intervals, existing posture thresholds; original frozen case scores preserved.",
+  "thresholds": {
+    "maximum_mean_joint_error_rad": 0.35,
+    "p95_worst_joint_error_rad": 0.7853981633974483,
+    "mean_absolute_face_pitch_deg": 30.0
+  },
+  "cases": [
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "nominal-20-20ms--forward-08",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19979176768428675,
+        "p95_worst_joint_error_rad": 0.21059849239969355,
+        "mean_absolute_face_pitch_deg": 27.08134325074203,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19979176768428675,
+          0.1685973955170851,
+          0.13963343916575388,
+          0.0354947916650716
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "nominal-20-20ms--forward-12",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1815136959466504,
+        "p95_worst_joint_error_rad": 0.18748375620695604,
+        "mean_absolute_face_pitch_deg": 26.37885245923948,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1815136959466504,
+          0.16453240542569983,
+          0.13933407146781504,
+          0.02707042713989402
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "nominal-20-20ms--forward-20",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19235721220229726,
+        "p95_worst_joint_error_rad": 0.20126258406618378,
+        "mean_absolute_face_pitch_deg": 26.69621283595182,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19235721220229726,
+          0.16054575566459847,
+          0.1499331456213765,
+          0.03082513113686211
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "nominal-20-20ms--turn-left",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1796965955323292,
+        "p95_worst_joint_error_rad": 0.18622312980409542,
+        "mean_absolute_face_pitch_deg": 25.736313572087248,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1796965955323292,
+          0.16910020827072894,
+          0.15110986777404603,
+          0.03187350089822263
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "nominal-20-20ms--turn-right",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.17780675028763565,
+        "p95_worst_joint_error_rad": 0.18433487661412903,
+        "mean_absolute_face_pitch_deg": 25.39767731932062,
+        "per_head_joint_mean_abs_error_rad": [
+          0.17780675028763565,
+          0.16606707476000124,
+          0.14269368488824583,
+          0.03160433412206084
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "nominal-20-20ms--arc-left",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1987463568637735,
+        "p95_worst_joint_error_rad": 0.20887808451810114,
+        "mean_absolute_face_pitch_deg": 27.12817352738761,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1987463568637735,
+          0.1710321973107436,
+          0.15396582768041195,
+          0.03406709719159114
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "nominal-20-20ms--arc-right",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19079420999008814,
+        "p95_worst_joint_error_rad": 0.1998835030497274,
+        "mean_absolute_face_pitch_deg": 26.161915869564034,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19079420999008814,
+          0.1692397601936194,
+          0.14752523013975988,
+          0.04589911601389183
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "zero-lag--forward-08",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1802096082456699,
+        "p95_worst_joint_error_rad": 0.1877552936402258,
+        "mean_absolute_face_pitch_deg": 25.4558657757295,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1802096082456699,
+          0.15927370591827109,
+          0.13692230878045397,
+          0.022680030239891864
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "zero-lag--forward-12",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18329088957076445,
+        "p95_worst_joint_error_rad": 0.19094916198122833,
+        "mean_absolute_face_pitch_deg": 25.24002803904029,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18329088957076445,
+          0.15681651814858044,
+          0.13274190355191026,
+          0.028575452730748813
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "zero-lag--forward-20",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19210478217878288,
+        "p95_worst_joint_error_rad": 0.2033613817727111,
+        "mean_absolute_face_pitch_deg": 25.660545382142416,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19210478217878288,
+          0.15279304090149862,
+          0.12921356450095625,
+          0.027766364138889187
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "zero-lag--turn-left",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18388899234335154,
+        "p95_worst_joint_error_rad": 0.19152280949357145,
+        "mean_absolute_face_pitch_deg": 25.956049003171415,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18388899234335154,
+          0.1617489166583555,
+          0.13972286842386947,
+          0.029993598857412176
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "zero-lag--turn-right",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18387667241984657,
+        "p95_worst_joint_error_rad": 0.19163075131806967,
+        "mean_absolute_face_pitch_deg": 25.457951214115713,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18387667241984657,
+          0.15917251228332902,
+          0.13624211781149057,
+          0.026171394428289065
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "zero-lag--arc-left",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1942307253636523,
+        "p95_worst_joint_error_rad": 0.20488979090289278,
+        "mean_absolute_face_pitch_deg": 25.91354439553941,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1942307253636523,
+          0.15846155877790477,
+          0.13703098748005635,
+          0.027337207412002237
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "zero-lag--arc-right",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18615201927788919,
+        "p95_worst_joint_error_rad": 0.19587080253482508,
+        "mean_absolute_face_pitch_deg": 25.288675938558125,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18615201927788919,
+          0.15452937890125262,
+          0.13054382657586913,
+          0.019893784927676517
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "long-30-20ms--forward-08",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18561596066170089,
+        "p95_worst_joint_error_rad": 0.19315312916183808,
+        "mean_absolute_face_pitch_deg": 26.149070119588796,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18561596066170089,
+          0.16832942154171135,
+          0.15058764036947664,
+          0.04719861908168029
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "long-30-20ms--forward-12",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19260722570603087,
+        "p95_worst_joint_error_rad": 0.2017307430099107,
+        "mean_absolute_face_pitch_deg": 26.71519631936501,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19260722570603087,
+          0.15854218516557228,
+          0.14972613350586347,
+          0.028874369114598935
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "long-30-20ms--forward-20",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19008280243099468,
+        "p95_worst_joint_error_rad": 0.19871677463308574,
+        "mean_absolute_face_pitch_deg": 26.44118571642112,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19008280243099468,
+          0.1630567938458443,
+          0.15214285923687598,
+          0.039582151674037676
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "long-30-20ms--turn-left",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19808673189987255,
+        "p95_worst_joint_error_rad": 0.20937406700943953,
+        "mean_absolute_face_pitch_deg": 26.9605950593098,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19808673189987255,
+          0.1639858589329112,
+          0.15129789110419237,
+          0.02109959824188988
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "long-30-20ms--turn-right",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1931349318726516,
+        "p95_worst_joint_error_rad": 0.20268619816305725,
+        "mean_absolute_face_pitch_deg": 26.233724099321993,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1931349318726516,
+          0.17483595365700763,
+          0.1408435755016994,
+          0.054543864285395705
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "long-30-20ms--arc-left",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.20136558949030167,
+        "p95_worst_joint_error_rad": 0.21251522183152588,
+        "mean_absolute_face_pitch_deg": 27.430691332228314,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20136558949030167,
+          0.16884312536545534,
+          0.15439227067273545,
+          0.02770862164305563
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-current",
+      "case_id": "long-30-20ms--arc-right",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18016269138047367,
+        "p95_worst_joint_error_rad": 0.1866326876432689,
+        "mean_absolute_face_pitch_deg": 25.895144313944336,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18016269138047367,
+          0.16745738256429246,
+          0.14981211617744183,
+          0.036780357102184386
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--forward-211--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19474409337328846,
+        "p95_worst_joint_error_rad": 0.2049510745901015,
+        "mean_absolute_face_pitch_deg": 26.523888137457583,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19474409337328846,
+          0.1644923202401625,
+          0.13900357538314248,
+          0.031095641972430404
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--forward-211--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1940621540053454,
+        "p95_worst_joint_error_rad": 0.20404687231770918,
+        "mean_absolute_face_pitch_deg": 26.510249823068317,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1940621540053454,
+          0.16471690392769966,
+          0.13801126314547638,
+          0.03132007708753647
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--forward-201--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.20038377393097137,
+        "p95_worst_joint_error_rad": 0.21140430512372244,
+        "mean_absolute_face_pitch_deg": 27.049207132941774,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20038377393097137,
+          0.16685315292160255,
+          0.14405917030817586,
+          0.0310713138802952
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--forward-201--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1959348645092137,
+        "p95_worst_joint_error_rad": 0.20608418790341052,
+        "mean_absolute_face_pitch_deg": 26.717717557230802,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1959348645092137,
+          0.16613767759239484,
+          0.13932156757188388,
+          0.03290335434567013
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--forward-158--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19078080609033143,
+        "p95_worst_joint_error_rad": 0.1995561668772598,
+        "mean_absolute_face_pitch_deg": 26.369792139209597,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19078080609033143,
+          0.15915098640169018,
+          0.1433270946613377,
+          0.02520978228487227
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--forward-158--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19374020473223505,
+        "p95_worst_joint_error_rad": 0.20330185324617192,
+        "mean_absolute_face_pitch_deg": 26.532389006493677,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19374020473223505,
+          0.15863750705722449,
+          0.1435725652281872,
+          0.023632414503068983
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--turn-left-738--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18508919943770583,
+        "p95_worst_joint_error_rad": 0.19357187808248938,
+        "mean_absolute_face_pitch_deg": 25.699621827970898,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18508919943770583,
+          0.16069301297965208,
+          0.1401239271297287,
+          0.020284934394924462
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--turn-left-738--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19151780300882018,
+        "p95_worst_joint_error_rad": 0.2013634699142519,
+        "mean_absolute_face_pitch_deg": 26.080585077522368,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19151780300882018,
+          0.16015086484668462,
+          0.1458761589723753,
+          0.02440340753295904
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--turn-right-380--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18787079585748423,
+        "p95_worst_joint_error_rad": 0.19745080933415973,
+        "mean_absolute_face_pitch_deg": 25.71880824288626,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18787079585748423,
+          0.16309584844959737,
+          0.1436162483744025,
+          0.026818758761243924
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--turn-right-380--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1903974444720382,
+        "p95_worst_joint_error_rad": 0.20018543677043818,
+        "mean_absolute_face_pitch_deg": 25.91574366800238,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1903974444720382,
+          0.16426115289161922,
+          0.14137509834642376,
+          0.028308290931675487
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--arc-left-117-448--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19324770032439653,
+        "p95_worst_joint_error_rad": 0.20343934783996548,
+        "mean_absolute_face_pitch_deg": 26.300546811147726,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19324770032439653,
+          0.16459812539355104,
+          0.13572632098708465,
+          0.029820197527723316
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--arc-left-117-448--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18457715027796984,
+        "p95_worst_joint_error_rad": 0.19298861353739244,
+        "mean_absolute_face_pitch_deg": 25.445256951379918,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18457715027796984,
+          0.16317270065798883,
+          0.14131771182118458,
+          0.032301640930435624
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--arc-right-184-383--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19004322027047718,
+        "p95_worst_joint_error_rad": 0.19866438483633217,
+        "mean_absolute_face_pitch_deg": 26.152679173773787,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19004322027047718,
+          0.1652420219933889,
+          0.14688809134304476,
+          0.03560176836582781
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-10ms-sensor-20ms--arc-right-184-383--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19192352115295755,
+        "p95_worst_joint_error_rad": 0.2008581313637299,
+        "mean_absolute_face_pitch_deg": 26.219270979835237,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19192352115295755,
+          0.16330709413733235,
+          0.1446740749210674,
+          0.0334660005218786
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--forward-211--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18397363758318958,
+        "p95_worst_joint_error_rad": 0.19321499031400102,
+        "mean_absolute_face_pitch_deg": 25.29733640364052,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18397363758318958,
+          0.15774679897866456,
+          0.13700925467476016,
+          0.01855500869498548
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--forward-211--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18350790890591057,
+        "p95_worst_joint_error_rad": 0.19224793929651135,
+        "mean_absolute_face_pitch_deg": 25.225115242466376,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18350790890591057,
+          0.15866837600095285,
+          0.13449938487105953,
+          0.021748930985092115
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--forward-201--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19105558638523862,
+        "p95_worst_joint_error_rad": 0.20252108621948028,
+        "mean_absolute_face_pitch_deg": 25.46833959014996,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19105558638523862,
+          0.15641292693412365,
+          0.12884577949286868,
+          0.01858241004868344
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--forward-201--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1916020802775945,
+        "p95_worst_joint_error_rad": 0.20290138529012064,
+        "mean_absolute_face_pitch_deg": 25.84043003484739,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1916020802775945,
+          0.15890673622009194,
+          0.13341903481428452,
+          0.020376547807584286
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--forward-158--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18643699675387237,
+        "p95_worst_joint_error_rad": 0.19458684248102803,
+        "mean_absolute_face_pitch_deg": 25.877446176941046,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18643699675387237,
+          0.16171792737576218,
+          0.14814410951232557,
+          0.027563420442419762
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--forward-158--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1850653745076453,
+        "p95_worst_joint_error_rad": 0.19302537352336716,
+        "mean_absolute_face_pitch_deg": 25.78126169693462,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1850653745076453,
+          0.16152597897760798,
+          0.14706861275161337,
+          0.026808583206311336
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--turn-left-738--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19572468910889587,
+        "p95_worst_joint_error_rad": 0.20659037676628453,
+        "mean_absolute_face_pitch_deg": 26.33225493678521,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19572468910889587,
+          0.15661139681793898,
+          0.13908600178593097,
+          0.01937580431367497
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--turn-left-738--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18367120797303435,
+        "p95_worst_joint_error_rad": 0.19194789009842564,
+        "mean_absolute_face_pitch_deg": 25.468523329349278,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18367120797303435,
+          0.1590722848398935,
+          0.13567967424299726,
+          0.025742870873553803
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--turn-right-380--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.17691157649549383,
+        "p95_worst_joint_error_rad": 0.1835592737403716,
+        "mean_absolute_face_pitch_deg": 25.29087756852407,
+        "per_head_joint_mean_abs_error_rad": [
+          0.17691157649549383,
+          0.16483695261621056,
+          0.1468610631049349,
+          0.027441685028753875
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--turn-right-380--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18944105816264267,
+        "p95_worst_joint_error_rad": 0.19991019757894196,
+        "mean_absolute_face_pitch_deg": 25.496311996580662,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18944105816264267,
+          0.1586843384295247,
+          0.13602249633634858,
+          0.027239613974006798
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--arc-left-117-448--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18383744828098236,
+        "p95_worst_joint_error_rad": 0.19199823822859838,
+        "mean_absolute_face_pitch_deg": 25.48453248954761,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18383744828098236,
+          0.1608849272793795,
+          0.14517085892762688,
+          0.028317062850956157
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--arc-left-117-448--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18542212146495501,
+        "p95_worst_joint_error_rad": 0.19332307488046593,
+        "mean_absolute_face_pitch_deg": 25.79830175261604,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18542212146495501,
+          0.1599790857692402,
+          0.1434871861784853,
+          0.024625733299994266
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--arc-right-184-383--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19122979089027142,
+        "p95_worst_joint_error_rad": 0.20176387153832023,
+        "mean_absolute_face_pitch_deg": 26.19244716237586,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19122979089027142,
+          0.1601651766831977,
+          0.13705918213646617,
+          0.022319814346379276
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-15ms-sensor-0ms--arc-right-184-383--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18594620059211572,
+        "p95_worst_joint_error_rad": 0.1962139045004941,
+        "mean_absolute_face_pitch_deg": 25.2503234858185,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18594620059211572,
+          0.15708500294266542,
+          0.13172632404600532,
+          0.0198609614645875
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--forward-211--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18170960667645486,
+        "p95_worst_joint_error_rad": 0.18811138038092473,
+        "mean_absolute_face_pitch_deg": 26.113797470554065,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18170960667645486,
+          0.16478000338882648,
+          0.14520882549965683,
+          0.032747548121098036
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--forward-211--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18761028877901673,
+        "p95_worst_joint_error_rad": 0.19631764270038213,
+        "mean_absolute_face_pitch_deg": 26.146473699161213,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18761028877901673,
+          0.1659902957923947,
+          0.15004477235549496,
+          0.0374363424386835
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--forward-201--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18887076083968804,
+        "p95_worst_joint_error_rad": 0.19718424820444064,
+        "mean_absolute_face_pitch_deg": 26.518068579942067,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18887076083968804,
+          0.16602330187041986,
+          0.1440824949922846,
+          0.03261768132075591
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--forward-201--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.17979928735123776,
+        "p95_worst_joint_error_rad": 0.18574951335953488,
+        "mean_absolute_face_pitch_deg": 25.989217320929022,
+        "per_head_joint_mean_abs_error_rad": [
+          0.17979928735123776,
+          0.16573049275914414,
+          0.14879947961189685,
+          0.03550951852968839
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--forward-158--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.20164631967596686,
+        "p95_worst_joint_error_rad": 0.21230050826006758,
+        "mean_absolute_face_pitch_deg": 27.385768411076633,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20164631967596686,
+          0.17277849588399627,
+          0.15166253610766475,
+          0.03539352487965915
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--forward-158--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19758880701374765,
+        "p95_worst_joint_error_rad": 0.20729248565375588,
+        "mean_absolute_face_pitch_deg": 27.20523197402555,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19758880701374765,
+          0.1724409466580794,
+          0.15362940456605767,
+          0.0346510360301192
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--turn-left-738--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19063574346996662,
+        "p95_worst_joint_error_rad": 0.19941825581004788,
+        "mean_absolute_face_pitch_deg": 26.553989968235534,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19063574346996662,
+          0.1661637701071012,
+          0.15273653890641203,
+          0.03996975207640458
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--turn-left-738--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19411143066944253,
+        "p95_worst_joint_error_rad": 0.20372751986522758,
+        "mean_absolute_face_pitch_deg": 26.7083176939091,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19411143066944253,
+          0.1652790056031554,
+          0.1524231520642797,
+          0.0391188045477229
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--turn-right-380--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1955371667718973,
+        "p95_worst_joint_error_rad": 0.2066224182775003,
+        "mean_absolute_face_pitch_deg": 26.410380805165634,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1955371667718973,
+          0.16578308113476348,
+          0.15281150380475578,
+          0.030741381473872485
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--turn-right-380--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19348574390619314,
+        "p95_worst_joint_error_rad": 0.20335473590460587,
+        "mean_absolute_face_pitch_deg": 26.45539150272046,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19348574390619314,
+          0.16782905803044712,
+          0.14907940258556848,
+          0.0325099161445135
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--arc-left-117-448--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.20187941278203672,
+        "p95_worst_joint_error_rad": 0.21281494606352708,
+        "mean_absolute_face_pitch_deg": 27.51208446813214,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20187941278203672,
+          0.17067535456583727,
+          0.1520485684512122,
+          0.02895709591787202
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--arc-left-117-448--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19902545929775667,
+        "p95_worst_joint_error_rad": 0.2089235451066004,
+        "mean_absolute_face_pitch_deg": 27.419647662785888,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19902545929775667,
+          0.17178761209402113,
+          0.15315623565419792,
+          0.03102353046001288
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--arc-right-184-383--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19303607280612717,
+        "p95_worst_joint_error_rad": 0.20195277420430627,
+        "mean_absolute_face_pitch_deg": 26.82641086133017,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19303607280612717,
+          0.16069272327688242,
+          0.14850634906324103,
+          0.029255297006363635
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v21-exposed-repeated",
+      "case_id": "motor-25ms-sensor-20ms--arc-right-184-383--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19378827192343398,
+        "p95_worst_joint_error_rad": 0.20306806168408414,
+        "mean_absolute_face_pitch_deg": 26.740192792121505,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19378827192343398,
+          0.16126611989650796,
+          0.14993239887121212,
+          0.03341546256633607
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "nominal-control--forward-17-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19133375213076345,
+        "p95_worst_joint_error_rad": 0.20121606450957336,
+        "mean_absolute_face_pitch_deg": 25.922727604675625,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19133375213076345,
+          0.1669545284950006,
+          0.14446085927714883,
+          0.04759146565837798
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "nominal-control--forward-17-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1842623207271884,
+        "p95_worst_joint_error_rad": 0.1914964759044519,
+        "mean_absolute_face_pitch_deg": 26.058910821881792,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1842623207271884,
+          0.16701942055758867,
+          0.15209557238270682,
+          0.045608829597217466
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "nominal-control--turn-right-45-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19376791825311176,
+        "p95_worst_joint_error_rad": 0.20344478908255903,
+        "mean_absolute_face_pitch_deg": 26.302989962140767,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19376791825311176,
+          0.1737282624374242,
+          0.14248784620870322,
+          0.051422056356353864
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "nominal-control--turn-right-45-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19008604030666443,
+        "p95_worst_joint_error_rad": 0.19864523938906253,
+        "mean_absolute_face_pitch_deg": 26.150468001152742,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19008604030666443,
+          0.16970264436781005,
+          0.14924804112674128,
+          0.04805353719698355
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "nominal-control--arc-left-10-35-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.17926250443584932,
+        "p95_worst_joint_error_rad": 0.1846010316349277,
+        "mean_absolute_face_pitch_deg": 26.147996952746816,
+        "per_head_joint_mean_abs_error_rad": [
+          0.17926250443584932,
+          0.16536178036381832,
+          0.14832165269368158,
+          0.03534504520813934
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "nominal-control--arc-left-10-35-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18439099816289498,
+        "p95_worst_joint_error_rad": 0.19162693903827785,
+        "mean_absolute_face_pitch_deg": 25.92067819854528,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18439099816289498,
+          0.16957565249886733,
+          0.14683245299204034,
+          0.050240038608411156
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "reduced-traction--forward-17-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.20774771774533993,
+        "p95_worst_joint_error_rad": 0.22125248994896352,
+        "mean_absolute_face_pitch_deg": 27.676216582519604,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20774771774533993,
+          0.1694234454465678,
+          0.15228413517362444,
+          0.028916914736735494
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "reduced-traction--forward-17-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.2044892941722594,
+        "p95_worst_joint_error_rad": 0.21644216856112955,
+        "mean_absolute_face_pitch_deg": 27.446144719455564,
+        "per_head_joint_mean_abs_error_rad": [
+          0.2044892941722594,
+          0.17238347632263445,
+          0.15606503878262068,
+          0.03495896016853441
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "reduced-traction--turn-right-45-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1917187802223094,
+        "p95_worst_joint_error_rad": 0.20099133355806456,
+        "mean_absolute_face_pitch_deg": 26.343393906724522,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1917187802223094,
+          0.16977744430704417,
+          0.1508183193052054,
+          0.04487185322752612
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "reduced-traction--turn-right-45-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.18536062346179788,
+        "p95_worst_joint_error_rad": 0.19303243968611347,
+        "mean_absolute_face_pitch_deg": 26.195740100538,
+        "per_head_joint_mean_abs_error_rad": [
+          0.18536062346179788,
+          0.16869503110950523,
+          0.15006041545074286,
+          0.04163169588259072
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "reduced-traction--arc-left-10-35-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.17365311063681665,
+        "p95_worst_joint_error_rad": 0.17776238184917112,
+        "mean_absolute_face_pitch_deg": 25.77395779850063,
+        "per_head_joint_mean_abs_error_rad": [
+          0.17365311063681665,
+          0.16698771360097264,
+          0.14725170080942734,
+          0.044843285187591814
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "reduced-traction--arc-left-10-35-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.1844725767832125,
+        "p95_worst_joint_error_rad": 0.1915349516084462,
+        "mean_absolute_face_pitch_deg": 26.31970404147214,
+        "per_head_joint_mean_abs_error_rad": [
+          0.1844725767832125,
+          0.1676650348047096,
+          0.1500212448120851,
+          0.044213594723244896
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "increased-inertia--forward-17-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.21752746568478065,
+        "p95_worst_joint_error_rad": 0.23088291045446963,
+        "mean_absolute_face_pitch_deg": 28.34656089867802,
+        "per_head_joint_mean_abs_error_rad": [
+          0.21752746568478065,
+          0.17467838260349838,
+          0.15421504339317132,
+          0.031340187534835764
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "increased-inertia--forward-17-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.21409684864845563,
+        "p95_worst_joint_error_rad": 0.2265596646526355,
+        "mean_absolute_face_pitch_deg": 28.133739438879054,
+        "per_head_joint_mean_abs_error_rad": [
+          0.21409684864845563,
+          0.17361608525960703,
+          0.15582800868259322,
+          0.029305761575986102
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "increased-inertia--turn-right-45-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.22323444344547988,
+        "p95_worst_joint_error_rad": 0.2363406130628355,
+        "mean_absolute_face_pitch_deg": 28.78215542523833,
+        "per_head_joint_mean_abs_error_rad": [
+          0.22323444344547988,
+          0.17733826424637408,
+          0.14829812825739763,
+          0.05402479601593261
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "increased-inertia--turn-right-45-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.20706325728364303,
+        "p95_worst_joint_error_rad": 0.2172243327790505,
+        "mean_absolute_face_pitch_deg": 27.7803246485615,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20706325728364303,
+          0.1749367016608099,
+          0.15279118133484826,
+          0.03595142368896467
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "increased-inertia--arc-left-10-35-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19952408680357037,
+        "p95_worst_joint_error_rad": 0.20792135467202877,
+        "mean_absolute_face_pitch_deg": 27.347575083290483,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19952408680357037,
+          0.16861196377257226,
+          0.15366775746820582,
+          0.0437171784688511
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "increased-inertia--arc-left-10-35-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.2033321919174827,
+        "p95_worst_joint_error_rad": 0.2123656546710176,
+        "mean_absolute_face_pitch_deg": 27.686421006935568,
+        "per_head_joint_mean_abs_error_rad": [
+          0.2033321919174827,
+          0.1630538558655899,
+          0.15278359739332137,
+          0.032037056959867104
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "combined-traction-inertia--forward-17-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.2019916813564385,
+        "p95_worst_joint_error_rad": 0.21074044339258974,
+        "mean_absolute_face_pitch_deg": 27.952911810518142,
+        "per_head_joint_mean_abs_error_rad": [
+          0.2019916813564385,
+          0.1679413176373928,
+          0.1533866373354375,
+          0.03020793203794294
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "combined-traction-inertia--forward-17-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.19946979512162863,
+        "p95_worst_joint_error_rad": 0.20791913005783821,
+        "mean_absolute_face_pitch_deg": 27.82308169103146,
+        "per_head_joint_mean_abs_error_rad": [
+          0.19946979512162863,
+          0.16730241633000056,
+          0.1505569723767335,
+          0.028274742509516934
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "combined-traction-inertia--turn-right-45-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.2163910839587621,
+        "p95_worst_joint_error_rad": 0.23026901012421583,
+        "mean_absolute_face_pitch_deg": 28.08560038146967,
+        "per_head_joint_mean_abs_error_rad": [
+          0.2163910839587621,
+          0.17338233279428686,
+          0.15118388619112433,
+          0.03130958877269577
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "combined-traction-inertia--turn-right-45-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.20447425207164133,
+        "p95_worst_joint_error_rad": 0.2139956126299648,
+        "mean_absolute_face_pitch_deg": 27.611623943943307,
+        "per_head_joint_mean_abs_error_rad": [
+          0.20447425207164133,
+          0.17879780518899965,
+          0.15809213208781642,
+          0.03973738773332258
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "combined-traction-inertia--arc-left-10-35-new-pose--repeat-1",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.21402419899468372,
+        "p95_worst_joint_error_rad": 0.225952878743661,
+        "mean_absolute_face_pitch_deg": 28.417638578483064,
+        "per_head_joint_mean_abs_error_rad": [
+          0.21402419899468372,
+          0.16551044956556596,
+          0.1546647362087059,
+          0.034708180382393344
+        ]
+      },
+      "failures": []
+    },
+    {
+      "receipt": "20260906-v22-physical-development",
+      "case_id": "combined-traction-inertia--arc-left-10-35-new-pose--repeat-2",
+      "rows": 900,
+      "final_stand_metrics": {
+        "maximum_mean_joint_error_rad": 0.207031059790637,
+        "p95_worst_joint_error_rad": 0.21738336731909452,
+        "mean_absolute_face_pitch_deg": 28.022363128688372,
+        "per_head_joint_mean_abs_error_rad": [
+          0.207031059790637,
+          0.16628776101962825,
+          0.15768059957875546,
+          0.03735807007200135
+        ]
+      },
+      "failures": []
+    }
+  ]
+}

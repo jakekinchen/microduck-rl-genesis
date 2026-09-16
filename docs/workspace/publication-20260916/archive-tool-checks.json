@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checks": [
+    "valid regular file and hardlink restore with exact bytes",
+    "nonempty restore destination refused",
+    "corrupted archive part refused",
+    "path traversal catalog refused"
+  ],
+  "scope": "Synthetic archive/restore boundary checks; not robot behavior tests."
+}

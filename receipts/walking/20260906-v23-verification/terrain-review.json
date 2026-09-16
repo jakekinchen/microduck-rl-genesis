@@ -1,0 +1,689 @@
+{
+  "schema": "microduck.v23-terrain-review/v1",
+  "input_manifest_sha256": "c218c06f9a2d9d3e678c60ddfaa42f129aa374d4474c107854172c0f76d8ad03",
+  "complete": true,
+  "all_session_buckets": {
+    "flat-control": {
+      "passed": 2,
+      "total": 2
+    },
+    "uphill-3deg": {
+      "passed": 2,
+      "total": 2
+    },
+    "downhill-3deg": {
+      "passed": 0,
+      "total": 2
+    },
+    "cross-slope-3deg": {
+      "passed": 0,
+      "total": 2
+    },
+    "seams-3mm": {
+      "passed": 0,
+      "total": 2
+    },
+    "uneven-2to6mm": {
+      "passed": 0,
+      "total": 2
+    },
+    "uneven-combined": {
+      "passed": 0,
+      "total": 2
+    }
+  },
+  "passed_sessions": 4,
+  "total_sessions": 14,
+  "passed_unseen_terrain_sessions": 2,
+  "total_unseen_terrain_sessions": 12,
+  "passed_windows": 9,
+  "total_windows": 28,
+  "fall_windows": [
+    "downhill-3deg-start-1--window-1",
+    "downhill-3deg-start-2--window-1",
+    "seams-3mm-start-2--window-1",
+    "uneven-combined-start-1--window-1",
+    "uneven-combined-start-2--window-2"
+  ],
+  "unrun_windows": [
+    "downhill-3deg-start-1--window-2",
+    "downhill-3deg-start-2--window-2",
+    "seams-3mm-start-2--window-2",
+    "uneven-combined-start-1--window-2"
+  ],
+  "control_rows": 20301,
+  "actor_samples": {
+    "standing": 5993,
+    "walking": 14308
+  },
+  "contact_friction_histogram": {
+    "1.0": 53173,
+    "0.6": 8372
+  },
+  "all_action_files_match_row_counts": true,
+  "all_raised_surface_counts_match": true,
+  "diagnostics": {
+    "downhill-3deg-start-1--window-1": {
+      "actor_switches": [
+        {
+          "time_s": 0.02,
+          "actor_mode": "standing"
+        },
+        {
+          "time_s": 1.02,
+          "actor_mode": "walking"
+        },
+        {
+          "time_s": 13.16,
+          "actor_mode": "standing"
+        }
+      ],
+      "transition_snapshots": [
+        {
+          "time_s": 12.98,
+          "actor_mode": "walking",
+          "command": [
+            0.11999999731779099,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.11999999731779099,
+            0.0,
+            0.005838633980602026
+          ],
+          "robot_xyz_m": [
+            1.9811313101914116,
+            0.008470215717749795,
+            -0.02484480327009018
+          ],
+          "ground_height_at_base_m": -0.10382669243523375,
+          "base_clearance_m": 0.07898188916514357,
+          "tilt_deg": 2.084317580846308,
+          "foot_normal_n": [
+            20.865532022336843,
+            1.2648312733782672
+          ],
+          "loaded_contact_slip_m_s": [
+            0.2863275865090365,
+            0.016073867929095886
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.02,
+          "actor_mode": "walking",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.10499999672174454,
+            0.0,
+            -0.0008570702630095184
+          ],
+          "robot_xyz_m": [
+            1.9883857709713888,
+            0.008806328506241958,
+            -0.02093195568154769
+          ],
+          "ground_height_at_base_m": -0.10420688261460827,
+          "base_clearance_m": 0.08327492693306057,
+          "tilt_deg": 4.35576304655698,
+          "foot_normal_n": [
+            6.121416825483332,
+            0.0
+          ],
+          "loaded_contact_slip_m_s": [
+            0.008887239057565971,
+            0.0
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.16,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.008333026887177,
+            0.0060734806344702385,
+            -0.027513769238379646
+          ],
+          "ground_height_at_base_m": -0.10525227399994523,
+          "base_clearance_m": 0.07773850476156559,
+          "tilt_deg": 4.652053923699024,
+          "foot_normal_n": [
+            0.0,
+            8.061683696318685
+          ],
+          "loaded_contact_slip_m_s": [
+            0.0,
+            0.006676157132057851
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.3,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.0207954528464778,
+            0.00910147507808618,
+            -0.023570604282078668
+          ],
+          "ground_height_at_base_m": -0.10590540206895152,
+          "base_clearance_m": 0.08233479778687286,
+          "tilt_deg": 3.3179317855642343,
+          "foot_normal_n": [
+            4.648646212630157,
+            1.191776727979666
+          ],
+          "loaded_contact_slip_m_s": [
+            0.018286942913762195,
+            0.00485529749552212
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.540000000000001,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.04819589548201,
+            0.009137746254065946,
+            -0.018862221870487177
+          ],
+          "ground_height_at_base_m": -0.10734139841885212,
+          "base_clearance_m": 0.08847917654836494,
+          "tilt_deg": 20.94558356731542,
+          "foot_normal_n": [
+            4.398837115884908,
+            3.1869286514877837
+          ],
+          "loaded_contact_slip_m_s": [
+            0.010925583931501724,
+            0.007842900540038805
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.82,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.1523480857221373,
+            -0.03536483059892267,
+            -0.0470932124985303
+          ],
+          "ground_height_at_base_m": -0.11279978341680204,
+          "base_clearance_m": 0.06570657091827173,
+          "tilt_deg": 71.2070265419807,
+          "foot_normal_n": [
+            0.0,
+            0.0
+          ],
+          "loaded_contact_slip_m_s": [
+            0.0,
+            0.0
+          ],
+          "fell": true
+        }
+      ],
+      "moving_forward_mae_m_s": 0.0471969808061513,
+      "moving_yaw_mae_rad_s": 0.24418568229531917,
+      "boundary": "Observed association. No controller intervention or counterfactual replay; not causal attribution."
+    },
+    "downhill-3deg-start-2--window-1": {
+      "actor_switches": [
+        {
+          "time_s": 0.02,
+          "actor_mode": "standing"
+        },
+        {
+          "time_s": 1.02,
+          "actor_mode": "walking"
+        },
+        {
+          "time_s": 13.16,
+          "actor_mode": "standing"
+        }
+      ],
+      "transition_snapshots": [
+        {
+          "time_s": 12.98,
+          "actor_mode": "walking",
+          "command": [
+            0.11999999731779099,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.11999999731779099,
+            0.0,
+            0.005927013233304024
+          ],
+          "robot_xyz_m": [
+            1.9797293402770972,
+            0.1885530050281003,
+            -0.02299202874411111
+          ],
+          "ground_height_at_base_m": -0.10375321830540289,
+          "base_clearance_m": 0.08076118956129177,
+          "tilt_deg": 3.3207632043948325,
+          "foot_normal_n": [
+            0.0,
+            5.46489748146101
+          ],
+          "loaded_contact_slip_m_s": [
+            0.0,
+            0.006324754938893999
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.02,
+          "actor_mode": "walking",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.10499999672174454,
+            0.0,
+            0.0033400061074644327
+          ],
+          "robot_xyz_m": [
+            1.9863246871420832,
+            0.189939154157594,
+            -0.023812341958429514
+          ],
+          "ground_height_at_base_m": -0.10409886578819817,
+          "base_clearance_m": 0.08028652382976866,
+          "tilt_deg": 1.8615692124267518,
+          "foot_normal_n": [
+            11.879747714543058,
+            0.0
+          ],
+          "loaded_contact_slip_m_s": [
+            0.07357261263442018,
+            0.0
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.16,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.0075945869236786,
+            0.18856543984941057,
+            -0.027295288145256547
+          ],
+          "ground_height_at_base_m": -0.10521357400132444,
+          "base_clearance_m": 0.0779182858560679,
+          "tilt_deg": 4.0666143610080665,
+          "foot_normal_n": [
+            0.0,
+            17.018575001324333
+          ],
+          "loaded_contact_slip_m_s": [
+            0.0,
+            0.10531852396773385
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.3,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.022507970137277,
+            0.18973193257588736,
+            -0.022799505898685977
+          ],
+          "ground_height_at_base_m": -0.1059951512971461,
+          "base_clearance_m": 0.08319564539846011,
+          "tilt_deg": 2.7768601174445307,
+          "foot_normal_n": [
+            4.696423988318816,
+            2.0191234719968993
+          ],
+          "loaded_contact_slip_m_s": [
+            0.057746715874820054,
+            0.026969117744635524
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.540000000000001,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.049773467533322,
+            0.1910286352269074,
+            -0.01762843360968065
+          ],
+          "ground_height_at_base_m": -0.10742407546672036,
+          "base_clearance_m": 0.08979564185703971,
+          "tilt_deg": 21.060722831295514,
+          "foot_normal_n": [
+            4.431004444128391,
+            3.1313863218179505
+          ],
+          "loaded_contact_slip_m_s": [
+            0.011182896938621706,
+            0.008068612105016392
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.82,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            2.161210755559203,
+            0.16578389817316624,
+            -0.04890092030110144
+          ],
+          "ground_height_at_base_m": -0.11326425626148143,
+          "base_clearance_m": 0.06436333596037999,
+          "tilt_deg": 69.49318744519506,
+          "foot_normal_n": [
+            4.446311720481362,
+            4.464052795304616
+          ],
+          "loaded_contact_slip_m_s": [
+            0.4518600409121541,
+            0.09288221094128328
+          ],
+          "fell": true
+        }
+      ],
+      "moving_forward_mae_m_s": 0.0477182047034762,
+      "moving_yaw_mae_rad_s": 0.2409990180967661,
+      "boundary": "Observed association. No controller intervention or counterfactual replay; not causal attribution."
+    },
+    "seams-3mm-start-1--window-1": {
+      "actor_switches": [
+        {
+          "time_s": 0.02,
+          "actor_mode": "standing"
+        },
+        {
+          "time_s": 1.02,
+          "actor_mode": "walking"
+        },
+        {
+          "time_s": 13.16,
+          "actor_mode": "standing"
+        }
+      ],
+      "transition_snapshots": [
+        {
+          "time_s": 12.98,
+          "actor_mode": "walking",
+          "command": [
+            0.11999999731779099,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.11999999731779099,
+            0.0,
+            -0.029562443494796753
+          ],
+          "robot_xyz_m": [
+            0.9637822333088456,
+            -0.10471503821125346,
+            0.08789590744431292
+          ],
+          "ground_height_at_base_m": 0.003,
+          "base_clearance_m": 0.08489590744431291,
+          "tilt_deg": 6.545123102356645,
+          "foot_normal_n": [
+            4.863365511126729,
+            0.0
+          ],
+          "loaded_contact_slip_m_s": [
+            0.002518961326803143,
+            0.0
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.02,
+          "actor_mode": "walking",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.10499999672174454,
+            0.0,
+            -0.04053080454468727
+          ],
+          "robot_xyz_m": [
+            0.9682418332912197,
+            -0.10663306674618427,
+            0.08376089343144005
+          ],
+          "ground_height_at_base_m": 0.0,
+          "base_clearance_m": 0.08376089343144005,
+          "tilt_deg": 3.0489173798397493,
+          "foot_normal_n": [
+            4.950366360349713,
+            0.0
+          ],
+          "loaded_contact_slip_m_s": [
+            0.0037820143535492595,
+            0.0
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.16,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            0.9826164116427416,
+            -0.11107944701063936,
+            0.08118467268849021
+          ],
+          "ground_height_at_base_m": 0.0,
+          "base_clearance_m": 0.08118467268849021,
+          "tilt_deg": 5.567135803686657,
+          "foot_normal_n": [
+            0.0,
+            6.168116718145614
+          ],
+          "loaded_contact_slip_m_s": [
+            0.0,
+            0.006464411567269079
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.3,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            0.9825486357380553,
+            -0.10625077511450011,
+            0.08196544172426476
+          ],
+          "ground_height_at_base_m": 0.0,
+          "base_clearance_m": 0.08196544172426476,
+          "tilt_deg": 3.4804147805201615,
+          "foot_normal_n": [
+            6.588456167794592,
+            0.0
+          ],
+          "loaded_contact_slip_m_s": [
+            0.010805786352852637,
+            0.0
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.540000000000001,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            0.9890631125299161,
+            -0.102110915808222,
+            0.08163504896428249
+          ],
+          "ground_height_at_base_m": 0.0,
+          "base_clearance_m": 0.08163504896428249,
+          "tilt_deg": 10.017933721611282,
+          "foot_normal_n": [
+            3.932709842542656,
+            3.2280587012698003
+          ],
+          "loaded_contact_slip_m_s": [
+            0.004397766395925801,
+            0.004430205796356957
+          ],
+          "fell": false
+        },
+        {
+          "time_s": 13.82,
+          "actor_mode": "standing",
+          "command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "policy_command": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "robot_xyz_m": [
+            0.9862749224817177,
+            -0.10236177099283475,
+            0.08090534606437419
+          ],
+          "ground_height_at_base_m": 0.0,
+          "base_clearance_m": 0.08090534606437419,
+          "tilt_deg": 7.3703757073597105,
+          "foot_normal_n": [
+            3.7281320834034104,
+            3.8593085298332706
+          ],
+          "loaded_contact_slip_m_s": [
+            0.0011831842098771947,
+            0.0015715601922714321
+          ],
+          "fell": false
+        }
+      ],
+      "moving_forward_mae_m_s": 0.055399961049682665,
+      "moving_yaw_mae_rad_s": 0.24240134344956127,
+      "boundary": "Observed association. No controller intervention or counterfactual replay; not causal attribution."
+    }
+  },
+  "boundary": "Small preregistered deterministic development matrix. All outcomes exposed; no population reliability, unseen-family generalization admission or physical calibration claim."
+}

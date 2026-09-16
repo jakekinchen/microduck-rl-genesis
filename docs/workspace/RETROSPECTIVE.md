@@ -1,3 +1,11 @@
+# September 16 review entry point
+
+The [process-review packet](PROCESS_REVIEW_20260916.md) reconciles subsequent
+walking, terrain, runtime, perception and V62–V66 physics work. The dated audit
+below remains historical evidence. Private session extracts under `.workspace/`
+are excluded from publication; the repository contains the resulting lessons,
+coverage metadata and experiment evidence.
+
 # MicroDuck experiment retrospective and workspace improvements
 
 Audit date: 2026-09-05. Initial Genesis checkout: `eabc933e2562` on `main`.
@@ -73,6 +81,10 @@ initial evidence snapshot and is not promoted here.
 | First-party walking, Sep 4 | 2,457,600 transitions; normalized ONNX parity and deterministic development replay; near-standing behavior. | A correct pipeline can produce an ineffective policy. Evaluate behavior before presenting the checkpoint as useful. |
 | Laser v1 and v2, Sep 4 | Same trained policy: v1 2/6 C MuJoCo versus 5/6 Genesis; v2 command gain 3/s instead of 1.5/s passed 6/6 in each. Old baseline with the new gain stayed at 2/6. | Diagnose small-command response and separate locomotion learning from command adaptation. Retain the failed result and a baseline ablation. |
 | Camera audit | Simulated ground-truth targeting; HOME head-camera optical forward is −X, opposite positive walking X. | Viewer pixels and onboard pixels are different interfaces. Verify frame geometry before claiming camera control. |
+| Walking contact audit, Sep 5 | Actual raw-CAD battery/leg intersections in v9; every old current-sensor trace fails the new self-contact gate. The reduced model omitted battery contacts, while the bundled full model also changed leg masks. The corrected model retains mass/joints/visuals and the same v9 actor completes all 21 without falls. | Visual meshes, floor clearance and a model filename did not establish body-contact coverage. Verify exact collider identities and active pair filters before reward tuning. Separate copied-pose geometry, exact-action replay and closed-loop control evidence. |
+| Heading and delay separation, Sep 5 | Corrected-model raw v9 actor passes 6/21 combined; explicit upstream IMU heading feedback passes 17/21 with heading 21/21. Four long-delay moving-yaw errors still fail. | Score against the user's command, retain the actor's distinct command input, and do not let a heading-controller pass hide locomotion-rate failures. Stable heading and stable instantaneous yaw are different properties. |
+| Internal body bracing, Sep 6 | V13 can hold a small-penetration pose while loading its legs against the battery at about 14.93 N summed native normal force. Adding a read-only 200-Hz force observer preserves all original qpos/action bytes but rejects all 21. | Geometry alone does not prove physically credible support. Require sustained-load rejection as well as collider coverage, and keep simulator force conventions distinct. V15 reward gating fixes standing but does not automatically fix the separate walking actor. |
+| Repeated transitions, Sep 6 | V15 paired actors pass 21 original cases but only 33/42 new repeated windows: four STOP falls and one WALK-start bracing failure. V16 command slew improves the six-case diagnosis to 5/6; gentler yaw V17 regresses to 4/6. | Test continued state across repeated starts/stops, not just fresh resets. Standing quality, walking quality and safe actor handoffs are separate properties. Keep the best nominal demonstration subordinate to failed required transition cases; do not keep tuning acceleration when the measured defect persists in the learned gait. |
 
 Primary local anchors:
 
@@ -93,6 +105,10 @@ Primary local anchors:
 - `experiments/first_party/DEVELOPMENT-AMENDMENT-v1.md`,
   `experiments/laser/README.md`, and `receipts/laser-follow/` — productive local
   development, diagnostic comparisons, ablation and camera boundary.
+- `experiments/walking/RESULTS.md`, `receipts/walking/20260905-v9-raw-cad-intersections-r2/`,
+  `20260905-v11-native-baseline/` and `20260905-v12-current-sensor/` (the latter
+  two under `receipts/walking/`) — contact witnesses, corrected-model baseline
+  and separately labeled heading-controller result; not physical acceptance.
 
 These paths are relative to the Genesis repository root, not this document.
 

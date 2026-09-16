@@ -1,0 +1,22 @@
+{
+  "id": "v60-bearing-material-bank",
+  "max_parts": 256,
+  "output": "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/material-result.json",
+  "meshes": {
+    "seeed_bearing__configuration__22x16x4": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/outputs/seeed_bearing__configuration__22x16x4/complete.json",
+      "expected_source_sha256": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e"
+    }
+  },
+  "cavity_witnesses": null,
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/seeed_bearing__configuration__22x16x4.stl": "295ee68ed9766c91fe06d3a2a49d39f7c2f56cc943395d293afdeb013123435e",
+    "experiments/walking/contact-reconciliation-v57/bearing-hull-cap-v60/protocol.json": "8de607c4d8d857b3f5ed88c6ef75deccdde2a0e59a8e5a25256a997bc0b5c00b",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py": "0a597e950e9a86472369b1d0bc2559117cbb2422d1feb88bc96d20f2e979f05e"
+  },
+  "physics_steps": 0,
+  "scope": "bearing material only; complete-model cavity/pose/dynamics gates not evaluated"
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v46-retention-restored-v30-retained",
+  "phase": "downhill_braking_and_handoff_next",
+  "question": "V45 isolation and V46 correction are complete. V46 restores 63/63 flat and both 180-second compositions, preserving exactly the five passing V30 surfaces. Both downhill sessions fall after the standing handoff and fail internal-load gates. This packet binds a passing flat reference showing restored knee margin; inspect the separate downhill receipt before one retention-constrained correction. V30 remains retained.",
+  "primary": "receipts/walking/20260907-v46-retention-flat",
+  "primary_policy_sha256": "e9ab5e92eaae36af916c397cd8f4c36cac92675fb2f84bf140d63026ee37173b",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "nominal-20-20ms--forward-08",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_native_retention_flat_v46.py",
+    "microduck/native_sequence_env_v46.py",
+    "microduck/retained_walker_v46.py",
+    "scripts/train_native_retention_v46.py",
+    "experiments/walking/native_candidate_v46.py",
+    "microduck/heading_headroom_v30.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/laser/gait.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json"
+  ],
+  "before_training": [
+    "Read experiments/walking/RETENTION-RESULTS-v46.md and COMPONENT-RESULTS-v45.md. V45 and the bounded V46 run are complete; do not repeat them.",
+    "The focused flat case passes. Remaining downhill failures are in receipts/walking/20260907-v46-retention-endurance/probe.json and its full trajectory.",
+    "Preserve V30 with original V21/V15. V46 has no new passing session compared with V30 and is not promoted.",
+    "Freeze a focused longest-delay downhill braking/handoff experiment. Inspect earliest pre-brake and post-handoff divergence with full histories before choosing the actor or transition property to change; keep explicit retention and every old gate.",
+    "Restore disk headroom without discarding evidence before another run. Fresh sequence/protected terrain banks remain unrun. Recheck guard before compute; no paid resources, activation or hardware authority is implied."
+  ],
+  "boundary": "V46 restores exposed flat/endurance retention but fails downhill acceptance. V30 remains the limited baseline. This passing flat reference is not terrain, calibrated physics or carpet transfer evidence."
+}

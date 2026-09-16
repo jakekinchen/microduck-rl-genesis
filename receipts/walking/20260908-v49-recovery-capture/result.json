@@ -1,0 +1,120 @@
+{
+  "complete": true,
+  "states": [
+    {
+      "id": "matched--downhill-3deg-start-1-650",
+      "key": "matched",
+      "session": "downhill-3deg-start-1",
+      "step": 650,
+      "state": "states/matched--downhill-3deg-start-1-step-650.json",
+      "state_sha256": "6938386f4bc6574e2908a44f6c847b3546a930d9440fcfd8638f4c26eead16f7",
+      "search_target": true
+    },
+    {
+      "id": "matched--downhill-3deg-start-1-657",
+      "key": "matched",
+      "session": "downhill-3deg-start-1",
+      "step": 657,
+      "state": "states/matched--downhill-3deg-start-1-step-657.json",
+      "state_sha256": "60bb3e52da6ea17d3e67f065b9592d5c0cd112f8bd483a4f38fc84ab92695939",
+      "search_target": true
+    },
+    {
+      "id": "matched--downhill-3deg-start-2-650",
+      "key": "matched",
+      "session": "downhill-3deg-start-2",
+      "step": 650,
+      "state": "states/matched--downhill-3deg-start-2-step-650.json",
+      "state_sha256": "e9f52ca92605b25065b4053edd71875650d36d3baf644fbee9744e37c287187a",
+      "search_target": true
+    },
+    {
+      "id": "matched--downhill-3deg-start-2-657",
+      "key": "matched",
+      "session": "downhill-3deg-start-2",
+      "step": 657,
+      "state": "states/matched--downhill-3deg-start-2-step-657.json",
+      "state_sha256": "947a14459e5ce164530092895c655afe236f60c3bc9174173e3f7548bc7f3252",
+      "search_target": true
+    },
+    {
+      "id": "matched--matched-flat-start-1-650",
+      "key": "matched",
+      "session": "matched-flat-start-1",
+      "step": 650,
+      "state": "states/matched--matched-flat-start-1-step-650.json",
+      "state_sha256": "ad30c8bf105bc26e561625c80b502562b4b25c248fbf12c451054eb9f1bd78b7",
+      "search_target": false
+    },
+    {
+      "id": "matched--matched-flat-start-1-657",
+      "key": "matched",
+      "session": "matched-flat-start-1",
+      "step": 657,
+      "state": "states/matched--matched-flat-start-1-step-657.json",
+      "state_sha256": "0d93e6aeeee16013e87547076003c5eab078af5093e28f6ab9903aac91c66b01",
+      "search_target": false
+    },
+    {
+      "id": "matched--matched-flat-start-2-650",
+      "key": "matched",
+      "session": "matched-flat-start-2",
+      "step": 650,
+      "state": "states/matched--matched-flat-start-2-step-650.json",
+      "state_sha256": "4066577590b4147c9c273ccd781fa0811fc90924aba22cc6ecd459781c3a9115",
+      "search_target": false
+    },
+    {
+      "id": "matched--matched-flat-start-2-657",
+      "key": "matched",
+      "session": "matched-flat-start-2",
+      "step": 657,
+      "state": "states/matched--matched-flat-start-2-step-657.json",
+      "state_sha256": "4bccdaaf4dfb5285f1a5b3f28cb3f3c5563852896a809055bf0d886c677b29ce",
+      "search_target": false
+    },
+    {
+      "id": "original--continuous-composition-start-1-4250",
+      "key": "original",
+      "session": "continuous-composition-start-1",
+      "step": 4250,
+      "state": "states/original--continuous-composition-start-1-step-4250.json",
+      "state_sha256": "7f2828a395b8606e12743f4f93b1b596fd0bd42b198e5a44c4b5672ae5a426e7",
+      "search_target": false
+    },
+    {
+      "id": "original--continuous-composition-start-1-4256",
+      "key": "original",
+      "session": "continuous-composition-start-1",
+      "step": 4256,
+      "state": "states/original--continuous-composition-start-1-step-4256.json",
+      "state_sha256": "d69cd1ad334aff2b1b3147e96a5f0d27ec6808e843524927648955548c528aa7",
+      "search_target": false
+    },
+    {
+      "id": "v48--continuous-composition-start-1-4250",
+      "key": "v48",
+      "session": "continuous-composition-start-1",
+      "step": 4250,
+      "state": "states/v48--continuous-composition-start-1-step-4250.json",
+      "state_sha256": "7f0c224e2e3748c4b559aa9a12b540917446cee6cb9ca3d1002d70e161cc1626",
+      "search_target": true
+    },
+    {
+      "id": "v48--continuous-composition-start-1-4256",
+      "key": "v48",
+      "session": "continuous-composition-start-1",
+      "step": 4256,
+      "state": "states/v48--continuous-composition-start-1-step-4256.json",
+      "state_sha256": "72c1dd11e318197c51bcf353e05932eb142382693c2a1082e0e67ffc1f81f1a6",
+      "search_target": true
+    }
+  ],
+  "reproduced_controls": 18296,
+  "exact_reset_controls": 600,
+  "action_and_observation_bytes_exact": true,
+  "poses_and_velocities_exact": true,
+  "phase": "capture",
+  "elapsed_s": 24.754639791994123,
+  "freeze_sha256": "5ca76a040ec9239cd02ffa1fd5f264ed460c053c73e3de1b9fe5e0715b039443"
+}

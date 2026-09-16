@@ -1,0 +1,36 @@
+{
+  "schema": "microduck.active-workspace/v1",
+  "id": "v43-handoff-diagnosis-complete-v30-retained",
+  "phase": "full_sequence_learning_recommended",
+  "question": "V43 exactly reproduces the original sessions and paired full-state branches. V42 fails known uphill training states, and both standers fail the late composition handoff; a separate downhill failure occurs while walking. Next freeze full walk-brake-stand-restart learning with retained V30 and unchanged gates. The selected V42 flat case is still a passing diagnostic reference, not a promoted policy.",
+  "primary": "receipts/walking/20260906-v42-native-standing-flat",
+  "primary_policy_sha256": "402d8a8c2b5c67baac9e5cebcf347f8cc5e6159278230d2c452b9826ae4ce017",
+  "suite_sha256": "d8f4ba554ea99d97a15b59da40b6ded809165c02c1f9750e98c22ad524c79428",
+  "case_id": "long-30-20ms--forward-20",
+  "source_folder": "evaluator-source",
+  "source_paths": [
+    "scripts/evaluate_native_standing_flat_v42.py",
+    "microduck/heading_headroom_v30.py",
+    "microduck/motion_heading_servo_v28.py",
+    "microduck/persistent_heading_servo_v24.py",
+    "experiments/walking/filtered_heading_world.py",
+    "experiments/walking/command_ramp.py",
+    "experiments/walking/standing_world.py",
+    "experiments/walking/self_load.py",
+    "experiments/walking/posture.py",
+    "experiments/walking/collision_model.py",
+    "experiments/walking/tracking-suite-v1.json",
+    "microduck/native_standing_env_v42.py",
+    "scripts/train_native_standing_v42.py",
+    "experiments/walking/native_candidate_v42.py"
+  ],
+  "before_training": [
+    "Read experiments/walking/HANDOFF-RESULTS-v43.md and its complete r3, analysis and byte-verification receipts. Earlier V43 attempts remain incomplete.",
+    "V30 remains retained. V43 adds no trained policy or promotion; 65 captured/reset states and 130 branches are exposed diagnostics, not independent terrain generalization.",
+    "Next train full walk-brake-stand-restart sequences and repeated turns, preserving the known uphill controls. Both incoming braking states and outgoing standing posture affect composition.",
+    "Freeze a bounded budget and candidate choice plus a separate fresh sequence bank; retain actual training observation/history coverage. Keep 63 flat, both long compositions, targeted slope and all physical-quality gates unchanged.",
+    "Use verified full-state chunk indices and manifests. Never load an untrusted pickle, or treat a partial NPZ/failed snapshot as complete dynamics state.",
+    "Fresh terrain, protected final banks and physical calibration remain open requirements. Recheck guard immediately before any authorized compute; no paid resources or hardware authority is implied."
+  ],
+  "boundary": "V43 is a completed exposed full-state diagnosis. V30 remains the limited flat/endurance baseline; no actor is newly trained or promoted. Soft-contact parity and measured physical calibration remain unmet."
+}

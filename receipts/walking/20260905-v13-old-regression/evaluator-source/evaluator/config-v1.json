@@ -1,0 +1,54 @@
+{
+  "schema_version": "microduck.evaluator-config/v1",
+  "evaluator_id": "microduck.c-mujoco-onnx-bam.v1",
+  "proof_class": "infrastructure_only",
+  "physics": {
+    "engine": "official-mujoco-c-via-python-bindings",
+    "timestep_s": 0.005,
+    "control_decimation": 4,
+    "control_hz": 50,
+    "action_filter": "none"
+  },
+  "inference": {
+    "provider": "CPUExecutionProvider",
+    "intra_op_threads": 1,
+    "inter_op_threads": 1,
+    "warmup_calls": 10,
+    "deadline_ms": 20.0,
+    "input_shape": [1, 61],
+    "output_shape": [1, 14],
+    "dtype": "float32"
+  },
+  "actuator": {
+    "authority_commit": "62bd8ce12154340be97e06f7f41a0ca8f116d967",
+    "controller": "bam.mujoco.MujocoController",
+    "profile": "bam-core-v1",
+    "supply_voltage_v": 7.35,
+    "voltage_drop_resistance_ohm": 0.0,
+    "command_delay_physics_steps": 0,
+    "randomization": "none"
+  },
+  "tasks": {
+    "microduck.walking.v1": {
+      "task_contract": "microduck_contract/tasks/walking-v1.json",
+      "model_lock": "microduck_contract/model/microduck-walk-v1.lock.json",
+      "scene": "microduck/assets/microduck/scene_walk.xml"
+    },
+    "microduck.backflip.v1": {
+      "task_contract": "microduck_contract/tasks/backflip-v1.json",
+      "model_lock": "microduck_contract/model/microduck-allcollisions-v1.lock.json",
+      "scene": "microduck/assets/microduck/scene.xml"
+    }
+  },
+  "synthetic_smoke": {
+    "task_id": "microduck.walking.v1",
+    "case_id": "evaluator-core.home-zero-policy.v1",
+    "seed": 73001,
+    "physics_steps": 40,
+    "root_xyz_m": [0.0, 0.0, 0.125],
+    "root_quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+    "twist_command": [0.0, 0.0, 0.0],
+    "head_command": [0.0, 0.0, 0.0, 0.0],
+    "body_command": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  }
+}

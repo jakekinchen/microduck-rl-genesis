@@ -1,0 +1,27 @@
+{
+  "full_simulation_regression": "completed_no_failures",
+  "configured_groups": 61,
+  "legacy_not_applicable": [
+    "test_onnx_deploy.py: no checkpoint in logs/microduck-velocity; V21 uses the versioned training/export record"
+  ],
+  "v21_real_observation_onnx_parity": {
+    "control_observations": 78300,
+    "max_abs_action_error_rad": 1.9073486328125e-06,
+    "limit_rad": 0.0001
+  },
+  "workspace_tests": {
+    "tests": 131,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "focused_tests": {
+    "yaw_refinement": 4,
+    "physical_domain": 3
+  },
+  "hardware_operated": false,
+  "policy_activated": false,
+  "protected_bank_opened": false,
+  "paid_compute_used": false,
+  "boundary": "Repository regression plus named exposed development banks; not full behavior-library admission, unseen-terrain generalization or calibrated physical acceptance."
+}

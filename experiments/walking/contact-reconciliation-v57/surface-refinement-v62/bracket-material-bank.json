@@ -1,0 +1,22 @@
+{
+  "max_parts": 4096,
+  "output": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/bracket-material-result.json",
+  "meshes": {
+    "neck_pitch": {
+      "source_stl": "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl",
+      "parts_npz": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/parts.npz",
+      "complete_json": "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/complete.json",
+      "expected_source_sha256": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae"
+    }
+  },
+  "cavity_witnesses": null,
+  "input_sha256": {
+    "experiments/walking/upstream-audit-v56/sources/src/mjlab_microduck/robot/microduck/assets/neck_pitch.stl": "a685ce65348ae4d0d49417c69a7a8871f8bbd54a6e3419362be9c334abd5d2ae",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/parts.npz": "3fd1f2114b8048e338b2a907e20702ba7851b9419a22d065eaac3def3a8432a0",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/outputs-r2/neck_pitch/complete.json": "ca56fa93474325da03dc145c7494c686e0e132cb46a4a86dd30f03c88b3c4ccd",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/validate_dense_v62.py": "c4961e4c6621e8e52b5ca004064f242149f3d9186b194094698b3242d7d99de9",
+    "experiments/walking/contact-reconciliation-v57/surface-refinement-v62/test_dense_v62.py": "415390c473421315faaa3f3acf8082674812428ba1fccbcd640c6203a15c26cf",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/material_validation.py": "b1d8a8ed623ec1e51e9f2cfa29bdd04760bd1079db8d20639d3f85b10359f0d0",
+    "experiments/walking/contact-reconciliation-v57/proxy-diagnostics-v59/validate_material_v59.py": "0a597e950e9a86472369b1d0bc2559117cbb2422d1feb88bc96d20f2e979f05e"
+  }
+}
